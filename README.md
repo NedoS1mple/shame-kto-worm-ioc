@@ -69,7 +69,8 @@ unzip -l plugin.jar | grep -i kto
 ## Передача в Kaspersky
 
 Ссылка на этот репозиторий отправляется в **newvirus@kaspersky.com**.
-Образцы — `samples/worm_samples_protected.zip`, пароль `broken-2026-kto`.
+Образцы червя — `samples/worm_samples_protected.zip` (пароль от архива
+передаётся лаборатории отдельным, приватным сообщением).
 
 ## Кого ещё уведомить (из разбора)
 

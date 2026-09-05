@@ -1,0 +1,23 @@
+# ----------------------------------
+# -
+#       ExecutableItems
+# -
+#         By: Ssomar
+# -
+# ----------------------------------
+# -
+# WIKI HERE : https://docs.ssomar.com/executableitems/information-ei
+# DISCORD HERE : https://discord.com/invite/TRmSwJaYNv
+# -
+checkVersionMsg: false
+disableTestItems: false
+silentMessagePreventionErrorHeadDBError: false
+disableBackup: false
+deleteBackupsAfterDays: 7
+enableGarbageCollectorAfterReload: false
+config_12_04_2024: true
+premiumEnableCooldownForOp: true
+silentGive: false
+disabledWorlds: []
+whitelistedWorlds: []
+pickupLimit: -1

@@ -1,0 +1,90 @@
+item:
+  display_name: '#AA0000🗡 #323232В#3B2E2Eо#442A2Aс#4E2626с#572323т#601F1Fа#691B1Bн#731717ь #850F0FИ#8E0C0Cг#980808р#A10404и#AA0000с'
+  material: ENCHANTED_BOOK
+  description:
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffccccОсобый магический гримуар, позволяющий"
+    - "#ffccccпризывать короля теневых воинов #f52080Игриса#ffcccc."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  arise_component:
+    # Лимит числа королей теневых воинов.
+    arisen_entity_limit: 1
+    # Здоровье короля теневых воинов (например игрок по умолчанию обладает 20 ед. здоровья).
+    max_health: 200
+    # Число одновременно призываемых королей теневых воинов.
+    arisen_entity_spawn_amount: 1
+    # Цвет свечения.
+    # Используйте цвета версии ядра на котором запускаете плагин (по умолничаю: 1.16.5).
+    # Списки всех материалов для каждой версии:
+    # https://helpch.at/docs/1.16.5/org/bukkit/Material.html
+    # https://helpch.at/docs/x.x.x/org/bukkit/Material.html
+    # ...
+    glowing_color: DARK_RED
+    # (Сек.) Время жизни короля теневых воинов.
+    time_to_live_seconds: 300
+    # Броня короля теневых воинов.
+    armor:
+      # Шлем.
+      helmet:
+        material: LEATHER_HELMET
+        rgb:
+          r: 170
+          g: 0
+          b: 0
+      # Нагрудник.
+      chestplate:
+        material: LEATHER_CHESTPLATE
+        rgb:
+          r: 57
+          g: 170
+          b: 170
+      # Поножи.
+      leggings:
+        material: LEATHER_LEGGINGS
+        rgb:
+          r: 28
+          g: 85
+          b: 85
+      # Ботинки. 
+      boots:
+        material: LEATHER_BOOTS
+        rgb:
+          r: 0
+          g: 0
+          b: 0
+
+    # Формат здоровья короля теневых воинов.
+    health_display_string_format: "&c❤&f%health%"
+    # Формат оставшегося времени жизни короля теневоых воинов.
+    time_to_live_seconds_display_string_format: "&a⌚&f%time_to_live_seconds%"
+    # Формат имени короля теневых воинов.
+    custom_name_format: "&4Игрис %formatted_health_display_string%&0/%formatted_time_to_live_seconds_display_string%&0/&4☠"
+    # Включить задерждку для предотвращения частого использования?
+    enable_use_delay: true
+    # (Тиков. 1 сек. = 20 тиков) Задержка повторного использования.
+    delay_use_ticks: 20
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    message:
+      # Король теневых воинов! призван!
+      arisen: "#AA0000🗡 #323232К#383030о#3D2D2Dр#432B2Bо#492828л#4F2626ь #5A2121т#601F1Fе#651D1Dн#6B1A1Aе#711818в#771515ы#7C1313х #880E0Eв#8D0C0Cо#930A0Aи#990707н#9F0505о#A40202в #323232призван#AA0000!"
+      # Король теневых воинов повержен.
+      despawned: "#AA0000🗡 #323232К#383030о#3D2D2Dр#432B2Bо#492828л#4F2626ь #5A2121т#601F1Fе#651D1Dн#6B1A1Aе#711818в#771515ы#7C1313х #880E0Eв#8D0C0Cо#930A0Aи#990707н#9F0505о#A40202в #323232повержен#AA0000."
+      use_delay: "&cМожно использовать повторно через &b%use_delay_seconds% &cсек."
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."
+      arisen_entity_limit_reached: "&cДостигнут лимит числа королей теневых воинов."

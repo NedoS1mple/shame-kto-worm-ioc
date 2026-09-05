@@ -1,0 +1,13 @@
+{
+  "cpuName": "Common KVM processor",
+  "cpuMicroarchitecture": "Netburst",
+  "cpuVendorFreq": -1,
+  "logicalCores": 4,
+  "physicalCores": 4,
+  "totalMemory": 16766062592,
+  "pageSize": 4096,
+  "memoryType": "Unknown",
+  "diskCount": 2,
+  "partitionCount": 3,
+  "networkInterfaceCount": 2
+}

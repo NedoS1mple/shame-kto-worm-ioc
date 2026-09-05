@@ -1,0 +1,99 @@
+chest-amount: 4
+material: ENDER_CHEST
+items:
+  min: 30
+  max: 50
+  static:
+    toggle: false
+    amount: 40
+  fill: 5
+fill:
+  delay: 10
+  period: 10
+chest:
+  size: 54
+  title: "Мистический алтарь"
+cooldown: 10
+view:
+  started: false
+  activated: true
+  destroy: false
+close-message:
+  toggle: false
+  started: "Сундук открывается"
+  destroy: "Сундук уже закрылся, вы опоздали"
+  error: "Сундук закрыт"
+sounds:
+  full-inventory:
+    player-only: true
+    toggle: true
+    sound: ENTITY_VILLAGER_NO
+    volume: 1
+    pitch: 1
+  close:
+    player-only: true
+    toggle: true
+    sound: BLOCK_CHEST_LOCKED
+    volume: 1
+    pitch: 1
+  open:
+    player-only: true
+    toggle: true
+    sound: BLOCK_ENDER_CHEST_OPEN
+    volume: 1
+    pitch: 1
+  take:
+    player-only: true
+    toggle: true
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1
+    pitch: 1
+  soul:
+    toggle: true
+    sound: ENTITY_ILLUSIONER_CAST_SPELL
+    volume: 1
+    pitch: 1
+particles:
+  open:
+    soul:
+      toggle: true
+      particle: SOUL
+      amount: 20
+      offset:
+        x: 0.5
+        y: 1.5
+        z: 0.5
+      v1: 0
+      v2: 0
+      v3: 0
+      speed: 0.05
+hologram:
+  toggle: false
+  offset:
+    x: 0.5
+    y: 1.5
+    z: 0.5
+  lines:
+    started:
+      - "Сундук закрыт"
+    activated:
+      - "Сундук открыт"
+    destroy:
+      - "Сундук закрыт"
+offset:
+  1:
+    x: 1
+    y: 0
+    z: 0
+  2:
+    x: -1
+    y: 0
+    z: 0
+  3:
+    x: 0
+    y: 0
+    z: 1
+  4:
+    x: 0
+    y: 0
+    z: -1

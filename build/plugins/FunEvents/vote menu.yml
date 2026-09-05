@@ -1,0 +1,69 @@
+title: "&c[{timer}] &6Голосование за ивент"
+size: 45
+decor:
+  RED_STAINED_GLASS_PANE: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 26, 27, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44]
+items:
+  slots: [13,20,21,23,24,31]
+  mystic:
+    material: ENDER_CHEST
+    name: "&6Мистический сундук"
+  altar:
+    material: ENCHANTING_TABLE
+    name: "&6Алтарь"
+  volcano:
+    material: LAVA_BUCKET
+    name: "&6Вулкан"
+  santa:
+    material: SNOWBALL
+    name: "Санта"
+  beacon:
+    material: BEACON
+    name: "&6Маяк убийца"
+  deathchest:
+    material: CHEST
+    name: "&6Сундук смерти"
+  meteorite:
+    material: FIRE_CHARGE
+    name: "&6Метеоритный дождь"
+  adrez:
+    material: ZOMBIE_HEAD
+    name: "&6Адская резня"
+  lore:
+    lines:
+      - "{isvoted}"
+      - ""
+      - "&#FFFFE6Голосов: &#FBFB13{votes}"
+    isvoted:
+      yes: "&2➥ &aВаш выбор"
+      no: "&#FF7300➥ Нажмите&#FFFFE6, чтобы выбрать"
+  votes-count:
+    toggle: true
+    slot: 22
+    material: PAPER
+    name: "&#FBFB13[●] &#FFFFE6Информация:"
+    lore:
+      - "&#FFFFE6Количество голосов: &#FBFB13{allvotes}"
+  no-voting:
+    slot: 22
+    material: PAPER
+    name: "&#FBFB13[●] &#FFFFE6Информация:"
+    lore:
+      - "&#FFFFE6Сейчас нет голосования"
+message:
+  start:
+    - ' #6B00C1╔#7700C0═#8300BF═#8F00BE╦#9B00BD═#A700BC═#B300BB╦#BF00BA═#CB00B9═#D700B8╦#E300B7═#EF00B6═#FB00B5╦#EF00B6═#E300B7═#D700B8╦#CB00B9═#BF00BA═#B300BB╦#A700BC═#9B00BD═#8F00BE╦#8300BF═#7700C0═#6B00C1╗'
+    - '#6B00C1 ║'
+    - '#6B00C1 ║#FFFFE6     #FD00FF§k|||#FD00FF  [Голосование]   #FD00FF§k|||'
+    - '#6B00C1 ║#FFFFE6   Голосование за следующий ивент'
+    - '#6B00C1 ║#FFFFE6   Нажми и голосуй: {votemenu}'
+    - '#6B00C1 ║'
+    - ' #6B00C1╚#7700C0═#8300BF═#8F00BE╩#9B00BD═#A700BC═#B300BB╩#BF00BA═#CB00B9═#D700B8╩#E300B7═#EF00B6═#FB00B5╩#EF00B6═#E300B7═#D700B8╩#CB00B9═#BF00BA═#B300BB╩#A700BC═#9B00BD═#8F00BE╩#8300BF═#7700C0═#6B00C1╝'
+  final:
+    header: "&6Голосование окончено"
+    message: "&c[{i}] &6{eventname} - {votes}"
+  button:
+    text: "[Голосовать]"
+    hover:
+      toggle: true
+      text: "§6Нажмите§f, чтобы голосовать"
+    click: "/votemenu {player}"

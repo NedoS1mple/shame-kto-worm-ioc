@@ -1,0 +1,57 @@
+2026-09-05 15:05:26 [INFO]: Loading Overrides...
+2026-09-05 15:05:26 [INFO]: Loading World Types...
+2026-09-05 15:05:26 [INFO]: - World Type for 'lobby' set to 'NORMAL'
+2026-09-05 15:05:26 [INFO]: - World Type for 'world_nether' set to 'NETHER'
+2026-09-05 15:05:26 [INFO]: - World Type for 'world_the_end' set to 'NORMAL'
+2026-09-05 15:05:26 [INFO]: Loading Defaults...
+2026-09-05 15:05:26 [INFO]: Loading Custom Worlds...
+2026-09-05 15:05:26 [INFO]: Custom World 'world' registered:
+2026-09-05 15:05:26 [INFO]: - UseWorldBorder: true
+2026-09-05 15:05:26 [INFO]: - CenterX: 0
+2026-09-05 15:05:26 [INFO]: - CenterZ: 0
+2026-09-05 15:05:26 [INFO]: - MaxRadius: 15000
+2026-09-05 15:05:26 [INFO]: - MinRadius: 100
+2026-09-05 15:05:26 [INFO]: - Shape: SQUARE
+2026-09-05 15:05:26 [INFO]: - MinY: 0
+2026-09-05 15:05:26 [INFO]: - MaxY: 320
+2026-09-05 15:05:26 [INFO]: - Cooldown: 60
+2026-09-05 15:05:26 [INFO]: - CenterX: 123
+2026-09-05 15:05:26 [INFO]: - CenterZ: -123
+2026-09-05 15:05:26 [INFO]: - MaxRadius: 15000
+2026-09-05 15:05:26 [INFO]: - MinRadius: 100
+2026-09-05 15:05:26 [INFO]: - Biomes: [desert, forest]
+2026-09-05 15:05:26 [INFO]: - Shape: CIRCLE
+2026-09-05 15:05:26 [INFO]: Custom World 'world' registered:
+2026-09-05 15:05:26 [INFO]: - UseWorldBorder: true
+2026-09-05 15:05:26 [INFO]: - CenterX: 0
+2026-09-05 15:05:26 [INFO]: - CenterZ: 0
+2026-09-05 15:05:26 [INFO]: - MaxRadius: 15000
+2026-09-05 15:05:26 [INFO]: - MinRadius: 100
+2026-09-05 15:05:26 [INFO]: - Shape: SQUARE
+2026-09-05 15:05:26 [INFO]: - MinY: 0
+2026-09-05 15:05:26 [INFO]: - MaxY: 320
+2026-09-05 15:05:26 [INFO]: - Cooldown: 60
+2026-09-05 15:05:26 [INFO]: - CenterX: 123
+2026-09-05 15:05:26 [INFO]: - CenterZ: -123
+2026-09-05 15:05:26 [INFO]: - MaxRadius: 15000
+2026-09-05 15:05:26 [INFO]: - MinRadius: 100
+2026-09-05 15:05:26 [INFO]: - Biomes: [desert, forest]
+2026-09-05 15:05:26 [INFO]: - Shape: CIRCLE
+2026-09-05 15:05:26 [INFO]: Loading Locations...
+2026-09-05 15:05:26 [INFO]: - Loading Location world:
+2026-09-05 15:05:26 [INFO]: - - World: world
+2026-09-05 15:05:26 [INFO]: - - World: 0
+2026-09-05 15:05:26 [INFO]: - - CenterZ: 0
+2026-09-05 15:05:26 [INFO]: - - MaxRadius: 4000
+2026-09-05 15:05:26 [INFO]: - - MinRad: 0
+2026-09-05 15:05:26 [INFO]: - - Shape: SQUARE
+2026-09-05 15:05:26 [INFO]: - - MinY: 0
+2026-09-05 15:05:26 [INFO]: - - MaxY: 320
+2026-09-05 15:05:26 [INFO]: - - Cooldown: 300
+2026-09-05 15:05:26 [INFO]: - Location 'world' registered
+2026-09-05 15:05:30 [INFO]: Database QUEUE:Queue configured and loaded!
+2026-09-05 15:05:30 [INFO]: Database PLAYERS:Players configured and loaded!
+2026-09-05 15:05:30 [INFO]: Database CHUNK_DATA:ChunkData configured and loaded!
+2026-09-05 15:05:34 [INFO]: Attempting to queue up some more safe locations...
+2026-09-05 15:05:34 [INFO]: Queueing paused, max queue limit reached!
+2026-09-05 15:18:02 [INFO]: Disabling BetterRTP v3.6.13

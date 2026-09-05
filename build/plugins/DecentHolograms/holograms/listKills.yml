@@ -1,0 +1,44 @@
+location: lobby:33,500:81,681:116,500
+enabled: true
+display-range: 45
+update-range: 45
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&c[⚔]&f ТОП по &cУбийствам&f:'
+    height: 0.3
+  - content: '&7'
+    height: 0.3
+  - content: '&a① %ajlb_lb_statistic_player_kills_1_alltime_prefix% &f%ajlb_lb_statistic_player_kills_1_alltime_name%:
+      &6%ajlb_lb_statistic_player_kills_1_alltime_value%'
+    height: 0.3
+  - content: '&e② %ajlb_lb_statistic_player_kills_2_alltime_prefix% &f%ajlb_lb_statistic_player_kills_2_alltime_name%:
+      &6%ajlb_lb_statistic_player_kills_2_alltime_value%'
+    height: 0.3
+  - content: '&6③ %ajlb_lb_statistic_player_kills_3_alltime_prefix% &f%ajlb_lb_statistic_player_kills_3_alltime_name%:
+      &6%ajlb_lb_statistic_player_kills_3_alltime_value%'
+    height: 0.3
+  - content: '&c④ %ajlb_lb_statistic_player_kills_4_alltime_prefix% &f%ajlb_lb_statistic_player_kills_4_alltime_name%:
+      &6%ajlb_lb_statistic_player_kills_4_alltime_value%'
+    height: 0.3
+  - content: '&c⑤ %ajlb_lb_statistic_player_kills_5_alltime_prefix% &f%ajlb_lb_statistic_player_kills_5_alltime_name%:
+      &6%ajlb_lb_statistic_player_kills_5_alltime_value%'
+    height: 0.3
+  - content: '&c⑥ %ajlb_lb_statistic_player_kills_6_alltime_prefix% &f%ajlb_lb_statistic_player_kills_6_alltime_name%:
+      &6%ajlb_lb_statistic_player_kills_6_alltime_value%'
+    height: 0.3
+  - content: '&c⑦ %ajlb_lb_statistic_player_kills_7_alltime_prefix% &f%ajlb_lb_statistic_player_kills_7_alltime_name%:
+      &6%ajlb_lb_statistic_player_kills_7_alltime_value%'
+    height: 0.3
+  - content: '&c⑧ %ajlb_lb_statistic_player_kills_8_alltime_prefix% &f%ajlb_lb_statistic_player_kills_8_alltime_name%:
+      &6%ajlb_lb_statistic_player_kills_8_alltime_value%'
+    height: 0.3
+  - content: '&c⑨ %ajlb_lb_statistic_player_kills_9_alltime_prefix% &f%ajlb_lb_statistic_player_kills_9_alltime_name%:
+      &6%ajlb_lb_statistic_player_kills_9_alltime_value%'
+    height: 0.3
+  - content: '&c⑩ %ajlb_lb_statistic_player_kills_10_alltime_prefix% &f%ajlb_lb_statistic_player_kills_10_alltime_name%:
+      &6%ajlb_lb_statistic_player_kills_10_alltime_value%'
+    height: 0.3
+  actions: {}

@@ -1,0 +1,37 @@
+[14:41:26] [Server thread/INFO]: Enabling BAuction v1.3.1
+[14:41:26] [Server thread/INFO]: [DEBUG] enable checkUpdate
+[14:41:26] [Server thread/INFO]: [DEBUG] enable enable BMenuApi
+[14:41:26] [Server thread/INFO]: [DEBUG] enable load MenuLoader
+[14:41:26] [Server thread/INFO]: [DEBUG] enable load db cfg
+[14:41:26] [Server thread/INFO]: [DEBUG] enable registerAdapters
+[14:41:26] [Server thread/INFO]: [DEBUG] enable load UniqueNameGenerator
+[14:41:26] [Server thread/INFO]: [DEBUG] enable load cfg
+[14:41:26] [Server thread/INFO]: [DEBUG] enable load assetsManager
+[14:41:26] [Server thread/INFO]: [DEBUG] enable load lang
+[14:41:26] [Server thread/INFO]: [DEBUG] enable load logger
+[14:41:26] [Server thread/INFO]: [DEBUG] enable load event manager
+[14:41:26] [Server thread/INFO]: [DEBUG] enable load time util
+[14:41:26] [Server thread/INFO]: [DEBUG] enable load TrieManager
+[14:41:26] [Server thread/INFO]: [DEBUG] enable load econ
+[14:41:26] [Server thread/SEVERE]: An error occurred while enabling on the handler: load econ
+java.lang.NullPointerException: Economy not found!
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at org.by1337.bauction.hook.impl.VaultHook.<init>(VaultHook.java:17)
+	at org.by1337.bauction.Main.lambda$initEnablePipeline$10(Main.java:161)
+	at org.by1337.bauction.util.plugin.PluginEnablePipeline.onEnable(PluginEnablePipeline.java:49)
+	at org.by1337.bauction.Main.onEnable(Main.java:217)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:263)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:370)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:500)
+	at org.bukkit.craftbukkit.v1_16_R3.CraftServer.enablePlugin(CraftServer.java:518)
+	at org.bukkit.craftbukkit.v1_16_R3.CraftServer.enablePlugins(CraftServer.java:432)
+	at net.minecraft.server.v1_16_R3.MinecraftServer.loadWorld(MinecraftServer.java:596)
+	at net.minecraft.server.v1_16_R3.DedicatedServer.init(DedicatedServer.java:309)
+	at net.minecraft.server.v1_16_R3.MinecraftServer.w(MinecraftServer.java:1074)
+	at net.minecraft.server.v1_16_R3.MinecraftServer.lambda$a$0(MinecraftServer.java:293)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+
+[14:41:26] [Server thread/INFO]: Disabling BAuction v1.3.1
+[14:41:26] [Server thread/INFO]: [DEBUG] disable disable logger
+[14:41:26] [Server thread/INFO]: [DEBUG] disable disable BMenuApi
+[14:41:26] [Server thread/INFO]: [DEBUG] disable unregisterAdapters

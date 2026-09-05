@@ -1,0 +1,181 @@
+open_menu_command_list:
+  - "free"
+
+access_to_open_checker:
+  enable: false
+  permission: menu.open.shop_weapon
+  message:
+    permission_denied: "&cОтказано в доступе на открытие меню 1."
+
+# Заголовок меню.
+title: "&4✪ &c&lУра, Кейсики!"
+
+# (Тиков 20 тиков = 1 сек.) Интервал перерисовки меню.
+# Значения 0 и ниже включая -1 и тд. отключают отрисовку за исключением случаев когда игрок кликает (оптимизация).
+update_interval_ticks: 0
+
+# Макет меню.
+layout:
+
+  # Сетка макета.
+  grid:
+    - "| | - - - - - | |"
+    - "| - - - - - - - |"
+    - "| - A B C - D - |"
+    - "| - - - - - - - |"
+    - "| | - - - - - | |"
+
+  layout_item_list:
+    layout_item_1:
+      placeholder: "A"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: TRIPWIRE_HOOK
+            display_name: "&6Ключ для Игрока"
+            description:
+              - "&eНажми&f, чтобы получить"  
+              - "&fбесплатный ключ к кейсу"  
+              - "&f[Один ключ в &e7 дней&f]"  
+              - ""  
+              - "&fТолько для &aИгрока&f и выше!"      
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "freereward"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: minecraft:block.note_block.bit
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_2:
+      placeholder: "B"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: TRIPWIRE_HOOK
+            display_name: "&6Ключ для Главы"
+            description:
+              - "&eНажми&f, чтобы получить"  
+              - "&fбесплатный ключ к кейсу"  
+              - "&f[Один ключ в &e5 дней&f]"  
+              - ""  
+              - "&fТолько для &6Главы&f и выше!"  
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "glavarewardcase"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_4:
+      placeholder: "C"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: TRIPWIRE_HOOK
+            display_name: "&6Ключ для Князя"
+            description:
+              - "&eНажми&f, чтобы получить"  
+              - "&fбесплатный ключ к кейсу"  
+              - "&f[Один ключ в &e3 дня&f]"  
+              - ""  
+              - "&fТолько для &4Князя&f и выше!"    
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "knyazrewardcase"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_5:
+      placeholder: "D"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: GOLD_INGOT
+            display_name: "&6Элитные ключи"
+            description:
+              - "&6 ➥ Нажми&f, чтобы посмотреть"
+              - "&eНажми&f, чтобы перейти"
+              - "&fк платным ключам"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "cases"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_25:
+      placeholder: "|"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: RED_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_22:
+      placeholder: "-"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ORANGE_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []

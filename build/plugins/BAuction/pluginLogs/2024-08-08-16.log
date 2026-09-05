@@ -1,0 +1,28 @@
+[17:21:30] [Server thread/INFO]: Enabling BAuction v1.3.1
+[17:21:30] [Server thread/INFO]: [DEBUG] enable checkUpdate
+[17:21:30] [Server thread/INFO]: [DEBUG] enable enable BMenuApi
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load MenuLoader
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load db cfg
+[17:21:30] [Server thread/INFO]: [DEBUG] enable registerAdapters
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load UniqueNameGenerator
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load cfg
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load assetsManager
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load lang
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load logger
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load event manager
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load time util
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load TrieManager
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load econ
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load PAPI hook
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load black list
+[17:21:30] [Server thread/INFO]: [DEBUG] enable load db
+[17:21:30] [Server thread/INFO]: [DEBUG] enable check version
+[17:21:30] [Server thread/INFO]: [DEBUG] enable init commands
+[17:21:30] [bauc File Db loader/INFO]: Успешно загружено 0 предметов за 72 мс.
+[17:22:21] [Server thread/INFO]: Disabling BAuction v1.3.1
+[17:22:21] [Server thread/INFO]: [DEBUG] disable disable PAPI hook
+[17:22:21] [Server thread/INFO]: [DEBUG] disable disable logger
+[17:22:21] [Server thread/INFO]: [DEBUG] disable disable BMenuApi
+[17:22:21] [Server thread/INFO]: [DEBUG] disable disable db
+[17:22:21] [Server thread/INFO]: saved 0 items, 1 users and 0 unsold items in 4 ms
+[17:22:21] [Server thread/INFO]: [DEBUG] disable unregisterAdapters

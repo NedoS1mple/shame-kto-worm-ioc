@@ -1,0 +1,635 @@
+[2026-01-07 07:20:38] [INFO   ]  Custom Logger Initialized 
+[2026-01-07 07:20:38] [INFO   ] [NOTICE] TerraformGenerator will suppress the server's watchdog while generating chunks to prevent unnecessary stacktrace warnings. Unless you specifically need thewatchdog now (to take aikar timings or debug lag), you don't need to take any action. 
+[2026-01-07 07:20:38] [INFO   ] It is recommended to pregenerate to reduce lag problems. 
+[2026-01-07 07:20:38] [INFO   ] Watchdog Thread hooked. 
+[2026-01-07 07:20:38] [INFO   ]  bStats Metrics disabled. 
+[2026-01-07 07:20:38] [INFO   ]  Detected version: v1_16_R3, number: 16.3 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: VillageHousePopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: VillagePopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: OutpostPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: PyramidPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: MonumentPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: StrongholdPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: MansionPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: AncientCityPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: LargeCavePopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: MineshaftPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: CatacombsPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: BadlandsMinePopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: WarmOceanRuinsPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Large Structure: TrailRuinsPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Small Structure: SmallDungeonPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Small Structure: ShipwreckPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Small Structure: BuriedTreasurePopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Small Structure: RuinedPortalPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Small Structure: IglooPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Small Structure: DesertWellPopulator 
+[2026-01-07 07:20:38] [INFO   ] [Structure Registry] Registered Small Structure: WitchHutPopulator 
+[2026-01-07 07:20:41] [INFO   ]  Detected world: world, commencing injection...  
+[2026-01-07 07:20:41] [INFO   ]  IRON_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-07 07:20:41] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-07 07:20:41] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-07 07:20:41] [INFO   ]  DIAMOND_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-07 07:20:41] [INFO   ]  EMERALD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-07 07:20:41] [INFO   ]  LAPIS_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-07 07:20:41] [INFO   ]  REDSTONE_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-07 07:20:41] [INFO   ]  GRAVEL was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-07 07:20:41] [INFO   ]  ANDESITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-07 07:20:41] [INFO   ]  DIORITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-07 07:20:41] [INFO   ]  GRANITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-07 07:20:41] [INFO   ] Java 14+ detected. 
+[2026-01-07 07:20:41] [INFO   ] Java 14+ detected. 
+[2026-01-07 07:20:41] [INFO   ]  Injection success! Proceeding with generation. 
+[2026-01-07 07:20:42] [INFO   ]  world loaded. 
+[2026-01-07 07:21:11] [INFO   ] Will spawn stronghold at: 1387, 239 
+[2026-01-07 07:21:11] [INFO   ] Spawning MossyCavePopulator at 48,35,-144 
+[2026-01-07 07:21:11] [INFO   ] Spawning DeepCavePopulator at 50,13,-144 
+[2026-01-07 07:22:35] [INFO   ] Spawning FrozenCavePopulator at 1488,34,-25 
+[2026-01-07 07:22:36] [INFO   ] Spawning LushClusterCavePopulator at 1458,37,-81 
+[2026-01-07 07:22:36] [INFO   ] Spawning DripstoneClusterCavePopulator at 1400,32,-21 
+[2026-01-07 07:22:37] [INFO   ] Generating org.terraform.structure.small.dungeon.SmallDungeonPopulator at chunk: 86,-4 
+[2026-01-07 07:22:37] [INFO   ] Spawning Underground Dungeon at 1382,32,-59 
+[2026-01-07 07:22:38] [INFO   ] Spawning CrystallineClusterCavePopulator at 1399,58,-108 
+[2026-01-07 07:22:41] [INFO   ] Generating org.terraform.structure.caves.LargeCavePopulator at chunk: 84,-12 
+[2026-01-07 07:22:41] [INFO   ] Generating Large Lush Cave at 1344,29,-192 
+[2026-01-07 07:28:57] [INFO   ] Generating org.terraform.structure.mineshaft.MineshaftPopulator at chunk: 116,-12 
+[2026-01-07 07:28:57] [INFO   ] Spawning mineshaft at: 1856,-192 
+[2026-01-07 07:28:59] [INFO   ] Minecart with chest at: 1785, 18, -226 
+[2026-01-07 07:28:59] [INFO   ] Minecart with chest at: 1928, 18, -186 
+[2026-01-07 07:28:59] [INFO   ] Minecart with chest at: 1848, 18, -209 
+[2026-01-07 07:28:59] [INFO   ] Minecart with chest at: 1818, 18, -205 
+[2026-01-07 07:28:59] [INFO   ] Minecart with chest at: 1919, 18, -219 
+[2026-01-07 07:28:59] [INFO   ] Registered: org.terraform.structure.mineshaft.ShaftRoomPopulator at 1901 18 -161 in a room of size 14x16 
+[2026-01-07 07:28:59] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1808 18 -197 in a room of size 16x17 
+[2026-01-07 07:28:59] [INFO   ] Registered: org.terraform.structure.mineshaft.ShaftRoomPopulator at 1785 18 -187 in a room of size 16x14 
+[2026-01-07 07:28:59] [INFO   ] Registered: org.terraform.structure.mineshaft.ShaftRoomPopulator at 1925 18 -189 in a room of size 15x14 
+[2026-01-07 07:28:59] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1887 18 -204 in a room of size 15x16 
+[2026-01-07 07:28:59] [INFO   ] Registered: org.terraform.structure.mineshaft.SmeltingHallPopulator at 1848 18 -131 in a room of size 15x15 
+[2026-01-07 07:28:59] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1844 18 -184 in a room of size 15x16 
+[2026-01-07 07:28:59] [INFO   ] Registered: org.terraform.structure.mineshaft.ShaftRoomPopulator at 1915 18 -127 in a room of size 16x15 
+[2026-01-07 07:28:59] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1841 18 -251 in a room of size 17x16 
+[2026-01-07 07:29:00] [INFO   ] Minecart with chest at: 1787, 33, -223 
+[2026-01-07 07:29:00] [INFO   ] Minecart with chest at: 1847, 33, -255 
+[2026-01-07 07:29:00] [INFO   ] Registered: org.terraform.structure.mineshaft.ShaftTopPopulator at 1901 33 -161 in a room of size 14x7 
+[2026-01-07 07:29:00] [INFO   ] Registered: org.terraform.structure.mineshaft.ShaftTopPopulator at 1925 33 -189 in a room of size 15x5 
+[2026-01-07 07:29:00] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1918 33 -146 in a room of size 16x16 
+[2026-01-07 07:29:00] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1865 33 -191 in a room of size 13x13 
+[2026-01-07 07:29:00] [INFO   ] Registered: org.terraform.structure.mineshaft.ShaftTopPopulator at 1785 33 -187 in a room of size 16x7 
+[2026-01-07 07:29:00] [INFO   ] Registered: org.terraform.structure.mineshaft.SmeltingHallPopulator at 1905 33 -250 in a room of size 13x14 
+[2026-01-07 07:29:00] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1791 33 -170 in a room of size 16x16 
+[2026-01-07 07:29:00] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1786 33 -236 in a room of size 17x14 
+[2026-01-07 07:29:00] [INFO   ] Registered: org.terraform.structure.mineshaft.ShaftTopPopulator at 1915 33 -127 in a room of size 16x5 
+[2026-01-07 07:29:00] [INFO   ] Registered: org.terraform.structure.mineshaft.SmeltingHallPopulator at 1921 33 -228 in a room of size 13x15 
+[2026-01-07 07:29:31] [INFO   ] Generating org.terraform.structure.small.ruinedportal.RuinedPortalPopulator at chunk: 123,-12 
+[2026-01-07 07:29:36] [INFO   ] Generating org.terraform.structure.small.dungeon.SmallDungeonPopulator at chunk: 114,10 
+[2026-01-07 07:29:36] [INFO   ] Spawning Underground Dungeon at 1829,20,166 
+[2026-01-07 07:45:07] [INFO   ] Generating org.terraform.structure.small.dungeon.SmallDungeonPopulator at chunk: 99,-22 
+[2026-01-07 07:45:07] [INFO   ] Spawning Underground Dungeon at 1591,53,-339 
+[2026-01-07 07:45:19] [INFO   ] Generating org.terraform.structure.small.dungeon.SmallDungeonPopulator at chunk: 74,-20 
+[2026-01-07 07:45:19] [INFO   ] Spawning Underground Dungeon at 1189,10,-312 
+[2026-01-07 07:45:55] [INFO   ] Generating org.terraform.structure.small.dungeon.SmallDungeonPopulator at chunk: 91,-37 
+[2026-01-07 07:45:55] [INFO   ] Spawning Underground Dungeon at 1468,38,-587 
+[2026-01-07 07:45:55] [INFO   ] Generating org.terraform.structure.small.buriedtreasure.BuriedTreasurePopulator at chunk: 81,-37 
+[2026-01-07 07:46:10] [INFO   ] Generating org.terraform.structure.caves.LargeCavePopulator at chunk: 84,-44 
+[2026-01-07 07:46:10] [INFO   ] Generating Large Cave at 1344,73,-704 
+[2026-01-07 07:46:10] [INFO   ] Generating org.terraform.structure.small.dungeon.SmallDungeonPopulator at chunk: 81,-47 
+[2026-01-07 07:46:10] [INFO   ] Spawning Underground Dungeon at 1306,49,-743 
+[2026-01-07 07:46:32] [INFO   ] Generating org.terraform.structure.small.igloo.IglooPopulator at chunk: 111,-54 
+[2026-01-07 07:46:32] [INFO   ] Placing igloo of size 5 
+[2026-01-07 07:47:55] [INFO   ] Generating org.terraform.structure.small.ruinedportal.RuinedPortalPopulator at chunk: 86,-71 
+[2026-01-07 07:48:07] [INFO   ] Generating org.terraform.structure.mineshaft.MineshaftPopulator at chunk: 84,-76 
+[2026-01-07 07:48:07] [INFO   ] Spawning mineshaft at: 1344,-1216 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.ShaftRoomPopulator at 1353 13 -1179 in a room of size 17x17 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.SmeltingHallPopulator at 1418 13 -1242 in a room of size 17x16 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.SmeltingHallPopulator at 1317 13 -1267 in a room of size 17x14 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.SmeltingHallPopulator at 1369 13 -1225 in a room of size 16x15 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1408 13 -1289 in a room of size 16x13 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.SmeltingHallPopulator at 1412 13 -1275 in a room of size 14x15 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1346 13 -1157 in a room of size 13x17 
+[2026-01-07 07:48:08] [INFO   ] Minecart with chest at: 1338, 28, -1178 
+[2026-01-07 07:48:08] [INFO   ] Minecart with chest at: 1343, 28, -1196 
+[2026-01-07 07:48:08] [INFO   ] Minecart with chest at: 1310, 28, -1242 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.SmeltingHallPopulator at 1408 28 -1243 in a room of size 16x16 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.ShaftTopPopulator at 1353 28 -1179 in a room of size 17x6 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.SmeltingHallPopulator at 1402 28 -1170 in a room of size 14x13 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1406 28 -1271 in a room of size 17x13 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.SmeltingHallPopulator at 1388 28 -1193 in a room of size 15x16 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.SmeltingHallPopulator at 1355 28 -1273 in a room of size 14x15 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1306 28 -1246 in a room of size 16x15 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1315 28 -1214 in a room of size 13x15 
+[2026-01-07 07:48:08] [INFO   ] Registered: org.terraform.structure.mineshaft.CaveSpiderDenPopulator at 1313 28 -1177 in a room of size 17x16 
+[2026-01-07 07:50:54] [INFO   ] Spawning ForestedMountainsCavePopulator at -1806,32,358 
+[2026-01-07 07:51:11] [INFO   ] Generating org.terraform.structure.small.ruinedportal.RuinedPortalPopulator at chunk: -15,-58 
+[2026-01-08 02:59:39] [INFO   ]  Custom Logger Initialized 
+[2026-01-08 02:59:39] [INFO   ] [NOTICE] TerraformGenerator will suppress the server's watchdog while generating chunks to prevent unnecessary stacktrace warnings. Unless you specifically need thewatchdog now (to take aikar timings or debug lag), you don't need to take any action. 
+[2026-01-08 02:59:39] [INFO   ] It is recommended to pregenerate to reduce lag problems. 
+[2026-01-08 02:59:39] [INFO   ] Watchdog Thread hooked. 
+[2026-01-08 02:59:39] [INFO   ]  bStats Metrics disabled. 
+[2026-01-08 02:59:39] [INFO   ]  Detected version: v1_16_R3, number: 16.3 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: VillageHousePopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: VillagePopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: OutpostPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: PyramidPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: MonumentPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: StrongholdPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: MansionPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: AncientCityPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: LargeCavePopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: MineshaftPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: CatacombsPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: BadlandsMinePopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: WarmOceanRuinsPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Large Structure: TrailRuinsPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Small Structure: SmallDungeonPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Small Structure: ShipwreckPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Small Structure: BuriedTreasurePopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Small Structure: RuinedPortalPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Small Structure: IglooPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Small Structure: DesertWellPopulator 
+[2026-01-08 02:59:39] [INFO   ] [Structure Registry] Registered Small Structure: WitchHutPopulator 
+[2026-01-08 02:59:42] [INFO   ]  Detected world: world, commencing injection...  
+[2026-01-08 02:59:42] [INFO   ]  IRON_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 02:59:42] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 02:59:42] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 02:59:42] [INFO   ]  DIAMOND_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 02:59:42] [INFO   ]  EMERALD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 02:59:42] [INFO   ]  LAPIS_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 02:59:42] [INFO   ]  REDSTONE_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 02:59:42] [INFO   ]  GRAVEL was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 02:59:42] [INFO   ]  ANDESITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 02:59:42] [INFO   ]  DIORITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 02:59:42] [INFO   ]  GRANITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 02:59:42] [INFO   ] Java 14+ detected. 
+[2026-01-08 02:59:42] [INFO   ] Java 14+ detected. 
+[2026-01-08 02:59:42] [INFO   ]  Injection success! Proceeding with generation. 
+[2026-01-08 02:59:43] [INFO   ]  world loaded. 
+[2026-01-08 03:00:17] [INFO   ] Will spawn stronghold at: 1387, 239 
+[2026-01-08 03:00:17] [INFO   ] Spawning MossyCavePopulator at -274,74,730 
+[2026-01-08 03:00:17] [INFO   ] Spawning DeepCavePopulator at -304,20,707 
+[2026-01-08 03:00:17] [INFO   ] Spawning DripstoneClusterCavePopulator at -264,63,725 
+[2026-01-08 03:00:18] [INFO   ] Spawning FrozenCavePopulator at -2256,42,-1376 
+[2026-01-08 06:00:13] [INFO   ] Spawning ForestedMountainsCavePopulator at -1817,45,2041 
+[2026-01-08 06:00:14] [INFO   ] Spawning LushClusterCavePopulator at 1002,58,-2237 
+[2026-01-08 06:05:07] [INFO   ] Generating Stronghold at chunk: 86,14 
+[2026-01-08 06:05:07] [INFO   ] Spawning CrystallineClusterCavePopulator at 1446,70,286 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.HallwayPopulator at 1363 15 193 in a room of size 17x19 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.NetherPortalRoomPopulator at 1346 15 274 in a room of size 20x18 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.HallwayPopulator at 1436 15 268 in a room of size 14x15 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.SilverfishDenPopulator at 1413 15 263 in a room of size 20x12 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.SupplyRoomPopulator at 1406 15 204 in a room of size 19x14 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.PrisonRoomPopulator at 1387 15 221 in a room of size 15x23 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.PortalRoomPopulator at 1377 15 272 in a room of size 25x25 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.StairwayRoomPopulator at 1374 15 240 in a room of size 5x5 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.PrisonRoomPopulator at 1354 15 224 in a room of size 30x17 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.PrisonRoomPopulator at 1414 15 224 in a room of size 22x17 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.HallwayPopulator at 1416 15 245 in a room of size 22x12 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.LibraryRoomPopulator at 1428 15 189 in a room of size 24x29 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.HallwayPopulator at 1385 15 190 in a room of size 14x17 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.SilverfishDenPopulator at 1352 15 259 in a room of size 18x13 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.HallwayPopulator at 1341 15 201 in a room of size 18x17 
+[2026-01-08 06:05:07] [INFO   ] Registered: org.terraform.structure.stronghold.SilverfishDenPopulator at 1358 15 248 in a room of size 13x10 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.HallwayPopulator at 1393 33 239 in a room of size 18x14 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.LibraryRoomPopulator at 1426 33 247 in a room of size 25x30 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.PrisonRoomPopulator at 1382 33 197 in a room of size 18x23 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.PrisonRoomPopulator at 1348 33 268 in a room of size 24x19 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.PrisonRoomPopulator at 1358 33 234 in a room of size 21x25 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.PrisonRoomPopulator at 1437 33 191 in a room of size 15x21 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.HallwayPopulator at 1403 33 254 in a room of size 14x17 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.TrapChestRoomPopulator at 1411 33 197 in a room of size 13x10 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.TrapChestRoomPopulator at 1426 33 218 in a room of size 12x22 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.HallwayPopulator at 1374 33 275 in a room of size 22x17 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.StairwayTopPopulator at 1374 33 240 in a room of size 5x5 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.HallwayPopulator at 1342 33 205 in a room of size 27x13 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.LibraryRoomPopulator at 1394 33 220 in a room of size 27x22 
+[2026-01-08 06:05:08] [INFO   ] Registered: org.terraform.structure.stronghold.HallwayPopulator at 1437 33 278 in a room of size 29x18 
+[2026-01-08 06:16:15] [INFO   ]  Custom Logger Initialized 
+[2026-01-08 06:16:15] [INFO   ] [NOTICE] TerraformGenerator will suppress the server's watchdog while generating chunks to prevent unnecessary stacktrace warnings. Unless you specifically need thewatchdog now (to take aikar timings or debug lag), you don't need to take any action. 
+[2026-01-08 06:16:15] [INFO   ] It is recommended to pregenerate to reduce lag problems. 
+[2026-01-08 06:16:15] [INFO   ] Watchdog Thread hooked. 
+[2026-01-08 06:16:15] [INFO   ]  bStats Metrics disabled. 
+[2026-01-08 06:16:15] [INFO   ]  Detected version: v1_16_R3, number: 16.3 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: VillageHousePopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: VillagePopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: OutpostPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: PyramidPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: MonumentPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: StrongholdPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: MansionPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: AncientCityPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: LargeCavePopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: MineshaftPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: CatacombsPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: BadlandsMinePopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: WarmOceanRuinsPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Large Structure: TrailRuinsPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Small Structure: SmallDungeonPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Small Structure: ShipwreckPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Small Structure: BuriedTreasurePopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Small Structure: RuinedPortalPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Small Structure: IglooPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Small Structure: DesertWellPopulator 
+[2026-01-08 06:16:15] [INFO   ] [Structure Registry] Registered Small Structure: WitchHutPopulator 
+[2026-01-08 06:16:18] [INFO   ]  Detected world: world, commencing injection...  
+[2026-01-08 06:16:18] [INFO   ]  IRON_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 06:16:18] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 06:16:18] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 06:16:18] [INFO   ]  DIAMOND_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 06:16:18] [INFO   ]  EMERALD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 06:16:18] [INFO   ]  LAPIS_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 06:16:18] [INFO   ]  REDSTONE_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 06:16:18] [INFO   ]  GRAVEL was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 06:16:18] [INFO   ]  ANDESITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 06:16:18] [INFO   ]  DIORITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 06:16:18] [INFO   ]  GRANITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 06:16:18] [INFO   ] Java 14+ detected. 
+[2026-01-08 06:16:18] [INFO   ] Java 14+ detected. 
+[2026-01-08 06:16:18] [INFO   ]  Injection success! Proceeding with generation. 
+[2026-01-08 06:16:19] [INFO   ]  world loaded. 
+[2026-01-08 06:28:40] [INFO   ] Will spawn stronghold at: 1387, 239 
+[2026-01-08 06:28:40] [INFO   ] Spawning DeepCavePopulator at -2536,28,2371 
+[2026-01-08 07:00:10] [INFO   ] Spawning MossyCavePopulator at 1695,42,-1713 
+[2026-01-08 07:08:20] [INFO   ]  Custom Logger Initialized 
+[2026-01-08 07:08:20] [INFO   ] [NOTICE] TerraformGenerator will suppress the server's watchdog while generating chunks to prevent unnecessary stacktrace warnings. Unless you specifically need thewatchdog now (to take aikar timings or debug lag), you don't need to take any action. 
+[2026-01-08 07:08:20] [INFO   ] It is recommended to pregenerate to reduce lag problems. 
+[2026-01-08 07:08:20] [INFO   ] Watchdog Thread hooked. 
+[2026-01-08 07:08:20] [INFO   ]  bStats Metrics disabled. 
+[2026-01-08 07:08:20] [INFO   ]  Detected version: v1_16_R3, number: 16.3 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: VillageHousePopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: VillagePopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: OutpostPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: PyramidPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: MonumentPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: StrongholdPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: MansionPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: AncientCityPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: LargeCavePopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: MineshaftPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: CatacombsPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: BadlandsMinePopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: WarmOceanRuinsPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Large Structure: TrailRuinsPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Small Structure: SmallDungeonPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Small Structure: ShipwreckPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Small Structure: BuriedTreasurePopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Small Structure: RuinedPortalPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Small Structure: IglooPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Small Structure: DesertWellPopulator 
+[2026-01-08 07:08:20] [INFO   ] [Structure Registry] Registered Small Structure: WitchHutPopulator 
+[2026-01-08 07:08:23] [INFO   ]  Detected world: world, commencing injection...  
+[2026-01-08 07:08:23] [INFO   ]  IRON_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 07:08:23] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 07:08:23] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 07:08:23] [INFO   ]  DIAMOND_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 07:08:23] [INFO   ]  EMERALD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 07:08:23] [INFO   ]  LAPIS_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 07:08:23] [INFO   ]  REDSTONE_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 07:08:23] [INFO   ]  GRAVEL was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 07:08:23] [INFO   ]  ANDESITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 07:08:23] [INFO   ]  DIORITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 07:08:23] [INFO   ]  GRANITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 07:08:23] [INFO   ] Java 14+ detected. 
+[2026-01-08 07:08:23] [INFO   ] Java 14+ detected. 
+[2026-01-08 07:08:23] [INFO   ]  Injection success! Proceeding with generation. 
+[2026-01-08 07:08:23] [INFO   ]  world loaded. 
+[2026-01-08 07:09:37] [INFO   ] Will spawn stronghold at: 1387, 239 
+[2026-01-08 07:09:37] [INFO   ] Spawning MossyCavePopulator at -1680,51,2577 
+[2026-01-08 07:09:37] [INFO   ] Spawning DeepCavePopulator at -1672,14,2587 
+[2026-01-08 07:09:38] [INFO   ] Spawning FrozenCavePopulator at -1623,45,2579 
+[2026-01-08 07:09:38] [INFO   ] Spawning DripstoneClusterCavePopulator at -1613,37,2578 
+[2026-01-08 07:09:39] [INFO   ] Spawning CrystallineClusterCavePopulator at -1751,58,2572 
+[2026-01-08 08:17:22] [INFO   ]  Custom Logger Initialized 
+[2026-01-08 08:17:22] [INFO   ] [NOTICE] TerraformGenerator will suppress the server's watchdog while generating chunks to prevent unnecessary stacktrace warnings. Unless you specifically need thewatchdog now (to take aikar timings or debug lag), you don't need to take any action. 
+[2026-01-08 08:17:22] [INFO   ] It is recommended to pregenerate to reduce lag problems. 
+[2026-01-08 08:17:22] [INFO   ] Watchdog Thread hooked. 
+[2026-01-08 08:17:22] [INFO   ]  bStats Metrics disabled. 
+[2026-01-08 08:17:22] [INFO   ]  Detected version: v1_16_R3, number: 16.3 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: VillageHousePopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: VillagePopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: OutpostPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: PyramidPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: MonumentPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: StrongholdPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: MansionPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: AncientCityPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: LargeCavePopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: MineshaftPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: CatacombsPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: BadlandsMinePopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: WarmOceanRuinsPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Large Structure: TrailRuinsPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Small Structure: SmallDungeonPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Small Structure: ShipwreckPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Small Structure: BuriedTreasurePopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Small Structure: RuinedPortalPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Small Structure: IglooPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Small Structure: DesertWellPopulator 
+[2026-01-08 08:17:22] [INFO   ] [Structure Registry] Registered Small Structure: WitchHutPopulator 
+[2026-01-08 08:17:24] [INFO   ]  Detected world: world, commencing injection...  
+[2026-01-08 08:17:24] [INFO   ]  IRON_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 08:17:24] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 08:17:24] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 08:17:24] [INFO   ]  DIAMOND_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 08:17:24] [INFO   ]  EMERALD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 08:17:24] [INFO   ]  LAPIS_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 08:17:24] [INFO   ]  REDSTONE_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 08:17:24] [INFO   ]  GRAVEL was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 08:17:24] [INFO   ]  ANDESITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 08:17:24] [INFO   ]  DIORITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 08:17:24] [INFO   ]  GRANITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-08 08:17:24] [INFO   ] Java 14+ detected. 
+[2026-01-08 08:17:24] [INFO   ] Java 14+ detected. 
+[2026-01-08 08:17:24] [INFO   ]  Injection success! Proceeding with generation. 
+[2026-01-08 08:17:24] [INFO   ]  world loaded. 
+[2026-01-08 08:30:13] [INFO   ] Will spawn stronghold at: 1387, 239 
+[2026-01-08 08:30:13] [INFO   ] Spawning DeepCavePopulator at -32,6,-165 
+[2026-01-08 08:30:13] [INFO   ] Spawning MossyCavePopulator at -32,57,-163 
+[2026-01-09 04:42:22] [INFO   ]  Custom Logger Initialized 
+[2026-01-09 04:42:22] [INFO   ] [NOTICE] TerraformGenerator will suppress the server's watchdog while generating chunks to prevent unnecessary stacktrace warnings. Unless you specifically need thewatchdog now (to take aikar timings or debug lag), you don't need to take any action. 
+[2026-01-09 04:42:22] [INFO   ] It is recommended to pregenerate to reduce lag problems. 
+[2026-01-09 04:42:22] [INFO   ] Watchdog Thread hooked. 
+[2026-01-09 04:42:22] [INFO   ]  bStats Metrics disabled. 
+[2026-01-09 04:42:22] [INFO   ]  Detected version: v1_16_R3, number: 16.3 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: VillageHousePopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: VillagePopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: OutpostPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: PyramidPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: MonumentPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: StrongholdPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: MansionPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: AncientCityPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: LargeCavePopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: MineshaftPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: CatacombsPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: BadlandsMinePopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: WarmOceanRuinsPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Large Structure: TrailRuinsPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Small Structure: SmallDungeonPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Small Structure: ShipwreckPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Small Structure: BuriedTreasurePopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Small Structure: RuinedPortalPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Small Structure: IglooPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Small Structure: DesertWellPopulator 
+[2026-01-09 04:42:22] [INFO   ] [Structure Registry] Registered Small Structure: WitchHutPopulator 
+[2026-01-09 04:42:26] [INFO   ]  Detected world: world, commencing injection...  
+[2026-01-09 04:42:26] [INFO   ]  IRON_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 04:42:26] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 04:42:26] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 04:42:26] [INFO   ]  DIAMOND_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 04:42:26] [INFO   ]  EMERALD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 04:42:26] [INFO   ]  LAPIS_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 04:42:26] [INFO   ]  REDSTONE_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 04:42:26] [INFO   ]  GRAVEL was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 04:42:26] [INFO   ]  ANDESITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 04:42:26] [INFO   ]  DIORITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 04:42:26] [INFO   ]  GRANITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 04:42:26] [INFO   ] Java 14+ detected. 
+[2026-01-09 04:42:26] [INFO   ] Java 14+ detected. 
+[2026-01-09 04:42:26] [INFO   ]  Injection success! Proceeding with generation. 
+[2026-01-09 04:42:26] [INFO   ]  world loaded. 
+[2026-01-09 04:42:53] [INFO   ] Will spawn stronghold at: 1387, 239 
+[2026-01-09 04:42:53] [INFO   ] Spawning MossyCavePopulator at -336,66,1481 
+[2026-01-09 04:42:53] [INFO   ] Spawning DeepCavePopulator at -336,20,1485 
+[2026-01-09 04:42:56] [INFO   ] Spawning LushClusterCavePopulator at -448,39,-1750 
+[2026-01-09 04:42:56] [INFO   ] Spawning FrozenCavePopulator at -65,39,2008 
+[2026-01-09 04:42:57] [INFO   ] Spawning ForestedMountainsCavePopulator at -2032,32,-2207 
+[2026-01-09 04:43:05] [INFO   ] Spawning DripstoneClusterCavePopulator at 1072,62,3536 
+[2026-01-09 04:43:12] [INFO   ] Spawning CrystallineClusterCavePopulator at 1062,74,2912 
+[2026-01-09 04:43:32] [INFO   ] Generating org.terraform.structure.small.buriedtreasure.BuriedTreasurePopulator at chunk: 237,-198 
+[2026-01-09 04:43:39] [INFO   ] Generating org.terraform.structure.small.dungeon.SmallDungeonPopulator at chunk: 200,-133 
+[2026-01-09 04:43:39] [INFO   ] Spawning Underground Dungeon at 3208,10,-2125 
+[2026-01-09 04:43:50] [INFO   ] Generating org.terraform.structure.small.dungeon.SmallDungeonPopulator at chunk: 195,28 
+[2026-01-09 04:43:50] [INFO   ] Spawning Underground Dungeon at 3133,51,456 
+[2026-01-09 05:47:50] [INFO   ] Generating org.terraform.structure.small.ruinedportal.RuinedPortalPopulator at chunk: -204,-29 
+[2026-01-09 07:08:27] [INFO   ] Generating org.terraform.structure.small.dungeon.SmallDungeonPopulator at chunk: -28,181 
+[2026-01-09 07:08:27] [INFO   ] Spawning Underground Dungeon at -436,10,2908 
+[2026-01-09 07:08:28] [INFO   ] Generating org.terraform.structure.small.dungeon.SmallDungeonPopulator at chunk: -22,184 
+[2026-01-09 07:08:28] [INFO   ] Spawning Underground Dungeon at -342,10,2944 
+[2026-01-09 07:08:46] [INFO   ] Generating org.terraform.structure.small.ruinedportal.RuinedPortalPopulator at chunk: -26,176 
+[2026-01-09 07:09:06] [INFO   ] Generating org.terraform.structure.small.ruinedportal.RuinedPortalPopulator at chunk: -39,180 
+[2026-01-09 07:43:49] [INFO   ]  Custom Logger Initialized 
+[2026-01-09 07:43:49] [INFO   ] [NOTICE] TerraformGenerator will suppress the server's watchdog while generating chunks to prevent unnecessary stacktrace warnings. Unless you specifically need thewatchdog now (to take aikar timings or debug lag), you don't need to take any action. 
+[2026-01-09 07:43:49] [INFO   ] It is recommended to pregenerate to reduce lag problems. 
+[2026-01-09 07:43:49] [INFO   ] Watchdog Thread hooked. 
+[2026-01-09 07:43:49] [INFO   ]  bStats Metrics disabled. 
+[2026-01-09 07:43:49] [INFO   ]  Detected version: v1_16_R3, number: 16.3 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: VillageHousePopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: VillagePopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: OutpostPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: PyramidPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: MonumentPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: StrongholdPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: MansionPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: AncientCityPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: LargeCavePopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: MineshaftPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: CatacombsPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: BadlandsMinePopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: WarmOceanRuinsPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Large Structure: TrailRuinsPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Small Structure: SmallDungeonPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Small Structure: ShipwreckPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Small Structure: BuriedTreasurePopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Small Structure: RuinedPortalPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Small Structure: IglooPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Small Structure: DesertWellPopulator 
+[2026-01-09 07:43:49] [INFO   ] [Structure Registry] Registered Small Structure: WitchHutPopulator 
+[2026-01-09 07:43:52] [INFO   ]  Detected world: world, commencing injection...  
+[2026-01-09 07:43:52] [INFO   ]  IRON_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:43:52] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:43:52] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:43:52] [INFO   ]  DIAMOND_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:43:52] [INFO   ]  EMERALD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:43:52] [INFO   ]  LAPIS_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:43:52] [INFO   ]  REDSTONE_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:43:52] [INFO   ]  GRAVEL was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:43:52] [INFO   ]  ANDESITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:43:52] [INFO   ]  DIORITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:43:52] [INFO   ]  GRANITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:43:52] [INFO   ] Java 14+ detected. 
+[2026-01-09 07:43:52] [INFO   ] Java 14+ detected. 
+[2026-01-09 07:43:52] [INFO   ]  Injection success! Proceeding with generation. 
+[2026-01-09 07:43:53] [INFO   ]  world loaded. 
+[2026-01-09 07:48:26] [INFO   ]  Custom Logger Initialized 
+[2026-01-09 07:48:26] [INFO   ] [NOTICE] TerraformGenerator will suppress the server's watchdog while generating chunks to prevent unnecessary stacktrace warnings. Unless you specifically need thewatchdog now (to take aikar timings or debug lag), you don't need to take any action. 
+[2026-01-09 07:48:26] [INFO   ] It is recommended to pregenerate to reduce lag problems. 
+[2026-01-09 07:48:26] [INFO   ] Watchdog Thread hooked. 
+[2026-01-09 07:48:26] [INFO   ]  bStats Metrics disabled. 
+[2026-01-09 07:48:26] [INFO   ]  Detected version: v1_16_R3, number: 16.3 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: VillageHousePopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: VillagePopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: OutpostPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: PyramidPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: MonumentPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: StrongholdPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: MansionPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: AncientCityPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: LargeCavePopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: MineshaftPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: CatacombsPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: BadlandsMinePopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: WarmOceanRuinsPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Large Structure: TrailRuinsPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Small Structure: SmallDungeonPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Small Structure: ShipwreckPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Small Structure: BuriedTreasurePopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Small Structure: RuinedPortalPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Small Structure: IglooPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Small Structure: DesertWellPopulator 
+[2026-01-09 07:48:26] [INFO   ] [Structure Registry] Registered Small Structure: WitchHutPopulator 
+[2026-01-09 07:48:29] [INFO   ]  Detected world: world, commencing injection...  
+[2026-01-09 07:48:29] [INFO   ]  IRON_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:48:29] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:48:29] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:48:29] [INFO   ]  DIAMOND_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:48:29] [INFO   ]  EMERALD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:48:29] [INFO   ]  LAPIS_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:48:29] [INFO   ]  REDSTONE_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:48:29] [INFO   ]  GRAVEL was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:48:29] [INFO   ]  ANDESITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:48:29] [INFO   ]  DIORITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:48:29] [INFO   ]  GRANITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 07:48:29] [INFO   ] Java 14+ detected. 
+[2026-01-09 07:48:29] [INFO   ] Java 14+ detected. 
+[2026-01-09 07:48:29] [INFO   ]  Injection success! Proceeding with generation. 
+[2026-01-09 07:48:29] [INFO   ]  world loaded. 
+[2026-01-09 08:42:47] [INFO   ] Will spawn stronghold at: 1387, 239 
+[2026-01-09 08:42:47] [INFO   ] Spawning DeepCavePopulator at 208,19,336 
+[2026-01-09 08:42:47] [INFO   ] Spawning MossyCavePopulator at 208,51,343 
+[2026-01-09 08:42:51] [INFO   ] Spawning FrozenCavePopulator at -1824,35,-1249 
+[2026-01-09 08:43:01] [INFO   ] Generating org.terraform.structure.small.dungeon.SmallDungeonPopulator at chunk: 153,-8 
+[2026-01-09 08:43:01] [INFO   ] Spawning Underground Dungeon at 2461,14,-123 
+[2026-01-09 08:43:01] [INFO   ] Generating org.terraform.structure.small.buriedtreasure.BuriedTreasurePopulator at chunk: 153,-7 
+[2026-01-09 08:43:01] [INFO   ] Spawning LushClusterCavePopulator at 2418,50,-82 
+[2026-01-09 08:45:04] [INFO   ]  Custom Logger Initialized 
+[2026-01-09 08:45:04] [INFO   ] [NOTICE] TerraformGenerator will suppress the server's watchdog while generating chunks to prevent unnecessary stacktrace warnings. Unless you specifically need thewatchdog now (to take aikar timings or debug lag), you don't need to take any action. 
+[2026-01-09 08:45:04] [INFO   ] It is recommended to pregenerate to reduce lag problems. 
+[2026-01-09 08:45:04] [INFO   ] Watchdog Thread hooked. 
+[2026-01-09 08:45:04] [INFO   ]  bStats Metrics disabled. 
+[2026-01-09 08:45:04] [INFO   ]  Detected version: v1_16_R3, number: 16.3 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: VillageHousePopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: VillagePopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: OutpostPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: PyramidPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: MonumentPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: StrongholdPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: MansionPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: AncientCityPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: LargeCavePopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: MineshaftPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: CatacombsPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: BadlandsMinePopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: WarmOceanRuinsPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Large Structure: TrailRuinsPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Small Structure: SmallDungeonPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Small Structure: ShipwreckPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Small Structure: BuriedTreasurePopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Small Structure: RuinedPortalPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Small Structure: IglooPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Small Structure: DesertWellPopulator 
+[2026-01-09 08:45:04] [INFO   ] [Structure Registry] Registered Small Structure: WitchHutPopulator 
+[2026-01-09 08:45:07] [INFO   ]  Detected world: world, commencing injection...  
+[2026-01-09 08:45:07] [INFO   ]  IRON_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:45:07] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:45:07] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:45:07] [INFO   ]  DIAMOND_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:45:07] [INFO   ]  EMERALD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:45:07] [INFO   ]  LAPIS_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:45:07] [INFO   ]  REDSTONE_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:45:07] [INFO   ]  GRAVEL was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:45:07] [INFO   ]  ANDESITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:45:07] [INFO   ]  DIORITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:45:07] [INFO   ]  GRANITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:45:07] [INFO   ] Java 14+ detected. 
+[2026-01-09 08:45:07] [INFO   ] Java 14+ detected. 
+[2026-01-09 08:45:07] [INFO   ]  Injection success! Proceeding with generation. 
+[2026-01-09 08:45:07] [INFO   ]  world loaded. 
+[2026-01-09 08:58:46] [INFO   ]  Custom Logger Initialized 
+[2026-01-09 08:58:46] [INFO   ] [NOTICE] TerraformGenerator will suppress the server's watchdog while generating chunks to prevent unnecessary stacktrace warnings. Unless you specifically need thewatchdog now (to take aikar timings or debug lag), you don't need to take any action. 
+[2026-01-09 08:58:46] [INFO   ] It is recommended to pregenerate to reduce lag problems. 
+[2026-01-09 08:58:46] [INFO   ] Watchdog Thread hooked. 
+[2026-01-09 08:58:46] [INFO   ]  bStats Metrics disabled. 
+[2026-01-09 08:58:46] [INFO   ]  Detected version: v1_16_R3, number: 16.3 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: VillageHousePopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: VillagePopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: OutpostPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: PyramidPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: MonumentPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: StrongholdPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: MansionPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: AncientCityPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: LargeCavePopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: MineshaftPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: CatacombsPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: BadlandsMinePopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: WarmOceanRuinsPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Large Structure: TrailRuinsPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Small Structure: SmallDungeonPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Small Structure: ShipwreckPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Small Structure: BuriedTreasurePopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Small Structure: RuinedPortalPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Small Structure: IglooPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Small Structure: DesertWellPopulator 
+[2026-01-09 08:58:46] [INFO   ] [Structure Registry] Registered Small Structure: WitchHutPopulator 
+[2026-01-09 08:58:49] [INFO   ]  Detected world: world, commencing injection...  
+[2026-01-09 08:58:49] [INFO   ]  IRON_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:58:49] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:58:49] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:58:49] [INFO   ]  DIAMOND_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:58:49] [INFO   ]  EMERALD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:58:49] [INFO   ]  LAPIS_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:58:49] [INFO   ]  REDSTONE_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:58:49] [INFO   ]  GRAVEL was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:58:49] [INFO   ]  ANDESITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:58:49] [INFO   ]  DIORITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:58:49] [INFO   ]  GRANITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-01-09 08:58:49] [INFO   ] Java 14+ detected. 
+[2026-01-09 08:58:49] [INFO   ] Java 14+ detected. 
+[2026-01-09 08:58:49] [INFO   ]  Injection success! Proceeding with generation. 
+[2026-01-09 08:58:49] [INFO   ]  world loaded. 
+[2026-09-05 15:05:07] [INFO   ]  Custom Logger Initialized 
+[2026-09-05 15:05:07] [INFO   ] [NOTICE] TerraformGenerator will suppress the server's watchdog while generating chunks to prevent unnecessary stacktrace warnings. Unless you specifically need thewatchdog now (to take aikar timings or debug lag), you don't need to take any action. 
+[2026-09-05 15:05:07] [INFO   ] It is recommended to pregenerate to reduce lag problems. 
+[2026-09-05 15:05:07] [INFO   ] Watchdog Thread hooked. 
+[2026-09-05 15:05:07] [INFO   ]  bStats Metrics disabled. 
+[2026-09-05 15:05:08] [INFO   ]  Detected version: v1_16_R3, number: 16.3 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: VillageHousePopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: VillagePopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: OutpostPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: PyramidPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: MonumentPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: StrongholdPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: MansionPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: AncientCityPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: LargeCavePopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: MineshaftPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: CatacombsPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: BadlandsMinePopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: WarmOceanRuinsPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Large Structure: TrailRuinsPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Small Structure: SmallDungeonPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Small Structure: ShipwreckPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Small Structure: BuriedTreasurePopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Small Structure: RuinedPortalPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Small Structure: IglooPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Small Structure: DesertWellPopulator 
+[2026-09-05 15:05:08] [INFO   ] [Structure Registry] Registered Small Structure: WitchHutPopulator 
+[2026-09-05 15:05:12] [INFO   ]  Detected world: world, commencing injection...  
+[2026-09-05 15:05:12] [INFO   ]  IRON_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-09-05 15:05:12] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-09-05 15:05:12] [INFO   ]  GOLD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-09-05 15:05:12] [INFO   ]  DIAMOND_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-09-05 15:05:12] [INFO   ]  EMERALD_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-09-05 15:05:12] [INFO   ]  LAPIS_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-09-05 15:05:12] [INFO   ]  REDSTONE_ORE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-09-05 15:05:12] [INFO   ]  GRAVEL was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-09-05 15:05:12] [INFO   ]  ANDESITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-09-05 15:05:12] [INFO   ]  DIORITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-09-05 15:05:12] [INFO   ]  GRANITE was configured to use Y <= 0! Reverting ore configuration to hardcoded 1.16 values. 
+[2026-09-05 15:05:12] [INFO   ] Java 14+ detected. 
+[2026-09-05 15:05:12] [INFO   ] Java 14+ detected. 
+[2026-09-05 15:05:12] [INFO   ]  Injection success! Proceeding with generation. 
+[2026-09-05 15:05:12] [INFO   ]  world loaded. 
+[2026-09-05 15:05:33] [INFO   ] Will spawn stronghold at: 1387, 239 
+[2026-09-05 15:05:34] [INFO   ] Spawning MossyCavePopulator at -1296,40,2256 
+[2026-09-05 15:05:34] [INFO   ] Spawning DeepCavePopulator at -1296,3,2263 
+[2026-09-05 15:05:34] [INFO   ] Spawning LushClusterCavePopulator at -1302,52,2245 

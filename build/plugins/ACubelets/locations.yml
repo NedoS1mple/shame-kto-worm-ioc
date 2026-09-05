@@ -1,0 +1,25 @@
+locations:
+  '1':
+    world: lobby
+    x: 35
+    y: 88
+    z: 55
+    rotation: SOUTH
+    blockHeight: 0.5
+    permanentBlockHeight: 1.5
+  '2':
+    world: lobby
+    x: 35
+    y: 88
+    z: 47
+    rotation: SOUTH
+    blockHeight: 0.5
+    permanentBlockHeight: 1.5
+  '3':
+    world: lobby
+    x: 35
+    y: 88
+    z: 39
+    rotation: SOUTH
+    blockHeight: 0.5
+    permanentBlockHeight: 1.5

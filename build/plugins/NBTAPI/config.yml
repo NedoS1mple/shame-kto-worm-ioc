@@ -1,0 +1,7 @@
+nbtInjector:
+  enabled: false
+bStats:
+  enabled: false
+updateCheck:
+  enabled: false
+silentquickstart: false

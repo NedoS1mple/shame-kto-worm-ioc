@@ -1,0 +1,328 @@
+rtp:
+  command: /rtp
+  type: RUN_COMMAND
+  runcmd:
+  - '/brtp world world'
+  register: true
+  permission-required: false
+advert:
+  command: /ad
+  type: BROADCAST_TEXT
+  text:
+  - '&6[РЕКЛАМА]&f $multiargs &e| Отправил: $player'
+  cooldown: 300
+  cooldown-message: "&x&f&f&0&0&0&0[✘]&c Ошибка!&f Вы слишком часто пишите, подождите"
+  required_args: 1
+  register: true
+buying:
+  command: /buy
+  type: BROADCAST_TEXT
+  text:
+  - '&a[Куплю]&f $multiargs &a| Отправил: $player'
+  cooldown: 300
+  cooldown-message: "&x&f&f&0&0&0&0[✘]&c Ошибка!&f Вы слишком часто пишите, подождите"
+  required_args: 1
+  register: true
+selling:
+  command: /sel
+  type: BROADCAST_TEXT
+  text:
+  - '&c[Продам]&f $multiargs &c| Отправил: $player'
+  cooldown: 300
+  cooldown-message: "&x&f&f&0&0&0&0[✘]&c Ошибка!&f Вы слишком часто пишите, подождите"
+  required_args: 1
+  register: true
+spectatestop_alias:
+  command: /specoff
+  type: RUN_CONSOLE
+  runcmd:
+  - spawn $player
+  - gamemode survival $player
+  - staffmsg &a$player &e вышел из режима слежки
+  register: true
+delhome_alias:
+  command: /delhome
+  type: RUN_COMMAND
+  runcmd:
+  - removehome $arg1
+  register: true
+  error-message: "&6⚡ &cНеверное название точки дома"
+tokeni_alias:
+  command: /tk
+  type: RUN_COMMAND
+  runcmd:
+  - /p give $arg1 $arg2
+  register: true
+  error-message: "&6⚡ &cНеверно указаны параметры"
+cashback_alias:
+  command: /cb
+  type: RUN_COMMAND
+  runcmd:
+  - /tokenmanager give $arg1 $arg2
+  register: true
+  error-message: "&6⚡ &cНеверно указаны параметры"
+spectate_alias:
+  command: /spec
+  type: RUN_CONSOLE
+  runcmd:
+  - gamemode spectator $player
+  - tp $player $arg1
+  - staffmsg &a$player &eначал следить за &c$arg1
+  register: true
+adminchat_alias:
+  command: /ac
+  type: RUN_COMMAND
+  runcmd:
+  - /staffmsg $multiargs
+  register: true
+cooldown_expsquid:
+  command: /expsquid
+  type: RUN_CONSOLE
+  runcmd:
+  - experience add $player 5 levels
+  cooldown: 21600
+  cooldown-message: "&x&f&f&0&0&0&0[✘]&c Ошибка!&f Попробуйте немного позже"
+cooldown_expglava:
+  command: /expglava
+  type: RUN_CONSOLE
+  runcmd:
+  - experience add $player 10 levels
+  - "$text$&aВы успешно получили 10 уровней"
+  cooldown: 21600
+  cooldown-message: "&x&f&f&0&0&0&0[✘]&c Ошибка!&f Попробуйте немного позже"
+ender:
+  command: /ec
+  type: RUN_CONSOLE
+  runcmd:
+  - cmi ender
+  register: true
+cooldown_exptitan:
+  command: /exptitan
+  type: RUN_CONSOLE
+  runcmd:
+  - experience add $player 15 levels
+  - "$text$&aВы успешно получили 15 уровней"
+  cooldown: 21600
+  cooldown-message: "&x&f&f&0&0&0&0[✘]&c Ошибка!&f Попробуйте немного позже"
+cooldown_expknyaz:
+  command: /expknyaz
+  type: RUN_CONSOLE
+  runcmd:
+  - experience add $player 25 levels
+  - "$text$&aВы успешно получили 25 уровней"
+  cooldown: 21600
+  cooldown-message: "&x&f&f&0&0&0&0[✘]&c Ошибка!&f Попробуйте немного позже"
+cooldown_expgercog:
+  command: /expgercog
+  type: RUN_CONSOLE
+  runcmd:
+  - experience add $player 25 levels
+  - "$text$&aВы успешно получили 25 уровней"
+  cooldown: 21600
+  cooldown-message: "&x&f&f&0&0&0&0[✘]&c Ошибка!&f Попробуйте немного позже"
+cooldown_snezhki:
+  command: /snezhok
+  type: RUN_CONSOLE
+  runcmd:
+  - give $player snowball 32
+  - "$text$&fПингвин: &7Я налепил снежков, возьми немного..."
+  cooldown: 60
+  cooldown-message: "&fПингвин: &7Подожди, я не налепил еще!"
+links:
+  command: /links
+  type: TEXT
+  text:
+  - '&5······ &dНаши сообщества и ссылки: &5······'
+  - '&5» &fНаш сайт &f⇨ %triton_link.mycmd%'
+  - '&5» &fГруппа ВК &f⇨ %triton_link.mycmd2%'
+  - '&5» &fДискорд &f⇨ %triton_link.mycmd3%'
+  - '&5» &fПоддержка &f⇨ %triton_link.mycmd4%'
+  - '&5························································································'
+  register: true
+  permission-required: true
+rules:
+  command: /rules
+  type: TEXT
+  text:
+  - '&5········· &dСтраница - 1/1 &5····································································'
+  - '&5» &fЗапрещены читы и т.д'
+  - '&5» &fЗапрещена реклама серверов/групп/каналов'
+  - '&5» &fЗапрещена продажа чего-либо за реальные деньги'
+  - '&5» &fЗапрещено передавать/давать аккаунт'
+  - '&5» &fЗапрещены элементарные нарушения правил чата'
+  - '&5» &fЗапрещено использование багов/взломов'
+  - '&5» &fПолный список можно посмотреть у нас на сайте'
+  - '&5·························································································································'
+  register: true
+  permission-required: true
+tptoggle:
+  command: /tptoggle
+  type: RUN_CONSOLE
+  runcmd:
+  - 'cmi options $player acceptingtpa toggle'
+  permission-required: true
+  permission-node: mycmd.cmd.tptoggle
+  permission-error: "&cУ вас нет прав."
+  register: true
+paytoggle:
+  command: /paytoggle
+  type: RUN_CONSOLE
+  runcmd:
+  - 'cmi options $player acceptingmoney toggle'
+  permission-required: true
+  permission-node: mycmd.cmd.paytoggle
+  permission-error: "&cУ вас нет прав."
+  register: true
+msgtoggle:
+  command: /msgtoggle
+  type: RUN_CONSOLE
+  runcmd:
+  - 'cmi options $player acceptingpm toggle'
+  permission-required: true
+  permission-node: mycmd.cmd.msgtoggle
+  permission-error: "&cУ вас нет прав."
+  register: true
+cooldown_defaultsalarys:
+  command: /defaultsalary
+  type: RUN_CONSOLE
+  runcmd:
+  - money give $player 5000
+  - $text$&e[$] Зарплата получена!
+  cooldown: 3600
+  cooldown-message: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+  permission-error: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+cooldown_baronsalary:
+  command: /baronsalary
+  type: RUN_CONSOLE
+  runcmd:
+  - money give $player 7500
+  - $text$&e[$] Зарплата получена!
+  cooldown: 3600
+  cooldown-message: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+  permission-error: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+cooldown_strajsalary:
+  command: /strajsalary
+  type: RUN_CONSOLE
+  runcmd:
+  - money give $player 10000
+  - $text$&e[$] Зарплата получена!
+  cooldown: 3600
+  cooldown-message: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+  permission-error: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+cooldown_herosalary:
+  command: /herosalary
+  type: RUN_CONSOLE
+  runcmd:
+  - money give $player 12500
+  - $text$&e[$] Зарплата получена!
+  cooldown: 3600
+  cooldown-message: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+  permission-error: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+cooldown_aspidalary:
+  command: /aspidalary
+  type: RUN_CONSOLE
+  runcmd:
+  - money give $player 15000
+  - $text$&e[$] Зарплата получена!
+  cooldown: 3600
+  cooldown-message: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+  permission-error: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+cooldown_squidSalary:
+  command: /squidSalary
+  type: RUN_CONSOLE
+  runcmd:
+  - money give $player 20000
+  - $text$&e[$] Зарплата получена!
+  cooldown: 3600
+  cooldown-message: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+  permission-error: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+cooldown_glavasalary:
+  command: /glavasalary
+  type: RUN_CONSOLE
+  runcmd:
+  - money give $player 25000
+  - $text$&e[$] Зарплата получена!
+  cooldown: 3600
+  cooldown-message: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+  permission-error: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+cooldown_elitesalary:
+  command: /elitesalary
+  type: RUN_CONSOLE
+  runcmd:
+  - money give $player 30000
+  - $text$&e[$] Зарплата получена!
+  cooldown: 3600
+  cooldown-message: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+  permission-error: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+cooldown_titansalary:
+  command: /titansalary
+  type: RUN_CONSOLE
+  runcmd:
+  - money give $player 35000
+  - $text$&e[$] Зарплата получена!
+  cooldown: 3600
+  cooldown-message: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+  permission-error: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+cooldown_princsalary:
+  command: /princsalary
+  type: RUN_CONSOLE
+  runcmd:
+  - money give $player 40000
+  - $text$&e[$] Зарплата получена!
+  cooldown: 3600
+  cooldown-message: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+  permission-error: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+cooldown_knyazsalary:
+  command: /knyazsalary
+  type: RUN_CONSOLE
+  runcmd:
+  - money give $player 45000
+  - $text$&e[$] Зарплата получена!
+  cooldown: 3600
+  cooldown-message: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+  permission-error: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+cooldown_gercogsalary:
+  command: /gercogsalary
+  type: RUN_CONSOLE
+  runcmd:
+  - money give $player 50000
+  - $text$&e[$] Зарплата получена!
+  cooldown: 3600
+  cooldown-message: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+  permission-error: "&4[✘] &fЗарплата не получена! Возможные ошибки:\n&4[✘] &f1. Вы выбрали не свою привилегию\n&4[✘] &f2. Зарплата ещë не начислилась"
+cooldown_freereward:
+  command: /freereward
+  type: RUN_CONSOLE_RANDOM
+  runcmd:
+  - cubelets give $player normal
+  - cubelets give $player bronya
+  - cubelets give $player guns
+  - cubelets give $player inst
+  - cubelets give $player money
+  - cubelets give $player resurses
+  cooldown: 604800
+  cooldown-message: "&x&f&f&0&0&0&0[✘]&c Ошибка!&f Попробуйте немного позже"
+cooldown_knyazrewardd:
+  command: /knyazrewardcase
+  type: RUN_CONSOLE_RANDOM
+  runcmd:
+  - cubelets give $player normal
+  - cubelets give $player bronya
+  - cubelets give $player guns
+  - cubelets give $player inst
+  - cubelets give $player money
+  - cubelets give $player resurses
+  cooldown: 259200
+  cooldown-message: "&x&f&f&0&0&0&0[✘]&c Ошибка!&f Попробуйте немного позже"
+cooldown_glavareward:
+  command: /glavarewardcase
+  type: RUN_CONSOLE_RANDOM
+  runcmd:
+  - cubelets give $player normal
+  - cubelets give $player bronya
+  - cubelets give $player guns
+  - cubelets give $player inst
+  - cubelets give $player money
+  - cubelets give $player resurses
+  cooldown: 432000
+  cooldown-message: "&x&f&f&0&0&0&0[✘]&c Ошибка!&f Попробуйте немного позже"

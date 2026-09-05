@@ -1,0 +1,749 @@
+# Плагин: mcEnchants
+# Версия: 1.8+
+#
+# Описание:
+# Плагин добавляет новые зачарования.
+#
+# Зависимости: (плагины без которых этот работать не будет)
+# - UtilM https://mcdev.su/resources/utilm.73/
+
+message:
+  # Поддерживается вывод сообщений в мультистрочном формате.
+  reload_success:
+    - "&aПлагин перезагружен!"
+  permission_denied: "&cОтказано в доступе."
+  player_is_not_online: "&cЭтот игрок сейчас не онлайн."
+  specified_enchant_id_does_not_exist: "&cЗачарования с таким ID '&b%enchant_id%&c' не существует."
+  success: "&aУспешно!"
+  player_does_not_have_specified_item: "&cУ игрока нет указанного предмета."
+  not_enough_player_experience: "&cНедостаточно опыта игрока. Требуется &b%required_player_experience%&c, а есть только &b%actual_player_experience%&c."
+  json_invalid: "&cJSON список зачарований должен быть валидным и не содержать пробелы, а введено: '&b%input%&c'. Проверить валидность JSON онлайн: &bhttps://jsonlint.com/"
+  material_does_not_exist_on_this_server_version: "&cВведенный материал '&b%input%&c' не существует на этой версии сервера '&b%server_version%&c'."
+  amount_is_not_a_number: "&cКол-во '&b%input%&c' не является числом."
+  amount_is_lower_than_zero: "&cКол-во '&b%input%&c' не может быть меньше или равна нуля."
+  specified_player_is_not_online: "&cЭтот игрок '&b%input%&c' сейчас не онлайн."
+  enchanted_items_given: "&aПредмет(ы) с зачарованиями выдан(ы)!"
+  give_item_with_enchants_wrong_amount_of_arguments: "&cКоманда принимает &b5 &cаргументов, а передано &b%total_arguments%&c, проверьте, &nне используйте пробелы внутри JSON {...}, из-за них может быть больше аргументов чем нужно&r&c."
+  this_command_is_only_available_in_the_game: "&cЭта команда доступна только в игре."
+  help:
+    - "&e/mcenchants reload &7- перезагрузить плагин"
+    - "&e/mcenchants help &7- показать список команд"
+    - "&e/mcenchants book &b(ID предмета) &egive &b(ник игрока онлайн) &7- выдать игроку книгу зачарования"
+    - "&e/mcenchants book &b(ID предмета) &etake &b(ник игрока онлайн) &7- забрать книгу зачарования у игрока"
+    - "&e/mcenchants booklist &7- открыть список книг зачарований"
+    - ""
+    - "&e/mcenchants give_item_with_enchants &b(JSON список зачарований) (материал) (кол-во) (ник игрока онлайн) &7- выдать игроку предмет с зачарованиями"
+    - '&7Например: &e/mcenchants give_item_with_enchants &b{"enchant_id_list":["bulldozer","poison"]} DIAMOND_PICKAXE 1 Steve'
+
+permission:
+  reload: mcenchants.reload # Разрешение на перезагрузку этого плагина.
+  give: mcenchants.give # Разрешение на выдачу книги зачарования.
+  take: mcenchants.take # Разрешение на изъятие книги зачарования.
+  give_item_with_enchants: mcenchants.give_item_with_enchants # Разрешение на выдачу игроку предмета с зачарованиями.
+  booklist: mcenchants.booklist # Разрешение на открытие списка книг зачарований.
+
+anvil:
+  # Для соместимости работы на всех версиях,
+  # число требуемого опыта будет показано в
+  # описании получаемого предмета, а не в GUI.
+  player_experience_required_lore_placeholder:
+    - "&d* &a= = = = = &d*"
+    - "&dТребуется &a%required_player_experience% &dопыта игрока."
+    - "&dСейчас есть &a%actual_player_experience% &dопыта игрока&d."
+    - "&d* &a= = = = = &d*"
+    - ""
+
+  use_sound:
+    # Звук который будет воспроизведен при наложении зачарования в наковальне.
+    # Используйте звуки версии ядра на котором запускаете плагин.
+    # Списки всех звуков для каждой версии:
+    # https://helpch.at/docs/1.16.5/org/bukkit/Sound.html
+    # https://helpch.at/docs/x.x.x/org/bukkit/Sound.html
+    # ...
+    sound: BLOCK_ANVIL_USE
+
+    # 1.12+
+    sound_category: MASTER
+
+    # Громкость (от 0.0 до 2.0).
+    volume: 1.0
+
+    # Искажение (от 0.0 до 2.0).
+    pitch: 1.0
+
+# Вспомогательный объект устраняющий различия в наименовании лавы на разных версиях.
+lava_walker_helper:
+  lava_material_list: # Список материалов являющихся лавой.
+    - LAVA
+
+enchant_manager:
+  enchant_list: # Список зачарований.
+    bulldozer: # ID Зачарования.
+      type: BULLDOZER # Тип зачарования, все зачарования представлены в этой конфигурации.
+      display_name: "Бульдозер" # Название зачарования.
+      lore_string: "&7Бульдозер I" # Визуализация зачарования в списке чар описания предмета.
+      # Списки всех материалов для каждой версии:
+      # https://helpch.at/docs/1.16.5/org/bukkit/Material.html
+      # https://helpch.at/docs/x.x.x/org/bukkit/Material.html
+      # ...
+      applicable_to_material_list:
+        - WOODEN_PICKAXE
+        - STONE_PICKAXE
+        - IRON_PICKAXE
+        - GOLDEN_PICKAXE
+        - DIAMOND_PICKAXE
+        - NETHERITE_PICKAXE
+        - WOODEN_SHOVEL
+        - STONE_SHOVEL
+        - IRON_SHOVEL
+        - GOLDEN_SHOVEL
+        - DIAMOND_SHOVEL
+        - NETHERITE_SHOVEL
+      player_exp_required: 20 # Требуемый уровень опыта игрока для применения этого зачарования (при наложении книгой).
+
+      # Список материалов которые способность сможет разрушать.
+      # Исключает случаи разрушения блоков бедрока, воды, лавы, порталов и тд.
+      # Добавляет возможность создания способности "Дровосек".
+      allowed_break_material_list:
+        - STONE
+        - GRANITE
+        - COAL_ORE
+        - IRON_ORE
+        - LAPIS_ORE
+        - GOLD_ORE
+        - DIAMOND_ORE
+        - EMERALD_ORE
+        - GRASS_BLOCK
+        - GRASS
+        - COBBLESTONE
+        - ANDESITE
+
+      # Сила бульдозера.
+      # Например: 1 = 3x3x3, 2 = 5x5x5, 3 = 7x7x7 и тд.
+      power: 1
+
+    woodcutter:
+      type: BULLDOZER
+      display_name: "Дровосек"
+      lore_string: "&7Дровосек I"
+      applicable_to_material_list:
+        - WOODEN_AXE
+        - STONE_AXE
+        - IRON_AXE
+        - GOLDEN_AXE
+        - DIAMOND_AXE
+        - NETHERITE_AXE
+      player_exp_required: 15
+      allowed_break_material_list:
+        - OAK_WOOD
+        - SPRUCE_WOOD
+        - BIRCH_WOOD
+        - JUNGLE_WOOD
+        - ACACIA_WOOD
+        - DARK_OAK_WOOD
+      power: 1
+
+    web:
+      type: WEB
+      display_name: "Паутина"
+      lore_string: "&7Паутина I"
+      applicable_to_material_list:
+        - WOODEN_PICKAXE
+        - STONE_PICKAXE
+        - IRON_PICKAXE
+        - GOLDEN_PICKAXE
+        - DIAMOND_PICKAXE
+        - NETHERITE_PICKAXE
+      player_exp_required: 3
+      max_blocks_to_break: 40 # Максимальное число прилегающих друг к другу блоков которые будут единовременно сломаны.
+      allowed_chain_break_material_list: # Список материалов допустимых к разрушению цепочкой (этой способностью).
+        - COAL_ORE
+        - IRON_ORE
+        - LAPIS_ORE
+        - GOLD_ORE
+        - DIAMOND_ORE
+        - EMERALD_ORE
+        - GLOWSTONE
+        - NETHER_QUARTZ_ORE
+
+    automelting:
+      type: AUTOMELTING
+      display_name: "Авто-плавка"
+      lore_string: "&7Авто-плавка I"
+      applicable_to_material_list:
+        - WOODEN_PICKAXE
+        - STONE_PICKAXE
+        - IRON_PICKAXE
+        - GOLDEN_PICKAXE
+        - DIAMOND_PICKAXE
+        - NETHERITE_PICKAXE
+      player_exp_required: 100
+      automelting_pair_list: # Список переплавляемых пар.
+        automelting_pair_1: # ID переплавляемой пары.
+          source_material: IRON_ORE # Исходный материал.
+
+          result_material: IRON_INGOT # Результат.
+        automelting_pair_2:
+          source_material: GOLD_ORE
+          result_material: GOLD_INGOT
+
+    poison:
+      type: POISON # Есть шанс, что при ударе по игроку, он получит эффект "Отравление" на несколько секунд.
+      display_name: "Яд"
+      lore_string: "&7Яд I"
+      applicable_to_material_list:
+        - WOODEN_SWORD
+        - STONE_SWORD
+        - IRON_SWORD
+        - GOLDEN_SWORD
+        - DIAMOND_SWORD
+        - NETHERITE_SWORD
+        - TRIDENT
+      player_exp_required: 100
+
+      # Шанс наложения эффекта.
+      # Дробные значения поддерживаются.
+      chance_of_poisoning: 50.123
+
+    vampire:
+      type: VAMPIRE # Есть шанс, что при ударе по игроку, вы получите эффект "Регенерация" на несколько секунд.
+      display_name: "Вампиризм"
+      lore_string: "&7Вампиризм I"
+      applicable_to_material_list:
+        - WOODEN_SWORD
+        - STONE_SWORD
+        - IRON_SWORD
+        - GOLDEN_SWORD
+        - DIAMOND_SWORD
+        - NETHERITE_SWORD
+        - TRIDENT
+      player_exp_required: 100
+
+      # Шанс наложения эффекта.
+      # Дробные значения поддерживаются.
+      chance_of_vampirism: 50.123
+
+    oxidation:
+      type: OXIDATION # При атаке с этим зачарованием броня врага ломается быстрее.
+      display_name: "Окисление"
+      lore_string: "&7Окисление I"
+      applicable_to_material_list:
+        - WOODEN_SWORD
+        - STONE_SWORD
+        - IRON_SWORD
+        - GOLDEN_SWORD
+        - DIAMOND_SWORD
+        - NETHERITE_SWORD
+        - TRIDENT
+      player_exp_required: 100
+
+      # Урон наносимый броне.
+      #
+      # Например, ниже приведен максимальный запас брони различных нагрудников.
+      # "Кожаная куртка" = 80
+      # "Железный нагрудник" = 240
+      # "Кольчуга" = 240
+      # "Золотой нагрудник" = 112
+      # "Алмазный нагрудник" = 528
+      armor_damage: 20
+
+    exp_dropper:
+      type: EXP_DROPPER # При добыче руд и убийстве мобов выпадает дополнительный опыт уровня.
+      display_name: "Опытный"
+      lore_string: "&7Опытный I"
+      applicable_to_material_list:
+        - WOODEN_SWORD
+        - STONE_SWORD
+        - IRON_SWORD
+        - GOLDEN_SWORD
+        - DIAMOND_SWORD
+        - NETHERITE_SWORD
+        - WOODEN_PICKAXE
+        - STONE_PICKAXE
+        - IRON_PICKAXE
+        - GOLDEN_PICKAXE
+        - DIAMOND_PICKAXE
+        - NETHERITE_PICKAXE
+      player_exp_required: 100
+
+      # Список блоков с котрых падает дополнительный опыт.
+      # Список можно изменять добавляя или удаляя его элементы.
+      # Чтобы очистить список установитие "exp_block_list: []".
+      exp_block_list:
+        GOLDEN_ore:
+          exp: 1 # Размер дополнительного опыта.
+          material: GOLD_ORE # Материал блока после разрушения которого выпадает дополнительный опыт.
+        iron_ore:
+          exp: 2
+          material: IRON_ORE
+        coal_ore:
+          exp: 3
+          material: COAL_ORE
+        lapis_ore:
+          exp: 4
+          material: LAPIS_ORE
+        diamond_ore:
+          exp: 5
+          material: DIAMOND_ORE
+        emerald_ore:
+          exp: 7
+          material: EMERALD_ORE
+        glowstone:
+          exp: 8
+          material: GLOWSTONE
+        nether_quartz_ore:
+          exp: 9
+          material: NETHER_QUARTZ_ORE
+
+      # Список сущностей с котрых падает дополнительный опыт.
+      # Список можно изменять добавляя или удаляя его элементы.
+      # Чтобы очистить список установитие "exp_entity_list: []".
+      exp_entity_list:
+        player:
+          exp: 1 # Размер дополнительного опыта.
+
+          # Тип сущности с которой падает дополнительный опыт.
+          # Используйте типы сущностей версии ядра на котором запускаете плагин.
+          # Списки всех типов сущностей для каждой версии:
+          # https://helpch.at/docs/1.16.5/org/bukkit/entity/EntityType.html
+          # https://helpch.at/docs/x.x.x/org/bukkit/entity/EntityType.html
+          # ...
+          entity_type: PLAYER
+        creeper:
+          exp: 2
+          entity_type: CREEPER
+        skeleton:
+          exp: 3
+          entity_type: SKELETON
+        spider:
+          exp: 4
+          entity_type: SPIDER
+        giant:
+          exp: 5
+          entity_type: GIANT
+        zombie:
+          exp: 6
+          entity_type: ZOMBIE
+        slime:
+          exp: 7
+          entity_type: SLIME
+        ghast:
+          exp: 8
+          entity_type: GHAST
+        enderman:
+          exp: 9
+          entity_type: ENDERMAN
+        cave_spider:
+          exp: 10
+          entity_type: CAVE_SPIDER
+        silverfish:
+          exp: 11
+          entity_type: SILVERFISH
+        blaze:
+          exp: 12
+          entity_type: BLAZE
+        magma_cube:
+          exp: 13
+          entity_type: MAGMA_CUBE
+        ender_dragon:
+          exp: 14
+          entity_type: ENDER_DRAGON
+        wither:
+          exp: 15
+          entity_type: WITHER
+        bat:
+          exp: 16
+          entity_type: BAT
+        witch:
+          exp: 17
+          entity_type: WITCH
+        endermite:
+          exp: 18
+          entity_type: ENDERMITE
+        guardian:
+          exp: 19
+          entity_type: GUARDIAN
+        pig:
+          exp: 20
+          entity_type: PIG
+        sheep:
+          exp: 21
+          entity_type: SHEEP
+        cow:
+          exp: 22
+          entity_type: COW
+        chicken:
+          exp: 23
+          entity_type: CHICKEN
+        squid:
+          exp: 24
+          entity_type: SQUID
+        wolf:
+          exp: 25
+          entity_type: WOLF
+        mushroom_cow:
+          exp: 26
+          entity_type: MUSHROOM_COW
+        snowman:
+          exp: 27
+          entity_type: SNOWMAN
+        ocelot:
+          exp: 28
+          entity_type: OCELOT
+        iron_golem:
+          exp: 29
+          entity_type: IRON_GOLEM
+        horse:
+          exp: 30
+          entity_type: HORSE
+        rabbit:
+          exp: 31
+          entity_type: RABBIT
+        villager:
+          exp: 32
+          entity_type: VILLAGER
+        elder_guardian:
+          exp: 33
+          entity_type: ELDER_GUARDIAN
+        wither_skeleton:
+          exp: 34
+          entity_type: WITHER_SKELETON
+        stray:
+          exp: 35
+          entity_type: STRAY
+        husk:
+          exp: 36
+          entity_type: HUSK
+        zombie_villager:
+          exp: 37
+          entity_type: ZOMBIE_VILLAGER
+        skeleton_horse:
+          exp: 38
+          entity_type: SKELETON_HORSE
+        zombie_horse:
+          exp: 39
+          entity_type: ZOMBIE_HORSE
+        donkey:
+          exp: 40
+          entity_type: DONKEY
+        mule:
+          exp: 41
+          entity_type: MULE
+        evoker:
+          exp: 42
+          entity_type: EVOKER
+        vex:
+          exp: 43
+          entity_type: VEX
+        vindicator:
+          exp: 44
+          entity_type: VINDICATOR
+        illusioner:
+          exp: 45
+          entity_type: ILLUSIONER
+        zombified_piglin:
+          exp: 46
+          entity_type: ZOMBIFIED_PIGLIN
+        shulker:
+          exp: 47
+          entity_type: SHULKER
+        polar_bear:
+          exp: 48
+          entity_type: POLAR_BEAR
+        llama:
+          exp: 49
+          entity_type: LLAMA
+        parrot:
+          exp: 50
+          entity_type: PARROT
+        turtle:
+          exp: 51
+          entity_type: TURTLE
+        phantom:
+          exp: 52
+          entity_type: PHANTOM
+        cod:
+          exp: 53
+          entity_type: COD
+        salmon:
+          exp: 54
+          entity_type: SALMON
+        pufferfish:
+          exp: 55
+          entity_type: PUFFERFISH
+        tropical_fish:
+          exp: 56
+          entity_type: TROPICAL_FISH
+        drowned:
+          exp: 57
+          entity_type: DROWNED
+        dolphin:
+          exp: 58
+          entity_type: DOLPHIN
+        panda:
+          exp: 59
+          entity_type: PANDA
+        pillager:
+          exp: 60
+          entity_type: PILLAGER
+        ravager:
+          exp: 61
+          entity_type: RAVAGER
+        trader_llama:
+          exp: 62
+          entity_type: TRADER_LLAMA
+        wandering_trader:
+          exp: 63
+          entity_type: WANDERING_TRADER
+        fox:
+          exp: 64
+          entity_type: FOX
+        bee:
+          exp: 65
+          entity_type: BEE
+        hoglin:
+          exp: 66
+          entity_type: HOGLIN
+        piglin:
+          exp: 67
+          entity_type: PIGLIN
+        strider:
+          exp: 68
+          entity_type: STRIDER
+        zoglin:
+          exp: 69
+          entity_type: ZOGLIN
+        piglin_brute:
+          exp: 70
+          entity_type: PIGLIN_BRUTE
+
+    explosive:
+      type: EXPLOSIVE # При приземлении снаряда есть шанс создать взрыв, не разрушающий блоки.
+      display_name: "Подрывник"
+      lore_string: "&7Подрывник I"
+      applicable_to_material_list:
+        - BOW
+        - TRIDENT
+      player_exp_required: 100
+
+      # Шанс срабатывания способности.
+      # Дробные значения поддерживаются.
+      explosion_chance: 50.123
+
+      explosion: # Конфигурация взрыва.
+        power: 2.0 # Сила взрыва.
+        breaks_blocks: false # Hазрушать блоки?
+        creates_fire: false # Поджигать блоки?
+
+    sniper:
+      type: SNIPER # В зависимости от уровня зачарования, ваши стрелы будут летать намного быстрее.
+      display_name: "Снайпер"
+      lore_string: "&7Снайпер I"
+      applicable_to_material_list:
+        - BOW
+      player_exp_required: 100
+      arrow_speed: 5.0 # Скорость полета стрелы.
+
+    magnet:
+      type: MAGNET # Добытые ресурсы попадают сразу в инвентарь.
+      display_name: "Магнит"
+      lore_string: "&7Магнит I"
+      applicable_to_material_list:
+        - WOODEN_PICKAXE
+        - STONE_PICKAXE
+        - IRON_PICKAXE
+        - GOLDEN_PICKAXE
+        - DIAMOND_PICKAXE
+        - NETHERITE_PICKAXE
+      player_exp_required: 100
+      radius: 2.0 # Радиус притягивания выпавших предметов.
+      magnetic_material_list: # Список материалов притягиваемых предметов.
+        - COAL
+        - IRON_ORE
+        - LAPIS_ORE
+        - REDSTONE
+        - DIAMOND
+        - EMERALD_ORE
+        - GLOWSTONE_DUST
+        - QUARTZ
+
+    pinger:
+      type: PINGER # Когда у предмета станет мало прочности, это зачарование подаст звуковой сигнал.
+      display_name: "Пингер"
+      lore_string: "&7Пингер I"
+      applicable_to_material_list:
+        - WOODEN_PICKAXE
+        - STONE_PICKAXE
+        - IRON_PICKAXE
+        - GOLDEN_PICKAXE
+        - DIAMOND_PICKAXE
+        - NETHERITE_PICKAXE
+        - WOODEN_HOE
+        - STONE_HOE
+        - IRON_HOE
+        - GOLDEN_HOE
+        - DIAMOND_HOE
+        - NETHERITE_HOE
+        - WOODEN_SHOVEL
+        - STONE_SHOVEL
+        - IRON_SHOVEL
+        - GOLDEN_SHOVEL
+        - DIAMOND_SHOVEL
+        - NETHERITE_SHOVEL
+      player_exp_required: 100
+      trigger_sound_when_uses_left: 10 # Воспроизвести звук когда останется N использований.
+      ping_sound:
+        sound: BLOCK_NOTE_BLOCK_PLING
+        sound_category: MASTER
+        volume: 1.0
+        pitch: 2.0
+
+      # Сообщение которое будет отправлено игроку в чат.
+      # Оставьте сообщение пустым "" чтобы не показывать.
+      chat_message: "&6Этот предмет скоро сломается!"
+
+    jumping:
+
+      # При ношении у вас будет постоянный эффект прыгучести.
+      # Примечание: зачарование предмета срабатывает если он
+      # находится в одном из четырех слотов экипировки.
+      type: JUMPING
+
+      display_name: "Попрыгун"
+      lore_string: "&7Попрыгун I"
+      applicable_to_material_list:
+        - LEATHER_BOOTS
+        - CHAINMAIL_BOOTS
+        - IRON_BOOTS
+        - GOLDEN_BOOTS
+        - DIAMOND_BOOTS
+        - NETHERITE_BOOTS
+      player_exp_required: 100
+      amplifier: 2 # Сила прыгучести, например 2 = II или 4 = IV.
+
+    lava_walker:
+      type: LAVA_WALKER # Позволяет ходить по лаве превращая её в обсидиан.
+      display_name: "Лавоход"
+      lore_string: "&7Лавоход I"
+      applicable_to_material_list:
+        - LEATHER_BOOTS
+        - CHAINMAIL_BOOTS
+        - IRON_BOOTS
+        - GOLDEN_BOOTS
+        - DIAMOND_BOOTS
+        - NETHERITE_BOOTS
+      player_exp_required: 100
+      transformation_material: OBSIDIAN # Материал в который превратится лава.
+
+      # Сила лавохода.
+      # Например: 0 = 1x1, 1 = 3x3, 2 = 5x5, 3 = 7x7 и тд.
+      power: 0
+
+    heavy:
+      type: HEAVY # При использовании предмета с этим зачарованием вы получите эффект медлительности.
+      display_name: "Тяжелый"
+      lore_string: "&7Тяжелый I"
+      applicable_to_material_list:
+        - WOODEN_PICKAXE
+        - STONE_PICKAXE
+        - IRON_PICKAXE
+        - GOLDEN_PICKAXE
+        - DIAMOND_PICKAXE
+        - NETHERITE_PICKAXE
+      player_exp_required: 100
+      amplifier: 2 # Сила медлительности, например 2 = II или 4 = IV.
+
+    unstable:
+      type: UNSTABLE # Предмет с этим зачарованием будет быстрее ломаться.
+      display_name: "Нестабильный"
+      lore_string: "&7Нестабильный I"
+      applicable_to_material_list:
+        - WOODEN_PICKAXE
+        - STONE_PICKAXE
+        - IRON_PICKAXE
+        - GOLDEN_PICKAXE
+        - DIAMOND_PICKAXE
+        - NETHERITE_PICKAXE
+        - LEATHER_HELMET
+        - CHAINMAIL_HELMET
+        - IRON_HELMET
+        - GOLDEN_HELMET
+        - DIAMOND_HELMET
+        - NETHERITE_HELMET
+      player_exp_required: 100
+      wear_strength_per_use: 10 # Сколько дополнительных едениц износа получит предмет.
+
+    greener:
+      type: GREENER # Кликом ПКМ по растению выращивает его и уменьшает прочность предмета.
+      display_name: "Озеленитель"
+      lore_string: "&7Озеленитель I"
+      applicable_to_material_list:
+        - WOODEN_HOE
+        - STONE_HOE
+        - IRON_HOE
+        - GOLDEN_HOE
+        - DIAMOND_HOE
+        - NETHERITE_HOE
+      player_exp_required: 100
+
+      # Урон наносимый инструменту.
+      #
+      # Например, ниже приведен максимальный запас брони различных мотыг.
+      # "Деревянная мотыга" = 59
+      # "Каменная мотыга" = 131
+      # "Железная мотыга" = 250
+      # "Золотая мотыга" = 32
+      # "Алмазная мотыга" = 1561
+      tool_damage: 2
+
+    detection:
+      type: DETECTION # При ударе по врагу есть шанс, что на него наложится эффект свечения.
+      display_name: "Детекция"
+      lore_string: "&7Детекция I"
+      applicable_to_material_list:
+        - WOODEN_SWORD
+        - STONE_SWORD
+        - IRON_SWORD
+        - GOLDEN_SWORD
+        - DIAMOND_SWORD
+        - NETHERITE_SWORD
+        - TRIDENT
+      player_exp_required: 100
+
+      # Шанс наложения эффекта.
+      # Дробные значения поддерживаются.
+      glowing_chance: 50.123
+
+    trident_stupor:
+      type: TRIDENT_STUPOR # При бросании трезубца накладывает на цель эффект слабости и замедления в зависимости от уровня.
+      display_name: "Ступор"
+      lore_string: "&7Ступор I"
+      applicable_to_material_list:
+        - TRIDENT
+      player_exp_required: 100
+      amplifier: 2 # Сила слабости и замедления, например 2 = II или 4 = IV.
+
+    trident_scout:
+      type: TRIDENT_SCOUT # После броска притягивает игрока в направлении приземлившегося трезубца.
+      display_name: "Скаут"
+      lore_string: "&7Скаут I"
+      applicable_to_material_list:
+        - TRIDENT
+      player_exp_required: 100
+
+    trident_magnet:
+      type: TRIDENT_MAGNET # При бросании трезубца притягивает цель в направлении владельца.
+      display_name: "Притяжение"
+      lore_string: "&7Притяжение I"
+      applicable_to_material_list:
+        - TRIDENT
+      player_exp_required: 100
+
+    trident_comeback:
+      type: TRIDENT_COMEBACK # При броске есть шанс моментально вернуть трезубец в инвентарь.
+      display_name: "Возвращение"
+      lore_string: "&7Возвращение I"
+      applicable_to_material_list:
+        - TRIDENT
+      player_exp_required: 100
+      comeback_chance: 50.123 # Шанс возвращения трезубца в инвентарь.

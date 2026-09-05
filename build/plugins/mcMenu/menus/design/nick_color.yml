@@ -1,0 +1,664 @@
+open_menu_command_list:
+  - "ncolor"
+
+access_to_open_checker:
+  enable: false
+  permission: menu.open.shop_weapon
+  message:
+    permission_denied: "&cОтказано в доступе на открытие меню 1."
+
+# Заголовок меню.
+title: "#D74444&l❖ #ff6600&lЦвет ника"
+
+# (Тиков 20 тиков = 1 сек.) Интервал перерисовки меню.
+# Значения 0 и ниже включая -1 и тд. отключают отрисовку за исключением случаев когда игрок кликает (оптимизация).
+update_interval_ticks: 0
+
+# Макет меню.
+layout:
+
+  # Сетка макета.
+  grid:
+    - "| | - - A - - | |"
+    - "| B C D E F G H |"
+    - "| I J K L . . . |"
+    - "| . . . . . . . |"
+    - "| | - - - - - | |"
+
+  layout_item_list:
+    layout_item:
+      placeholder: "A"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: tipped_arrow
+            display_name: "#fb0000[⟲] #ff6600Вернуться.."
+            description:
+              - "&7[Вернуться к разделам]"
+      click_pipeline_component_list:
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - design
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: minecraft:block.note_block.bit
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_1:
+      placeholder: "B"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "&f[ЦВЕТ]"
+            description:
+              - "#FFFFE6Статус: &e[Доступно]"
+              - "#FFFFE6Нажми, чтобы установить"
+      click_pipeline_component_list:
+        INVOKE_PLAYER_COMMAND_LIST:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - enick &f%player_name%
+        send_message:
+          type: SEND_MESSAGE
+          message: "#FFFFE6Установлено &f[ЦВЕТ]"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_2:
+      placeholder: "C"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.baron"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "&9[ЦВЕТ]"
+                description:
+                  - "#FFFFE6Статус: &c[Недоступно]"
+                  - "#FFFFE6Изменить может только &cБарон"
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "&9[ЦВЕТ]"
+            description:
+              - "#FFFFE6Статус: &e[Доступно]"
+              - "#FFFFE6Нажми, чтобы установить"              
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "cmi.kit.baron"
+          permission_denied_click_pipeline_component_list:
+            component_6:
+              type: SEND_MESSAGE
+              message: 
+                - " #fb0000[✘] Ошибка! #FFFFE6У Вас нет необходимой #00FF00Привилегии#FFFFE6!"
+                - " #FFFFE6   Не беда, её можно купить на #ff6600mcdev.su"
+        component_2:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - enick &9%player_name%
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено &9[ЦВЕТ]"
+            - ""
+
+    layout_item_3:
+      placeholder: "D"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.strazh"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "&e[ЦВЕТ]"
+                description:
+                  - "#FFFFE6Статус: &c[Недоступно]"
+                  - "#FFFFE6Изменить может только &cСтраж"
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "&e[ЦВЕТ]"
+            description:
+              - "#FFFFE6Статус: &e[Доступно]"
+              - "#FFFFE6Нажми, чтобы установить"              
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "cmi.kit.strazh"
+          permission_denied_click_pipeline_component_list:
+            component_6:
+              type: SEND_MESSAGE
+              message: 
+                - " #fb0000[✘] Ошибка! #FFFFE6У Вас нет необходимой #00FF00Привилегии#FFFFE6!"
+                - " #FFFFE6   Не беда, её можно купить на #ff6600mcdev.su"
+        component_2:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - enick &e%player_name%
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено &e[ЦВЕТ]"
+            - ""
+
+
+    layout_item_4:
+      placeholder: "E"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.geroy"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "&2[ЦВЕТ]"
+                description:
+                  - "#FFFFE6Статус: &c[Недоступно]"
+                  - "#FFFFE6Изменить может только &cГерой"
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "&2[ЦВЕТ]"
+            description:
+              - "#FFFFE6Статус: &e[Доступно]"
+              - "#FFFFE6Нажми, чтобы установить"              
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "cmi.kit.geroy"
+          permission_denied_click_pipeline_component_list:
+            component_6:
+              type: SEND_MESSAGE
+              message: 
+                - " #fb0000[✘] Ошибка! #FFFFE6У Вас нет необходимой #00FF00Привилегии#FFFFE6!"
+                - " #FFFFE6   Не беда, её можно купить на #ff6600mcdev.su"
+        component_2:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - enick &2%player_name%
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено &2[ЦВЕТ]"
+            - ""
+
+    layout_item_5:
+      placeholder: "F"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.aspid"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "&a[ЦВЕТ]"
+                description:
+                  - "#FFFFE6Статус: &c[Недоступно]"
+                  - "#FFFFE6Изменить может только &cАспид"
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "&a[ЦВЕТ]"
+            description:
+              - "#FFFFE6Статус: &e[Доступно]"
+              - "#FFFFE6Нажми, чтобы установить"              
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "cmi.kit.geroy"
+          permission_denied_click_pipeline_component_list:
+            component_6:
+              type: SEND_MESSAGE
+              message: 
+                - " #fb0000[✘] Ошибка! #FFFFE6У Вас нет необходимой #00FF00Привилегии#FFFFE6!"
+                - " #FFFFE6   Не беда, её можно купить на #ff6600mcdev.su"
+        component_2:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - enick &a%player_name%
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено &a[ЦВЕТ]"
+            - ""
+
+    layout_item_6:
+      placeholder: "G"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.squid"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "&b[ЦВЕТ]"
+                description:
+                  - "#FFFFE6Статус: &c[Недоступно]"
+                  - "#FFFFE6Изменить может только &cСквид"
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "&b[ЦВЕТ]"
+            description:
+              - "#FFFFE6Статус: &e[Доступно]"
+              - "#FFFFE6Нажми, чтобы установить"              
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "cmi.kit.squid"
+          permission_denied_click_pipeline_component_list:
+            component_6:
+              type: SEND_MESSAGE
+              message: 
+                - " #fb0000[✘] Ошибка! #FFFFE6У Вас нет необходимой #00FF00Привилегии#FFFFE6!"
+                - " #FFFFE6   Не беда, её можно купить на #ff6600mcdev.su"
+        component_2:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - enick &b%player_name%
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено &b[ЦВЕТ]"
+            - ""
+
+    layout_item_7:
+      placeholder: "H"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.glava"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "&6[ЦВЕТ]"
+                description:
+                  - "#FFFFE6Статус: &c[Недоступно]"
+                  - "#FFFFE6Изменить может только &cГлава"
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "&6[ЦВЕТ]"
+            description:
+              - "#FFFFE6Статус: &e[Доступно]"
+              - "#FFFFE6Нажми, чтобы установить"              
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "cmi.kit.glava"
+          permission_denied_click_pipeline_component_list:
+            component_6:
+              type: SEND_MESSAGE
+              message: 
+                - " #fb0000[✘] Ошибка! #FFFFE6У Вас нет необходимой #00FF00Привилегии#FFFFE6!"
+                - " #FFFFE6   Не беда, её можно купить на #ff6600mcdev.su"
+        component_2:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - enick &6%player_name%
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено &6[ЦВЕТ]"
+            - ""
+
+    layout_item_8:
+      placeholder: "I"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.elite"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "&5[ЦВЕТ]"
+                description:
+                  - "#FFFFE6Статус: &c[Недоступно]"
+                  - "#FFFFE6Изменить может только &cЭлита"
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "&5[ЦВЕТ]"
+            description:
+              - "#FFFFE6Статус: &e[Доступно]"
+              - "#FFFFE6Нажми, чтобы установить"              
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "cmi.kit.elite"
+          permission_denied_click_pipeline_component_list:
+            component_6:
+              type: SEND_MESSAGE
+              message: 
+                - " #fb0000[✘] Ошибка! #FFFFE6У Вас нет необходимой #00FF00Привилегии#FFFFE6!"
+                - " #FFFFE6   Не беда, её можно купить на #ff6600mcdev.su"
+        component_2:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - enick &5%player_name%
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено &5[ЦВЕТ]"
+            - ""
+
+    layout_item_9:
+      placeholder: "J"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.titan"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "&c[ЦВЕТ]"
+                description:
+                  - "#FFFFE6Статус: &c[Недоступно]"
+                  - "#FFFFE6Изменить может только &cТитан"
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "&c[ЦВЕТ]"
+            description:
+              - "#FFFFE6Статус: &e[Доступно]"
+              - "#FFFFE6Нажми, чтобы установить"              
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "cmi.kit.titan"
+          permission_denied_click_pipeline_component_list:
+            component_6:
+              type: SEND_MESSAGE
+              message: 
+                - " #fb0000[✘] Ошибка! #FFFFE6У Вас нет необходимой #00FF00Привилегии#FFFFE6!"
+                - " #FFFFE6   Не беда, её можно купить на #ff6600mcdev.su"
+        component_2:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - enick &c%player_name%
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено &c[ЦВЕТ]"
+            - ""
+
+    layout_item_10:
+      placeholder: "K"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.princ"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "&c[ЦВЕТ]"
+                description:
+                  - "#FFFFE6Статус: &c[Недоступно]"
+                  - "#FFFFE6Изменить может только &cПринц"
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "&c[ЦВЕТ]"
+            description:
+              - "#FFFFE6Статус: &e[Доступно]"
+              - "#FFFFE6Нажми, чтобы установить"              
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "cmi.kit.princ"
+          permission_denied_click_pipeline_component_list:
+            component_6:
+              type: SEND_MESSAGE
+              message: 
+                - " #fb0000[✘] Ошибка! #FFFFE6У Вас нет необходимой #00FF00Привилегии#FFFFE6!"
+                - " #FFFFE6   Не беда, её можно купить на #ff6600mcdev.su"
+        component_2:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - enick &c%player_name%
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено &c[ЦВЕТ]"
+            - ""
+
+    layout_item_11:
+      placeholder: "L"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.knyaz"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "&4[ЦВЕТ]"
+                description:
+                  - "#FFFFE6Статус: &c[Недоступно]"
+                  - "#FFFFE6Изменить может только &cКнязь"
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "&4[ЦВЕТ]"
+            description:
+              - "#FFFFE6Статус: &e[Доступно]"
+              - "#FFFFE6Нажми, чтобы установить"              
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "cmi.kit.princ"
+          permission_denied_click_pipeline_component_list:
+            component_6:
+              type: SEND_MESSAGE
+              message: 
+                - " #fb0000[✘] Ошибка! #FFFFE6У Вас нет необходимой #00FF00Привилегии#FFFFE6!"
+                - " #FFFFE6   Не беда, её можно купить на #ff6600mcdev.su"
+        component_2:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - enick &4%player_name%
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено &4[ЦВЕТ]"
+            - ""
+
+
+
+    layout_item_22:
+      placeholder: "|"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: RED_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_23:
+      placeholder: "-"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ORANGE_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_25:
+      placeholder: "."
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: LIGHT_GRAY_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []

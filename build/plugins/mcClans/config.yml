@@ -1,0 +1,986 @@
+# Плагин: mcClans (Объединение в кланы)
+# Версия: 1.8+
+#
+# Описание:
+# Плагин добавляет возможность создать собственный
+# клан и пригласить в него других игроков.
+#
+# Зависимости: (плагины без которых этот работать не будет)
+# - UtilM https://mvn.vepvep.com/minecraft/me/socrum/minecraft/spigot/plugin/utilm (utilm-x.x.x-jar-with-dependencies.jar)
+# - Vault https://www.spigotmc.org/resources/vault.34315/
+# - DecentHolograms: https://www.spigotmc.org/resources/decentholograms-1-8-1-19-4-papi-support-no-dependencies.96927 (опционально на выбор)
+# - HolographicDisplays: https://dev.bukkit.org/projects/holographic-displays (опционально на выбор)
+#
+# Опциональные зависимости: (плагины без которых не будет полного функционала, но работать будет)
+# - PlaceholdersAPI https://www.spigotmc.org/resources/placeholderapi.6245/
+#
+# Плейсхоледры:
+# %mcclans_clan_display_name_option_1% - (конфигурируемый) подробнее в секии 'redefinition.clan_display_name.option_1'.
+# %mcclans_clan_display_name_option_2% - (конфигурируемый) подробнее в секии 'redefinition.clan_display_name.option_2'.
+# %mcclans_role_display_name_option_1% - (конфигурируемый) подробнее в секии 'redefinition.role_display_name.option_1'.
+# %mcclans_role_display_name_option_2% - (конфигурируемый) подробнее в секии 'redefinition.role_display_name.option_2'.
+# %mcclans_level% - Уровень клана в которой состоит игрок.
+# %mcclans_exp% - Текущий опыт клана в которой состоит игрок.
+# %mcclans_required_exp% - Требуемый опыт клана для получения следующего уровня.
+#
+# %mcclans_leader_board_clanbylevel_position_1% - Первый клан в топе по уровню (конфигурируемый) подробнее в секии 'redefinition.clan_leader_board_clanbylevel_position_n'.
+# %mcclans_leader_board_clanbylevel_position_2% - Второй клан в топе по уровню
+# %mcclans_leader_board_clanbylevel_position_N% - N'ый клан в топе по уровню
+# %mcclans_leader_board_clanbylevel_position% - Позиция игрока в топе кланов по уровню относительно того, в каком клане он состоит (конфигурируемый) подробнее в секии 'redefinition.clan_leader_board_clanbylevel_position'.
+# %mcclans_leader_board_clanbylevel_last_update% - Время последнего обновления клана (конфигурируемый) подробнее в секии 'redefinition.clan_leader_board_clanbylevel_last_update'.
+# %mcclans_leader_board_clanbylevel_time_to_update% - Время до следующего обновления топа кланов по уровню (конфигурируемый) подробнее в секии 'redefinition.clan_leader_board_clanbylevel_time_to_update'.
+
+message:
+  reload_success: "&aПлагин перезагружен!"
+  permission_denied: "&cОтказано в доступе."
+  you_already_in_clan: "&cВы уже состоите в клане, сначала покиньте его &b/clan menu&c."
+  this_flag_already_captured_by_your_clan: "&cЭтот флаг уже захвачен вашим кланом."
+  this_flag_has_capture_delay: "&cСледующий захват этого флага можно произвести через &b%delay% &cсек."
+  player_already_in_clan: "&cИгрок уже состоит в этом или другом клане."
+  clan_with_similar_name_already_exist: "&cКлан с похожим названием уже существует."
+  clan_created: "&aКлан создан."
+  you_need_clan_for_this: "&cСначала создайте /clan create &b(название) &cили вступите в уже существующую клан /clan request &b(ник любого участника клана)&c."
+  no_one_clan_have_member_with_similar_name: "&cНи в одном клане нет участника с таким ником, чтобы отправить в него заявку на вступление."
+  new_clan_member_request: "&eИгрок &b%player% &eотправил заявку на вступление в ваш клан, рассмотреть в &b/clan menu&e или кликом в чате!"
+  new_clan_invite_request: "&eИгрок &b%player% &eотправил вам приглашение на вступление в его клан!"
+  request_has_been_sent: "&aЗаявка на вступление отправлена в клан &7%clan_display_name%&a, вы автоматически станете его участником когда ее рассмотрят."
+  you_have_already_sent_a_request_to_this_clan: "&cВы уже отправили запрос в этот клан."
+  player_was_kicked_from_clan: "&eИгрок &b%player% &eбыл(а) исключен из клана."
+  you_were_kicked_from_clan: "&eВы были исключены из клана."
+  player_was_left_from_clan: "&eИгрок &b%player% &eпокинул клан."
+  you_are_not_a_clan_owner: "&cВы не являетесь главой клана, чтобы сделать это."
+  request_accepted_clan_members_alert: "&eВстречайте нового участника(цу) нашего клана &b%player%&e!"
+  request_accepted_newbie_alert: "&aКлан рассмотрел заявку и принял решение принять вас в свои ряды!"
+  request_rejected_newbie_alert: "&eКлан рассмотрел заявку и принял решение не принимать вас в свои ряды."
+  clan_leaved: "&aВы покинули клан."
+  clan_disbanded: "&aКлан расформирован."
+  you_can_not_kick_yourself: "&cНельзя исключить самого себя."
+  you_can_not_kick_a_clan_owner: "&cНельзя исключить главу клана."
+  you_can_not_leave_as_clan_owner: "&cКак глава клана вы не можете только расформировать клан."
+  request_sent: "&aЗаявка отправлена."
+  request_accepted: "&aЗаявка принята."
+  request_rejected: "&eЗаявка отклонена."
+  flag_captured_event: "&eФлаг &7%flag_display_name% &eбыл захвачен кланом &7%clan_display_name%&e!"
+  flag_released_event: "&eКонтроль над флагом &7%flag_display_name% &eбыл потерян кланом &7%clan_display_name%&e!"
+  flag_reward_event: "&eВаш клан &7%clan_display_name% &eполучила награду &d%reward_exp% &eопыта за удержание флага &7%flag_display_name%&e!"
+  send_to_the_chat_a_new_role_for_this_member: "&eОтправьте в чат сообщение с названием новой роли (коды цветов поддерживаются)."
+  clan_display_name_length_exceeded: "&cРазмер названия клана превышает допустимый лимит."
+  the_new_role_display_name_has_been_applied: "&aРоль применена!"
+  send_to_the_chat_a_new_clan_display_name: "&eОтправьте в чат сообщение с новым названием клана (коды цветов поддерживаются)."
+  role_display_name_length_exceeded: "&cРазмер названия роли превышает допустимый лимит."
+  the_new_clan_display_name_has_been_applied: "&aНазвание клана применено!"
+  clan_by_owner_player_name_does_not_exist: "&cКлана с таким владельцем не существует."
+  clan_by_member_player_name_does_not_exist: "&cКлана с таким участником не существует."
+  send_to_the_chat_a_clan_warp_display_name: "&eОтправьте в чат сообщение с названием варпа (коды цветов поддерживаются)."
+  clan_warp_display_name_length_exceeded: "&cРазмер названия варпа превышает допустимый лимит."
+  the_clan_warp_display_name_has_been_applied: "&aНазвание варпа применено!"
+  the_clan_warp_location_has_been_applied: "&aПозиция варпа применена!"
+  max_clan_warp_amount_reached: "&cДостигнуто максимальное число варпов клана, удалите ненужные чтобы создавать новые."
+  the_clan_warp_has_been_created: "&aВарп &7%clan_warp_display_name%&r &aбыл создан!"
+  the_clan_warp_has_been_removed: "&aВарп был удален!"
+  send_to_the_chat_any_message: "&eОтправьте в чат любое сообщение чтобы завершить операцию (оно не будет показано другим игрокам)."
+  exp_changed: "&aТеперь у клана &7%clan_display_name% &aесть &d%clan_exp%&a/&d%clan_required_exp% &aопыта, а его уровень &6%clan_level%&a!"
+  sum_is_not_an_integer: "&cСумма не является целым числом."
+  sum_is_not_a_double: "&cСумма не является числом."
+  you_do_not_have_enough_money: "&cСредств на вашем балансе &b$%your_balance% &cнедостаточно, т.к. требуется &b$%required_balance%&c."
+  the_clan_does_not_have_enough_money: "&cСредств на счете клана &b$%clan_balance% &cнедостаточно, т.к. требуется &b$%required_balance%&c."
+  clan_to_player_money_transfer: "&eВами получена валюта со счета клана в размере &a$%amount%&e!"
+  player_to_clan_money_transfer: "&eКланом получена валюта от игрока &b%player% &eв размере &a$%amount%&e!"
+  send_to_the_chat_amount_or_type_0_to_cancel_this_operation: "&eОтправьте в чат сумму или &b0 &eчтобы прервать операцию."
+  operation_has_been_cancelled: "&cОперация была отменена."
+  this_clan_chest_is_already_in_use_by_another_player: "&cДругой игрок &b%another_player% &cсейчас копашится в этом сундуке, подождите пока он не закончит."
+  successful_purchase: "&aУспешная покупка!"
+  reward_received_for_broken_mining_block: "&eПолучена клановая награда за сломанный блок в размере: &a$%income% &e(&6x%multiplier%&e)!"
+  reward_received_for_killed_hunting_mob: "&eПолучена клановая награда за убийство моба в размере: &a$%income% &e(&6x%multiplier%&e)!"
+  max_clan_members_amount_exceeded: "&cЭто будет превышать максимальное &b%max_clan_members_amount% &cчисло участников клана."
+  player_is_not_online: "&cЭтот игрок сейчас не онлайн."
+  you_can_not_place_clan_warp_in_this_world: '&cНельзя разместить варп клана в этом мире.'
+  you_can_not_place_clan_warp_in_this_region: '&cНельзя разместить варп клана в этом регионе.'
+  help:
+    - '&e/clan help &7- показать список команд'
+    - '&e/clan create &b(название) &7- создать новый клан с названием'
+    - '&e/clan menu &7- открыть меню клана'
+    - '&e/clan request &b(ник любого участника клана) &7- отправить заявку на вступление в клан по нику одного из ее участников'
+    - '&e/clan list &7- открыть глобальный список всех кланов'
+
+permission:
+  reload: clan.reload # Разрешение на перезагрузку этого плагина.
+  exp_add: clan.exp.add # Разрешение позволяющее зачислить кол-во опыта клану.
+  exp_del: clan.exp.del # Разрешение позволяющее списать с клана кол-во опыта.
+  exp_set: clan.exp.set # Разрешение позволяющее установить клану кол-во опыта.
+  remove: clan.remove # Разрешение на удаление клана по нику одного из его участников (админ-команда).
+
+# Конфигурация автоматического сохранения данных.
+auto_save:
+  delay: 300 # (Сек.) Интервал сохранения данных.
+
+# Список регионов WorldGuard где запрещено размещать варпы клана.
+deny_clan_warp_place_worldguard_region_name_list:
+  - "example-worldguard-region-name-1"
+  - "example-worldguard-region-name-2"  
+
+clan_chat:
+  # Плейсхолдеры:
+  # %clan_display_name% - название клана
+  # %sender_player_name% - никнейм отправившего сообщение игрока
+  # %message% - сообщение
+  message_format: '&3[&bЧат клана &r%clan_display_name%&r&3] &b%sender_player_name%&f: %message%'
+
+default_time_to_allow_capturing_again: 30 # (Сек.) Время задержки до перезахвата этого флага другим кланом.
+max_clan_display_name_length: 8 # Максимальная допустимая длина названия клана (включая коды цвета).
+max_role_display_name_length: 16 # Максимальная допустимая длина роли (включая коды цвета).
+max_clan_warp_display_name_length: 32 # Максимальная допустимая длина названия варпа (включая коды цвета).
+max_clan_warp_amount: 100 # Максимальное число варпов которое может иметь 1 клан.
+flag_capture_radius: 5 # Радиус в блоках, в котором действует захват/удержание флага.
+default_remaining_time_to_reward: 10 # Время до получения награды за удержание флага.
+default_remaining_time_to_set_potential_owner: 5 # Время до захвата флага, если флаг удерживается одним или более игроком из одного клана в радиусе его дейсвия.
+clan_level_formula: '%level% * %level%' # Формула уровня клана от опыта.
+clan_max_level: 9999 # Максимальный уровень клана.
+min_clan_members_near_the_flag_for_capture_it: 1 # Минимальное число игроков из одного клана рядом с флагом для его захвата.
+max_clan_members_amount: 100 # Максимальное число участников клана.
+
+top: # Конфигурация топов кланов, эти топы учитываются в глобальном меню списка кланов при их сортировке.
+  update_interval: 600 # Cек. Интервал обновления топов.
+
+# Список названий миров где запрещено размещать регион-блоки.
+deny_region_block_place_world_name_list:
+  - "another_world"
+
+redefinition:
+  positive: '&aДа'
+  negative: '&cНет'
+
+  clan_display_name:
+
+    # Вариант 1.
+    # Использование плейсхолдера %mcclan_clan_display_name_option_1%
+    # в качестве префикса для чата или TAB'а, например:
+    #
+    # '%mcclan_clan_display_name_option_1%%player%' вернет 'название_клана ник_игрока' с пробелом между в случае если игрок состоит в клане
+    # '%mcclan_clan_display_name_option_1%%player%' вернет 'ник_игрока' без пробела в случае если игрок не состоит в клане
+    option_1:
+      clan_exists: '&f<&6%clan_display_name%&f> ' # Обратите внимание на пробел на конце. В случае если игрок состоит в клане.
+      clan_does_not_exist: '' # В случае если игрок не состоит в клане.
+
+    # Вариант 2.
+    # Использование плейсхолдера %mcclan_clan_display_name_option_2%
+    # в качестве переменной в "скорбоарде", например:
+    #
+    # '%mcclan_clan_display_name_option_2%' вернет 'название_клана' в случае если игрок состоит в клане
+    # '%mcclan_clan_display_name_option_2%' вернет '&7Пусто' в случае если игрок не состоит в клане
+    option_2:
+      clan_exists: '%clan_display_name%' # В случае если игрок состоит в клане.
+      clan_does_not_exist: '&7Пусто' # В случае если игрок не состоит в клане.
+
+  role_display_name:
+
+    # Вариант 1.
+    # Использование плейсхолдера %mcclan_role_display_name_option_1%
+    # в качестве суффикса для чата или TAB'а, например:
+    #
+    # '%player%%mcclan_role_display_name_option_1%' вернет 'ник_игрока роль' с пробелом между в случае если игрок имеет роль
+    # '%player%%mcclan_role_display_name_option_1%' вернет 'ник_игрока' без пробела в случае если игрок не имеет роли
+    option_1:
+      role_exists: ' %role_display_name%' # Обратите внимание на пробел в начале. В случае если игрок имеет роль.
+      role_does_not_exist: '' # В случае если игрок не имеет роли.
+
+    # Вариант 2.
+    # Использование плейсхолдера %mcclan_role_display_name_option_2%
+    # в качестве переменной в "скорбоарде", например:
+    #
+    # '%mcclan_role_display_name_option_2%' вернет 'роль' в случае если игрок имеет роль
+    # '%mcclan_role_display_name_option_2%' вернет '&7Пусто' в случае если игрок не имеет роли
+    option_2:
+      role_exists: '%role_display_name%' # В случае если игрок имеет роль.
+      role_does_not_exist: '&7Пусто' # В случае если игрок не имеет роли.
+
+  clan_leader_board_clanbylevel_position_n:
+    clan_exists: '&e%leader_board_position%. &7%clan_display_name% &fОп. &d%clan_exp%&f/&d%clan_requied_exp% &fУр. &6%clan_level%' # В случае если позиция не пуста.
+    clan_does_not_exist: '&e%leader_board_position%. &7-' # В случае если позиция пуста.
+
+  clan_leader_board_clanbylevel_position:
+    string: '&fПозиция клана в котором вы состоите: &3#%position%' # Формат плейсхолдера.
+    player_is_not_in_a_clan_position: '&fВы не состоите в клане чтобы получить его позицию в топе.' # В случае если игрок не состоит в клане, на что будет заменен весь плейсхолдер?
+
+  clan_leader_board_clanbylevel_last_update:
+    string: '&fОбновлено: &a%date%' # Формат плейсхолдера.
+    date_format: 'EEEE, dd MMM yyyy' # Формат времени. Полный список форматов времени можно найти по адресу: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html.
+
+  clan_leader_board_clanbylevel_time_to_update:
+    string: '&fОбновится через: %time%' # Формат плейсхолдера.
+    number_color: GREEN # Цвет цифр. Полный список цветов можно найти по адресу: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html.
+    abbreviation_color: WHITE # Цвет аббревиатур (час. мин. сек. и т.д.).
+
+hologram_flag:
+  lines: # Список линий голограммы флага захвата.
+    - '&fФлаг: &7%flag_display_name%'
+    - ''
+    - '&fУдерживается: &7%owner_display_name%'
+    - '&fДо награды: &e%remaining_time_to_reward%'
+    - ''
+    - '&fПотенциальный лидер: &7%potential_owner_display_name%'
+    - '&fДо назначения нового лидера: &e%remaining_time_to_set_potential_owner%'
+
+flag_list: # Список флагов кланов которые можно захватить.
+  flag_1: # ID флаг клана который можно захватить.
+    type: CLICKABLE_BLOCK # Тип флага - необходимо кликнуть блок чтобы захватить его.
+    display_name: '&aАрена #1' # Навание флага
+    block_location: # Координаты блока флага кликнув по которому он будет захватываться.
+      world: 'spawn'
+      x: -17 # X.
+      y: 55 # Y.
+      z: 1246 # Z.
+    hologram_location: # Координаты расположения флага.
+      world: 'spawn' # Мир.
+      x: -16.5 # X.
+      y: 57.2 # Y.
+      z: 1246.5 # Z.
+    reward_exp: 1 # Кол-во опыта получаемое кланом каждый интервал времени пока удерживается этот флаг.
+    reward_command_list: # Список команд выполняемых для каждого участника клана онлайн каждый интервал времени пока удерживается этот флаг.
+      - 'money give %player% 1'
+    hologram_line_list: # Список линий голограммы этого флага.
+      - '&fФлаг: &7%flag_display_name%'
+      - ''
+      - '&fМожно захватить через: &a%mcclans_flag_id_flag_1_capture_delay% &fсек.'
+      - ''
+      - '&fУдерживается: &7%owner_display_name%'
+      - '&fДо награды: &e%remaining_time_to_reward%'
+  flag_2: # ID флаг клана который можно захватить.
+    type: CLICKABLE_BLOCK # Тип флага - необходимо кликнуть блок чтобы захватить его.
+    display_name: '&aАрена #2' # Навание флага
+    block_location: # Координаты блока флага кликнув по которому он будет захватываться.
+      world: 'spawn'
+      x: -45 # X.
+      y: 53 # Y.
+      z: 1257 # Z.
+    hologram_location: # Координаты расположения флага.
+      world: 'spawn' # Мир.
+      x: -44.5 # X.
+      y: 55.2 # Y.
+      z: 1257.5 # Z.
+    reward_exp: 1 # Кол-во опыта получаемое кланом каждый интервал времени пока удерживается этот флаг.
+    reward_command_list: # Список команд выполняемых для каждого участника клана онлайн каждый интервал времени пока удерживается этот флаг.
+      - 'money give %player% 1'
+    hologram_line_list: # Список линий голограммы этого флага.
+      - '&fФлаг: &7%flag_display_name%'
+      - ''
+      - '&fМожно захватить через: &a%mcclans_flag_id_flag_1_capture_delay% &fсек.'
+      - ''
+      - '&fУдерживается: &7%owner_display_name%'
+      - '&fДо награды: &e%remaining_time_to_reward%'
+
+clan_chest: # Конфигурация хранилища клана.
+  max_chest_per_clan: 50 # Максимальное допустимое число сундуков для одного клана.
+  price_formula: '%number% * 1000' # %number% - заменяется на 1, 2 ... N до максимального числа сундуков клана начиная с первого.
+
+activity:
+  mining:
+    mining_block_income_multiplier: # Конфигурация награды за разрушение одного из перечисленных блоков.
+                                    # Обратите внимание, что множитель дохода распространияется только на
+                                    # награду игрока, но не распространяется на получаемый гильдией опыт.
+      upgrade_increment_value: 0.01 # По умолчанию множитель награды 1.00, а это значение которое будет прибавлено к этому значению с каждым новым улучшением.
+      max_upgrade: 100 # Максимальное число улучшений.
+      upgrade_price_formula: '%upgrade% * 100' # Формула стоимости каждого улучшения, где номер улучшения ялвяется плейсхолдером %upgrade%.
+                                         # %upgrade% - это шаг начиная с 1, 2 ... N ... и заканчивая max_upgrade
+                                         # %clan_level% - это текущий уровень клана, его тоже можно использовать, например:
+                                         # "upgrade_price_formula: '%upgrade% * 100 * %clan_level%'" будет умножать получаемый доход еще
+                                         # и на уровень клана, не используется по умолчанию чтобы не запутать пользователя плагина.
+
+    mining_block_list: # Список блоков сломав которые игрок и его клан получат вознаграждение.
+      block_1:
+        block:
+          material: DIAMOND_ORE # Тип материала который нужно сломать.
+                         # Используйте материалы версии ядра на котором запускаете плагин (по умолничаю: 1.8.8).
+                         # Списки всех материалов для каждой версии:
+                         # https://helpch.at/docs/1.8.8/org/bukkit/Material.html
+                         # https://helpch.at/docs/x.x.x/org/bukkit/Material.html
+                         # ...
+        income: 1 # Сколько валюты получит игрок за добычу блока этого типа?
+        clan_exp: 1 # Сколько опыта получит клан за добычу игроком этого блока.
+
+  hunting:
+    hunting_mob_income_multiplier: # Конфигурация награды за убийство одного из перечисленных мобов.
+                                   # Обратите внимание, что множитель дохода распространияется только на
+                                   # награду игрока, но не распространяется на получаемый гильдией опыт.
+      upgrade_increment_value: 0.01
+      max_upgrade: 100
+      upgrade_price_formula: '%upgrade% * 100'
+    hunting_mob_list: # Список блоков сломав которые игрок и его клан получат вознаграждение.
+      hunting_1:
+        entity_type: SHEEP # Тип существа которое нужно убить.
+                           # Используйте типы существ версии ядра на котором запускаете плагин (по умолничаю: 1.8.8).
+                           # Списки всех типов существ для каждой версии:
+                           # https://helpch.at/docs/1.8.8/org/bukkit/entity/EntityType.html
+                           # https://helpch.at/docs/x.x.x/org/bukkit/entity/EntityType.html
+                           # ...
+        income: 5
+        clan_exp: 1
+      hunting_2:
+        entity_type: ZOMBIE
+        income: 1.5
+        clan_exp: 0
+
+portion_potion:
+  blocked_item: # Предмет заблокированного для покупки на время эффекта, до момента его разблокировки главой за средства со счета клана.
+    material: YELLOW_STAINED_GLASS_PANE
+    display_name: '&fЭффект: &7%portion_potion_display_name%'
+    description:
+      - '&7После покупки этот эффект'
+      - '&7может быть куплен любым участником'
+      - '&7гильдии на желаемое им время.'
+      - ''
+      - '&fСтатус: &cЗаблокировано'
+      - '&fЦена: &c-$%price%'
+      - ''
+      - '&eКликните чтобы купить!'
+
+  portion_potion_list: # Список эффектов зелий которые можно разблокировать и в последствии купить на время.
+    night_vision: # ID эффекта.
+      display_name: '&aНочное зрение I' # Название эффета для плейсхолдеров.
+      unlock_price: 1000 # Стоимость разблокировки для покупки этого эффекта на время.
+      potion_effect_type: NIGHT_VISION # Тип эффекта зелья который будет применяться к игроку после покупки.
+                                       # Используйте типы существ версии ядра на котором запускаете плагин (по умолничаю: 1.8.8).
+                                       # Списки всех типов существ для каждой версии:
+                                       # https://helpch.at/docs/1.8.8/org/bukkit/potion/PotionEffectType.html
+                                       # https://helpch.at/docs/x.x.x/org/bukkit/potion/PotionEffectType.html
+                                       # ...
+      price_per_second: 1 # Цена за 1 секунду действия эффекта.
+      amplifier: 1 # Множитель эффекта (например сейчас I).
+      visualization:
+        material: POTION
+        display_name: '&fЭффект: &7%portion_potion_display_name%'
+        description:
+          - '&fСтатус: &aРазблокировано'
+          - ''
+          - '&eКликните чтобы открыть!'
+
+
+gui:
+  clan:
+
+
+    # Конфигурация основного меню клана.
+    main:
+      title: 'Клан' # Заголовок
+      clan_pvp:
+        slot: # Позиция кнопки по X, Y.
+          x: 3 # (1-9) Позиция по X (горизонталь).
+          y: 2 # (1-5) Позиция по Y (вертикаль)
+        item:
+          material: DIAMOND_SWORD # Тип материала кнопки.
+                                  # Используйте материалы версии ядра на котором запускаете плагин (по умолничаю: 1.8.8).
+                                  # Списки всех материалов для каждой версии:
+                                  # https://helpch.at/docs/1.8.8/org/bukkit/Material.html
+                                  # https://helpch.at/docs/x.x.x/org/bukkit/Material.html
+                                  # ...
+          display_name: '&fPVP' # Название кнопки.
+          description: # Описание кнопки.
+            - '&7Включить/отключить PVP'
+            - '&7между участниками клана.'
+            - ''
+            - '&fPVP отключено: &7%clan_pvp_status%'
+            - ''
+            - '&eКликните чтобы изменить!'
+      clan_members:
+        slot:
+          x: 4
+          y: 2
+        item:
+          material: PAPER
+          display_name: '&fУчастники клана'
+          description:
+            - '&7Здесь можно посмотреть и отредактировать'
+            - '&7список участников клана.'
+            - ''
+            - '&eКликните чтобы открыть!'
+      clan_chat:
+        slot:
+          x: 5
+          y: 1
+        item:
+          material: BOOK
+          display_name: '&fЧат клана'
+          description:
+            - '&7Включить/отключить клановый чат.'
+            - '&7Если включено, сообщения увидят'
+            - '&7только участники клана.'
+            - ''
+            - '&fЧат клана: &7%clan_chat_status%'
+            - ''
+            - '&eКликните чтобы изменить!'
+      clan_info:
+        slot:
+          x: 5
+          y: 2
+        item:
+          material: NETHER_STAR
+          display_name: '&fКлан: &7%clan_display_name%'
+          description:
+            - '&7Уровень: &6%clan_level%'
+            - '&7Опыт: &d%clan_exp%&7/&d%clan_required_exp%'
+            - ''
+            - '&7Вы можете изменить название или'
+            - '&7вовсе удалить клан в этом меню.'
+            - ''
+            - '&eКликните чтобы редактировать!'
+      clan_disband:
+        slot:
+          x: 8
+          y: 5
+        item:
+          material: BARRIER
+          display_name: '&fРасформировать клан'
+          description:
+            - '&cКлан, его прогресс и все его участники'
+            - '&cбудут безвозвратно удалены, это действие'
+            - '&cнельзя отменить.'
+            - ''
+            - '&eКликните чтобы расформировать клан!'
+
+      portion_potion_list:
+        slot:
+          x: 7
+          y: 3
+        item:
+          material: POTION
+          enchanted: true
+          display_name: '&fЭффекты на время'
+          description:
+            - '&7Открывайте покупку эффектов'
+            - '&7на время используя счет клана.'
+            - ''
+            - '&eКликните чтобы октрыть!'
+
+
+      clan_request_list:
+        slot:
+          x: 6
+          y: 2
+        item:
+          material: JUKEBOX
+          display_name: '&fСписок заявок в клан'
+          description:
+            - '&7Игроки могут оставлять заявки на'
+            - '&7вступление в клан командой:'
+            - '&e/clan request &b(ник любого участника клана)'
+            - ''
+            - '&eКликните чтобы открыть!'
+      clan_warp_list:
+        slot:
+          x: 7
+          y: 2
+        item:
+          material: ENDER_PEARL
+          display_name: '&fСписок варпов клана'
+          description:
+            - '&7Клан может иметь собственные'
+            - '&7варпы доступные для телепортации'
+            - '&7только его участникам.'
+            - ''
+            - '&eКликните чтобы открыть!'
+
+
+      mining_block_upgrade:
+        slot:
+          x: 5
+          y: 3
+        not_max_upgrade_item:
+          material: DIAMOND_PICKAXE
+          display_name: '&fРемесло: &eДобывайте блоки'
+          description:
+            - '&7Добавайте следующие типы блоков:'
+            - '&7- &bАлмазная руда &r(&a+$1 &d+1 опыт клана&r)'
+            - ''
+            - '&fТоп игроков:'
+            - '&f1. &b%leader_board_player_1% &e/ &b%leader_board_player_1_score%'
+            - '&f2. &b%leader_board_player_2% &e/ &b%leader_board_player_2_score%'
+            - '&f3. &b%leader_board_player_3% &e/ &b%leader_board_player_3_score%'
+            - '&f4. &b%leader_board_player_4% &e/ &b%leader_board_player_4_score%'
+            - '&f5. &b%leader_board_player_5% &e/ &b%leader_board_player_5_score%'
+            # Поддерживаются плейсхолдеры вплоть до 10 (включительно).
+            - ''
+            - '&fВсего сломано блоков: &e%total_broken_blocks%'
+            - '&fУлучшение: &6%current_upgrade%&f/&6%max_upgrade%'
+            - '&fТекущий множитель: &ax%current_multiplier%'
+            - ''
+            - '&6(&eДоступно улучшение!&6)'
+            - '&fНовый множитель: &ax%next_multiplier%'
+            - '&fЦена: &c-$%next_upgrade_price%'
+            - ''
+            - '&eКликните чтобы купить используя счет клана!'
+        max_upgrade_item: # Предмет на который будет заменен основной если больше нет улучшений.
+          material: GOLDEN_PICKAXE
+          enchanted: true
+          display_name: '&fРемесло: &eДобывайте блоки'
+          description:
+            - '&7Добавайте следующие типы блоков:'
+            - '&7- &cКрасная шерсть &r(&a+$5 &d+1 опыт клана&r)'
+            - '&7- &8Камень &r(&a+$1.5 &d+0 опыта клана&r)'
+            - ''
+            - '&fТоп игроков:'
+            - '&f1. &b%leader_board_player_1% &e/ &b%leader_board_player_1_score%'
+            - '&f2. &b%leader_board_player_2% &e/ &b%leader_board_player_2_score%'
+            - '&f3. &b%leader_board_player_3% &e/ &b%leader_board_player_3_score%'
+            - '&f4. &b%leader_board_player_4% &e/ &b%leader_board_player_4_score%'
+            - '&f5. &b%leader_board_player_5% &e/ &b%leader_board_player_5_score%'
+            - ''
+            - '&fВсего сломано блоков: &e%total_broken_blocks%'
+            - '&fУлучшение: &6%current_upgrade%&f/&6%max_upgrade%'
+            - '&fТекущий множитель: &ax%current_multiplier%'
+
+
+      hunting_mob_upgrade:
+        slot:
+          x: 6
+          y: 3
+        not_max_upgrade_item:
+          material: DIAMOND_SWORD
+          display_name: '&fРемесло: &eУбивайте мобов'
+          description:
+            - '&7Убивайте следующие типы мобов:'
+            - '&7- &fОвца &r(&a+$5 &d+1 опыт клана&r)'
+            - '&7- &cЗомби &r(&a+$1.5 &d+0 опыта клана&r)'
+            - ''
+            - '&fТоп игроков:'
+            - '&f1. &b%leader_board_player_1% &e/ &b%leader_board_player_1_score%'
+            - '&f2. &b%leader_board_player_2% &e/ &b%leader_board_player_2_score%'
+            - '&f3. &b%leader_board_player_3% &e/ &b%leader_board_player_3_score%'
+            - '&f4. &b%leader_board_player_4% &e/ &b%leader_board_player_4_score%'
+            - '&f5. &b%leader_board_player_5% &e/ &b%leader_board_player_5_score%'
+            - ''
+            - '&fВсего убито мобов: &e%total_killed_mobs%'
+            - '&fУлучшение: &6%current_upgrade%&f/&6%max_upgrade%'
+            - '&fТекущий множитель: &ax%current_multiplier%'
+            - ''
+            - '&6(&eДоступно улучшение!&6)'
+            - '&fНовый множитель: &ax%next_multiplier%'
+            - '&fЦена: &c-$%next_upgrade_price%'
+            - ''
+            - '&eКликните чтобы купить используя счет клана!'
+        max_upgrade_item: # Предмет на который будет заменен основной если больше нет улучшений.
+          material: GOLDEN_SWORD
+          enchanted: true
+          display_name: '&fРемесло: &eУбивайте мобов'
+          description:
+            - '&7Убивайте следующие типы мобов:'
+            - '&7- &fОвца &r(&a+$5 &d+1 опыт клана&r)'
+            - '&7- &cЗомби &r(&a+$1.5 &d+0 опыта клана&r)'
+            - ''
+            - '&fТоп игроков:'
+            - '&f1. &b%leader_board_player_1% &e/ &b%leader_board_player_1_score%'
+            - '&f2. &b%leader_board_player_2% &e/ &b%leader_board_player_2_score%'
+            - '&f3. &b%leader_board_player_3% &e/ &b%leader_board_player_3_score%'
+            - '&f4. &b%leader_board_player_4% &e/ &b%leader_board_player_4_score%'
+            - '&f5. &b%leader_board_player_5% &e/ &b%leader_board_player_5_score%'
+            - ''
+            - '&fВсего убито мобов: &e%total_killed_mobs%'
+            - '&fУлучшение: &6%current_upgrade%&f/&6%max_upgrade%'
+            - '&fТекущий множитель: &ax%current_multiplier%'
+
+
+      clan_bank:
+        slot:
+          x: 4
+          y: 3
+        item:
+          material: ENDER_CHEST
+          display_name: '&fСчет клана'
+          description:
+            - '&7Счет клана - это общий счет валюты, пополнить'
+            - '&7который могут все участники, но распоряжаться'
+            - '&7этими средствами может только глава клана.'
+            - ''
+            - '&fТекущий баланс: &a$%balance%'
+            - ''
+            - '&7После нажатия в чате появится сообщение'
+            - '&7следуя которому нужно будет отправить'
+            - '&7сумму в чат для операции с ней.'
+            - '&7Отправьте в чат &20 &7чтобы отменить'
+            - '&7опецию если нажали случайно.'
+            - ''
+            - '&eКликните &6ЛКМ (как обычно) &eчтобы пополнить счет клана!'
+            - '&eКликните &6ПКМ &eчтобы снять валюту со счета клана на свой!'
+      clan_chest_list:
+        slot:
+          x: 3
+          y: 3
+        item:
+          material: CHEST
+          display_name: '&fХранилище клана'
+          description:
+            - '&7Хранилище клана содержит в себе'
+            - '&7виртуальные сундуки доступ к которым'
+            - '&7имют все участники клана, но их число'
+            - '&7ограничено до момента расширения их числа'
+            - '&7главой клана за счет денег из "Счета клана".'
+            - ''
+            - '&eКликните чтобы открыть!'
+      global_clan_list:
+        slot:
+          x: 5
+          y: 5
+        item:
+          material: PAPER
+          display_name: '&fСписок кланов'
+          description:
+            - '&7Глобальный список всех кланов'
+            - '&7который можно отсортировать в'
+            - '&7соответствии с требованиями.'
+            - ''
+            - '&eКликните чтобы открыть!'
+      clan_leave:
+        slot:
+          x: 9
+          y: 5
+        item:
+          material: BARRIER
+          display_name: '&fПокинуть клан'
+          description:
+            - '&cПосле этого действия вы выйдите'
+            - '&cиз списка участников клана и чтобы'
+            - '&cвернуться, прийдется отправить новую'
+            - '&cзаявку на вступление в клан.'
+            - ''
+            - '&eКликните чтобы покинуть клан!'
+
+    # Конфигурация меню редактирования клана
+    edit:
+      title: 'Редактор клана'
+      change_clan_display_name:
+        slot:
+          x: 5
+          y: 3
+        item:
+          material: BOOK
+          display_name: '&fИзменить название клана'
+          description:
+            - '&fТекущее название: %clan_display_name%'
+            - ''
+            - '&7После нажатия в чате появится сообщение'
+            - '&7следуя которому нужно будет отправить'
+            - '&7новое название в чат (коды цветов поддерживаются).'
+            - ''
+            - '&eКликните чтобы изменить название!'
+
+
+    # Конфигурация списка участников клана.
+    clan_member_list:
+      title: 'Участники клана'
+      member_info:
+        item:
+          # Материал головы игрока будет применен автоматически.
+          display_name: '&f%member_player_name%'
+          description:
+            - ''
+            - '&eКликните чтобы открыть профиль игрока!'
+
+
+    # Конфигурация участника клана.
+    clan_member:
+      title: 'Участник клана'
+      can_accept_requests:
+        slot:
+          x: 4
+          y: 2
+        item:
+          material: BOOK
+          display_name: '&fМожет рассматривать заявки'
+          description:
+            - '&7Доступ: %has_access%'
+            - ''
+            - '&eКликните чтобы прекратить!'
+      can_kick_members:
+        slot:
+          x: 5
+          y: 2
+        item:
+          material: BOOK
+          display_name: '&fМожет исключать участников'
+          description:
+            - '&7Доступ: %has_access%'
+            - ''
+            - '&eКликните чтобы прекратить!'
+      kick:
+        slot:
+          x: 6
+          y: 2
+        item:
+          material: OAK_DOOR
+          display_name: '&fИсключить игрока'
+          description:
+            - '&7Игрок &b%member_player_name% &7будет исключен'
+            - '&7из списка участников этой клана.'
+            - ''
+            - '&eКликните чтобы исключить!'
+      set_role:
+        slot:
+          x: 5
+          y: 3
+        item:
+          material: LIME_DYE
+          display_name: '&fУстановить роль'
+          description:
+            - '&7Установить роль игроку &b%member_player_name%&7.'
+            - ''
+            - '&fТекущая роль: %member_role_display_name%'
+            - ''
+            - '&7После нажатия в чате появится сообщение'
+            - '&7следуя которому нужно будет отправить'
+            - '&7название роли в чат (коды цветов поддерживаются).'
+            - ''
+            - '&eКликните чтобы установить роль!'
+      clear_role:
+        slot:
+          x: 6
+          y: 3
+        item:
+          material: PURPLE_DYE
+          display_name: '&fОчистить роль'
+          description:
+            - '&7Роль игрока &b%member_player_name% &7будет очищена.'
+            - ''
+            - '&fТекущая роль: %member_role_display_name%'
+            - ''
+            - '&eКликните чтобы очистить роль!'
+
+
+    # Конфигурация глобального списка кланов.
+    clan_global_list:
+      title: 'Список кланов'
+      clan_info:
+        item:
+          material: IRON_SWORD
+          display_name: '&fКлан: &7%clan_display_name%'
+          description:
+            - '&7Уровень: &6%clan_level%'
+            - '&7Опыт: &d%clan_exp%&7/&d%clan_required_exp%'
+            - ''
+            - '&eКликните чтобы отправить заявку на вступление!'
+      top_update_info:
+        slot:
+          x: 6
+          y: 5
+        item:
+          material: PAPER
+          display_name: '&fВремя обновления топов'
+          description:
+            - '&7Обновление каждые: &e%top_update_interval%'
+            - '&7До обновления осталось: &a%remaining_time_to_update%'
+            - '&7Последнее обновление: &a%last_top_update%'
+      sort:
+        slot:
+          x: 7
+          y: 5
+        item:
+          material: PAPER
+          display_name: '&fНе сортировать'
+          description:
+            - '&7Сортировка списка кланов.'
+            - ''
+            - '&7Тип: &6%sort%'
+            - ''
+            - '&eКликните чтобы изменить!'
+
+
+    # Конфигурация нового запроса на вступление в клан.
+    clan_new_player_join_request:
+      title: 'Заявка в клан'
+      accept:
+        slot:
+          x: 4
+          y: 3
+        item:
+          material: BLACK_WOOL
+          display_name: '&fПринять заявку'
+          description:
+            - '&7Игрок &b%clan_new_player_join_request_player_name% &7будет добавлен'
+            - '&7в список участников этого клана.'
+            - ''
+            - '&eКликните чтобы принять заявку!'
+      cancel:
+        slot:
+          x: 6
+          y: 3
+        item:
+          material: BLACK_WOOL
+          display_name: '&fОтклонить заявку'
+          description:
+            - '&7После отклонения заявка пропадет и'
+            - '&7игрок не будет добавлен в клан.'
+            - ''
+            - '&eКликните чтобы отклонить заявку!'
+
+
+    # Конфигурация списка запросов на вступление в клан.
+    clan_new_player_join_request_list:
+      title: 'Заявки в клан'
+      clan_new_player_join_request_info:
+        item:
+          # Материал головы игрока будет применен автоматически.
+          display_name: '&f%clan_new_player_join_request_player_name%'
+          description:
+            - ''
+            - '&eКликните чтобы открыть меню заявов!'
+
+
+    # Конфигурация списка варпов клана.
+    clan_warp_list:
+      title: 'Варпы клана'
+      info:
+        item:
+          material: ENDER_PEARL
+          display_name: '&f%clan_warp_display_name%'
+          description:
+            - '&fПозиция: &f%clan_warp_location%'
+            - ''
+            - '&eКликните &6ЛКМ (как обычно) &eчтобы телепортироваться!'
+            - '&eКликните &6ПКМ &eчтобы редактировать!'
+      create:
+        slot:
+          x: 7
+          y: 5
+        item:
+          material: BOOK
+          display_name: '&fСоздать варп'
+          description:
+            - '&7После нажатия в чате появится сообщение'
+            - '&7следуя которому нужно будет отправить'
+            - '&7название варпа в чат (коды цветов поддерживаются).'
+            - '&7После этого ваша текущая позиция и'
+            - '&7направление взгляда станут позицией'
+            - '&7для этого варпа и он будет создан.'
+            - ''
+            - '&eКликните чтобы создать варпа!'
+
+
+    # Конфигурация вапа клана.
+    clan_warp:
+      title: 'Варп'
+      set_display_name:
+        slot:
+          x: 4
+          y: 3
+        item:
+          material: BOOK
+          display_name: '&fИзменение названия варпа'
+          description:
+            - '&fТекущее название: %clan_warp_display_name%'
+            - ''
+            - '&7После нажатия в чате появится сообщение'
+            - '&7следуя которому нужно будет отправить'
+            - '&7название варпа в чат (коды цветов поддерживаются).'
+            - ''
+            - '&eКликните чтобы установить название варпа!'
+      set_location:
+        slot:
+          x: 5
+          y: 3
+        item:
+          material: ENDER_PEARL
+          display_name: '&fИзменение позиции варпа'
+          description:
+            - '&fТекущая позиция: &f%clan_warp_location%'
+            - ''
+            - '&7После нажатия в чате появится сообщение'
+            - '&7следуя которому нужно будет отправить'
+            - '&7любое сообщение в чат (например: 123).'
+            - '&7После этого ваша текущая позиция и'
+            - '&7направление взгляда станут позицией'
+            - '&7для этого варпа.'
+            - ''
+            - '&eКликните чтобы установить позицию варпа!'
+      delete:
+        slot:
+          x: 6
+          y: 3
+        item:
+          material: CAULDRON_ITEM
+          display_name: '&fУдалить варп'
+          description:
+            - '&cВарп, его локация и название'
+            - '&cбудут безвозвратно удалены, это действие'
+            - '&cнельзя отменить.'
+            - ''
+            - '&eКликните чтобы удалить варп!'
+
+
+    # Конфигурация хранилища клана.
+    clan_chest_list:
+      title: 'Хранилище клана'
+      chest_not_opened:
+        item:
+          material: BLACK_WOOL
+          display_name: '&fСундук #%number%'
+          description:
+            - '&7Получите доступ к этому сундуку купив'
+            - '&7его используя баланс "Счета клана".'
+            - ''
+            - '&fЦена: &c-$%price%'
+            - ''
+            - '&eКликните чтобы купить используя счет клана!'
+      chest:
+        item:
+          material: CHEST
+          display_name: '&fСундук &7#%number%'
+          description:
+            - '&fВсего предметов внутри: &9%items_amount%'
+            - '&fСлотов используется: &6%slots_in_use%'
+            - '&fСлотов свободно: &a%free_slots%'
+            - ''
+            - '&eКликните чтобы открыть!'
+
+
+    # Конфигурация сундука хранилища.
+    clan_chest:
+      title: 'Сундук хранилища'
+
+
+    # Конфигурация меню списка эффекта.
+    portion_potion_list:
+      title: 'Эффекты на время'
+
+
+    # Конфигурация меню покупки эффекта.
+    portion_potion:
+      title: 'Покупка эффекта'
+      decrease:
+        slot:
+          x: 4
+          y: 3
+        item:
+          material: YELLOW_STAINED_GLASS_PANE
+          display_name: '&fПонизить время действия'
+          description:
+            - '&7Уменьшает время действия'
+            - '&7покупаемого эффекта.'
+            - ''
+            - '&eКликните чтобы понизить на (&6-1 сек.&e)!'
+            - '&eКликните (&3с SHIFT&e) чтобы понизить на (&6-10 сек.&e)!'
+      increase:
+        slot:
+          x: 6
+          y: 3
+        item:
+          material: YELLOW_STAINED_GLASS_PANE
+          display_name: '&fПовысить время действия'
+          description:
+            - '&7Повышает время действия'
+            - '&7покупаемого эффекта.'
+            - ''
+            - '&eКликните чтобы повысить на (&6+1 сек.&e)!'
+            - '&eКликните (&3с SHIFT&e) чтобы повысить на (&6+10 сек.&e)!'
+      display:
+        slot:
+          x: 5
+          y: 3
+        item:
+          material: BOOK
+          display_name: '&fПокупаемый эффект'
+          description:
+            - '&7Характеристики эффекта'
+            - '&7которые будут куплены.'
+            - ''
+            - '&fВремя действия: &7%duration%'
+            - '&fЦена: &c$-%price%'
+            - ''
+            - '&eКликните чтобы купить!'

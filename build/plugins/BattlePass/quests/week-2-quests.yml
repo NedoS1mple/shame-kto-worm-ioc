@@ -1,0 +1,108 @@
+quests:
+  1:
+    name: 'Неделя 2 - Ломатель'
+    type: item-break
+    variable: diamond_pickaxe:0
+    required-progress: 3
+    points: 110
+    item:
+      material: stone_pickaxe:0
+      name: '&eЛоматель'
+      lore:
+        - '&7Сломай &e3 алмазные кирки'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  2:
+    name: 'Неделя 2 - Любознатель'
+    type: execute-command
+    variable: '/social'
+    required-progress: 1
+    points: 120
+    item:
+      material: saddle:0
+      name: '&eНовенький'
+      lore:
+        - '&7Используй команду &e/social'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  3: # id квеста
+    name: 'Неделя 2 - Опытный Шахтёр' # Имя квеста
+    type: block-break # Тип квеста
+    variable: ancient_debris:0 # Блок, который игрок должен сломать
+    required-progress: 10 # Сколько раз игрок должен сломать блок
+    points: 130 # Сколько баллов игрок получит за выполнение квеста
+    item: # Иконка квеста в меню
+      material: ancient_debris:0
+      amount: 1
+      name: '&eОпытный Шахтёр'
+      lore:
+        - '&7Вскопай &e10 Незеритовых обломков'
+        - ''
+        - '&7Прогресс &e%progress_bar%'
+  4:
+    name: 'Неделя 2 - Алмазник'
+    type: block-place
+    variable: diamond_block:0
+    required-progress: 16
+    points: 140
+    item:
+      material: diamond_block:0
+      name: '&eАлмазник'
+      lore:
+        - '&7Размести &e16 алмазных блоков'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  5:
+    name: 'Неделя 2 - Маяки'
+    type: craft
+    variable: beacon:0
+    required-progress: 1
+    points: 150
+    item:
+      material: beacon:0
+      name: '&eМаяки'
+      lore:
+        - '&7Создай &e4 Маяка'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  6:
+    name: 'Неделя 2 - Путешественник'
+    type: move
+    variable: none
+    required-progress: 10000
+    points: 160
+    item:
+      material: paper:0
+      amount: 10000
+      name: '&eПутешественник'
+      lore:
+        - '&7Пройди &e10000 метров'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  7:
+    name: 'Неделя 2 - Экстраверт'
+    type: swim
+    variable: none
+    required-progress: 1000
+    points: 170
+    item:
+      material: water_bucket:0
+      amount: 1
+      name: '&eЭкстраверт'
+      lore:
+        - '&7Пообщайся в чате &e1000 раз'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  8:
+    name: 'Неделя 2 - Это наше последнее дело'
+    type: block-place
+    variable: netherite_block:0
+    required-progress: 3
+    points: 180
+    item:
+      material: netherite_block:0
+      name: '&eЭто наше последнее дело'
+      lore:
+        - '&7Размести &e3 незеритовых блока'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'

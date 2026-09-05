@@ -1,0 +1,21 @@
+inventory:
+  '&#DEAD91Обычный':
+    chance: 30
+    toggle: true
+    stars: 1
+  '&#EB996AСолидный':
+    chance: 25
+    toggle: true
+    stars: 2
+  '&#00FFFFЛегендарный':
+    stars: 5
+    chance: 10
+    toggle: true
+  '&#FF0000Элитный':
+    stars: 4
+    toggle: true
+    chance: 15
+  '&#FF6A09Богатый':
+    stars: 3
+    chance: 20
+    toggle: true

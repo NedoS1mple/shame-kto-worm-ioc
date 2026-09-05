@@ -1,0 +1,58 @@
+item:
+  display_name: "#CD0ABD⭐ #42DEE1В#59BBDBс#7097D5п#8874CFы#9F51C9ш#B62DC3к#CD0ABDа"
+  material: EMERALD
+  description:
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffcccc#f52080ПКМ #ffcccc- создает вспышку #f5208010&7x#f5208010#ffcccc,"
+    - "#ffccccподсвечивая других игроков на #f5208030 &7сек#ffcccc."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  flash_component:
+    # Радиус действия.
+    radius: 10
+    # Число партиклов замедления.
+    flash_particle_count: 20
+    # Число вторичных партиклов.
+    second_particle_count: 30
+    # Используйте эффекты по ссылке: "https://helpch.at/docs/1.16.5/org/bukkit/Particle.html".
+    # Даже если ядро сервера например 1.8.8 и эффект называется по старому, используйте его
+    # новое название из 1.16.5 по ссылке, в случае если такого эффекта не существовало на этой
+    # версии, не используйте его.
+    flash_particle_effect: FLASH
+    second_particle_effect: END_ROD
+    # Список эффектов накладываемых на других игроков в радиусе действия этой способности.
+    flash_effect_list:
+
+      # ID эффекта накладываемого на других игроков в радиусе действия этой способности.
+      flash_effect:
+        potion_effect_type: GLOWING
+        duration_seconds: 10
+        amplifier: 1
+
+    # Включить задерждку для предотвращения частого использования?
+    enable_use_delay: true
+    # (Тиков. 1 сек. = 20 тиков) Задержка повторного использования.
+    delay_use_ticks: 20
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    message:
+      # Игроки вокруг ослеплены!
+      used: "#CD0ABD⭐ #42DEE1И#4CCFDEг#56C0DCр#60B1D9о#6AA1D7к#7492D4и #8874CFв#9165CCо#9B56CAк#A547C7р#AF37C5у#B928C2г #CD0ABDослеплены#CD0ABD!"
+      # Вы были ослеплены!
+      you_were_flashed: "#CD0ABD⭐ #42DEE1В#4AD2DFы #5BB9DBб#63ACD9ы#6BA0D6л#7393D4и #837AD0о#8C6ECEс#9461CCл#9C55CAе#A448C8п#AC3CC5л#B42FC3е#BD23C1н#C516BFы#CD0ABD!"
+      use_delay: "&cМожно использовать повторно через &b%use_delay_seconds% &cсек."
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."

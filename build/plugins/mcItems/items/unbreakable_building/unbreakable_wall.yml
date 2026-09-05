@@ -1,0 +1,55 @@
+item:
+  display_name: "#FEDBA4☲ #B91CD0Н#BE2ACDе#C337CAр#C845C7у#CD53C3ш#D260C0и#D76EBDм#DC7CBAа#E089B7я #EAA4B1с#EFB2ADт#F4C0AAе#F9CDA7н#FEDBA4а"
+  material: COBBLESTONE
+  description:
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffcccc#f52080ПКМ #ffcccc- создает нерушимую стену #f520805&7x#f520803#ffcccc,"
+    - "#ffccccнельзя сломать #f520805 &7сек#ffcccc."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  unbreakable_building_component:
+    # Чтобы корректно создать .schematic файл, встаньте перед .schematic постройкой с
+    # направлением взгляда из F3 в 0 градусов по горизонтали (yaw) и выполните //copy.
+    schematic_file_name: "unbreakable_wall.schematic"
+    # (Сек.) Время жизни (существования/действия) "нерушимой стены".
+    time_to_live_seconds: 5
+    # "/op" игрок может разрушать регион (область) "нерушимой стены" пока она заспавнена?
+    is_op_can_break_unbreakable_wall_region_while_it_spawned: true
+    # Сместить относительную точку вставки в низ дна вставляемого кубоида .schematic?
+    change_paste_origin_to_bottom_center: true
+    # Место вставки .schematic.
+    # - RELATIVE_TO_PLAYER (вставит на месте игрока)
+    # - RELATIVE_TO_CLICKED_BLOCK (вставит на месте кликнутого блока)
+    paste_position: RELATIVE_TO_CLICKED_BLOCK
+    # Включить задерждку для предотвращения частого использования?
+    enable_use_delay: true
+    # (Тиков. 1 сек. = 20 тиков) Задержка повторного использования.
+    delay_use_ticks: 20
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Отключить возможность призыва трапки внутри WorldGuard региона?
+    disable_spawn_inside_worldguard_regions: false
+    # Отключить возможность призыва трапки внутри mcRegion региона?
+    disable_spawn_inside_mcregion_regions: false
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    message:
+      # Нерушимая стена заспавнена!
+      spawned: "#FEDBA4☲ #B91CD0Н#BC23CEе#BE2BCDр#C132CBу#C439C9ш#C641C8и#C948C6м#CC4FC4а#CE57C2я #D465BFс#D66DBDт#D974BCе#DC7CBAн#DE83B8а #E392B5з#E699B3а#E9A0B2с#EBA8B0п#EEAFAEа#F1B6ACв#F3BEABн#F6C5A9е#F9CCA7н#FBD4A6а#FEDBA4!"
+      # Нерушимая стена задеспавнена.
+      despawned: "#FEDBA4☲ #B91CD0Н#BB23CEе#BE2ACDр#C030CBу#C337CAш#C53EC8и#C845C7м#CA4CC5а#CD53C3я #D260C0с#D467BFт#D76EBDе#D975BCн#DC7CBAа #E089B7з#E390B5а#E597B4д#E89EB2е#EAA4B1с#EDABAFп#EFB2ADа#F2B9ACв#F4C0AAн#F7C7A9е#F9CDA7н#FCD4A6а#FEDBA4."
+      use_delay: "&cМожно использовать повторно через &b%use_delay_seconds% &cсек."
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      spawn_is_not_allowed_because_of_plugin_region: "&cНельзя призвать нерушимую стену, потому что она будет пересекать существующий регион."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."

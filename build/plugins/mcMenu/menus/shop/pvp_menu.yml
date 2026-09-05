@@ -1,0 +1,1078 @@
+open_menu_command_list:
+  - "pvp_menu"
+
+access_to_open_checker:
+  enable: false
+  permission: menu.open.shop_weapon
+  message:
+    permission_denied: "&cОтказано в доступе на открытие меню 1."
+
+# Заголовок меню.
+title: "&4❖ &6&lМагазин&4&l PVP Вещей"
+
+# (Тиков 20 тиков = 1 сек.) Интервал перерисовки меню.
+# Значения 0 и ниже включая -1 и тд. отключают отрисовку за исключением случаев когда игрок кликает (оптимизация).
+update_interval_ticks: 0
+
+# Макет меню.
+layout:
+
+  # Сетка макета.
+  grid:
+    - "| | | | A | | | |"
+    - "| - - B - F - - |"
+    - "| - X C - G X1 - |"
+    - "| - Y D - H Y1 - |"
+    - "| - Z E - I Z1 - |"
+    - "| | | | | | | | |"
+
+  layout_item_list:
+    layout_item_1:
+      placeholder: "A"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: TIPPED_ARROW
+            display_name: "§c[↺] §6Вернуться... "
+            description:
+              - "&7[Вернуться к разделам]"
+      click_pipeline_component_list:
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "death_arena"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: minecraft:block.note_block.bit
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_2:
+      placeholder: "F"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: NETHERITE_HELMET
+            display_name: "&x&8&e&0&0&0&0&l&k111 &x&6&4&0&0&0&0&lШ&x&c&0&0&0&0&0&lл&x&c&d&0&0&0&0&lе&x&d&9&0&0&0&0&lм &x&e&6&0&0&0&0&lК&x&f&2&0&0&0&0&lр&x&f&f&0&0&0&0&lу&x&f&2&0&0&0&0&lш&x&e&6&0&0&0&0&lи&x&d&9&0&0&0&0&lт&x&c&d&0&0&0&0&lе&x&c&0&0&0&0&0&lл&x&6&4&0&0&0&0&lя &x&a&7&0&0&0&0&l&k111"
+            description:
+              - ""
+              - "&7Подводник"
+              - "&7Взрывоустройчивость V"
+              - "&7Огнеупорность V"
+              - "&7Защита от снарядов V"
+              - "&7Починка"
+              - "&7Защита V"
+              - "&7Подводное дыхание III"
+              - "&7Шипы III"
+              - "&7Прочность V"
+              - ""
+              - "&7Внешний вид: &fСовершенно новый"
+              - "&7Качество: &5Эпический"
+              - ""
+              - "&7Шлем для тебя"
+              - "&8Теги: совершенно новый, крушитель,"
+              - "&8эпический, шлем"
+              - ""
+              - "&4━&4&l&m                     &4"
+              - "&a $ &fЦена: &a7900 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 7900
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 7900
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi saveditems get Шлем_Крушителя -t:%player%"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_3:
+      placeholder: "G"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: NETHERITE_CHESTPLATE
+            unbreakable: false
+            display_name: "&x&8&e&0&0&0&0&l&k111 &x&9&a&0&0&0&0&lН&x&a&6&0&0&0&0&lа&x&6&2&0&0&0&0&lг&x&6&e&0&0&0&0&lр&x&c&9&0&0&0&0&lу&x&d&5&0&0&0&0&lд&x&e&1&0&0&0&0&lн&x&e&d&0&0&0&0&lи&x&f&9&0&0&0&0&lк &x&f&9&0&0&0&0&lК&x&e&d&0&0&0&0&lр&x&e&1&0&0&0&0&lу&x&d&5&0&0&0&0&lш&x&c&9&0&0&0&0&lи&x&6&e&0&0&0&0&lт&x&6&2&0&0&0&0&lе&x&a&6&0&0&0&0&lл&x&9&a&0&0&0&0&lя &x&8&e&0&0&0&0&l&k111"
+            description:
+              - ""
+              - "&7Взрывоустройчивость V"
+              - "&7Огнеупорность V"
+              - "&7Починка"
+              - "&7Защита от снарядов V"
+              - "&7Защита V"
+              - "&7Шипы III"
+              - "&7Прочность V"
+              - ""
+              - "&7Внешний вид: &fНемного поношенные"
+              - "&7Качество: &5Эпический"
+              - ""
+              - "&7Нагрудник ждёт войны"
+              - "&8Теги: поношенные, крушитель,"
+              - "&8эпический, нагрудник"
+              - ""
+              - "&4━&4&l&m                     &c"
+              - "&a $ &fЦена: &a5970 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 5970
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 5970
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi saveditems get Нагрудник_Крушителя -t:%player%"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_5:
+      placeholder: "H"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: NETHERITE_LEGGINGS
+            display_name: "&x&8&e&0&0&0&0&l&k111 &x&9&d&0&0&0&0&lШ&x&a&c&0&0&0&0&lт&x&6&6&0&0&0&0&lа&x&c&a&0&0&0&0&lн&x&d&9&0&0&0&0&lы &x&e&8&0&0&0&0&lК&x&f&7&0&0&0&0&lр&x&f&7&0&0&0&0&lу&x&e&8&0&0&0&0&lш&x&d&9&0&0&0&0&lи&x&c&a&0&0&0&0&lт&x&6&6&0&0&0&0&lе&x&a&c&0&0&0&0&lл&x&9&d&0&0&0&0&lя &x&8&e&0&0&0&0&l&k111"
+            description:
+              - ""
+              - "&7Взрывоустройчивость V"
+              - "&7Огнеупорность V"
+              - "&7Починка"
+              - "&7Защита от снарядов V"
+              - "&7Защита V"
+              - "&7Шипы III"
+              - "&7Прочность V"
+              - ""
+              - "&7Внешний вид: &fНемного поношенные"
+              - "&7Качество: &5Эпический"
+              - ""
+              - "&7Поножи для настоящего война"
+              - "&8Теги: поношенные, крушитель,"
+              - "&8эпический, штанишки"
+              - ""
+              - "&4━&4&l&m                     &c"
+              - "&a $ &fЦена: &a7900 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 7900
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 7900
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi saveditems get Поножи_Крушителя -t:%player%"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+
+    layout_item_6:
+      placeholder: "I"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: NETHERITE_BOOTS
+            display_name: "&x&8&e&0&0&0&0&l&k111 &x&9&6&0&0&0&0&lБ&x&a&9&0&0&0&0&lо&x&6&6&0&0&0&0&lт&x&c&3&0&0&0&0&lи&x&d&0&0&0&0&0&lн&x&d&e&0&0&0&0&lк&x&e&6&0&0&0&0&lи &x&f&8&0&0&0&0&lК&x&f&8&0&0&0&0&lр&x&e&6&0&0&0&0&lу&x&d&e&0&0&0&0&lш&x&d&0&0&0&0&0&lи&x&c&3&0&0&0&0&lт&x&6&6&0&0&0&0&lе&x&a&9&0&0&0&0&lл&x&9&6&0&0&0&0&lя &x&8&e&0&0&0&0&l&k111"
+            description:
+              - ""
+              - "&7Взрывоустройчивость V"
+              - "&7Подводная ходьба VII"
+              - "&7Огнеупорность V"
+              - "&7Починка"
+              - "&7Защита от снарядов V"
+              - "&7Защита V"
+              - "&7Скорость души III"
+              - "&7Шипы III"
+              - "&7Прочность V"
+              - ""
+              - "&7Внешний вид: &fСовершенно новый"
+              - "&7Качество: &eРедкийй"
+              - ""
+              - "&7Самые быстрые ботинки на диком западе"
+              - "&8Теги: совершенно новый, крушитель,"
+              - "&8редкий, уникальный"
+              - ""
+              - "&4━&4&l&m                     &c"
+              - "&a $ &fЦена: &a7900 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 7900
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 7900
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi saveditems get Ботинки_Крушителя -t:%player%"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_7:
+      placeholder: "X1"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: NETHERITE_SWORD
+            display_name: "&x&8&e&0&0&0&0&l&k111 &x&9&f&0&0&0&0&lМ&x&6&1&0&0&0&0&lе&x&c&2&0&0&0&0&lч &x&d&4&0&0&0&0&lК&x&e&5&0&0&0&0&lр&x&f&6&0&0&0&0&lу&x&f&6&0&0&0&0&lш&x&e&5&0&0&0&0&lи&x&d&4&0&0&0&0&lт&x&c&2&0&0&0&0&lе&x&6&1&0&0&0&0&lл&x&9&f&0&0&0&0&lя &x&8&e&0&0&0&0&l&k111"
+            description:
+              - ""
+              - "&7Бич членистоногих VII"
+              - "&7Заговор огня II"
+              - "&7Добыча V"
+              - "&7Починка"
+              - "&7Острота VII"
+              - "&7Небесная кара VII"
+              - "&7Разящий клинок III"
+              - "&7Прочность V"
+              - ""
+              - "&7Внешний вид: &fСовершенно новый"
+              - "&7Качество: &5Эпический"
+              - ""
+              - "&7Вид холодного оружия с уникальным наконечником"
+              - "&8Теги: совершенно новый, крушитель,"
+              - "&8эпический, меч для настоящих убийц"
+              - ""
+              - "&4━&4&l&m                     &c"
+              - "&a $ &fЦена: &a17900 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&e ⟲ &fКэшБэк: &e330 КБ"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 17900
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 17900
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi saveditems get Меч_Крушителя -t:%player%"
+            - "tm add %player_name% 330"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_8:
+      placeholder: "Y1"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: BOW
+            display_name: "&x&8&e&0&0&0&0&l&k111 &x&9&f&0&0&0&0&lЛ&x&6&1&0&0&0&0&lу&x&c&2&0&0&0&0&lк &x&d&4&0&0&0&0&lК&x&e&5&0&0&0&0&lр&x&f&6&0&0&0&0&lу&x&f&6&0&0&0&0&lш&x&e&5&0&0&0&0&lи&x&d&4&0&0&0&0&lт&x&c&2&0&0&0&0&lе&x&6&1&0&0&0&0&lл&x&9&f&0&0&0&0&lя &x&8&e&0&0&0&0&l&k111"
+            description:
+              - ""
+              - "&7Воспламенение"
+              - "&7Бесконечность"
+              - "&7Добыча V"
+              - "&7Починка"
+              - "&7Сила V"
+              - "&7Прочность V"
+              - ""
+              - "&7Внешний вид: &fСовершенно новый"
+              - "&7Качество: &5Эпический"
+              - ""
+              - "&7Сокрушительный лук"
+              - "&8Теги: совершенно новый, крушитель,"
+              - "&8эпический, кровожадный лук"
+              - ""
+              - "&4━&4&l&m                     &c"
+              - "&a $ &fЦена: &a5900 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 5900
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 5900
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi saveditems get Лук_Крушителя -t:%player%"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_9:
+      placeholder: "B"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: NETHERITE_HELMET
+            display_name: "&x&e&8&0&0&0&0&l/&x&e&6&0&6&0&0&l/ &x&e&e&1&6&0&0&lШ&x&f&1&2&1&0&0&lл&x&f&4&2&6&0&0&lе&x&f&7&3&6&0&0&lм &x&f&a&4&1&0&0&lС&x&f&d&4&c&0&0&lа&x&f&6&4&1&0&0&lт&x&f&8&3&6&0&0&lа&x&f&6&2&6&0&0&lн&x&f&4&2&1&0&0&lы &x&f&2&1&6&0&0&l/&x&e&f&0&6&0&0&l/&x&e&d&0&0&0&0&l/"
+            description:
+              - ""
+              - "&7Взрывоустройчивость IV"
+              - "&7Огнеупорность IV"
+              - "&7Защита от снарядов IV"
+              - "&7Защита V"
+              - "&7Починка"
+              - ""
+              - "&7Внешний вид: &fСовершенно новый"
+              - "&7Качество: &eРедкий"
+              - ""
+              - "&7Был украден у самого Сатаны"
+              - "&8Теги: совершенно новый, адский,"
+              - "&8редкий, сатана"
+              - ""
+              - ""
+              - ""              
+              - "&4━&4&l&m                     &c"
+              - "&a $ &fЦена: &a5900 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 5900
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 5900
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi saveditems get Шлем_Сатаны -t:%player%"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_10:
+      placeholder: "C"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: NETHERITE_CHESTPLATE
+            display_name: "&x&e&8&0&0&0&0&l/&x&e&a&0&8&0&0&l/ &x&e&c&1&0&0&0&lН&x&e&f&1&8&0&0&lа&x&f&1&2&0&0&0&lг&x&f&3&2&8&0&0&lр&x&f&5&3&0&0&0&lу&x&f&7&3&8&0&0&lд&x&f&a&4&0&0&0&lн&x&f&c&4&8&0&0&lи&x&f&c&4&8&0&0&lк &x&f&a&4&0&0&0&lС&x&f&9&3&8&0&0&lа&x&f&7&3&0&0&0&lт&x&f&5&2&8&0&0&lа&x&f&4&2&0&0&0&lн&x&f&2&1&8&0&0&lы &x&f&0&1&0&0&0&l/&x&e&f&0&8&0&0&l/&x&e&d&0&0&0&0&l/"
+            description:
+              - ""
+              - "&7Взрывоустройчивость IV"
+              - "&7Огнеупорность IV"
+              - "&7Защита от снарядов IV"
+              - "&7Защита V"
+              - "&7Починка"
+              - ""
+              - "&7Внешний вид: &fСовершенно новый"
+              - "&7Качество: &5Эпический"
+              - ""
+              - "&7Был выкован из сердца Сатаны"
+              - "&8Теги: совершенно новый, адский,"
+              - "&8эпический, сатана"
+              - ""
+              - "&4━&4&l&m                     &c"
+              - "&a $ &fЦена: &a5900 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 5900
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 5900
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi saveditems get Нагрудник_Сатаны -t:%player%"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+
+
+    layout_item_11:
+      placeholder: "D"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: NETHERITE_LEGGINGS
+            display_name: "&x&e&8&0&0&0&0&l/&x&e&6&0&a&0&0&l/ &x&e&d&1&3&0&0&lП&x&f&0&1&d&0&0&lо&x&f&3&2&6&0&0&lн&x&f&5&3&0&0&0&lо&x&f&8&3&9&0&0&lж&x&f&a&4&3&0&0&lи &x&f&d&4&c&0&0&lС&x&f&6&4&3&0&0&lа&x&f&9&3&9&0&0&lт&x&f&7&3&0&0&0&lа&x&f&5&2&6&0&0&lн&x&f&3&1&d&0&0&lы &x&f&1&1&3&0&0&l/&x&e&f&0&a&0&0&l/&x&e&d&0&0&0&0&l/"
+            description:
+              - ""
+              - "&7Взрывоустройчивость IV"
+              - "&7Огнеупорность IV"
+              - "&7Защита от снарядов IV"
+              - "&7Защита V"
+              - "&7Починка"
+              - ""
+              - "&7Внешний вид: &fСовершенно новый"
+              - "&7Качество: &5Эпический"
+              - ""
+              - "&7Будь осторожен, Сатана их всё ещё ищет"
+              - "&8Теги: адские поножи, адский,"
+              - "&8эпический, сатана"
+              - ""
+              - "&4━&4&l&m                     &c"
+              - "&a $ &fЦена: &a5900 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 5900
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 5900
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi saveditems get Поножи_Сатаны -t:%player%"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_444:
+      placeholder: "E"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: NETHERITE_BOOTS
+            display_name: "&x&e&8&0&0&0&0&l/&x&e&a&0&9&0&0&l/ &x&e&d&1&2&0&0&lБ&x&e&f&1&6&0&0&lо&x&f&2&2&4&0&0&lт&x&f&4&2&d&0&0&lи&x&f&7&3&6&0&0&lн&x&f&9&3&f&0&0&lк&x&f&c&4&8&0&0&lи &x&f&c&4&8&0&0&lС&x&f&a&3&f&0&0&lа&x&f&8&3&6&0&0&lт&x&f&6&2&d&0&0&lа&x&f&5&2&4&0&0&lн&x&f&3&1&6&0&0&lы &x&f&1&1&2&0&0&l/&x&e&f&0&9&0&0&l/&x&e&d&0&0&0&0&l/"
+            description:
+              - ""
+              - "&7Взрывоустройчивость IV"
+              - "&7Огнеупорность IV"
+              - "&7Защита от снарядов IV"
+              - "&7Защита V"
+              - "&7Починка"
+              - ""
+              - "&7Внешний вид: &fСовершенно новый"
+              - "&7Качество: &5Эпический"
+              - ""
+              - "&7Специально для тебя повзаимствовал у Сатаны"
+              - "&8Теги: совершенно новый, адский,"
+              - "&8ботинки, сатана"
+              - ""
+              - "&4━&4&l&m                     &c"
+              - "&a $ &fЦена: &a5900 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 5900
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 5900
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi saveditems get Ботинки_Сатаны -t:%player%"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+
+    layout_item_12:
+      placeholder: "X"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: NETHERITE_SWORD
+            display_name: "&x&e&8&0&0&0&0&l/&x&e&6&0&c&0&0&l/ &x&e&e&1&7&0&0&lМ&x&f&2&2&3&0&0&lе&x&f&5&2&f&0&0&lч &x&f&8&3&a&0&0&lС&x&f&6&4&6&0&0&lа&x&f&c&4&6&0&0&lт&x&f&9&3&a&0&0&lа&x&f&7&2&f&0&0&lн&x&f&4&2&3&0&0&lы &x&f&2&1&7&0&0&l/&x&e&f&0&c&0&0&l/&x&e&d&0&0&0&0&l/"
+            description:
+              - ""
+              - "&7Заговор огня II"
+              - "&7Добыча III"
+              - "&7Острота VI"
+              - "&7Починка"
+              - "&7Прочность III"
+              - ""
+              - "&7Внешний вид: &fСовершенно новый"
+              - "&7Качество: &5Эпический"
+              - ""
+              - "&7Этот меч был выкован специально для тебя"
+              - "&8Теги: совершенно новый, адский,"
+              - "&8меч, сатана"
+              - ""
+              - "&4━&4&l&m                     &c"
+              - "&a $ &fЦена: &a12900 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 12900
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 12900
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi saveditems get Меч_Сатаны -t:%player%"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+
+    layout_item_13:
+      placeholder: "Y"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: BOW
+            display_name: "&x&e&8&0&0&0&0&l/&x&e&6&0&c&0&0&l/ &x&e&e&1&7&0&0&lЛ&x&f&2&2&3&0&0&lу&x&f&5&2&f&0&0&lк &x&f&8&3&a&0&0&lС&x&f&6&4&6&0&0&lа&x&f&c&4&6&0&0&lт&x&f&9&3&a&0&0&lа&x&f&7&2&f&0&0&lн&x&f&4&2&3&0&0&lы &x&f&2&1&7&0&0&l/&x&e&f&0&c&0&0&l/&x&e&d&0&0&0&0&l/"
+            description:
+              - ""
+              - "&7Воспламенение"
+              - "&7Бесконечность"
+              - "&7Добыча 3"
+              - "&7Сила V"
+              - "&7Прочность 3"
+              - ""
+              - "&7Внешний вид: &fСовершенно новый"
+              - "&7Качество: &5Эпический"
+              - ""
+              - "&7Уникальный лук"
+              - "&8Теги: совершенно новый, адский,"
+              - "&8лук, сатана"
+              - ""
+              - "&4━&4&l&m                     &c"
+              - "&a $ &fЦена: &a2490 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 2490
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 2490
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi saveditems get Лук_Сатаны -t:%player%"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_14:
+      placeholder: "Z"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: LIGHT_BLUE_SHULKER_BOX
+            display_name: "&4[★] &6Набор Сатаны"
+            description:
+              - ""
+              - " &4Купить набор дешевле,"
+              - " &4чем покупать отдельно"
+              - ""
+              - "&4━&4&l&m                     &c"
+              - "&a $ &fЦена: &a13900 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 13900
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 13900
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi kit satana %player_name%"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_15:
+      placeholder: "Z1"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: RED_SHULKER_BOX
+            display_name: "&4[★] &6Набор Крушителя"
+            description:
+              - ""
+              - " &4Купить набор дешевле,"
+              - " &4чем покупать отдельно"
+              - ""
+              - "&4━&4&l&m                     &c"
+              - "&a $ &fЦена: &a34900 ТК"
+              - "&a ⛁ &fБаланс: &6%playerpoints_points% TK"
+              - "&4━&4&l&m                     &4"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: PLAYER_POINTS_HAS_MONEY
+          amount: 34900
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - " &x&f&f&0&0&0&0[✘] Ошибка! &fУ Вас не хватает &aТокенов&f!&f"
+                - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: PLAYER_POINTS_WITHDRAW_MONEY
+          amount: 34900
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "cmi kit krushitel %player_name%"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+
+    layout_item_22:
+      placeholder: "|"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: RED_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_23:
+      placeholder: "-"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ORANGE_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_25:
+      placeholder: "."
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: LIGHT_GRAY_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []

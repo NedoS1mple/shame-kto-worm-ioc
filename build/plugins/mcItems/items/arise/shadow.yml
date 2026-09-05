@@ -1,0 +1,91 @@
+item:
+  display_name: '#323232🔱 #55FFFFВ#53F3F3о#51E7E7с#4FDBDBс#4DCFCFт#4BC3C3а#49B7B7н#47ABABь#459F9Fт#429292е #3E7A7Aи#3C6E6Eз #385656т#364A4Aе#343E3Eн#323232и'
+  material: BOOK
+  enchanted: true
+  description:
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffccccДревний магический гримуар, позволяющий"
+    - "#ffccccпризывать теневых воинов #f520801 &7книга #ffcccc- #f520802 &7воина#ffcccc."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  arise_component:
+    # Лимит числа теневых воинов.
+    arisen_entity_limit: 3
+    # Здоровье теневого воина (например игрок по умолчанию обладает 20 ед. здоровья).
+    max_health: 40
+    # Число одновременно призываемых теневых воинов.
+    arisen_entity_spawn_amount: 2
+    # Цвет свечения.
+    # Используйте цвета версии ядра на котором запускаете плагин (по умолничаю: 1.16.5).
+    # Списки всех материалов для каждой версии:
+    # https://helpch.at/docs/1.16.5/org/bukkit/Material.html
+    # https://helpch.at/docs/x.x.x/org/bukkit/Material.html
+    # ...
+    glowing_color: AQUA
+    # (Сек.) Время жизни теневого воина.
+    time_to_live_seconds: 300
+    # Броня теневого воина.
+    armor:
+      # Шлем.
+      helmet:
+        material: LEATHER_HELMET
+        rgb:
+          r: 85
+          g: 255
+          b: 255
+      # Нагрудник.
+      chestplate:
+        material: LEATHER_CHESTPLATE
+        rgb:
+          r: 57
+          g: 170
+          b: 170
+      # Поножи.
+      leggings:
+        material: LEATHER_LEGGINGS
+        rgb:
+          r: 28
+          g: 85
+          b: 85
+      # Ботинки. 
+      boots:
+        material: LEATHER_BOOTS
+        rgb:
+          r: 0
+          g: 0
+          b: 0
+
+    # Формат здоровья теневого воина.
+    health_display_string_format: "&c❤&f%health%"
+    # Формат оставшегося времени жизни теневого воина.
+    time_to_live_seconds_display_string_format: "&a⌚&f%time_to_live_seconds%"
+    # Формат имени теневого воина.
+    custom_name_format: "%formatted_summoner_name% %formatted_health_display_string%&0/%formatted_time_to_live_seconds_display_string%"
+    # Включить задерждку для предотвращения частого использования?
+    enable_use_delay: true
+    # (Тиков. 1 сек. = 20 тиков) Задержка повторного использования.
+    delay_use_ticks: 20
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    message:
+      # Теневой воин призван!
+      arisen: "#323232🔱 #55FFFFТ#52EFEFе#50DFDFн#4DD0D0е#4AC0C0в#48B0B0о#45A0A0й #3F8181в#3D7171о#3A6161и#375252н #55FFFFпризван#323232!"
+      # Теневой воин повержен.
+      despawned: "#323232🔱 #55FFFFТ#53F5F5е#52EBEBн#50E2E2е#4ED8D8в#4DCECEо#4BC4C4й #48B1B1в#46A7A7о#449D9Dи#439494н #3F8080п#3E7676о#3C6D6Dв#3A6363е#395959р#374F4Fж#354646е#343C3Cн #55FFFFповержен#323232."
+      use_delay: "&cМожно использовать повторно через &b%use_delay_seconds% &cсек."
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."
+      arisen_entity_limit_reached: "&cДостигнут лимит числа теневых воинов."

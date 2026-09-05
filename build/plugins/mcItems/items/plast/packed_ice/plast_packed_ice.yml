@@ -1,0 +1,82 @@
+item:
+  display_name: '#FFFFFF⧈ #E4362DП#EB6862л#F29B96а#F8CDCBс#FFFFFFт &r- "#55FFFFП#66FFFFл#77FFFFо#88FFFFт#99FFFFн#AAFFFFы#BBFFFFй #DDFFFFл#EEFFFFе#FFFFFFд&r"'
+  material: DRIED_KELP
+  description:
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - '#32CD32✔ #ffcccc#f52080ПКМ #ffcccc- создает "пласт" #f520805&7x#f520805#ffcccc,'
+    - "#ffccccнельзя сломать #f520805 &7сек#ffcccc."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  plast_component:
+    # Чтобы корректно создать .schematic файл, влетите в центр .schematic постройки в игровом режиме
+    # наблюдателя с направлением взгляда из F3 в 0 градусов по горизонтали (yaw) и выполните //copy.
+    schematic_0_deg: "plast_packed_ice_0_deg.schematic"
+    schematic_45_deg: "plast_packed_ice_45_deg.schematic"
+    schematic_90_deg: "plast_packed_ice_90_deg.schematic"
+    schematic_bottom: "plast_packed_ice_bottom.schematic"
+    schematic_minus_45_deg: "plast_packed_ice_minus_45_deg.schematic"
+    # (Сек.) Время жизни (существования/действия) "нерушимой стены".
+    time_to_live_seconds: 5
+    # (Тиков. 1 сек. = 20 тиков) Частота появления партиклов на месте "пласта".
+    particle_spawn_rate_ticks: 5
+    # Список партиклов которые будут появлятся на месте "пласта" пока он заспавнен.
+    # Используйте партиклы версии ядра на котором запускаете плагин.
+    # Списки всех материалов для каждой версии:
+    # https://helpch.at/docs/1.8.8/org/bukkit/Effect.html
+    # https://helpch.at/docs/x.x.x/org/bukkit/Effect.html
+    # ...
+    particle_name_to_spawn_list:
+      - "PORTAL"
+    # "/op" игрок может разрушать регион (область) "нерушимой стены" пока она заспавнена?
+    is_op_can_break_unbreakable_wall_region_while_it_spawned: true
+    # (Сек.) Сколько секунд игрок неуязвим к урону от падения после спавна пласта?
+    # Урон от падения пройдет в любом случае если время жизни трапки "time_to_live_seconds" вышло.
+    player_invulnerable_to_fall_damage_after_plast_spawned_seconds: 1
+
+    sound:
+      # Звук спавна "пласта".
+      spawned:
+        sound: ITEM_BOTTLE_FILL_DRAGONBREATH
+        sound_category: MASTER
+        volume: 1.0
+        pitch: 1.0
+
+      # Звук деспавна "пласта".
+      despawned:
+        sound: ITEM_BOTTLE_FILL_DRAGONBREATH
+        sound_category: MASTER
+        volume: 1.0
+        pitch: 0.0
+
+    # Включить задерждку для предотвращения частого использования?
+    enable_use_delay: true
+    # (Тиков. 1 сек. = 20 тиков) Задержка повторного использования.
+    delay_use_ticks: 20
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Отключить возможность призыва трапки внутри WorldGuard региона?
+    disable_spawn_inside_worldguard_regions: true
+    # Отключить возможность призыва трапки внутри mcRegion региона?
+    disable_spawn_inside_mcregion_regions: false
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    message:
+      # Пласт заспавнен!
+      spawned: "#FFFFFF⧈ #55FFFFП#60FFFFл#6CFFFFа#77FFFFс#82FFFFт #99FFFFз#A4FFFFа#B0FFFFс#BBFFFFп#C6FFFFа#D2FFFFв#DDFFFFн#E8FFFFе#F4FFFFн#FFFFFF!"
+      # Пласт задеспавнен.
+      despawned: "#FFFFFF⧈ #55FFFFП#5FFFFFл#69FFFFа#73FFFFс#7DFFFFт #91FFFFз#9BFFFFа#A5FFFFд#AFFFFFе#B9FFFFс#C3FFFFп#CDFFFFа#D7FFFFв#E1FFFFн#EBFFFFе#F5FFFFн#FFFFFF."
+      use_delay: "&cМожно использовать повторно через &b%use_delay_seconds% &cсек."
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      spawn_is_not_allowed_because_of_plugin_region: "&cНельзя призвать пласт, потому что он будет пересекать существующий регион."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."

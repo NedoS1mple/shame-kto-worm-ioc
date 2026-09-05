@@ -1,0 +1,1 @@
+.\jdk-17.0.11\bin\java.exe -Xmx5G -Dfile.encoding=UTF-8 -DPaper.IgnoreJavaVersion=true -jar server.jar

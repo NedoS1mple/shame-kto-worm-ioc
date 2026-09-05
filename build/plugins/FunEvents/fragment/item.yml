@@ -1,0 +1,6 @@
+material: CHARCOAL
+name: "&#FF0000[★] &#FF7300Осколок"
+lore:
+  - '&eВводи &6/fragments&e, чтобы'
+  - '&eобменять его на лут'
+glow: true

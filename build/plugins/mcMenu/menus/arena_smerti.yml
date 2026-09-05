@@ -1,0 +1,260 @@
+open_menu_command_list:
+  - "death_arena"
+
+access_to_open_checker:
+  enable: false
+  permission: menu.open.shop_weapon
+  message:
+    permission_denied: "&cОтказано в доступе на открытие меню 1."
+
+# Заголовок меню.
+title: " &b&m   &8&m[ #b10000&l   Арена смерти   &8&m ]&b&m   "
+
+# (Тиков 20 тиков = 1 сек.) Интервал перерисовки меню.
+# Значения 0 и ниже включая -1 и тд. отключают отрисовку за исключением случаев когда игрок кликает (оптимизация).
+update_interval_ticks: 0
+
+# Макет меню.
+layout:
+
+  # Сетка макета.
+  grid:
+    - "| | - - - - - | |"
+    - "| - - - A - - - |"
+    - "| - B . . . C - |"
+    - "| - - . D . - - |"
+    - "| | - - - - - | |"
+
+  layout_item_list:
+    layout_item_1:
+      placeholder: "A"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: writable_book
+            display_name: "#CC0000[✝]#FF0000 Информация"
+            description:
+              - "#FF6600 Арена Смерти#FFFFE6, это место,"
+              - "#FFFFE6  в котором Вы можете сражаться"
+              - "#FFFFE6  с другими игроками не боясь,"
+              - "#FFFFE6  что Ваш противник сбежит или"
+              - "#FFFFE6  вещи подлутают инвизники."
+              - "#009900 [✔] #00FF00Войти#FFFFE6 на Арену можно "
+              - "#FFFFE6  только с полным комплектом"
+              - "#FFFFE6  незеритовой брони."
+              - "#FF6600 [✘] #FFFF00Выйти#FFFFE6 из Арены можно только"
+              - "#FFFFE6  через НПС или команду /leave"
+      click_pipeline_component_list:
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: minecraft:block.note_block.bit
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_2:
+      placeholder: "B"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: netherite_sword
+            display_name: "#cc0000[⚔] #ff0000На Арену"
+            description:
+              - "#FFFFE6Телепортирует вас"
+              - "#FFFFE6прямо на арену."
+      click_pipeline_component_list:
+        click_pipeline_component_1:
+          type: HAS_MATERIAL_ITEM
+
+          material: NETHERITE_HELMET
+          hide_attributes: false
+          unbreakable: false
+          # Проверять наличие предмета в заданном слоте, а не во всем инвентаре игрока.
+          # Удалите эту 'specified_player_inventory_slot' секцию чтобы проверка снова была во всем инвентаре игрока.
+          #
+          # Подсказка:
+          # - Сайт со списком ID слотов инвентаря игрока "https://mcutils.com/inventory-slots". Выберите в
+          # выпадающем списке "Container Type" опцию "Player" чтобы получить ID слотов инвентаря игрока.
+          # - Компонент "HAS_IN_GAME_ITEM" аналогично обладает данным свойством.
+          specified_player_inventory_slot: 39
+          item_not_found_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message: "&c[❌] &6У вас нет необходимой экипировки!"
+        click_pipeline_component_2:
+          type: HAS_MATERIAL_ITEM
+          material: NETHERITE_CHESTPLATE
+          hide_attributes: false
+          unbreakable: false
+          # Проверять наличие предмета в заданном слоте, а не во всем инвентаре игрока.
+          # Удалите эту 'specified_player_inventory_slot' секцию чтобы проверка снова была во всем инвентаре игрока.
+          #
+          # Подсказка:
+          # - Сайт со списком ID слотов инвентаря игрока "https://mcutils.com/inventory-slots". Выберите в
+          # выпадающем списке "Container Type" опцию "Player" чтобы получить ID слотов инвентаря игрока.
+          # - Компонент "HAS_IN_GAME_ITEM" аналогично обладает данным свойством.
+          specified_player_inventory_slot: 38
+          item_not_found_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message: "&c[❌] &6У вас нет необходимой экипировки!"
+        click_pipeline_component_3:
+          type: HAS_MATERIAL_ITEM
+          material: NETHERITE_LEGGINGS
+          hide_attributes: false
+          unbreakable: false
+          # Проверять наличие предмета в заданном слоте, а не во всем инвентаре игрока.
+          # Удалите эту 'specified_player_inventory_slot' секцию чтобы проверка снова была во всем инвентаре игрока.
+          #
+          # Подсказка:
+          # - Сайт со списком ID слотов инвентаря игрока "https://mcutils.com/inventory-slots". Выберите в
+          # выпадающем списке "Container Type" опцию "Player" чтобы получить ID слотов инвентаря игрока.
+          # - Компонент "HAS_IN_GAME_ITEM" аналогично обладает данным свойством.
+          specified_player_inventory_slot: 37
+          item_not_found_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message: "&c[❌] &6У вас нет необходимой экипировки!"
+        click_pipeline_component_4:
+          type: HAS_MATERIAL_ITEM
+          material: NETHERITE_BOOTS
+          hide_attributes: false
+          unbreakable: false
+          # Проверять наличие предмета в заданном слоте, а не во всем инвентаре игрока.
+          # Удалите эту 'specified_player_inventory_slot' секцию чтобы проверка снова была во всем инвентаре игрока.
+          #
+          # Подсказка:
+          # - Сайт со списком ID слотов инвентаря игрока "https://mcutils.com/inventory-slots". Выберите в
+          # выпадающем списке "Container Type" опцию "Player" чтобы получить ID слотов инвентаря игрока.
+          # - Компонент "HAS_IN_GAME_ITEM" аналогично обладает данным свойством.
+          specified_player_inventory_slot: 36
+          item_not_found_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message: "&c[❌] &6У вас нет необходимой экипировки!"
+
+        click_pipeline_component:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - warp deatharena -s 
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_4:
+      placeholder: "C"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: pufferfish
+            display_name: "#cc0000[◕_◕] #ff0000На Смотровую"
+            description:
+              - "#FFFFE6Телепортирует вас"
+              - "#FFFFE6на смотровую площадку"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - warp death_smotr
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_5:
+      placeholder: "D"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: netherite_chestplate
+            display_name: "#cc0000[$] #ff0000Купить снаряжение"
+            description:
+              - " #cc0000➥ Нажмите#FFFFE6, чтобы перейти"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - pvp_menu
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+
+    layout_item_22:
+      placeholder: "|"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: RED_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_23:
+      placeholder: "-"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ORANGE_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_25:
+      placeholder: "."
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: LIGHT_GRAY_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []

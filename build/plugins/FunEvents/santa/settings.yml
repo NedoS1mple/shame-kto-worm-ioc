@@ -1,0 +1,134 @@
+generator:
+  static-location:
+    toggle: true
+    world: world
+    x: 100
+    y: 100
+    z: 100
+  center:
+    x: 0
+    z: 0
+  radius: 1000
+  maxY: 120
+  minY: 30
+  check-floor:
+    toggle: true
+    radius: 4
+    step: 3
+  check-air:
+    toggle: true
+    radius: 5
+    high: 4
+    step: 2
+  banned-biomes:
+  - BEACH
+  banned-blocks:
+  - WATER
+  worlds:
+    world: 100
+  region-radius:
+    x: 15
+    y: 200
+    z: 15
+  scheme-offsets:
+    x: 0
+    y: 0
+    z: 0
+  ignore-air-blocks: true
+  flags:
+    pvp: allow
+    build: deny
+name: Дед мороз
+time:
+  prestart: 10
+  start: 10
+  activated: 10
+  destroy-toggle: true
+  destroy: 10
+hologram:
+  toggle: true
+  offset:
+    x: 0.5
+    y: 1.5
+    z: 0.5
+  lines:
+    started:
+    - Дед мороз
+    - Начат
+    activated:
+    - Дед мороз
+    - Активирован
+    destroy:
+    - Дед мороз
+    - Удаляется
+message:
+  prestart:
+    toggle: true
+    lines:
+    - Дед мороз заспавится скоро
+  spawn:
+    toggle: true
+    lines:
+    - Дед мороз заспавнился
+  activated:
+    toggle: true
+    lines:
+    - Дед мороз активировался
+  removing:
+    toggle: true
+    lines:
+    - Дед мороз пропал
+bossbar:
+  toggle: true
+  stroke:
+    started: Дед мороз скоро
+    activated: Дед мороз активирован
+    destroy: Дед мороз скоро потухнет
+  style: SEGMENTED_20
+  color: RED
+  radius: 20
+toggle: false
+spawn-sound:
+  toggle: true
+  all-player: true
+  sound: ENTITY_LIGHTNING_BOLT_THUNDER
+  player-volume: 1
+  volume: 10
+  pitch: 1
+settings:
+  chest-offset:
+    x: 0
+    y: 0
+    z: 0
+  particles:
+    item:
+      period: 0.1
+      duration: 4
+      particle: END_ROD
+      amount: 1
+      v1: 0
+      v2: 0
+      v3: 0
+      speed: 0
+  sound:
+    item:
+      toggle: true
+      sound: ENTITY_SNOWBALL_THROW
+      volume: 2
+      pitch: 1
+  item:
+    period: 1
+    pickup-delay: 60
+    name-visible: false
+    dispersion: 0.5
+  present:
+    chance: 50
+    textures:
+    - http://textures.minecraft.net/texture/b177c0d7ff1b8ae3c059c7e2307730805cb3188626251b8cb62d566c5123236f
+    name: '&3[★] &bНовогодний подарок'
+    lore:
+    - '&7Вводи &f/santa&7, чтобы'
+    - '&7обменять его на лут'
+    inventory:
+      event: true
+      custom: '&#FF0000Элитный'

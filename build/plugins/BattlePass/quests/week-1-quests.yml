@@ -1,0 +1,133 @@
+quests:
+  1: # id квеста
+    name: 'Неделя 1 - Шахтер' # Имя квеста
+    type: block-break # Тип квеста
+    variable: coal_ore:0 # Блок, который игрок должен сломать
+    required-progress: 30 # Сколько раз игрок должен сломать блок
+    points: 10 # Сколько баллов игрок получит за выполнение квеста
+    item: # Иконка квеста в меню
+      material: diamond_pickaxe:0
+      amount: 1
+      name: '&eШахтер'
+      lore:
+        - '&7Вскопай &e30 угля'
+        - ''
+        - '%progress_bar% &7(&a%percentage_progress%&7)' # При желании вместо этого можно использовать формат в стиле прогресс/необходимо (23/1000). Посмотри примеры чуть ниже.
+  2:
+    name: 'Неделя 1 - Пиглин'
+    type: block-place
+    variable: gold_block:0
+    required-progress: 10
+    points: 20
+    item:
+      material: gold_block:0
+      name: '&eПиглин'
+      lore:
+        - '&7Размести &e10 золотых блоков'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  3:
+    name: 'Неделя 1 - Подготовка к бою'
+    type: craft
+    variable: diamond_sword:0
+    required-progress: 1
+    points: 30
+    item:
+      material: netherite_sword:0
+      name: '&eПодготовка к бою'
+      lore:
+        - '&7Создай &eнезеритовый меч'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  4:
+    name: 'Неделя 1 - Фермер'
+    type: milk
+    variable: none
+    required-progress: 30
+    points: 40
+    item:
+      material: milk_bucket:0
+      name: '&eФермер'
+      lore:
+        - '&7Подой &e30 коров'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  5:
+    name: 'Неделя 1 - Печкин'
+    type: smelt
+    variable: iron_ingot:0
+    required-progress: 320
+    points: 50
+    item:
+      material: iron_ingot:0
+      name: '&eПечкин'
+      lore:
+        - '&7Переплавь &e320 железной руды'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  6:
+    name: 'Неделя 1 - Маг'
+    type: regenerate
+    variable: none
+    required-progress: 500
+    points: 60
+    item:
+      material: apple:0
+      amount: 1
+      name: '&eМаг'
+      lore:
+        - '&7Регенерируй &e500 единиц здоровья'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  7:
+    name: 'Неделя 1 - Убийца'
+    type: kill-player
+    variable: none
+    required-progress: 15
+    points: 70
+    item:
+      material: wooden_sword:0
+      name: '&eУбийца'
+      lore:
+        - '&7Убей &e15 игроков'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  8:
+    name: 'Неделя 1 - Охотник'
+    type: kill-mob
+    variable: creeper
+    required-progress: 50
+    points: 80
+    item:
+      material: gold_sword:0
+      name: '&eОхотник'
+      lore:
+        - '&7Убей &e50 криперов'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  9:
+    name: 'Неделя 1 - Рыбак'
+    type: fish
+    variable: none
+    required-progress: 100
+    points: 90
+    item:
+      material: fishing_rod:0
+      name: '&eРыбак'
+      lore:
+        - '&7Нарыбачь &e100 предметов'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  10:
+    name: 'Неделя 1 - Опытный'
+    type: gain-experience
+    variable: none
+    required-progress: 2000
+    points: 100
+    item:
+      material: experience_bottle:0
+      name: '&eОпытный'
+      lore:
+        - '&7Получи &e2000 единиц опыта'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'

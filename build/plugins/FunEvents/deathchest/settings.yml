@@ -1,0 +1,186 @@
+generator:
+  static-location:
+    toggle: true
+    world: lobby
+    x: -254 
+    y: 91
+    z: 28
+  center:
+    x: 0
+    z: 0
+  radius: 0
+  maxY: 0
+  minY: 0
+  check-floor:
+    toggle: false
+    radius: 0
+    step: 0
+  check-air:
+    toggle: false
+    radius: 0
+    high: 0
+    step: 0
+  banned-biomes:
+  - BEACH
+  banned-blocks:
+  - WATER
+  worlds:
+    world: 100
+  region-radius:
+    x: 15
+    y: 200
+    z: 15
+  scheme-offsets:
+    x: 0
+    y: 0
+    z: 0
+  ignore-air-blocks: true
+  flags:
+    pvp: allow
+    build: deny
+name: 'Сундук смерти'
+time:
+  prestart: 180
+  start: 300
+  activated: 60
+  destroy-toggle: true
+  destroy: 60
+hologram:
+  toggle: true
+  offset:
+    x: 0.5
+    y: 2.5
+    z: 0.5
+  lines:
+    started:
+    - '&#FF0000[Сундук смерти]'
+    - '&#CC0000&k||| &fИдёт активация. &#CC0000&k|||'
+    - '&fДо открытия: &#FF0000{timer} сек'
+    activated:
+    - '&#FF0000[Сундук смерти]'
+    - '&#CC0000&k||| &fОткрыт! &#CC0000&k|||'
+    destroy:
+    - '&#FF0000[Сундук смерти]'
+    - '&#CC0000&k||| &fУдаление &#CC0000&k|||'
+message:
+  prestart:
+    toggle: true
+    lines:
+    - '&#900000 ╔&#990000═&#A30000═&#AC0000╦&#B50000═&#BE0000═&#C80000╦&#D10000═&#DA0000═&#E30000╦&#ED0000═&#F60000═&#FF0000╦&#F60000═&#ED0000═&#E30000╦&#DA0000═&#D10000═&#C80000╦&#BE0000═&#B50000═&#AC0000╦&#A30000═&#990000═&#900000╗'
+    - '&#900000 ║'
+    - '&#900000 ║&#FFFFE6     &#770000§k|||&#FB0808  [Сундук смерти]   &#770000§k|||'
+    - '&#900000 ║&#FFFFE6   Появится уже через &#FF00003 минуты!'
+    - '&#900000 ║'
+    - '&#900000 ╚&#990000═&#A30000═&#AC0000╩&#B50000═&#BE0000═&#C80000╩&#D10000═&#DA0000═&#E30000╩&#ED0000═&#F60000═&#FF0000╩&#F60000═&#ED0000═&#E30000╩&#DA0000═&#D10000═&#C80000╩&#BE0000═&#B50000═&#AC0000╩&#A30000═&#990000═&#900000╝'
+  spawn:
+    toggle: true
+    lines:
+    - '&#900000 ╔&#990000═&#A30000═&#AC0000╦&#B50000═&#BE0000═&#C80000╦&#D10000═&#DA0000═&#E30000╦&#ED0000═&#F60000═&#FF0000╦&#F60000═&#ED0000═&#E30000╦&#DA0000═&#D10000═&#C80000╦&#BE0000═&#B50000═&#AC0000╦&#A30000═&#990000═&#900000╗'
+    - '&#900000 ║'
+    - '&#900000 ║&#FFFFE6     &#770000§k|||&#FB0808  [Сундук смерти]   &#770000§k|||'
+    - '&#900000 ║&#FFFFE6   Уровень лута: {inventory}'
+    - '&#900000 ║&#FFFFE6   Появился на &#FF0000/warp arena '
+    - '&#900000 ║'
+    - '&#900000 ╚&#990000═&#A30000═&#AC0000╩&#B50000═&#BE0000═&#C80000╩&#D10000═&#DA0000═&#E30000╩&#ED0000═&#F60000═&#FF0000╩&#F60000═&#ED0000═&#E30000╩&#DA0000═&#D10000═&#C80000╩&#BE0000═&#B50000═&#AC0000╩&#A30000═&#990000═&#900000╝'
+  activated:
+    toggle: false
+    lines:
+    - Мистический алтарь активировался
+  removing:
+    toggle: false
+    lines:
+    - Мистический алтарь пропал
+bossbar:
+  toggle: true
+  stroke:
+    started: '&cСундук смерти &6- до открытия: &c{timer} сек'
+    activated: '&cСундук смерти &6- открыт: &c{timer} сек'
+    destroy: '&cСундук смерти &6- до удаления: &c{timer} сек'
+  style: SEGMENTED_20
+  color: RED
+  radius: 50
+toggle: true
+spawn-sound:
+  toggle: true
+  all-player: true
+  sound: ENTITY_LIGHTNING_BOLT_THUNDER
+  player-volume: 1
+  volume: 10
+  pitch: 1
+settings:
+  particles:
+    underchest:
+      offset:
+        x: 0.5
+        y: 0.1
+        z: 0.5
+      amount: 16
+      circle-speed: 5
+      second-step: 4
+      started:
+        first:
+          particle: FLAME
+          amount: 1
+          v1: 0
+          v2: 0
+          v3: 0
+          speed: 0
+        second:
+          particle: SMOKE_NORMAL
+          amount: 0
+          v1: 0
+          v2: 0.3
+          v3: 0
+          speed: 0.05
+      activated:
+        first:
+          particle: DRAGON_BREATH
+          amount: 1
+          v1: 0
+          v2: 0
+          v3: 0
+          speed: 0
+        second:
+          particle: SPELL_WITCH
+          amount: 0
+          v1: 0
+          v2: 0.3
+          v3: 0
+          speed: 0.05
+      destroy:
+        first:
+          particle: FLAME
+          amount: 1
+          v1: 0
+          v2: 0
+          v3: 0
+          speed: 0
+        second:
+          particle: SMOKE_NORMAL
+          amount: 0
+          v1: 0
+          v2: 0.3
+          v3: 0
+          speed: 0.05
+    aroundchest:
+      range: 10
+      smoke:
+        particle: SMOKE_LARGE
+        amount: 50
+        v1: 0
+        v2: 0
+        v3: 0
+        speed: 0
+      soul:
+        particle: SOUL
+        amount: 50
+        v1: 0
+        v2: 0
+        v3: 0
+        speed: 0.1
+  sound:
+    before-open:
+      countdown-time: 5
+      sound: BLOCK_NOTE_BLOCK_PLING
+      volume: 2
+      pitch: 1

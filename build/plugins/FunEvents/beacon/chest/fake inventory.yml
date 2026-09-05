@@ -1,0 +1,144 @@
+'-1847805276':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: NAUTILUS_SHELL
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Кость
+        пирата"}],"text":""}'
+'-1366641653':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: NAUTILUS_SHELL
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Битая
+        ваза"}],"text":""}'
+'-1531258896':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: NAUTILUS_SHELL
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Рога
+        мамонта"}],"text":""}'
+'1863665637':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: NAUTILUS_SHELL
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Богатое
+        сокровище"}],"text":""}'
+'-531974663':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: PHANTOM_MEMBRANE
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Кость
+        пирата"}],"text":""}'
+'-277022936':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: PHANTOM_MEMBRANE
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Битая
+        ваза"}],"text":""}'
+'117966536':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: PHANTOM_MEMBRANE
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Рога
+        мамонта"}],"text":""}'
+'1373628403':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: PHANTOM_MEMBRANE
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Богатое
+        сокровище"}],"text":""}'
+'-164377502':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: GUNPOWDER
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Кость
+        пирата"}],"text":""}'
+'-427080070':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: GUNPOWDER
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Битая
+        ваза"}],"text":""}'
+'1665482208':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: GUNPOWDER
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Рога
+        мамонта"}],"text":""}'
+'-1872725258':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: GUNPOWDER
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Богатое
+        сокровище"}],"text":""}'
+'677036858':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: GRAY_DYE
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Кость
+        пирата"}],"text":""}'
+'-743162048':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: GRAY_DYE
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Битая
+        ваза"}],"text":""}'
+'-389158948':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: GRAY_DYE
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Рога
+        мамонта"}],"text":""}'
+'-1322296535':
+  ==: org.bukkit.inventory.ItemStack
+  v: 2586
+  type: GRAY_DYE
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Богатое
+        сокровище"}],"text":""}'

@@ -1,0 +1,209 @@
+open_menu_command_list:
+  - "help"
+
+access_to_open_checker:
+  enable: false
+  permission: menu.open.shop_weapon
+  message:
+    permission_denied: "&cОтказано в доступе на открытие меню 1."
+
+# Заголовок меню.
+title: "§4● &x&e&f&8&1&0&0&lО главном"
+
+# (Тиков 20 тиков = 1 сек.) Интервал перерисовки меню.
+# Значения 0 и ниже включая -1 и тд. отключают отрисовку за исключением случаев когда игрок кликает (оптимизация).
+update_interval_ticks: 0
+
+# Макет меню.
+layout:
+
+  # Сетка макета.
+  grid:
+    - "| | - - - - - | |"
+    - "| - - - A - - - |"
+    - "| - - B C D - - |"
+    - "| - - - E - - - |"
+    - "| | - - - - - | |"
+
+  layout_item_list:
+    layout_item_1:
+      placeholder: "A"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: COMMAND_BLOCK
+            display_name: "&x&e&f&8&1&0&0[★] &eКак сменить пароль?"
+            description:
+              - "&x&e&f&8&1&0&0➥ Нажмите&f, чтобы узнать"
+      click_pipeline_component_list:
+        click_pipeline_component_1:
+          type: SEND_MESSAGE
+          message: "&fДля смены пароля используйте команду &x&e&f&8&1&0&0/changepass"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: minecraft:block.note_block.bit
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_2:
+      placeholder: "B"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: COOKIE
+            display_name: "&x&e&f&8&1&0&0[❤] &eБесплатные бонусы"
+            description:
+              - "&x&e&f&8&1&0&0➥ Нажмите&f, чтобы перейти"
+              - ""
+              - "&e➯ &fМеню содержит:"
+              - "&x&e&f&8&1&0&0● &fКейсы"
+              - "&x&e&f&8&1&0&0● &fБесплатный кит-набор"
+              - "&x&e&f&8&1&0&0● &fЗарплата"
+              - "&x&e&f&8&1&0&0● &fОпыт"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "menu_free"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_4:
+      placeholder: "C"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: CHEST
+            display_name: "&x&e&f&8&1&0&0[❖] &eГлавное меню"
+            description:
+              - "&x&e&f&8&1&0&0➥ Нажмите&f, чтобы перейти"
+              - ""
+              - "&e➯ &fМеню содержит:"
+              - "&x&e&f&8&1&0&0● &fМагазин"
+              - "&x&e&f&8&1&0&0● &fАукцион"
+              - "&x&e&f&8&1&0&0● &fНовые крафты"
+              - "&x&e&f&8&1&0&0● &fСкиллы"
+              - "&x&e&f&8&1&0&0● &fВарпы сервера"              
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "menu"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_5:
+      placeholder: "D"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: COMPASS
+            display_name: "&x&e&f&8&1&0&0[✾] &eНавигация по серверу"
+            description:
+              - "&x&e&f&8&1&0&0➥ Нажмите&f, чтобы перейти"
+              - ""
+              - "&e➯ &fМеню содержит:"
+              - "&x&e&f&8&1&0&0● &fИвенты сервера"
+              - "&x&e&f&8&1&0&0● &fТайники"
+              - "&x&e&f&8&1&0&0● &fМагазины"
+              - "&x&e&f&8&1&0&0● &fАвто-шахта"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "navigation"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_6:
+      placeholder: "E"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: WOODEN_AXE
+            display_name: "&x&e&f&8&1&0&0[✱] &eКак приватить?"
+            description:
+              - "&x&e&f&8&1&0&0➥ Нажмите&f, чтобы перейти"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "private_info"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+
+    layout_item_25:
+      placeholder: "|"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: RED_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_22:
+      placeholder: "-"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ORANGE_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []

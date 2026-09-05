@@ -1,0 +1,49 @@
+username: ""
+password: ""
+generator:
+  times: 1
+  tick: 20
+  unsafe-max: 300
+stars:
+  toggle: true
+  inventory-color: true
+  string: "#FFFFFF[{stars}#FFFFFF]"
+  empty: "☆"
+  fill: "★"
+cords:
+  toggle-hover: true
+  toggle-click: true
+  toggle-admin-command: true
+  click-suggest: false
+  string: "[{x} {y} {z}]"
+  command: "/gps {x} {y} {z}"
+  admin-command: "/tppos {x} {y} {z} {world}"
+  hover-text: "§6Нажми§f, чтобы установить GPS\nСтрелка компаса будет\nуказывать на место ивента."
+vote:
+  toggle: false
+  duration: 60
+  delay: 5
+altar:
+  players: 5
+fragments-command:
+  need-player: false
+  need-permission: false
+  permission: "funevents.fragments"
+soul-command:
+  need-player: false
+  need-permission: false
+  permission: "funevents.souls"
+santa-command:
+  need-player: false
+  need-permission: false
+  permission: "funevents.santa"
+status-placeholder:
+  active: "#2EE600Активен"
+  unactive: "#FF0000Неактивен"
+permissions:
+  admin: "funevents.admin"
+  start: "funevents.start"
+  stop: "funevents.stop"
+  settings: "funevents.settings"
+  givemystic: "funevents.givemystic"
+  votemenu: "funevents.votemenu"

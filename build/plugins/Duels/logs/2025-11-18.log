@@ -1,0 +1,79 @@
+[25-11-18 13:18:02] [INFO] [DEBUG] onEnable start -> 1763461082292
+
+[25-11-18 13:18:02] [INFO] Using Economy Provider: com.Zrips.Economy_CMI
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of Config at 1763461082377
+[25-11-18 13:18:02] [INFO] [DEBUG] Config has been loaded. (took 23ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of Lang at 1763461082400
+[25-11-18 13:18:02] [INFO] [DEBUG] Lang has been loaded. (took 35ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of UserManagerImpl at 1763461082435
+[25-11-18 13:18:02] [INFO] [DEBUG] UserManagerImpl has been loaded. (took 1ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of GuiListener at 1763461082436
+[25-11-18 13:18:02] [INFO] [DEBUG] GuiListener has been loaded. (took 1ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of KitManagerImpl at 1763461082437
+[25-11-18 13:18:02] [INFO] KitManagerImpl: Loaded 0 kit(s).
+[25-11-18 13:18:02] [INFO] [DEBUG] KitManagerImpl has been loaded. (took 11ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of ArenaManagerImpl at 1763461082448
+[25-11-18 13:18:02] [INFO] ArenaManagerImpl: Loaded 1 arena(s).
+[25-11-18 13:18:02] [INFO] [DEBUG] ArenaManagerImpl has been loaded. (took 75ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of SettingsManager at 1763461082523
+[25-11-18 13:18:02] [INFO] [DEBUG] SettingsManager has been loaded. (took 0ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of PlayerInfoManager at 1763461082523
+[25-11-18 13:18:02] [INFO] [DEBUG] PlayerInfoManager has been loaded. (took 8ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of SpectateManagerImpl at 1763461082531
+[25-11-18 13:18:02] [INFO] [DEBUG] SpectateManagerImpl has been loaded. (took 0ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of BettingManager at 1763461082531
+[25-11-18 13:18:02] [INFO] [DEBUG] BettingManager has been loaded. (took 0ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of InventoryManager at 1763461082532
+[25-11-18 13:18:02] [INFO] [DEBUG] InventoryManager has been loaded. (took 0ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of DuelManager at 1763461082532
+[25-11-18 13:18:02] [INFO] [DEBUG] DuelManager has been loaded. (took 0ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of QueueManager at 1763461082532
+[25-11-18 13:18:02] [INFO] QueueManager: Loaded 0 queue(s).
+[25-11-18 13:18:02] [INFO] [DEBUG] QueueManager has been loaded. (took 1ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of QueueSignManagerImpl at 1763461082533
+[25-11-18 13:18:02] [INFO] QueueSignManagerImpl: Loaded 0 queue sign(s).
+[25-11-18 13:18:02] [INFO] [DEBUG] QueueSignManagerImpl has been loaded. (took 2ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of RequestManager at 1763461082535
+[25-11-18 13:18:02] [INFO] [DEBUG] RequestManager has been loaded. (took 0ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of Teleport at 1763461082535
+[25-11-18 13:18:02] [INFO] [DEBUG] Teleport has been loaded. (took 0ms)
+[25-11-18 13:18:02] [INFO] [DEBUG] Starting load of ExtensionManager at 1763461082535
+[25-11-18 13:18:02] [INFO] [DEBUG] ExtensionManager has been loaded. (took 1ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] onDisable start -> 1763461179302
+
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of ExtensionManager at 1763461179305
+[25-11-18 13:19:39] [INFO] [DEBUG] ExtensionManager has been unloaded. (took 1ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of Teleport at 1763461179306
+[25-11-18 13:19:39] [INFO] [DEBUG] Teleport has been unloaded. (took 0ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of RequestManager at 1763461179306
+[25-11-18 13:19:39] [INFO] [DEBUG] RequestManager has been unloaded. (took 0ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of QueueSignManagerImpl at 1763461179306
+[25-11-18 13:19:39] [INFO] [DEBUG] QueueSignManagerImpl has been unloaded. (took 0ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of QueueManager at 1763461179306
+[25-11-18 13:19:39] [INFO] [DEBUG] QueueManager has been unloaded. (took 1ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of DuelManager at 1763461179307
+[25-11-18 13:19:39] [INFO] [DEBUG] DuelManager has been unloaded. (took 0ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of InventoryManager at 1763461179307
+[25-11-18 13:19:39] [INFO] [DEBUG] InventoryManager has been unloaded. (took 0ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of BettingManager at 1763461179307
+[25-11-18 13:19:39] [INFO] [DEBUG] BettingManager has been unloaded. (took 0ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of SpectateManagerImpl at 1763461179307
+[25-11-18 13:19:39] [INFO] [DEBUG] SpectateManagerImpl has been unloaded. (took 1ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of PlayerInfoManager at 1763461179308
+[25-11-18 13:19:39] [INFO] [DEBUG] PlayerInfoManager has been unloaded. (took 0ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of SettingsManager at 1763461179308
+[25-11-18 13:19:39] [INFO] [DEBUG] SettingsManager has been unloaded. (took 0ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of ArenaManagerImpl at 1763461179308
+[25-11-18 13:19:39] [INFO] [DEBUG] ArenaManagerImpl has been unloaded. (took 0ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of KitManagerImpl at 1763461179308
+[25-11-18 13:19:39] [INFO] [DEBUG] KitManagerImpl has been unloaded. (took 0ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of GuiListener at 1763461179308
+[25-11-18 13:19:39] [INFO] [DEBUG] GuiListener has been unloaded. (took 0ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of UserManagerImpl at 1763461179308
+[25-11-18 13:19:39] [INFO] [DEBUG] UserManagerImpl has been unloaded. (took 0ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of Lang at 1763461179308
+[25-11-18 13:19:39] [INFO] [DEBUG] Lang has been unloaded. (took 2ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Starting unload of Config at 1763461179310
+[25-11-18 13:19:39] [INFO] [DEBUG] Config has been unloaded. (took 0ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] unload done (took 8ms)
+[25-11-18 13:19:39] [INFO] [DEBUG] Log#clearSources done (took 0ms)

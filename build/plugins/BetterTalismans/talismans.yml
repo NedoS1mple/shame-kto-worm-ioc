@@ -1,0 +1,432 @@
+# 
+# READ ALL COMMENTS BEFORE USING THE PLUGIN OR ASKING FOR HELP.
+Talismans:
+  картателя:
+    Item:
+      Material: TOTEM_OF_UNDYING
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '&x&f&b&0&0&0&0&l&k1&x&e&9&0&1&0&b&l&k1&x&d&7&0&2&1&7&l&k1 &x&c&4&0&3&2&2&lТ&x&b&2&0&3&2&d&lа&x&a&0&0&4&3&9&lл&x&8&e&0&5&4&4&lи&x&7&c&0&6&4&f&lс&x&6&9&0&7&5&b&lм&x&5&7&0&8&6&6&lа&x&4&5&0&9&7&1&lн
+        &x&3&e&0&9&7&b&lК&x&4&2&0&a&8&2&lа&x&4&5&0&a&8&a&lр&x&4&9&0&b&9&1&lа&x&4&d&0&c&9&9&lт&x&5&0&0&c&a&0&lе&x&5&4&0&d&a&8&lл&x&5&8&0&d&a&f&lя
+        &x&5&c&0&e&b&7&l&k1&x&5&f&0&e&b&e&l&k1&x&6&3&0&f&c&6&l&k1'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&9+7 Урон'
+      - '&9+10% Скорость ходьбы'
+      - '&c-4 Максимальное Здоровье'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+    Modifiers:
+    - ATTACK_DAMAGE|7|OFF_HAND
+    - HEALTH_BOOST|-4|OFF_HAND
+    - MOVEMENT_SPEED|0.010|OFF_HAND
+    Recipe:
+      Enabled: false
+      Title: '&8God Talisman recipe'
+      Recipe-permission: bettertalismans.recipe.godtalisman
+      Shape:
+      - EMERALD_BLOCK,DIAMOND_BLOCK,EMERALD_BLOCK
+      - DIAMOND_BLOCK,NETHER_STAR,DIAMOND_BLOCK
+      - EMERALD_BLOCK,DIAMOND_BLOCK,EMERALD_BLOCK
+  крушителя:
+    Item:
+      Material: TOTEM_OF_UNDYING
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '&x&8&f&0&0&0&0&l&k111 &x&9&b&0&0&0&0&lТ&x&a&8&0&0&0&0&lа&x&b&4&0&0&0&0&lл&x&c&1&0&0&0&0&lи&x&c&d&0&0&0&0&lс&x&d&a&0&0&0&0&lм&x&e&6&0&0&0&0&lа&x&f&3&0&0&0&0&lн
+        &x&f&f&0&0&0&0&lК&x&f&3&0&0&0&0&lр&x&e&6&0&0&0&0&lу&x&d&a&0&0&0&0&lш&x&c&d&0&0&0&0&lи&x&c&1&0&0&0&0&lт&x&b&4&0&0&0&0&lе&x&a&8&0&0&0&0&lл&x&9&b&0&0&0&0&lя
+        &x&8&f&0&0&0&0&l&k111'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&9+3 Урон'
+      - '&9+4 Максимальное здоровье'
+      - '&9+2 Броня'
+      - '&9+2 Твёрдость брони'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+    Modifiers:
+    - ATTACK_DAMAGE|3|OFF_HAND
+    - HEALTH_BOOST|4|OFF_HAND
+    - ARMOR|2|OFF_HAND
+    - ARMOR_TOUGHNESS|2|OFF_HAND
+    Recipe:
+      Enabled: false
+      Title: '&8Netherite Armored Elytra recipe'
+      Recipe-permission: bettertalismans.recipe.netheritearmoredelytra
+      Shape:
+      - EMERALD,NETHERITE_CHESTPLATE,EMERALD
+      - DIAMOND,DIAMOND_BLOCK,DIAMOND
+      - EMERALD,ELYTRA,EMERALD
+  gran:
+    Item:
+      Material: TOTEM
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '#FB0808[★] #e65300Талисман Грани'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&9+15 Скоромть хотьбы'
+      - '&9+3 Урон'
+      - '&c-4 Максимальное здоровье'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+    Modifiers:
+    - HEALTH_BOOST|-4|OFF_HAND
+    - ATTACK_DAMAGE|3|OFF_HAND
+    - MOVEMENT_SPEED|0.015|OFF_HAND
+  dedala:
+    Item:
+      Material: TOTEM
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '#FB0808[★] #e65300Талисман Дедала'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&9+5 Урон'
+      - '&c-4 Максимальное здоровье'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+    Modifiers:
+    - HEALTH_BOOST|-4|OFF_HAND
+    - ATTACK_DAMAGE|5|OFF_HAND
+  тритон:
+    Item:
+      Material: TOTEM
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '#FB0808[★] #e65300Талисман Тритона'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&9+3 Защиты'
+      - '&9+2 Максимальное здоровье'
+      - '&c-3 Твердость брони'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+    Modifiers:
+    - ARMOR|3|OFF_HAND
+    - HEALTH_BOOST|2|OFF_HAND
+    - ARMOR_TOUGHNESS|-3|OFF_HAND
+  гармонии:
+    Item:
+      Material: TOTEM
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '#FB0808[★] #e65300Талисман Гармонии'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&9+2 Урон'
+      - '&9+2 Максимальное здоровье'
+      - '&9+2 Защиты'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+    Modifiers:
+    - ATTACK_DAMAGE|2|OFF_HAND
+    - HEALTH_BOOST|2|OFF_HAND
+    - ARMOR|2|OFF_HAND
+  феникса:
+    Item:
+      Material: TOTEM
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '#FB0808[★] #e65300Талисман Феникса'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&9+6 Максимальное здоровье'
+      - '&9+10% Скорость атаки'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+    Modifiers:
+    - HEALTH_BOOST|6|OFF_HAND
+    - ATTACK_SPEED|0.010|OFF_HAND
+    Recipe:
+      Enabled: false
+      Title: '&8Netherite Armored Elytra recipe'
+      Recipe-permission: bettertalismans.recipe.netheritearmoredelytra
+      Shape:
+      - EMERALD,NETHERITE_CHESTPLATE,EMERALD
+      - DIAMOND,DIAMOND_BLOCK,DIAMOND
+      - EMERALD,ELYTRA,EMERALD
+  ехидныв:
+    Item:
+      Material: TOTEM
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '#FB0808[★] #e65300Талисман Ехидны'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&9+6 Урон'
+      - '&c-2 Защиты'
+      - '&c-2 Твёрдости брони'
+      - '&c-4 Максимальное здоровье'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+    Modifiers:
+    - ATTACK_DAMAGE|6|OFF_HAND
+    - ARMOR|-2|OFF_HAND
+    - ARMOR_TOUGHNESS|-2|OFF_HAND
+    - HEALTH_BOOST|-4|OFF_HAND
+  Андромеды:
+    Item:
+      Material: CUSTOM_HEAD
+      Texture: e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDRmZmUzZjM1OGYyMDliYWQ4ZmZmNGRjNDgyNDVkOWJhZjBhMDMxYjNjMWVlNmI3NTg0NjBhMzM5YjE1MTllMiJ9fX0
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '&x&F&F&0&0&0&0[&x&F&F&0&0&0&0★&x&F&F&0&0&0&0] &x&F&F&7&C&0&0С&x&F&F&7&D&0&0ф&x&F&F&7&D&0&0е&x&F&F&7&E&0&0р&x&F&F&7&F&0&0а
+        Андромеды'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&9+2 Броня'
+      - '&c-4 Максимальное здоровье'
+      - '&9+15% Скорость'
+      - '&9+3 Урона'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+      Head-uuid: 5a781501-1173-4aa4-b027-8a36d6d45cab
+    Modifiers:
+    - ARMOR|2|OFF_HAND
+    - HEALTH_BOOST|-4|OFF_HAND
+    - MOVEMENT_SPEED|0.015|OFF_HAND
+    - ATTACK_DAMAGE|3|OFF_HAND
+    Recipe:
+      Enabled: false
+      Title: '&8Netherite Armored Elytra recipe'
+      Recipe-permission: bettertalismans.recipe.netheritearmoredelytra
+      Shape:
+      - EMERALD,NETHERITE_CHESTPLATE,EMERALD
+      - DIAMOND,DIAMOND_BLOCK,DIAMOND
+      - EMERALD,ELYTRA,EMERALD
+  Пандоры:
+    Item:
+      Material: CUSTOM_HEAD
+      Texture: e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU1MWU2NWViNDA1Mjc3MjM4MmM5ZTUwN2E1NGJkZWQ0M2UzOWY3NTViNWRkZjU1YjNmMzk0NDNjZWQ0NjdmNCJ9fX0
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '&x&F&B&0&8&0&8[★] &x&F&B&7&E&0&8Сфера Пандоры'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&c-10% Броня'
+      - '&9+10% Скорость'
+      - '&9+25% Урон'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+      Head-uuid: b1719a40-3d99-45bc-83e7-a54bdf3cc2d7
+    Modifiers:
+    - ARMOR|-0.010|OFF_HAND
+    - MOVEMENT_SPEED|0.010|OFF_HAND
+    - ATTACK_DAMAGE|0.025|OFF_HAND
+    Recipe:
+      Enabled: false
+      Title: '&8Netherite Armored Elytra recipe'
+      Recipe-permission: bettertalismans.recipe.netheritearmoredelytra
+      Shape:
+      - EMERALD,NETHERITE_CHESTPLATE,EMERALD
+      - DIAMOND,DIAMOND_BLOCK,DIAMOND
+      - EMERALD,ELYTRA,EMERALD
+  Титана:
+    Item:
+      Material: CUSTOM_HEAD
+      Texture: e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTAzN2JiYmViNjJlMTAyMGRmOWEwNmM0ZWRkNjAzMzBlNzA2MzBkMDkwZjA5NGQ4Nzc2YzJiZDEzNWRlYzIyIn19fQ
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '&x&F&B&0&8&0&8[★] &x&F&B&7&E&0&8Сфера Титана'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&9+3 Броня'
+      - '&9+3 Твёрдость брони'
+      - '&c-15% Скорость ходьбы'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+      Head-uuid: aa04e6ee-9a82-495e-8320-c8b1a151c37e
+    Modifiers:
+    - ARMOR|3|OFF_HAND
+    - ARMOR_TOUGHNESS|3|OFF_HAND
+    - MOVEMENT_SPEED|-0.015|OFF_HAND
+    Recipe:
+      Enabled: false
+      Title: '&8Netherite Armored Elytra recipe'
+      Recipe-permission: bettertalismans.recipe.netheritearmoredelytra
+      Shape:
+      - EMERALD,NETHERITE_CHESTPLATE,EMERALD
+      - DIAMOND,DIAMOND_BLOCK,DIAMOND
+      - EMERALD,ELYTRA,EMERALD
+  Аполлона:
+    Item:
+      Material: CUSTOM_HEAD
+      Texture: e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjQxMTdiNjAxOGZlZjBkNTE1NjcyMTczZTNiMjZlNjYwZDY1MWU1ODc2YmE2ZDAzZTUzNDIyNzBjNDliZWM4MCJ9fX0
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '&x&F&B&0&8&0&8[★] &x&F&B&7&E&0&8Сфера Аполлона'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&c-10% Скорость'
+      - '&9+4 Урон'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+      Head-uuid: d50c11b8-3897-47ff-bc49-34c6cb4491a0
+    Modifiers:
+    - MOVEMENT_SPEED|-0.010|OFF_HAND
+    - ATTACK_DAMAGE|4|OFF_HAND
+    Recipe:
+      Enabled: false
+      Title: '&8Netherite Armored Elytra recipe'
+      Recipe-permission: bettertalismans.recipe.netheritearmoredelytra
+      Shape:
+      - EMERALD,NETHERITE_CHESTPLATE,EMERALD
+      - DIAMOND,DIAMOND_BLOCK,DIAMOND
+      - EMERALD,ELYTRA,EMERALD
+  Астрея:
+    Item:
+      Material: CUSTOM_HEAD
+      Texture: e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE1YWFkZDUyYTVmYWI5NzA4ODE0NTFhZGY1NmZiYjQ5M2EzNTg1NmVhOTZmNTRlMzJlZWE2NjJkNzg3ZWQyMCJ9fX0
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '&x&F&B&0&8&0&8[★] &x&F&B&7&E&0&8Сфера Астрея'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&c-15% Скорость атаки'
+      - '&9+4 Максимальное здоровье'
+      - '&9+3 Урон'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+      Head-uuid: c24ae7de-d1f8-48a7-be38-461e8a7f170d
+    Modifiers:
+    - ATTACK_SPEED|-0.015|OFF_HAND
+    - HEALTH_BOOST|4|OFF_HAND
+    - ATTACK_DAMAGE|3|OFF_HAND
+    Recipe:
+      Enabled: false
+      Title: '&8Netherite Armored Elytra recipe'
+      Recipe-permission: bettertalismans.recipe.netheritearmoredelytra
+      Shape:
+      - EMERALD,NETHERITE_CHESTPLATE,EMERALD
+      - DIAMOND,DIAMOND_BLOCK,DIAMOND
+      - EMERALD,ELYTRA,EMERALD
+  Осириса:
+    Item:
+      Material: CUSTOM_HEAD
+      Texture: e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDgxMzYzNWJkODZiMTcxYmJlMTQzYWQ3MWUwOTAyMjkyNjQ5Y2IzYWI4NDQwZWQwMGY4NWNhNmNhMzgyOTkzNiJ9fX0
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '&x&F&B&0&8&0&8[★] &x&F&B&7&E&0&8Сфера Осириса'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&c-15% Сопротивление отбрасыванию'
+      - '&9+3 Броня'
+      - '&9+15% Отбрасывающая атака'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+      Head-uuid: b8b75b9c-737a-4eae-b062-87b8db8beec6
+    Modifiers:
+    - KNOCKBACK_RESISTANCE|-0.015|OFF_HAND
+    - ARMOR|3|OFF_HAND
+    - KNOCKBACK_RESISTANCE|0.015|OFF_HAND
+    Recipe:
+      Enabled: false
+      Title: '&8Netherite Armored Elytra recipe'
+      Recipe-permission: bettertalismans.recipe.netheritearmoredelytra
+      Shape:
+      - EMERALD,NETHERITE_CHESTPLATE,EMERALD
+      - DIAMOND,DIAMOND_BLOCK,DIAMOND
+      - EMERALD,ELYTRA,EMERALD
+  Химеры:
+    Item:
+      Material: CUSTOM_HEAD
+      Texture: e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWZhYmVlZDQyNGIyNTJhODk0NWE2NDQyYjQ2MmQ1ZjMxNDcwMWE4MTZkYTJkMGE2OWNjZGZjZmQ3NDZlNTg4ZSJ9fX0
+      Glow: true
+      Hide-attributes: true
+      CustomModelData: 0
+      Displayname: '&x&F&B&0&8&0&8[★] &x&F&B&7&E&0&8Сфера Химеры'
+      Lore:
+      - ''
+      - '&7Когда во второстпеной руке:'
+      - '&9+15% Скорость Атаки'
+      - '&c-2 Максимальное здоровье'
+      - '&9+3 Урон'
+      Item-flags:
+      - ALL
+      Enchantments:
+      - ADD_ENCHANTMENTS_HERE,LEVEL
+      - ANOTHER_ENCHANTMENT_HERE,LEVEL
+      Head-uuid: 116dd21e-31d0-467e-996a-7618af6bb95d
+    Modifiers:
+    - ATTACK_SPEED|0.015|OFF_HAND
+    - HEALTH_BOOST|-2|OFF_HAND
+    - ATTACK_DAMAGE|3|OFF_HAND
+    Recipe:
+      Enabled: false
+      Title: '&8Netherite Armored Elytra recipe'
+      Recipe-permission: bettertalismans.recipe.netheritearmoredelytra
+      Shape:
+      - EMERALD,NETHERITE_CHESTPLATE,EMERALD
+      - DIAMOND,DIAMOND_BLOCK,DIAMOND
+      - EMERALD,ELYTRA,EMERALD

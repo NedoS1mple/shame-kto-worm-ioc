@@ -1,0 +1,275 @@
+open_menu_command_list:
+  - "menu_dragon"
+
+access_to_open_checker:
+  enable: false
+  permission: menu.open.shop_weapon
+  message:
+    permission_denied: "&cОтказано в доступе на открытие меню 1."
+
+# Заголовок меню.
+title: "&0&l☫ Палач: &7Выберите валюту"
+
+# (Тиков 20 тиков = 1 сек.) Интервал перерисовки меню.
+# Значения 0 и ниже включая -1 и тд. отключают отрисовку за исключением случаев когда игрок кликает (оптимизация).
+update_interval_ticks: 0
+
+# Макет меню.
+layout:
+
+  # Сетка макета.
+  grid:
+    - "| | - - A - - | |"
+    - "| - - - - - - - |"
+    - "| - - B C D - - |"
+    - "| - - - - - - - |"
+    - "| | - - F - - | |"
+
+  layout_item_list:
+    layout_item_1:
+      placeholder: "A"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: TIPPED_ARROW
+            display_name: "§c[↺] §6Вернуться... "
+            description:
+              - "&7[Вернуться к разделам]"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - palach
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: minecraft:block.note_block.bit
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_2:
+      placeholder: "B"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: GOLD_NUGGET
+            display_name: "&e[$] &fМонеты: &6$250000"
+            description:
+              - "&6➥ Нажми&f, чтобы продать"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        click_pipeline_component_1:
+          type: HAS_HUMAN_READABLE_ITEM
+          item:
+            material: DRAGON_HEAD
+            # Атрибуты ванильных предметов не скрыты, как это часто делается в GUI за ненадобностью (например урон у мечей).
+            hide_attributes: false
+            # Ванильные предметы разрушимы, в отличии от GUI предметов где это скрывают за ненадобностью (например прочность у кирок).
+            unbreakable: false
+            amount: 1
+          item_not_found_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message: "&c[X] Ошибка! &6У вас нету &6необходимой&f головы!"
+
+        click_pipeline_component:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - money give %player_name% 250000
+            - tellraw %player_name% &a[$] &fУспешная продажа &6Череп дракона &c1 шт. &fза &6$250000.00
+            - clear %player_name% DRAGON_HEAD 1 -s
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_3:
+      placeholder: "C"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: DIAMOND
+            display_name: "&e[$] &fАлмазы: &64 шт."
+            description:
+              - "&6➥ Нажми&f, чтобы продать"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        click_pipeline_component_1:
+          type: HAS_HUMAN_READABLE_ITEM
+          item:
+            material: DRAGON_HEAD
+            # Атрибуты ванильных предметов не скрыты, как это часто делается в GUI за ненадобностью (например урон у мечей).
+            hide_attributes: false
+            # Ванильные предметы разрушимы, в отличии от GUI предметов где это скрывают за ненадобностью (например прочность у кирок).
+            unbreakable: false
+            amount: 1
+          item_not_found_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message: "&c[X] Ошибка! &6У вас нету &6необходимой&f головы!"
+
+        click_pipeline_component:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - give %player_name% diamond 4
+            - tellraw %player_name% &a[$] &fУспешный обмен &6Череп дракона &c1 шт. &fна &64 алмаза
+            - clear %player_name% DRAGON_HEAD 1 -s
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_4:
+      placeholder: "D"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: IRON_NUGGET
+            display_name: "&e[$] &fСеребро: &350 шт."
+            description:
+              - "&6➥ Нажми&f, чтобы продать"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        click_pipeline_component_1:
+          type: HAS_HUMAN_READABLE_ITEM
+          item:
+            material: DRAGON_HEAD
+            # Атрибуты ванильных предметов не скрыты, как это часто делается в GUI за ненадобностью (например урон у мечей).
+            hide_attributes: false
+            # Ванильные предметы разрушимы, в отличии от GUI предметов где это скрывают за ненадобностью (например прочность у кирок).
+            unbreakable: false
+            amount: 1
+          item_not_found_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message: "&c[X] Ошибка! &6У вас нету &6необходимой&f головы!"
+
+        click_pipeline_component:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - spookystash:stash givesilver %player_name% 50
+            - tellraw %player_name% &a[$] &fУспешный обмен &6Череп дракона &c1 шт. &fна &350 серебра!
+            - clear %player_name% DRAGON_HEAD 1 -s
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_5:
+      placeholder: "F"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: DRAGON_HEAD
+            display_name: "&e[$] &fЧереп дракона"
+            description:
+              - "&6➥ Выберите&f, валюту выше,"
+              - "&fчтобы продать череп"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: minecraft:block.note_block.bit
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+
+    layout_item_22:
+      placeholder: "|"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: RED_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_23:
+      placeholder: "-"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ORANGE_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_25:
+      placeholder: "."
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: LIGHT_GRAY_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []

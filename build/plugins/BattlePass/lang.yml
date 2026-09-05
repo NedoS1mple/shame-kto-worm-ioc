@@ -1,0 +1,60 @@
+could-not-find-user: "&7Не получилось найти игрока &e%player%"
+no-permission: "&7Недостаточно прав!"
+inventory-full: "&cТвой инвентарь заполнен."
+disallowed-permission: "&7У тебя недостаточно прав для использования BattlePass"
+collectable-rewards-notification: ""
+
+daily-quest-reset: '&eДневные квесты сброшены.'
+
+week-status-locked: '&cЗаблокировано'
+week-status-unlocked: '&aРазблокировано'
+
+season-finished-message: '&aЗакончено'
+
+progress-bar:
+  complete-color: '&a'
+  incomplete-color: '&c'
+  symbol: '|'
+
+help-command: # /bp help
+  - ''
+  - '&eBattlePass &7by AdvancedPlugins'
+  - '&e/battlepass - Открыть меню'
+  - '&e/battlepass stats - Посмотреть твою статистику BattlePass.'
+  - '&e/battlepass open <portal/daily/quests/rewards> - Открыть определенное меню'
+  - ''
+
+stats-command:
+  - '&eТвоя BattlePass статистика:'
+  - '  &8- &eТип: &f%pass_type%'
+  - '  &8- &eУровень: &f%tier%'
+  - '  &8- &eВсего баллов: &f%total_points%'
+
+daily-quest-time-format:
+  with-months-weeks: "%dmo %dw %dd %dh %dm %ds"
+  with-weeks-days: "%dw %dd %dh %dm %ds"
+  with-days-hours: "%dd %dh %dm %ds"
+  with-hours-minutes: "%dh %dm %ds"
+  with-minutes-seconds: "%dm %ds"
+  with-seconds: "%ds"
+
+
+quests:
+  base-message-progressed: "&8[&eКвесты&8] &7Прогресс квеста &e%quest_name% &8(&e%progress%&7/&8&e%required_progress%&8)"
+  base-message-completed: "&8[&eКвесты&8] &7Выполнен квест &e%quest_name%"
+
+  boss-bar-message-progressed: "&7&e%quest_name% &8(&e%progress%&7/&8&e%required_progress%&8)"
+  boss-bar-message-completed: "&7&eКвест %quest_name% выполнен"
+
+  askyblock_createisland-progressed: "&eКвесты >> &7Кастомное ASkyblock сообщение прогресса :D. &8(&e%progress%&7/&8%required_progress%&8)"
+  askyblock_createisland-completed: "&eКвесты >> &7Выполнен квест острова ASkyblock!"
+
+daily-quests:
+  base-message-progressed: "&8[&eКвесты&8] &7Прогресс дневного квеста &e%quest_name% &8(&e%progress%&7/&8&e%required_progress%&8)"
+  base-message-completed: "&8[&eКвесты&8] &7Выполнен дневной квест &e%quest_name%"
+
+  boss-bar-message-progressed: "&7&e%quest_name% &8(&e%progress%&7/&8&e%required_progress%&8)"
+  boss-bar-message-completed: "&7&e%quest_name% выполнен"
+
+  askyblock_createisland-progressed: "&8[&eКвесты&8] &7ASkyblock прогресс &8(&e%progress%&7/&8%required_progress%&8)"
+  askyblock_createisland-completed: "&8[&eКвесты&8] &7Выполнен дневной квест острова ASkyblock!"

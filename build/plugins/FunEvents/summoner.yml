@@ -1,0 +1,11 @@
+cooldown: 3600
+zoneid: Europe/Moscow
+dates:
+  '2026-09-05T16:05:30':
+  - deathchest
+  - altar
+  - mystic
+  - beacon
+  - volcano
+  - meteorite
+  - adrez

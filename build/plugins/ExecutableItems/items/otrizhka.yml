@@ -1,0 +1,92 @@
+name: '#fc0000[★] #fc6500Зелье Отрыжки'
+lore:
+- §cСвечение (3:00)
+- §cГолод X (1:30)
+- §cЗамедление III (3:00)
+- §cСлепота (0:10)
+- §cИссушение V (0:30)
+material: SPLASH_POTION
+glow: false
+disableStack: false
+keepItemOnDeath: false
+canBeUsedOnlyByTheOwner: false
+cancelEventIfNotOwner: false
+onlyOwnerBlackListedActivators: []
+storeItemInfo: false
+unbreakable: false
+usage: 1
+usageLimit: -1
+cancelEventIfNoPerm: false
+disabledWorlds: []
+recognitions: []
+config_5: true
+config_update: true
+config_5_98: true
+dropOptions:
+  glowDrop: false
+  glowDropColor: WHITE
+  displayNameDrop: false
+hiders:
+  hideEnchantments: false
+  hideUnbreakable: false
+  hideAttributes: true
+  hidePotionEffects: true
+  hideUsage: true
+  hideDestroys: false
+  hidePlacedOn: false
+enchantments: {}
+giveFirstJoin:
+  giveFirstJoin: false
+  giveFirstJoinAmount: 1
+  giveFirstJoinSlot: 0
+restrictions: {}
+variables: {}
+activators: {}
+displayConditions:
+  playerConditions: {}
+  worldConditions: {}
+  itemConditions: {}
+  placeholdersConditions: {}
+  enableFeature: false
+attributes: {}
+potionSettings:
+  potionColor: 16738560
+  potionType: WATER
+  potionExtended: false
+  potionUpgraded: false
+  potionEffects:
+    pEffect0:
+      isAmbient: false
+      duration: 600
+      potionEffectType: WITHER
+      amplifier: 4
+      hasParticles: false
+      hasIcon: false
+    pEffect1:
+      isAmbient: false
+      duration: 3600
+      potionEffectType: SLOW
+      amplifier: 2
+      hasParticles: false
+      hasIcon: false
+    pEffect3:
+      isAmbient: false
+      duration: 200
+      potionEffectType: BLINDNESS
+      amplifier: 0
+      hasParticles: false
+      hasIcon: false
+    pEffect4:
+      isAmbient: false
+      duration: 3600
+      potionEffectType: GLOWING
+      amplifier: 0
+      hasParticles: false
+      hasIcon: false
+    pEffect2:
+      isAmbient: false
+      duration: 1800
+      potionEffectType: HUNGER
+      amplifier: 9
+      hasParticles: false
+      hasIcon: false

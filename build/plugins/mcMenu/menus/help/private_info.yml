@@ -1,0 +1,270 @@
+open_menu_command_list:
+  - "private_info"
+
+access_to_open_checker:
+  enable: false
+  permission: menu.open.shop_weapon
+  message:
+    permission_denied: "&cОтказано в доступе на открытие меню 1."
+
+# Заголовок меню.
+title: "&4● &x&e&f&8&1&0&0Как приватить?"
+
+# (Тиков 20 тиков = 1 сек.) Интервал перерисовки меню.
+# Значения 0 и ниже включая -1 и тд. отключают отрисовку за исключением случаев когда игрок кликает (оптимизация).
+update_interval_ticks: 0
+
+# Макет меню.
+layout:
+
+  # Сетка макета.
+  grid:
+    - "| | - - - - - | |"
+    - "| - - A - B - - |"
+    - "| - C - D - E - |"
+    - "| - - F - G - - |"
+    - "| | - - - - - | |"
+
+  layout_item_list:
+    layout_item_1:
+      placeholder: "A"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: iron_block
+            display_name: "&9● &bЖелезный блок"
+            description:
+              - "&4❋ &fРадиус: &x&e&f&8&1&0&02х2"
+              - ""
+              - "&fПри установке создает приват"
+              - "&fразмеров &x&e&f&8&1&0&02х2 блока &fвокруг себя"              
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: minecraft:block.note_block.bit
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_2:
+      placeholder: "B"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: emerald_block
+            display_name: "§2● §aИзумрудный блок"
+            description:
+              - "&4❋ &fРадиус: &x&e&f&8&1&0&07х7"
+              - ""
+              - "&fПри установке создает приват"
+              - "&fразмеров &x&e&f&8&1&0&07х7 блока &fвокруг себя"
+              - ""
+              - "&fИзумруды можно приобрести в"
+              - "&eМагазине сервера"
+              - " &x&e&f&8&1&0&0➥ Нажмите&f, чтобы перейти"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "donshop"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_4:
+      placeholder: "C"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: gold_block
+            display_name: "&x&e&f&8&1&0&0● &eЗолотой блок"
+            description:
+              - "&4❋ &fРадиус: &x&e&f&8&1&0&03х3"
+              - ""
+              - "&fПри установке создает приват"
+              - "&fразмеров &x&e&f&8&1&0&03х3 блока &fвокруг себя"          
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_5:
+      placeholder: "D"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: crimson_sign
+            display_name: "&4● &x&e&f&8&1&0&0Как приватить?"
+            description:
+              - "&x&e&f&8&1&0&0- Создание привата"
+              - " &fНеобходимо установить один из"
+              - " &fописанных здесь драгоценных блоков"
+              - " &fи он заприватит регион вокруг себя"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_6:
+      placeholder: "E"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: diamond_ore
+            display_name: "§1● §bАлмазная руда"
+            description:
+              - "&4❋ &fРадиус: &x&e&f&8&1&0&010х10"
+              - ""
+              - "&fПри установке создает приват"
+              - "&fразмеров &x&e&f&8&1&0&010х10 блока &fвокруг себя"              
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_7:
+      placeholder: "F"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: diamond_block
+            display_name: "§1● §bАлмазный блок"
+            description:
+              - "&4❋ &fРадиус: &x&e&f&8&1&0&05х"
+              - ""
+              - "&fПри установке создает приват"
+              - "&fразмеров &x&e&f&8&1&0&05х5 блока &fвокруг себя"              
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0  
+
+    layout_item_8:
+      placeholder: "G"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: emerald_ore
+            display_name: "§2● §aИзумрудная руда"
+            description:
+              - "&4❋ &fРадиус: &x&e&f&8&1&0&015х15"
+              - ""
+              - "&fПри установке создает приват"
+              - "&fразмеров &x&e&f&8&1&0&015х15 блока &fвокруг себя"      
+              - ""
+              - "&fИзумруды можно приобрести в"
+              - "&2Магазине сервера"
+              - " &x&e&f&8&1&0&0➥ Нажмите&f, чтобы перейти"        
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "donshop"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0            
+
+
+    layout_item_25:
+      placeholder: "|"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: RED_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_22:
+      placeholder: "-"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ORANGE_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []

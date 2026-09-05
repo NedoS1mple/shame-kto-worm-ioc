@@ -1,0 +1,5 @@
+material: SOUL_LANTERN
+name: "&1[★] &9Проклятая душа"
+lore:
+  - "&#0890FB&oОригинальный предмет"
+glow: true

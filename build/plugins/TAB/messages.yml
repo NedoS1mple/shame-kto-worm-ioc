@@ -1,0 +1,108 @@
+announce-command-usage: |-
+  Используйте: /tab announce <type> <name> <length>
+  Поддерживаемые типы: &lbar, scoreboard
+bossbar-feature-not-enabled: '&cЭта команда требует, чтобы функция боссбара была включена..'
+bossbar-announce-command-usage: 'Используйте: /tab announce bar <bar name> <length>'
+bossbar-not-found: '&cБоссбар с таким названием не найден "%name%"'
+bossbar-already-announced: '&cЭтот боссбар уже анонсирован'
+group-data-removed: '&3[TAB] Все данные успешно удалены из группы &e%group%'
+group-value-assigned: '&3[TAB] %property% ''&r%value%&r&3'' был успешно добавлен в
+  группу &e%group%'
+group-value-removed: '&3[TAB] %property% был успешно удален из группы &e%group%'
+user-data-removed: '&3[TAB] Все данные успешно удалены из плеера &e%player%'
+user-value-assigned: '&3[TAB] %property% ''&r%value%&r&3'' был успешно назначен игроку
+  &e%player%'
+user-value-removed: '&3[TAB] %property% был успешно удален из игроков &e%player%'
+parse-command-usage: 'Используйте: /tab parse <player> <placeholder>'
+send-command-usage: |-
+  Используйте: /tab send <type> <player> <bar name> <length>
+  Поддерживаемые типы: &lbar
+send-bar-command-usage: 'Используйте: /tab send bar <player> <bar name> <length>'
+team-feature-required: Эта команда требует, чтобы функция групп scoreboard была включена.
+collision-command-ussage: 'Используйте: /tab setcollision <player> <true/false>'
+no-permission: '&cУ вас недостаточно прав.'
+command-only-from-game: '&cЭту команду нужно запускать из игры'
+player-not-online: '&cОнлайн игрков с таким именем не найден "%player%"'
+unlimited-nametag-mode-not-enabled: '&c[TAB] Предупреждение! Чтобы эта функция работала,
+  вам нужно включить unlimited-nametag-mode в конфигурации!'
+invalid-number: '"%input%" это не число!'
+scoreboard-feature-not-enabled: '&4Эта команда требует, чтобы функция scoreboard была
+  включена..'
+scoreboard-announce-command-usage: 'Используйте: /tab announce scoreboard <scoreboard
+  name> <length>'
+scoreboard-not-found: '&cДанного scoreboard нету "%name%"'
+nametag-preview-on: '&7Режим предварительного просмотра &aактивный&7.'
+nametag-preview-of: '&7Режим предварительного просмотра &3не активный&7.'
+reload-success: '&3[TAB] Успешный перезапуск плагина.'
+reload-fail-file: '&3[TAB] &4Не удалось перезагрузить, файл %file% имеет неверный
+  синтаксис. Проверьте консоль для получения дополнительной информации.'
+scoreboard-toggle-on: '&x&f&a&7&f&0&0[⚝] &cИнфо-панель &fвключена.'
+scoreboard-toggle-off: '&x&f&a&7&f&0&0[⚝] &cИнфо-панель &fвыключена.'
+bossbar-toggle-on: '&2Bossbar теперь виден.'
+bossbar-toggle-off: '&7Боссбар больше не виден.'
+scoreboard-show-usage: 'Используйте: /tab scoreboard show <scoreboard> [player]'
+bossbar-not-marked-as-announcement: '&cЭтот боссбар не помечен как анонс и поэтому
+  уже отображается постоянно (если выполнено условие отображения)'
+bossbar-announcement-success: '&aОбъявление боссбара &6%bossbar% &aчерез %length%
+  секунд.'
+bossbar-send-success: '&aОтправка боссбара &6%bossbar% &на игрока &6%player% &aчерез
+  %length% секунд'
+armorstands-disabled-cannot-use-preview: '&cВаши стойки брони отключены, поэтому вы
+  не можете использовать функцию предварительного просмотра'
+help-menu:
+- '&m                                                                                '
+- ' &8>> &3&l/tab reload'
+- '      - &7Перезапуск плагина'
+- ' &8>> &3&l/tab &9group&3/&9player &3<name> &9<property> &3<value...>'
+- '      - &8/tab group/player &7чтобы показать свойства'
+- ' &8>> &3&l/tab nametag preview'
+- ' - &7Показывает ваш бейджик для себя, в целях тестирования'
+- ' &8>> &3&l/tab announce bar &3<name> &9<seconds>'
+- ' - &7Временно показывает боссбар всем игрокам'
+- ' &8>> &3&l/tab parse <player> <placeholder> '
+- ' - &7Проверить, работает ли плейсхолдер'
+- ' &8>> &3&l/tab debug [player]'
+- ' - &7отображает отладочную информацию об игроке'
+- ' &8>> &3&l/tab cpu'
+- ' - &7показывает использование процессора плагином'
+- ' &8>> &3&l/tab group/player <name> remove'
+- ' - &7Очищает все данные об игроке/группе'
+- '&m                                                                                '
+mysql-help-menu:
+- '&6/tab mysql upload - загружает данные из файлов в mysql'
+- '&6/tab mysql download - загружает данные из mysql в файлы'
+mysql-fail-not-enabled: '&cНевозможно загрузить/выгрузить данные из/в MySQL, потому
+  что он отключен.'
+mysql-fail-error: Загрузка MySQL не удалась из-за ошибки. Проверьте консоль для получения
+  дополнительной информации.
+mysql-download-success: Данные &aMySQL загружены успешно
+mysql-upload-success: '&aMySQL данные загружены успешно.'
+nametag-help-menu:
+- /tab nametag preview [player] - переключает режим предварительного просмотра подставки
+  для доспехов
+- /tab nametag toggle [player] - переключить nametag на всех игроков для отправителя
+  команды
+nametag-feature-not-enabled: '&cЭта команда требует, чтобы функция nametag была включена.'
+nametags-hidden: '&aNametags всех игроков были скрыты для вас'
+nametags-shown: '&aNametags всех игроков были показаны вам'
+collision-command-usage: 'Usage: /tab setcollision <player> <true/false>'
+scoreboard-help-menu:
+- /tab scoreboard [on/off/toggle] [player] [options]
+- /tab scoreboard show <name> [player]
+- /tab scoreboard announce <name> <length>
+bossbar-help-menu:
+- /tab bossbar [on/off/toggle] [player] [options]
+- /tab bossbar send <name> [player]
+- /tab bossbar announce <name> <length>
+nametag:
+  help-menu:
+  - /tab nametag <show/hide/toggle> [player] [-s] - Toggles nametag of specified player
+  - /tab nametag <showview/hideview/toggleview> [player] [viewer] [-s] - Toggles nametag
+    VIEW of specified player on other player(s)
+  feature-not-enabled: '&cThis command requires nametag feature to be enabled.'
+  view-hidden: '&aNametags of all players were hidden to you'
+  view-shown: '&aNametags of all players were shown to you'
+  player-hidden: '&aYour nametag was hidden'
+  player-shown: '&aYour nametag was shown'
+  no-arg-from-console: '&cYou need to specify player if running this command from
+    the console'

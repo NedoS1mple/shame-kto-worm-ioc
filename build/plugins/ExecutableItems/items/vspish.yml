@@ -1,0 +1,72 @@
+name: '#fc6500[★] #fcfc00Вспышка'
+lore:
+- §cСлепота (0:20)
+- §9Свечение (4:00)
+material: SPLASH_POTION
+glow: false
+disableStack: false
+keepItemOnDeath: false
+canBeUsedOnlyByTheOwner: false
+cancelEventIfNotOwner: false
+onlyOwnerBlackListedActivators: []
+storeItemInfo: false
+unbreakable: false
+usage: 1
+usageLimit: -1
+cancelEventIfNoPerm: false
+disabledWorlds: []
+recognitions: []
+config_5: true
+config_update: true
+config_5_98: true
+dropOptions:
+  glowDrop: false
+  glowDropColor: WHITE
+  displayNameDrop: false
+hiders:
+  hideEnchantments: false
+  hideUnbreakable: false
+  hideAttributes: true
+  hideUsage: true
+  hideDestroys: false
+  hidePlacedOn: false
+  hidePotionEffects: true
+enchantments: {}
+giveFirstJoin:
+  giveFirstJoin: false
+  giveFirstJoinAmount: 1
+  giveFirstJoinSlot: 0
+restrictions: {}
+cancelEventIfNoPermission: false
+whitelistedWorlds: []
+variables: {}
+activators: {}
+displayConditions:
+  playerConditions: {}
+  worldConditions: {}
+  itemConditions: {}
+  placeholdersConditions: {}
+  enableFeature: false
+potionSettings:
+  potionColor: 16777215
+  potionType: WATER
+  potionExtended: false
+  potionUpgraded: false
+  potionEffects:
+    pEffect0:
+      isAmbient: false
+      duration: 400
+      potionEffectType: BLINDNESS
+      amplifier: 0
+      hasParticles: false
+      hasIcon: false
+    pEffect1:
+      isAmbient: false
+      duration: 4800
+      potionEffectType: GLOWING
+      amplifier: 0
+      hasParticles: false
+      hasIcon: false
+attributes: {}
+keepDefaultAttributes: false
+ignoreKeepDefaultAttributesFeature: true

@@ -1,0 +1,92 @@
+data-format: ' §8⤹ §f{reason} §7( {sender} | {date} ) '
+date-format: 'dd/MM HH:mm' # формат из EasyDateFormat
+
+messages:
+  reports-clear: "§6[⚠] §x§f§f§f§f§e§6Все жалобы успешно очищены"
+  usage-command: "§6[⚠] §x§f§f§f§f§e§6Используйте §6/report [Ник] [Причина]"
+  config-error: "Ошибка. Обратитесь к администрации!\n Пост-код: {e}"
+  report-has-already-been-sent: "§6[⚠] §x§f§f§f§f§e§6Вы уже отправили жалобу на игрока §6{suspect}"
+  player-not-found: "§6[⚠] §x§f§f§f§f§e§6Игрок §6{suspect} §x§f§f§f§f§e§6не в сети!"
+  cannot-report-self: "§6[⚠] §x§f§f§f§f§e§6Вы не можете кинуть жалобу самому себе!"
+#
+# {suspect} | никнейм подозреваемого
+# {count} | кол-во жалоб на игрока
+# {remained} | кол-во оставшихся жалоб РАБОТАЕТ ТОЛЬКО В LORE
+# {status} | онлайн или оффлайн ли игрок
+#
+# header-lore | выше жалоб
+# footer-lore | ниже жалоб
+#
+# чтобы убрать header/footer lore, надо просто убрать строки
+# и вместо них '...: []'
+#
+settings:
+  #
+  # если true, оффлайн подозреваемые получат материал GRAY_DYE и располагаются ниже онлайн подозреваемых
+  # если false, применяется дефолтная сортировка без учёта онлайн статуса, приоритет по количеству жалоб
+  #
+  alternative-sorting: true
+  inventory-title: "§8Жалобы"
+
+  #
+  # проверки для actions, если true, будет проверять, в сети ли подозреваемый
+  #
+  left-suspect-online-check: true
+  right-suspect-online-check: false
+  shift-left-suspect-online-check: true
+  shift-right-suspect-online-check: true
+  middle-suspect-online-check: true
+
+  #
+  # [sound] | разделение по пробелу
+  # [title] | разделение по пробелу
+  # [message] | не имеет значения
+  # [chat] | не имеет значения
+  # [close] | закрыть меню
+  #
+  # чтобы поставить пробел для [title], нужен символ '-'
+  #
+  actions:
+    send-to-player:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP 1.0 1.0'
+      - '[message] §6[⚠] §x§f§f§f§f§e§6Жалоба на игрока §6{suspect} §x§f§f§f§f§e§6была отправлена!'
+    send-to-helper:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP 1.0 1.0'
+      - '[message] §a╔'
+      - '[message] §a╠ §x§f§f§f§f§e§6Новая жалоба!'
+      - '[message] §a╠ §x§f§f§f§f§e§6Отправитель: §a{sender}'
+      - '[message] §a╠ §x§f§f§f§f§e§6Подозреваемый: §c{suspect}'
+      - '[message] §a╠ §x§f§f§f§f§e§6Причина: §e{reason}'
+      - '[message] §a╚'
+    left-click:
+      - '[chat] /spec {suspect} EasyReport'
+      - '[close]'
+    right-click:
+      - '[message] §6[⚠] §x§f§f§f§f§e§6Жалоба на {suspect} успешно удалена!'
+    shift-left-click: []
+    shift-right-click: []
+    middle-click: []
+
+placeholders:
+  online: '§aОнлайн'
+  offline: '§cОффлайн'
+
+items:
+  back-switch:
+    name: '§6Предыдущая страница'
+    lore: []
+  next-switch:
+    name: '§6Следующая страница'
+    lore: []
+
+name: '§cПодозреваемый {suspect} §7- §r{status}'
+header-lore:
+  - ''
+  - '§6Кол-во: §e{count} '
+  - '§6Жалобы: '
+  - ''
+footer-lore: # все строчки с {more} появятся только тогда, когда жалоб на игрока больше 5
+  - ''
+  - ' §7( Ещё {remained} жалоб... ) '
+  - ' §6› §fНажмите ЛКМ, чтобы §aследить§f. '
+  - ' §6› §fНажмите ПКМ, чтобы §cудалить§f. '

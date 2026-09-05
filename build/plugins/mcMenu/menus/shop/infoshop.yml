@@ -1,0 +1,164 @@
+open_menu_command_list:
+  - "luckymoney"
+
+access_to_open_checker:
+  enable: false
+  permission: menu.open.shop_weapon
+  message:
+    permission_denied: "&cОтказано в доступе на открытие меню 1."
+
+# Заголовок меню.
+title: "&r&l#cc0000$&r&l#ff6600 Магазин&r"
+
+# (Тиков 20 тиков = 1 сек.) Интервал перерисовки меню.
+# Значения 0 и ниже включая -1 и тд. отключают отрисовку за исключением случаев когда игрок кликает (оптимизация).
+update_interval_ticks: 0
+
+# Макет меню.
+layout:
+
+  # Сетка макета.
+  grid:
+    - "| | - - - - - | |"
+    - "| - - . . . - - |"
+    - "| - . A . B . - |"
+    - "| - - . . . - - |"
+    - "| | - - - - - | |"
+
+  layout_item_list:
+    layout_item_1:
+      placeholder: "A"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: knowledge_book
+            display_name: "&r#df0000[?]&r#ffa800 Помощь&r"
+            description:
+              - "&r#ffffe6В Магазине сервера остался&r"
+              - "&r#ffffe6только &r#ffff00изумруд&r#ffffe6. Все другие,&r"
+              - "&r#ffffe6остальные товары вы можете&r"
+              - "&r#ffffe6найти у &r#ffff00жителей&r#ffffe6 в деревнях&r"
+              - "&r#ffffe6и торговаться за &r#ffff00изумруды&r"
+      click_pipeline_component_list:
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: minecraft:block.note_block.bit
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_2:
+      placeholder: "B"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: emerald
+            display_name: "&fИзумруд"
+            description:
+              - ""
+              - "&4&l&m━━━━━━━━━━━━━━━━━"
+              - "&a$ &fЦена &a5000$"
+              - "&6⚕&f Кол-во: 1 шт."
+              - "&6⟲ &fБаланс: &6%vault_eco_balance%"
+              - "&4&l&m━━━━━━━━━━━━━━━━━"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+        has_money:
+          type: VAULT_HAS_MONEY
+          amount: 5000
+          not_enough_money_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message:
+                - "&eТебе нужно &65000&f$, у тебя есть &6%vault_eco_balance%"
+            play_sound:
+              type: PLAY_SOUND
+              play:
+                sound: VILLAGER_NO
+                sound_category: MASTER
+                volume: 1.0
+                pitch: 1.0
+
+        withdraw_money:
+          type: VAULT_WITHDRAW_MONEY
+          amount: 5000
+
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - "give %player_name% emerald 1"
+
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+
+    layout_item_22:
+      placeholder: "|"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: RED_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_23:
+      placeholder: "-"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ORANGE_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_25:
+      placeholder: "."
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: LIGHT_GRAY_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []

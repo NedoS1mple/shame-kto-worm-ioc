@@ -1,0 +1,112 @@
+# 
+# 
+# This is the messsages file.
+# You can change any messages that are in this file
+# 
+# If you want to reset a message back to the default,
+# delete the entire line the message is on and restart the server.
+# 	
+#
+
+Prefix: '&x&f&a&7&f&0&0[⚝]'
+
+Times:
+  Days: д.
+  Day: д.
+  Hours: ч.
+  Hour: ч.
+  Minutes: м.
+  Minute: м.
+  Seconds: с.
+  Second: с.
+
+Commands:
+  NoPerms: '%prefix% &cУ вас недостаточно прав.'
+  Reload: '%prefix% &fКонфигурация &6перезагружена&f.'
+  Balance:
+    Cubelets: '%prefix% &fУ вас есть &e%cubelets_available% &fкейсов для открытия.'
+    Points: '%prefix% &fУ вас есть &e%points_available% &fдоступных очков.'
+  Cubelets:
+    Give: '%prefix% &aGived &e%amount%x %cubelet% &ato &e%player%'
+    Remove:
+      Removed: '%prefix% &aRemoved &e%amount%x %cubelet% &afrom &e%player%'
+      NoBalance: '%prefix% &6%player% &cdoes not have &6%amount%x %cubelet%&c. Currently balance: &6%balance%'
+    Clear: '%prefix% &aCleared cubelets from &6%player%'
+    Gift:
+      Yourself: '%prefix% &fИзвините, но вы не можете подарить кейс самому себе.'
+      Gifted: '%prefix% &fПодарен &e%amount%x %cubelet% &fигроку &e%player%&f.'
+      Received: '%prefix% &fВам подарили &e%amount%x %cubelet% &fкейсов.'
+    GiveKey:
+      Give: '%prefix% &aGived &e%amount%x %cubelet% key(s) &ato &e%player%'
+      Received: '%prefix% &aReceived &e%amount%x %cubelet% key(s)'
+    Info:
+      NotHave: '%prefix% &6&l%player% &cnot have any cubelets'
+      Have:
+        Header: '%prefix% &6&l%player% &ahas the following cubelets:'
+        List: ' &7- %cubelet% &7x%amount%'
+  Points:
+    Give: '%prefix% &aGived &e%amount%x Points &ato &e%player%'
+    Set: '%prefix% &aSetted &e%amount%x Points &ato &e%player%'
+    Remove:
+      Removed: '%prefix% &aRemoved &e%amount%x Points &afrom &e%player%'
+      NoBalance: '%prefix% &6%player% &cdoes not have &6%amount%x Points&c. Currently balance: &6%balance%'
+    Info: '%prefix% &6&l%player% &ahas &6%amount% &aPoints.'
+
+Cubelet:
+  LoginReminder:
+  - ''
+  - '&6%player% &ayou still have &6%amount% &acubelets to open!'
+  - ''
+  BoxInUse:
+    Me: '%prefix% &6Вы &fуже &fоткрываете &6этот &fкейс.'
+    Other: '%prefix% &6%player% &fуже открывает &6этот &fкейс.'
+  Reward:
+    Broadcast: '%prefix% &6&l%player% &agot &l%reward% &ain &6%cubelet%'
+    New:
+    - ''
+    - '%center%%cubelet_type%'
+    - '%center%&fВыигрыш: %reward_name%'
+    - '%center%&e&nПопробуйте еще раз!'
+    - ''
+    Duplicate:
+    - ''
+    - '%center%%cubelet_type% Loot'
+    - '%center%&5You found: &a%reward_name%'
+    - '%center%&5Rarity: %reward_rarity%'
+    - '%center%&5Duplicate item reward: &a%points% Loot Points'
+    - ''
+  NoCubelets:
+  - ''
+  - '%center%&aYou can buy Cubelets on our store &c&lHERE&a!'
+  - '%center%&6https://example.com'
+  - ''
+
+Holograms:
+  CubeletAvailable:
+  - '&e⚝ &e&lКейсы &e⚝'
+  - '&eНажми&f,чтобы открыть'
+  - '%blink%Ключей: %cubelets_available%'
+  NoCubeletAvailable:
+  - '&e⚝ &e&lКейсы &e⚝'
+  - '&eНажми&f,чтобы открыть'
+  - '%blink%Ключей: %cubelets_available%'
+  Reward:
+    New:
+      Me:
+      - ''
+      - ''
+      - ''
+      - '&e&l%reward_name%'
+      - '%reward_icon%'
+      Other:
+      - ''
+      - ''
+      - ''
+      - '&e&l%reward_name%'
+      - '%reward_icon%'
+    Duplicate:
+    - '&b&lDUPLICATE'
+    - '&6+%points% Loot Points'
+    - '&e&l%reward_name%'
+    - '&5Rarity: %reward_rarity%'
+    - '%reward_icon%'

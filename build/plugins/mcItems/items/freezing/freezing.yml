@@ -1,0 +1,53 @@
+item:
+  display_name: "#477A1A☃ #2BD0FCЗ#2FC5E0а#32BBC4м#36B0A7о#39A58Bр#3D9A6Fо#409053з#448536к#477A1Aа"
+  material: BLAZE_ROD
+  description:
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffccccЗамораживает игрока на #f520805 &7сек#ffcccc. в течении"
+    - "#ffccccэтого времени игрок не может двигаться."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  freezing_component:
+    # (Сек.) Длительность заморозки.
+    duration_seconds: 5
+    # Используйте эффекты по ссылке: "https://helpch.at/docs/1.16.5/org/bukkit/Particle.html".
+    # Даже если ядро сервера например 1.8.8 и эффект называется по старому, используйте его
+    # новое название из 1.16.5 по ссылке, в случае если такого эффекта не существовало на этой
+    # версии, не используйте его.
+    freeze_particle_effect: SNOWBALL
+
+    sound:
+      # Звук заморозки.
+      freeze:
+        sound: HORSE_JUMP
+        sound_category: MASTER
+        volume: 1.0
+        pitch: 0.0
+
+    # Включить задерждку для предотвращения частого использования?
+    enable_use_delay: true
+    # (Тиков. 1 сек. = 20 тиков) Задержка повторного использования.
+    delay_use_ticks: 20
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    message:
+      # Игрок %player_name% был заморожен на %duration_seconds% сек.
+      target_is_frozen: "#477A1A☃ #2BD0FCИ#2CCDF3г#2DC9EBр#2EC6E2о#2FC3D9к #477A1A%player_name% #31BCC8б#33B9BFы#34B6B6л #36AFA5з#37AC9Cа#38A894м#39A58Bо#3AA282р#3B9E7Aо#3C9B71ж#3D9868е#3E9460н #418E4Eн#428B45а #2BD0FC%duration_seconds% #448434с#45812Bе#467D23к#477A1A."
+      # Вы были заморожены игроком %player_name% на %duration_seconds% сек.
+      you_are_frozen: "#2BD0FCВ#2CCDF5ы #2EC8E7б#2EC6E1ы#2FC3DAл#30C0D3и #32BBC5з#33B9BEа#33B6B8м#34B3B1о#35B1AAр#36AEA3о#37AC9Cж#38A995е#39A68Eн#39A488ы #3B9E7Aи#3C9C73г#3D996Cр#3E9765о#3F945Eк#3F9158о#408F51м #2BD0FC%player_name% #428A43н#43873Cа #2BD0FC%duration_seconds% #44822Fс#457F28е#467D21к#477A1A."
+      use_delay: "&cМожно использовать повторно через &b%use_delay_seconds% &cсек."
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."

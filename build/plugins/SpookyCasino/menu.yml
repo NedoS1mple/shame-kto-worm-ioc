@@ -1,0 +1,181 @@
+items:
+  redGlass:
+    type: RED_STAINED_GLASS_PANE
+    name: ""
+  orangeGlass:
+    type: ORANGE_STAINED_GLASS_PANE
+    name: ""
+  walletSwitcher:
+    type: GOLD_INGOT
+    name: "&#D51515[$]&#FF6600 Валюта &#FFFFE6[&#FFFF00%wallet%&#FFFFE6]"
+    lore:
+      - "&#FF6600 ➥ Нажмите&#FFFFE6, чтобы выбрать &#FFFF00Валюту"
+      - ""
+      - "&#D51515 ●&#FFFFE6 Текущая валюта:&#FFFF00 %wallet%"
+  walletSwitch:
+    name: "&#D51515[$]&#FF6600 Валюта &#FFFFE6[&#FFFF00%wallet%&#FFFFE6]"
+    lore:
+      - "&#FF6600 ➥ Нажмите&#FFFFE6, чтобы выбрать &#FFFF00Валюту"
+  guideItem:
+    type: BOOK
+    name: "&#D51515[i]&#FF6600 Как играть?"
+  betSlot:
+    type: ENDER_CHEST
+    name: "&#D51515[$]&#FF6600 Ставка [&#D74444%currentBet% / &#D51515%playerBalance%&#FF6600]"
+    lore:
+      - "&#D51515 ● &#FFFFE6Текущая ставка: &#FF6600%currentBet%"
+      - " &#D51515 ● &#FFFFE6Количество валюты: &#D51515%playerBalance%"
+      - ""
+      - "&#FF6600[ЛКМ]&#FFFFE6 Увеличить ставку &#00FF00[%changeAmount%]"
+      - "&#FF6600[ПКМ]&#FFFFE6 Уменьшить ставку &#FF0000[-%changeAmount%]"
+      - "&#FF6600[ШИФТ+ЛКМ]&#FFFFE6 Увеличить ставку &#00FF00[%changeAmount_2%]"
+      - "&#FF6600[ШИФТ+ПКМ]&#FFFFE6 Уменьшить ставку &#FF0000[-%changeAmount_2%]"
+  betSlotNoEnough:
+    type: ENDER_CHEST
+    name: "&#D51515[$]&#FF6600 Ставка"
+    lore:
+      - "&#FF0000 ➥ Недоступно!&#FFFFE6 У Вас недостаточно &#FFFF00Средств&#FFFFE6!"
+      - ""
+      - "&#D51515&lСтавка"
+      - " &#D51515●&#FFFFE6 Возьмите с собой необходимую Валюту."
+      - " &#D51515●&#FFFFE6 Увеличьте ставку кликом"
+      - "  &#FFFFE6 левой кнопки мыши на Сундук."
+  gameSlot:
+      type: NETHER_STAR
+      name: "&#00FF00[Начать игру]"
+      lore:
+        - "&#FF6600 ➥ Нажмите&#FFFFE6, чтобы начать"
+  gameSlotNoEnough:
+    type: NETHER_STAR
+    name: "&#00FF00[Начать игру]"
+    lore:
+      - "&#FF0000 ➥ Недоступно!&#FFFFE6 У Вас недостаточно &#FFFF00Средств&#FFFFE6!"
+  rewardTake:
+    type: CHEST
+    name: "&#00FF00[Забрать награду]"
+    lore:
+      - "&#FF6600 ➥ Нажмите&#FFFFE6, чтобы забрать"
+      - ""
+      - " &#D51515●&#FFFFE6 Текущий выигрыш:&#FF6600 %reward%"
+  newGameItemAvailable:
+    type: CLOCK
+    name: "&#00FF00[Новая игра]"
+
+casinoWalletMenu:
+  title: "&#D51515&l＄&#FF0000&l Казино:&#FF6600&l Выберите валюту:"
+
+casinoMainPage:
+  roulette:
+    title: "&#D51515&l＄&#FF0000&l Казино:&#FF6600&l Алмазная рулетка"
+    items:
+  treasureHunter:
+    title: "&#D51515&l＄&#FF0000&l Казино:&#FF6600&l Кладоискатель"
+    items:
+  horseRacing:
+    title: "&#D51515&l＄&#FF0000&l Казино:&#FF6600&l Конные скачки"
+    items:
+
+casinoGameMenu:
+  treasureHunter:
+    title: "&#D51515&l＄&#FF0000&l Кладоискатель:&#FF6600&l копайте.."
+    items:
+      newGameItemWaiting:
+        type: CLOCK
+        name: "&#00FF00[Новая игра]"
+        lore:
+          - "&#FF6600 ➥ Игра ещё не закончена.."
+      gameStatus:
+        type: CHEST
+        name: "&#D51515[$]&#FF6600 Ставка"
+        lore:
+          - "&#FF6600 ➥ Игра ещё не закончена.."
+          - ""
+          - " &#D51515●&#FFFFE6 Текущая ставка:&#FF6600 %currentBet%"
+          - " &#D51515●&#FFFFE6 Текущие монеты:&#FF6600 %playerBalance%"
+      gameStatusAvailable:
+        type: CHEST
+        name: "&#D51515[$]&#FF6600 Ставка"
+        lore:
+          - " &6* &fТекущая ставка: &6%currentBet%"
+          - " &6* &fТекущие монеты: &6%playerBalance%"
+          - ""
+          - "&#FF6600[ЛКМ]&#FFFFE6 Увеличить ставку &#00FF00[%changeAmount%]"
+          - "&#FF6600[ПКМ]&#FFFFE6 Уменьшить ставку &#FF0000[-%changeAmount%]"
+          - "&#FF6600[ШИФТ+ЛКМ]&#FFFFE6 Увеличить ставку &#00FF00[%changeAmount_2%]"
+          - "&#FF6600[ШИФТ+ПКМ]&#FFFFE6 Уменьшить ставку &#FF0000[-%changeAmount_2%]"
+      treasureSand:
+        type: SAND
+        name: "&#FF6600[●]&#FFFF00 Песок"
+        lore:
+          - "&#FF6600 ➥ Нажмите&#FFFFE6, чтобы вскопать!"
+      treasureLose:
+        type: RED_STAINED_GLASS_PANE
+        name: "&#FF0000Вы проиграли!"
+  roulette:
+    title: "&#D51515&l＄&#FF0000&l Алмазная рулетка:&#FF6600&l крутим.."
+    items:
+      newGameItemWaiting:
+        type: CLOCK
+        name: "&#00FF00[Новая игра]"
+        lore:
+          - "&#FF6600 ➥ Ждём рулетку.."
+      gameStatus:
+        type: CHEST
+        name: "&#D51515[$]&#FF6600 Ставка"
+        lore:
+          - "&#FF6600 ➥ Ждём рулетку.."
+          - ""
+          - " &#D51515●&#FFFFE6 Текущая ставка:&#FF6600 %currentBet%"
+          - " &#D51515●&#FFFFE6 Текущие монеты:&#FF6600 %playerBalance%"
+          - " &#D51515●&#FFFFE6 Предыдущая награда:&#FF6600 %lastReward%/*%lastMultiplier%"
+      gameStatusAvailable:
+        type: CHEST
+        name: "&#D51515[$]&#FF6600 Ставка"
+        lore:
+          - " &6* &fТекущая ставка: &6%currentBet%"
+          - " &6* &fТекущие монеты: &6%playerBalance%"
+          - " &6* &fПредыдущая награда: &6%lastReward%/*%lastMultiplier%"
+          - ""
+          - "&#FF6600[ЛКМ]&#FFFFE6 Увеличить ставку &#00FF00[%changeAmount%]"
+          - "&#FF6600[ПКМ]&#FFFFE6 Уменьшить ставку &#FF0000[-%changeAmount%]"
+          - "&#FF6600[ШИФТ+ЛКМ]&#FFFFE6 Увеличить ставку &#00FF00[%changeAmount_2%]"
+          - "&#FF6600[ШИФТ+ПКМ]&#FFFFE6 Уменьшить ставку &#FF0000[-%changeAmount_2%]"
+  horseRacing:
+    title: "&#D51515&l＄&#FF0000&l Казино:&#FF6600&l Конные скачки"
+    items:
+      newGameItemWaiting:
+        type: CLOCK
+        name: "&#00FF00[Новая игра]"
+        lore:
+          - "&#FF6600 ➥ Ждём коней.."
+      gameStatus:
+        type: CHEST
+        name: "&#D51515[$]&#FF6600 Ставка"
+        lore:
+          - "&#FF6600 ➥ Ждём коней.."
+          - ""
+          - " &#D51515●&#FFFFE6 Текущая ставка:&#FF6600 %currentBet%"
+          - " &#D51515●&#FFFFE6 Текущие монеты:&#FF6600 %playerBalance%"
+          - " &#D51515●&#FFFFE6 Предыдущая награда:&#FF6600 %lastReward%/*%lastMultiplier%"
+          - " &#D51515●&#FFFFE6 Предыдущее место:&#FF6600 %lastPlace%"
+      gameStatusAvailable:
+        type: CHEST
+        name: "&#D51515[$]&#FF6600 Ставка"
+        lore:
+          - "&#FF6600 ➥ Ждём коней.."
+          - ""
+          - " &#D51515●&#FFFFE6 Текущая ставка:&#FF6600 %currentBet%"
+          - " &#D51515●&#FFFFE6 Текущие монеты:&#FF6600 %playerBalance%"
+          - " &#D51515●&#FFFFE6 Предыдущая награда:&#FF6600 %lastReward%/*%lastMultiplier%"
+          - " &#D51515●&#FFFFE6 Предыдущее место:&#FF6600 %lastPlace%"
+          - ""
+          - "&#FF6600[ЛКМ]&#FFFFE6 Увеличить ставку &#00FF00[%changeAmount%]"
+          - "&#FF6600[ПКМ]&#FFFFE6 Уменьшить ставку &#FF0000[-%changeAmount%]"
+          - "&#FF6600[ШИФТ+ЛКМ]&#FFFFE6 Увеличить ставку &#00FF00[%changeAmount_2%]"
+          - "&#FF6600[ШИФТ+ПКМ]&#FFFFE6 Уменьшить ставку &#FF0000[-%changeAmount_2%]"
+      horseRunning:
+        name: "&#FF6600Скачущий конь"
+      horsePlace:
+        name: "&#D51515Место: %place%"
+      horsePath:
+        name: "&#D51515...Пройденный путь"

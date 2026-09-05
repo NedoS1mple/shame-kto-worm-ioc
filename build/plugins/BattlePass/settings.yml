@@ -1,0 +1,126 @@
+
+# Версия: 3.10.0
+# Дата релиза: 27/07/2022
+
+# Не изменяйте, если нет соответствующих указаний.
+config-version: 1
+
+# Заполните эту информацию, если вы используете подключение к базе данных (MySQL).
+storage-options:
+  # Это задержит загрузку пользовательских данных на полсекунды, чтобы убедиться, что сервер, с которого пришел пользователь, сохранил его данные.
+  # Используйте это, если вы используете ЛЮБУЮ базу данных, не основанную непосредственно на файлах. JSON не нуждается в этом.
+  bungee-fix: false
+
+  # Сколько секунд проходит между каждым сохранением, чтобы избежать потери данных.
+  auto-save-interval: 180
+
+  # Как плагин хранит данные. Либо JSON (плоский файл), либо MySQL (база данных).
+  storage-method: JSON
+
+  # Адрес, используемый для подключения.
+  # Если у вас есть собственный порт MySQL, используйте форматирование 'localhost:3306'.
+  address: localhost
+
+  # Префикс перед именами таблиц
+  prefix: battlePass-
+
+  # Имя датабазы Battle Pass.
+  # Вы должны создать её! Она не будет создана автоматически.
+  database: battlePass
+
+  # Информация для входа в систему.
+  username: battlepassuser
+  password: 'verySafe'
+
+  # Дополнительные настройки для соединений MySQL.
+  # Изменяйте, если вы знаете, что делаете.
+  pool-settings:
+    maximum-pool-size: 10
+    minimum-idle: 10
+    maximum-lifetime: 1800000
+    connection-timeout: 5000
+
+  # Данная функция, скорее всего, не потребуют изменений, если только вы не столкнетесь с проблемами.
+  connection-properties:
+
+    # Вы можете отключить эту функцию, если получаете ошибки SSL,
+    # Тем не менее, мы всегда рекомендуем использовать SSL, когда это возможно.
+    useSSL: true
+
+battle-pass-aliases:
+  - 'pass'
+  - 'bp'
+  - 'bpass'
+  - 'battlep'
+
+# Используйте целое число, например 111
+join-message-delay: 5
+
+enable-ban-permission: false # Включить разрешение (право) battlepass.block для блокировки Battle Pass для некоторых игроков.
+
+# Установите [] в конце, чтобы отключить любую из этих функций.
+whitelisted-worlds: [] # Используйте тот же формат, что и для миров из черного списка, если вы хотите использовать миры из белого списка. Вы можете использовать оба формата одновременно.
+blacklisted-worlds: # Названия миров, в которых невозможно выполнить квесты.
+  - 'world_with_no_quests'
+
+daily-quests-enabled: false # false - отключить расчет ежедневных квестов
+
+permanent-daily-quest-ids: [] # ['1', '3', '5']
+
+# Действия, которые выполняются каждый раз, когда любой игрок завершает любой квест.
+# По умолчанию он пуст, установите его таким, если вам нужны действия:
+#
+# quest-completed-actions:
+#   - '[message]{Ну хорошо, ты что-то сделал}'
+quest-completed-actions:
+  - '[title]{&eКвест выполнен!}'
+  - '[subtitle]{&fКвест &e%quest_name%&f выполнен}'
+
+current-season:
+  time-zone: 'Europe/Moscow' # Часовой пояс.
+  start-date: '06/06/2020' # День, когда начнется ваш сезон Battle Pass. Формат: дд/мм/гггг
+  start-time: '20:00' # Время, когда начнется ваш сезон Battle Pass.
+  notification-method: 'action bar & chat' # Как игроки будут получать уведомления. Доступные варианты: action bar, chat (чат), action bar & chat или none (игроки не будут получать уведомления).
+  auto-receive-rewards: false # true - игрок автоматически получит награду при повышении уровня
+  daily-quest-reset-time: '12:00'
+  daily-quest-amount: 250 # Количество дневных квестов, доступных в один день
+  quest-glow-on-completion: true # Если квест выполнен, он будет "светиться" (переливаться)
+  notify-at-percentages: [50, 100]
+  unlocks:
+    require-previous-completion: true # Должен ли игрок выполнить все квесты предыдущей недели, чтобы начать следующую неделю.
+    lock-previous-weeks: false # Должна ли предыдущая неделя быть заблокирована, если началась новая
+
+season-finished:
+  stop-daily-quests: false # true - при окончании сезона дневные квесты быть заблокированы.
+  stop-other-quests: false # true - при окончании сезона все квесты будут заблокированы
+
+#disabled-plugin-hooks: # Это отключит загрузку любых квестов указанного плагина. Вы можете использовать это, если вы используете устаревшую версию и их остановка вызывает ошибки.
+#  - 'AutoSell'
+#  - 'PlotSquared'
+
+enable-play-time: false # true - будет доступен квест playtime
+
+reward-excess-points: # Если установлено значение vault, требуется плагин Vault & economy (например, CMI или Essentials). Если установлено значение internal, другие плагины не требуются.
+  method: none # Установите значение none, vault или internal. Если значение internal, оно будет храниться в BattlePass, и вы должны использовать команды для добавления/удаления и placeholders для получения.
+  currency-per-point: # Количество валюты, выдаваемой за каждый избыточный пункт.
+    free: 50
+    premium: 100
+
+fixes:
+  use-improved-tier-points: true # Раньше, если вы устанавливали 300 очков для уровня 10, это означало 300 очков для уровня 11. В данном случае всё логично - 300 очков для достижения 10-го уровня.
+
+boss-bar:
+  enabled: false
+  persistent: false
+  hide-after: 5 # Как долго показывать boss-bar после выполнения квеста (В СЕКУНДАХ). При persistent: true данная настройка не работает
+  use-notify-percentages: true # true - boss-bar будет отображаться только при достижении одного из порогов прогрессии (notify-at-percentages:)
+  disabled-quest-types:
+    - 'fly'
+    - 'glide'
+    - 'sneak'
+    - 'walk'
+    - 'sprint'
+    - 'move'
+  # Только для Minecraft 1.9+
+  color: PINK # должно быть цветом с https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/BarColor.html and in all caps
+  style: SOLID # должно быть стилем с https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/BarStyle.html and in all caps

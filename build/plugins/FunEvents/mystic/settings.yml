@@ -1,0 +1,243 @@
+generator:
+  static-location:
+    toggle: false
+    world: world
+    x: 100
+    y: 100
+    z: 100
+  center:
+    x: 0
+    z: 0
+  radius: 2500
+  maxY: 120
+  minY: 30
+  check-floor:
+    toggle: false
+    radius: 4
+    step: 3
+  check-air:
+    toggle: false
+    radius: 5
+    high: 4
+    step: 2
+  banned-biomes:
+  - OCEAN
+  - RIVER
+  - MOUNTAINS
+  - LUKEWARM_OCEAN
+  - FOREST
+  - SWAMP
+  - BEACH
+  banned-blocks:
+  - WATER
+  - LAVA
+  - SNOW
+  - OAK_LEAVES
+  - SPRUCE_LEAVES
+  - BIRCH_LEAVES
+  - JUNGLE_LEAVES
+  - ACACIA_LEAVES
+  - DARK_OAK_LEAVES
+  - AZURE_BLUET
+  - ALLIUM
+  - BLUE_ORCHID
+  - POPPY
+  - DANDELION
+  - SEAGRASS
+  - DEAD_BUSH
+  - FERN
+  - GRASS
+  - RED_MUSHROOM
+  - BROWN_MUSHROOM
+  - LILY_OF_THE_VALLEY
+  - CORNFLOWER
+  - OXEYE_DAISY
+  - PINK_TULIP
+  - WHITE_TULIP
+  - ORANGE_TULIP
+  - RED_TULIP
+  - LARGE_FERN
+  - TALL_GRASS
+  - PEONY
+  - ROSE_BUSH
+  - SUNFLOWER
+  - LILAC
+  - CACTUS
+  - SUGAR_CANE
+  - KELP
+  - LILY_PAD
+  worlds:
+    world: 100
+  region-radius:
+    x: 15
+    y: 200
+    z: 15
+  scheme-offsets:
+    x: 0
+    y: 0
+    z: 0
+  ignore-air-blocks: true
+  flags:
+    pvp: allow
+    build: deny
+    block-break: deny
+    block-place: deny
+    tnt: deny
+    lighter: deny
+    creeper-explosion: deny
+    ghast-fireball: deny
+    other-explosion: deny
+    enderman-grief: deny
+    fire-spread: deny
+    snowman-trails: deny
+    ravager-grief: deny
+    lava-fire: deny
+    water-flow: deny
+    lava-flow: deny
+    ice-melt: deny
+    chest-access: deny
+name: Мистический сундук
+time:
+  prestart: 180
+  start: 300
+  activated: 60
+  destroy-toggle: true
+  destroy: 60
+hologram:
+  toggle: true
+  offset:
+    x: 0.5
+    y: 2.5
+    z: 0.5
+  lines:
+    started:
+    - '&#FF5555[Мистический сундук]'
+    - '&#AA00AA§k||| &fИдёт активация. &#AA00AA§k|||'
+    - '&fДо открытия: &#FF7300{timer} сек'
+    activated:
+    - '&#FF5555[Мистический сундук]'
+    - '&#AA00AA§k||| &fОткрыт. &#AA00AA§k|||'
+    destroy:
+    - '&#FF5555[Мистический сундук]'
+    - '&#AA00AA§k||| &fУдаление. &#AA00AA§k|||'
+message:
+  prestart:
+    toggle: true
+    lines:
+    - '&#FF5555 ╔&#F84E5C═&#F14763═&#EA406A╦&#E33971═&#DC3278═&#D52B80╦&#CD2387═&#C61C8E═&#BF1595╦&#B80E9C═&#B107A3═&#AA00AA╦&#9C00AA═&#8E00AA═&#8000AA╦&#7100AA═&#6300AA═&#5500AA╦&#4700AA═&#3900AA═&#2B00AA╦&#1C00AA═&#0E00AA═&#0000AA╗'
+    - '&#FF5555 ║'
+    - '&#FF5555 ║&#FFFFE6     &#AA00AA§k|||&#FF5555   [Мистический сундук]   &#AA00AA§k|||'
+    - '&#FF5555 ║&#FFFFE6   Появится уже через&#F7CA14 3 минуты!'
+    - '&#FF5555 ║'
+    - '&#FF5555 ╚#F84E5C═&#F14763═&#EA406A╩&#E33971═&#DC3278═&#D52B80╩&#CD2387═&#C61C8E═&#BF1595╩&#B80E9C═&#B107A3═&#AA00AA╩&#9C00AA═&#8E00AA═&#8000AA╩&#7100AA═&#6300AA═&#5500AA╩&#4700AA═&#3900AA═&#2B00AA╩&#1C00AA═&#0E00AA═&#0000AA╝'
+  spawn:
+    toggle: true
+    lines:
+    - '&#FF5555 ╔&#F84E5C═&#F14763═&#EA406A╦&#E33971═&#DC3278═&#D52B80╦&#CD2387═&#C61C8E═&#BF1595╦&#B80E9C═&#B107A3═&#AA00AA╦&#9C00AA═&#8E00AA═&#8000AA╦&#7100AA═&#6300AA═&#5500AA╦&#4700AA═&#3900AA═&#2B00AA╦&#1C00AA═&#0E00AA═&#0000AA╗'
+    - '&#FF5555 ║'
+    - '&#FF5555 ║&#FFFFE6     &#AA00AA§k|||&#FF5555   [Мистический сундук]   &#AA00AA§k|||'
+    - '&#FF5555 ║&#FFFFE6   Уровень лута: {inventory}'
+    - '&#FF5555 ║&#FFFFE6   Призван игроком: &5{player}'
+    - '&#FF5555 ║&#FFFFE6   Появился на координатах&#0097AA {cords}'
+    - '&#FF5555 ║'
+    - '&#FF5555 ╚#F84E5C═&#F14763═&#EA406A╩&#E33971═&#DC3278═&#D52B80╩&#CD2387═&#C61C8E═&#BF1595╩&#B80E9C═&#B107A3═&#AA00AA╩&#9C00AA═&#8E00AA═&#8000AA╩&#7100AA═&#6300AA═&#5500AA╩&#4700AA═&#3900AA═&#2B00AA╩&#1C00AA═&#0E00AA═&#0000AA╝'
+  activated:
+    toggle: false
+    lines:
+    - Мистический сундук активировался
+  removing:
+    toggle: false
+    lines:
+    - Мистический сундук пропал
+bossbar:
+  toggle: true
+  stroke:
+    started: '&cМистик &6- откроется через &c{timer} сек'
+    activated: '&cМистик &6- открыт Лутайте! &c{timer} сек'
+    destroy: '&cМистик &6- открыт До удаления &c{timer} сек'
+  style: SEGMENTED_20
+  color: RED
+  radius: 50
+toggle: true
+spawn-sound:
+  toggle: false
+  all-player: true
+  sound: ENTITY_LIGHTNING_BOLT_THUNDER
+  player-volume: 1
+  volume: 10
+  pitch: 1
+settings:
+  particles:
+    underchest:
+      offset:
+        x: 0.5
+        y: 0.1
+        z: 0.5
+      amount: 16
+      circle-speed: 5
+      second-step: 4
+      started:
+        first:
+          particle: FLAME
+          amount: 1
+          v1: 0
+          v2: 0
+          v3: 0
+          speed: 0
+        second:
+          particle: SMOKE_NORMAL
+          amount: 0
+          v1: 0
+          v2: 0.3
+          v3: 0
+          speed: 0.05
+      activated:
+        first:
+          particle: DRAGON_BREATH
+          amount: 1
+          v1: 0
+          v2: 0
+          v3: 0
+          speed: 0
+        second:
+          particle: SPELL_WITCH
+          amount: 0
+          v1: 0
+          v2: 0.3
+          v3: 0
+          speed: 0.05
+      destroy:
+        first:
+          particle: FLAME
+          amount: 1
+          v1: 0
+          v2: 0
+          v3: 0
+          speed: 0
+        second:
+          particle: SMOKE_NORMAL
+          amount: 0
+          v1: 0
+          v2: 0.3
+          v3: 0
+          speed: 0.05
+    firework:
+      amount: 1
+      power: 1
+      flicker: true
+      trail: true
+      colors:
+      - 255, 0, 0
+      - 255, 165, 0
+      fade:
+      - 255, 255, 0
+      offset:
+        x: 0.5
+        y: 2
+        z: 0.5
+  sound:
+    before-open:
+      countdown-time: 5
+      sound: BLOCK_NOTE_BLOCK_PLING
+      volume: 2
+      pitch: 1

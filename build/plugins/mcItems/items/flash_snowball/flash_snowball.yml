@@ -1,0 +1,74 @@
+item:
+  display_name: "#FFFFFF⭐ #FA2FC8З#FA3ECCв#FB4DD0е#FB5CD4з#FB6AD8д#FC79DCн#FC88E0ы#FD97E4й #FDB5EBС#FEC4EFн#FED2F3е#FEE1F7ж#FFF0FBо#FFFFFFк"
+  material: SNOWBALL
+  enchanted: true
+  description:
+    - ""
+    - "&dЭффект x2"
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffccccКогда попадает по игроку, он получает"
+    - "#ffccccэффект #f52080Медлительность VI#ffcccc, #f52080Слепота#ffcccc и #f52080Свечение"
+    - "#ffccccна #f5208020 &7сек#ffcccc. Имеет &7x#f520802 #ffccccпродолжительность"
+    - "#ffccccдействия (к обычному), &f&lсветится в полете&r#ffcccc."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  flash_snowball_component:
+    # Список эффектов которые будут наложены на сущность в которую попадет снежок.
+    potion_effect_list:
+
+      # ID эффекта который будет наложен на сущность в которую попадет снежок.
+      potion_effect_1:
+        potion_effect_type: BLINDNESS
+        duration_seconds: 20
+        amplifier: 1
+
+      potion_effect_2:
+        potion_effect_type: SLOW
+        duration_seconds: 20
+        amplifier: 6
+
+      potion_effect_3:
+        potion_effect_type: GLOWING
+        duration_seconds: 20
+        amplifier: 1
+
+    sound:
+      # Звук броска снежка.
+      throw:
+        sound: SHOOT_ARROW
+        sound_category: MASTER
+        volume: 1.0
+        pitch: 2.0
+
+      # Звук попадания снежка (воспроизводится только кидавшему).
+      success_hit:
+        sound: ORB_PICKUP
+        sound_category: MASTER
+        volume: 1.0
+        pitch: 1.0
+
+    # Включить задерждку для предотвращения частого использования?
+    enable_use_delay: true
+    # (Тиков. 1 сек. = 20 тиков) Задержка повторного использования.
+    delay_use_ticks: 20
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    message:
+      # Снежок попал в цель!
+      success_hit: "#FFFFFF⭐ #FFFFFFС#FFF4FCн#FEE9F9е#FEDEF6ж#FED3F3о#FEC8F1к #FDB2EBп#FDA7E8о#FD9CE5п#FC92E2а#FC87DFл #FC71D9в #FB5BD4ц#FB50D1е#FB45CEл#FA3ACBь#FA2FC8!"
+      use_delay: "&cМожно использовать повторно через &b%use_delay_seconds% &cсек."
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."

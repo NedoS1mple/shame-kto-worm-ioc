@@ -1,0 +1,15 @@
+type: WITHER_SKULL
+customNameVisible: true
+customName: CustomWitherSkull1
+glowing: false
+incendiary: false
+bounce: true
+gravity: true
+charged: true
+despawnDelay: 3
+velocity: 1
+silent: false
+particlesAmount: 10
+particlesOffSet: 0.5
+particlesSpeed: 0.3
+particlesDelay: 1

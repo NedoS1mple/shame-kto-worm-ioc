@@ -1,0 +1,87 @@
+name: '#009700[★] #00fc00Зелье Победителя'
+lore:
+- §9Невидимость (15:00)
+- §9Прилив здоровья II (3:00)
+- §9Регенерация II (1:00)
+- §9Сопротивление (1:00)
+- §r
+- '§5При применении:'
+- §9+8 Максимальное здоровье
+material: SPLASH_POTION
+glow: false
+disableStack: false
+keepItemOnDeath: false
+canBeUsedOnlyByTheOwner: false
+cancelEventIfNotOwner: false
+onlyOwnerBlackListedActivators: []
+storeItemInfo: false
+unbreakable: false
+usage: 1
+usageLimit: -1
+cancelEventIfNoPerm: false
+disabledWorlds: []
+recognitions: []
+config_5: true
+config_update: true
+config_5_98: true
+dropOptions:
+  glowDrop: false
+  glowDropColor: WHITE
+  displayNameDrop: false
+hiders:
+  hideEnchantments: false
+  hideUnbreakable: false
+  hideAttributes: true
+  hidePotionEffects: true
+  hideUsage: true
+  hideDestroys: false
+  hidePlacedOn: false
+enchantments: {}
+giveFirstJoin:
+  giveFirstJoin: false
+  giveFirstJoinAmount: 1
+  giveFirstJoinSlot: 0
+restrictions: {}
+variables: {}
+activators: {}
+displayConditions:
+  playerConditions: {}
+  worldConditions: {}
+  itemConditions: {}
+  placeholdersConditions: {}
+  enableFeature: false
+potionSettings:
+  potionColor: 65280
+  potionType: WATER
+  potionExtended: false
+  potionUpgraded: false
+  potionEffects:
+    pEffect0:
+      isAmbient: false
+      duration: 18000
+      potionEffectType: INVISIBILITY
+      amplifier: 0
+      hasParticles: false
+      hasIcon: false
+    pEffect1:
+      isAmbient: false
+      duration: 3600
+      potionEffectType: HEALTH_BOOST
+      amplifier: 1
+      hasParticles: false
+      hasIcon: false
+    pEffect2:
+      isAmbient: false
+      duration: 1200
+      potionEffectType: REGENERATION
+      amplifier: 1
+      hasParticles: false
+      hasIcon: false
+    pEffect3:
+      isAmbient: false
+      duration: 1200
+      potionEffectType: DAMAGE_RESISTANCE
+      amplifier: 0
+      hasParticles: false
+      hasIcon: false
+attributes: {}

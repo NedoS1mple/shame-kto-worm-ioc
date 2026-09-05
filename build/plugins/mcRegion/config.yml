@@ -1,0 +1,469 @@
+#####################################################################################################
+#                                                                                                   #
+#                                 Студия: https://vk.com/mcdev.store                                #
+#                              Форум Майнкрафт: https://forum-minecraft.ru                          #
+#                              Магазин сборок и плагинов: https://mcdev.su                          #
+#                                                                                                   #
+#                                                                                                   #
+#                           Связь с разработчиком: https://t.me/mcdevs_bot                          #
+#                                                                                                   #
+#                            Размещение своего сервера: https://mcrating.org                        #
+#                                                                                                   #
+#                                                                                                   #
+#                                                                                                   #
+#                                                                                                   #
+#                       Если ресурс скачен не с forum-minecraft.ru или mcdev.su                     #
+#                   то дальнейшее использование может быть не безопасным, сообщите                  #
+#                               об этом автору https://t.me/mcdevs_bot                              #
+#                                                                                                   #
+#                                                                                                   #
+#                                                                                                   #
+#                            Удаление данной надписи не избавит вас от                              #
+#                             ответственности, если вы сольете ресурс                               #
+#                                                                                                   #
+#                                                                                                   #
+#                                                                                                   #
+#####################################################################################################
+
+# Плагин: mcRegion (Блоки это приват)
+# Версия: 1.8+
+#
+# Описание:
+# Плагин добавляет блоки поставив которые создается приват.
+# Максимальное число приватов, их размер и др. задается конфигурацией.
+#
+# Зависимости: (плагины без которых этот работать не будет)
+# - UtilM https://mvn.vepvep.com/minecraft/me/socrum/minecraft/spigot/plugin/utilm (utilm-x.x.x-jar-with-dependencies.jar)
+# - DecentHolograms: https://www.spigotmc.org/resources/decentholograms-1-8-1-19-4-papi-support-no-dependencies.96927 (опционально на выбор)
+# - HolographicDisplays: https://dev.bukkit.org/projects/holographic-displays (опционально на выбор)
+
+message:
+  you_can_not_place_region_block_in_this_world: '&cНельзя разместить регион-блок в этом мире.'
+  someone_else_region_join: '&6&lЗащита &8| &fИгрок &a%entered_player_name% &cвторгся(лась) &2в ваш регион!'
+  someone_else_region_quit: '&6&lЗащита &8| &fИгрок &a%entered_player_name% &cпокинул(а) &2ваш регион!'
+  player_is_not_online: '&6&lЗащита &8| &fЭтот игрок сейчас не онлайн.'
+  region_block_is_not_exist: '&6&lЗащита &8| &fРегион-блока с таким ID не существует.'
+  region_block_gived: '&6&lЗащита &8| &fРегион-блок с ID &e%id% &aвыдан игроку &e%player%&a!'
+  player_already_exist_in_member_list: '&6&lЗащита &8| &fИгрок с таким ником уже есть в списке участников.'
+  player_added_to_member_list: '&6&lЗащита &8| &fИгрок &e%player% &aдобавлен в список участников!'
+  action_chat_instruction_for_add_new_member:
+    - '&eОтправьте в чат ник игрока который будет добавлен в список участников.'
+    - "&eОтправьте '&b-&e' (минус) чтобы отменить операцию."
+  action_cancelled: '&6&lЗащита &8| &fДействие отменено.'
+  player_removed_from_member_list: '&6&lЗащита &8| &fУчастник с ником &e%player% &aудален из списка!'
+  max_region_limit_reached: '&6&lЗащита &8| &fДостигнут лимит по числу приватов.'
+  region_in_another_region_is_not_allowed: '&6&lЗащита &8| &fНельзя установить регион-блок внутри чужого привата.'
+  region_intersection_is_not_allowed: '&6&lЗащита &8| &fСоздаваемый приват будет пересекать один из вам не принадлежащих.'
+  region_created: '&6&lЗащита &8| &fПриват создан.'
+  region_removed: '&6&lЗащита &8| &fПриват удален.'
+  you_is_not_an_owner_of_this_region: '&6&lЗащита &8| &fВы не являетесь владельцем этого привата чтобы сделать это.'
+  you_is_not_an_owner_or_a_member_of_this_region: '&6&lЗащита &8| &fВы не являетесь владельцем или участником этого региона чтобы сделать это.'
+  region_join: '&6&lЗащита &8| &fВы вошли в приват игрока %owner%!'
+  region_quit: '&6&lЗащита &8| &fВы вышли из привата игрока %owner%!'
+  reload_success: '&6&lЗащита &8| &fПлагин перезагружен!'
+  permission_denied: '&6&lЗащита &8| &fОтказано в доступе.'
+  help:
+    - '&e/protectregion reload &7- перезагрузить плагин'
+    - '&e/protectregion help &7- показать список команд'
+    - '&e/protectregion &b(ник) &eadd &b(ID регион-блока) &7- выдать игроку регион-блок'
+
+permission:
+  reload: protectaddon.reload # Разрешение на перезагрузку этого плагина.
+  add_region_block: protectaddon.add_region_block # Разрешение на выдачу игроку регион-блока.
+  access_to_place_blocks_in_someone_else_regions: protectaddon.access_to_place_blocks_in_someone_else_regions # Разрешение на размещение блоков в чужих регионах.
+  access_to_break_blocks_in_someone_else_regions: protectaddon.access_to_break_blocks_in_someone_else_regions # Разрешение на разрушение блоков в чужих регионах.
+  access_to_interact_with_material_list_in_someone_else_regions: permission.access_to_interact_with_material_list_in_someone_else_regions # Разрешение на взаимодействие с материалами секции конфигурации "interact_material_list" в чужих регионах.
+  access_to_rotate_item_frame_content_in_someone_else_regions: protectaddon.access_to_rotate_item_frame_content_in_someone_else_regions # Разрешение на вращение предметов в рамках в чужих регионах.
+  access_to_drop_item_frame_content_or_destroy_item_frame_fully_in_someone_else_regions: protectaddon.access_to_drop_item_frame_content_or_destroy_item_frame_fully_in_someone_else_regions # Разрешение на выпадение предметов из рамок ударом по ней или полному разрушению рамки в чужих регионах.
+  access_to_change_someone_else_region_properties_by_clicking_region_block: protectaddon.access_to_change_someone_else_region_properties_by_clicking_region_block # Разрешение на открытие GUI чужих регионов и изменения их настроек путем клика по регион-блоку (блоку привата).
+  access_to_remove_someone_else_regions_by_destroying_region_block: protectaddon.access_to_remove_someone_else_regions_by_destroying_region_block # Разрешение на удаление чужого региона путем разрушения регион-блока (блока привата).
+
+# Конфигурация автоматического сохранения данных.
+auto_save:
+  # (Сек.) Интервал сохранения данных.
+  delay: 300
+
+# Приват распространяется от самого низа, до самого верха?
+region_infinity_height: false
+
+# (Сек.) Задержка до возможности установить следующий регион-блок.
+region_block_place_delay_seconds: 3
+
+#
+# Взрывы.
+#
+
+# Отключить урон от взрывов внутри привата?
+# Примечание: разрушение и выпадение регион-блока (блока привата) регулируется секциями "region_block_is_destroyed_in_explosion" и "does_region_block_drop_when_it_explodes".
+disable_region_explosions: false
+
+# Разрушать регион-блок (блок привата) в случае если он должен быть разрушен взрывом?
+# Например: если false, то при взрыве в регионе, регион-блок (блок привата) останется не тронутым.
+region_block_is_destroyed_upon_explosion: true
+
+# Выпадает ли регион-блок (блок привата) в случае если он был разрушен взрывом?
+does_region_block_drop_when_it_explodes: false
+
+#
+# Изменения.
+#
+
+# Отключить изменения блоков внутри привата?
+# Например:
+# - Овца ест траву меняя блоки травы на блоки земли.
+# - Иссушитель ломает блоки (не взрывом спавна или стреляя головами) своим телом меняя их на блоки воздуха.
+disable_region_changes: true
+
+# Изменять регион-блок (блок привата) в случае если он должен быть изменен?
+# Что подразумевается под словом "изменен" смотрите в секции "disable_region_changes".
+region_block_changes_when_changing: false
+
+#
+#
+#
+
+# Дать игрокам возможность менять PVP режим в регион-блоке (блок привата)?
+# Если отключить эту опцию, то кнопка в GUI пропадет, а PVP будет работать как обычно.
+enable_pvp_controller_in_gui_for_players: false
+
+# Дать игрокам возможность менять доступ к взаимодействию с сундуками, дверьми и тд. в регион-блоке (блок привата)?
+# Если отключить эту опцию, то кнопка в GUI пропадет, а доступ к взаимодействию будет работать как обычно.
+enable_interact_controller_in_gui_for_players: true
+
+# Если опция enable_interact_controller_in_gui_for_players: true, то какие материалы/блоки
+# должны попадать под ее действие?
+#
+# Примечание: аналогично сделано и в WorldGuard, но список материалов задан внутри плагина.
+# Для поддержания работы плагина на всех версиях этот список вынесен в конфигурацию и изменяем.
+# В противном случае без списка конкретных материалов любые взаимодействия с блоками, включая
+# установку и разрушение будут попадать под "взаимодействие" с ними и будет путаница (ломать/строить разрешено - но нельзя).
+#
+# Используйте материалы версии ядра на котором запускаете плагин (по умолничаю: 1.8.8).
+# Списки всех материалов для каждой версии:
+# https://helpch.at/docs/1.8.8/org/bukkit/Material.html
+# https://helpch.at/docs/x.x.x/org/bukkit/Material.html
+# ...
+interact_material_list:
+  - ANVIL
+  - JUKEBOX
+  - BLACK_BED
+  - BLUE_BED
+  - BROWN_BED
+  - CYAN_BED
+  - GRAY_BED
+  - GREEN_BED
+  - LIGHT_BLUE_BED
+  - LIGHT_GRAY_BED
+  - LIME_BED
+  - MAGENTA_BED
+  - ORANGE_BED
+  - PINK_BED
+  - PURPLE_BED
+  - RED_BED
+  - WHITE_BED
+  - YELLOW_BED
+  - LEVER
+  - ACACIA_BUTTON
+  - BIRCH_BUTTON
+  - DARK_OAK_BUTTON
+  - JUNGLE_BUTTON
+  - OAK_BUTTON
+  - SPRUCE_BUTTON
+  - STONE_BUTTON
+  - NOTE_BLOCK
+  - CAULDRON
+  - PISTON
+  - MOVING_PISTON
+  - STICKY_PISTON
+  - CHEST
+  - TRAPPED_CHEST
+  - ENDER_CHEST
+  - SPRUCE_PRESSURE_PLATE
+  - ACACIA_PRESSURE_PLATE
+  - BIRCH_PRESSURE_PLATE
+  - DARK_OAK_PRESSURE_PLATE
+  - JUNGLE_PRESSURE_PLATE
+  - OAK_PRESSURE_PLATE
+  - STONE_PRESSURE_PLATE
+  - HEAVY_WEIGHTED_PRESSURE_PLATE
+  - LIGHT_WEIGHTED_PRESSURE_PLATE
+  - PUMPKIN
+  - COMMAND_BLOCK
+  - CHAIN_COMMAND_BLOCK
+  - REPEATING_COMMAND_BLOCK
+  - CRAFTING_TABLE
+  - DARK_OAK_DOOR
+  - JUNGLE_DOOR
+  - OAK_DOOR
+  - SPRUCE_DOOR
+  - ACACIA_DOOR
+  - BIRCH_DOOR
+  - ACACIA_TRAPDOOR
+  - BIRCH_TRAPDOOR
+  - DARK_OAK_TRAPDOOR
+  - JUNGLE_TRAPDOOR
+  - OAK_TRAPDOOR
+  - SPRUCE_TRAPDOOR
+  - IRON_TRAPDOOR
+  - ACACIA_FENCE_GATE
+  - BIRCH_FENCE_GATE
+  - DARK_OAK_FENCE_GATE
+  - JUNGLE_FENCE_GATE
+  - OAK_FENCE_GATE
+  - SPRUCE_FENCE_GATE
+  - IRON_BARS
+  - ENCHANTING_TABLE
+  - SPAWNER
+  - END_PORTAL_FRAME
+  - FURNACE
+  - BLAST_FURNACE
+  - SMOKER
+  - TNT
+  - BREWING_STAND
+  - BARREL
+  - SMITHING_TABLE
+  - COMPOSTER
+  - LECTERN
+  - GRINDSTONE
+  - STONECUTTER
+  - LOOM
+  - CARTOGRAPHY_TABLE
+  - BELL
+  - BEEHIVE
+  - RED_SHULKER_BOX
+  - ORANGE_SHULKER_BOX
+  - YELLOW_SHULKER_BOX
+  - GREEN_SHULKER_BOX
+  - BLUE_SHULKER_BOX
+  - PURPLE_SHULKER_BOX
+  - WHITE_SHULKER_BOX
+  - BLACK_SHULKER_BOX
+  - PINK_SHULKER_BOX
+  - LIGHT_GRAY_SHULKER_BOX
+  - GRAY_SHULKER_BOX
+  - CYAN_SHULKER_BOX
+  - LIGHT_BLUE_SHULKER_BOX
+  - LIME_SHULKER_BOX
+  - MAGENTA_SHULKER_BOX
+  - BROWN_SHULKER_BOX
+
+default_max_regions: 2 # Максимальное число приватов для игрока по умолчанию.
+
+# Если игрок "на шифте", поставить блок как обычный в любом случае?
+#
+# true - посталенный "на шифте" регион-блок превратится в обычный блок в любом случае, а не будет создавать новый приват.
+# Подойдет если в качестве регион-блоков используются "ванильные" блоки и игрок хочет из них что-то строить, а не приватить.
+# Не подойдет если в качестве регион-блоков используются "кастомные" (например задано название или описание конфигом), тк.
+# все эти кастомные данные будут потеряны после установки и разрушения такого блока (после разрушения выпадет обычный блок).
+#
+# false - настройка по умолчанию, посталвенный регион-блок создает приват.
+force_place_region_block_like_normal_block_when_player_is_shifting: false
+
+limitation_list:
+  limitation_1:
+    max_regions: 3 # Максимальное число приватов при наличии разрешения.
+    permission: 'protectaddon.donator_1' # Разрешение при наличии которого игрок сможет иметь максимально 'max_regions' приватов.
+  limitation_2:
+    permission: 'protectaddon.donator_2'
+    max_regions: 4
+  limitation_3:
+    permission: 'protectaddon.donator_3'
+    max_regions: 5
+  limitation_4:
+    permission: 'protectaddon.donator_4'
+    max_regions: 6
+  limitation_5:
+    permission: 'protectaddon.donator_5'
+    max_regions: 7
+  limitation_6:
+    permission: 'protectaddon.donator_6'
+    max_regions: 8
+  limitation_7:
+    permission: 'protectaddon.donator_7'
+    max_regions: 9
+  limitation_8:
+    permission: 'protectaddon.donator_8'
+    max_regions: 10
+  limitation_9:
+    permission: 'protectaddon.donator_12'
+    max_regions: 9999999
+
+hologram:
+  height: 2.0 # Высота голограммы над блоком.
+  lines:
+    - '&eВладелец: &b%owner%'
+    - '&eРадиус: &b%radius%'
+
+region_block_created_lightning_strike:
+  enable: true # Ударять молнией при установке регион-блока?
+
+region_block_created_title:
+  enable: true # Показывать тайтл при установке регион-блока?
+  title: '&aПриват создан!'
+  subtitle: '&bПКМ по блоку чтобы открыть меню.'
+  in: 20 # Тиков. (1 секунда = 20 тиков) Время появления.
+  stay: 20 # Тиков. (1 секунда = 20 тиков) Время отображения.
+  out: 20 # Тиков. (1 секунда = 20 тиков) Время исчезновения.
+
+enum:
+  access: # Конфигурация уровня доступа.
+    owner:
+      display_name: '&aТолько владелец'
+    member:
+      display_name: '&eТолько владелец и участники'
+    everyone:
+      display_name: '&cВсе'
+
+# Список названий миров где запрещено размещать регион-блоки.
+deny_region_block_place_world_name_list:
+  - "another_world"
+
+region_block_list: # Список регионов-блоков поставив которые создается приват.
+
+  region_block_1:
+    radius: 2 
+    item:
+      material: IRON_BLOCK 
+  region_block_2:
+    radius: 3
+    item:
+      material: GOLD_BLOCK 
+  region_block_3:
+    radius: 5
+    item:
+      material: DIAMOND_BLOCK 
+  region_block_4:
+    radius: 7
+    item:
+      material: EMERALD_BLOCK 
+  region_block_5:
+    radius: 10
+    item:
+      material: DIAMOND_ORE
+  region_block_6:
+    radius: 15
+    # Пример 2:
+    # В примере конфигурации только алмазный блок с таким
+    # названием и таким описанием при его установке будет
+    # создавать приват с данным радиусом.
+    #
+    # Примечание: при ломании регион-блока выпадет
+    # этот кастомный блок, а не обычный, поэтому после
+    # разрушения регион-блок можно использовать повторно.
+    #
+    # Например такой регион-блок можно выдавать игроку командой (например для продажи регион-блоков в магазине за валюту):
+    # /protectaddon Steve add region_block_2
+    item:
+      material: EMERALD_ORE
+      display_name: '#fb1f3aБ#fb2937о#fb3234л#fc3c31ь#fc452eш#fc4f2bо#fc5928й #fc6224п#fc6c21р#fd751eи#fd7f1bв#fd8818а#fd9215т'
+      description:
+        - '&7Поставьте этот блок чтобы'
+        - '&7создать приват размером 15х15.'
+
+    # Чтобы создать блок не отличающийся по названию и описанию от ванильного
+    # можно просто их не указывать, а чтобы его нельзя было использовать в крафте
+    # все же необходимо задать уникальную метку, в примере ниже для этого
+    # используется NBT тег - "болванка".
+#  region_block_3:
+#    radius: 5
+#    item:
+#      material: IRON_BLOCK
+#      nbt_tag_list: # Список NBT тегов предмета (требуется плагин NBT API https://www.spigotmc.org/resources/nbt-api.7939/).
+#        random_key: 1234 # Случайный "болванка" NBT тег который будет отличать обычный железный блок от этого, такой с NBT
+#                         # тегом скрафтить не получится, только выдать командой.
+
+gui:
+  navigation:
+    main:
+      material: ARROW
+      display_name: '&fГлавное меню'
+      description:
+        - ''
+        - '&eКликните чтобы открыть!'
+  region:
+    title: 'Регион'
+    size: 9
+    enable_someone_else_join_left_this_region_message_announcement:
+      position:
+        x: 2
+        y: 1
+      material: IRON_TRAPDOOR
+      display_name: '&fСообщать о входе/выходе других игроков в регион'
+      description:
+        - '&7Если другой игрок зайдет или выйдет'
+        - '&7из этого региона, вы получите об'
+        - '&7этом сообщение в чате.'
+        - ''
+        - '&7Статус: %status%'
+        - ''
+        - '&eКликните чтобы изменить!'
+    change_interact_access:
+      position:
+        x: 3
+        y: 1
+      material: REDSTONE_BLOCK
+      display_name: '&fДоступ к сундукам и механизмам'
+      description:
+        - '&7Кто может взаимодействовать'
+        - '&7ПКМ/ЛКМ с объектами в этом регионе.'
+        - '&7Например: открывать сундуки или'
+        - '&7двери.'
+        - ''
+        - '&7Доступ: %access%'
+        - ''
+        - '&eКликните чтобы изменить!'
+    change_block_place_access:
+      position:
+        x: 4
+        y: 1
+      material: GRASS
+      display_name: '&fДоступ к установке блоков'
+      description:
+        - '&7Кто может ставить блоки'
+        - '&7внутри этого региона.'
+        - ''
+        - '&7Доступ: %access%'
+        - ''
+        - '&eКликните чтобы изменить!'
+    change_block_break_access:
+      position:
+        x: 5
+        y: 1
+      material: IRON_PICKAXE
+      display_name: '&fДоступ к ломанию блоков'
+      description:
+        - '&7Кто может ломать блоки'
+        - '&7внутри этого региона.'
+        - ''
+        - '&7Доступ: %access%'
+        - ''
+        - '&eКликните чтобы изменить!'
+    members:
+      position:
+        x: 6
+        y: 1
+      material: BOOK
+      display_name: '&fДобавить участника'
+      description:
+        - '&7По нажатию ПКМ меню закроется, а'
+        - '&7в чат нужно будет отправить ник'
+        - '&7участника который будет добавлен.'
+        - ''
+        - '&eЛКМ чтобы открыть список участников!'
+        - '&eПКМ чтобы добавить участника!'
+    change_pvp:
+      position:
+        x: 7
+        y: 1
+      material: IRON_SWORD
+      display_name: '&fРежим PVP'
+      description:
+        - '&7Разрешено ли PVP'
+        - '&7внутри этого региона.'
+        - ''
+        - '&7Статус: %status%'
+        - ''
+        - '&eКликните чтобы изменить!'
+  member_list:
+    title: 'Список участников'
+    size: 45

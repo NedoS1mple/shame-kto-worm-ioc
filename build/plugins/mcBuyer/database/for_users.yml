@@ -1,0 +1,8 @@
+player_data:
+  ==: mcBuyerPlayerData
+  statistic:
+    diamond_static: 1
+    carrot_static: 1
+  auto_sell: {}
+  player_name: for_users
+  enable_auto_sell: false

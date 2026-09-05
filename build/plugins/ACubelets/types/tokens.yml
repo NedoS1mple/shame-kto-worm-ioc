@@ -1,0 +1,201 @@
+type:
+  name: '{#10fb28}К{#0ff427}е{#0eed26}й{#0de625}с {#0bdf24}с {#0ad823}т{#09d123}о{#08ca22}к{#07c321}е{#06bc20}н{#04b51f}а{#03ae1e}м{#02a71d}и'
+  animation: animation18
+  expiration: 2w
+  icon:
+    texture: base64:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGJhNTU2NzFmOTdmZjNiZmM1YmUzMzVhZTkyY2Q5NzQ5YWJkNjE5ZTdhZmMyYTY2NzM1OTdiODBiNzU1Yzc0MSJ9fX0=
+  description:
+  - '&c&lМожет выпасть:'
+  lore:
+    opening:
+      available:
+      - '{#10fb28}➥ {#0ff427}Н{#0eed26}а{#0de625}ж{#0bdf24}м{#0ad823}и&f, чтобы открыть!'
+      - ''
+      - '&f Получен: &a%received% назад'
+      - '&f Закончится через: &a%expires%'
+      expired:
+      - '&5Received: &a%received% ago'
+      - '&5Expires: &cExpired'
+      - ''
+      - '%description%'
+      - ''
+  rarities:
+    easy3:
+      name: 18%
+      chance: 18.0
+      duplicatePointsRange: 50-450
+    easy2:
+      name: 17%
+      chance: 17.0
+      duplicatePointsRange: 50-450
+    easy4:
+      name: 14%
+      chance: 14.0
+      duplicatePointsRange: 50-450
+    easy1:
+      name: 13%
+      chance: 13.0
+      duplicatePointsRange: 50-450
+    easy5:
+      name: 13%
+      chance: 13.0
+      duplicatePointsRange: 50-450
+    easy6:
+      name: 10%
+      chance: 10.0
+      duplicatePointsRange: 50-450
+    easy:
+      name: 9%
+      chance: 9.0
+      duplicatePointsRange: 50-450
+    easy7:
+      name: 4%
+      chance: 4.0
+      duplicatePointsRange: 50-450
+    easy8:
+      name: 2%
+      chance: 2.0
+      duplicatePointsRange: 50-450
+    easy9:
+      name: 1%
+      chance: 1.0
+      duplicatePointsRange: 50-450
+    easy10:
+      name: 42%
+      chance: 0.2
+      duplicatePointsRange: 50-450
+  rewards:
+    reward_0:
+      name: '&e1650 Токенов'
+      rarity: easy3
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - points give %player% 1650 -m
+      permission: []
+      item: []
+      icon:
+        material: EMERALD
+    reward_1:
+      name: '&2500 Токенов'
+      rarity: easy2
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - points give %player% 500 -m
+      permission: []
+      item: []
+      icon:
+        material: EMERALD
+    reward_2:
+      name: '&2999 Токенов'
+      rarity: easy4
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - points give %player% 999 -m
+      permission: []
+      item: []
+      icon:
+        material: EMERALD
+    reward_3:
+      name: '&2250 Токенов'
+      rarity: easy1
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - points give %player% 250 -m
+      permission: []
+      item: []
+      icon:
+        material: EMERALD
+    reward_4:
+      name: '&a1400 Токенов'
+      rarity: easy5
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - points give %player% 1400 -m
+      permission: []
+      item: []
+      icon:
+        material: EMERALD
+    reward_5:
+      name: '&a1200 Токенов'
+      rarity: easy6
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - points give %player% 1200 -m
+      permission: []
+      item: []
+      icon:
+        material: EMERALD
+    reward_6:
+      name: '&41 Токен'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - points give %player% 1 -m
+      permission: []
+      item: []
+      icon:
+        material: EMERALD
+    reward_7:
+      name: '&e2500 Токенов'
+      rarity: easy7
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - points give %player% 2500 -m
+      permission: []
+      item: []
+      icon:
+        material: EMERALD
+    reward_8:
+      name: '&62500 Токенов'
+      rarity: easy8
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - points give %player% 2500 -m
+      permission: []
+      item: []
+      icon:
+        material: EMERALD
+    reward_9:
+      name: '&65000 Токенов'
+      rarity: easy9
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - points give %player% 5000 -m
+      permission: []
+      item: []
+      icon:
+        material: EMERALD
+    reward_10:
+      name: '&c100,000 Токенов'
+      rarity: easy10
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - points give %player% 100000 -m
+      permission: []
+      item: []
+      icon:
+        material: EMERALD
+  key:
+    material: TRIPWIRE_HOOK
+    name: donate's key
+    lore:
+    - '&8&oGo to a Cubelets Machine to'
+    - '&8&oopen this key.'
+    - ' '
+    - '&a&lLeft-Click: &6Preview rewards'
+    - '&a&lRight-Click: &6Open cubelet key'
+    enchants:
+      UNBREAKING: 1
+    flags:
+    - HIDE_ENCHANTS

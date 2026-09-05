@@ -1,0 +1,326 @@
+type:
+  name: '{#b795ec}К{#b08aea}е{#a980e8}й{#a275e6}с {#9b6be4}с {#9460e2}к{#8d56e0}н{#864bde}и{#7f41dc}г{#7836da}а{#712cd8}м{#6a21d6}и'
+  animation: animation12
+  expiration: 2w
+  icon:
+    texture: base64:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y2NmY3ZjAzMTI1Y2Y1NDczMzY5NmYzNjMyZjBkOWU2NDcwYmFhYjg0OTg0N2VhNWVhMmQ3OTE1NmFkMGY0MCJ9fX0=
+  description:
+  - '&c&lМожет выпасть:'
+  lore:
+    opening:
+      available:
+      - '{#b795ec}➥ {#b08aea}Н{#a980e8}а{#a275e6}ж{#9b6be4}м{#9460e2}и&f, чтобы открыть!'
+      - ''
+      - '&f Получен: {#9b6be4}%received% назад'
+      - '&f Закончится через: {#9b6be4}%expires%'
+      expired:
+      - '&5Received: &a%received% ago'
+      - '&5Expires: &cExpired'
+      - ''
+      - '%description%'
+      - ''
+  rarities:
+    easy:
+      name: 25%
+      chance: 25.0
+      duplicatePointsRange: 50-450
+  rewards:
+    reward_0:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: a2961274-887d-4fbd-aae3-4b638431f5cc
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:sharpness",lvl:5}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_1:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: a541546e-5c8d-4ad8-9817-29419ebe393e
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:protection",lvl:5}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_2:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: 96e280db-c460-4d73-881f-eeea5bfd82fb
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:power",lvl:5}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_3:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: af51c796-cca5-4cc3-a336-c5bb839cbb97
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:looting",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_4:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: 4f18791d-c143-4ea6-9c1d-2a65c55e7b5a
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:protection",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_5:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: 470f9228-fff1-4c12-ae4f-748e716c2c39
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:flame",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_6:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: 56ef6fcf-fa14-4f03-8fc4-f95799ba6cbf
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:infinity",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_7:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: 702b424c-8c1e-4afe-a511-14c7c844f2e9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:bane_of_arthropods",lvl:5}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_8:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: 58277816-3f47-4302-ae94-42bc429ccc7e
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:projectile_protection",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_9:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: bda80a9d-5d50-4e63-a74c-f790459c1d5a
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:smite",lvl:5}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_10:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: 66b3e349-f4a6-459b-a047-7400a699ecc6
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:blast_protection",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_11:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: 79f3484a-6ab2-4d79-bcea-dbb23bedcd34
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:projectile_protection",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_12:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: 3e1f144f-e2a0-4624-b740-1c9865f6c3f6
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:feather_falling",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_13:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: 4a783965-397d-4829-ac64-c2c2b2bb91fe
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_14:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: e9c8befe-c40b-41e2-b9fc-fd0371e888c6
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:sweeping",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_15:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: 7edf825c-096d-4a0d-9b04-53f5492c844f
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:fire_aspect",lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_16:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: a54d9ca5-96c8-4084-bcd4-969137d40adf
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_17:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: a1a7cefc-7ad9-4bdc-a934-f01c37152228
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:thorns",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_18:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: dd1fecd2-b8bc-433e-9194-f47761e61412
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:mending",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_19:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: 1ec1fb7e-0a0d-4d23-a07e-aaf43dbf7879
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:blast_mining",lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_20:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: b5e278b4-fef4-49d5-a106-228035add724
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:abrasion",lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+    reward_21:
+      name: '&eЗачарованная книга'
+      rarity: easy
+      rewardUUID: a457abc0-1d17-44c4-b092-53ad17d59b16
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:book{Enchantments:[{id:"minecraft:toxic",lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_BOOK
+        flags:
+        - HIDE_ENCHANTS
+  key:
+    material: TRIPWIRE_HOOK
+    name: donate's key
+    lore:
+    - '&8&oGo to a Cubelets Machine to'
+    - '&8&oopen this key.'
+    - ' '
+    - '&a&lLeft-Click: &6Preview rewards'
+    - '&a&lRight-Click: &6Open cubelet key'
+    enchants:
+      UNBREAKING: 1
+    flags:
+    - HIDE_ENCHANTS

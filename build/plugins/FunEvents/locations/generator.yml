@@ -1,0 +1,26 @@
+generator:
+  center:
+    x: 0
+    z: 0
+  radius: 1000
+  maxY: 120
+  minY: 30
+  check-floor:
+    toggle: true
+    radius: 5
+    step: 2
+  check-air:
+    toggle: true
+    radius: 5
+    high: 4
+    step: 2
+  banned-biomes:
+    - BEACH
+  banned-blocks:
+    - WATER
+  worlds:
+    world: 100
+  region-radius:
+    x: 30
+    y: 200
+    z: 30

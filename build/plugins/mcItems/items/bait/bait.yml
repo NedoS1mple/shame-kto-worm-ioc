@@ -1,0 +1,34 @@
+item:
+  display_name: '#559ED3🎣 #29BB85П#2FB790р#35B39Bи#3CAFA7м#42AAB2а#48A6BDн#4EA2C8к#559ED3а'
+  material: ENDER_EYE
+  description:
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffccccПри подборе другим игроком, кроме"
+    - "#ffccccвладельца (бросившего) #f52080создает взрыв#ffcccc."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  bait_component:
+    # (Поддерживается не целое число) Сила взрыва.
+    explosion_power: 5.0
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    message:
+      # Приманка сработала!
+      the_bait_worked: "#559ED3🎣 #29BB85П#2BB989р#2EB88Eи#30B692м#33B596а#35B39Bн#38B19Fк#3AB0A3а #3FADACс#41ABB0р#44A9B5а#46A8B9б#49A6BDо#4BA4C2т#4EA3C6а#50A1CAл#53A0CFа#559ED3!"
+      # Ты попался(ась) на приманку!
+      you_took_the_bait: "#559ED3🎣 #29BB85Т#2BBA88ы #2EB88Eп#30B791о#31B693п#33B596а#34B399л#36B29Cс#38B19Fя#39B0A2(#3BAFA5а#3DAEA8с#3EADABь#40ACAD) #43AAB3н#45A9B6а #48A7BCп#4AA6BFр#4BA4C2и#4DA3C5м#4EA2C7а#50A1CAн#52A0CDк#539FD0у#559ED3!"
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."

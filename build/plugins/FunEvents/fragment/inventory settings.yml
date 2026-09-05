@@ -1,0 +1,68 @@
+title: '#CC0000&l● #FF7300&lАрхеолог'
+size: 45
+decor:
+  ORANGE_STAINED_GLASS_PANE:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 17
+  - 18
+  - 26
+  - 27
+  - 35
+  - 36
+  - 37
+  - 38
+  - 39
+  - 40
+  - 41
+  - 42
+  - 43
+  - 44
+item:
+  name: '#2EE600[Обменять x{amount}]'
+  lore:
+  - '#FF7300 ➥ Нажмите#FFFFE6, чтобы обменять'
+  - '#FFFFE6Осколок на предмет'
+  glow: true
+fragments:
+  first:
+    slot: 20
+    amount: 1
+    inventory:
+      event: volcano
+      name: '&#FF6A09Богатый'
+  second:
+    slot: 22
+    amount: 5
+    inventory:
+      event: mystic
+      name: '&#FF6A09Богатый'
+  third:
+    slot: 24
+    amount: 10
+    inventory:
+      event: santa
+      name: '&#00FFFFЛегендарный'
+message:
+  no-fragments: '#FF0000[✘] Ошибка! #FFFFE6У вас нет #FBFB13Осколка астероида#FFFFE6!'
+  success: '&2[✔] #2EE600Успешно!'
+  no-inventory: '#FF0000[✘] Ошибка! #FFFFE6Предметы не найдены!'
+sound:
+  success:
+    toggle: true
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1
+    pitch: 1
+  failed:
+    toggle: true
+    sound: ENTITY_VILLAGER_NO
+    volume: 1
+    pitch: 1

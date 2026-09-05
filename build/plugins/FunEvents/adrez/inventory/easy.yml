@@ -1,0 +1,245 @@
+'820384852':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SOUL_LANTERN
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_blue","text":"[★]
+        "},{"italic":false,"color":"blue","text":"Проклятая душа"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#0890FB","text":"Оригинальный
+        предмет"}],"text":""}'
+      enchants:
+        PROTECTION_ENVIRONMENTAL: 1
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      PublicBukkitValues:
+        minecraft:eventsoul: soul
+  chance: 100
+  fixed: true
+'-1003960100':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENCHANTING_TABLE
+  chance: 10
+  fixed: true
+'1914816942':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENDER_CHEST
+  chance: 5
+  fixed: true
+'370290991':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        DURABILITY: 3
+  chance: 15
+  fixed: true
+'1889207336':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PRISMARINE_SHARD
+    amount: 32
+  chance: 25
+  fixed: false
+'-1517676485':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PRISMARINE_CRYSTALS
+    amount: 32
+  chance: 35
+  fixed: false
+'2040919920':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: NAUTILUS_SHELL
+    amount: 64
+  chance: 30
+  fixed: false
+'1100661666':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: EXPERIENCE_BOTTLE
+    amount: 64
+  chance: 20
+  fixed: false
+'1057351594':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: BLAZE_ROD
+    amount: 32
+  chance: 10
+  fixed: false
+'108033589':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENDER_PEARL
+    amount: 16
+  chance: 10
+  fixed: false
+'2108424271':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: FLINT
+    amount: 32
+  chance: 20
+  fixed: false
+'-1438931393':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DRAGON_HEAD
+  chance: 5
+  fixed: true
+'859719453':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SPLASH_POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E645DF","text":"Зелье
+        Медика"}],"text":""}'
+      custom-color:
+        ==: Color
+        RED: 255
+        BLUE: 255
+        GREEN: 22
+      custom-effects:
+      - ==: PotionEffect
+        effect: 21
+        duration: 900
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 10
+        duration: 900
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 10
+  fixed: true
+'-2131589427':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SPLASH_POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E65300","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E6CF00","text":"Зелье
+        Агента"}],"text":""}'
+      custom-color:
+        ==: Color
+        RED: 255
+        BLUE: 189
+        GREEN: 255
+      custom-effects:
+      - ==: PotionEffect
+        effect: 14
+        duration: 18000
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 12
+        duration: 18000
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 1
+        duration: 18000
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 5
+        duration: 6000
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 3
+        duration: 3600
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 10
+  fixed: true
+'195699509':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SPLASH_POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_green","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#2EE600","text":"Зелье
+        Победителя"}],"text":""}'
+      custom-color:
+        ==: Color
+        RED: 75
+        BLUE: 196
+        GREEN: 213
+      custom-effects:
+      - ==: PotionEffect
+        effect: 14
+        duration: 18000
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 21
+        duration: 3600
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 10
+        duration: 1200
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 11
+        duration: 1200
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 10
+  fixed: true

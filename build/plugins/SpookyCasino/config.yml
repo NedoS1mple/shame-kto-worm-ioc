@@ -1,0 +1,206 @@
+casino:
+  treasureHunter:
+    betChangeSound: BLOCK_ANVIL_HIT 1.0 1.0
+    walletChangeSound: BLOCK_ANVIL_HIT 1.0 1.0
+    rewardTakeSound: BLOCK_ANVIL_HIT 1.0 1.0
+    newGameSound: BLOCK_ANVIL_HIT 1.0 1.0
+    tntStartSound: BLOCK_ANVIL_HIT 1.0 1.0
+    tntEndSound: BLOCK_ANVIL_HIT 1.0 1.0
+    pickSound: BLOCK_ANVIL_HIT 1.0 1.0
+
+    guide:
+      - "&#D51515&lСтавка"
+      - " &#D51515●&#FFFFE6 Выберите необходимую Валюту."
+      - " &#D51515●&#FFFFE6 Возьмите с собой Валюту."
+      - " &#D51515●&#FFFFE6 Увеличьте ставку кликом"
+      - "  &#FFFFE6 левой кнопки мыши на Сундук."
+      - "&#D51515&lНачало игры"
+      - " &#D51515●&#FFFFE6 Настройте ставку."
+      - " &#D51515●&#FFFFE6 Нажмите на кнопку «Начать игру»."
+      - " &#D51515●&#FFFFE6 Нажмите на песок."
+      - " &#D51515●&#FFFFE6 Заберите выигрыш или начните"
+      - "  &#FFFFE6 новую игру c прежней или новой ставкой."
+    rewards:
+      0:
+        chance: 0.1
+        multiplier: 0.2
+        icon:
+          type: BRICK
+          name: "&#D51515[$]&#FF6600 Множитель 0.2"
+      1:
+        chance: 0.1
+        multiplier: 0.0
+        icon:
+          type: TNT
+          name: "&#FB0808[$] Проигрыш"
+      2:
+        chance: 0.1
+        multiplier: 1.2
+        icon:
+          type: GOLD_INGOT
+          name: "&#009933[$]&#CAFF17 Множитель 1.2"
+      3:
+        chance: 0.1
+        multiplier: 0.4
+        icon:
+          type: NETHER_BRICK
+          name: "&#D51515[$]&#FF6600 Множитель 0.4"
+      4:
+        chance: 0.1
+        multiplier: 1.0
+        icon:
+          type: IRON_INGOT
+          name: "&#009933[$]&#CAFF17 Множитель 1.0"
+      5:
+        chance: 0.1
+        multiplier: 1.5
+        icon:
+          type: DIAMOND
+          name: "&#009933[$]&#CAFF17 Множитель 1.5"
+  horseRacing:
+    betChangeSound: BLOCK_ANVIL_HIT 1.0 1.0
+    walletChangeSound: BLOCK_ANVIL_HIT 1.0 1.0
+    rewardTakeSound: BLOCK_ANVIL_HIT 1.0 1.0
+    newGameSound: BLOCK_ANVIL_HIT 1.0 1.0
+
+    horseOpenSound: BLOCK_ANVIL_HIT 1.0 1.0
+    selectHorseSound: BLOCK_ANVIL_HIT 1.0 1.0
+    racingFinishWonSound: BLOCK_ANVIL_HIT 1.0 1.0
+    racingFinishLoseSound: BLOCK_ANVIL_HIT 1.0 1.0
+
+    guide:
+      - "&#D51515&lСтавка"
+      - " &#D51515●&#FFFFE6 Выберите необходимую Валюту."
+      - " &#D51515●&#FFFFE6 Возьмите с собой Валюту."
+      - " &#D51515●&#FFFFE6 Увеличьте ставку кликом"
+      - "  &#FFFFE6 левой кнопки мыши на Сундук."
+      - "&#D51515&lНачало игры"
+      - " &#D51515●&#FFFFE6 Настройте ставку."
+      - " &#D51515●&#FFFFE6 Нажмите на кнопку «Начать игру»."
+      - " &#D51515●&#FFFFE6 Выберите коня."
+      - " &#D51515●&#FFFFE6 Следите за своим конём."
+      - " &#D51515●&#FFFFE6 Получите выигрыш в зависимости"
+      - "  &#FFFFE6 от места, которое занял Ваш конь."
+    selectingMenu:
+      title: "&#D51515&l＄&#FF0000&l Скачки:&#FF6600&l Выберите коня"
+      items:
+        horseSelect:
+          name: "&#00FF00[Выбрать коня]"
+        back:
+          type: TIPPED_ARROW
+          name: "&#D51515[⟲]&#FF6600 Вернуться.."
+          color: RED
+          lore:
+            - "&#FF6600 ➥ Нажмите&#FFFFE6, чтобы вернуться"
+    chanceMoving: 0.09
+    places:
+      0: 1.8
+      1: 0.8
+      2: 0.5
+      3: 0.2
+    horses:
+      1:
+        type: LEATHER_HORSE_ARMOR
+        color: WHITE
+        glassType: WHITE_STAINED_GLASS_PANE
+      2:
+        type: LEATHER_HORSE_ARMOR
+        color: SILVER
+        glassType: LIGHT_GRAY_STAINED_GLASS_PANE
+      3:
+        type: LEATHER_HORSE_ARMOR
+        color: GRAY
+        glassType: GRAY_STAINED_GLASS_PANE
+      4:
+        type: LEATHER_HORSE_ARMOR
+        color: YELLOW
+        glassType: YELLOW_STAINED_GLASS_PANE
+      5:
+        type: LEATHER_HORSE_ARMOR
+        color: GREEN
+        glassType: GREEN_STAINED_GLASS_PANE
+      6:
+        type: LEATHER_HORSE_ARMOR
+        color: BLACK
+        glassType: BLACK_STAINED_GLASS_PANE
+      7:
+        type: LEATHER_HORSE_ARMOR
+        color: ORANGE
+        glassType: ORANGE_STAINED_GLASS_PANE
+  roulette:
+    betChangeSound: BLOCK_ANVIL_HIT 1.0 1.0
+    walletChangeSound: BLOCK_ANVIL_HIT 1.0 1.0
+    rewardTakeSound: BLOCK_ANVIL_HIT 1.0 1.0
+    newGameSound: BLOCK_ANVIL_HIT 1.0 1.0
+    spinSound: BLOCK_ANVIL_HIT 1.0 1.0
+
+    guide:
+      - "&#D51515&lСтавка"
+      - " &#D51515●&#FFFFE6 Выберите необходимую Валюту."
+      - " &#D51515●&#FFFFE6 Возьмите с собой Валюту."
+      - " &#D51515●&#FFFFE6 Увеличьте ставку кликом"
+      - "  &#FFFFE6 левой кнопки мыши на Сундук."
+      - "&#D51515&lНачало игры"
+      - " &#D51515●&#FFFFE6 Настройте ставку."
+      - " &#D51515●&#FFFFE6 Нажмите на кнопку «Начать игру»."
+      - " &#D51515●&#FFFFE6 Дождитесь результата."
+      - " &#D51515●&#FFFFE6 Заберите выигрыш или начните"
+      - "  &#FFFFE6 новую игру c прежней или новой ставкой."
+    totalSeconds: 25 # Общее время прокрутки
+    # Каждый тик время прокрутки в тиках увеличиается на значение снизу
+    # �?значально рулетка двигается каждый тик
+    # Каждый тик прибавляется это значение -> период движения рулетки растет
+    # В данном случае 0.03 -> 0.03 * 20 = 0.6 -> значение растет на 0.6 тика каждую секунду
+    # За 25 секунд время прокрутки = 15 тиков
+    ticksSpinIncrease: 0.03
+    rewards:
+      0:
+        chance: 0.1
+        multiplier: 0.2
+        icon:
+          type: BRICK
+          name: "&#D51515[$]&#FF6600 Множитель 0.2"
+      1:
+        chance: 0.1
+        multiplier: 0.0
+        icon:
+          type: COAL
+          name: "&#FB0808[$] Проигрыш"
+      2:
+        chance: 0.1
+        multiplier: 1.2
+        icon:
+          type: GOLD_INGOT
+          name: "&#009933[$]&#CAFF17 Множитель 1.2"
+      3:
+        chance: 0.1
+        multiplier: 0.4
+        icon:
+          type: NETHER_BRICK
+          name: "&#D51515[$]&#FF6600 Множитель 0.4"
+      4:
+        chance: 0.1
+        multiplier: 1.0
+        icon:
+          type: IRON_INGOT
+          name: "&#009933[$]&#CAFF17 Множитель 1.0"
+      5:
+        chance: 0.1
+        multiplier: 3.0
+        icon:
+          type: DIAMOND
+          name: "&#009933[$]&#CAFF17 Множитель 3.0"
+
+wallet:
+  money:
+    changeBetPerClick: 100000
+    changeBetPerClickIncreased: 1000000
+  diamond:
+    changeBetPerClick: 1
+    changeBetPerClickIncreased: 10
+  iron:
+    changeBetPerClick: 1
+    changeBetPerClickIncreased: 10
+  nether:
+    changeBetPerClick: 1
+    changeBetPerClickIncreased: 10

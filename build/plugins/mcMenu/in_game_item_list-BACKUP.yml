@@ -1,0 +1,14 @@
+in_game_item_list:
+- ==: su.mcdev.minecraft.spigot.plugin.mcmenu.ingameitem.InGameItem
+  itemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DAMAGE_ALL: 1
+      repair-cost: 1
+      Damage: 780
+  id: custom_axe

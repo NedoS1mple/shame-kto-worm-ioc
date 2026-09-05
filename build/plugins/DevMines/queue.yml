@@ -1,0 +1,3 @@
+queues:
+    Обычная:
+    - {name: Мифическая, type: preconfigured}

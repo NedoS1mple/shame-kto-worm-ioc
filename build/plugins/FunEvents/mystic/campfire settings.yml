@@ -1,0 +1,68 @@
+item:
+  material: CAMPFIRE
+  name: "&#950000&l&kxxx &#A20000&lС&#B00000&lи&#Bd0000&lг&#CA0000&lн&#d70000&lа&#E50000&lл&#F20000&lь&#FF0000&lн&#F20000&lы&#E50000&lй &#d70000&lо&#CA0000&lг&#Bd0000&lо&#B00000&lн&#A20000&lь &#950000&l&kxxx"
+  lore:
+    - "&fУровень лута: {inventory}"
+    - ""
+    - "&7При помощи этого предмета"
+    - "&7можно призвать оригинальный"
+    - "&7Мистический Сундук!"
+  glow: true
+random-inventory: "&#ABFB00С&#B5F400л&#C0EE00у&#CAE700ч&#D4E000а&#DED900й&#E9D300н&#F3CC00ы&#FDC500й"
+cooldown: 60
+delay: 2
+spawn-y:
+  min: 30
+  max: 120
+admin:
+  no-cooldown: true
+  no-region: true
+message:
+  cooldown: "&#FB0808[✘] &fПодождите &6{time} сек."
+  ban-block: "&#FB0808[✘] &fВы не можете призвать здесь"
+  region: "&#FB0808[✘] &fВы не можете призвать в чужом регионе"
+  air: "&#FB0808[✘] &fВы не можете призвать мистик, если над ним есть блоки"
+  no-inventory: "&#FB0808[✘] &fНе рабочий мистик"
+  min-y: "&#FB0808[✘] &fВы не можете призвать мистик ниже 30 высоты"
+  max-y: "&#FB0808[✘] &fВы не можете призвать мистик выше 120 высоты"
+sound:
+  success:
+    toggle: false
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1
+    pitch: 1
+  failed:
+    toggle: true
+    sound: ENTITY_VILLAGER_NO
+    volume: 1
+    pitch: 1
+  spawn:
+    toggle: true
+    sound: ENTITY_LIGHTNING_BOLT_THUNDER
+    volume: 1
+    pitch: 1
+particles:
+  soul:
+    toggle: true
+    offsets:
+      x: 0.5
+      y: 2
+      z: 0.5
+    particle: SOUL
+    amount: 10
+    v1: 0
+    v2: 0
+    v3: 0
+    speed: 0.05
+  end-rod:
+    toggle: true
+    offsets:
+      x: 0.5
+      y: 2
+      z: 0.5
+    particle: END_ROD
+    amount: 10
+    v1: 0
+    v2: 0
+    v3: 0
+    speed: 0.05

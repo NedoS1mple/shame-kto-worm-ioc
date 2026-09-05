@@ -1,0 +1,41 @@
+item:
+  display_name: "#D7437B❤ #05558AЩ#1F5388и#3A5186т #6E4C83Г#884A81е#A3487Fр#BD457Dо#D7437Bя"
+  material: SHIELD
+  description:
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffccccПри блокировании с вероятностью #f5208035.01&7%"
+    - "#ffccccнакладывает эффект #f52080Регенерация II #ffccccна #f520802 &7сек#ffcccc."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  regeneration_shield_component:
+    # (Процентов) Шанс срабатывания способности.
+    ability_chance_percent: 35.01
+    # Список эффектов которые получит держатель щита с шансом при блокировании урона.
+    ability_potion_effect_list:
+
+      # ID эффекта который получит держатель щита с шансом при блокировании урона.
+      disorientation_effect_1:
+        potion_effect_type: REGENERATION
+        duration_seconds: 2
+        amplifier: 2
+
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    message:
+      # Сработала особая способность восстановления!
+      regeneration_hit: "#D7437B❤ #05558AС#0A558Aр#0F5489а#135489б#185389о#1D5388т#225388а#265288л#2B5287а #355187о#3A5186с#3E5086о#435086б#484F85а#4D4F85я #564E84с#5B4E84п#604D84о#644D83с#694C83о#6E4C83б#734C82н#784B82о#7C4B81с#814A81т#864A81ь #8F4980в#944980о#99487Fс#9E487Fс#A3487Fт#A7477Eа#AC477Eн#B1467Eо#B6467Dв#BA457Dл#BF457Dе#C4457Cн#C9447Cи#CD447Cя &e(&2%ability_chance_percent%%&e)#D7437B!"
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."

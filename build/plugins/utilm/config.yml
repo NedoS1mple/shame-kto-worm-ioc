@@ -1,0 +1,434 @@
+# Плагин: utilm (Утилита M)
+# Версия: 1.8+
+#
+# Описание:
+# Плагин добавляет API для разработчиков который упрощает разработку.
+
+# Отправлять сообщения отладки в консоль?
+debug: false
+
+message:
+  gui_click_delay: "&cВзаимодействовать с меню можно через &b%delay% &cсек." # Оставьте это сообщение пустым gui_click_delay: "", чтобы не отправлять сообщение.
+
+locale:
+  # Поддерживаемые языки:
+  # ar - Saudi Arabia
+  # be - Belarus
+  # bg - Bulgaria
+  # ca - Spain
+  # cs - Czechia
+  # da - Denmark
+  # de - Germany
+  # el - Greece
+  # en - United States
+  # es - Spain
+  # et - Estonia
+  # fi - Finland
+  # fr - France
+  # ga - Ireland
+  # hi - India
+  # hr - Croatia
+  # hu - Hungary
+  # in - Indonesia
+  # is - Iceland
+  # it - Italy
+  # iw - Israel
+  # ja - Japan
+  # ko - South Korea
+  # lt - Lithuania
+  # lv - Latvia
+  # mk - North Macedonia
+  # ms - Malaysia
+  # mt - Malta
+  # nl - Netherlands
+  # no - Norway
+  # pl - Poland
+  # pt - Portugal
+  # ro - Romania
+  # ru - Russia
+  # sk - Slovakia
+  # sl - Slovenia
+  # sq - Albania
+  # sr - Serbia
+  # sv - Sweden
+  # th - Thailand
+  # tr - Turkey
+  # uk - Ukraine
+  # vi - Vietnam
+  # zh - China
+  language: "ru"
+  second:
+    abbreviation: "сек." # sec.
+    declension:
+      1: "секунда" # 1 second
+      2: "секунды" # 2 seconds
+      3: "секунды" # 3 seconds
+      4: "секунды" # 4 seconds
+      10: "секунд" # 10 seconds
+      other: "секунд" # seconds
+  minute:
+    abbreviation: "мин."
+    declension:
+      1: "минута"
+      2: "минуты"
+      3: "минуты"
+      4: "минуты"
+      10: "минут"
+      other: "минут"
+  hour:
+    abbreviation: "час."
+    declension:
+      1: "час"
+      2: "часа"
+      3: "часа"
+      4: "часа"
+      10: "часов"
+      other: "часов"
+  day:
+    abbreviation: "дн."
+    declension:
+      1: "день"
+      2: "дня"
+      3: "дня"
+      4: "дня"
+      10: "дней"
+      other: "дней"
+  week:
+    abbreviation: "нед."
+    declension:
+      1: "неделя"
+      2: "недели"
+      3: "недели"
+      4: "недели"
+      10: "недель"
+      other: "недель"
+
+gui:
+  # Тиков. (1 секунда = 20 тиков) Время задержки до следующего клика в меню.
+  # Задержка полностью предотвращает перерисовку и выполнение действия клика.
+  # Укажите 0 или -1 чтобы полностью отключить задержку.
+  global_click_delay_ticks: 20
+
+  background_color: # Фон заливки меню, установите "material: AIR" чтобы отключить заливку.
+
+    # Тип материала предмета.
+    # Используйте материалы версии ядра на котором запускаете плагин (например: 1.8.8).
+    # Списки всех материалов для каждой версии:
+    # https://helpch.at/docs/1.8.8/org/bukkit/Material.html
+    # https://helpch.at/docs/x.x.x/org/bukkit/Material.html
+    # ...
+    material: WHITE_STAINED_GLASS_PANE
+
+    durability_data: 0 # (Опционально) Дата материала, удалите эту строку и дата учитываться не будет.
+    display_name: "&0"
+
+  # В любом случае, конфигурация ниже может не работать если
+  # переопределена поведением плагина использующего API UtilM.
+  pagination:
+    back_button:
+      slot_index_formula: "%navigation_line_number% * 9 - 2"
+      item:
+        material: ARROW
+        display_name: "&eНазад"
+        description:
+          - "&8&oПерейти на предыдущую страницу."
+    next_button:
+      slot_index_formula: "%navigation_line_number% * 9 - 1"
+      item:
+        material: ARROW
+        display_name: "&eДальше"
+        description:
+          - "&8&oПерейти на следующую страницу."
+    return_button:
+      slot_index_formula: "%navigation_line_number% * 9 - 9"
+      item:
+        material: ARROW
+        display_name: "&eВернуться"
+        description:
+          - "&8&oВернуться в предыдущий каталог."
+
+gui_open_animation:
+  # Анимация по умолчанию.
+  default_animation_id: gui_open_animation_3 # Анимация морской волны (делящая диагональ слева направо).
+
+  list:
+    gui_open_animation_1:
+      type: NONE # Без анимации (меню будет открыто мгновенно).
+
+    gui_open_animation_2:
+      type: CURTAIN_TOP_TO_BOTTOM # Шторка сверху вниз.
+      speed: 2 # Тиков. (1 секунда = 20 тиков) Время отрисовки 1 кадра.
+      # Звук кадра.
+      # Используйте звуки версии ядра на котором запускаете плагин (например: 1.8.8).
+      # Списки всех звуков для каждой версии:
+      # https://helpch.at/docs/1.8.8/org/bukkit/Sound.html
+      # https://helpch.at/docs/x.x.x/org/bukkit/Sound.html
+      # ...
+      # Начиная с версии 1.21.3, звуки задаются как в Minecraft команде "/playsound minecraft:<название звука>".
+      # Например "/playsound minecraft:ui.button.click", необходимо указывать <название звука>.
+      frame_sound:
+        sound: CLICK
+        sound_category: MASTER # 1.12+
+        volume: 1.0 # Громкость (от 0.0 до 2.0).
+        pitch: 1.0 # Искажение (от 0.0 до 2.0).
+      main_color:
+        material: WHITE_STAINED_GLASS_PANE
+        durability_data: 0
+        display_name: "&0"
+
+      # Звук завершения анимации, удалите секцию "end_sound" чтобы отключить звук завершения анимации.
+      end_sound:
+        sound: ENTITY_ITEM_PICKUP
+        sound_category: MASTER
+        volume: 1.0
+        pitch: 1.0
+
+    gui_open_animation_3:
+      type: SEA_WAVE # Анимация морской волны (делящая диагональ слева направо).
+      step_increment: 2 # След. кадр анимации, например если 2, то будет отрисован кадр через 1, если 1, без потерь.
+      speed: 2
+      frame_sound:
+        sound: CLICK
+        sound_category: MASTER
+        volume: 1.0
+        pitch: 1.0
+      main_color:
+        material: WHITE_STAINED_GLASS_PANE
+        durability_data: 0
+        display_name: "&0"
+      wave_color:
+        material: BLUE_STAINED_GLASS_PANE
+        durability_data: 11
+        display_name: "&0"
+      end_sound:
+        sound: ENTITY_ITEM_PICKUP
+        sound_category: MASTER
+        volume: 1.0
+        pitch: 1.0
+
+# Примеры конфигураций.
+#
+# Предметы - "Собери сам".
+#
+# Нижеприведенные секции можно комбинировать между
+# собой для получения требуемого результата.
+
+# Необычная кирка.
+item_unusual:
+  material: IRON_PICKAXE
+  display_name: "&aНеобычная кирка"
+  hide_attributes: true # скрыть атрибуты?
+  unbreakable: true # неразрушимый?
+  enchanted: true # зачарован?
+  description:
+    - "&bПервая строка"
+    - "&cВторая строка"
+
+# Красная шерсть.
+item_wool:
+  material: RED_WOOL
+
+# Красный кожаный нагрудник.
+item_colored_chestplate:
+  material: LEATHER_CHESTPLATE
+  rgb: # цвет кожаной брони (опционально)
+    r: 255 # красный 0-255
+    g: 0 # зеленый 0-255
+    b: 0 # синий 0-255
+
+# Поврежденный железный меч.
+item_damaged_sword:
+  material: IRON_SWORD
+  durability_data: 100
+  unbreakable: false
+
+# Голова со скином по URL.
+# Создать уникальную ссылку на текстуру: https://mineskin.org
+item_texture_url_head:
+  material: SKULL_ITEM
+  texture_url: "http://textures.minecraft.net/texture/bb24059e34b503ce6501a112be824f203e91ae1ddb2099fb7e04d59ceafce1a7"
+
+# Голова со скином по никнейму.
+item_owner_head:
+  material: SKULL_ITEM
+  owner: "Notch"
+
+# Голова со скином по значению текстуры.
+item_owner_value:
+  material: SKULL_ITEM
+  value: "ewogICJ0aW1lc3RhbXAiIDogMTY4MjU4NzU4MDU0NSwKICAicHJvZmlsZUlkIiA6ICIzN2I1Nzc5YWRkZjY0NzE3OGRhZDhjYzZiYTUzMzAyNCIsCiAgInByb2ZpbGVOYW1lIiA6ICJTb2NydW0iLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmIyNDA1OWUzNGI1MDNjZTY1MDFhMTEyYmU4MjRmMjAzZTkxYWUxZGRiMjA5OWZiN2UwNGQ1OWNlYWZjZTFhNyIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9"
+
+# Баннер с паттернами.
+item_banner:
+  material: BANNER
+  banner_pattern_list: # список паттернов (опционально)
+    pattern_1:
+      color: GRAY
+      pattern: BASE
+    pattern_2:
+      color: LIGHT_GRAY
+      pattern: BRICKS
+
+# Щит с паттернами.
+item_shield:
+  material: SHIELD # 1.9+
+  shield_pattern_list: # список паттернов (опционально)
+    pattern_1:
+      color: GRAY
+      pattern: BASE
+    pattern_2:
+      color: LIGHT_GRAY
+      pattern: BRICKS
+
+# Грязь с NBT тегами.
+item_dirt:
+  material: DIRT
+  nbt_tag_list:
+    key_1: 1     # Integer значение
+    key_2: 0.5   # Double значение
+    key_3: "ABC" # String значение
+    key_4: true  # Boolean значение
+    custom_key_name: "available on https://mvn.vepvep.com/minecraft" # произвольный ключ/значение
+
+# Железный меч на удачу III и отдачу I.
+item_enchanted:
+  material: IRON_SWORD
+  enchantment_list:
+    enchantment_1:
+      # Название зачарования.
+      # Используйте зачарования версии ядра на котором запускаете плагин.
+      # Списки всех зачарований для каждой версии:
+      # https://helpch.at/docs/1.8.8/org/bukkit/enchantments/Enchantment.html
+      # https://helpch.at/docs/x.x.x/org/bukkit/enchantments/Enchantment.html
+      # ...
+      name: LUCK
+      # Уровень зачарования.
+      level: 3
+    enchantment_2:
+      name: KNOCKBACK
+      level: 1
+
+item_potion:
+  material: POTION
+  amount: 1
+  hide_attributes: false # У ванильных зелий не скрыты атрибуты.
+  unbreakable: false # Ванильные зелья не имеют атрибута неразрушимости.
+  # Тип зелья.
+  # Используйте типы зелий версии ядра на котором запускаете плагин.
+  # Списки всех типов зелий для каждой версии:
+  # https://helpch.at/docs/1.8.8/org/bukkit/potion/PotionType.html
+  # https://helpch.at/docs/x.x.x/org/bukkit/potion/PotionType.html
+  # ...
+  potion_type: REGEN
+  level: 2 # Уровень зелья (сила эффекта I, II и т.д.).
+
+  # Список дополнительных эффектов накладываемых этим зельем.
+  # Чтобы не применять дополнительных эффектов оставьте секцию пустой "potion_effect_list: { }".
+  #
+  # ВНИМАНИЕ! На 1.8.8 этот список будет иметь приоритет над "potion_type", "potion_type"
+  # перестанет работать, а будут работать только эффекты из этого "potion_effect_list" списка.
+  # На версиях 1.12.2 и 1.16.5 срабатывает как "potion_type", так и список дополнительных
+  # эффектов "potion_effect_list".
+  potion_effect_list:
+    potion_effect_1:
+      # Тип эффекта зелья.
+      # Используйте типы эффектов зелий версии ядра на котором запускаете плагин.
+      # Списки всех типов эффектов зелий для каждой версии:
+      # https://helpch.at/docs/1.8.8/org/bukkit/potion/PotionEffectType.html
+      # https://helpch.at/docs/x.x.x/org/bukkit/potion/PotionEffectType.html
+      # ...
+      potion_effect_type: ABSORPTION
+      duration_seconds: 10 # (Сек.) Продолжительность действия.
+      amplifier: 1 # Сила эффекта I, II и т.д.
+
+item_splash_potion:
+  material: POTION
+  amount: 3
+  display_name: "&d&lСупер зелье"
+  description:
+    - "&aОписание супер зелья 1"
+    - "&bОписание супер зелья 2"
+  potion_type: SPEED
+  level: 2
+  splash: true # Взрывное?
+  potion_effect_list: { }
+
+#
+# Звук.
+#
+
+sound:
+  sound: ENTITY_PLAYER_LEVELUP
+  sound_category: MASTER # 1.12+
+  volume: 1.0 # громкость
+  pitch: 1.0 # искажение (от 0.0 до 2.0)
+
+#
+# Тайтл.
+#
+
+title:
+  title: "Заголовок"
+  subtitle: "Подзаголовок"
+  in: 20 # Тиков. (1 секунда = 20 тиков) Время появления.
+  stay: 20 # Тиков. (1 секунда = 20 тиков) Время отображения.
+  out: 20 # Тиков. (1 секунда = 20 тиков) Время исчезновения.
+
+#
+# Локация.
+#
+
+location:
+  world: world
+  x: 0.5 # координата X
+  y: 4 # координата Y
+  z: 0.5 # координата Z
+  yaw: 90 # поворот головы (от -180 до 180)
+  pitch: 0 # наклон головы (от -90 до 90)
+
+# Модуль кастомных предметов.
+itemm:
+  message:
+    player_offline: '&cЭтот игрок сейчас оффлайн.'
+    item_not_exist: '&cПредмета с таким ID не существует.'
+    help:
+      - '&e/itemm help &7- показать список команд'
+      - '&e/itemm list &7- показать список предметов'
+      - '&e/itemm &b(ник игрока онлайн) &eadd &b(ID) &7- выдать предмет игроку'
+      - '&e/itemm &b(ник игрока онлайн) &edel &b(ID) &7- забрать предмет у игрока'
+
+  # Базовые материалы для генерации OptiFine текстур.
+  material:
+    # Используйте материалы версии ядра на котором запускаете плагин (например: 1.8.8).
+    # Списки всех материалов для каждой версии:
+    # https://helpch.at/docs/1.8.8/org/bukkit/Material.html
+    # https://helpch.at/docs/x.x.x/org/bukkit/Material.html
+    # ...
+    iron_sword: IRON_SWORD # Материал железного меча.
+    iron_spade: IRON_SHOVEL # Материал железной лопаты.
+    iron_pickaxe: IRON_PICKAXE # Материал железной кирки.
+    iron_axe: IRON_AXE # Материал железного топора.
+    iron_hoe: IRON_HOE # Материал железной мотыги.
+    iron_ingot: IRON_INGOT # Материал железного слитка.
+    iron_helmet: IRON_HELMET # Материал железного шлема.
+    iron_chestplate: IRON_CHESTPLATE # Материал железного нагрудника.
+    iron_leggings: IRON_LEGGINGS # Материал железных понож.
+    iron_boots: IRON_BOOTS # Материал железных ботинок.
+    iron_barding: IRON_HORSE_ARMOR # Материал железной конской брони.
+    cookie: COOKIE # Материал печенья.
+
+  # Разрешить любые предметы кроме подконтрольных библиотеке?
+  # Другие предметы будут удалены при их появлении в ванильном меню, спавне в мире или подборе.
+  allow_natural_items: true
+
+  # Разрешить показывать над выброшенными предметами их название?
+  # Все предметы имеющие кастомное имя упав в мире будут иметь над собой название.
+  allow_custom_name_visible: false
+
+  # Изменения в конфигурации обновлят предмет в игре или он останется каким был?
+  # Например если предмет был зачарован или переименован в наковальне то в случае
+  # "true" он будет обновлен и станет как в конфигурации (без чар и переименования).
+  # В случае "false" даже если в конфигурации предмету присвоены новые способности
+  # или изменено название, эти изменения не костнутся уже призыванных предметов, а
+  # будут заментны только у новых призванных предметов.
+  re_update_items: true

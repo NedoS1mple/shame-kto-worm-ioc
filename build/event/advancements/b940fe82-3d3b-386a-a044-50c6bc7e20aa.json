@@ -1,0 +1,22 @@
+{
+  "minecraft:nether/root": {
+    "criteria": {
+      "entered_nether": "2025-03-25 17:19:45 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_nether": {
+    "criteria": {
+      "entered_nether": "2025-03-25 17:19:45 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:nether_wastes": "2025-03-25 17:17:10 +0100",
+      "minecraft:warped_forest": "2025-03-25 17:16:47 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 2586
+}

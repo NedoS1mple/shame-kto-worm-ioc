@@ -1,0 +1,192 @@
+generator:
+  static-location:
+    toggle: false
+    world: world
+    x: 100
+    y: 100
+    z: 100
+  center:
+    x: 0
+    z: 0
+  radius: 2500
+  maxY: 120
+  minY: 30
+  check-floor:
+    toggle: true
+    radius: 3
+    step: 2
+  check-air:
+    toggle: true
+    radius: 3
+    high: 1
+    step: 2
+  banned-biomes:
+  - OCEAN
+  - RIVER
+  - MOUNTAINS
+  - LUKEWARM_OCEAN
+  - FOREST
+  - SWAMP
+  - BEACH
+  banned-blocks:
+  - WATER
+  - LAVA
+  - SNOW
+  - OAK_LEAVES
+  - SPRUCE_LEAVES
+  - BIRCH_LEAVES
+  - JUNGLE_LEAVES
+  - ACACIA_LEAVES
+  - DARK_OAK_LEAVES
+  - AZURE_BLUET
+  - ALLIUM
+  - BLUE_ORCHID
+  - POPPY
+  - DANDELION
+  - SEAGRASS
+  - DEAD_BUSH
+  - FERN
+  - GRASS
+  - RED_MUSHROOM
+  - BROWN_MUSHROOM
+  - LILY_OF_THE_VALLEY
+  - CORNFLOWER
+  - OXEYE_DAISY
+  - PINK_TULIP
+  - WHITE_TULIP
+  - ORANGE_TULIP
+  - RED_TULIP
+  - LARGE_FERN
+  - TALL_GRASS
+  - PEONY
+  - ROSE_BUSH
+  - SUNFLOWER
+  - LILAC
+  - CACTUS
+  - SUGAR_CANE
+  - KELP
+  - LILY_PAD
+  worlds:
+    world: 100
+  region-radius:
+    x: 20
+    y: 200
+    z: 20
+  scheme-offsets:
+    x: 0
+    y: 3
+    z: 0
+  ignore-air-blocks: true
+  flags:
+    pvp: allow
+    build: deny
+    block-break: deny
+    block-place: deny
+    tnt: deny
+    lighter: deny
+    creeper-explosion: deny
+    ghast-fireball: deny
+    other-explosion: deny
+    enderman-grief: deny
+    fire-spread: deny
+    snowman-trails: deny
+    ravager-grief: deny
+    lava-fire: deny
+    water-flow: deny
+    lava-flow: deny
+    ice-melt: deny
+    chest-access: deny
+name: Алтарь
+time:
+  prestart: 180
+  start: 300
+  activated: 60
+  destroy-toggle: true
+  destroy: 60
+hologram:
+  toggle: true
+  offset:
+    x: 0.5
+    y: 2.5
+    z: 0.5
+  lines:
+    started:
+    - '&#FF5555[Мистический алтарь]'
+    - '&#AA00AA§k||| &fИдёт активация. &#AA00AA§k|||'
+    - '&fДо открытия: &#FF7300{timer} сек'
+    activated:
+    - '&#FF5555[Мистический алтарь]'
+    - '&#AA00AA§k||| &fОткрыт. &#AA00AA§k|||'
+    destroy:
+    - '&#FF5555[Мистический алтарь]'
+    - '&#AA00AA§k||| &fУдаление. &#AA00AA§k|||'
+message:
+  prestart:
+    toggle: true
+    lines:
+    - '&#FF5555 ╔&#F84E5C═&#F14763═&#EA406A╦&#E33971═&#DC3278═&#D52B80╦&#CD2387═&#C61C8E═&#BF1595╦&#B80E9C═&#B107A3═&#AA00AA╦&#9C00AA═&#8E00AA═&#8000AA╦&#7100AA═&#6300AA═&#5500AA╦&#4700AA═&#3900AA═&#2B00AA╦&#1C00AA═&#0E00AA═&#0000AA╗'
+    - '&#FF5555 ║'
+    - '&#FF5555 ║&#FFFFE6     &#AA00AA§k|||&#FF5555   [Мистический алтарь]   &#AA00AA§k|||'
+    - '&#FF5555 ║&#FFFFE6   Появится уже через&#F7CA14 3 минуты!'
+    - '&#FF5555 ║'
+    - '&#FF5555 ╚#F84E5C═&#F14763═&#EA406A╩&#E33971═&#DC3278═&#D52B80╩&#CD2387═&#C61C8E═&#BF1595╩&#B80E9C═&#B107A3═&#AA00AA╩&#9C00AA═&#8E00AA═&#8000AA╩&#7100AA═&#6300AA═&#5500AA╩&#4700AA═&#3900AA═&#2B00AA╩&#1C00AA═&#0E00AA═&#0000AA╝'
+  spawn:
+    toggle: true
+    lines:
+    - '&#FF5555 ╔&#F84E5C═&#F14763═&#EA406A╦&#E33971═&#DC3278═&#D52B80╦&#CD2387═&#C61C8E═&#BF1595╦&#B80E9C═&#B107A3═&#AA00AA╦&#9C00AA═&#8E00AA═&#8000AA╦&#7100AA═&#6300AA═&#5500AA╦&#4700AA═&#3900AA═&#2B00AA╦&#1C00AA═&#0E00AA═&#0000AA╗'
+    - '&#FF5555 ║'
+    - '&#FF5555 ║&#FFFFE6     &#AA00AA§k|||&#FF5555   [Мистический алтарь]   &#AA00AA§k|||'
+    - '&#FF5555 ║&#FFFFE6   Уровень лута: {inventory}'
+    - '&#FF5555 ║&#FFFFE6   Появился на координатах {cords}'
+    - '&#FF5555 ║'
+    - '&#FF5555 ╚#F84E5C═&#F14763═&#EA406A╩&#E33971═&#DC3278═&#D52B80╩&#CD2387═&#C61C8E═&#BF1595╩&#B80E9C═&#B107A3═&#AA00AA╩&#9C00AA═&#8E00AA═&#8000AA╩&#7100AA═&#6300AA═&#5500AA╩&#4700AA═&#3900AA═&#2B00AA╩&#1C00AA═&#0E00AA═&#0000AA╝'
+  activated:
+    toggle: false
+    lines:
+    - Мистический алтарь активировался
+  removing:
+    toggle: false
+    lines:
+    - Мистический алтарь пропал
+bossbar:
+  toggle: true
+  stroke:
+    started: '&cАлтарь &6- откроется через &c{timer} сек'
+    activated: '&cАлтарь &6- открыт Лутайте! &c{timer} сек'
+    destroy: '&cАлтарь &6- открыт До удаления &c{timer} сек'
+  style: SEGMENTED_20
+  color: RED
+  radius: 50
+toggle: true
+spawn-sound:
+  toggle: true
+  all-player: true
+  sound: ENTITY_LIGHTNING_BOLT_THUNDER
+  player-volume: 1
+  volume: 10
+  pitch: 1
+settings:
+  particles:
+    soul:
+      period: 3
+      radius: 5
+      amount-around: 3
+      particle: SOUL
+      amount: 5
+      v1: 0
+      v2: 0
+      v3: 0
+      speed: 0.05
+    witch:
+      period: 5
+      radius: 8
+      amount-around: 5
+      xz-step: 0.1
+      y-step: 0.2
+      high: 4
+      particle: SPELL_WITCH
+      amount: 1
+      v1: 0
+      v2: 0
+      v3: 0
+      speed: 0

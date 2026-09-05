@@ -1,0 +1,127 @@
+#Owner:
+#  tabprefix: "&0&l[&a&lOwner&0&l] &a"
+#  tagprefix: "&2&lOwner &a"
+Player:
+  tabprefix: "&0&l[&f&lPlayer&0&l] &3"
+  tagprefix: "&2&lPlayer &3"
+example_group:
+  header:
+    - "This is an example of per-group header/footer"
+  footer:
+    - "applied to a group"
+
+ # default settings for all groups, all groups will take properties from this section unless player's primary group overrides a specific setting
+
+owner:
+  tabprefix: '&4⚡ Владелец &f'
+  tagprefix: '&4⚡ Владелец &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+kurator:
+  tabprefix: '&6⚡ Куратор &f'
+  tagprefix: '&6⚡ Куратор &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+glmoder:
+  tabprefix: '&9⚡ Гл. Модер &f'
+  tagprefix: '&9⚡ Гл. Модер &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+moder:
+  tabprefix: '&b⚡ Модер &f'
+  tagprefix: '&b⚡ Модер &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+helper:
+  tabprefix: '&6⚡ Хелпер &f'
+  tagprefix: '&6⚡ Хелпер &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+yt:
+  tabprefix: '&f⚡ Юту&cбер &f'
+  tagprefix: '&f⚡ Юту&cбер &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+gercog:
+  tabprefix: '&x&5&3&0&4&0&4⚡ &x&7&3&0&B&0&9Г&x&7&3&0&B&0&9е&x&7&3&0&B&0&9р&x&7&3&0&B&0&9ц&x&7&3&0&B&0&9о&x&7&3&0&B&0&9г &f'
+  tagprefix: '&x&5&3&0&4&0&4⚡ &x&7&3&0&B&0&9Г&x&7&3&0&B&0&9е&x&7&3&0&B&0&9р&x&7&3&0&B&0&9ц&x&7&3&0&B&0&9о&x&7&3&0&B&0&9г &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+knyaz:
+  tabprefix: '&x&F&1&0&0&0&0⚡ &x&F&1&0&0&0&0К&x&E&D&0&1&0&Bн&x&E&9&0&2&1&5я&x&E&5&0&2&2&0з&x&E&1&0&3&2&Aь &f'
+  tagprefix: '&x&F&1&0&0&0&0⚡ &x&F&1&0&0&0&0К&x&E&D&0&1&0&Bн&x&E&9&0&2&1&5я&x&E&5&0&2&2&0з&x&E&1&0&3&2&Aь &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+princ:
+  tabprefix: '&x&E&8&2&0&0&0⚡ &x&E&8&2&0&0&0П&x&E&8&2&0&0&0р&x&E&8&2&0&0&0и&x&E&8&2&0&0&0н&x&E&8&2&0&0&0ц &f'
+  tagprefix: '&x&E&8&2&0&0&0⚡ &x&E&8&2&0&0&0П&x&E&8&2&0&0&0р&x&E&8&2&0&0&0и&x&E&8&2&0&0&0н&x&E&8&2&0&0&0ц &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+titan:
+  tabprefix: '&x&F&C&4&5&0&0⚡ &x&F&C&4&5&0&0Т&x&F&6&4&4&0&1и&x&F&0&4&4&0&3т&x&E&9&4&3&0&4а&x&E&3&4&2&0&5н &f'
+  tagprefix: '&x&F&C&4&5&0&0⚡ &x&F&C&4&5&0&0Т&x&F&6&4&4&0&1и&x&F&0&4&4&0&3т&x&E&9&4&3&0&4а&x&E&3&4&2&0&5н &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+elite:
+  tabprefix: '&x&C&2&0&3&F&0⚡ &x&C&1&0&0&F&0Э&x&B&C&0&0&E&Aл&x&B&8&0&0&E&4и&x&B&3&0&0&D&Eт&x&A&E&0&0&D&8а &f'
+  tagprefix: '&x&C&2&0&3&F&0⚡ &x&C&1&0&0&F&0Э&x&B&C&0&0&E&Aл&x&B&8&0&0&E&4и&x&B&3&0&0&D&Eт&x&A&E&0&0&D&8а &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+glava:
+  tabprefix: '&x&F&C&7&7&0&0⚡ &x&F&C&7&7&0&0Г&x&F&C&7&7&0&0л&x&F&C&7&7&0&0а&x&F&C&7&7&0&0в&x&F&C&7&7&0&0а &f'
+  tagprefix: '&x&F&C&7&7&0&0⚡ &x&F&C&7&7&0&0Г&x&F&C&7&7&0&0л&x&F&C&7&7&0&0а&x&F&C&7&7&0&0в&x&F&C&7&7&0&0а &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+squid:
+  tabprefix: '&x&0&0&F&C&F&4⚡ &x&0&0&F&C&F&4С&x&0&0&F&C&F&4к&x&0&0&F&C&F&4в&x&0&0&F&C&F&4и&x&0&0&F&C&F&4д &f'
+  tagprefix: '&x&0&0&F&C&F&4⚡ &x&0&0&F&C&F&4С&x&0&0&F&C&F&4к&x&0&0&F&C&F&4в&x&0&0&F&C&F&4и&x&0&0&F&C&F&4д &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+aspid:
+  tabprefix: '&x&0&0&C&B&F&C⚡ &x&0&0&C&B&F&CА&x&0&0&C&B&F&Cс&x&0&0&C&B&F&Cп&x&0&0&C&B&F&Cи&x&0&0&C&B&F&Cд &f'
+  tagprefix: '&x&0&0&C&B&F&C⚡ &x&0&0&C&B&F&CА&x&0&0&C&B&F&Cс&x&0&0&C&B&F&Cп&x&0&0&C&B&F&Cи&x&0&0&C&B&F&Cд &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+hero:
+  tabprefix: '&x&0&0&F&C&6&5⚡ &x&0&0&F&C&6&5Г&x&0&0&F&C&6&5е&x&0&0&F&C&6&5р&x&0&0&F&C&6&5о&x&0&0&F&C&6&5й &f'
+  tagprefix: '&x&0&0&F&C&6&5⚡ &x&0&0&F&C&6&5Г&x&0&0&F&C&6&5е&x&0&0&F&C&6&5р&x&0&0&F&C&6&5о&x&0&0&F&C&6&5й &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+strazh:
+  tabprefix: '&x&C&B&F&C&0&0⚡ &x&C&B&F&C&0&0С&x&C&B&F&C&0&0т&x&C&B&F&C&0&0р&x&C&B&F&C&0&0а&x&C&B&F&C&0&0ж &f'
+  tagprefix: '&x&C&B&F&C&0&0⚡ &x&C&B&F&C&0&0С&x&C&B&F&C&0&0т&x&C&B&F&C&0&0р&x&C&B&F&C&0&0а&x&C&B&F&C&0&0ж &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+baron:
+  tabprefix: '&x&5&B&F&C&E&2⚡ &x&5&B&F&C&E&2Б&x&5&B&F&C&E&2а&x&5&B&F&C&E&2р&x&5&B&F&C&E&2о&x&5&B&F&C&E&2н &f'
+  tagprefix: '&x&5&B&F&C&E&2⚡ &x&5&B&F&C&E&2Б&x&5&B&F&C&E&2а&x&5&B&F&C&E&2р&x&5&B&F&C&E&2о&x&5&B&F&C&E&2н &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: ' '
+
+default:
+  tabprefix: '&c⚡ &f'
+  tagprefix: '&c⚡ &f'
+  tabsuffix: ' %javascript_tcolor%%vault_suffix% '
+  tagsuffix: '%vault_suffix% '
+
+per-world:
+  world1:
+    Owner:
+      tabprefix: "&0&l[&a&lOwner&0&l] &a"
+      tagprefix: "&2&lOwner &a"

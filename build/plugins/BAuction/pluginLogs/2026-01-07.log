@@ -1,0 +1,34 @@
+[07:21:01] [Server thread/INFO]: Enabling BAuction v1.3.1
+[07:21:01] [Server thread/INFO]: [DEBUG] enable checkUpdate
+[07:21:01] [Server thread/INFO]: [DEBUG] enable enable BMenuApi
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load MenuLoader
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load db cfg
+[07:21:01] [Server thread/INFO]: [DEBUG] enable registerAdapters
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load UniqueNameGenerator
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load cfg
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load assetsManager
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load lang
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load logger
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load event manager
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load time util
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load TrieManager
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load econ
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load PAPI hook
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load black list
+[07:21:01] [Server thread/INFO]: [DEBUG] enable load db
+[07:21:01] [Server thread/INFO]: [DEBUG] enable check version
+[07:21:01] [Server thread/INFO]: [DEBUG] enable init commands
+[07:21:01] [bauc File Db loader/INFO]: Успешно загружено 0 предметов за 19 мс.
+[07:34:16] [Server thread/INFO]: [DEBUG] CraftPlayer{name=for_users} use command ah 
+[07:34:28] [Server thread/INFO]: [DEBUG] CraftPlayer{name=for_users} use command ah 
+[07:35:14] [Server thread/INFO]: [DEBUG] CraftPlayer{name=for_users} use command ah 
+[07:52:29] [Server thread/INFO]: [DEBUG] CraftPlayer{name=for_users} use command ah 
+[08:19:16] [Server thread/INFO]: [DEBUG] CraftPlayer{name=for_users} use command ah 
+[08:30:01] [Server thread/INFO]: [DEBUG] CraftPlayer{name=for_users} use command ah 
+[08:38:05] [Server thread/INFO]: Disabling BAuction v1.3.1
+[08:38:05] [Server thread/INFO]: [DEBUG] disable disable PAPI hook
+[08:38:05] [Server thread/INFO]: [DEBUG] disable disable logger
+[08:38:05] [Server thread/INFO]: [DEBUG] disable disable BMenuApi
+[08:38:05] [Server thread/INFO]: [DEBUG] disable disable db
+[08:38:05] [Server thread/INFO]: saved 0 items, 2 users and 0 unsold items in 2 ms
+[08:38:05] [Server thread/INFO]: [DEBUG] disable unregisterAdapters

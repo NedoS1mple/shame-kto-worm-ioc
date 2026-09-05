@@ -1,0 +1,240 @@
+generator:
+  static-location:
+    toggle: false
+    world: world
+    x: 100
+    y: 100
+    z: 100
+  center:
+    x: 0
+    z: 0
+  radius: 2500
+  maxY: 120
+  minY: 30
+  check-floor:
+    toggle: true
+    radius: 4
+    step: 3
+  check-air:
+    toggle: true
+    radius: 5
+    high: 4
+    step: 2
+  banned-biomes:
+  - OCEAN
+  - RIVER
+  - MOUNTAINS
+  - LUKEWARM_OCEAN
+  - FOREST
+  - SWAMP
+  - BEACH
+  banned-blocks:
+  - WATER
+  - LAVA
+  - SNOW
+  - OAK_LEAVES
+  - SPRUCE_LEAVES
+  - BIRCH_LEAVES
+  - JUNGLE_LEAVES
+  - ACACIA_LEAVES
+  - DARK_OAK_LEAVES
+  - AZURE_BLUET
+  - ALLIUM
+  - BLUE_ORCHID
+  - POPPY
+  - DANDELION
+  - SEAGRASS
+  - DEAD_BUSH
+  - FERN
+  - GRASS
+  - RED_MUSHROOM
+  - BROWN_MUSHROOM
+  - LILY_OF_THE_VALLEY
+  - CORNFLOWER
+  - OXEYE_DAISY
+  - PINK_TULIP
+  - WHITE_TULIP
+  - ORANGE_TULIP
+  - RED_TULIP
+  - LARGE_FERN
+  - TALL_GRASS
+  - PEONY
+  - ROSE_BUSH
+  - SUNFLOWER
+  - LILAC
+  - CACTUS
+  - SUGAR_CANE
+  - KELP
+  - LILY_PAD
+  worlds:
+    world: 100
+  region-radius:
+    x: 15
+    y: 200
+    z: 15
+  scheme-offsets:
+    x: 0
+    y: 8
+    z: 0
+  ignore-air-blocks: true
+  flags:
+    pvp: allow
+    build: deny
+    block-break: deny
+    block-place: deny
+    tnt: deny
+    lighter: deny
+    creeper-explosion: deny
+    ghast-fireball: deny
+    other-explosion: deny
+    enderman-grief: deny
+    fire-spread: deny
+    snowman-trails: deny
+    ravager-grief: deny
+    lava-fire: deny
+    water-flow: deny
+    lava-flow: deny
+    ice-melt: deny
+    chest-access: deny
+name: 'Вулкан'
+time:
+  prestart: 180
+  start: 300
+  activated: 60
+  destroy-toggle: true
+  destroy: 60
+hologram:
+  toggle: true
+  offset:
+    x: 0.5
+    y: 2
+    z: 0.5
+  lines:
+    started:
+    - '&#FF7300[Вулкан]'
+    - '&#FF0000§k||| &fИдёт активация. &#FF0000§k|||'
+    - '&fДо извержения: &#FF7300{timer} сек'
+    activated:
+    - '&#FF7300[Вулкан]'
+    - '&#FF0000§k||| &fИзвергается. &#FF0000§k|||'
+    destroy:
+    - '&#FF7300[Вулкан]'
+    - '&#FF0000§k||| &fУдаление &#FF0000§k|||'
+message:
+  prestart:
+    toggle: true
+    lines:
+    - ' &#FF7300╔&#FF6900═&#FF6000═&#FF5600╦&#FF4D00═&#FF4300═&#FF3A00╦&#FF3000═&#FF2600═&#FF1D00╦&#FF1300═&#FF0A00═&#FF0000╦&#EA0000═&#D50000═&#BF0000╦&#AA0000═&#950000═&#800000╦&#6A0000═&#550000═&#400000╦&#2B0000═&#150000═&#000000╗'
+    - ' &#FF7300║'
+    - ' &#FF7300║&#FFFFE6     &#FF0000§k|||&#FF7300   [Вулкан]   &#FF0000§k|||'
+    - ' &#FF7300║&#FFFFE6   Появится уже через&#FAC800 3 минуты!'
+    - ' &#FF7300║'
+    - ' &#FF7300╚&#FF6900═&#FF6000═&#FF5600╩&#FF4D00═&#FF4300═&#FF3A00╩&#FF3000═&#FF2600═&#FF1D00╩&#FF1300═&#FF0A00═&#FF0000╩&#EA0000═&#D50000═&#BF0000╩&#AA0000═&#950000═&#800000╩&#6A0000═&#550000═&#400000╩&#2B0000═&#150000═&#000000╝'
+  spawn:
+    toggle: true
+    lines:
+    - ' &#FF7300╔&#FF6900═&#FF6000═&#FF5600╦&#FF4D00═&#FF4300═&#FF3A00╦&#FF3000═&#FF2600═&#FF1D00╦&#FF1300═&#FF0A00═&#FF0000╦&#EA0000═&#D50000═&#BF0000╦&#AA0000═&#950000═&#800000╦&#6A0000═&#550000═&#400000╦&#2B0000═&#150000═&#000000╗'
+    - ' &#FF7300║'
+    - ' &#FF7300║&#FFFFE6     &#FF0000§k|||&#FF7300   [Вулкан]   &#FF0000§k|||'
+    - ' &#FF7300║&#FFFFE6   Уровень лута: {inventory}'
+    - ' &#FF7300║&#FFFFE6   Появился на координатах {cords}'
+    - ' &#FF7300║'
+    - ' &#FF7300╚&#FF6900═&#FF6000═&#FF5600╩&#FF4D00═&#FF4300═&#FF3A00╩&#FF3000═&#FF2600═&#FF1D00╩&#FF1300═&#FF0A00═&#FF0000╩&#EA0000═&#D50000═&#BF0000╩&#AA0000═&#950000═&#800000╩&#6A0000═&#550000═&#400000╩&#2B0000═&#150000═&#000000╝'
+  activated:
+    toggle: false
+    lines:
+    - Вулкан активировался
+  removing:
+    toggle: false
+    lines:
+    - Вулкан пропал
+bossbar:
+  toggle: true
+  stroke:
+    started: '&cВулкан &6- до начала: &c{timer} сек'
+    activated: '&cВулкан &6- извергается: &c{timer} сек'
+    destroy: '&cВулкан &6- до удаления: &c{timer} сек'
+  style: SEGMENTED_20
+  color: RED
+  radius: 50
+toggle: true
+spawn-sound:
+  toggle: true
+  all-player: true
+  sound: ENTITY_LIGHTNING_BOLT_THUNDER
+  player-volume: 1
+  volume: 10
+  pitch: 1
+settings:
+  particles:
+    build:
+      period: 1
+      campfire:
+        toggle: true
+        particle: SMOKE_LARGE
+        amount: 1
+        only-top: false
+        magma:
+          chance: 10
+          offset:
+            x: -4
+            y: -4
+            z: -4
+          magma-dispersion: 1
+          high: 3
+          y-step: 0.8
+          xz-dispersion: 0.2
+        v1: 0
+        v2: 0
+        v3: 0
+        speed: 0.05
+        high: 7
+        start-high: 5
+        smoke-amount: 1
+        start-dispersion: 2
+        x-dispersion: 0.05
+        z-dispersion: 0.3
+        offset:
+          x: 0.25
+          y: 0.8
+          z: 0.25
+      lava:
+        toggle: true
+        particle: LAVA
+        one-block: false
+        dispersion: 1.5
+        amount: 5
+        v1: 0
+        v2: 0
+        v3: 0
+      mycelium:
+        toggle: true
+        particle: TOWN_AURA
+        amount: 100
+        radius: 30
+        v1: 0
+        v2: 0
+        v3: 0
+    item:
+      toggle: true
+      period: 0.1
+      time: 4
+      particle: FLAME
+      amount: 1
+      v1: 0
+      v2: 0
+      v3: 0
+      speed: 0
+  sound:
+    item:
+      toggle: true
+      sound: ENTITY_CHICKEN_EGG
+      volume: 3
+      pitch: 1
+  item:
+    period: 0.5
+    pickup-delay: 60
+    name-visible: false
+    fire-ticks: 100
+    time-to-delete: 200
+    dispersion: 0.5

@@ -1,0 +1,56 @@
+item:
+  display_name: '#F62222🗡 #509794Д#6C8481а#87706Eм#A35D5Bа#BF4948г#DA3635е#F62222р'
+  material: JIGSAW
+  description:
+    - ""
+    - "&aСломать ПКМ"
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffccccНаносит урон &c-1 сердечко #ffccccвсем"
+    - "#ffccccсущностям в радиусе #f520803 #ffccccблоков."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  damageblock_component:
+    # Блок который будет установлен.
+    to_place_blockm:
+      # Используйте материалы версии ядра на котором запускаете плагин.
+      # Списки всех материалов для каждой версии:
+      # https://helpch.at/docs/1.8.8/org/bukkit/Material.html
+      # https://helpch.at/docs/x.x.x/org/bukkit/Material.html
+      # ...
+      material: JIGSAW
+    # Радиус атаки.
+    radius: 3
+    # Сила атаки. 2 еденицы = 1 сердечко обычного игрока.
+    damage: 2
+
+    # Источник партиклов, специального эффекта.
+    particle_emitter:
+      type: RISING_SPHERE # Тип.
+      radius: 3 # Радиус.
+      density: 300 # Кучность/число частиц.
+      animation_duration_ticks: 30 # (Тиков. 20 тиков = 1 сек.) Продолжительность 1 цикла анимации.
+      particle_hex_color: "#FF0000" # HEX Цвет партиклов.
+      spawn_offset_x: 0.5 # Смещение центра источника партиклов по X относительно места вставки .schem файла.
+      spawn_offset_y: 0.5 # Смещение центра источника партиклов по Y относительно места вставки .schem файла.
+      spawn_offset_z: 0.5 # Смещение центра источника партиклов по Z относительно места вставки .schem файла.
+
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    message:
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."
+      placed: "#F62222🗡 #509794У#618B89с#71807Dт#827472а#926866н#A35D5Bо#B45150в#C44544л#D53939е#E52E2Dн#F62222!"
+      broken: "#F62222🗡 #509794С#6C8481л#87706Eо#A35D5Bм#BF4948а#DA3635н#F62222!"

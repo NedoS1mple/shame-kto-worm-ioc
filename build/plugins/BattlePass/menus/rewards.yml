@@ -1,0 +1,370 @@
+menu-title: '&c&lУРОВНИ'
+menu-rows: 5
+draw-past-max-tier: true # Будет ли серое стекло в середине страницы создавать следующие страницы до последнего уровня.
+hide-tiers-without-rewards: false # true - уровни без наград будут скрыты
+close-on-reward-claim: false # true - после получения награды данное меню будет закрыто
+
+free-reward-slots:
+  slots: '11, 12, 13, 14, 15'
+
+
+premium-reward-slots:
+  slots: '29, 30, 31, 32, 33'
+  
+progress-track-slots:
+  slots: '1'
+
+
+menu:
+  '4':
+    item:
+      material: arrow:0
+      name: ' '
+      lore:
+        - ' &c[<<] &6Вернуться назад '
+        - ' '
+    actions:
+      - '[menu](page = 1) {portal}' # Если игрок на 1-ой странице, будет открыто меню "Battle Pass (/bp)" (главное меню Battle Pass)
+      - '[menu](page ! 1) {previous-page}' # Если игрок не на 1-ой странице, будет открыта предыдущая страница
+  '40':
+    item:
+      material: spectral_arrow:0
+      name: ' '
+      lore:
+        - ' &c[>>] &6Вперёд '
+        - ' '
+    actions:
+      - '[menu] {next-page}'
+  '0':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '1':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '9':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '18':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '27':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '36':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '37':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '44':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '35':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '26':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '17':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '8':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '7':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '43':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+      
+  '16':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '23':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '20':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '22':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '24':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '32':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '10':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '12':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '21':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '19':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '28':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '42':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '34':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '39':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '38':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '6':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '41':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '5':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '3':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '2':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '29':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '25':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+
+static-items:
+  progress-track-locked-item:
+    material: 'red_stained_glass_pane:0'
+    name: '&f'
+  progress-track-unlocked-item:
+    material: 'red_stained_glass_pane:0'
+    name: '&f'

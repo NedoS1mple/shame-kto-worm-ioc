@@ -1,0 +1,39 @@
+mobs:
+  easy:
+    PIGLIN:
+      entity: PIGLIN
+      min-hp: 40
+      max-hp: 60
+      weapon:
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLDEN_SWORD
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DAMAGE_ALL: 2
+            DURABILITY: 3
+      inventory: easy
+      chance: 100
+      min-money: 0
+      max-money: 0
+  hard:
+    WITHER_SKELETON:
+      entity: WITHER_SKELETON
+      min-hp: 100
+      max-hp: 150
+      weapon:
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHERITE_SWORD
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DAMAGE_ALL: 2
+            DURABILITY: 3
+      inventory: hard
+      chance: 100
+      min-money: 0
+      max-money: 0

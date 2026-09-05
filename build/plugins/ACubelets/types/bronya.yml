@@ -1,0 +1,492 @@
+type:
+  name: '{#81787b}К{#7c7476}е{#776f72}й{#726b6d}с {#6d6669}с {#696264}б{#645e5f}р{#5f595b}о{#5a5556}н{#555052}е{#504c4d}й'
+  animation: animation1
+  expiration: 2w
+  icon:
+    texture: base64:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzFhOTEyZTMzMmZjMDAxMGJlYmQwZjkzYTE0ZDhlM2VhNjVkMTMwMTEwMGNlYTNmYzVhZTcxOTkwZDk4NTgwNyJ9fX0=
+  description:
+  - '&c&lМожет выпасть:'
+  lore:
+    opening:
+      available:
+      - '{#81787b}➥ {#7c7476}Н{#776f72}а{#726b6d}ж{#6d6669}м{#696264}и&f, чтобы открыть!'
+      - ''
+      - '&f Получен: {#726b6d}%received% назад'
+      - '&f Закончится через: {#726b6d}%expires%'
+      expired:
+      - '&5Received: &a%received% ago'
+      - '&5Expires: &cExpired'
+      - ''
+      - '%description%'
+      - ''
+  rarities:
+    easy:
+      name: 25%
+      chance: 25.0
+      duplicatePointsRange: 50-450
+  rewards:
+    reward_0:
+      name: '&8Незеритовые ботинки'
+      rarity: easy
+      rewardUUID: f14f505e-ccf2-45dc-97ee-6534ded8e80a
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_boots
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_BOOTS
+    reward_1:
+      name: '&8Незеритовые ботинки'
+      rarity: easy
+      rewardUUID: 1470619e-d05d-4f2a-8307-f0fca9437664
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_boots{Enchantments:[{id:"minecraft:protection",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_BOOTS
+        flags:
+        - HIDE_ENCHANTS
+    reward_2:
+      name: '&8Незеритовые ботинки'
+      rarity: easy
+      rewardUUID: a40f7f34-11e9-49e5-86ef-f2969121d31b
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_boots{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_BOOTS
+        flags:
+        - HIDE_ENCHANTS
+    reward_3:
+      name: '&8Незеритовые ботинки'
+      rarity: easy
+      rewardUUID: 43a44916-bd6c-4f26-af10-b586b93288e7
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_boots{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3},{id:"minecraft:thorns",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_BOOTS
+        flags:
+        - HIDE_ENCHANTS
+    reward_4:
+      name: '&8Незеритовые ботинки'
+      rarity: easy
+      rewardUUID: 554f9e73-94e1-4766-99b5-bc9245d8bedf
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_boots{Enchantments:[{id:"minecraft:blast_protection",lvl:4},{id:"minecraft:fire_protection",lvl:4},{id:"minecraft:projectile_protection",lvl:4},{id:"minecraft:protection",lvl:4},{id:"minecraft:thorns",lvl:3},{id:"minecraft:unbreaking",lvl:3},{id:"minecraft:depth_strider",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_BOOTS
+        flags:
+        - HIDE_ENCHANTS
+    reward_5:
+      name: '&8Незеритовые поножи'
+      rarity: easy
+      rewardUUID: 64f82840-39b6-42aa-9cda-e1025ef40373
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:NETHERITE_LEGGINGS{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_LEGGINGS
+        flags:
+        - HIDE_ENCHANTS
+    reward_6:
+      name: '&8Незеритовые поножи'
+      rarity: easy
+      rewardUUID: 380e7e90-9932-41ba-a9b3-9d50f2f3ed4b
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:NETHERITE_LEGGINGS{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3},{id:"minecraft:thorns",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_LEGGINGS
+        flags:
+        - HIDE_ENCHANTS
+    reward_7:
+      name: '&8Незеритовые поножи'
+      rarity: easy
+      rewardUUID: a5f29061-1a98-4ae2-887e-e40eac0bc132
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:NETHERITE_LEGGINGS{Enchantments:[{id:"minecraft:blast_protection",lvl:4},{id:"minecraft:fire_protection",lvl:4},{id:"minecraft:projectile_protection",lvl:4},{id:"minecraft:protection",lvl:4},{id:"minecraft:thorns",lvl:3},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_LEGGINGS
+        flags:
+        - HIDE_ENCHANTS
+    reward_8:
+      name: '&8Незеритовый нагрудник'
+      rarity: easy
+      rewardUUID: cd782a13-27e1-4884-a79e-218bd0ee0ad7
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_chestplate
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_CHESTPLATE
+    reward_9:
+      name: '&8Незеритовый нагрудник'
+      rarity: easy
+      rewardUUID: e6176b20-6c98-4683-8e19-c171b5769818
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_chestplate{Enchantments:[{id:"minecraft:protection",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_CHESTPLATE
+        flags:
+        - HIDE_ENCHANTS
+    reward_10:
+      name: '&8Незеритовый нагрудник'
+      rarity: easy
+      rewardUUID: 14044414-63ef-4aec-9a6d-0bfc992651c2
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_chestplate{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_CHESTPLATE
+        flags:
+        - HIDE_ENCHANTS
+    reward_11:
+      name: '&8Незеритовый нагрудник'
+      rarity: easy
+      rewardUUID: c331efdc-5fa0-4b9e-8108-49a2da47684d
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_chestplate{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3},{id:"minecraft:thorns",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_CHESTPLATE
+        flags:
+        - HIDE_ENCHANTS
+    reward_12:
+      name: '&8Незеритовый нагрудник'
+      rarity: easy
+      rewardUUID: 6f62f2de-457e-461b-928b-ab42a293ca4d
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_chestplate{Enchantments:[{id:"minecraft:blast_protection",lvl:4},{id:"minecraft:fire_protection",lvl:4},{id:"minecraft:projectile_protection",lvl:4},{id:"minecraft:protection",lvl:4},{id:"minecraft:thorns",lvl:3},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_CHESTPLATE
+        flags:
+        - HIDE_ENCHANTS
+    reward_13:
+      name: '&8Незеритовый поножи'
+      rarity: easy
+      rewardUUID: af6ee037-b4d6-451b-9e6c-32c0eb440d35
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:NETHERITE_LEGGINGS
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_LEGGINGS
+    reward_14:
+      name: '&8Незеритовый поножи'
+      rarity: easy
+      rewardUUID: a71c5bc1-32a3-497b-8ae9-a221c7960369
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:NETHERITE_LEGGINGS{Enchantments:[{id:"minecraft:protection",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_LEGGINGS
+        flags:
+        - HIDE_ENCHANTS
+    reward_15:
+      name: '&8Незеритовый шлем'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% give %player% minecraft:netherite_helmet
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_HELMET
+    reward_16:
+      name: '&8Незеритовый шлем'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_helmet{Enchantments:[{id:"minecraft:protection",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_HELMET
+        flags:
+        - HIDE_ENCHANTS
+    reward_17:
+      name: '&8Незеритовый шлем'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_helmet{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_HELMET
+        flags:
+        - HIDE_ENCHANTS
+    reward_18:
+      name: '&8Незеритовый шлем'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_helmet{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3},{id:"minecraft:thorns",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_HELMET
+        flags:
+        - HIDE_ENCHANTS
+    reward_19:
+      name: '&8Незеритовый шлем'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_helmet{Enchantments:[{id:"minecraft:aqua_affinity",lvl:1},{id:"minecraft:blast_protection",lvl:4},{id:"minecraft:fire_protection",lvl:4},{id:"minecraft:projectile_protection",lvl:4},{id:"minecraft:protection",lvl:4},{id:"minecraft:respiration",lvl:3},{id:"minecraft:thorns",lvl:3},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_HELMET
+        flags:
+        - HIDE_ENCHANTS
+    reward_20:
+      name: '&bАлмазные ботинки'
+      rarity: easy
+      rewardUUID: 1314204c-85b2-428d-ac02-e60d67353620
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_boots
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_BOOTS
+    reward_21:
+      name: '&bАлмазные ботинки'
+      rarity: easy
+      rewardUUID: 72d1999a-971a-486b-965e-d7196e50be93
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_boots{Enchantments:[{id:"minecraft:protection",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_BOOTS
+        flags:
+        - HIDE_ENCHANTS
+    reward_22:
+      name: '&bАлмазные ботинки'
+      rarity: easy
+      rewardUUID: 41bc8c1a-cdbc-48fb-b2f8-6abf1fb3384a
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_boots{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3},{id:"minecraft:thorns",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_BOOTS
+        flags:
+        - HIDE_ENCHANTS
+    reward_23:
+      name: '&bАлмазные поножи'
+      rarity: easy
+      rewardUUID: 4737da20-f730-4a4d-b699-f7924c407dfb
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:DIAMOND_LEGGINGS
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_LEGGINGS
+    reward_24:
+      name: '&bАлмазные поножи'
+      rarity: easy
+      rewardUUID: e69bd658-56aa-4a72-88b7-3baf5a56a8c2
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:DIAMOND_LEGGINGS{Enchantments:[{id:"minecraft:protection",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_LEGGINGS
+        flags:
+        - HIDE_ENCHANTS
+    reward_25:
+      name: '&bАлмазные поножи'
+      rarity: easy
+      rewardUUID: 3cd113cb-426d-4dc5-b44e-9ccf6f08e90e
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:DIAMOND_LEGGINGS{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3},{id:"minecraft:thorns",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_LEGGINGS
+        flags:
+        - HIDE_ENCHANTS
+    reward_26:
+      name: '&bАлмазные поножи'
+      rarity: easy
+      rewardUUID: 2e6dbc96-9396-4017-91e8-d790912a8a67
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:DIAMOND_LEGGINGS{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_LEGGINGS
+        flags:
+        - HIDE_ENCHANTS
+    reward_27:
+      name: '&bАлмазный нагрудник'
+      rarity: easy
+      rewardUUID: 2861986b-0f92-42e5-9148-29b1d4de8cbf
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_chestplate
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_CHESTPLATE
+    reward_28:
+      name: '&bАлмазный нагрудник'
+      rarity: easy
+      rewardUUID: edd6bd29-cefe-44fe-92b8-8556516f8653
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_chestplate{Enchantments:[{id:"minecraft:protection",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_CHESTPLATE
+        flags:
+        - HIDE_ENCHANTS
+    reward_29:
+      name: '&bАлмазный нагрудник'
+      rarity: easy
+      rewardUUID: b75893f8-c192-4b79-8e2b-513f3e25f98a
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_chestplate{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3},{id:"minecraft:thorns",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_CHESTPLATE
+        flags:
+        - HIDE_ENCHANTS
+    reward_30:
+      name: '&bАлмазный нагрудник'
+      rarity: easy
+      rewardUUID: 8446576d-2b1f-4a8d-9437-18c52ca623ab
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_chestplate{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_CHESTPLATE
+        flags:
+        - HIDE_ENCHANTS
+    reward_31:
+      name: '&bАлмазный шлем'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_helmet
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_HELMET
+    reward_32:
+      name: '&bАлмазный шлем'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_helmet{Enchantments:[{id:"minecraft:protection",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_HELMET
+        flags:
+        - HIDE_ENCHANTS
+    reward_33:
+      name: '&bАлмазный шлем'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_helmet{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_HELMET
+        flags:
+        - HIDE_ENCHANTS
+    reward_34:
+      name: '&bАлмазный шлем'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_helmet{Enchantments:[{id:"minecraft:protection",lvl:4},{id:"minecraft:unbreaking",lvl:3},{id:"minecraft:thorns",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_HELMET
+        flags:
+        - HIDE_ENCHANTS
+    reward_35:
+      name: '&bАлмазный шлем'
+      rarity: easy
+      rewardUUID: 8a98f0eb-3042-405c-996b-ecba65c3ccd5
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_helmet{Enchantments:[{id:"minecraft:aqua_affinity",lvl:1},{id:"minecraft:blast_protection",lvl:4},{id:"minecraft:fire_protection",lvl:4},{id:"minecraft:projectile_protection",lvl:4},{id:"minecraft:protection",lvl:4},{id:"minecraft:respiration",lvl:3},{id:"minecraft:thorns",lvl:3},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_HELMET
+        flags:
+        - HIDE_ENCHANTS
+  key:
+    material: TRIPWIRE_HOOK
+    name: donate's key
+    lore:
+    - '&8&oGo to a Cubelets Machine to'
+    - '&8&oopen this key.'
+    - ' '
+    - '&a&lLeft-Click: &6Preview rewards'
+    - '&a&lRight-Click: &6Open cubelet key'
+    enchants:
+      UNBREAKING: 1
+    flags:
+    - HIDE_ENCHANTS

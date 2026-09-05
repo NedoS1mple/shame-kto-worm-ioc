@@ -1,0 +1,86 @@
+title: '#ff0000Спекулянт' # тайтл в меню
+
+size: 36 # кол-во слотов
+
+sell-inventory:
+  material: 'CHEST'
+  model-data: 0
+  name: '&2[✔] &aПродать инвентарь'
+  lore:
+    - '§x§f§f§f§f§e§6Продаёт все предметы,'
+    - '§x§f§f§f§f§e§6которые есть в меню,'
+    - '§x§f§f§f§f§e§6из вашего инвентаря'
+  slots:
+    - 31
+exit:
+  material: 'SPECTRAL_ARROW'
+  model-data: 0
+  name: '&c[⇚] &6Главное меню'
+  lore:
+    - '§eНажмите§x§f§f§f§f§e§6, чтобы перейти'
+    - '§x§f§f§f§f§e§6в главное меню скупщика'
+  commands:
+    - '[cmd]buyer'
+  slots:
+    - 3
+countdown:
+  material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzZjMGQwNDU5YzY3ZjJiZTgyZmJlNTQwNmFiOGQxMzc4ZGExZjI4ZjdhM2Y4MmYxZGZjNDc2MTVhOTU1YTcifX19'
+  model-data: 0
+  name: '#ff7300[⌛] #fbfb13Таймер'
+  lore:
+    - ' #ffffe6До следующего обновления: #fbfb13%lim-time-format%'
+  slots:
+    - 5
+lim-items:
+  lore:
+    - ''
+    - '#ff7300[ЛКМ] #ffffe6Продать предмет &6x1 #ffffe6за &6$%price-x1%'
+    - '#ff7300[ПКМ] #ffffe6Продать предмет &6x64 #ffffe6за &6$%price-x64%'
+    - '#ff7300[ШИФТ+ЛКМ] #ffffe6Продать предмет &6ВСЁ #ffffe6за &6$%price-all%'
+    - ''
+    - '#ffffe6Общий лимит: &6%sell%/%max%'
+    - '#ffffe6Лимит на данный предмет: &6%sell-items%/%max-items%'
+    - ''
+    - '&6Этот предмет не засчитывается в прогресс!'
+  slots:
+    - 12
+    - 13
+    - 14
+    - 21
+    - 22
+    - 23
+unlim-items:
+  lore:
+    - ''
+    - '#ddddddЦена за #a9e3ffх1: #53fb31$%price-x1% &7(ЛКМ)'
+    - '#ddddddЦена за #a9e3ffх64: #53fb31$%price-x64% &7(ПКМ)'
+    - ''
+    - '#ddddddЦена за #a9e3ffвсё: #53fb31$%price-all% &7(СКМ)'
+    - ''
+    - '#ddddddПредметы &aне ограничены&f!'
+    - '#ff4141ВНИМАНИЕ! #ddddddЦена занижена!'
+  slots:
+    - 12
+    - 13
+    - 14
+    - 21
+    - 22
+    - 23
+divider:
+  design:
+    material: 'RED_STAINED_GLASS_PANE'
+    model-data: 1
+    name: '#ff0000N#ff1300u#ff2600l#ff3a00l#ff4d00-#ff6000T#ff7300i#ff6000m#ff4d00e#ff3a00s#ff2600.#ff1300r#ff0000u'
+    slots:
+      - 0
+      - 1
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 28
+      - 34
+      - 35

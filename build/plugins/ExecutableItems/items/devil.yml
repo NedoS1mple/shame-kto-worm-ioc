@@ -1,0 +1,76 @@
+name: '#ca0000[★] #fc0000Дьявольская стрела'
+lore:
+- §cСлепота (0:01)
+- §cИссушение II (0:03)
+- §cОтравление II (0:06)
+material: TIPPED_ARROW
+glow: false
+disableStack: false
+keepItemOnDeath: false
+canBeUsedOnlyByTheOwner: false
+cancelEventIfNotOwner: false
+onlyOwnerBlackListedActivators: []
+storeItemInfo: false
+unbreakable: false
+usage: 1
+usageLimit: -1
+cancelEventIfNoPerm: false
+disabledWorlds: []
+recognitions: []
+config_5: true
+config_update: true
+config_5_98: true
+dropOptions:
+  glowDrop: false
+  glowDropColor: WHITE
+  displayNameDrop: false
+hiders:
+  hideEnchantments: false
+  hideUnbreakable: false
+  hideAttributes: false
+  hidePotionEffects: true
+  hideUsage: true
+  hideDestroys: false
+  hidePlacedOn: false
+enchantments: {}
+giveFirstJoin:
+  giveFirstJoin: false
+  giveFirstJoinAmount: 1
+  giveFirstJoinSlot: 0
+restrictions: {}
+variables: {}
+activators: {}
+displayConditions:
+  playerConditions: {}
+  worldConditions: {}
+  itemConditions: {}
+  placeholdersConditions: {}
+  enableFeature: false
+attributes: {}
+potionSettings:
+  potionColor: 9240576
+  potionType: WATER
+  potionExtended: false
+  potionUpgraded: false
+  potionEffects:
+    pEffect0:
+      isAmbient: false
+      duration: 20
+      potionEffectType: BLINDNESS
+      amplifier: 0
+      hasParticles: false
+      hasIcon: false
+    pEffect1:
+      isAmbient: false
+      duration: 60
+      potionEffectType: WITHER
+      amplifier: 1
+      hasParticles: false
+      hasIcon: false
+    pEffect2:
+      isAmbient: false
+      duration: 120
+      potionEffectType: POISON
+      amplifier: 1
+      hasParticles: false
+      hasIcon: false

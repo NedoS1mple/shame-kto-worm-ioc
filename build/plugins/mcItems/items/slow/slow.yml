@@ -1,0 +1,66 @@
+item:
+  display_name: "#820DD9↓ #D18AE4З#C87CE3а#BF6EE2м#B760E0е#AE52DFд#A545DEл#9C37DDе#9429DBн#8B1BDAи#820DD9е"
+  material: FEATHER
+  description:
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffcccc#f52080ПКМ #ffcccc- создает область #f5208030&7x#f5208030#ffcccc, на #f5208015 &7сек#ffcccc."
+    - "#ffccccнакладывая на других эффект замедления."
+    - "#ffccccВ этой области нельзя использовать"
+    - "#ffccccэндер-жемчуг или плод хоруса."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  slow_component:
+    # Время существования эффектов окружения.
+    time_to_live_seconds: 15
+    # Радиус действия.
+    radius: 30
+    # (Тиков, 20 тиков = 1 сек.)
+    # Интервал появления партиклов.
+    particle_spawn_rate_ticks: 10
+    # Число партиклов замедления.
+    slow_particle_count: 60
+    # Число вторичных партиклов.
+    second_particle_count: 90
+    # Используйте эффекты по ссылке: "https://helpch.at/docs/1.16.5/org/bukkit/Particle.html".
+    # Даже если ядро сервера например 1.8.8 и эффект называется по старому, используйте его
+    # новое название из 1.16.5 по ссылке, в случае если такого эффекта не существовало на этой
+    # версии, не используйте его.
+    slow_particle_effect: SPELL_INSTANT
+    second_particle_effect: CLOUD
+    # Список эффектов накладываемых на других игроков в радиусе действия этой способности.
+    slow_effect_list:
+
+      # ID эффекта накладываемого на других игроков в радиусе действия этой способности.
+      disorientation_effect_1:
+        potion_effect_type: SLOW
+        duration_seconds: 15
+        amplifier: 1
+
+    # Включить задерждку для предотвращения частого использования?
+    enable_use_delay: true
+    # (Тиков. 1 сек. = 20 тиков) Задержка повторного использования.
+    delay_use_ticks: 20
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    message:
+      # Игроки вокруг замедлены!
+      used: "#820DD9↓ #D18AE4И#CE85E4г#CA7FE3р#C77AE3о#C374E2к#C06FE2и #B964E1в#B65FE0о#B259E0к#AF54DFр#AB4EDFу#A849DEг #A13EDDз#9D38DDа#9A33DCм#972EDCе#9328DBд#9023DBл#8C1DDAе#8918DAн#8512D9ы#820DD9!"
+      # Вы были замедлены!
+      you_were_disoriented: "#820DD9↓ #D18AE4В#CC83E3ы #C374E2б#BE6DE1ы#BA65E1л#B55EE0и #AC4FDFз#A748DEа#A340DEм#9E39DDе#9932DCд#952ADCл#9023DBе#8B1CDAн#8714DAы#820DD9!"
+      you_cant_use_teleportation_items_here: "&cВ области замедления нельзя использовать эндер-жемчуг или плод хоруса."
+      use_delay: "&cМожно использовать повторно через &b%use_delay_seconds% &cсек."
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."

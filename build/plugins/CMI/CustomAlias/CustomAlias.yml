@@ -1,0 +1,137 @@
+# 
+# Edit custom variables in game if possible
+# Some extra variables can be used, like [playerName] will insert senders name automatically
+# All global variables should work, you can find full list in locale file
+# You can add delay between commands by inserting line like
+# delay! 5
+# This will delay next commands by defines time in seconds
+# If command is shortened and you need to provide some changing variables like target player name you need to define what and where it should be placed
+# Example: /cmi heal Zrips 
+# Can be shortened with custom alias to something like /h zrips by using alias command like
+# cmi heal $1
+# If you need to add more than one variable, use $1- format. Number represents variable place when used in alias command
+# Example: cmi tppos $1-
+# In case you want to print out help page if player enters wrong subcommand, use ? in alias
+# Example: ca ?
+# In this case if player performs /ca wrongsub or /ca anotherwrong
+# Commands under this alias will get executed. Exelent way to show help page and correct usage if needed
+
+CustomAlias:
+  s:
+    Cmds:
+    - cmi tphere $1-
+    Perm: false
+    AddTabs: true
+  help:
+    Cmds:
+    - mcmenu open help
+    Perm: false
+    AddTabs: true
+  bc:
+    Cmds:
+    - cmi broadcast $1-
+    Perm: false
+    AddTabs: true
+  eco:
+    Cmds:
+    - cmi money $1-
+    Perm: false
+    AddTabs: true
+  call:
+    Cmds:
+    - cmi tpa $1-
+    Perm: false
+    AddTabs: true
+  clearchat:
+    Cmds:
+    - cmi clearchat $1-
+    Perm: false
+    AddTabs: true
+  clearc:
+    Cmds:
+    - cmi clearchat $1-
+    Perm: false
+    AddTabs: true
+  ender:
+    Cmds:
+    - enderchest $1-
+    Perm: false
+    AddTabs: true
+  leave:
+    Cmds:
+    - warp pvp $1-
+    Perm: false
+    AddTabs: true
+  cmi help:
+    Cmds:
+    - help $1-
+    Perm: false
+    AddTabs: true
+  teleport:
+    Cmds:
+    - menu_teleports $1-
+    Perm: false
+    AddTabs: true
+  warps:
+    Cmds:
+    - menu_teleports $1-
+    Perm: false
+    AddTabs: true
+  znahar:
+    Cmds:
+    - spookystash:stashshop $1-
+    Perm: false
+    AddTabs: true
+  msg:
+    Cmds:
+    - cmi msg $1-
+    Perm: false
+    AddTabs: true
+  message:
+    Cmds:
+    - cmi msg $1-
+    Perm: false
+    AddTabs: true
+  enick:
+    Cmds:
+    - nick $1-
+    Perm: false
+    AddTabs: false
+  pm:
+    Cmds:
+    - cmi msg $1-
+    Perm: false
+    AddTabs: true
+  m:
+    Cmds:
+    - cmi msg $1-
+    Perm: false
+    AddTabs: true
+  whisper:
+    Cmds:
+    - cmi msg $1-
+    Perm: false
+    AddTabs: true
+  w:
+    Cmds:
+    - cmi msg $1-
+    Perm: false
+    AddTabs: true
+  tell:
+    Cmds:
+    - cmi msg $1-
+    Perm: false
+    AddTabs: true
+  t:
+    Cmds:
+    - cmi msg $1-
+    Perm: false
+    AddTabs: true
+  carttable:
+    Cmds:
+    - cartographytable
+  afk:
+    Cmds:
+    - cmi afk
+    Perm: true
+    AddTabs: true

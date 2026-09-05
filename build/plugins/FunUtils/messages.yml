@@ -1,0 +1,14 @@
+death-without-killer: "&4[✞] &fПомянем. Вы погибли!\n    При смерти с вас выпало &6${amount}\n    &fСмерть на координатах &c[{x}, {y}, {z}]"
+death-with-killer: "&4[✞] &fПомянем. Вы погибли!\n    Вас убил &e{killer}&f, с вас выпало &6${amount}\n    &fСмерть на координатах &c[{x}, {y}, {z}]"
+bottle-no-player: "&2[$] #ffffe6Вы подобрали #fb7e00${amount} #ffffe6с моба"
+bottle-no-player-has-boost: "&2[$] #ffffe6Вы подобрали #fb7e00${amount} #ffffe6с моба #bec083(Буст +#11d903{boost}$#bec083)"
+bottle-has-player: "&2[$] #ffffe6Вы подобрали &6${amount} #ffffe6игрока &e{player}"
+
+wear-elytra-to-use-flight: "&cНаденьте элитры, чтобы включить режим полёта."
+flight-enabled: "&aВы включили режим полёта."
+flight-disabled: "&cВы выключили режим полёта."
+flight-disabled-due-to-elytra-removal: "&cРежим полета выключен, потому-что Вы сняли элитры."
+
+gps-usage: "#993fbc[✇] #861bb0Компас #ffffe6› Использование: #993fbc/gps [координаты]"
+invalid-coordinates: "#993fbc[✇] #861bb0Компас #ffffe6› Вы ввели неверные координаты.\n#993fbc[✇] #861bb0Компас #fbfbe2› Введите: #993fbc/gps x;y;z"
+coordinates-provided: "#993fbc[✇] #861bb0Компас #ffffe6› Компас указан на координаты #993fbc[{coordinates}]"

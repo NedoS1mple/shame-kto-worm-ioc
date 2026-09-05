@@ -1,0 +1,16 @@
+location: lobby:-2,500:83,139:83,500
+enabled: true
+display-range: 45
+update-range: 45
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&6[3 место]'
+    height: 0.3
+  - content: '%ajlb_lb_cmi_user_playtime_minutes_3_alltime_prefix% &4%cmi_playtimetop_name_3%'
+    height: 0.3
+  - content: '&e%cmi_playtimetop_time_3%'
+    height: 0.3
+  actions: {}

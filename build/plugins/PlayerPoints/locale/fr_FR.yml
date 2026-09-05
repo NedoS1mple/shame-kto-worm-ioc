@@ -1,0 +1,146 @@
+# Plugin Message Prefix
+prefix: '&7[<g:#E8A230:#ECD32D>PlayerPoints&7] '
+
+# Currency
+currency-singular: Point
+currency-plural: Points
+currency-separator: ','
+currency-decimal: .
+number-abbreviation-thousands: k
+number-abbreviation-millions: m
+number-abbreviation-billions: b
+
+# Misc
+no-permission: '&cVous n''avez pas la permission pour ça!'
+no-console: '&cSeuls les joueurs peuvent exécuter cette commande.'
+invalid-amount: '&cLe montant doit être un nombre entier positif.'
+unknown-player: '&cLe joueur est introuvable: &b%player%'
+unknown-command: '&cCommande inconnue: &b%input%'
+votifier-voted: '&eMerci d''avoir voté sur %service%! &b%amount% &ea été ajouté à votre solde.'
+leaderboard-empty-entry: Cela pourrait être vous!
+command-cooldown: '&cVeuillez attendre avant d''utiliser à nouveau cette commande.'
+
+# Base Command Message
+base-command-color: '&e'
+base-command-help: '&eUtilise &b/points help &epour les informations de commande.'
+
+# Help Command
+command-help-description: '&8 - &d/points help &7- Affiche le menu d''aide ... Vous êtes arrivé'
+command-help-title: '&eCommandes disponibles:'
+
+# Give Command
+command-give-description: '&8 - &d/points give &7- Donner des points à un joueur'
+command-give-usage: '&cUtilisation: &e/points give <joueur> <montant>'
+command-give-success: '&b%player% &aa été donné &b%amount% &a%currency%.'
+command-give-received: '&eVous avez reçu &b%amount% &e%currency%.'
+
+# Give All Command
+command-giveall-description: '&8 - &d/points giveall &7- Donne des points à tous les joueurs en ligne'
+command-giveall-usage: '&cUtilisation: &e/points giveall <montant> [*]'
+command-giveall-success: '&aGave &b%amount% &a%currency% à tous les joueurs en ligne.'
+
+# Take Command
+command-take-description: '&8 - &d/points take &7- Prenez des points d''un joueur'
+command-take-usage: '&cUtilisation: &e/points take <joueur> <montant>'
+command-take-success: '&aA pris &b%amount% &a%currency% de &b%player%&a.'
+command-take-lacking-funds: '&b%player% &cn''a pas assez %currency% pour cela, leur solde a donc été mis à 0.'
+
+# Look Command
+command-look-description: '&8 - &d/points look &7- Afficher les points d''un joueur'
+command-look-usage: '&cUtilisation: &e/points look <joueur>'
+command-look-success: '&b%player% &epossède &b%amount% &e%currency%.'
+
+# Pay Command
+command-pay-description: '&8 - &d/points pay &7- Payer un joueur'
+command-pay-usage: '&cUtilisation: &e/points pay <joueur> <montant>'
+command-pay-self: '&cVous ne pouvez pas vous payer vous-même !'
+command-pay-sent: '&aTu as payé &b%player% %amount% &a%currency%.'
+command-pay-received: '&eTu étais payé &b%amount% &e%currency% par &b%player%&e.'
+command-pay-lacking-funds: '&cTu n''as pas assez %currency% pour ça.'
+
+# Set Command
+command-set-description: '&8 - &d/points set &7- Définir les points d''un joueur'
+command-set-usage: '&cUtilisation: &e/points set <joueur> <montant>'
+command-set-success: '&av %currency% de &b%player% &aà &b%amount%&a.'
+
+# Reset Command
+command-reset-description: '&8 - &d/points reset &7- Réinitialiser les points d''un joueur'
+command-reset-usage: '&cUtilisation: &e/points reset <joueur>'
+command-reset-success: '&aRéinitialisez le %currency% pour &b%player% &a.'
+
+# Me Command
+command-me-description: '&8 - &d/points me &7- Afficher vos points'
+command-me-usage: '&cUtilisation: &d/points me'
+command-me-success: '&eVous avez &b%amount% &e%currency%.'
+
+# Lead Command
+command-lead-description: '&8 - &d/points lead &7- Voir le classement'
+command-lead-usage: '&cUtilisation: &e/points lead [next|prev|#]'
+command-lead-title: '&eLeaderboard &7(Page #%page%/%pages%)'
+command-lead-entry: '&b%position%). &e%player% &7- &6%amount% %currency%'
+
+# Broadcast Command
+command-broadcast-description: '&8 - &d/points broadcast &7- Diffuser les points d''un joueur'
+command-broadcast-usage: '&cUtilisation: &e/points broadcast <joueur>'
+command-broadcast-message: '&b%player% &epossède &b%amount% &e%currency%.'
+
+# Reload Command
+command-reload-description: '&8 - &d/points reload &7- Recharge le plugin'
+command-reload-usage: '&cUtilisation: &e/points reload'
+command-reload-success: '&aLes fichiers de configuration et de paramètres régionaux ont été rechargés.'
+
+# Export Command
+command-export-description: '&8 - &d/points export &7- Exporte les données vers storage.yml'
+command-export-usage: '&cUtilisation: &e/points export'
+command-export-success: '&aLes données de sauvegarde ont été exportées vers storage.yml.'
+command-export-warning: '&cRemarque: un fichier storage.yml existe déjà. Si vous souhaitez l''écraser, utilisez &b/points export confirm&c.'
+
+# Import Command
+command-import-description: '&8 - &d/points import &7- Importe les données depuis storage.yml'
+command-import-usage: '&cUtilisation: &e/points import'
+command-import-success: '&aLes données de sauvegarde ont été importées depuis storage.yml.'
+command-import-no-backup: '&cImpossible d''importer, storage.yml n''existe pas. Vous pouvez en générer un avec &b/points export &cet utilisez-le pour transférer des données entre les types de bases de données.'
+command-import-warning: '&cRemarque: Cette opération supprimera toutes les données de la base de données active et la remplacera par le contenu de storage.yml. &cLe type de base de données actuellement actif est &b&o&l%type%&c. &cSi vous en êtes absolument sûr, utilisez &b/points import confirm&c.'
+
+# Convert Command
+command-convert-description: '&8 - &d/points convert &7- Charge les données de devise à partir d''un autre plugin'
+command-convert-usage: '&cUtilisation: &e/points convert <plugin>'
+command-convert-invalid: '&b%plugin% &cn''est pas un nom de plugin de devise convertible.'
+command-convert-success: '&aDonnées monétaires de &b%plugin% &aa été converti.'
+command-convert-failure: '&cUne erreur s''est produite lors de la tentative de conversion des données. Veuillez vérifier votre console et signaler toute erreur à l''auteur du plugin PlayerPoints.'
+command-convert-warning: '&cRemarque: Cette opération supprimera toutes les données de la base de données active et la remplacera par les données de &b%plugin%&c. &cSi vous en êtes absolument sûr, utilisez &b/points convert %plugin% confirm&c.'
+
+# Import Legacy Command
+command-importlegacy-description: '&8 - &d/points importlegacy &7- Importe une table hérité'
+command-importlegacy-usage: '&cUtilisation: &e/points importlegacy <table>'
+command-importlegacy-success: '&aLes données de la table hérité one été importé avec succès de &b%table%&a.'
+command-importlegacy-failure: '&cUne erreur est survenue lors de l’importation des données hérité de &b%table%&c. Esc-ce que cette table exist?'
+command-importlegacy-only-mysql: '&cCette commande est uniquement disponible si vous avez MySQL activé.'
+
+# Version Command
+command-version-description: '&8 - &d/points version &7- Affiche les informations sur la version PlayerPoints'
+command-take-not-enough: '&b%player% &cn''a pas assez %currency% pour cela.'
+only-player: '&cCette commande ne peut être exécutée que par un joueur.'
+unknown-account: '&cLe compte n''a pas pu être trouvé: &b%account%'
+invalid-argument: 'Argument non valide: %message%'
+command-usage: '&cUtilisation: &b/%cmd% %args%'
+argument-handler-string: Vous devez saisir le texte
+argument-handler-enum: Le type %enum% [%input%] n'existe pas
+argument-handler-enum-list: 'Le type %enum% [%input%] n''existe pas. Types valides: %types%'
+argument-handler-value: La valeur [%input%] n'est pas valide
+command-help-list-description: '&8 - &d/%cmd% %subcmd% %args% &7- %desc%'
+command-help-list-description-no-args: '&8 - &d/%cmd% %subcmd% &7- %desc%'
+command-pay-minimum-amount: '&cLe montant minimum que vous pouvez payer est de &b%amount &c%currency%.'
+command-reload-reloaded: '&aLes fichiers de configuration et de paramètres régionaux ont été rechargés.'
+command-convert-invalid-currency: '&b%currency% &cn''est pas une monnaie convertible valide.'
+command-convert-currency-required: '&cVous devez spécifier une devise à convertir pour ce plugin.'
+command-convert-warning-currency: '&cRemarque: Cette opération supprimera toutes les données de la base de données active et la remplacera par les données de &b%plugin%&c. &cSi vous en êtes absolument sûr, utilisez &b/points convert %plugin% %currency% confirm&c.'
+command-account-description: Gère la création et la suppression des comptes
+command-account-create-success: '&aCompte créé avec succès: &b%account%'
+command-account-create-exists: '&cÉchec de la création d''un compte. Un compte nommé &b%account% &cexiste déjà.'
+command-account-create-name-invalid: '&cÉchec de la création d''un compte. Les noms de compte doivent être composés de 3 à 16 caractères et ne peuvent contenir que des lettres, des chiffres et des traits de soulignement.'
+command-account-delete-success: '&aSuppression réussie du compte.'
+command-account-delete-does-not-exist: '&cÉchec de la suppression du compte. Le compte nommé &b%account% &cn''existe pas.'
+command-account-delete-warning: '&cAvis: Cette opération supprimera toutes les données du compte &b%account%&c. Si vous êtes absolument sûr de vous, utilisez &b/points account delete %account% confirm&c.'
+
+# Version Command

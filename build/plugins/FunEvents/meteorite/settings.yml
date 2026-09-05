@@ -1,0 +1,207 @@
+generator:
+  static-location:
+    toggle: false
+    world: world
+    x: 100
+    y: 100
+    z: 100
+  center:
+    x: 0
+    z: 0
+  radius: 2500
+  maxY: 120
+  minY: 30
+  check-floor:
+    toggle: true
+    radius: 4
+    step: 3
+  check-air:
+    toggle: true
+    radius: 5
+    high: 4
+    step: 2
+  banned-biomes:
+  - OCEAN
+  - RIVER
+  - MOUNTAINS
+  - LUKEWARM_OCEAN
+  - FOREST
+  - SWAMP
+  - BEACH
+  banned-blocks:
+  - WATER
+  - LAVA
+  - SNOW
+  - OAK_LEAVES
+  - SPRUCE_LEAVES
+  - BIRCH_LEAVES
+  - JUNGLE_LEAVES
+  - ACACIA_LEAVES
+  - DARK_OAK_LEAVES
+  - AZURE_BLUET
+  - ALLIUM
+  - BLUE_ORCHID
+  - POPPY
+  - DANDELION
+  - SEAGRASS
+  - DEAD_BUSH
+  - FERN
+  - GRASS
+  - RED_MUSHROOM
+  - BROWN_MUSHROOM
+  - LILY_OF_THE_VALLEY
+  - CORNFLOWER
+  - OXEYE_DAISY
+  - PINK_TULIP
+  - WHITE_TULIP
+  - ORANGE_TULIP
+  - RED_TULIP
+  - LARGE_FERN
+  - TALL_GRASS
+  - PEONY
+  - ROSE_BUSH
+  - SUNFLOWER
+  - LILAC
+  - CACTUS
+  - SUGAR_CANE
+  - KELP
+  - LILY_PAD
+  worlds:
+    world: 100
+  region-radius:
+    x: 20
+    y: 200
+    z: 20
+  scheme-offsets:
+    x: 0
+    y: 5
+    z: 0
+  ignore-air-blocks: true
+  flags:
+    pvp: allow
+    build: deny
+    block-break: deny
+    block-place: deny
+    tnt: deny
+    lighter: deny
+    creeper-explosion: deny
+    ghast-fireball: deny
+    other-explosion: deny
+    enderman-grief: deny
+    fire-spread: deny
+    snowman-trails: deny
+    ravager-grief: deny
+    lava-fire: deny
+    water-flow: deny
+    lava-flow: deny
+    ice-melt: deny
+    chest-access: deny
+name: Метеоритный дождь
+time:
+  prestart: 180
+  start: 300
+  activated: 60
+  destroy-toggle: true
+  destroy: 60
+hologram:
+  toggle: true
+  offset:
+    x: 0.5
+    y: 2
+    z: 0.5
+  lines:
+    started:
+    - ''
+    activated:
+    - ''
+    destroy:
+    - ''
+message:
+  prestart:
+    toggle: true
+    lines:
+    - ' &#951B00╔&#9D2600═&#A63200═&#AE3D00╦&#B74800═&#BF5400═&#C85F01╦&#D06A01═&#D87601═&#E18101╦&#E98C01═&#F29801═&#FAA301╦&#F29801═&#E98C01═&#E18101╦&#D87601═&#D06A01═&#C85F01╦&#BF5400═&#B74800═&#AE3D00╦&#A63200═&#9D2600═&#951B00╗'
+    - ' &#951B00║'
+    - ' &#951B00║&#FFFFE6     &#FA7601§k|||&#FA7601   [Метеоритный дождь]   &#FA7601§k|||'
+    - ' &#951B00║&#FFFFE6   Появится уже через&#FAC800 3 минуты!'
+    - ' &#951B00║'
+    - ' &#951B00╚&#9D2600═&#A63200═&#AE3D00╩&#B74800═&#BF5400═&#C85F01╩&#D06A01═&#D87601═&#E18101╩&#E98C01═&#F29801═&#FAA301╩&#F29801═&#E98C01═&#E18101╩&#D87601═&#D06A01═&#C85F01╩&#BF5400═&#B74800═&#AE3D00╩&#A63200═&#9D2600═&#951B00╝'
+  spawn:
+    toggle: true
+    lines:
+    - ' &#951B00╔&#9D2600═&#A63200═&#AE3D00╦&#B74800═&#BF5400═&#C85F01╦&#D06A01═&#D87601═&#E18101╦&#E98C01═&#F29801═&#FAA301╦&#F29801═&#E98C01═&#E18101╦&#D87601═&#D06A01═&#C85F01╦&#BF5400═&#B74800═&#AE3D00╦&#A63200═&#9D2600═&#951B00╗'
+    - ' &#951B00║'
+    - ' &#951B00║&#FFFFE6     &#FA7601§k|||&#FA7601   [Метеоритный дождь]   &#FA7601§k|||'
+    - ' &#951B00║&#FFFFE6   Уровень лута: {inventory}'
+    - ' &#951B00║&#FFFFE6   Появился на координатах {cords}'
+    - ' &#951B00║'
+    - ' &#951B00╚&#9D2600═&#A63200═&#AE3D00╩&#B74800═&#BF5400═&#C85F01╩&#D06A01═&#D87601═&#E18101╩&#E98C01═&#F29801═&#FAA301╩&#F29801═&#E98C01═&#E18101╩&#D87601═&#D06A01═&#C85F01╩&#BF5400═&#B74800═&#AE3D00╩&#A63200═&#9D2600═&#951B00╝'
+  activated:
+    toggle: false
+    lines:
+    - Мистический алтарь активировался
+  removing:
+    toggle: false
+    lines:
+    - Мистический алтарь пропал
+bossbar:
+  toggle: true
+  stroke:
+    started: '&cМетеоритный дождь &6- До открытия: &c{timer} сек'
+    activated: '&cМетеоритный дождь &6- Сундуки открыты: &c{timer} сек'
+    destroy: '&cМетеоритный дождь &6- До удаления: &c{timer} сек'
+  style: SEGMENTED_20
+  color: RED
+  radius: 50
+toggle: true
+spawn-sound:
+  toggle: true
+  all-player: true
+  sound: ENTITY_LIGHTNING_BOLT_THUNDER
+  player-volume: 1
+  volume: 10
+  pitch: 1
+settings:
+  particles:
+    meteorite:
+      explosion:
+        particle: EXPLOSION_HUGE
+        amount: 10
+        v1: 3
+        v2: 3
+        v3: 3
+      end-rod:
+        particle: END_ROD
+        amount: 10
+        v1: 2
+        v2: 2
+        v3: 2
+        speed: 0.2
+      trail:
+        duration: 5
+        particle: FLAME
+        amount: 10
+        v1: 2
+        v2: 5
+        v3: 2
+        speed: 0
+  sound:
+    meteorite:
+      explosion:
+        sound: ENTITY_GENERIC_EXPLODE
+        volume: 3
+        pitch: 1
+  meteorite:
+    toggle-static: true
+    amount:
+      static: 1
+      min: 1
+      max: 3
+    radius: 5
+    high: 70
+    period: 5
+    explosion-range: 5
+    max-damage: 20
+    drop-chance: 70
+    inventory: '&#FF6A09Богатый'
+    item-name: true

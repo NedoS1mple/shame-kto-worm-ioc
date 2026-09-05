@@ -1,0 +1,299 @@
+type:
+  name: '{#e9e9e9}К{#e1e1e1}е{#d8d8d8}й{#d0d0d0}с {#c7c7c7}с{#bfbfbf}о {#b6b6b6}в{#aeaeae}с{#a5a5a5}е{#9d9d9d}м'
+  animation: animation1
+  expiration: 2w
+  icon:
+    texture: base64:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjRiOTUzYjJjMGU5NTI1NzRmMWVkMjljODFlODJlNTNiY2RiMWJhNjgzMjU5YzIwZGFlZWY3ZDU1NGEyYTc5OCJ9fX0=
+  description:
+  - '&c&lМожет выпасть:'
+  lore:
+    opening:
+      available:
+      - '{#e9e9e9}➥ {#e1e1e1}Н{#d8d8d8}а{#d0d0d0}ж{#c7c7c7}м{#bfbfbf}и&f, чтобы открыть!'
+      - ''
+      - '&f Получен: {#e9e9e9}%received% назад'
+      - '&f Закончится через: {#e9e9e9}%expires%'
+      expired:
+      - '&5Received: &a%received% ago'
+      - '&5Expires: &cExpired'
+      - ''
+      - '%description%'
+      - ''
+  rarities:
+    easy:
+      name: 25%
+      chance: 25.0
+      duplicatePointsRange: 50-450
+  rewards:
+    reward_0:
+      name: '&8Незеритовый скрап &7[10 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% netheritescrap 10
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SCRAP
+    reward_1:
+      name: '&8Незеритовый слиток &7[3 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% netheriteingot 3
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_INGOT
+    reward_2:
+      name: '&aИзумрудный блок &2[1 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% emeraldblock
+      permission: []
+      item: []
+      icon:
+        material: EMERALD_BLOCK
+    reward_3:
+      name: '&bАлмазная кирка'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_sword{Enchantments:[{id:efficiency,lvl:3},{id:unbreaking,lvl:2},{id:blast_mining,lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_PICKAXE
+        flags:
+        - HIDE_ENCHANTS
+    reward_4:
+      name: '&bАлмазная кирка'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_sword{Enchantments:[{id:efficiency,lvl:3},{id:unbreaking,lvl:2},{id:fortune,lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_PICKAXE
+        flags:
+        - HIDE_ENCHANTS
+    reward_5:
+      name: '&bАлмазная кирка'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_sword{Enchantments:[{id:efficiency,lvl:3},{id:unbreaking,lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_PICKAXE
+        flags:
+        - HIDE_ENCHANTS
+    reward_6:
+      name: '&bАлмазный блок &9[1 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% diamondblock
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_BLOCK
+    reward_7:
+      name: '&bАлмазный меч'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_sword{Enchantments:[{id:looting,lvl:2},{id:sharpness,lvl:3},{id:unbreaking,lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_8:
+      name: '&bАлмазный меч'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:diamond_sword{Enchantments:[{id:fire_aspect,lvl:1},{id:sharpness,lvl:3},{id:unbreaking,lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_9:
+      name: '&cЗачарованное золотое яблоко &4[1 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% enchantedgoldenapple
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_GOLDEN_APPLE
+        flags:
+        - HIDE_ENCHANTS
+    reward_10:
+      name: '&cЗачарованное золотое яблоко &4[2 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% enchantedgoldenapple 2
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_GOLDEN_APPLE
+        flags:
+        - HIDE_ENCHANTS
+    reward_11:
+      name: '&cЗачарованное золотое яблоко &4[3 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% enchantedgoldenapple 3
+      permission: []
+      item: []
+      icon:
+        material: ENCHANTED_GOLDEN_APPLE
+        flags:
+        - HIDE_ENCHANTS
+    reward_12:
+      name: '&cРедстоуновый блок &4[12 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% redstoneblock 12
+      permission: []
+      item: []
+      icon:
+        material: REDSTONE_BLOCK
+    reward_13:
+      name: '&eЖелтый шалкер &6[1 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% yellowshulker_box
+      permission: []
+      item: []
+      icon:
+        material: YELLOW_SHULKER_BOX
+        contents: {}
+    reward_14:
+      name: '&eЗолотая морковь &6[1 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% goldencarrot
+      permission: []
+      item: []
+      icon:
+        material: GOLDEN_CARROT
+    reward_15:
+      name: '&eЗолотое яблоко &6[1 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% goldenapple
+      permission: []
+      item: []
+      icon:
+        material: GOLDEN_APPLE
+    reward_16:
+      name: '&eЗолотой блок &6[4 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% goldblock 4
+      permission: []
+      item: []
+      icon:
+        material: GOLD_BLOCK
+    reward_17:
+      name: '&eКожа &6[24 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% leather 24
+      permission: []
+      item: []
+      icon:
+        material: LEATHER
+    reward_18:
+      name: '&fЖелезный блок &7[16 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% ironblock 16
+      permission: []
+      item: []
+      icon:
+        material: IRON_BLOCK
+    reward_19:
+      name: '&fЖелезный блок &7[8 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% ironblock 8
+      permission: []
+      item: []
+      icon:
+        material: IRON_BLOCK
+    reward_20:
+      name: '&fКнижная полка &7[24 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% bookshelf 24
+      permission: []
+      item: []
+      icon:
+        material: BOOKSHELF
+    reward_21:
+      name: '&fКость &7[24 шт]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% bone 24
+      permission: []
+      item: []
+      icon:
+        material: BONE
+  key:
+    material: TRIPWIRE_HOOK
+    name: donate's key
+    lore:
+    - '&8&oGo to a Cubelets Machine to'
+    - '&8&oopen this key.'
+    - ' '
+    - '&a&lLeft-Click: &6Preview rewards'
+    - '&a&lRight-Click: &6Open cubelet key'
+    enchants:
+      UNBREAKING: 1
+    flags:
+    - HIDE_ENCHANTS

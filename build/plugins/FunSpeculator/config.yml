@@ -1,0 +1,36 @@
+time-zone: 'Europe/Moscow' # все time-zone: https://timeie.com/
+
+metrics: true # метрика плагина
+
+middle-click-sell-all: false # продажа на среднюю кнопку мыши. Если false продаётся через ШИФТ+ЛКМ
+
+inv-sell-priority: 'LIMITED'
+
+enable-permission: false # включить ли право на использование команды? primeseller.open
+
+# Включить снижение цены при продаже 
+# (percent = Процент, на который будет снижена цена при продаже)
+# (min-percent = Минимальный процент от суммы)
+understating-price:
+  enable: true
+  percent: '0,50'
+  min-percent: 50
+time-format: 'hhч. mmм. ssс.' # формат времени
+
+messages:
+  sell-inventory: '&2[✔] #ffffe6Успешная продажа инвентаря за #0DFF00%price%$'
+  sell: '&2[✔] #ffffe6Успешная продажа &6Предметов #FF5400%amount% шт. #ffffe6за #0DFF00%price%$'
+  limit: '#f70000[✘] Ошибка! #ffffe6Лимит на продажу исчерпан!'
+  amount: '#f70000[✘] Ошибка! #ffffe6Не достаточно предметов в инвентаре!'
+  limited-update-cast:
+    - '&2[✔] &aСпекулянт обновился!'
+  unlimited-update-cast: []
+  update-cast: []
+  commands:
+    permission: '#5637bc&lS#623ec9&lE#6e44d7&lL#7a4be4&lL#8651f2&lE#9258ff&lR #b9b9b9| #ff4141У Вас нет прав.'
+    reload: '&aКонфигурация успешно перезагружена!'
+    update: '#5637bc&lS#623ec9&lE#6e44d7&lL#7a4be4&lL#8651f2&lE#9258ff&lR #b9b9b9| #00d328Список продаваемых предметов успешно обновлен!'
+    added: '#5637bc&lS#623ec9&lE#6e44d7&lL#7a4be4&lL#8651f2&lE#9258ff&lR #b9b9b9| #ddddddПредмет #eaff43%item% #ddddddуспешно добавлен в список товаров. Его цена колеблится от #53fb31$%min-price% #ddddddдо #53fb31$%max-price%#dddddd за штуку.'
+    addlimited-use: '&cИспользование: /primeseller addlimited (мин. цена) (макс. цена) за шт. (Держите предмет в руке) - Добавить предмет в продажу.'
+    addunlimited-use: '&cИспользование: /primeseller addunlimited (мин. цена) (макс. цена) за шт. (Держите предмет в руке) - Добавить предмет в продажу.'
+    update-use: '&cИспользование: /primeseller update - Обновить список торгов'

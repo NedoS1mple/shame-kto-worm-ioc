@@ -1,0 +1,1951 @@
+# Citizens NPC Storage
+
+last-created-npc-id: 86
+npc:
+  '1':
+    name: '&x&f&4&3&b&0&0Талисманы'
+    uuid: 4623b9a7-5a59-476e-a323-4d61f7b9d80a
+    traits:
+      spawned: true
+      age: {}
+      commandtrait:
+        commands:
+          '0':
+            command: talismans
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      location:
+        bodyYaw: 22.594215
+        world: lobby
+        x: 43.4748
+        y: 76.0
+        z: 86.4432
+        yaw: 22.5942
+        pitch: 6.7623
+      type: PLAYER
+      owner:
+        uuid: a5aaeeb7-f6f4-34f5-a082-465357c2633b
+      skintrait:
+        signature: rvGQ4l3c8jcocCwofxxKwICS5HQZqRBHm3g5kL2yLTykbPe7gwYVaCvRMpz7b0YAbEin5XkOtabhr2Kk460dlUkxumN5psyptaWUrhj4wanObmSdq3I6Cfu0UIgcf1RQUIgmlSAZUI902JnYcCQBcxnejFtZKc0kNRsDXOu0WKqII/FbvwUyc8z5dPIhehGwhV40n1ak3Eake4cOYAuPWTpAUa+AwyfW3cuHZI9ngSlwHFDG+Ko/Ct/Y4Sl1zyxP4oEW1LvZazY+J0sk7x71Xt3ost5xytGueN0NTyVKJLmVVRpR+SU6ihpg/m8bF7SlM7oSEPJDVBx9g11rHo/oPNkaXYtjMjB8DFh7TQq2+FKmqs8Ot9aoOwkrLSWdK88D1kVBpNTXdA77dyWYxa77usBIOhvgLLg4NPvY55URXg6dp4blbcxXMfK2X2bmNNkH5eRKzCrOFIr2k1yjSGd4RPWe19aEC/d1MEAd7zq3U7t1kN6TS5deAH2TmhOT0bFAhpdfvtx86FnzfLiceaQlvzGZpOaKD+31zBI5VnhKcDoCAqT8gIxY+O5c11QTV+kHykfMpDFQhxyB+hFgDe/Tfpio3hn9WyULte9/D1vnWYjn/2suNU6UJQ5x43sTuvrAvgklj7wk/WcBghnQX9EiMZOmbqgtIKfi9OMoK1vpPPg=
+        skinName: talisman
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NzgzNjc4MzA2NywKICAicHJvZmlsZUlkIiA6ICI4ZmZkNTJkMmZkOWY0YjAxYmQ1OTA2ZjlkZDJmMDNiYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJUYWxpc21hbiIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81NjcwN2ZmNzRkNGZlOTlkZjZmMmQzYzg1MDMzOWNjNDI5ZTQzY2I2ZmIwYzk4NTYwZGMyMWY0NjYwYTM4ZTUwIgogICAgfQogIH0KfQ==
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&x&f&4&0&0&0&0[Торговец]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+          durability: 20
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAlsABGtleXN0ABNbTGphdmEvbGFuZy9PYmplY3Q7WwAGdmFsdWVzcQB+AAR4cHVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI9PXQACW1ldGEtdHlwZXQABkRhbWFnZXVxAH4ABgAAAAN0AAhJdGVtTWV0YXQAClVOU1BFQ0lGSUNzcgARamF2YS5sYW5nLkludGVnZXIS4qCk94GHOAIAAUkABXZhbHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAAAFA==
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+          durability: 20
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAlsABGtleXN0ABNbTGphdmEvbGFuZy9PYmplY3Q7WwAGdmFsdWVzcQB+AAR4cHVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI9PXQACW1ldGEtdHlwZXQABkRhbWFnZXVxAH4ABgAAAAN0AAhJdGVtTWV0YXQAClVOU1BFQ0lGSUNzcgARamF2YS5sYW5nLkludGVnZXIS4qCk94GHOAIAAUkABXZhbHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAAAFA==
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+          durability: 20
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAlsABGtleXN0ABNbTGphdmEvbGFuZy9PYmplY3Q7WwAGdmFsdWVzcQB+AAR4cHVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI9PXQACW1ldGEtdHlwZXQABkRhbWFnZXVxAH4ABgAAAAN0AAhJdGVtTWV0YXQAClVOU1BFQ0lGSUNzcgARamF2YS5sYW5nLkludGVnZXIS4qCk94GHOAIAAUkABXZhbHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAAAFA==
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: 8ffd52d2-fd9f-4b01-bd59-06f9dd2f03bc
+      cached-skin-uuid-name: talisman
+  '2':
+    name: §eШахту обновляй..
+    uuid: f76d1044-5080-4fca-afb2-293698ccc762
+    traits:
+      spawned: true
+      age: {}
+      commandtrait:
+        commands:
+          '0':
+            command: menu_shahta
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      location:
+        bodyYaw: 59.407623
+        world: lobby
+        x: -60.5
+        y: 88.0
+        z: 10.5
+        yaw: 59.4076
+        pitch: 5.9435
+      type: PLAYER
+      owner:
+        uuid: a5aaeeb7-f6f4-34f5-a082-465357c2633b
+      skintrait:
+        signature: CmcH+p8qDiFYQzQJpMZmzCNRvh80iu9dMecaYmnwOtqHihQBVI48Q5+vijkUr1TCHxzxVozBICncnD0olnGQRa4t0sfS+g4cL+Rw0ejHODxm/jXhjbc0Mzs4Wo7PNn57d+DPm5VEy/EbzMDm+BbYbUxNLH26vFC3B/HS6ubp//KjJa47xFrfzVxWJyF1fo+sgPknQ0ZMhM5i2VdrjCMfFzOLlsz5oY3+LN5bagKC6U8mD/wJHuGwHGmZ+/MwfnVJA+1VIGaEgY3XbF4zS+71YE+zatzBwA6Wj6UHjN3/5usaK5VDZFyU/0eM/izx+Je/DvRSv/t93/bys1pBAVekaQAp7BLZcwzbLaPUD33j0twShTNpUH2s3nE4kpnhTo/k/2LzIRqDEeFwYF5iyONpg36vqHNVpzBtfrDrEOocYnDCsGDtvPc6KcpkERknDk3+LUaIpwd7KJyXrzhWNWitddnlIwMXAUxYv/ji1bDiqRzhOg6yhOTsW507hthLa92irL++JYqsHt4qhyxixTM0auJz6SNv82ssj0dmagkMfOj7TXGdpsQ/FCxwbrnpUoIELhxF42HC2di4liT/S+vDlboOL2FkEtULWkK3eq2w6Z/A1IQOdFRrx+eZMaFDWMIDIBL4AA/a3KOsIT/oZNDujTijphh9Nc1XkBfi85TgJo4=
+        skinName: Sieb9
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY2ODIzNzU4MTA0OCwKICAicHJvZmlsZUlkIiA6ICI3MjM3MDZkM2M5N2U0Y2YzOGYxMGVlMWMwZTdhMjE3ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTaWViOSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9lNDAxYmQ4NGVmYzVlOTY3MGFlMWJjNjE2MWRkZjBjNmJhY2M0NzlmMWUwZjU2OWNlZDIyZTlhYWZlNTAxNWU4IgogICAgfQogIH0KfQ==
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&eКупи.. Продай..'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&x&f&4&0&0&0&0[Шахтёр]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: 723706d3-c97e-4cf3-8f10-ee1c0e7a217e
+      cached-skin-uuid-name: sieb9
+  '3':
+    name: '&#fff500экипировки'
+    uuid: d876907f-62cd-4da8-9ad5-ecc5f345cb7c
+    traits:
+      age: {}
+      owner:
+        uuid: 7c9f4624-ed48-36b6-8ab9-ffdcfd42b07b
+      type: PLAYER
+      location:
+        bodyYaw: 103.19664
+        world: lobby
+        x: 12.5
+        y: 78.0
+        z: 127.5
+        yaw: 123.1966
+        pitch: 0.0
+      spawned: true
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&#fff500на арену без моей'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&#fff500Не вздумай суваться'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '2':
+            text: '&x&f&4&0&0&0&0[Хранитель]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      commandtrait:
+        commands:
+          '0':
+            command: pvp_menu
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait: {}
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      inventory:
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      nameplate-visible: 'false'
+  '4':
+    name: '&#fff500тебе дорогу'
+    uuid: 6e6bf37e-9fd7-4fa0-a01e-0ec402f29e49
+    traits:
+      age: {}
+      owner:
+        uuid: 7c9f4624-ed48-36b6-8ab9-ffdcfd42b07b
+      type: PLAYER
+      location:
+        bodyYaw: 140.88788
+        world: lobby
+        x: 6.5
+        y: 90.0
+        z: 6.5
+        yaw: 160.8879
+        pitch: 0.0
+      spawned: true
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&#fff500Я помогу найти'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&x&f&4&0&0&0&0[Проводник]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      commandtrait:
+        commands:
+          '0':
+            command: menu_teleports
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait:
+        signature: f9guxENtZddVph809qBLrgCbRRz4QjjWFCliuzBLfzV42F3dj7cPpT6p69xVnNw72kIP/hBowxruxFKpUqQR9YrApkE3vatIUC7/yquCjr87QkvgWsGS9oqj9SbGJVpby5vvjMj8yNVpNojkahLzomAAorpI1z2p/aELJYCydUlx4Pdn1a1og/4vHOp6CUgW5w9HjtN0Yctv88xY4pfgrZgvCFwgxM/bpvFtdEschfpkhSuxNtLn4+S6d4KkOIpY1KH3rZeVNUMEtxTviVrkUVTUHcrqCzeFe5mZ1jtsLfAGnque50vG/G1nxNjADPD1jL+57ieDlK8xn+yvaGwFB6aC3Ymj+52i+JgrpovkJwS2azBhYO4+TtA97Bvhtw3K2Js3vWBErvzKSZ5xv66XK6FJlAd5saow4AUyGeBNtuMg+UKBpaxqIdwPtPHeW1Fi1+5n6udQfx0i5AEaJbvd01zfctyo1RMdGMeOJKREyW2B0qgHTnqW/qI9VJgT5OniPOvQHGmf+Ket5T3pD4vyVoarRSLOPCi5N7G6DCtl4iPVmO/IG0iApSIe+PaTlqvgDqNGY42syTKL/843MefKyoHswZDjLbDOu7qxKza9Q8B9aFrCWF/vU0JC99q0Bv238WTr8roaUPL8dvVKIzT5AUk4gRUpGK00XBC7QwZQ6lQ=
+        skinName: Honorably
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY5ODk5MTkwMTY3NSwKICAicHJvZmlsZUlkIiA6ICJjNTQ3NTBiNGJkZGE0NTI5YTE5YjA0ZmU4ZTdkNjQ1NCIsCiAgInByb2ZpbGVOYW1lIiA6ICJIb25vcmFibHkiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWIyOWNlZDk3Zjg1MDI3ZTI0MjJhYjMzYmQ4YTExM2ZjZDBhOWEyYjE4MmYxZGI1MmIxZWM1ZmQzYzIzODE5NiIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      inventory:
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+          type_namespace: minecraft
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+          type_namespace: minecraft
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+          type_namespace: minecraft
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: c54750b4-bdda-4529-a19b-04fe8e7d6454
+      cached-skin-uuid-name: honorably
+  '5':
+    metadata:
+      cached-skin-uuid: 163fc8b5-23b2-4838-9f52-84b2a5ba216d
+      cached-skin-uuid-name: xopowuy_
+    name: '&eМогу удочку продать,'
+    uuid: a78fb854-be88-4f3c-883a-7f40d36559fe
+    traits:
+      skintrait:
+        signature: d3Lgiv5twKU7oH7b7bLoeYTmrXqB3dbtXl2cMI8QRTeYN8fKlgVNER+GvGOqVCeVNbc8jH8EA4GBcoImrX6wZy/cGW9uTA2PfTTXaDa4OZNyikX9NCbMaIHrk15G/9D3XNoBOlKTcARZswmFcDxOH3tXucMIWPPVn4akzKyIsQOmbW2MEZHJHMrwO8VMRxdGvFNGDBAQYYj3+8BWEli7RnECZFKjLYhLghyeFU5N7PwIWdHiXtnYtWKRDEhNuUqGxjTuBZWzclHSS72WYG+xYlUoZmXWOcKP6X7l+DaXwmrppfzn/Z6wvLGQROSJWlIYPlzZPwF/Hn4jrZvmdETfcvncsrHzHzoukYLxcrP/V/ker35bKWTnNEUH/CSA5OchF97EXTLzQnUnNcJTGjX00gSvpiCZv+2r1tWhP+skQjFAMDoGsfUkySJPtiIMChhMU92yQ7INeP299flOvGoJjG8kSCyCGpNfuEVgNq/iqm9aRiRMCby51BFcLlZ5Fg6BQnQ17jQjSWazdlfeKUU/lD2JKWL1pZHMuocfOh4Hn+JSbU4HfJR51+eB81K3OibplbM0mm7C1qS0GRnR4+QSDdSFJKBb8632VnNHSap2d/IGVxZL9W2zFR48qn0o7gDDSMK28OkQ12FvwpBTzBloenQ5Ez3cBmbHlqVAybDYumo=
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY5OTI1NzY2MjA1NywKICAicHJvZmlsZUlkIiA6ICIxNjNmYzhiNTIzYjI0ODM4OWY1Mjg0YjJhNWJhMjE2ZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJYb1BvV3VZXyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8xZWMwYWEyYTVmYzNjNThiNjk3NGFiYWZlOWVlY2RkNDllMTNjODM3ZWQ1MTNjZTU2MGUwYzI5NTY4MDcxNmY4IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjM0MGMwZTAzZGQyNGExMWIxNWE4YjMzYzJhN2U5ZTMyYWJiMjA1MWIyNDgxZDBiYTdkZWZkNjM1Y2E3YTkzMyIKICAgIH0KICB9Cn0=
+        skinName: XoPoWuY_
+      type: PLAYER
+      location:
+        bodyYaw: -44.843937
+        world: lobby
+        x: 55.5
+        y: 87.0
+        z: -6.5
+        yaw: -44.8439
+        pitch: -19.3261
+      owner:
+        uuid: f262a392-6f49-30cf-842a-ecc3b10553c8
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&eМогу рыбоньку купить'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&x&f&4&0&0&0&0[Рыбак]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      age: {}
+      spawned: true
+      equipment:
+        hand:
+          type_key: fishing_rod
+          amount: 1
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAlsABGtleXN0ABNbTGphdmEvbGFuZy9PYmplY3Q7WwAGdmFsdWVzcQB+AAR4cHVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI9PXQACW1ldGEtdHlwZXQACGVuY2hhbnRzdXEAfgAGAAAAA3QACEl0ZW1NZXRhdAAKVU5TUEVDSUZJQ3NyADdjb20uZ29vZ2xlLmNvbW1vbi5jb2xsZWN0LkltbXV0YWJsZUJpTWFwJFNlcmlhbGl6ZWRGb3JtAAAAAAAAAAACAAB4cQB+AAN1cQB+AAYAAAABdAAMV0FURVJfV09SS0VSdXEAfgAGAAAAAXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAB
+          enchantments:
+            aqua_affinity: 1
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+      commandtrait:
+        commands:
+          '0':
+            command: fish_menu
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      inventory:
+        '0':
+          type_key: fishing_rod
+          amount: 1
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAlsABGtleXN0ABNbTGphdmEvbGFuZy9PYmplY3Q7WwAGdmFsdWVzcQB+AAR4cHVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI9PXQACW1ldGEtdHlwZXQACGVuY2hhbnRzdXEAfgAGAAAAA3QACEl0ZW1NZXRhdAAKVU5TUEVDSUZJQ3NyADdjb20uZ29vZ2xlLmNvbW1vbi5jb2xsZWN0LkltbXV0YWJsZUJpTWFwJFNlcmlhbGl6ZWRGb3JtAAAAAAAAAAACAAB4cQB+AAN1cQB+AAYAAAABdAAMV0FURVJfV09SS0VSdXEAfgAGAAAAAXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAB
+          enchantments:
+            aqua_affinity: 1
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '6':
+    name: '&#fff500взамен на ресурсы'
+    uuid: bc5d30c7-375d-4bd0-be4d-357d26fcca17
+    traits:
+      age: {}
+      owner:
+        uuid: 7c9f4624-ed48-36b6-8ab9-ffdcfd42b07b
+      type: PLAYER
+      location:
+        bodyYaw: -179.49298
+        world: lobby
+        x: -65.5
+        y: 75.0
+        z: 130.5
+        yaw: -179.493
+        pitch: -6.5624
+      spawned: true
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&#fff500Отдай мне&x&f&4&0&0&0&0 головы&e&#fff500'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&x&f&4&0&0&0&0[Палач]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      commandtrait:
+        commands:
+          '0':
+            command: palach
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait:
+        signature: Yf3oSMtcufmergHlQcnEy+iNGIgbsFbHuNjfnfFTwLAxgLd24/9GypP36f54C9jJp3NkyyF+ZapNvhqZjjSm9nXE9pCQSBCOwvplc1i6DnyZKlJRe0fx9nhFUhr/k7Oq9fC4o+S6np1qDBa/0j6gm30okxYTclJAXtdcZhm/3Ds3vUBEcsu0EK4rSgMzVzjouQcJU6vqqmnJ8v1mum4lczXqSfJEZ89j/zH3yldHhvyIDacGlCAPF7xLCYYbtjVvnFo3OC6kHO1RcsYLizOH05TaMS9rTeegniVBIxOLkk0Xfbhdumm/9Rs5bzItkKj9OMmpN8Ft9PQKbE8/9RsEhQPBPFQIDkGL3h8+YfDAaUuRTsO2lR00WDyLIo/LEQSs0FsDdMjSq2naYqReLAlBNMqNA1UciUDtkib3OlVcEh8OWx7InYHsREtj06j3Y0oOtSXyANp14l+mVAaCDthcK0SIcuWeoUsVf/HXPWZSqQXl9CHe5V674SYHCDz1p03u+7Uhll5RmKDGyu9SY0clNAd3Q6EdEINOscOv/yNnLs7VGGadN2uNfOdnsPgROsIus+NR0cI8y62BmWs+tp7W5w7N38zFz/6C6tuIkBGl9ta5jeWGMUowsJwK4QyfaINbVOjr7hXuHZIenBA4RRFH5E4RkAVcMjjt9Sn+vbH8+8o=
+        skinName: butcher
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NzgzMzY5MzQyMiwKICAicHJvZmlsZUlkIiA6ICIyYjljZGQ3ZGQxYmI0YzljOTA5YzJkY2QwMTlhZGQ3YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJCdXRjaGVyIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Y0YzM0YThiNDI1MzQ5MWFiZmIxMTE4ZjJlZTA4NTNmNTc1NjVhMjFhYWY0NWUyZmRhMDQyNWViNmI4OTQwNmQiCiAgICB9CiAgfQp9
+      equipment:
+        hand:
+          type_key: golden_axe
+          amount: 1
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAlsABGtleXN0ABNbTGphdmEvbGFuZy9PYmplY3Q7WwAGdmFsdWVzcQB+AAR4cHVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI9PXQACW1ldGEtdHlwZXQACGVuY2hhbnRzdXEAfgAGAAAAA3QACEl0ZW1NZXRhdAAKVU5TUEVDSUZJQ3NyADdjb20uZ29vZ2xlLmNvbW1vbi5jb2xsZWN0LkltbXV0YWJsZUJpTWFwJFNlcmlhbGl6ZWRGb3JtAAAAAAAAAAACAAB4cQB+AAN1cQB+AAYAAAABdAAKREFNQUdFX0FMTHVxAH4ABgAAAAFzcgARamF2YS5sYW5nLkludGVnZXIS4qCk94GHOAIAAUkABXZhbHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAAAAQ==
+          enchantments:
+            sharpness: 1
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+      inventory:
+        '0':
+          type_key: golden_axe
+          amount: 1
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAlsABGtleXN0ABNbTGphdmEvbGFuZy9PYmplY3Q7WwAGdmFsdWVzcQB+AAR4cHVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI9PXQACW1ldGEtdHlwZXQACGVuY2hhbnRzdXEAfgAGAAAAA3QACEl0ZW1NZXRhdAAKVU5TUEVDSUZJQ3NyADdjb20uZ29vZ2xlLmNvbW1vbi5jb2xsZWN0LkltbXV0YWJsZUJpTWFwJFNlcmlhbGl6ZWRGb3JtAAAAAAAAAAACAAB4cQB+AAN1cQB+AAYAAAABdAAKREFNQUdFX0FMTHVxAH4ABgAAAAFzcgARamF2YS5sYW5nLkludGVnZXIS4qCk94GHOAIAAUkABXZhbHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAAAAQ==
+          enchantments:
+            sharpness: 1
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: 2b9cdd7d-d1bb-4c9c-909c-2dcd019add7b
+      cached-skin-uuid-name: butcher
+  '7':
+    name: §eотмычку к &x&F&C&6&5&0&0Т&x&F&C&6&5&0&0а&x&F&C&6&5&0&0й&x&F&C&6&5&0&0н&x&F&C&6&5&0&0и&x&F&C&6&5&0&0к&x&F&C&6&5&0&0у
+    uuid: c35dce99-be40-48df-a4c3-15c0fff69a2d
+    traits:
+      skintrait:
+        signature: AVfk12paQnZjkiAPjvHHOIOtY476k0QaxB9ptwSvs00JH4TfdJuMpTTrO5YtTNbOAB7j8pw2dz0X2UgxRPNmf3tBs2DjbE68j7kP2/aojgHWPi0sNi0/yEXP0k+OJCIPygLn1bPq04QHqylo0yUpSfiew7iL+HP5CRYDJ5SLxNFWR76hwkuZQXfeNFE9SqrsVWvi+XI8AeZ9Vgi8V1DBfZd1rjS2ySDnRpuyKWEulb0ZJzs8qqs9vWbSIzfz0WIGCtKZIkJhuNZZ3PnsYktWFKz0YYvPqypLlxwc+YL2HYIHcmuBkoVwemlYObV8uJVI7p5rKqM2k1AIrjCh+sncyeFb2QXKDYPN3YSfXIN0LP3yLPhHMbLeQr5Pg0HaaV131nqTiVhlpmb7fpF9p2bYppCQ3U5K9/kgNhdZlrb3CZ36e64gkBvlybTPrNLS4ubGwNfeFhNYONzGq+Ipz5X/+HYBGUTUET2ejvqdUGMybCC5nVS8KbSaCpAvLQf99qYjjr/AXAEZLxQnTFCS4TUQitvrG2lLbNAoFKkc/LitE5woDOa5nyvIvaNj2BZuWVZOb0kLwQy05oR3HaPE8mgcoV9+RxV+Ev5tYSVVVTF8OnG1/yo2+DsNQlGo3fNA2JwnBw1jy+4o00VEqH3ooBUc98Br2wOSY9dk1B2uJH2XgNk=
+        skinName: Vinnard
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY5ODk5MDU1MzgzNSwKICAicHJvZmlsZUlkIiA6ICJmZjc5NzZhNDZhNjk0N2Q1YWRmZTM1NWNiM2E0M2FhMCIsCiAgInByb2ZpbGVOYW1lIiA6ICJ2aW5uYXJkIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzgyYWU5YTgzNWYzZGRjMWZjYWY4YjY1NTkxZDI3YWRjMmZlNDlhNjZlMGIzNWVkZmYyN2E1OGFmZDczOTNhZGIiCiAgICB9CiAgfQp9
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&eа взамен получишь'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&eПринеси &x&3&2&C&A&F&CС&x&3&2&C&A&F&Cе&x&3&2&C&A&F&Cр&x&3&2&C&A&F&Cе&x&3&2&C&A&F&Cб&x&3&2&C&A&F&Cр&x&3&2&C&A&F&Cо&e,'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '2':
+            text: '&x&F&C&0&0&0&0[&x&F&C&0&0&0&0З&x&F&C&0&0&0&0н&x&F&C&0&0&0&0а&x&F&C&0&0&0&0х&x&F&C&0&0&0&0а&x&F&C&0&0&0&0р&x&F&C&0&0&0&0ь&x&F&C&0&0&0&0]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      owner:
+        uuid: 7c9f4624-ed48-36b6-8ab9-ffdcfd42b07b
+      type: PLAYER
+      location:
+        bodyYaw: 20.867363
+        world: lobby
+        x: -32.5
+        y: 87.0
+        z: 41.5
+        yaw: 20.8674
+        pitch: -8.5874
+      age: {}
+      spawned: true
+      commandtrait:
+        commands:
+          '0':
+            command: znahar
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      inventory:
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAlsABGtleXN0ABNbTGphdmEvbGFuZy9PYmplY3Q7WwAGdmFsdWVzcQB+AAR4cHVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI9PXQACW1ldGEtdHlwZXQABGxvcmV1cQB+AAYAAAADdAAISXRlbU1ldGF0AApVTlNQRUNJRklDc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlzdCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHNxAH4ABHhwdXEAfgAGAAAAAA==
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAlsABGtleXN0ABNbTGphdmEvbGFuZy9PYmplY3Q7WwAGdmFsdWVzcQB+AAR4cHVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI9PXQACW1ldGEtdHlwZXQABGxvcmV1cQB+AAYAAAADdAAISXRlbU1ldGF0AApVTlNQRUNJRklDc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlzdCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHNxAH4ABHhwdXEAfgAGAAAAAA==
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAlsABGtleXN0ABNbTGphdmEvbGFuZy9PYmplY3Q7WwAGdmFsdWVzcQB+AAR4cHVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI9PXQACW1ldGEtdHlwZXQABGxvcmV1cQB+AAYAAAADdAAISXRlbU1ldGF0AApVTlNQRUNJRklDc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlzdCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHNxAH4ABHhwdXEAfgAGAAAAAA==
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAlsABGtleXN0ABNbTGphdmEvbGFuZy9PYmplY3Q7WwAGdmFsdWVzcQB+AAR4cHVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI9PXQACW1ldGEtdHlwZXQABGxvcmV1cQB+AAYAAAADdAAISXRlbU1ldGF0AApVTlNQRUNJRklDc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlzdCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHNxAH4ABHhwdXEAfgAGAAAAAA==
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: ff7976a4-6a69-47d5-adfe-355cb3a43aa0
+      cached-skin-uuid-name: vinnard
+  '8':
+    name: '&x&d&f&5&d&f&4связанную с опытом'
+    uuid: 49f712fa-10f4-4377-8e72-b5cfa27e69d1
+    traits:
+      age: {}
+      owner:
+        uuid: 7c9f4624-ed48-36b6-8ab9-ffdcfd42b07b
+      type: PLAYER
+      location:
+        bodyYaw: -179.82004
+        world: lobby
+        x: -60.5
+        y: 88.0
+        z: 17.5
+        yaw: -179.82
+        pitch: 0.0
+      spawned: true
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&x&d&f&5&d&f&4Покажу тебе магию'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&x&c&4&0&0&f&4[Чародей]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      commandtrait:
+        commands:
+          '0':
+            command: expp
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait:
+        signature: Oom7q9VenXSMC9uyKTRuGWp8ODhpfr4rVRzmjvpaBPMCMq0QJ6Hqix2H6BTHqbGilCOU9sme89pm9+tVVP2VB4X2bYhvzsLBXJfQoNbSBhuLp2ooFI9OXpZyabW7EoWz9lI0khk5G1zuH73Bf/0s1BImpSJfu1q4lMWWjG/xHqKNU4rHEE5zURgkjx4OlMcSZHeaFz4okxxseYSD0t1JcX9M85N4LMy5664ObonahVUJYxHY5+SZXMh7puc7E28KMvokEFlPG6o570MShowfAShQ5M4rq5u+diatRj+i32sXSY4ZjsxGaKRWyES+lfbl9klo3RgaPRqxMOvNzhvW/ivvBk5qxMauYzvwnm5gJjohfirPfJLfsoM3rrNPZtRsvsmFzdJrU7rnX9gdVKsZU1KSfzbSb2eR/9wQHbcX+HgcwaYRzqdc2V26RKYasyRX7M9w6FDcQF8crIw5EUMW3oWm5DZbGB1y/dZXYeceSgACm0dvJmHWiJiFH1xy6gP9+VB2H1Yve2QOJqWGUJrab4idpDClvUP6aoN9wx4/Ue7ksq9r5IGEDZW8Yv6WGRmtY/tolo3anPuCC63H7h4mVnMr2MK24cCPnj4f62BZr7qW/h3Zybt22uGaXEdBlrxrtn/lwinBNgGkcqiU0h5wb8T3M3Tpn5CHoSA8D06J86U=
+        skinName: ana
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTcxMzM1NTM5NDc1OCwKICAicHJvZmlsZUlkIiA6ICJjMjBkZmZlNzRlZTA0MTg2ODY2ODEzNzI2MjZmNTg1OSIsCiAgInByb2ZpbGVOYW1lIiA6ICJBTkEiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDg0MDkwMWFhMWJhMDllY2M5NDk0ZDlmZDhjZWJkMTlhY2FiZGI2YWQ3ZjAyOGZiMzc2NjlhMzM1MjUzNTg2IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      inventory:
+        '0':
+          type_key: enchanted_book
+          amount: 1
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAlsABGtleXN0ABNbTGphdmEvbGFuZy9PYmplY3Q7WwAGdmFsdWVzcQB+AAR4cHVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI9PXQACW1ldGEtdHlwZXQAD3N0b3JlZC1lbmNoYW50c3VxAH4ABgAAAAN0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHNyADdjb20uZ29vZ2xlLmNvbW1vbi5jb2xsZWN0LkltbXV0YWJsZUJpTWFwJFNlcmlhbGl6ZWRGb3JtAAAAAAAAAAACAAB4cQB+AAN1cQB+AAYAAAABdAAYUFJPVEVDVElPTl9FTlZJUk9OTUVOVEFMdXEAfgAGAAAAAXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAE
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+        hand:
+          type_key: enchanted_book
+          amount: 1
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAlsABGtleXN0ABNbTGphdmEvbGFuZy9PYmplY3Q7WwAGdmFsdWVzcQB+AAR4cHVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI9PXQACW1ldGEtdHlwZXQAD3N0b3JlZC1lbmNoYW50c3VxAH4ABgAAAAN0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHNyADdjb20uZ29vZ2xlLmNvbW1vbi5jb2xsZWN0LkltbXV0YWJsZUJpTWFwJFNlcmlhbGl6ZWRGb3JtAAAAAAAAAAACAAB4cQB+AAN1cQB+AAYAAAABdAAYUFJPVEVDVElPTl9FTlZJUk9OTUVOVEFMdXEAfgAGAAAAAXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAE
+        offhand:
+          type_key: experience_bottle
+          amount: 1
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: c20dffe7-4ee0-4186-8668-1372626f5859
+      cached-skin-uuid-name: ana
+  '9':
+    name: '&#fff500Ценные ресурсы'
+    uuid: 0fec264d-6415-42f5-bfd5-900a71a7e08f
+    traits:
+      age: {}
+      owner:
+        uuid: 7c9f4624-ed48-36b6-8ab9-ffdcfd42b07b
+      type: PLAYER
+      location:
+        bodyYaw: -85.73317
+        world: lobby
+        x: 49.5
+        y: 76.0
+        z: 86.5
+        yaw: -85.7332
+        pitch: -10.6808
+      spawned: true
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&x&f&4&0&0&0&0[Скупщик]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      commandtrait:
+        commands:
+          '1':
+            command: mcbuyer catalog_4 false
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait:
+        signature: vI0h3QpxKyTb30M05QVPSbdGWW8CK3lK+UMUUGN5EzLslHxzKDlvVmw4nKOrpmlbIZMXzpbwUdqQwRxGYs5Ik1at7t+FwzmJJkPaMthDXVSbB8FOLf/yhDRZYlbqS34ZYg5Nu8bXSCQFB6wOx5dePepxkp1o5P/0/Z1o8/vjBSRLqAejqFk6akNdbBPBpff3wS+1Si+EUfYUNrf4XH6Fw/v9eTuknaLMVmN3LiLhjrUXMPdUhikbxY0PADVFa8gNTgMxQ83aDys0ORrHXZ/ClVfgonLrCVe1g4EUdFxZigUdd85LKNurAwRLd29EcXNzCEQRZE4YkUeH7M+cx2K2HDj18imGZ/NE0Ld2/r7Eh7U5Pwbz0ibXHsdmr0kfFqtUAbJlwipxUKrnIm4gap0Fme2/5aem/xdoxtBlOopY8HcU4t4s/nl9C2BU/SwadVLpBlTH0UKUIb0Y7lEycw4Bo/xcwwc37U0J0vXHY1mlMarMASoHYtc/sUqoFaZaJiTUWxSQs8z63YYoTNRnCW3f9chihWJb2bgxSozxChSGNDGXUOb0KHGjTbuosrvnw3mlPEql35MDBjy2d3ux5l215+kIhgr09aKjyzJrGwfbPr5lqR/tAwIaqN7uFC9GlQ2H3JWZdPYx61mZlkRG2qxqP+lakpAdv0iDdEvlJ8JsKg0=
+        skinName: Ecoer
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY5ODkzMTgyODM3MywKICAicHJvZmlsZUlkIiA6ICI4YjVmMDNkMTZjZTY0YzlmYjVlYzAwN2NmNDY3NjUxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJFQ09FUiIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85ZGQwZjlmYmUzNDI1NWQ4NDZlYmVlOTBlOTVhMDIwNzVhNjQ4NTgyNzU5YWMxODdmMmYzYjVkYTY3NmYxMmM3IgogICAgfQogIH0KfQ==
+      inventory:
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: 8b5f03d1-6ce6-4c9f-b5ec-007cf467651b
+      cached-skin-uuid-name: ecoer
+      nameplate-visible: 'true'
+  '10':
+    name: '&eБроня'
+    uuid: f05533d5-0a13-4adc-9c1f-c5775577c5fe
+    traits:
+      age: {}
+      owner:
+        uuid: 7c9f4624-ed48-36b6-8ab9-ffdcfd42b07b
+      type: PLAYER
+      location:
+        bodyYaw: 85.812546
+        world: lobby
+        x: 66.5
+        y: 76.0
+        z: 111.5
+        yaw: 85.8125
+        pitch: -4.5133
+      spawned: true
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&eБроня'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&x&f&4&0&0&0&0[Торговец]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      commandtrait:
+        commands:
+          '0':
+            command: pvp_menu
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait:
+        signature: j9O+wPdnC6GmXueN974tes9v7LQ3ACEr/v2fSIIelT1tgfOTjadwkUgK64rzlEq75Jt9d4ER44w9CPZ89/LhT8ibLDhxV/s6J4L/yDc5/nuZxsQNI+prUnM6GwbFXSoArzRD0af8YFqbEc0ueZVQHN7xcvRJ4fOOVpmuCLRG9kvgTzw9guhmRPaNEXVqjHSd35fvSiYLx1V1v1Hy2EcycWbxtNHbAOkMJOIbid0miIHscg+Re6OCSZsZY/V60/jFxYYAtgrUzkZteZvRdHS3vvrtkGN++oUpci5Qfp+FVi9bJzxv2X29zhpqqVPGWE5/erVAp26wrpfYoEdhNsrqgSOm2X08s2T2Gsa1FqN5KI73gVAEqG73pYtsRj7645e4N/tmEAYdzXzqTOEK6G2MU7LoVMLbcktRl3gUU0n52uhO/cwUdyKtrB7NZQD5r0AxWC/w/wDLACrLMKatIKQcXDAsFQDJe3M/5LtExsWHVRQMm8N8rHlOaifufZ9eJCTPiw1BZwYZ8Tk+2FQxaC9JtYz0rBMLSAs9BUc0CbNLPepbRiGTW8Fh1vOdD5SXSfPUVbLU9G1mP5Kf06P+yejJm3fBJYIfv2YtHnAsVeiS4CV2Y6X47/CZSAa9tl8KMZcAINSpKiojlTGmBxk6xn2b9AnK1oQkLpqMy1VjmeNrzqg=
+        skinName: Seva2k
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY5ODkzMTQ0MDUzOSwKICAicHJvZmlsZUlkIiA6ICJhNTRlZTIwNmVmMzM0Yzc2YmNjOTlhNTNkNTljOTJlZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJTZXZhMksiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTI2ODVkMzdmOTI2YjkyN2ZiMDNlYzExMmUzMGY3NWQyMmE3NDlmMzMwZWYzMjQwMDdiMTJkODViODY3NmJkZiIKICAgIH0KICB9Cn0=
+      inventory:
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+    traitnames: commandtrait,hologramtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: a54ee206-ef33-4c76-bcc9-9a53d59c92ed
+      cached-skin-uuid-name: seva2k
+      nameplate-visible: 'false'
+  '11':
+    name: '&eЕда'
+    uuid: 8cfa3855-713d-473e-bbad-7649ed7be99b
+    traits:
+      age: {}
+      owner:
+        uuid: 7c9f4624-ed48-36b6-8ab9-ffdcfd42b07b
+      type: PLAYER
+      location:
+        bodyYaw: 2.1788101
+        world: lobby
+        x: 61.5
+        y: 76.0
+        z: 86.5
+        yaw: 2.1788
+        pitch: -4.9088
+      spawned: true
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&eЕда'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&x&f&4&0&0&0&0[Скупщик]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      commandtrait:
+        commands:
+          '1':
+            command: mcbuyer catalog_3 false
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait:
+        signature: d0xG8PC3YKB4ClLK3mwTjQXSJYttiGfCVjuTDH+wzqEKIIELAPrmKJe5PrLwp7PoM4bGavLA0oKFEk7uIUmjqmM2J7f1WVpDoc+s/hok33rNqRgFrVrVngFNyCl6Gt2hnxmIeNTn7VGssGvqyjzEw7LHxTVvoVJCvBSTaddSt3iDVn/lZ0lRv77TkpUauHePxE57ZuSjAN8Tds7QiABWBGtBtLuXfv8NRYosmgdyqkPngCK4TE5QL8aWyBgR0ntehhqgy5HnNyke9h53G+8nc9yniyz+/w2sT5Z9uHQs3y61/vM8UY7blbC5Lj6VOM5mrTYyIPLJxsXaOYHje+g2LGaq9ZvPn2BTspqshzGx4hqRXCTfjfoaCg7VsguUmjzAqgjJc8MydcTsbrKvCdxXjCSn6/oIjMHCJzMRSRlxs5U2ci7tiGsbPjNPezzxAjFT5JzqcpYBUY1tTyqziP/gutafTmhFCMn1eJErLJmT8hClxki2VM0fwoO6rzFIFp4lzo1WAWopeCCWmWfjOD3AjIWFnz8iQGHp4S42HBh9va6cXMPdaQBv1hZ+hHNh97rJNwxuLDuiI1S3LVtMquxf8HXuwI7SjesJSSOe2W2QQGn5vTnTygVhX418iRti2IOsP2HF+T3AduWnMYuLm1FlPCWB1TMVvY/0TWYVgHUTJjA=
+        skinName: ana
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY5ODkzMTg2ODQxNywKICAicHJvZmlsZUlkIiA6ICJjMjBkZmZlNzRlZTA0MTg2ODY2ODEzNzI2MjZmNTg1OSIsCiAgInByb2ZpbGVOYW1lIiA6ICJBTkEiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDg0MDkwMWFhMWJhMDllY2M5NDk0ZDlmZDhjZWJkMTlhY2FiZGI2YWQ3ZjAyOGZiMzc2NjlhMzM1MjUzNTg2IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=
+      inventory:
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+    traitnames: commandtrait,hologramtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: c20dffe7-4ee0-4186-8668-1372626f5859
+      cached-skin-uuid-name: ana
+      nameplate-visible: 'false'
+  '12':
+    name: '&#fff500Инструментальщик'
+    uuid: b5bafc3c-b086-4899-aaeb-4e396795b771
+    traits:
+      age: {}
+      owner:
+        uuid: 7c9f4624-ed48-36b6-8ab9-ffdcfd42b07b
+      type: PLAYER
+      location:
+        bodyYaw: -148.13217
+        world: lobby
+        x: 46.5
+        y: 76.0
+        z: 117.5
+        yaw: -148.1322
+        pitch: -12.8644
+      spawned: true
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&x&f&4&0&0&0&0[Торговец]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      commandtrait:
+        commands:
+          '0':
+            command: inst
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait:
+        signature: EiwjhFMhRJ89ARcaDgrvZ2arwOtlj9U1E+4anheeRZDiN2SRljcgzjw4BQ3pwos+dzE3PiTOPysuI/IyMkJcXYDoCtSfvDu1LJicP2bZroH7xIN9cX9srEpqZrzxVrgMmb2jI9YyMQis3REYwPn9QfR+DV82RvCHLolEpK8bq0cWRQYSBOjpw/+oFEBAxXVuAdO1SWtpZqfusFERmb1PhcOa3SaldwOeEzlQ6txgz0sbMvj9W3hX+YwcFKXDi0VdIxeC+R9Q37r6LmkeuuhRDWp2g2WeTfnEeUYxY1nwHXR3MvVrHqti5FXfejgkDCZ0QM7SuDq7290wDk4hkn6qypsDxKx/TAhqG6HzpHx52LqZBv4w4s7a4pqyV+PMUPweRILMggRndjlpFsGVr93QgV61ydCLAnWUfYHY8bwBu858VgkEHLyHlbXAd9fbr6gNIUW/2+NqS/XbZJLzY9XKCqhGGC521drc1HbWKrMSunKOJbKL0MzhWtjYqqd3/qbTUFSNCNct27Ivm16AMqPeQpC3T0EQtGWBOVgu+7lj6g0C8254aCjT2i18unwt9rwMmgYyUjzGB5fYaIpXSgZdahqKA8RfWzUx9ye2LwO0e4LDPUUORBPx+hh5ENyv+AYQmVfjcYtUQkwnuu9mU5oSsWNnxqlRqYXEg0PqLDPsX3k=
+        skinName: tools
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NzgzNjU5Mzg3OCwKICAicHJvZmlsZUlkIiA6ICJjMzUyMzNkZWQ2N2U0ZTcyOGUyMGIzMjQzYjI0NTA0NSIsCiAgInByb2ZpbGVOYW1lIiA6ICJUb29scyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kMjkwNTVlZGVlMjI5MzFiNDE0MGEzNDhiYmZiY2E2MGRmZGNlZTE3YjAwODIwNWZkZTY0Y2UyZGVmYTcyODhkIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: c35233de-d67e-4e72-8e20-b3243b245045
+      cached-skin-uuid-name: tools
+  '13':
+    name: §x§f§b§f§b§1§3Горячие товары
+    uuid: e68c0215-f516-4a9f-839f-b57e885ab7c7
+    traits:
+      type: PLAYER
+      age: {}
+      skintrait:
+        signature: jNxsMmZbRlR7c92VQwmhNzy25c1Qekh28pJJJJ1R5HUTNDIkTkY1V0OGqHvk4hz+OS59PN1/Usd6FQan8rQuFryqxUXhiM8oWaJnaPQ9gWV5mmAQp+M5IHduR0RYNRl4Cg/hU5+jKvC7ZVi7LT8tbkuNuuZRrt84tv6YS3AIWFKhk/164nOHEYKsZN9hzRyvjc974/KhJr+cdBrn+wHcUoo8nzAhx3o2hw6lmiYb6P69yM3NNSZOjrR7GYsbpl2U0lQIfyBtx0vmY1FvOBSsnYSNqR5lpTS2OaW8nzv8w7cZ5nLoBTuldufkTXRSgzaeiKQK8jML631r6IeVrXAUG41Ys51zuKvDieP2tHnyj9IthldUMnd/DcFbcC8gJC1DpxvlQiQaU4qutifcNyuDIiMHhvv0YKQZeDJLyjiv+EFAmbbR7JCXU83uPkbJmbcDlWwQVo32tk/Pz8KqZJEJApJ1+pRq5m/TyeilfwOm9Z9WZSIglsiadAUzFVWs4MScw5Pl6hX0+3G2D8054/B14c3YvK2Cd7//x61sgT2q4WO4Ohv2J9gMt9khUnkYfN7FqG5z4UA4z9+ouh0zonzNu3S73xEEHMHs3QFZEHC7lOXuvIMb/RETm7Z5B7koBG/sZiNpS/eE9vbigKq+h+tHYyH78ioMZH4oxkCvZ3TAuvg=
+        skinName: seller
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NzgzNjY2MTY1MSwKICAicHJvZmlsZUlkIiA6ICJlMGU0NjBiZTcwZTI0Mjc5YTViNWRjNzMzNzQyNGEwNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJTZWxsZXIiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2ViMmQyNWJhZmQzOWRiODlmNWNlNmQ0MGE4MWVjYmViZDYzNjQ4ZDZkZWJiODMzZWY2ZjhlMmYwNzNmYzJiZSIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
+      location:
+        bodyYaw: -106.364075
+        world: lobby
+        x: 46.5
+        y: 76.0
+        z: 111.5
+        yaw: -106.3641
+        pitch: 1.3484
+      spawned: true
+      owner:
+        uuid: 273262a0-6a9b-37ee-805f-6d957c138fe6
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&#fb0000[Спекулянт]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      inventory:
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+      commandtrait:
+        commands:
+          '0':
+            command: speculator
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: e0e460be-70e2-4279-a5b5-dc7337424a06
+      cached-skin-uuid-name: seller
+  '14':
+    name: '&x&f&4&3&b&0&0Элитный'
+    uuid: 05cea683-f099-468a-9c7e-2eea2b085fdc
+    traits:
+      type: PLAYER
+      age: {}
+      skintrait:
+        signature: LlfIa+STPiEsa3l7JZLCNPE9o8SG+VOnevyCNrIjTtha4+cHXwKz/Nivypb6/MQK1JEBqhLxx9Xoork3D96lmnLDQNkqtwoRNYX46UdzL0VjDnx0I8sibrE/+1X9IvEzrBL7z/kjZTt0o/K78+FJuSCtc3cCej+AqMlzBM09ckCxIekVHqfzW8i0C/CjIJubKKVrf+kuNe8fN/F0PVM+dIA6bFYyedo+lz8jWGAkb9Tx3Y5yCTVHoBRVjmCm/Ik6mas5w+A4AWHW+LJGSAwScxrueUbpe3T0VZZD+X0UBjV5od8CXYAwTc07mKHp0JrwZNY71hfnvuXdx+UqeAg8GoulmYCv28v2kAsu5hgZaXgYAEfvWPOACOsWX8G8kfwwmp2lNEqVW/q36H8y4HjcDgUbKnwfou4hpTzINvdNGGdTfq0HPahemuSDy/63AVnycYbyDD0T5kC07JORP0i3puxJtyD1v6YlohWiR0/irf7Xf1ycQ3BjMsw5lb36whI93O7P1y2XyOC7PWwA2rKOiPVIwpBJtDrOiCRRDscai3TSliGJdqBOlkZd5g8Md/6lc4iXH2H5Wr4gE0fpoS7kE8N6sdnX7b/GI+aRnK7C5yGV/W1ftryk70D9+Zy2Z0oJyMyG68lhmRbkkzcCg14CQeuG3gjKMf/wecFGSb+rDHI=
+        skinName: Evilartas
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY5ODk5NjY2MjU3MCwKICAicHJvZmlsZUlkIiA6ICI1OGQwNmI5YWRkMTI0MWFjOTgzNmQzYzgwZGQ1MTNjNyIsCiAgInByb2ZpbGVOYW1lIiA6ICJFdmlsQXJ0YXMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWIxNzhjMThhZDNhZDU0OTVjNzI4YjlkZjg4MTIxNWQxNjk3ZWMzZDUzMzllYmEwNWVkM2MyMzcyMTVlZjY2NCIKICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjM0MGMwZTAzZGQyNGExMWIxNWE4YjMzYzJhN2U5ZTMyYWJiMjA1MWIyNDgxZDBiYTdkZWZkNjM1Y2E3YTkzMyIKICAgIH0KICB9Cn0=
+      location:
+        bodyYaw: -172.80487
+        world: lobby
+        x: 46.5
+        y: 76.0
+        z: 123.5
+        yaw: -172.8049
+        pitch: -8.415
+      spawned: true
+      owner:
+        uuid: 273262a0-6a9b-37ee-805f-6d957c138fe6
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&x&f&4&0&0&0&0[Торговец]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      inventory:
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+      commandtrait:
+        commands:
+          '0':
+            command: donshop
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: 58d06b9a-dd12-41ac-9836-d3c80dd513c7
+      cached-skin-uuid-name: evilartas
+  '15':
+    name: '&x&f&4&3&b&0&0Сферы'
+    uuid: 00897480-7483-484d-8023-86ff10a19dff
+    traits:
+      type: PLAYER
+      age: {}
+      skintrait:
+        signature: WD/WKrhNDWq7XrUi0z0XD6+8coZXtZsQafPqsB4HFeiBcmoNta/M2uaFjg0qm9uswuBeGFttRHBDaSGqu754XdeMZXdsQKjEflsa+kfVDZ7aBJDZyM5BEZc95ojE80LR5Bvfki1nY+7xzgfHjz1zYFxptJ+l3S/CEY+yORdWeKaMJ3FF5HLW115TAE4pNEoaiwRonp+4ywogoVuw0rv39IHh8xGUGorhGGGp38a30Ub3F/RMtQYTQORs2p5lDbX5BR0fDqNqvBiUcUzaiBQnEUh9WGsMItkKrKlX8GIVhRMglZpBiRTSKW9dM9AOugS89Mze8Qtf9zwFgdM1kbA365tJZmza2CJTNxUdByWEmf1GjjYJVA22uA9iPU4TLPrxbOiPy6j/MKa8rkuHVchiPthMdleA/RjB73xMLHCj60bvmV5wDbq46oEjlmUjK7mUnZnsc4FfE4Er/krFWFbYEgIGqv66tsPc2mkgrOgZgYZfslxjWG3QA8PTCby1lDSqBHUwPpzFjbTCQymXR6JipYnnxyrrkWPRplK/i6IwwkGM4qMjlV8yGfKE29jW6QyfpMKOxgTNW+0R+U4TaC/VCgbdPSiHUnTQf2TFLW34b50ss8YAwWCj6btYR4Cbc74DyQEPINcx3PSWE4DklPXXxKNaTKqE3rAGgPMvgBm+4z8=
+        skinName: jaylo111
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY5ODkzMTcxMzQ4NywKICAicHJvZmlsZUlkIiA6ICI1ZDVlN2Y0MDk4Mjk0MjhlODQ5NTJlMGQzOTIwMGI4OCIsCiAgInByb2ZpbGVOYW1lIiA6ICJKYXlsbzExMSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8yYTk5OTA2NTk2ZWRiMmU4YmE4ZjVlZjU3MzcwYTU3ZTJkN2I4ZmUyMDEyODJhMzk4YjQ0NzM4YjlkNWNmNGQ1IgogICAgfSwKICAgICJDQVBFIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8yMzQwYzBlMDNkZDI0YTExYjE1YThiMzNjMmE3ZTllMzJhYmIyMDUxYjI0ODFkMGJhN2RlZmQ2MzVjYTdhOTMzIgogICAgfQogIH0KfQ==
+      location:
+        bodyYaw: 147.05977
+        world: lobby
+        x: 66.5
+        y: 76.0
+        z: 117.5
+        yaw: 130.5325
+        pitch: -14.8166
+      spawned: true
+      owner:
+        uuid: 273262a0-6a9b-37ee-805f-6d957c138fe6
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&x&f&4&0&0&0&0[Торговец]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      inventory:
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+      commandtrait:
+        commands:
+          '0':
+            command: sfers
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: 5d5e7f40-9829-428e-8495-2e0d39200b88
+      cached-skin-uuid-name: jaylo111
+  '16':
+    name: '&#fff500Оружейник'
+    uuid: de9cb088-dd9e-4364-9d59-51ad3daf757b
+    traits:
+      type: PLAYER
+      age: {}
+      skintrait:
+        signature: wBx5DeHSyM763obEVDv1gQAeMWmdmVj3oNpFahSr1tgkhzCDi8vo0vFZcWGIcoiOQgsIqtwBlVM4AhdeFeJFSkNH4iq4pSofqkfwgjq+nc45pNCrHKO2PY10PHFmB4LfzHigFEgoKCj7sNS8MI5iJhz88xiu+tiWf+3FvWByQEfqExDAyVpYj6XjWXe7KSjv7t1gJ0U/uU2EI7BUAH9OWdfPSa6ZJVAd7cldP7AiCAbsAxHp/+fr0tvxYydUK+TNiTqUI2jXpUGB7+IyOmZX5uT/B3aw+vqHfRjmWNzvPQdkK0o5L6nm61JkIyw/M9o5LTdCFr9xQ5snYQodC+7q25m+EysDokVniU/swnIy66iw4lagv72hpzPmELcgbqEiMVhcOiFNQTfMMy4TeOrDEnEryCvbVqt1JN1cD/Dtbcyhd7F0Nk4dbncEHOkbwmsdil2oiRR6po5mEtKLT6gI/1zddUbE8BPblArZj9tReX4Ny1kXDOkghfIM0Zkke+1AimvWyJDnnRI8beYdPxkjp76Cet9AWZhKMDU6RMLPlgLLT9k5cIuiErfyYNM1OJwYEZV+Zy4sjzuDLvXY+XDyBO7sGV41znPkaIBx5Fk0ywQPJj1d6Q5SxFU+VW0ARahQ0X9vpZ6Od7mUnLja4qB/ZcmMPJHmz/84cImpQt7nyWA=
+        skinName: frantex1907
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY5ODk5MDI1OTcyMywKICAicHJvZmlsZUlkIiA6ICIyOTViYzQ2ODRhY2I0OTUyYTc2MGFlYjNlODk5ZDU2ZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJmcmFudGV4MTkwNyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82ZjQ5NGJmODkyYTYzZTZkZTRhYmMzOTc4NjA1MjlhYzdlOGNlMjY0OGRhMmVlOGVlNzZiZTQxMTg0OThkZjQ5IgogICAgfQogIH0KfQ==
+      location:
+        bodyYaw: 148.79906
+        world: lobby
+        x: 66.5
+        y: 76.0
+        z: 123.5
+        yaw: 168.7991
+        pitch: -27.7058
+      spawned: true
+      owner:
+        uuid: 273262a0-6a9b-37ee-805f-6d957c138fe6
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&x&f&4&0&0&0&0[Торговец]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      inventory:
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+      commandtrait:
+        commands:
+          '0':
+            command: shop_guns
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: 295bc468-4acb-4952-a760-aeb3e899d56f
+      cached-skin-uuid-name: frantex1907
+  '17':
+    name: '&#fff500Фермер&#fff500'
+    uuid: 21c2efae-7241-4c7e-9684-eb77b80c53b9
+    traits:
+      type: PLAYER
+      age: {}
+      skintrait:
+        signature: Kvh1khRVw3KUtLfpGp1B9x31mjfp2T065vEUC/ft5+CPWfK3wgQbtg4p5+uj8gqPfOctlgTXthchZTI5RyykUNc3BCy47WcGh0daK8Ymj3vl+5gV5di+7hcGzJnPeZi0I4Zn5u0mr4eKUGSLVzCQCWwa0gKLIsqQFtcrO+25UrjuwWpva9eN4PnFGpfM5XaThv9IqB78O8gBikRJHWCj0l5R6jnvc5iqlZlqJXtIXTSjt/zUnebZ1G1iaa+GQeUU9uQM56KD82cq2MVpIM7nYDI0B7+E3LyZSZ3Q7rqD2aNSls59DwWcPHAW0WVfI+sI7dwqqX4uImv95qZYn19fiO/XVCnvSQB+jTzCRBegmrVHcpdvY1stllGuDxNtk09ttDLq0ARO4K3AXLQxsuFy7MHkbr5D0Fvar5UwnagqELDi70Q2FxJzjFu2CORMPfV8MOX+pvqatrozthF3qnIm6/fysawvcy1LIdELP/o5DkAXzYzK+147tzMYJiI9aWlAMfrZb0us29TDtQ4AgxIDpo+zm4rRPpLDuF/hSSiMkpnnE3fVDnFx2vtnTmx42OoWafuQutHIDPqyL8+3uv18rxGPdT/Fv7FdGy9P1JjtMY98hVXMUcvlmjlUmtMLp0Rxedi+bjP6TGEE+GB4Q5+3WkgW8tqGcx8ajdN+fEqArqQ=
+        skinName: farmer
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NzgzNjc5NTk3NiwKICAicHJvZmlsZUlkIiA6ICJiOGY2MmEzMjExOGQ0NzA2YmMxMWU0ZjMyNzdhZDk5ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJGYXJtZXIiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjk0MjcyY2NmNmRjOWM4MDgyMWRkYWQzMjYxYTkzMDI2NjAxNTc4ZTAwNGY1MzlhNGI4MDdkOTkxYmM3N2UxZiIKICAgIH0KICB9Cn0=
+      location:
+        bodyYaw: -48.12794
+        world: lobby
+        x: 55.5
+        y: 76.0
+        z: 86.5
+        yaw: -48.1279
+        pitch: -5.6721
+      spawned: true
+      owner:
+        uuid: 273262a0-6a9b-37ee-805f-6d957c138fe6
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&x&f&4&0&0&0&0[Скупщик]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      inventory:
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+      commandtrait:
+        commands:
+          '1':
+            command: mcbuyer catalog_1 false
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: b8f62a32-118d-4706-bc11-e4f3277ad99e
+      cached-skin-uuid-name: farmer
+  '18':
+    name: '&#fff500получай &x&f&4&0&0&0&0награды&e!'
+    uuid: a06f9bd1-5af3-42e3-9bf8-49ca796199f6
+    traits:
+      age: {}
+      owner:
+        uuid: f262a392-6f49-30cf-842a-ecc3b10553c8
+      location:
+        bodyYaw: 89.48718
+        world: lobby
+        x: 53.5
+        y: 98.0
+        z: 39.5
+        yaw: 99.5284
+        pitch: -2.7932
+      skintrait:
+        signature: tGww6MuggHBpmWbOefW3CkcjFPCrL2WX69djM88jtU/jrrLA/s9DFSAL/sDEIZ1c5SUmT0111Hhzx+ZlY1q1RI+9nvq+SNZiBjsBu5tTWrrkJKZL75D4tyhE5zIWEvMq4YI4CP5kz0ONT8fTnDZyl3TkrXg3cO2mNLGyhtk9QGKSu6u2dtDDeQw7lM8480G0ryvfiCi09wVqIZvlSejAWpwIb4a9eWlhQCv5k4ElO5+MuJI5pR9xywJBMlpccoGJhFUt/AbPvdiQ50Bj8aI53l9JhWgkkmhOEsUn5bfxIZtPmppHVVCGhbEDvyLsyHykBCrrC5Foo2I3X8apcSHCbJ5h7rW/R4JqbLJs+uyjeI/jMY6TLPjgvKliC7Hi8u10FqwJlUiTkknkSLWZguntu2mF8qiT5I4jjXXb1BgSsKe2pXEnepObXJY/MYBI+hkwch+KAbPCiYxgdvagUBsO6HmsSseUmXZNA9PYCXAZXR9dsEKUNLxD+GhCjxMYP/qDNhctkMlfPN1AuZrryariBMIhajrgfNJ9g/O7oPzLmBkVuHf7InpGqNp6HNs4egdp/PJB+TK5E3lz22v0op2ocXZ713y5NyS7UookLojvWX9tgiGeuiVRhXtZw7fTfJ8oOLUGGmwTR0K8Aj6CQEMG/KeARTSsbeZ48durBtZHlUc=
+        skinName: SelfishAltruist
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY5ODk5MzMyNzQ0NSwKICAicHJvZmlsZUlkIiA6ICI4N2JkNTYxMGE4ODE0OWYyOGVlZWIxYzI3NmM0ZmM2YSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTZWxmaXNoQWx0cnVpc3QiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWEyYTE2YTc3NTg5MDNjNGNkNDY2MzllODExZWM3ZTNlZWVmNzAzMDM5YmMyNDE3NTNiMTQxZjNhYjY1YmJjOCIKICAgIH0KICB9Cn0=
+      type: PLAYER
+      spawned: true
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&#fff500выполняй задания,'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&x&f&4&0&0&0&0[Наставник]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      commandtrait:
+        commands:
+          '0':
+            command: battlepass
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: 87bd5610-a881-49f2-8eee-b1c276c4fc6a
+      cached-skin-uuid-name: selfishaltruist
+  '19':
+    name: '&#fff500Арена Смерти'
+    uuid: 2a165c69-cd8b-4103-8739-3345c1feec0a
+    traits:
+      spawned: true
+      skintrait: {}
+      owner:
+        uuid: 3583b281-ebc4-3946-8095-b0dd6616535e
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+      location:
+        bodyYaw: -117.591644
+        world: lobby
+        x: -17.5
+        y: 78.0
+        z: 126.5
+        yaw: -117.5916
+        pitch: 0.0
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      type: PLAYER
+      commandtrait:
+        commands:
+          '0':
+            command: death_arena
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      hologramtrait:
+        lines:
+          '0':
+            text: '&x&f&4&0&0&0&0[Проводник]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      age: {}
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '20':
+    metadata:
+      cached-skin-uuid: 48d374f3-bc25-447f-b449-461cf69554b8
+      cached-skin-uuid-name: krupie
+    name: §eСтавь и побеждай
+    uuid: 8bd38fd6-5ed8-41d5-b30f-2a77c75bbdf9
+    traits:
+      type: PLAYER
+      owner:
+        uuid: ccc8ffbd-e1f2-31f9-95a0-1b21e515729c
+      skintrait:
+        signature: HyY7nuf9ypmCV9u/n5yRsBzxWH8yGUJiWnK70O5ZXrtyYGExN1W2W1leBJh+dXlB+mrfZXCUUVPSf66z8z7H+whEdhJdbL6/lqeFYpGf3x2rKy7j9K5nan7vxlfvxgoPUnYR6QtYedBlBhax3Did/A9Gvrtbnf6MHb+K78LtedP+Aq7E8WVe4ZVPNhYGOdZt0o+u53zFYSTmO0sjtDoYP9Xsa4/t405Xhide8eYPpezdUGbZoCa53MIUjcy55cVfoO7p8U76LlVJn9w4K+6gCImd5D9VSba3adH1JQBp6IPRH1z/G4gezm6JKcg3AGEmLgYy5tKj6dabWJQpo/Hj0RNcSV5rB/Qycnkl3NZElPQZKQKT2oWe0mPRvhGbzewLs3kxr+tGu30QNSxk0lAbfiCqTPuMGAS0VND++cbtElH++uZRZi4/mnBmoQoH25esPVA/013RB2wXws7B+2Um654aOEWyok0NIyINx8+qyt7au9Si6RnPaCSGuflGsbq2ljP4cgbfhjkgMXvpq/0Y9Sk5JndlgZHSiCvfgPBwKSctnxZn+/LQkfAr5Pgk7F97M0xT5UosLumKtOo/l+2X98sYIDK8OXIMJrRIgMC06+1Ibv55+l1zwHuUg94n3RRP2KXzP3Dic3nspRwgRzENmyujx4XLcHwDOfhgplpJXGk=
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2NzgzMzU4NTM4NiwKICAicHJvZmlsZUlkIiA6ICI0OGQzNzRmM2JjMjU0NDdmYjQ0OTQ2MWNmNjk1NTRiOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJLcnVwaWUiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmRhZThjYzAwNTY5NjI1MGM0OGU2ZDVkYWQ0NjU4ODI0YjNmMzViMDc3NjY4MmIxNzdlYTY1YTkxNDM3NzJkMCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Y5YTc2NTM3NjQ3OTg5ZjlhMGI2ZDAwMWUzMjBkYWM1OTFjMzU5ZTllNjFhMzFmNGNlMTFjODhmMjA3ZjBhZDQiCiAgICB9CiAgfQp9
+        skinName: krupie
+      spawned: true
+      location:
+        bodyYaw: 18.743225
+        world: lobby
+        x: -50.5
+        y: 105.0
+        z: 10.5
+        yaw: 18.7432
+        pitch: -15.3882
+      age: {}
+      commandtrait:
+        commands:
+          '0':
+            command: casino
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&eПривет, сыграем?'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&x&f&4&0&0&0&0[Крупье]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '21':
+    metadata:
+      cached-skin-uuid: 0113a2ab-a768-477b-aa4a-566f0f093a64
+      cached-skin-uuid-name: pvp
+      nameplate-visible: 'false'
+    name: pvp
+    uuid: 10bf5853-d70d-41a8-a31c-a2d399ef6556
+    traits:
+      owner:
+        uuid: d937e70f-3936-3e12-b914-d7df59da217e
+      skintrait:
+        signature: KNT/P/tCtPStrbECCQenlUfaPVgUj3ucT5ag/yjThCW6a9yIyJ+bsUuHBaerCCIpK5bACc37cdsL8UbLx+oTmhZoQgeFPnHF9gYH1B31sHgLg903H3vX1KOHHD4b4ORMF/PwpEKWDRi0iQX7ngrytdUf6fUZHw3DxyUTVDpSYedgf6vUyPEu4hACkTKC8qalA8Ym04Qvf/DitPOHg6D1iAzEzUrnIpZE3xd3CqjwMz+wnzRzqhb0BxEYJvFc/dWz6GvLm6ShsnMFVK/6Ll5aaDe86AuQZCS3GaYMcAPxn1HVcYl6rqLsdpXLuIrtekmoekYWqzi3HMxkvD0ojCfmpzhsL1VPrtQBzqc46f7XNKNDEQmnJdbXSAn6+2Q8cZcp1M8khlVP7N3bR5VT7+hSEXc3IHpik1IGG1oB70a4abr8A3Rj1qm8OvAIY8QuYOmGnUBnH3DEKQ+vN5up8McmUm3xqREcHppQD2tzvsaIsvmvJPfntycAD12dMGodgzjf1Kvnqqy38fDPxiPldkKAPYt46FQNya+vkv0YEDJmJvoWMcXzIft7kNHg+sZBsqCdgLtx68bpnt8IJNO0r+ZESbfXdyQYrZrFpqCztKry01k/pM2qwcLLtRrqMXqjo3LDXhZq+VAJ2RtKsz+drDQmJzfIN/VOwPgxXJlFCJVEAK0=
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTcwMDkzMzQ5ODkzOSwKICAicHJvZmlsZUlkIiA6ICIwMTEzYTJhYmE3Njg0NzdiYWE0YTU2NmYwZjA5M2E2NCIsCiAgInByb2ZpbGVOYW1lIiA6ICJQdlAiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmY5NjEwYWFlNmUzODVlZDAxOGIyZTVmNzJmMjFmMGM2MTAzODhmOTFkODdiOWM1NzMzZWEzYTcwYzFhNTM1NSIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzIzNDBjMGUwM2RkMjRhMTFiMTVhOGIzM2MyYTdlOWUzMmFiYjIwNTFiMjQ4MWQwYmE3ZGVmZDYzNWNhN2E5MzMiCiAgICB9CiAgfQp9
+      type: PLAYER
+      inventory:
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+      spawned: true
+      commandtrait:
+        commands:
+          '0':
+            command: warp arena
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+      location:
+        bodyYaw: 59.11299
+        world: lobby
+        x: -202.5
+        y: 107.0
+        z: 20.5
+        yaw: 59.113
+        pitch: -2.6838
+      hologramtrait:
+        lines:
+          '0':
+            text: '&eСо смотровой'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&c[Проводник]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: commandtrait,hologramtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '22':
+    name: '&eНазад'
+    uuid: 867f7aea-869b-460d-965e-d9c15b0d71f8
+    traits:
+      skintrait:
+        signature: RhpH+mMMemMs1OLJYO2W+IqvafW/EKHIRHAipOQs0O0HyQaTLkLhQj1DTIGNvlxk2gtINpBhgzPAwBtI1CGJaEqyFjM4w12sxdDMGFO8f/RNHahwduxEtLeN9k73GOumkksnwjQoCOkvbQMB3siULxnJm9JXypR6Y6NhUrwAt1p5ShVnj6Df9SlFIs2+hrzUl4kSKzJ5GqkVvbeEUijuOV/7Y/5lZEhqNSJPhKIHJ3bcTcjt5RWMJJ8hai5ChHw3mdTtw3I4WgSAMb4wPWd/yNwFNJJpgMr7hNK6gGCUMkq4ecfEE2G1QIXG5c/+kDMkwkTfrUQy7GzMKH7sRVHSiszNzEvM1BwyyNT6Ti7oBOXnvDapR7GOQ+uz3C7aeSo7p2MkIcJ/kOxPvyEBoHgsxy4tMICCpudcGY2A1WmAXn3GOn52gc/e3y8OmAgsaVfjPjCuiD+QCU5Ok6K/K4cJno6CxE+4Bor6bcedwYBblQLYFt9p9hdpPoXyjdiintFxDurRb0n01qvBTu1407G4yDq3+9Z85NTP9oqK4GhaujBNiMe2Pvv0X2YEMV3dLvdc2WUkoUcP/xZuOQr7njVMwc/8GoTxnoRCVeQRRRPmvmjimNcYjxaic4vWUYWLWL7iVmaaDMFpZhAFLwjUUbiy9doEF7kF+qwBFBJd2hirrJs=
+        skinName: stoloshkaw
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY5OTEwMDE1MzE1NiwKICAicHJvZmlsZUlkIiA6ICIwMDQ0NDAwMGM2NDM0OThiYjQ4NmQ3YTJhNWQ2MjY2YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJTdG9sb3Noa2F3IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzM5YzViMmJkYjgwMzliN2Y1MTI3MTg0MDAzNjU0MDdmMmNiYTg0YTI2YmRlYTZjOWVlN2ZlZTJhNzNiYmRjNjIiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==
+      type: PLAYER
+      location:
+        bodyYaw: 89.41948
+        world: lobby
+        x: -202.5
+        y: 93.0
+        z: 20.5
+        yaw: 89.4195
+        pitch: -15.503
+      commandtrait:
+        commands:
+          '0':
+            command: warp pvp
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&eНазад'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&c[Проводник]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      owner:
+        uuid: f262a392-6f49-30cf-842a-ecc3b10553c8
+      spawned: true
+      age: {}
+      inventory:
+        '36':
+          type_key: chainmail_boots
+          amount: 1
+        '37':
+          type_key: chainmail_leggings
+          amount: 1
+        '38':
+          type_key: chainmail_chestplate
+          amount: 1
+      equipment:
+        chestplate:
+          type_key: chainmail_chestplate
+          amount: 1
+        leggings:
+          type_key: chainmail_leggings
+          amount: 1
+        boots:
+          type_key: chainmail_boots
+          amount: 1
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: commandtrait,hologramtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,equipment,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: 00444000-c643-498b-b486-d7a2a5d6266b
+      cached-skin-uuid-name: stoloshkaw
+      nameplate-visible: 'false'
+  '129':
+    name: §x§f§b§f§b§1§3взамен на ресурсы!
+    uuid: ae51db49-6d9a-4bc0-8b41-a7d48df7d078
+    traits:
+      age: {}
+      location:
+        bodyYaw: -170.40686
+        world: lobby
+        x: -80.5
+        y: 97.0
+        z: 98.5
+        yaw: -170.4069
+        pitch: 7.9064
+      owner:
+        uuid: a406869e-af2e-3802-b1d5-8ed1f16b3e09
+      hologramtrait:
+        direction: BOTTOM_UP
+        lines:
+          '0':
+            text: '&#fbfb13Принеси &#ff0000проклятые души&#fbfb13,'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&#fb0000[Собиратель душ]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+      spawned: true
+      type: PLAYER
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      commandtrait:
+        commands:
+          '0':
+            command: souls
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      skintrait: {}
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+  '131':
+    name: §dне узнаешь о нем получше
+    uuid: 4561f5de-e484-4959-abe2-09b9aa48c642
+    traits:
+      type: PLAYER
+      lookclose:
+        range: 5.0
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      commandtrait:
+        commands:
+          '0':
+            command: am open portal %player%
+            hand: RIGHT
+            player: false
+            op: true
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      spawned: true
+      owner:
+        uuid: c2f04fb7-a551-329c-b37b-aeee1637e834
+      age: {}
+      skintrait:
+        skinName: shrek
+        signature: emfiFbjLv6fphtRsq+NS5kUVLamv0w3va4loZVvYG1+FrUtBPBa8f6cE31zMDw98Ez/69wYb8bbWh04sUxDV+J20SU0j2+W9zm+ECEY71fNb30i1HyewsNbJqygpvknWapAhoxMBNr3mpXa5jpnXZh6mwRz94HBSPYX4gySAs727aeAqjepzWC8iqgI40+ESUHEBHgTiyJad/97Wuo/cnaAJJN5cGIWCFwsJgKA0AuusmUrysQECu7DcmA+hVXLiBjHKb0goF3sV+rCL3Ie00n5jmHYYulnGWML0c781GerrkItW+BtOpYqj4WbNQsVqMh18zCqGRWJ8qYziMIA1bHbuu52vWqcfhvKkBOx3TG0UIULInJLL1JQzs8CrcC/jbIH7EgQwATopmHTbzvjN7Al7P+3o4Jtkn/7ySA9skZEbpzsfi+axoqrotTbWuOQqpugRw6Fi5hJho+ayMaxLzKIr0QbiKDgmTfeocLYmsR09pArTp1n5bcOSy/FsD+NS0ndSUBudWTC0Sss/UBEsfWo6ZXgdQcWfHuFAj6+ZSCziTTxI/i7KvcaWBJydbE1RGfZefiUwMjrq4VPcT465Kbx+5isr2cegqFxSt6UQy2xilHbMf5biG9As8PD/gnWjwiHWvEntFVj0NmIJ7yrBSQF87+bPoKljpM+FLEXTQNY=
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTcyNjUxNTgxNTE3MCwKICAicHJvZmlsZUlkIiA6ICIzZTgxY2VhYjU0OWQ0NTY1OTc2OWFiOTkxZTY2MzgwMSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTaHJlayIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jY2VkYTJlNDFjZTYwMGNhNTNlNzNhNmZlZTIwZGE0NmZiMmNhYTEzOWNjYWVjNWE3NTdmM2RjYmI1N2I5NGU2IgogICAgfSwKICAgICJDQVBFIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8yMzQwYzBlMDNkZDI0YTExYjE1YThiMzNjMmE3ZTllMzJhYmIyMDUxYjI0ODFkMGJhN2RlZmQ2MzVjYTdhOTMzIgogICAgfQogIH0KfQ==
+      location:
+        bodyYaw: 92.400635
+        world: lobby
+        x: -108.5
+        y: 76.0
+        z: 102.5
+        yaw: -89.851
+        pitch: 2.55
+      hologramtrait:
+        lines:
+          '0':
+            text: '&dв этот портал, пока'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '1':
+            text: '&dДаже не пытайся войти'
+            margin:
+              top: 0.0
+              bottom: 0.0
+          '2':
+            text: '&5[Хранитель портала]'
+            margin:
+              top: 0.0
+              bottom: 0.0
+    traitnames: hologramtrait,commandtrait,rotationtrait,scoreboardtrait,inventory,owner,mounttrait,location,skintrait,age,lookclose,spawned,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false
+    metadata:
+      cached-skin-uuid: 3e81ceab-549d-4565-9769-ab991e663801
+      cached-skin-uuid-name: shrek
+      respawn-delay: -1
+      nameplate-visible: 'true'
+  '86':
+    metadata:
+      cached-skin-uuid: 5e301ee6-6ad6-42cf-885d-3752a5c351aa
+      cached-skin-uuid-name: links
+      flyable: true
+      nameplate-visible: 'false'
+    name: links
+    uuid: 7e4dfc21-6f6b-4ae2-8bec-d0589bc2f9a4
+    traits:
+      type: BEE
+      lookclose:
+        range: 5.0
+        enabled: true
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      skintrait:
+        signature: arHf/FwkbtzllsKBngSB5aKdba8UyaZmJVbZKE/kfVFTWS2fQDAToya+U2yfTgavqnBPW5RYKrAHvX2r+CFXrzOkRjgtLln0ZrxHcjWviOvekztXt08qPRAvvJmY9+fXrD1BthlLmfzdLLCIVAkfEb0LCTEXNTdqICoXgyVDY4YGG9jVDN0fddaKP5rF3wG9Yv3XTUGy2BGc2q6ypY03rz+S/LhrwsyCOOoc4r1NcQRZx96fff9G1WXWlWqA87XIqgmvmaTXn6gkiT4elyaq8oKgz4o7GXi1clB3UeEo10shDg7ttZJ86Kwlk4aqCBqDsBU+CelglBjd+/AkHrl/UIRvcLRu2oXDL043eXpv643PbcvFSyVJ8bbwvX9Ii2TdCkXZ/pXAP0yDtCGdLH0wFLBmnWYpIJQUyuaXTLF9n0lMTFbxQKk9v64exv3Q0HDfqxFaH4DsMfQDwekytLokM8Ifa/YlBEjqPF2FSQ+j0FqajNbzAPitK9WlCH2UXeguiWyOP5sbIchkG7ZwclTZ+/b/MtMyz6oyWpQ5s4TL/Fl7i92uZRDkQbD5HQ8fZqxwy+BeEReg3VYLpIVMYKgDaCejNkOcg0Eq5Fcn4A/2V44kehHFZ6mTZ1bWgoDjv3s/tyVuzKjcq/mOHQQ9LB5zC0gz4AaWAQoZZzWeahKxsZA=
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTc2MTQ4MDU4MzQ3OCwKICAicHJvZmlsZUlkIiA6ICI1ZTMwMWVlNjZhZDY0MmNmODg1ZDM3NTJhNWMzNTFhYSIsCiAgInByb2ZpbGVOYW1lIiA6ICJMaW5rcyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jZTYwMjFhODlmNzNmNGIzODFlZjRmMDI1OTM5YTNmZTQwYzExMzVlMzQ4NDhjYmE1YWNmNmI5MjljMTYxOTdlIgogICAgfQogIH0KfQ==
+      owner:
+        uuid: d937e70f-3936-3e12-b914-d7df59da217e
+      spawned: true
+      gravity:
+        enabled: true
+      commandtrait:
+        commands:
+          '0':
+            command: links
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: -1.0
+            experienceCost: -1
+      location:
+        bodyYaw: -48.193897
+        world: lobby
+        x: -5.5
+        y: 90.3121
+        z: 6.5
+        yaw: -48.1939
+        pitch: 0.0
+    traitnames: commandtrait,location,skintrait,rotationtrait,scoreboardtrait,inventory,lookclose,spawned,owner,gravity,type
+    navigator:
+      speedmodifier: 1.0
+      avoidwater: false
+      usedefaultstuckaction: false

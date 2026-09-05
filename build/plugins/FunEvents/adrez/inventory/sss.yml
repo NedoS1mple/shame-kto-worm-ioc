@@ -1,0 +1,27 @@
+'-874229679':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: BOW
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#950000","text":"xxx
+        "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A50000","text":"Л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B60000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C60000","text":"к
+        "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D60000","text":"К"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E70000","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F70000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F70000","text":"ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E70000","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D60000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C60000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B60000","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A50000","text":"я
+        "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#950000","text":"xxx"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Снайпер
+        II"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Подрывник"}],"text":""}'
+      enchants:
+        bomber: 1
+        ARROW_FIRE: 1
+        ARROW_INFINITE: 1
+        LOOT_BONUS_MOBS: 5
+        MENDING: 1
+        ARROW_DAMAGE: 5
+        sniper: 2
+        DURABILITY: 5
+  chance: 100
+  fixed: true

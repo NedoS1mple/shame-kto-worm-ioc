@@ -1,0 +1,3700 @@
+# Плагин: mcBuyer (Продавай, прокачивайся, продавай)
+# Версия: 1.8+
+#
+# Описание:
+# Плагин добавляет скупщика с поуровневой
+# прокачкой, продавай чтобы повысить уровень.
+#
+# Зависимости: (плагины без которых этот работать не будет)
+# - UtilM https://mcdev.su/resources/utilm.73/
+# - Vault https://www.spigotmc.org/resources/vault.34315/
+#
+# Опциональные зависимости: (плагины без которых не будет полного функционала, но работать будет)
+# - PlaceholdersAPI https://www.spigotmc.org/resources/placeholderapi.6245/
+# - mcEconomy https://mcdev.su/resources/mceconomy-krosservernyye-mul-ti-valyuty.250/
+#
+# Плейсхоледры:
+#
+# Время последнего обновления лидерборда.
+# Конфигурируемый, подробнее в секии "leaderboard.last_update".
+# %mcbuyer_leaderboard_last_update%
+#
+# Время до следующего обновления лидерборда по числу продаж.
+# Конфигурируемый, подробнее в секии "leaderboard.time_to_update".
+# %mcbuyer_leaderboard_time_to_update%
+#
+# Никнейм игрока на позиции N, где N номер позиции в топе (всего 10 позиций).
+# Конфигурируемый, подробнее в секии  "leaderboard.placeholder.player_name".
+# %mcbuyer_leaderboard_position_N_player_name%
+#
+# Форматированная запись рекорда, например "1. Steve - Продано предметов: 1,220".
+# Конфигурируемый, подробнее в секии  "leaderboard.placeholder.record_string".
+# %mcbuyer_leaderboard_position_N_record_string%
+
+message:
+  reload_success: '&2&l✔ &7| &aПлагин перезагружен!'
+  permission_denied: '&4&l✘ &7| &cОтказано в доступе.'
+  items_sold: ' &fx%items_sold% &7%item_display_name%&r #ffccccпродано за %currency_color_string%%currency_sign%%total%&e.'
+  you_dont_have_an_item: '&4&l✘ &7| &cТакого предмета нет в инвентаре чтобы продать его.'
+  catalog_doesnt_exist: '&4&l✘ &7| &cКаталога с таким ID не существует.'
+  everything_sold: "&2&l✔ &7| &aВсё продано!"
+  nothing_to_sell: "&4&l✘ &7| &cНечего продавать."
+  select_all_cancelled: "&2&l✔ &7| &aВыбор всего отменён!"
+  all_selected: "&e● &7| &aВыбрано всё!"
+  item_now_auto_purchasable_status: "&a● &7| #ffccccТеперь этот предмет %item_display_name%&r #ffccccавто-скупаем &r%item_auto_sell_status%#ffcccc!"
+  price_grow: "&6&l⬀ &7| &eСкупщик повысил цену на &r%price_display_name%&r&e, &c%current_price% &e→ &a%new_price% &6(%grow_percent%%)&e."
+  help:
+    - '#ffcccc/buyer reload &f- перезагрузить плагин'
+    - '#ffcccc/buyer help &f- показать список команд'
+    - '#ffcccc/buyer &f- открыть меню скупщика'
+    - '#ffcccc/buyer #f52080(ID каталога) (true#ffcccc/#f52080false) &f- открыть каталог скупщика'
+
+permission:
+  reload: buyer.reload # Разрешение на перезагрузку этого плагина.
+
+price_changer_module:
+  price_changer:
+    # Тип изменителя цен:
+    # GROW_ALL - Каждый интервал времени повышает все DYNAMIC цены. Оставьте 'message.price_grow: ""' пустым чтобы предотвратить пововещение о повышении цен.
+    # GROW_LOWER - Каждый интервал времени повышает одну минимальную DYNAMIC цену.
+    type: GROW_ALL
+    interval_seconds: 600 # (Сек.) Интервал роста цен.
+
+    # Пример конфигурации для типа GROW_LOWER.
+    # type: GROW_LOWER
+    # interval_seconds: 30 # (Сек.) Интервал роста цены.
+
+multiplier_list: # Список мультиприкаторов.
+  multiplier_1: # ID мультиприкатора.
+    permission: "buyer.multiplier_1" # Разрешение, чтобы начал действовать.
+    addition_multiplier_value: 0.5 # Это значение будет прибавлено к обычному мультипликатору каталога, а не дважды умножено.
+  multiplier_2:
+    permission: "buyer.multiplier_2"
+    addition_multiplier_value: 1.0
+
+vault:
+  currency_color_string: "&a" # Цвет валюты Vault.
+  currency_sign: "$" # Символ валюты Vault.
+
+price_changer:
+  # true - все цены типа DYNAMIC будут изменять согласно конфигурации.
+  # false - все цены типа DYNAMIC примут значение amount.value и не будут изменяться.
+  enable: true
+
+price_graph:
+  columns: 32 # Число колонок (столбцов).
+  rows: 12 # Число строк (линий).
+  marker:
+    grid: "§0❚" # Пустая клетка.
+    grow_line: "§a❚" # Линия роста цены.
+    drop_line: "§c❚" # Линия падения цены.
+    point: "§a❚" # Зафиксированная точка на момент записи актуальной цены в историю.
+    actual_point: "§d❚" # Актуальная точка цены на данный момент (динамическая, не из истории).
+  label:
+    prefix: "%currency_color_string%%currency_sign%" # Префикс метки линии.
+    suffix: "" # Суффикс метки линии.
+
+auto_buyer:
+  # Автоматически продавать выбранные в "Авто-скупщике" предметы если игрок открыл меню mcBuyer?
+  # По умолчанию выключено и требует нажатия кнопки "Продать всё" в меню "Авто-скупщика".
+  # Вы можете изменить описание этой кнопки, секция "gui.auto_buyer.auto_sell.item.description".
+  enable_auto_sell: false
+
+leaderboard:
+  placeholder:
+    player_name:
+      value: "%player_name%"
+      empty_value: "Пусто"
+    record_string:
+      value: "&e%position%. &b%player_name% &e%score%"
+      empty_value: "&e%position%. &7Пусто"
+
+  # (Сек.) Интервал обновления топа.
+  update_interval_seconds: 60
+
+  last_update:
+    # Формат плейсхолдера.
+    string: "&fОбновлено: &a%date%"
+    # Формат времени.
+    # Полный список форматов времени можно найти по адресу: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html.
+    date_format: "EEEE, dd MMM yyyy"
+
+  time_to_update:
+    # Формат плейсхолдера.
+    string: "&fОбновится через: %time%"
+    # Цвет цифр.
+    # Полный список цветов можно найти по адресу: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html.
+    number_color: GREEN
+    # Цвет аббревиатур (час. мин. сек. и т.д.).
+    abbreviation_color: WHITE
+
+selected_sell_mode:
+  selected: '&a✔'
+  unselected: '#ffcccc☐'
+  description:
+    - '#ffccccРежим скупки:'
+    - '%sell_mode_1_status% #f520801 #ffccccшт.'
+    - '%sell_mode_16_status% #f5208016 #ffccccшт.'
+    - '%sell_mode_64_status% #f5208064 #ffccccшт.'
+    - '%sell_mode_all_status% #f52080ВСЕ'
+
+selected_auto_sell_mode:
+  selected: "&aДа"
+  unselected: "&cНет"
+  description:
+    - "#ffccccАвто-скупка: %auto_sell_mode%"
+    - ""
+    - "&eКликните чтобы изменить!"
+
+################################################### ФЕРМЕРСТВО
+
+# Список скупаемых предметов.
+salable_item_list:
+  nether_wart: # ID скупаемого предмета.
+    # Скупаемый предмет.
+    salable_item:
+      material: NETHER_WART
+      unbreakable: false
+      hide_attributes: false
+    price:
+      # Тип стоимости.
+      # STATIC - стандартная стоимость, не меняется.
+      # DYNAMIC - меняющаяся стомость (ищите пример ниже).
+      type: DYNAMIC
+      display_name: '#571318Н#5D151Aе#62161Cз#68181Eе#6E1920р#731B22с#791D24к#7F1E26и#842028й #90232Cн#95252Eа#9B2630р#A12832о#A62934с#AC2B36т'
+      update_delay_seconds: 300
+      min_price_grow: 10
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.3
+      history_size: 128
+      amount: # Сумма в валюте.
+        # Тип валюты.
+        # VAULT - плагин Vault https://www.spigotmc.org/resources/vault.34315/
+        # MCECONOMY - mcEconomy https://mcdev.su/resources/mceconomy-krosservernyye-mul-ti-valyuty.250/
+        type: VAULT
+        currency_id: "dummy" # ID валюты, оставьте dummy - болванка/заглушка если у плагина нет разных валют и как следствие ID для них.
+        value: 27 # Стоимость.
+
+    # Название параметра в который будет сохраняться число скупаемых предметов этого типа.
+    statistic_name: nether_wart_static
+    # Визуализация кнопки скупаемого предмета.
+    item_visualization:
+      material: NETHER_WART # Тип материала который нужно сломать.
+      # Используйте материалы версии ядра на котором запускаете плагин (по умолничаю: 1.16.5).
+      # Списки всех материалов для каждой версии:
+      # https://helpch.at/docs/1.16.5/org/bukkit/Material.html
+      # https://helpch.at/docs/x.x.x/org/bukkit/Material.html
+      # ...
+      # Незерский нарост
+      display_name: '#571318Н#5D151Aе#62161Cз#68181Eе#6E1920р#731B22с#791D24к#7F1E26и#842028й #90232Cн#95252Eа#9B2630р#A12832о#A62934с#AC2B36т'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  sweet_berries:
+    salable_item:
+      material: SWEET_BERRIES
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#402C20С#482A1Fл#50281Fа#58261Eд#60241Eк#68221Dи#71201Dе #811B1Bя#89191Bг#91171Aо#99151Aд#A11319ы'
+      update_delay_seconds: 300
+      min_price_grow: 10
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.3
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: sweet_berries_static
+    item_visualization:
+      material: SWEET_BERRIES
+      display_name: '#402C20С#482A1Fл#50281Fа#58261Eд#60241Eк#68221Dи#71201Dе #811B1Bя#89191Bг#91171Aо#99151Aд#A11319ы'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  melon_slice:
+    salable_item:
+      material: MELON_SLICE
+      unbreakable: false
+      hide_attributes: false
+    price:
+      # Динамическая валюта, используются по умолчанию кроме нескольких первых демонстрационных.
+      #
+      # Принцип действия: Каждый интервал <update_delay_seconds> времени цена на предмет растет в размере от <min_price_grow>
+      # до <max_price_grow> включительно до максимальной стоимости <max_price>, но не выше. Если купить 1 такой предмет то
+      # его стоимость упадён на <price_drop_der_purchase> и будет падать каждый раз до минимума <min_price> но не ниже.
+      #
+      # Чтобы отключить все динамические валюты и сделать их статическими воспользуйтесь "price_changer.enable"
+      # в начале этого конфигурационного файла.
+      type: DYNAMIC
+      display_name: '#8C3A17Л#8F421Dо#934B22м#965328т#995B2Dи#9C6333к #A3743Eа#A67C44р#A98449б#AD8D4Fу#B09554з#B39D5Aа'
+      update_delay_seconds: 300 # (Сек.) Интервал изменения цены.
+      min_price_grow: 10 # Минимальная сумма роста.
+      max_price_grow: 22 # Максимальная сумма роста.
+      min_price: 27 # Минимально допустимая цена.
+      max_price: 180 # Максимально допустимая цена.
+      price_drop_der_purchase: 0.3 # Падение цены за 1 продажу.
+      history_size: 128 # Число хранимых цен.
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: melon_slice_static
+    item_visualization:
+      material: MELON_SLICE
+      display_name: '#8C3A17Л#8F421Dо#934B22м#965328т#995B2Dи#9C6333к #A3743Eа#A67C44р#A98449б#AD8D4Fу#B09554з#B39D5Aа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  melon:
+    salable_item:
+      material: MELON
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#33721DА#50811Dр#6D8F1Dб#8A9E1Dу#A7AC1Dз'
+      update_delay_seconds: 300
+      min_price_grow: 10
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.35
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: melon_static
+    item_visualization:
+      material: MELON
+      display_name: '#33721DА#50811Dр#6D8F1Dб#8A9E1Dу#A7AC1Dз'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  brown_mushroom:
+    salable_item:
+      material: BROWN_MUSHROOM
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#7A5C48К#80604Cо#85654Fр#8B6953и#906D56ч#96715Aн#9B765Dе#A17A61в#A67E64ы#AC8368й #B78B6Fг#BC8F72р#C29476и#C79879б'
+      update_delay_seconds: 300
+      min_price_grow: 10
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.35
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: brown_mushroom_static
+    item_visualization:
+      material: BROWN_MUSHROOM
+      display_name: '#7A5C48К#80604Cо#85654Fр#8B6953и#906D56ч#96715Aн#9B765Dе#A17A61в#A67E64ы#AC8368й #B78B6Fг#BC8F72р#C29476и#C79879б'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  red_mushroom:
+    salable_item:
+      material: RED_MUSHROOM
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#E41C1EК#E12B2Aр#DE3B37а#DA4A43с#D75A4Fн#D4695Cы#D17968й #CB9881г#C7A78Dр#C4B79Aи#C1C6A6б'
+      update_delay_seconds: 300
+      min_price_grow: 10
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.35
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: red_mushroom_static
+    item_visualization:
+      material: RED_MUSHROOM
+      display_name: '#E41C1EК#E12B2Aр#DE3B37а#DA4A43с#D75A4Fн#D4695Cы#D17968й #CB9881г#C7A78Dр#C4B79Aи#C1C6A6б'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  sugar_cane:
+    salable_item:
+      material: SUGAR_CANE
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#9FCD6CС#99C668а#94BE64х#8EB760а#88B05Cр#82A858н#7DA154ы#779A50й #6B8B49т#668445р#607C41о#5A753Dс#546E39н#4F6635и#495F31к'
+      update_delay_seconds: 240
+      min_price_grow: 11
+      max_price_grow: 27
+      min_price: 33
+      max_price: 220
+      price_drop_der_purchase: 0.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 33
+    statistic_name: sugar_cane_static
+    item_visualization:
+      material: SUGAR_CANE
+      display_name: '#9FCD6CС#99C668а#94BE64х#8EB760а#88B05Cр#82A858н#7DA154ы#779A50й #6B8B49т#668445р#607C41о#5A753Dс#546E39н#4F6635и#495F31к'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  bamboo:
+    salable_item:
+      material: BAMBOO
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#4B6F17Б#52771Dа#598023м#618829б#68912Fу#6F9935к'
+      update_delay_seconds: 240
+      min_price_grow: 11
+      max_price_grow: 27
+      min_price: 33
+      max_price: 220
+      price_drop_der_purchase: 0.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 33
+    statistic_name: bamboo_static
+    item_visualization:
+      material: BAMBOO
+      display_name: '#4B6F17Б#52771Dа#598023м#618829б#68912Fу#6F9935к'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  kelp:
+    salable_item:
+      material: KELP
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#52631CЛ#536A1Fа#547021м#557724и#567D27н#578429а#588A2Cр#59912Eи#5A9731я'
+      update_delay_seconds: 240
+      min_price_grow: 10
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: kelp_static
+    item_visualization:
+      material: KELP
+      display_name: '#52631CЛ#536A1Fа#547021м#557724и#567D27н#578429а#588A2Cр#59912Eи#5A9731я'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  cactus:
+    salable_item:
+      material: CACTUS
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#507B26К#638739а#77934Dк#8A9F60т#9EAB74у#B1B787с'
+      update_delay_seconds: 240
+      min_price_grow: 11
+      max_price_grow: 27
+      min_price: 33
+      max_price: 220
+      price_drop_der_purchase: 0.25
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 33
+    statistic_name: cactus_static
+    item_visualization:
+      material: CACTUS
+      display_name: '#507B26К#638739а#77934Dк#8A9F60т#9EAB74у#B1B787с'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  sea_pickle:
+    salable_item:
+      material: SEA_PICKLE
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#52571DМ#5B632Aо#646F37р#6D7B43с#768750к#7F935Dо#889F6Aй #99B783о#A2C390г#ABCF9Dу#B4DBA9р#BDE7B6е#C6F3C3ц'
+      update_delay_seconds: 300
+      min_price_grow: 20
+      max_price_grow: 45
+      min_price: 57
+      max_price: 380
+      price_drop_der_purchase: 0.3
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 57
+    statistic_name: sea_pickle_static
+    item_visualization:
+      material: SEA_PICKLE
+      display_name: '#52571DМ#5B632Aо#646F37р#6D7B43с#768750к#7F935Dо#889F6Aй #99B783о#A2C390г#ABCF9Dу#B4DBA9р#BDE7B6е#C6F3C3ц'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  egg:
+    salable_item:
+      material: EGG
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#CEBF92Я#ADA07Aй#8C8161ц#6B6249о'
+      update_delay_seconds: 300
+      min_price_grow: 21
+      max_price_grow: 50
+      min_price: 63
+      max_price: 420
+      price_drop_der_purchase: 0.3
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 63
+    statistic_name: egg_static
+    item_visualization:
+      material: EGG
+      display_name: '#CEBF92Я#ADA07Aй#8C8161ц#6B6249о'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  cocoa_beans:
+    salable_item:
+      material: COCOA_BEANS
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#391F0DК#412511а#482A15к#503019а#58351Dо#5F3B21-#674025б#6F4629о#764B2Dб#7E5131ы'
+      update_delay_seconds: 240
+      min_price_grow: 21
+      max_price_grow: 50
+      min_price: 63
+      max_price: 420
+      price_drop_der_purchase: 0.25
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 63
+    statistic_name: cocoa_beans_static
+    item_visualization:
+      material: COCOA_BEANS
+      display_name: '#391F0DК#412511а#482A15к#503019а#58351Dо#5F3B21-#674025б#6F4629о#764B2Dб#7E5131ы'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  chorus_fruit:
+    salable_item:
+      material: CHORUS_FRUIT
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#6A4669П#735072л#7C5A7Bо#856584д #977997х#A083A0о#A98DA9р#B298B2у#BBA2BBс#C4ACC4а'
+      update_delay_seconds: 600
+      min_price_grow: 15
+      max_price_grow: 35
+      min_price: 42
+      max_price: 280
+      price_drop_der_purchase: 1.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 42
+    statistic_name: chorus_fruit_static
+    item_visualization:
+      material: CHORUS_FRUIT
+      display_name: '#6A4669П#735072л#7C5A7Bо#856584д #977997х#A083A0о#A98DA9р#B298B2у#BBA2BBс#C4ACC4а'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  pumpkin:
+    salable_item:
+      material: PUMPKIN
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#E39632Т#DA8C2Aы#D28223к#C9771Bв#C06D13а'
+      update_delay_seconds: 300
+      min_price_grow: 18
+      max_price_grow: 44
+      min_price: 54
+      max_price: 360
+      price_drop_der_purchase: 0.35
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 54
+    statistic_name: pumpkin_static
+    item_visualization:
+      material: PUMPKIN
+      display_name: '#E39632Т#DA8C2Aы#D28223к#C9771Bв#C06D13а'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  honey_bottle:
+    salable_item:
+      material: HONEY_BOTTLE
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#DF8420Б#D9872Eу#D38B3Cт#CD8E49ы#C89257л#C29565о#BC9973ч#B69C80к#B0A08Eа #A5A7AAм#9FAAB7ё#99AEC5д#93B1D3а'
+      update_delay_seconds: 600
+      min_price_grow: 40
+      max_price_grow: 95
+      min_price: 120
+      max_price: 780
+      price_drop_der_purchase: 0.8
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 120
+    statistic_name: honey_bottle_static
+    item_visualization:
+      material: HONEY_BOTTLE
+      display_name: '#DF8420Б#D9872Eу#D38B3Cт#CD8E49ы#C89257л#C29565о#BC9973ч#B69C80к#B0A08Eа #A5A7AAм#9FAAB7ё#99AEC5д#93B1D3а'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  beetroot:
+    salable_item:
+      material: BEETROOT
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#A83C40С#9B3537в#8D2E2Eё#802824к#72211Bл#651A12а'
+      update_delay_seconds: 300
+      min_price_grow: 7
+      max_price_grow: 17
+      min_price: 21
+      max_price: 140
+      price_drop_der_purchase: 0.3
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 21
+    statistic_name: beetroot_static
+    item_visualization:
+      material: BEETROOT
+      display_name: '#A83C40С#9B3537в#8D2E2Eё#802824к#72211Bл#651A12а'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  potato:
+    salable_item:
+      material: POTATO
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#D4A550К#CB9B48а#C19140р#B88638т#AF7C31о#A57229ф#9C6821е#925D19л#895311ь'
+      update_delay_seconds: 300
+      min_price_grow: 7
+      max_price_grow: 17
+      min_price: 21
+      max_price: 140
+      price_drop_der_purchase: 0.3
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 21
+    statistic_name: potato_static
+    item_visualization:
+      material: POTATO
+      display_name: '#D4A550К#CB9B48а#C19140р#B88638т#AF7C31о#A57229ф#9C6821е#925D19л#895311ь'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  carrot:
+    salable_item:
+      material: CARROT
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#C46416М#A76A16о#8A6F16р#6D7516к#507B15о#338015в#168615ь'
+      update_delay_seconds: 300
+      min_price_grow: 7
+      max_price_grow: 17
+      min_price: 21
+      max_price: 140
+      price_drop_der_purchase: 0.3
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 21
+    statistic_name: carrot_static
+    item_visualization:
+      material: CARROT
+      display_name: '#C46416М#A76A16о#8A6F16р#6D7516к#507B15о#338015в#168615ь'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  wheat:
+    salable_item:
+      material: WHEAT
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#82723FП#907D44ш#9D8849е#AB944Eн#B89F53и#C6AA58ц#D3B55Dа'
+      update_delay_seconds: 300
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.3
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: wheat_static
+    item_visualization:
+      material: WHEAT
+      display_name: '#82723FП#907D44ш#9D8849е#AB944Eн#B89F53и#C6AA58ц#D3B55Dа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+
+ ########################################################### ДЕРЕВО
+
+  oak_planks:
+    salable_item:
+      material: OAK_PLANKS   ### Доски
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#8A6B3CД#87693Bу#846739б#816438о#7E6237в#7B6035ы#795E34е #735931д#705730о#6D552Fс#6A522Dк#67502Cи'
+      update_delay_seconds: 300
+      min_price_grow: 3
+      max_price_grow: 6
+      min_price: 7
+      max_price: 45
+      price_drop_der_purchase: 0.15
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 7
+    statistic_name: oak_planks_static
+    item_visualization:
+      material: OAK_PLANKS
+      display_name: '#8A6B3CД#87693Bу#846739б#816438о#7E6237в#7B6035ы#795E34е #735931д#705730о#6D552Fс#6A522Dк#67502Cи'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  oak_log:
+    salable_item:
+      material: OAK_LOG   ### Дерево
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#554328Д#534127у#513F26б#4E3D24о#4C3C23в#4A3A22о#483821е #43341Eб#41321Dр#3F311Cе#3C2F1Aв#3A2D19н#382B18о'
+      update_delay_seconds: 300
+      min_price_grow: 10
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.3
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: oak_log_static
+    item_visualization:
+      material: OAK_LOG
+      display_name: '#554328Д#534127у#513F26б#4E3D24о#4C3C23в#4A3A22о#483821е #43341Eб#41321Dр#3F311Cе#3C2F1Aв#3A2D19н#382B18о'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  spruce_planks:
+    salable_item:
+      material: SPRUCE_PLANKS
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#573F21Е#594022л#5A4223о#5C4325в#5E4426ы#5F4627е #624929д#644A2Aо#664B2Cс#674D2Dк#694E2Eи'
+      update_delay_seconds: 300
+      min_price_grow: 3
+      max_price_grow: 6
+      min_price: 7
+      max_price: 45
+      price_drop_der_purchase: 0.15
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 7
+    statistic_name: spruce_planks_static
+    item_visualization:
+      material: SPRUCE_PLANKS
+      display_name: '#573F21Е#594022л#5A4223о#5C4325в#5E4426ы#5F4627е #624929д#644A2Aо#664B2Cс#674D2Dк#694E2Eи'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  spruce_log:
+    salable_item:
+      material: SPRUCE_LOG
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#50361AЕ#4E3519л#4D3419о#4B3218в#493118о#473017е #442D16б#422C15р#402B15е#3F2A14в#3D2814н#3B2713о'
+      update_delay_seconds: 300
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.3
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: spruce_log_static
+    item_visualization:
+      material: SPRUCE_LOG
+      display_name: '#50361AЕ#4E3519л#4D3419о#4B3218в#493118о#473017е #442D16б#422C15р#402B15е#3F2A14в#3D2814н#3B2713о'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  birch_planks:
+    salable_item:
+      material: BIRCH_PLANKS
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#A29064Б#A39165е#A49366р#A69468ё#A79669з#A8976Aо#A9996Bв#AB9A6Dы#AC9B6Eе #AE9E70д#AFA071о#B1A173с#B2A374к#B3A475и'
+      update_delay_seconds: 300
+      min_price_grow: 3
+      max_price_grow: 6
+      min_price: 7
+      max_price: 45
+      price_drop_der_purchase: 0.15
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 7
+    statistic_name: birch_planks_static
+    item_visualization:
+      material: BIRCH_PLANKS
+      display_name: '#A29064Б#A39165е#A49366р#A69468ё#A79669з#A8976Aо#A9996Bв#AB9A6Dы#AC9B6Eе #AE9E70д#AFA071о#B1A173с#B2A374к#B3A475и'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  birch_log:
+    salable_item:
+      material: BIRCH_LOG
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#605E54Б#5D5B51е#5A584Eр#58564Cё#555349з#525046о#4F4D43в#4C4A40о#4A483Eе #444238б#413F35р#3E3C32е#3C3A30в#39372Dн#36342Aо'
+      update_delay_seconds: 300
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.3
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: birch_log_static
+    item_visualization:
+      material: BIRCH_LOG
+      display_name: '#605E54Б#5D5B51е#5A584Eр#58564Cё#555349з#525046о#4F4D43в#4C4A40о#4A483Eе #444238б#413F35р#3E3C32е#3C3A30в#39372Dн#36342Aо'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  jungle_planks:
+    salable_item:
+      material: JUNGLE_PLANKS
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#704D33Д#734F35о#765237с#785439к#7B563Bи #815B3Fи#845D40з #896244т#8C6446р#8F6648о#92694Aп#956B4Cи#976D4Eч#9A6F50е#9D7252с#A07454к#A37656о#A57958г#A87B5Aо #AE805Dд#B1825Fе#B48461р#B68663е#B98965в#BC8B67а'
+      update_delay_seconds: 300
+      min_price_grow: 5
+      max_price_grow: 11
+      min_price: 14
+      max_price: 90
+      price_drop_der_purchase: 0.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 5
+    statistic_name: jungle_planks_static
+    item_visualization:
+      material: JUNGLE_PLANKS
+      display_name: '#704D33Д#734F35о#765237с#785439к#7B563Bи #815B3Fи#845D40з #896244т#8C6446р#8F6648о#92694Aп#956B4Cи#976D4Eч#9A6F50е#9D7252с#A07454к#A37656о#A57958г#A87B5Aо #AE805Dд#B1825Fе#B48461р#B68663е#B98965в#BC8B67а'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  jungle_log:
+    salable_item:
+      material: JUNGLE_LOG
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#6E5722Б#6C5621р#6A5421е#685320в#66511Fн#65501Fо #614D1Eт#5F4B1Dр#5D4A1Cо#5B491Cп#59471Bи#57461Aч#56441Aе#544319с#524118к#504018о#4E3F17г#4C3D16о #483A15д#473915е#453714р#433613е#413413в#3F3312а'
+      update_delay_seconds: 300
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.3
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: jungle_log_static
+    item_visualization:
+      material: JUNGLE_LOG
+      display_name: '#6E5722Б#6C5621р#6A5421е#685320в#66511Fн#65501Fо #614D1Eт#5F4B1Dр#5D4A1Cо#5B491Cп#59471Bи#57461Aч#56441Aе#544319с#524118к#504018о#4E3F17г#4C3D16о #483A15д#473915е#453714р#433613е#413413в#3F3312а'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  acacia_planks:
+    salable_item:
+      material: ACACIA_PLANKS
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#A75931А#A95A32к#AA5B32а#AC5C33ц#AE5D34и#AF5E35е#B15F35в#B36136ы#B46237е #B76438д#B96539о#BB663Aс#BC673Aк#BE683Bи'
+      update_delay_seconds: 300
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.25
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 7
+    statistic_name: acacia_planks_static
+    item_visualization:
+      material: ACACIA_PLANKS
+      display_name: '#A75931А#A95A32к#AA5B32а#AC5C33ц#AE5D34и#AF5E35е#B15F35в#B36136ы#B46237е #B76438д#B96539о#BB663Aс#BC673Aк#BE683Bи'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  acacia_log:
+    salable_item:
+      material: ACACIA_LOG
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#827A6EА#80786Dк#7F776Bа#7D756Aц#7B7468и#7A7267е#787066в#766F64р#756D63е #716A60б#70685Fр#6E675Dе#6C655Cв#6B645Aн#696259о'
+      update_delay_seconds: 300
+      min_price_grow: 16
+      max_price_grow: 38
+      min_price: 64
+      max_price: 320
+      price_drop_der_purchase: 0.4
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 64
+    statistic_name: acacia_log_static
+    item_visualization:
+      material: ACACIA_LOG
+      display_name: '#827A6EА#80786Dк#7F776Bа#7D756Aц#7B7468и#7A7267е#787066в#766F64р#756D63е #716A60б#70685Fр#6E675Dе#6C655Cв#6B645Aн#696259о'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  dark_oak_planks:
+    salable_item:
+      material: DARK_OAK_PLANKS
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#2C1C0DД#2D1D0Dо#2E1D0Dс#2E1E0Eк#2F1E0Eи #311F0Eи#32200Eз #33210Fт#34210Fё#35220Fм#36220Fн#362310о#372310г#382410о #3A2510д#3A2511у#3B2611б#3C2611а'
+      update_delay_seconds: 300
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.25
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: dark_oak_planks_static
+    item_visualization:
+      material: DARK_OAK_PLANKS
+      display_name: '#2C1C0DД#2D1D0Dо#2E1D0Dс#2E1E0Eк#2F1E0Eи #311F0Eи#32200Eз #33210Fт#34210Fё#35220Fм#36220Fн#362310о#372310г#382410о #3A2510д#3A2511у#3B2611б#3C2611а'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  dark_oak_log:
+    salable_item:
+      material: DARK_OAK_LOG
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#4F3D22Б#4E3C22р#4D3C21е#4C3B21в#4B3A21н#4B3A21о #493820т#483820ё#473720м#46361Fн#45361Fо#44351Fг#43341Eо #42331Eд#41321Eу#40321Dб#3F311Dа'
+      update_delay_seconds: 300
+      min_price_grow: 16
+      max_price_grow: 38
+      min_price: 64
+      max_price: 320
+      price_drop_der_purchase: 0.4
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 64
+    statistic_name: dark_oak_log_static
+    item_visualization:
+      material: DARK_OAK_LOG
+      display_name: '#4F3D22Б#4E3C22р#4D3C21е#4C3B21в#4B3A21н#4B3A21о #493820т#483820ё#473720м#46361Fн#45361Fо#44351Fг#43341Eо #42331Eд#41321Eу#40321Dб#3F311Dа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+ 
+ ################################### ЕДА
+ 
+  beef:
+    salable_item:
+      material: BEEF
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#D64D43С#CC483Fы#C3433Aр#B93E36а#B03A32я #9D3029г#932B25о#8A2621в#80211Cя#771D18д#6D1814и#64130Fн#5A0E0Bа'
+      update_delay_seconds: 360
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.8
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: beef_static
+    item_visualization:
+      material: BEEF
+      display_name: '#D64D43С#CC483Fы#C3433Aр#B93E36а#B03A32я #9D3029г#932B25о#8A2621в#80211Cя#771D18д#6D1814и#64130Fн#5A0E0Bа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  porkchop:
+    salable_item:
+      material: PORKCHOP
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#FB8E8EС#F18888ы#E88181р#DE7B7Bа#D47474я #C16868с#B76161в#AD5B5Bи#A35454н#9A4E4Eи#904747н#864141а'
+      update_delay_seconds: 360
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.8
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: porkchop_static
+    item_visualization:
+      material: PORKCHOP
+      display_name: '#FB8E8EС#F18888ы#E88181р#DE7B7Bа#D47474я #C16868с#B76161в#AD5B5Bи#A35454н#9A4E4Eи#904747н#864141а'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  mutton:
+    salable_item:
+      material: MUTTON
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#DF5E56С#D95951ы#D2544Dр#CC5048а#C54B44я #B8413Bб#B23D36а#AB3832р#A5332Dа#9E2E29н#982A24и#912520н#8B201Bа'
+      update_delay_seconds: 600
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.8
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: mutton_static
+    item_visualization:
+      material: MUTTON
+      display_name: '#DF5E56С#D95951ы#D2544Dр#CC5048а#C54B44я #B8413Bб#B23D36а#AB3832р#A5332Dа#9E2E29н#982A24и#912520н#8B201Bа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  chicken:
+    salable_item:
+      material: CHICKEN
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#EEC2B2К#E4B7A6у#DAAB9Bр#D0A08Fя#C59584т#BB8A78и#B17E6Dн#A77361а'
+      update_delay_seconds: 360
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.7
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: chicken_static
+    item_visualization:
+      material: CHICKEN
+      display_name: '#EEC2B2К#E4B7A6у#DAAB9Bр#D0A08Fя#C59584т#BB8A78и#B17E6Dн#A77361а'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  rabbit:
+    salable_item:
+      material: RABBIT
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#F0C5B4С#EBBFAEы#E6BAA9р#E2B4A3а#DDAF9Eя #D3A493к#CE9E8Dр#CA9988о#C59382л#C08D7Cь#BB8877ч#B68271а#B17D6Cт#AD7766и#A87261н#A36C5Bа'
+      update_delay_seconds: 420
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 1.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: rabbit_static
+    item_visualization:
+      material: RABBIT
+      display_name: '#F0C5B4С#EBBFAEы#E6BAA9р#E2B4A3а#DDAF9Eя #D3A493к#CE9E8Dр#CA9988о#C59382л#C08D7Cь#BB8877ч#B68271а#B17D6Cт#AD7766и#A87261н#A36C5Bа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  leather:
+    salable_item:
+      material: LEATHER
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#B45432К#904328о#6C321Dж#482113а'
+      update_delay_seconds: 420
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 1.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: leather_static
+    item_visualization:
+      material: LEATHER
+      display_name: '#B45432К#904328о#6C321Dж#482113а'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  rabbit_hide:
+    salable_item:
+      material: RABBIT_HIDE
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#B78E5DК#B1895Aр#AC8557о#A68054л#A17B51и#9B774Eч#96724Bь#906E49я #856443ш#7F6040к#7A5B3Dу#74563Aр#6F5237к#694D34а'
+      update_delay_seconds: 420
+      min_price_grow: 6
+      max_price_grow: 14
+      min_price: 18
+      max_price: 120
+      price_drop_der_purchase: 1.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 18
+    statistic_name: rabbit_hide_static
+    item_visualization:
+      material: RABBIT_HIDE
+      display_name: '#B78E5DК#B1895Aр#AC8557о#A68054л#A17B51и#9B774Eч#96724Bь#906E49я #856443ш#7F6040к#7A5B3Dу#74563Aр#6F5237к#694D34а'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  rabbit_foot:
+    salable_item:
+      material: RABBIT_FOOT
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#C79F6CК#C09968р#BA9465о#B38E61л#AD895Dи#A6835Aч#A07D56ь#997852я #8C6C4Bл#866747а#7F6143п#795C40к#72563Cа'
+      update_delay_seconds: 480
+      min_price_grow: 16
+      max_price_grow: 38
+      min_price: 48
+      max_price: 320
+      price_drop_der_purchase: 2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 48
+    statistic_name: rabbit_foot_static
+    item_visualization:
+      material: RABBIT_FOOT
+      display_name: '#C79F6CК#C09968р#BA9465о#B38E61л#AD895Dи#A6835Aч#A07D56ь#997852я #8C6C4Bл#866747а#7F6143п#795C40к#72563Cа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+
+  ################################## РУДЫ И ДРАГОЦЕННОСТИ
+
+  coal:
+    salable_item:
+      material: COAL
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#2B292BУ#272427г#222024о#1E1B20л#19161Cь'
+      update_delay_seconds: 300
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.15
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: coal_static
+    item_visualization:
+      material: COAL
+      display_name: '#2B292BУ#272427г#222024о#1E1B20л#19161Cь'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  coal_block:
+    salable_item:
+      material: COAL_BLOCK
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#212020У#201F1Fг#1F1E1Eо#1E1D1Dл#1D1C1Cь#1C1B1Bн#1B1B1Bы#1A1A1Aй #181818б#171717л#161616о#151515к'
+      update_delay_seconds: 300
+      min_price_grow: 81
+      max_price_grow: 194
+      min_price: 240
+      max_price: 1620
+      price_drop_der_purchase: 1.5
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 240
+    statistic_name: coal_block_static
+    item_visualization:
+      material: COAL_BLOCK
+      display_name: '#212020У#201F1Fг#1F1E1Eо#1E1D1Dл#1D1C1Cь#1C1B1Bн#1B1B1Bы#1A1A1Aй #181818б#171717л#161616о#151515к'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  iron_ingot:
+    salable_item:
+      material: IRON_INGOT
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#636363Ж#6B6B6Bе#737373л#7B7B7Bе#828282з#8A8A8Aн#929292ы#9A9A9Aй #AAAAAAс#B2B2B2л#B9B9B9и#C1C1C1т#C9C9C9о#D1D1D1к'
+      update_delay_seconds: 360
+      min_price_grow: 9
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: iron_ingot_static
+    item_visualization:
+      material: IRON_INGOT
+      display_name: '#636363Ж#6B6B6Bе#737373л#7B7B7Bе#828282з#8A8A8Aн#929292ы#9A9A9Aй #AAAAAAс#B2B2B2л#B9B9B9и#C1C1C1т#C9C9C9о#D1D1D1к'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  iron_block:
+    salable_item:
+      material: IRON_BLOCK
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#C7C6C6Ж#C6C5C5е#C4C3C3л#C3C2C2е#C2C1C1з#C0BFBFн#BFBEBEы#BEBDBDй #BBBABAб#BAB9B9л#B8B7B7о#B7B6B6к'
+      update_delay_seconds: 360
+      min_price_grow: 81
+      max_price_grow: 194
+      min_price: 240
+      max_price: 1620
+      price_drop_der_purchase: 1.8
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 240
+    statistic_name: iron_block_static
+    item_visualization:
+      material: IRON_BLOCK
+      display_name: '#C7C6C6Ж#C6C5C5е#C4C3C3л#C3C2C2е#C2C1C1з#C0BFBFн#BFBEBEы#BEBDBDй #BBBABAб#BAB9B9л#B8B7B7о#B7B6B6к'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  lapis_lazuli:
+    salable_item:
+      material: LAPIS_LAZULI
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#133C88Л#1C4595а#254EA1з#2F58AEу#3861BBр#416AC7и#4A73D4т'
+      update_delay_seconds: 360
+      min_price_grow: 8
+      max_price_grow: 29
+      min_price: 24
+      max_price: 160
+      price_drop_der_purchase: 0.25
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 24
+    statistic_name: lapis_lazuli_static
+    item_visualization:
+      material: LAPIS_LAZULI
+      display_name: '#133C88Л#1C4595а#254EA1з#2F58AEу#3861BBр#416AC7и#4A73D4т'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  lapis_block:
+    salable_item:
+      material: LAPIS_BLOCK
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#214989Л#214A8Bа#214B8Cз#224B8Eу#224C8Fр#224D91и#224E93т#224F94о#234F96в#235097ы#235199й #23539Cб#24539Eл#24549Fо#2455A1к'
+      update_delay_seconds: 360
+      min_price_grow: 72
+      max_price_grow: 173
+      min_price: 215
+      max_price: 1440
+      price_drop_der_purchase: 2.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 215
+    statistic_name: lapis_block_static
+    item_visualization:
+      material: LAPIS_BLOCK
+      display_name: '#214989Л#214A8Bа#214B8Cз#224B8Eу#224C8Fр#224D91и#224E93т#224F94о#234F96в#235097ы#235199й #23539Cб#24539Eл#24549Fо#2455A1к'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  gold_ingot:
+    salable_item:
+      material: GOLD_INGOT
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#F4D45BЗ#EDCA55о#E6BF4Fл#DFB549о#D8AA42т#D1A03Cо#CA9536й #BC802Aс#B57624л#AE6B1Dи#A76117т#A05611о#994C0Bк'
+      update_delay_seconds: 420
+      min_price_grow: 21
+      max_price_grow: 50
+      min_price: 63
+      max_price: 420
+      price_drop_der_purchase: 0.4
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 63
+    statistic_name: gold_ingot_static
+    item_visualization:
+      material: GOLD_INGOT
+      display_name: '#F4D45BЗ#EDCA55о#E6BF4Fл#DFB549о#D8AA42т#D1A03Cо#CA9536й #BC802Aс#B57624л#AE6B1Dи#A76117т#A05611о#994C0Bк'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  gold_block:
+    salable_item:
+      material: GOLD_BLOCK
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#FFF471З#FBEB6Bо#F6E265л#F2D95Eо#EED058т#EAC752о#E5BF4Cй #DDAD40б#D9A439л#D49B33о#D0922Dк'
+      update_delay_seconds: 420
+      min_price_grow: 188
+      max_price_grow: 453
+      min_price: 567
+      max_price: 3780
+      price_drop_der_purchase: 3.6
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 567
+    statistic_name: gold_block_static
+    item_visualization:
+      material: GOLD_BLOCK
+      display_name: '#FFF471З#FBEB6Bо#F6E265л#F2D95Eо#EED058т#EAC752о#E5BF4Cй #DDAD40б#D9A439л#D49B33о#D0922Dк'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  redstone:
+    salable_item:
+      material: REDSTONE
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#470300Р#4F0400е#570400д#5F0500с#670500т#6E0600о#760600у#7E0700н#860700о#8E0800в#960800а#9E0900я #AD0A00п#B50A00ы#BD0B00л#C50B00ь'
+      update_delay_seconds: 360
+      min_price_grow: 6
+      max_price_grow: 14
+      min_price: 18
+      max_price: 120
+      price_drop_der_purchase: 0.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 18
+    statistic_name: redstone_static
+    item_visualization:
+      material: REDSTONE
+      display_name: '#470300Р#4F0400е#570400д#5F0500с#670500т#6E0600о#760600у#7E0700н#860700о#8E0800в#960800а#9E0900я #AD0A00п#B50A00ы#BD0B00л#C50B00ь'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  redstone_block:
+    salable_item:
+      material: REDSTONE_BLOCK
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#D22008Р#CC1F08е#C61E07д#C01C07с#BA1B06т#B41A06о#AE1905у#A81705н#A31604о#9D1504в#971403ы#911203й #851002б#7F0F01л#790D01о#730C00к'
+      update_delay_seconds: 360
+      min_price_grow: 54
+      max_price_grow: 130
+      min_price: 162
+      max_price: 1080
+      price_drop_der_purchase: 1.8
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 162
+    statistic_name: redstone_block_static
+    item_visualization:
+      material: REDSTONE_BLOCK
+      display_name: '#D22008Р#CC1F08е#C61E07д#C01C07с#BA1B06т#B41A06о#AE1905у#A81705н#A31604о#9D1504в#971403ы#911203й #851002б#7F0F01л#790D01о#730C00к'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  diamond:
+    salable_item:
+      material: DIAMOND
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#18908AА#3BAAA2л#5DC4BAм#80DED2а#A2F8EAз'
+      update_delay_seconds: 600
+      min_price_grow: 57
+      max_price_grow: 137
+      min_price: 171
+      max_price: 1140
+      price_drop_der_purchase: 5
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 171
+    statistic_name: diamond_static
+    item_visualization:
+      material: DIAMOND
+      display_name: '#18908AА#3BAAA2л#5DC4BAм#80DED2а#A2F8EAз'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  diamond_block:
+    salable_item:
+      material: DIAMOND_BLOCK
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#24CCD0А#31D0D3л#3DD5D6м#4AD9D8а#56DDDBз#63E1DEн#6FE6E1ы#7CEAE3й #95F2E9б#A1F7ECл#AEFBEEо#BAFFF1к'
+      update_delay_seconds: 600
+      min_price_grow: 513
+      max_price_grow: 1231
+      min_price: 1540
+      max_price: 10260
+      price_drop_der_purchase: 45
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 1540
+    statistic_name: diamond_block_static
+    item_visualization:
+      material: DIAMOND_BLOCK
+      display_name: '#24CCD0А#31D0D3л#3DD5D6м#4AD9D8а#56DDDBз#63E1DEн#6FE6E1ы#7CEAE3й #95F2E9б#A1F7ECл#AEFBEEо#BAFFF1к'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  emerald:
+    salable_item:
+      material: EMERALD
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#006913И#117F29з#239640у#34AC56м#45C26Cр#57D983у#68EF99д'
+      update_delay_seconds: 600
+      min_price_grow: 86
+      max_price_grow: 206
+      min_price: 260
+      max_price: 1720
+      price_drop_der_purchase: 10
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 260
+    statistic_name: emerald_static
+    item_visualization:
+      material: EMERALD
+      display_name: '#006913И#117F29з#239640у#34AC56м#45C26Cр#57D983у#68EF99д'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  emerald_block:
+    salable_item:
+      material: EMERALD_BLOCK
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#17D153И#1CD458з#22D65Dу#27D962м#2DDB67р#32DE6Cу#38E071д#3DE376н#42E67Bы#48E880й #53ED8Aб#58F08Fл#5EF294о#63F599к'
+      update_delay_seconds: 600
+      min_price_grow: 774
+      max_price_grow: 1860
+      min_price: 2320
+      max_price: 15480
+      price_drop_der_purchase: 90
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 2320
+    statistic_name: emerald_block_static
+    item_visualization:
+      material: EMERALD_BLOCK
+      display_name: '#17D153И#1CD458з#22D65Dу#27D962м#2DDB67р#32DE6Cу#38E071д#3DE376н#42E67Bы#48E880й #53ED8Aб#58F08Fл#5EF294о#63F599к'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  netherite_ingot:
+    salable_item:
+      material: NETHERITE_INGOT
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#2D2728Н#2F2A2Bе#322C2Dз#342F30е#373133р#393436и#3C3738т#3E393Bо#413C3Eв#433E40ы#464143й #4B4648с#4D494Bл#504B4Eи#524E51т#555053о#575356к'
+      update_delay_seconds: 900
+      min_price_grow: 230
+      max_price_grow: 552
+      min_price: 700
+      max_price: 4600
+      price_drop_der_purchase: 35
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 700
+    statistic_name: netherite_ingot_static
+    item_visualization:
+      material: NETHERITE_INGOT
+      display_name: '#2D2728Н#2F2A2Bе#322C2Dз#342F30е#373133р#393436и#3C3738т#3E393Bо#413C3Eв#433E40ы#464143й #4B4648с#4D494Bл#504B4Eи#524E51т#555053о#575356к'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  netherite_block:
+    salable_item:
+      material: NETHERITE_BLOCK
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#2B2425Н#2C2526е#2D2627з#2E2728е#2F292Aр#302A2Bи#312B2Cт#322C2Dо#342D2Eв#352E2Fы#362F30й #383233б#393334л#3A3435о#3B3536к'
+      update_delay_seconds: 900
+      min_price_grow: 2070
+      max_price_grow: 5000
+      min_price: 6200
+      max_price: 41400
+      price_drop_der_purchase: 315
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 6200
+    statistic_name: netherite_block_static
+    item_visualization:
+      material: NETHERITE_BLOCK
+      display_name: '#2B2425Н#2C2526е#2D2627з#2E2728е#2F292Aр#302A2Bи#312B2Cт#322C2Dо#342D2Eв#352E2Fы#362F30й #383233б#393334л#3A3435о#3B3536к'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  
+  ############################ ЛУТ С МОБОВ
+  
+  ghast_tear:
+    salable_item:
+      material: GHAST_TEAR
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#BFDFDFС#B1D1D1л#A4C2C2е#96B4B4з#89A5A5а #6D8989г#607A7Aа#526C6Cс#455D5Dт#374F4Fа'
+      update_delay_seconds: 600
+      min_price_grow: 44
+      max_price_grow: 106
+      min_price: 132
+      max_price: 880
+      price_drop_der_purchase: 2.5
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 132
+    statistic_name: ghast_tear_static
+    item_visualization:
+      material: GHAST_TEAR
+      display_name: '#BFDFDFС#B1D1D1л#A4C2C2е#96B4B4з#89A5A5а #6D8989г#607A7Aа#526C6Cс#455D5Dт#374F4Fа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  ender_pearl:
+    salable_item:
+      material: ENDER_PEARL
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#094238Э#0D4B40н#115348д#155C50е#196558р#1D6D60-#217667ж#257E6Fе#298777м#2D907Fч#319887у#35A18Fг'
+      update_delay_seconds: 480
+      min_price_grow: 24
+      max_price_grow: 58
+      min_price: 72
+      max_price: 480
+      price_drop_der_purchase: 1.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 72
+    statistic_name: ender_pearl_static
+    item_visualization:
+      material: ENDER_PEARL
+      display_name: '#094238Э#0D4B40н#115348д#155C50е#196558р#1D6D60-#217667ж#257E6Fе#298777м#2D907Fч#319887у#35A18Fг'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  phantom_membrane:
+    salable_item:
+      material: PHANTOM_MEMBRANE
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#877276М#8C787Aе#917E7Eм#968382б#9A8986р#9F8F8Aа#A4958Eн#A99B92а #B3A699ф#B8AC9Dа#BDB2A1н#C1B8A5т#C6BDA9о#CBC3ADм#D0C9B1а'
+      update_delay_seconds: 480
+      min_price_grow: 31
+      max_price_grow: 74
+      min_price: 93
+      max_price: 620
+      price_drop_der_purchase: 1.5
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 93
+    statistic_name: phantom_membrane_static
+    item_visualization:
+      material: PHANTOM_MEMBRANE
+      display_name: '#877276М#8C787Aе#917E7Eм#968382б#9A8986р#9F8F8Aа#A4958Eн#A99B92а #B3A699ф#B8AC9Dа#BDB2A1н#C1B8A5т#C6BDA9о#CBC3ADм#D0C9B1а'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  magma_cream:
+    salable_item:
+      material: MAGMA_CREAM
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#5A7D2CС#7A9639г#9BAF47у#BBC754с#DBE061т#D8C550о#D6A93Fк #D0721Dм#B95C1Eа#A3451Fг#8C2F20м#751821ы'
+      update_delay_seconds: 480
+      min_price_grow: 18
+      max_price_grow: 43
+      min_price: 54
+      max_price: 360
+      price_drop_der_purchase: 0.8
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 54
+    statistic_name: magma_cream_static
+    item_visualization:
+      material: MAGMA_CREAM
+      display_name: '#5A7D2CС#7A9639г#9BAF47у#BBC754с#DBE061т#D8C550о#D6A93Fк #D0721Dм#B95C1Eа#A3451Fг#8C2F20м#751821ы'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  gunpowder:
+    salable_item:
+      material: GUNPOWDER
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#434343П#515151о#5E5E5Eр#6C6C6Cо#797979х'
+      update_delay_seconds: 360
+      min_price_grow: 10
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.4
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: gunpowder_static
+    item_visualization:
+      material: GUNPOWDER
+      display_name: '#434343П#515151о#5E5E5Eр#6C6C6Cо#797979х'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  blaze_rod:
+    salable_item:
+      material: BLAZE_ROD
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#B46C12О#B97415г#BD7C18н#C2841Aе#C78C1Dн#CB9420н#D09C23ы#D5A425й #DEB42Bс#E3BC2Eт#E8C430е#ECCC33р#F1D436ж#F6DC39е#FAE43Bн#FFEC3Eь'
+      update_delay_seconds: 540
+      min_price_grow: 37
+      max_price_grow: 90
+      min_price: 111
+      max_price: 740
+      price_drop_der_purchase: 1.8
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 111
+    statistic_name: blaze_rod_static
+    item_visualization:
+      material: BLAZE_ROD
+      display_name: '#B46C12О#B97415г#BD7C18н#C2841Aе#C78C1Dн#CB9420н#D09C23ы#D5A425й #DEB42Bс#E3BC2Eт#E8C430е#ECCC33р#F1D436ж#F6DC39е#FAE43Bн#FFEC3Eь'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  bone:
+    salable_item:
+      material: BONE
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#E9E7D4К#CECDBAо#B2B3A0с#979885т#7B7E6Bь'
+      update_delay_seconds: 300
+      min_price_grow: 10
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.3
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: bone_static
+    item_visualization:
+      material: BONE
+      display_name: '#E9E7D4К#CECDBAо#B2B3A0с#979885т#7B7E6Bь'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  string:
+    salable_item:
+      material: STRING
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#EAEAEAН#ACB3B4и#6D7C7Dт#2F4547ь'
+      update_delay_seconds: 300
+      min_price_grow: 3
+      max_price_grow: 7
+      min_price: 9
+      max_price: 60
+      price_drop_der_purchase: 0.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 9
+    statistic_name: string_static
+    item_visualization:
+      material: STRING
+      display_name: '#EAEAEAН#ACB3B4и#6D7C7Dт#2F4547ь'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  arrow:
+    salable_item:
+      material: ARROW
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#5B503CС#756C5Cт#8F887Cр#A8A49Cе#C2C0BCл#DCDCDCа'
+      update_delay_seconds: 300
+      min_price_grow: 3
+      max_price_grow: 7
+      min_price: 9
+      max_price: 60
+      price_drop_der_purchase: 0.2
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 9
+    statistic_name: arrow_static
+    item_visualization:
+      material: ARROW
+      display_name: '#5B503CС#756C5Cт#8F887Cр#A8A49Cе#C2C0BCл#DCDCDCа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  slime_ball:
+    salable_item:
+      material: SLIME_BALL
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#477540С#4C7C45г#51834Aу#56894Eс#5B9053т#609758о#659E5Dк #6FAB66с#74B26Bл#79B970и#7EBF74з#83C679и'
+      update_delay_seconds: 360
+      min_price_grow: 10
+      max_price_grow: 22
+      min_price: 27
+      max_price: 180
+      price_drop_der_purchase: 0.5
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 27
+    statistic_name: slime_ball_static
+    item_visualization:
+      material: SLIME_BALL
+      display_name: '#477540С#4C7C45г#51834Aу#56894Eс#5B9053т#609758о#659E5Dк #6FAB66с#74B26Bл#79B970и#7EBF74з#83C679и'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+  rotten_flesh:
+    salable_item:
+      material: ROTTEN_FLESH
+      unbreakable: false
+      hide_attributes: false
+    price:
+      type: DYNAMIC
+      display_name: '#A64D2AГ#9E4A28н#954725и#8D4323л#854020а#7D3D1Eя #6C3719п#643416л#5C3014о#532D11т#4B2A0Fь'
+      update_delay_seconds: 300
+      min_price_grow: 2
+      max_price_grow: 5
+      min_price: 6
+      max_price: 40
+      price_drop_der_purchase: 0.15
+      history_size: 128
+      amount:
+        type: VAULT
+        currency_id: "dummy"
+        value: 6
+    statistic_name: rotten_flesh_static
+    item_visualization:
+      material: ROTTEN_FLESH
+      display_name: '#A64D2AГ#9E4A28н#954725и#8D4323л#854020а#7D3D1Eя #6C3719п#643416л#5C3014о#532D11т#4B2A0Fь'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+
+##################################################### РЫБАЛКА / рыболовство / рыба
+
+  nautilus_shell: # ID скупаемого предмета.
+    # Скупаемый предмет.
+    salable_item:
+      material: NAUTILUS_SHELL
+      unbreakable: false
+      hide_attributes: false
+    price:
+      # Тип стоимости.
+      # STATIC - стандартная стоимость, не меняется.
+      # DYNAMIC - меняющаяся стомость (ищите пример ниже).
+      type: DYNAMIC
+      display_name: '#084CFBР#2064FBа#377CFCк#4F94FCо#66ABFCв#7EC3FCи#95DBFDн#ADF3FDа'
+      update_delay_seconds: 900
+      min_price_grow: 150
+      max_price_grow: 360
+      min_price: 450
+      max_price: 3000
+      price_drop_der_purchase: 20
+      history_size: 128
+      amount: # Сумма в валюте.
+        type: VAULT
+        currency_id: "dummy" # ID валюты, оставьте dummy - болванка/заглушка если у плагина нет разных валют и как следствие ID для них.
+        value: 450 # Стартовая стоимость
+    # Название параметра в который будет сохраняться число скупаемых предметов этого типа.
+    statistic_name: nautilus_shell_static
+    item_visualization:
+      material: NAUTILUS_SHELL # Тип материала
+      display_name: '#084CFBР#2064FBа#377CFCк#4F94FCо#66ABFCв#7EC3FCи#95DBFDн#ADF3FDа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+
+  cod: # ID скупаемого предмета.
+    salable_item:
+      material: COD
+      unbreakable: false
+      hide_attributes: false
+    price:
+      # Тип стоимости.
+      # STATIC - стандартная стоимость, не меняется.
+      # DYNAMIC - меняющаяся стомость (ищите пример ниже).
+      type: DYNAMIC
+      display_name: '#FF7C00Т#FF9633р#FFB066е#FFCB99с#FFE5CCк#FFFFFFа'
+      update_delay_seconds: 360
+      min_price_grow: 30
+      max_price_grow: 70
+      min_price: 90
+      max_price: 580
+      price_drop_der_purchase: 1.5
+      history_size: 128
+      amount: # Сумма в валюте.
+        type: VAULT
+        currency_id: "dummy" # ID валюты, оставьте dummy - болванка/заглушка если у плагина нет разных валют и как следствие ID для них.
+        value: 90 # Стартовая стоимость
+    # Название параметра в который будет сохраняться число скупаемых предметов этого типа.
+    statistic_name: cod_static
+    item_visualization:
+      material: COD # Тип материала
+      display_name: '#FF7C00Т#FF9633р#FFB066е#FFCB99с#FFE5CCк#FFFFFFа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+
+  salmon: # ID скупаемого предмета.
+    salable_item:
+      material: SALMON
+      unbreakable: false
+      hide_attributes: false
+    price:
+      # Тип стоимости.
+      # STATIC - стандартная стоимость, не меняется.
+      # DYNAMIC - меняющаяся стомость (ищите пример ниже).
+      type: DYNAMIC
+      display_name: '#FF7C00Л#FF9633о#FFB066с#FFCB99о#FFE5CCс#FFFFFFь'
+      update_delay_seconds: 360
+      min_price_grow: 36
+      max_price_grow: 86
+      min_price: 110
+      max_price: 720
+      price_drop_der_purchase: 1.7
+      history_size: 128
+      amount: # Сумма в валюте.
+        type: VAULT
+        currency_id: "dummy" # ID валюты, оставьте dummy - болванка/заглушка если у плагина нет разных валют и как следствие ID для них.
+        value: 110 # Стартовая стоимость
+    # Название параметра в который будет сохраняться число скупаемых предметов этого типа.
+    statistic_name: salmon_static
+    item_visualization:
+      material: SALMON # Тип материала
+      display_name: '#FF7C00Л#FF9633о#FFB066с#FFCB99о#FFE5CCс#FFFFFFь'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+
+  tropical_fish: # ID скупаемого предмета.
+    salable_item:
+      material: TROPICAL_FISH
+      unbreakable: false
+      hide_attributes: false
+    price:
+      # Тип стоимости.
+      # STATIC - стандартная стоимость, не меняется.
+      # DYNAMIC - меняющаяся стомость (ищите пример ниже).
+      type: DYNAMIC
+      display_name: '#BEFF00Т#C2FF11р#C7FF22о#CBFF33п#CFFF44и#D4FF55ч#D8FF66е#DCFF77с#E1FF88к#E5FF99а#E9FFAAя #F2FFCCр#F6FFDDы#FBFFEEб#FFFFFFа'
+      update_delay_seconds: 600
+      min_price_grow: 115
+      max_price_grow: 275
+      min_price: 345
+      max_price: 2300
+      price_drop_der_purchase: 10
+      history_size: 128
+      amount: # Сумма в валюте.
+        type: VAULT
+        currency_id: "dummy" # ID валюты, оставьте dummy - болванка/заглушка если у плагина нет разных валют и как следствие ID для них.
+        value: 345 # Стартовая стоимость
+    # Название параметра в который будет сохраняться число скупаемых предметов этого типа.
+    statistic_name: tropical_fish_static
+    item_visualization:
+      material: TROPICAL_FISH # Тип материала
+      display_name: '#BEFF00Т#C2FF11р#C7FF22о#CBFF33п#CFFF44и#D4FF55ч#D8FF66е#DCFF77с#E1FF88к#E5FF99а#E9FFAAя #F2FFCCр#F6FFDDы#FBFFEEб#FFFFFFа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+
+  pufferfish: # ID скупаемого предмета.
+    salable_item:
+      material: PUFFERFISH
+      unbreakable: false
+      hide_attributes: false
+    price:
+      # Тип стоимости.
+      # STATIC - стандартная стоимость, не меняется.
+      # DYNAMIC - меняющаяся стомость (ищите пример ниже).
+      type: DYNAMIC
+      display_name: '#FFB000Р#FFBA20ы#FFC440б#FFCE60а #FFE19Fф#FFEBBFу#FFF5DFг#FFFFFFу'
+      update_delay_seconds: 480
+      min_price_grow: 60
+      max_price_grow: 144
+      min_price: 180
+      max_price: 1200
+      price_drop_der_purchase: 4
+      history_size: 128
+      amount: # Сумма в валюте.
+        type: VAULT
+        currency_id: "dummy" # ID валюты, оставьте dummy - болванка/заглушка если у плагина нет разных валют и как следствие ID для них.
+        value: 180 # Стартовая стоимость
+    # Название параметра в который будет сохраняться число скупаемых предметов этого типа.
+    statistic_name: pufferfish_static
+    item_visualization:
+      material: PUFFERFISH # Тип материала
+      display_name: '#FFB000Р#FFBA20ы#FFC440б#FFCE60а #FFE19Fф#FFEBBFу#FFF5DFг#FFFFFFу'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+
+  lily_pad: # ID скупаемого предмета.
+    salable_item:
+      material: LILY_PAD
+      unbreakable: false
+      hide_attributes: false
+    price:
+      # Тип стоимости.
+      # STATIC - стандартная стоимость, не меняется.
+      # DYNAMIC - меняющаяся стомость (ищите пример ниже).
+      type: DYNAMIC
+      display_name: '#084CFBК#2064FBу#377CFCв#4F94FCш#66ABFCи#7EC3FCн#95DBFDк#ADF3FDа'
+      update_delay_seconds: 360
+      min_price_grow: 12
+      max_price_grow: 29
+      min_price: 36
+      max_price: 240
+      price_drop_der_purchase: 1
+      history_size: 128
+      amount: # Сумма в валюте.
+        type: VAULT
+        currency_id: "dummy" # ID валюты, оставьте dummy - болванка/заглушка если у плагина нет разных валют и как следствие ID для них.
+        value: 36 # Стартовая стоимость
+    # Название параметра в который будет сохраняться число скупаемых предметов этого типа.
+    statistic_name: lily_pad_static
+    item_visualization:
+      material: LILY_PAD # Тип материала
+      display_name: '#084CFBК#2064FBу#377CFCв#4F94FCш#66ABFCи#7EC3FCн#95DBFDк#ADF3FDа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+
+  ink_sac: # ID скупаемого предмета.
+    salable_item:
+      material: INK_SAC
+      unbreakable: false
+      hide_attributes: false
+    price:
+      # Тип стоимости.
+      # STATIC - стандартная стоимость, не меняется.
+      # DYNAMIC - меняющаяся стомость (ищите пример ниже).
+      type: DYNAMIC
+      display_name: '#373737Ч#444444е#525252р#5F5F5Fн#6C6C6Cи#7A7A7Aл#878787ь#949494н#A2A2A2ы#AFAFAFй #CACACAм#D7D7D7е#E4E4E4ш#F2F2F2о#FFFFFFк'
+      update_delay_seconds: 360
+      min_price_grow: 12
+      max_price_grow: 26
+      min_price: 33
+      max_price: 220
+      price_drop_der_purchase: 0.8
+      history_size: 128
+      amount: # Сумма в валюте.
+        type: VAULT
+        currency_id: "dummy" # ID валюты, оставьте dummy - болванка/заглушка если у плагина нет разных валют и как следствие ID для них.
+        value: 33 # Стартовая стоимость
+    # Название параметра в который будет сохраняться число скупаемых предметов этого типа.
+    statistic_name: ink_sac_static
+    item_visualization:
+      material: INK_SAC # Тип материала
+      display_name: '#373737Ч#444444е#525252р#5F5F5Fн#6C6C6Cи#7A7A7Aл#878787ь#949494н#A2A2A2ы#AFAFAFй #CACACAм#D7D7D7е#E4E4E4ш#F2F2F2о#FFFFFFк'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+
+  prismarine_shard: # ID скупаемого предмета.
+    salable_item:
+      material: PRISMARINE_SHARD
+      unbreakable: false
+      hide_attributes: false
+    price:
+      # Тип стоимости.
+      # STATIC - стандартная стоимость, не меняется.
+      # DYNAMIC - меняющаяся стомость (ищите пример ниже).
+      type: DYNAMIC
+      display_name: '#084CFBО#1256FBс#1B60FBк#2569FBо#2F73FBл#397DFCо#4287FCк #569BFCп#5FA4FCр#69AEFCи#73B8FCз#7CC2FCм#86CCFDа#90D6FDр#9ADFFDи#A3E9FDн#ADF3FDа'
+      update_delay_seconds: 420
+      min_price_grow: 5
+      max_price_grow: 11
+      min_price: 14
+      max_price: 90
+      price_drop_der_purchase: 0.6
+      history_size: 128
+      amount: # Сумма в валюте.
+        type: VAULT
+        currency_id: "dummy" # ID валюты, оставьте dummy - болванка/заглушка если у плагина нет разных валют и как следствие ID для них.
+        value: 14 # Стартовая стоимость
+    # Название параметра в который будет сохраняться число скупаемых предметов этого типа.
+    statistic_name: prismarine_shard_static
+    item_visualization:
+      material: PRISMARINE_SHARD # Тип материала
+      display_name: '#084CFBО#1256FBс#1B60FBк#2569FBо#2F73FBл#397DFCо#4287FCк #569BFCп#5FA4FCр#69AEFCи#73B8FCз#7CC2FCм#86CCFDа#90D6FDр#9ADFFDи#A3E9FDн#ADF3FDа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+
+  saddle: # ID скупаемого предмета.
+    salable_item:
+      material: SADDLE
+      unbreakable: false
+      hide_attributes: false
+    price:
+      # Тип стоимости.
+      # STATIC - стандартная стоимость, не меняется.
+      # DYNAMIC - меняющаяся стомость (ищите пример ниже).
+      type: DYNAMIC
+      display_name: '#FBA608С#FCBC46е#FDD384д#FEE9C1л#FFFFFFо'
+      update_delay_seconds: 600
+      min_price_grow: 80
+      max_price_grow: 192
+      min_price: 240
+      max_price: 1600
+      price_drop_der_purchase: 8
+      history_size: 128
+      amount: # Сумма в валюте.
+        type: VAULT
+        currency_id: "dummy" # ID валюты, оставьте dummy - болванка/заглушка если у плагина нет разных валют и как следствие ID для них.
+        value: 240 # Стартовая стоимость
+    # Название параметра в который будет сохраняться число скупаемых предметов этого типа.
+    statistic_name: saddle_static
+    item_visualization:
+      material: SADDLE # Тип материала
+      display_name: '#FBA608С#FCBC46е#FDD384д#FEE9C1л#FFFFFFо'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+
+  prismarine_crystals: # ID скупаемого предмета.
+    salable_item:
+      material: PRISMARINE_CRYSTALS
+      unbreakable: false
+      hide_attributes: false
+    price:
+      # Тип стоимости.
+      # STATIC - стандартная стоимость, не меняется.
+      # DYNAMIC - меняющаяся стомость (ищите пример ниже).
+      type: DYNAMIC
+      display_name: '#084CFBК#1155FBр#1A5FFBи#2468FBс#2D71FBт#367AFCа#3F84FCл#488DFCл #5BA0FCп#64A9FCр#6DB2FCи#76BBFCз#7FC5FCм#88CEFDа#92D7FDр#9BE0FDи#A4EAFDн#ADF3FDа'
+      update_delay_seconds: 480
+      min_price_grow: 42
+      max_price_grow: 101
+      min_price: 125
+      max_price: 840
+      price_drop_der_purchase: 3
+      history_size: 128
+      amount: # Сумма в валюте.
+        type: VAULT
+        currency_id: "dummy" # ID валюты, оставьте dummy - болванка/заглушка если у плагина нет разных валют и как следствие ID для них.
+        value: 125 # Стартовая стоимость
+    # Название параметра в который будет сохраняться число скупаемых предметов этого типа.
+    statistic_name: prismarine_crystals_static
+    item_visualization:
+      material: PRISMARINE_CRYSTALS # Тип материала
+      display_name: '#084CFBК#1155FBр#1A5FFBи#2468FBс#2D71FBт#367AFCа#3F84FCл#488DFCл #5BA0FCп#64A9FCр#6DB2FCи#76BBFCз#7FC5FCм#88CEFDа#92D7FDр#9BE0FDи#A4EAFDн#ADF3FDа'
+      description:
+        - '#ffccccБазовая стоимость: %currency_color_string%%currency_sign%%base_price%'
+        - '#ffccccСтоимость с учетом множителя: %currency_color_string%%currency_sign%%multiplied_price%'
+        - ''
+        - '%sell_mode_description%'
+        - ''
+        - '&eЛКМ чтобы изменить режим скупки!'
+        - '&eПКМ чтобы продать!'
+        - ''
+        - '%price_graph%'
+
+##################################################### КАТАЛОГИ
+
+# Список каталогов с продаваемыми предметами.
+catalog_list:
+  catalog_1: # ID каталога с продаваемыми предметами.
+
+    # Формула расчета уровня каталога от числа проданных предметов этого каталога.
+    #
+    # По умолчанию:
+    # Каждые 10 проданных предметов это +1 уровень.
+    #
+    # (1 - 1) * 10 = 0 - (1-й уровень требует 0 проданных предметов)
+    # (2 - 1) * 10 = 10 - (2-й уровень требует 10 проданных предметов)
+    # (3 - 1) * 10 = 20 - (3-й уровень требует 20 проданных предметов)
+    level_formula: '(%level% - 1) * 10'
+
+    # Максимальный уровень выше которого он не поднимется.
+    max_level: 100
+
+    # Формула расчета множителя дохода от уровня этого каталога.
+    #
+    # По умолчанию:
+    # Каждый уровень дает +0.01 к множитею дохода к продаваемому предмету.
+    #
+    # 1 + 1 / 100 = 1.01
+    # 1 + 2 / 100 = 1.02
+    # 1 + 3 / 100 = 1.03
+    # ...
+    # 1 + 100 / 100 = 2
+    # ...
+    multiplier_formula: '1 + %catalog_level% / 100'
+
+    item_visualization:
+      material: CARROT
+      display_name: '&fФермерство и растения'
+      description:
+        - '#ffccccУровень: &6%catalog_level%#ffcccc/&6%catalog_max_level%'
+        - '#ffccccПрогресс: &2%items_sold%#ffcccc/&2%required_items_sold%'
+        - '#ffccccМножитель: &bx%catalog_multiplier%'
+        - ''
+        - '&eКликните чтобы открыть это меню!'
+    # Список ID скупаемых предметов этого каталога.
+    salable_item_id_list:
+      - nether_wart
+      - sweet_berries
+      - melon_slice
+      - melon
+      - brown_mushroom
+      - red_mushroom
+      - sugar_cane
+      - bamboo
+      - kelp
+      - cactus
+      - sea_pickle
+      - egg
+      - cocoa_beans
+      - chorus_fruit
+      - pumpkin
+      - honey_bottle
+      - beetroot
+      - potato
+      - carrot
+      - wheat
+
+  catalog_2:
+    level_formula: '(%level% - 1) * 10'
+    max_level: 100
+    multiplier_formula: '1 + %catalog_level% / 100'
+    item_visualization:
+      material: BIRCH_LOG
+      display_name: '&fДревесина и доски'
+      description:
+        - '#ffccccУровень: &6%catalog_level%#ffcccc/&6%catalog_max_level%'
+        - '#ffccccПрогресс: &2%items_sold%#ffcccc/&2%required_items_sold%'
+        - '#ffccccМножитель: &bx%catalog_multiplier%'
+        - ''
+        - '&eКликните чтобы открыть это меню!'
+    salable_item_id_list:
+      - oak_planks
+      - oak_log
+      - spruce_planks
+      - spruce_log
+      - birch_planks
+      - birch_log
+      - jungle_planks
+      - jungle_log
+      - acacia_planks
+      - acacia_log
+      - dark_oak_planks
+      - dark_oak_log
+
+  catalog_3:
+    level_formula: '(%level% - 1) * 10'
+    max_level: 100
+    multiplier_formula: '1 + %catalog_level% / 100'
+    item_visualization:
+      material: RABBIT_FOOT
+      display_name: '&fПродукты животноводства'
+      description:
+        - '#ffccccУровень: &6%catalog_level%#ffcccc/&6%catalog_max_level%'
+        - '#ffccccПрогресс: &2%items_sold%#ffcccc/&2%required_items_sold%'
+        - '#ffccccМножитель: &bx%catalog_multiplier%'
+        - ''
+        - '&eКликните чтобы открыть это меню!'
+    salable_item_id_list:
+      - beef
+      - porkchop
+      - mutton
+      - chicken
+      - rabbit
+      - leather
+      - rabbit_hide
+      - rabbit_foot
+
+  catalog_4:
+    level_formula: '(%level% - 1) * 10'
+    max_level: 100
+    multiplier_formula: '1 + %catalog_level% / 100'
+    item_visualization:
+      material: DIAMOND_BLOCK
+      display_name: '&fРуды и драгоценности'
+      description:
+        - '#ffccccУровень: &6%catalog_level%#ffcccc/&6%catalog_max_level%'
+        - '#ffccccПрогресс: &2%items_sold%#ffcccc/&2%required_items_sold%'
+        - '#ffccccМножитель: &bx%catalog_multiplier%'
+        - ''
+        - '&eКликните чтобы открыть это меню!'
+    salable_item_id_list:
+      - coal
+      - coal_block
+      - iron_ingot
+      - iron_block
+      - lapis_lazuli
+      - lapis_block
+      - gold_ingot
+      - gold_block
+      - redstone
+      - redstone_block
+      - diamond
+      - diamond_block
+      - emerald
+      - emerald_block
+      - netherite_ingot
+      - netherite_block
+
+  catalog_5:
+    level_formula: '(%level% - 1) * 10'
+    max_level: 100
+    multiplier_formula: '1 + %catalog_level% / 100'
+    item_visualization:
+      material: ROTTEN_FLESH
+      display_name: '&fДобыча с мобов'
+      description:
+        - '#ffccccУровень: &6%catalog_level%#ffcccc/&6%catalog_max_level%'
+        - '#ffccccПрогресс: &2%items_sold%#ffcccc/&2%required_items_sold%'
+        - '#ffccccМножитель: &bx%catalog_multiplier%'
+        - ''
+        - '&eКликните чтобы открыть это меню!'
+    salable_item_id_list:
+      - ghast_tear
+      - ender_pearl
+      - phantom_membrane
+      - magma_cream
+      - gunpowder
+      - blaze_rod
+      - bone
+      - string
+      - arrow
+      - slime_ball
+      - rotten_flesh
+
+  catalog_6:
+    level_formula: '(%level% - 1) * 10'
+    max_level: 100
+    multiplier_formula: '1 + %catalog_level% / 100'
+    item_visualization:
+      material: FISHING_ROD
+      display_name: '&fРыболовство'
+      description:
+        - '#ffccccУровень: &6%catalog_level%#ffcccc/&6%catalog_max_level%'
+        - '#ffccccПрогресс: &2%items_sold%#ffcccc/&2%required_items_sold%'
+        - '#ffccccМножитель: &bx%catalog_multiplier%'
+        - ''
+        - '&eКликните чтобы открыть это меню!'
+    salable_item_id_list:
+      - nautilus_shell
+      - cod
+      - salmon
+      - tropical_fish
+      - pufferfish
+      - lily_pad
+      - saddle
+
+gui:
+  catalog_list:
+    size: 54
+    title: "Список каталогов"
+
+    chest_buyer:
+      slot:
+        x: 4
+        y: 6
+      item:
+        material: CHEST
+        display_name: '&dСундук-скупщик'
+        description:
+          - "&fВыложите в него все предметы которые"
+          - "&fхотите продать и закройте, будут проданы!"
+          - ""
+          - "&7&o- Предметы которые продать нельзя"
+          - "&7&oбудут возвращены в инвентарь."
+          - ""
+          - "&7&o- Используется наибольший множитель каталога"
+          - "&7&oв котором можно продать предмет, не стоит"
+          - "&7&oпереживать, здесь множитель тоже действует."
+          - ""
+          - '&eКликните чтобы открыть!'
+
+    auto_buyer:
+      slot:
+        x: 5
+        y: 6
+      item:
+        material: COMPARATOR
+        display_name: '&fАвто-скупщик'
+        description:
+          - ""
+          - '&eКликните чтобы открыть!'
+
+    # Список номеров слотов через запятую в которых будет заполнен контент.
+    # Номера слотов можно найти здесь "https://mcutils.com/inventory-slots".
+    #
+    # Например: "0,1,3,10,53" задействует перечисленные номера слотов для заполнения контентом.
+    # Подсказка: "10,11,12,13,14,15,16" или "10-16" одно и то же, воспользуйтейсь чем удобнее.
+    content_fill_pattern: "10-16,19-25,28-34"
+
+    # Кнопка назад.
+    back_button:
+      slot:
+        x: 1
+        y: 3
+      item:
+        material: ARROW
+        display_name: '&fНазад'
+        description:
+          - ""
+          - '&eКликните чтобы попасть на пред. страницу!'
+
+    # Кнопка далее.
+    next_button:
+      slot:
+        x: 9
+        y: 3
+      item:
+        material: ARROW
+        display_name: '&fДалее'
+        description:
+          - ""
+          - '&eКликните чтобы попасть на след. страницу!'
+
+    # Предмет заливки, полностью закомментируйте эту секцию "fill_item" или закомментируйте ее содержимое,
+    # а значение установите в "fill_item: {}", это предотвратит заливку меню этим предметом.
+    fill_item:
+      material: BROWN_STAINED_GLASS_PANE
+      display_name: "&0"
+
+    # Список предметов декораций. Значение установите в "decorate_item_list: {}", а все
+    # элементы спика полностью удалите, это предотвратит заливку меню этими предметами.
+    decorate_item_list:
+      decorate_item_1: # ID предмета декорации.
+        slot: # Расположение предмета декорации по X и Y.
+          x: 1 # X.
+          y: 1 # Y.
+        item: # Визуализация предмета декорации.
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+          display_name: "&a%javascript_site_placeholder%"
+      decorate_item_2:
+        slot:
+          x: 2
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_3:
+        slot:
+          x: 3
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_4:
+        slot:
+          x: 4
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_5:
+        slot:
+          x: 5
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_6:
+        slot:
+          x: 6
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_7:
+        slot:
+          x: 7
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_8:
+        slot:
+          x: 8
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_9:
+        slot:
+          x: 9
+          y: 1
+        item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+          display_name: "&a%javascript_site_placeholder%"
+      decorate_item_10:
+        slot:
+          x: 1
+          y: 2
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_11:
+        slot:
+          x: 9
+          y: 2
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_12:
+        slot:
+          x: 1
+          y: 3
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_13:
+        slot:
+          x: 9
+          y: 3
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_14:
+        slot:
+          x: 1
+          y: 4
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_15:
+        slot:
+          x: 9
+          y: 4
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_16:
+        slot:
+          x: 1
+          y: 5
+        item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+          display_name: "&a%javascript_site_placeholder%"
+      decorate_item_17:
+        slot:
+          x: 2
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_18:
+        slot:
+          x: 3
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_19:
+        slot:
+          x: 4
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_20:
+        slot:
+          x: 5
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_21:
+        slot:
+          x: 6
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_22:
+        slot:
+          x: 7
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_23:
+        slot:
+          x: 8
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_24:
+        slot:
+          x: 9
+          y: 5
+        item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+          display_name: "&a%javascript_site_placeholder%"
+
+  catalog:
+    size: 54
+    title: "Каталог"
+
+    main_menu:
+      slot:
+        x: 1
+        y: 6
+      item:
+        material: IRON_DOOR
+        display_name: '&fОсновное меню'
+        description:
+          - ""
+          - '&eКликните чтобы вернуться в основное меню!'
+
+    content_fill_pattern: "10-16,19-25,28-34"
+
+    back_button:
+      slot:
+        x: 1
+        y: 3
+      item:
+        material: ARROW
+        display_name: '&fНазад'
+        description:
+          - ""
+          - '&eКликните чтобы попасть на пред. страницу!'
+
+    next_button:
+      slot:
+        x: 9
+        y: 3
+      item:
+        material: ARROW
+        display_name: '&fДалее'
+        description:
+          - ""
+          - '&eКликните чтобы попасть на след. страницу!'
+
+    fill_item:
+      material: BROWN_STAINED_GLASS_PANE
+      display_name: "&0"
+
+    decorate_item_list:
+      decorate_item_1:
+        slot:
+          x: 1
+          y: 1
+        item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+          display_name: "&a%javascript_site_placeholder%"
+      decorate_item_2:
+        slot:
+          x: 2
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_3:
+        slot:
+          x: 3
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_4:
+        slot:
+          x: 4
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_5:
+        slot:
+          x: 5
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_6:
+        slot:
+          x: 6
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_7:
+        slot:
+          x: 7
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_8:
+        slot:
+          x: 8
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_9:
+        slot:
+          x: 9
+          y: 1
+        item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+          display_name: "&a%javascript_site_placeholder%"
+      decorate_item_10:
+        slot:
+          x: 1
+          y: 2
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_11:
+        slot:
+          x: 9
+          y: 2
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_12:
+        slot:
+          x: 1
+          y: 3
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_13:
+        slot:
+          x: 9
+          y: 3
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_14:
+        slot:
+          x: 1
+          y: 4
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_15:
+        slot:
+          x: 9
+          y: 4
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_16:
+        slot:
+          x: 1
+          y: 5
+        item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+          display_name: "&a%javascript_site_placeholder%"
+      decorate_item_17:
+        slot:
+          x: 2
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_18:
+        slot:
+          x: 3
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_19:
+        slot:
+          x: 4
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_20:
+        slot:
+          x: 5
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_21:
+        slot:
+          x: 6
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_22:
+        slot:
+          x: 7
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_23:
+        slot:
+          x: 8
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_24:
+        slot:
+          x: 9
+          y: 5
+        item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+          display_name: "&a%javascript_site_placeholder%"
+
+  chest_buyer:
+    size: 54
+    title: "Сундук-скупщик"
+
+  auto_buyer:
+    size: 54
+    title: "Авто-скупщик"
+
+    main_menu:
+      slot:
+        x: 1
+        y: 6
+      item:
+        material: IRON_DOOR
+        display_name: '&fОсновное меню'
+        description:
+          - ""
+          - '&eКликните чтобы вернуться в основное меню!'
+
+    auto_sell:
+      slot:
+        x: 9
+        y: 6
+      active:
+        item:
+          material: LIME_BANNER
+          banner_pattern_list: # Список паттернов (опционально).
+          display_name: "&fАвто-скупка: &aВключена"
+          description:
+            - "&7Автоматически продавать все скупаемые"
+            - "&7предметы (выбранные) которые в данный"
+            - "&7момент находятся в вашем инвентаре?"
+            - ""
+            - "&eКликните чтобы выключть!"
+      not_active:
+        item:
+          material: RED_BANNER
+          display_name: "&fАвто-скупка: &cВыключена"
+          description:
+            - "&7Автоматически продавать все скупаемые"
+            - "&7предметы (выбранные) которые в данный"
+            - "&7момент находятся в вашем инвентаре?"
+            - ""
+            - "&eКликните чтобы включить!"
+
+    selecting:
+      slot:
+        x: 8
+        y: 6
+      select_all:
+        item:
+          material: LIME_BANNER
+          display_name: "&fВыбрать всё"
+          description:
+            - ""
+            - "&7Выборано всё: &cНет"
+            - ""
+            - "&eКликните чтобы выбрать всё!"
+      deselect_all:
+        item:
+          material: RED_BANNER
+          banner_pattern_list:
+          display_name: "&fОтменить выбор всего"
+          description:
+            - ""
+            - "&7Выборано всё: &aДа"
+            - ""
+            - "&eКликните чтобы отменить выбор всего!"
+
+    content_fill_pattern: "10-16,19-25,28-34"
+
+    back_button:
+      slot:
+        x: 1
+        y: 3
+      item:
+        material: ARROW
+        display_name: '&fНазад'
+        description:
+          - ""
+          - '&eКликните чтобы попасть на пред. страницу!'
+
+    next_button:
+      slot:
+        x: 9
+        y: 3
+      item:
+        material: ARROW
+        display_name: '&fДалее'
+        description:
+          - ""
+          - '&eКликните чтобы попасть на след. страницу!'
+
+    fill_item:
+      material: BROWN_STAINED_GLASS_PANE
+      display_name: "&0"
+
+    decorate_item_list:
+      decorate_item_1:
+        slot:
+          x: 1
+          y: 1
+        item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+          display_name: "&a%javascript_site_placeholder%"
+      decorate_item_2:
+        slot:
+          x: 2
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_3:
+        slot:
+          x: 3
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_4:
+        slot:
+          x: 4
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_5:
+        slot:
+          x: 5
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_6:
+        slot:
+          x: 6
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_7:
+        slot:
+          x: 7
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_8:
+        slot:
+          x: 8
+          y: 1
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_9:
+        slot:
+          x: 9
+          y: 1
+        item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+          display_name: "&a%javascript_site_placeholder%"
+      decorate_item_10:
+        slot:
+          x: 1
+          y: 2
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_11:
+        slot:
+          x: 9
+          y: 2
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_12:
+        slot:
+          x: 1
+          y: 3
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_13:
+        slot:
+          x: 9
+          y: 3
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_14:
+        slot:
+          x: 1
+          y: 4
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_15:
+        slot:
+          x: 9
+          y: 4
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_16:
+        slot:
+          x: 1
+          y: 5
+        item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+          display_name: "&a%javascript_site_placeholder%"
+      decorate_item_17:
+        slot:
+          x: 2
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_18:
+        slot:
+          x: 3
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_19:
+        slot:
+          x: 4
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_20:
+        slot:
+          x: 5
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_21:
+        slot:
+          x: 6
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_22:
+        slot:
+          x: 7
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_23:
+        slot:
+          x: 8
+          y: 5
+        item:
+          material: BLUE_STAINED_GLASS_PANE
+          display_name: "#ffcccc%javascript_site_placeholder%"
+      decorate_item_24:
+        slot:
+          x: 9
+          y: 5
+        item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+          display_name: "&a%javascript_site_placeholder%"

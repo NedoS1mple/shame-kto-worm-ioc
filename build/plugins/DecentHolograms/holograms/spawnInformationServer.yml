@@ -1,0 +1,28 @@
+location: lobby:0,500:92,844:-2,500
+enabled: true
+display-range: 45
+update-range: 45
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&x&a&3&0&0&0&0╔&x&d&1&0&0&0&0═&x&f&f&0&0&0&0═                        &x&f&f&0&0&0&0═&x&d&1&0&0&0&0═&x&a&3&0&0&0&0╗'
+    height: 0.3
+  - content: '&#ea0000&l⚡ %triton_server.name1% &#ea0000&l⚡'
+    height: 0.3
+  - content: 'Режим: &#ea0000Анархия-101'
+    height: 0.3
+  - content: 'Игроков в команде: &61'
+    height: 0.3
+  - content: 'Онлайн режима: &e%server_online%/250'
+    height: 0.3
+  - content: 'Донат Услуги: &a/donate'
+    height: 0.3
+  - content: 'Сообщества: &b/links'
+    height: 0.3
+  - content: 'Сайт: %triton_server.name1%'
+    height: 0.3
+  - content: '&x&a&3&0&0&0&0╚&x&d&1&0&0&0&0═&x&f&f&0&0&0&0═                        &x&f&f&0&0&0&0═&x&d&1&0&0&0&0═&x&a&3&0&0&0&0╝'
+    height: 0.3
+  actions: {}

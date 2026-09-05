@@ -1,0 +1,38 @@
+title: "Выбор шахты"
+
+layout:
+  - "#########"
+  - "#@@@@@@@#"
+  - "#@@@@@@@#"
+  - "###<#>###"
+
+stacks:
+  '#':
+    stack:
+      - type: "RED_STAINED_GLASS_PANE"
+        name: " "
+  '>':
+    type: navigation
+    direction: NEXT
+    available:
+      type: "ARROW"
+      name: "<red>Далее (На страницу: <next_page>)"
+    unavailable:
+      type: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+  '<':
+    type: navigation
+    direction: PREVIOUS
+    available:
+      type: "ARROW"
+      name: "<red>Назад (На страницу: <previous_page>)"
+    unavailable:
+      type: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+  '@':
+    type: item
+    stack:
+      type: "STONE"
+      name: "<red>..."
+      lore:
+        - "<red>..."

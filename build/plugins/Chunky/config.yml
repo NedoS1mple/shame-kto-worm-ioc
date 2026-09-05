@@ -1,0 +1,27 @@
+# Chunky Configuration
+# https://github.com/pop4959/Chunky/wiki/Configuration
+force-load-existing-chunks: false
+version: 1
+language: en
+continue-on-restart: false
+silent: false
+update-interval: 1
+tasks:
+  duels1:
+    cancelled: true
+    radius: 200.0
+    x-center: -0.04758487875107173
+    z-center: 1.9183655683492924
+    iterator: concentric
+    shape: circle
+    count: 729
+    time: 1713
+  lobby:
+    cancelled: true
+    radius: 350.0
+    x-center: 2.299999952316284
+    z-center: 58.0
+    iterator: concentric
+    shape: square
+    count: 2017
+    time: 1848

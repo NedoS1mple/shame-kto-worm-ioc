@@ -1,0 +1,86 @@
+signs:
+    top:
+        default:
+        - '&7&m       &r #{POSITION} &7&m       '
+        - '&6{NAME}'
+        - '&e{VALUE} {VALUENAME}'
+        - '&7&m                   '
+formatted:
+    k: k
+    m: m
+    t: t
+    b: b
+    q: q
+    qi: qi
+    sx: sx
+    sp: sp
+    o: o
+    n: n
+    d: d
+    ud: ud
+time:
+    w: 'н. '
+    d: 'д. '
+    h: 'ч. '
+    m: 'м. '
+    s: с.
+noperm: У вас недостаточно прав.
+commands:
+    reload:
+        success: <gradient:#FB8208:#FB8208>[⚝]</gradient> &fКонфигурация &6перезагружена&f.
+        fail: '&cПроизошла ошибка при перезагрузке одной из ваших конфигураций. Посмотрите
+            в консоль для большей информации.'
+    export:
+        fileexists: '&cФайл &f{FILE}&c уже создан!'
+        starting: '&7Получение всех игроков из базы данных. Может занять некоторое
+            время.'
+        fail: '&cПроизошла ошибка при экспортировании данных. Посмотрите в консоль
+            для большей информации.'
+        progress: '&eПрогресс: &f{DONE}&7 из &f{TOTAL}&7 экспортировано'
+        success: '&aКэш был экспортирован в файл &f{FILE}&a!'
+    import:
+        nofile: '&cФайла &f{FILE}&c не существует!'
+        starting: '&7Загрузка всей кэшированной статистики из &f{FILE}'
+        fail: '&cПроизошла ошибка при импортировании данных. Посмотрите в консоль
+            для большей информации.'
+        insertprogress: '&eПрогресс: &f{DONE}&7 из &f{TOTAL}&7 импортировано'
+        success: '&aКэш был импортирован из файла &f{FILE}&a!'
+    viewer:
+        success: |4
+
+            &aThe cache has been uploaded and is viewable at&f <hover:show_text:'<yellow>Click to go to&f {URL}'><click:open_url:'{URL}'><white><underlined>{URL}</click></hover>
+        uploading: '&7Uploading..'
+no-data:
+    lb:
+        name: '---'
+        value: '---'
+    extra: '---'
+    rel:
+        position: '{POSITION}'
+        name: '---'
+        value: '---'
+no-player-skin:
+    default: Superman00800
+loading:
+    text: Loading
+    short: -?-
+    position: ..
+    size: '...'
+updater:
+    slow-feedback: '&7Checking for update and downloading...'
+    disabled: '&cThe updater is disabled! &7Please enable it in the config to download
+        updates.'
+    success: '&aUpdate downloaded! &7Restart the server to apply the update.'
+    warnings:
+        could-not-delete-old-jar: '&aUpdate downloaded&e but the old jar could not
+            be deleted. &7Please delete the old jar before restarting the server.'
+    errors:
+        no-update-available: '&aYou are already up to date!'
+        while-checking: '&eAn error occurred while checking for an update. &7See the
+            console for more info.'
+        already-downloaded: '&aYou have already downloaded an update! &7Restart the
+            server to apply it.'
+        while-downloading: '&eAn error occurred while downloading an update. &7See
+            the console for more info.'
+        unknown: '&eAn unknown error occurred: {ERROR}'
+        uncaught: '&cAn error occurred while executing this command. &7See the console.'

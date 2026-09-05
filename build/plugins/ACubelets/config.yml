@@ -1,0 +1,140 @@
+###########################################################
+#
+# Этот плагин скачан с forum-minecraft.ru:
+# • Лучшего форума по тематике создания серверов Майнкрафт!
+# • У нас полезных плагинов, карт, готовых сборок и других ресурсов!
+#
+# Заходи на наш сайт: https://forum-minecraft.ru/
+#
+###########################################################
+
+#-------------------------#
+#                         #
+#   NAME:     ACUBELETS   #
+#   AUTHOR:   DavidML16   #
+#                         #
+#-------------------------#
+
+
+# Language of plugin
+# Availables by default: EN, ES
+Language: EN
+
+
+# Command name, default: /cubelets and /points
+# For the changes to take effect, a full server restart is required
+Commands:
+  Cubelets: cubelets
+  Points: pointsgfd
+
+
+# Database details
+MySQL:
+  Enabled: false
+  Host: localhost
+  Port: 3306
+  User: root
+  Password: example
+  Database: acubelets
+  Pools:
+    MinimumSize: 4
+    MaximumSize: 75
+
+
+# Enable/disable if execute a command when click on barrier
+# Executor: player or console
+# Variables when executor is player: %player%
+# When dont have any cubelets to open
+NoCubelets:
+  ExecuteCommand: true
+  Executor: player
+  Command: cases
+
+
+# Enable/disable cubelet crafting
+Crafting: false
+
+
+# Enable/disable players can select her opening animations
+AnimationsByPlayer: false
+
+
+# Enable/disable if you want to disable the gui and open the most recent cubelet just by right clicking on the cubelet machine.
+NoGuiMode: false
+
+
+# Enable/disable if you want cubelet open gui updates in realtime.
+LiveGuiUpdates: true
+
+
+# Enable/disable if you want to serialize/deserialize rewards with base64 format.
+SerializeBase64: false
+
+
+# Enable/disable if you want to gift cubelets by command
+GiftCubeletsCommand: false
+
+# How will the head texture be obtained if the player is not in the Mojang database?
+# Available types: BASE64, TEXTURE_HASH, TEXTURE_URL, USERNAME, UUID
+GiftMenuSpareHeadType: BASE64
+# Values for searching head by type specified above
+# You can find heads on sites like minecraft-heads/NameMC
+GiftMenuSpareHeadValue: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y2NWFjZWRmZTU3ZDM1ZjZiY2EzMzgxMjc5NDBlYWZmNGZmYmVjODBhYmQzM2JmZjg1OGRiM2ExYTkzZjgyIn19fQ==
+
+# Enable/disable if you want that additionally keys can be used to directly open a cubelet
+UseKeys: false
+
+
+# Enable/disable if you want to be reminded that you have cubelets when you login
+LoginReminder: false
+
+
+# Change click type to open cubelets machine menu
+# Available click types: LEFT, RIGHT, BOTH
+CubeletMachine:
+  ClickType: BOTH
+
+
+# -- Rewards system --
+#
+# AutoSorting: Enable/disable if you want to disable the automatic sorting of rewards based on rarity and name
+# Broadcast: Enable/disable if you want to broadcast reward messages
+#
+# Preview.Enable: Enable/disable cubelet rewards preview
+# Preview.ClickType: Available click types: LEFT, RIGHT, MIDDLE, SHIFT_LEFT or SHIFT_RIGHT
+#
+# Duplication.Enabled: Enable/disable if you want the reward duplication system
+# Duplication.PointsCommand: Command to give the player duplication points
+#
+# PermissionCommand: Command to give the player cubelet permission rewards
+#
+# -- Rewards system --
+Rewards:
+  AutoSorting: true
+  Broadcast: false
+  Preview:
+    Enabled: false
+    ClickType: SHIFT_LEFT
+  Duplication:
+    Enabled: false
+    PointsCommand: points give %player% %points%
+  PermissionCommand: lp user %player% permission set %permission% true
+
+
+# Change hologram settings
+# Visibility and update distance in blocks unit
+# Update interval default: 30 (1.5s)
+# Color animation default colors: &f and &c
+# Duplication hologram visible to all players (Default: false)
+Holograms:
+  VisibilityDistance: 30
+  UpdateInterval: 30
+  ColorAnimation:
+  - '&6'
+  - '&c'
+  - '&b'
+  - '&a'
+  Duplication:
+    VisibleToAllPlayers: false
+
+# MQ==

@@ -1,0 +1,63 @@
+item:
+  display_name: "#831CC8☠ #9D31A9Д#9B2FACе#992EAEз#972CB1о#942AB3р#9228B6и#9027B9е#8E25BBн#8C23BEт#8A21C0а#8720C3ц#851EC5и#831CC8я"
+  material: BONE
+  description:
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffcccc#f52080ПКМ #ffcccc- создает магическу клетку #f5208010&7x#f5208010#ffcccc,"
+    - "#ffccccнакладывая на других плохие эффекты."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  disorientation_component:
+    # Время существования эффектов окружения.
+    time_to_live_seconds: 3
+    # Радиус действия.
+    radius: 10
+    # (Тиков, 20 тиков = 1 сек.)
+    # Интервал появления партиклов.
+    particle_spawn_rate_ticks: 10
+    # Используйте эффекты по ссылке: "https://helpch.at/docs/1.16.5/org/bukkit/Particle.html".
+    # Даже если ядро сервера например 1.8.8 и эффект называется по старому, используйте его
+    # новое название из 1.16.5 по ссылке, в случае если такого эффекта не существовало на этой
+    # версии, не используйте его.
+    particle_effect: SPELL_WITCH
+    # Список эффектов накладываемых на других игроков в радиусе действия этой способности.
+    disorientation_effect_list:
+
+      # ID эффекта накладываемого на других игроков в радиусе действия этой способности.
+      disorientation_effect_1:
+        potion_effect_type: BLINDNESS
+        duration_seconds: 3
+        amplifier: 1
+
+      disorientation_effect_2:
+        potion_effect_type: WEAKNESS
+        duration_seconds: 5
+        amplifier: 3
+
+    # Включить задерждку для предотвращения частого использования?
+    enable_use_delay: true
+    # (Тиков. 1 сек. = 20 тиков) Задержка повторного использования.
+    delay_use_ticks: 20
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+        
+    message:
+      # Игроки вокруг дизориентированы!
+      used: "#831CC8☠ #9D31A9И#9B30ABг#992EADр#972DB0о#962BB2к#942AB4и #9027B9в#8E25BBо#8C24BDк#8A22BFр#8921C1у#871FC4г #831CC8дизориентированы#831CC8!"
+      # Вы были дизориентированы!
+      you_were_disoriented: "#831CC8☠ #9D31A9В#9C30AAы #9A2EADб#992EAEы#982DAFл#972CB1и #942AB3д#9329B5и#9228B6з#9127B7о#9027B9р#8F26BAи#8E25BBе#8D24BCн#8C23BEт#8B22BFи#8A21C0р#8820C2о#8720C3в#861FC4а#851EC5н#841DC7ы#831CC8!"
+      use_delay: "&cМожно использовать повторно через &b%use_delay_seconds% &cсек."
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."

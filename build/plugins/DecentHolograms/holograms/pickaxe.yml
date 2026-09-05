@@ -1,0 +1,22 @@
+location: lobby:-88,500:89,533:3,500
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&#FBFB13Купи в &a/donshop'
+    height: 0.3
+  - content: '&f'
+    height: 0.3
+  - content: '&#FF7300Эффективность VII'
+    height: 0.3
+  - content: '&#FF7300Прочность III'
+    height: 0.3
+  - content: '&#FF7300Удача III'
+    height: 0.3
+  - content: '#ICON: DIAMOND_PICKAXE !ENCHANTED'
+    height: 0.6
+  actions: {}

@@ -1,0 +1,13 @@
+#Открывать сайт?
+OpenSite: false
+
+Messages:
+  targetGive: '&x&f&a&7&f&0&0[⚝] &fВы получили: %type%&r &ex%amount%&f.'
+  senderGive: '&x&f&a&7&f&0&0[⚝] &fВы выдали: %type% &ex%amount% &fигроку &6%target%&f.'
+  configReload: '&x&f&a&7&f&0&0[🛠] &fКонфигурация &6перезагружена&f.'
+  noPermission: '&x&f&a&7&f&0&0[⚝] &cУ вас недостаточно прав.'
+  unknownPlayer: '&x&f&a&7&f&0&0[⚝] &fИгрок не найден!'
+  notEnoughArgs:
+    - '/re4tnt give <type> <player> <amount>'
+    - '/re4tnt reload'
+  onlyPlayer: '&x&f&a&7&f&0&0[⚝] &fТолько игрок может выполнить эту команду!'

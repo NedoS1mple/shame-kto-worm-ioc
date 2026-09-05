@@ -1,0 +1,54 @@
+#
+# Docs: https://re4erka.gitbook.io/re4tnt-2.0/
+#
+
+Types:
+  tntTierWhite:
+    display:
+      name: '&5[★]&d TNT - TIER &7WHITE'
+      lore:
+      - ' '
+      glow: true
+      customModelData:
+        enable: true
+        value: 4
+    options:
+      range: 10
+      interval: 100
+      autoIgnite: false
+      customName: false
+      gravity: true
+      fire: false
+      glow: false
+    obsidianBreak:
+      enable: false
+    liquidBreak:
+      enable: false
+    customCraft:
+      enable: false
+    updateBlock: false
+  tntTierBlack:
+    display:
+      name: '&5[★]&d TNT - TIER &8BLACK'
+      lore:
+      - ' '
+      glow: true
+      customModelData:
+        enable: true
+        value: 4
+    options:
+      range: 15
+      interval: 200
+      autoIgnite: false
+      customName: false
+      gravity: true
+      fire: false
+      glow: false
+    obsidianBreak:
+      power: 3
+      enable: true
+    liquidBreak:
+      enable: false
+    customCraft:
+      enable: false
+    updateBlock: false

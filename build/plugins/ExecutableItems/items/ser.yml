@@ -1,0 +1,88 @@
+name: '#009700[★] #00fc00Серная кислота'
+lore:
+- §cОтравление II (0:50)
+- §cЗамедление (1:30)
+- §cСлабость III (1:30)
+- §cИссушение V (0:30)
+- §r
+- '§5При применении:'
+- §c-15% Скорость
+- §c-12 Урон
+material: SPLASH_POTION
+glow: false
+disableStack: false
+keepItemOnDeath: false
+canBeUsedOnlyByTheOwner: false
+cancelEventIfNotOwner: false
+onlyOwnerBlackListedActivators: []
+storeItemInfo: false
+unbreakable: false
+usage: 1
+usageLimit: -1
+cancelEventIfNoPerm: false
+disabledWorlds: []
+recognitions: []
+config_5: true
+config_update: true
+config_5_98: true
+dropOptions:
+  glowDrop: false
+  glowDropColor: WHITE
+  displayNameDrop: false
+hiders:
+  hideEnchantments: false
+  hideUnbreakable: false
+  hideAttributes: true
+  hidePotionEffects: true
+  hideUsage: true
+  hideDestroys: false
+  hidePlacedOn: false
+enchantments: {}
+giveFirstJoin:
+  giveFirstJoin: false
+  giveFirstJoinAmount: 1
+  giveFirstJoinSlot: 0
+restrictions: {}
+variables: {}
+activators: {}
+displayConditions:
+  playerConditions: {}
+  worldConditions: {}
+  itemConditions: {}
+  placeholdersConditions: {}
+  enableFeature: false
+attributes: {}
+potionSettings:
+  potionColor: 10420021
+  potionType: WATER
+  potionExtended: false
+  potionUpgraded: false
+  potionEffects:
+    pEffect0:
+      isAmbient: false
+      duration: 600
+      potionEffectType: WITHER
+      amplifier: 4
+      hasParticles: false
+      hasIcon: false
+    pEffect1:
+      isAmbient: false
+      duration: 1800
+      potionEffectType: SLOW
+      amplifier: 0
+      hasParticles: false
+      hasIcon: false
+    pEffect2:
+      isAmbient: false
+      duration: 1800
+      potionEffectType: WEAKNESS
+      amplifier: 2
+      hasParticles: false
+      hasIcon: false
+    pEffect3:
+      isAmbient: false
+      duration: 1000
+      potionEffectType: POISON
+      amplifier: 1
+      hasParticles: false
+      hasIcon: false

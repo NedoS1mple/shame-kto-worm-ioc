@@ -1,0 +1,11 @@
+noWallet: '&#FF0000[✘] Ошибка!&#FFFFE6 Не достаточно &#FFFF00%wallet%&#FFFFE6!'
+rewardTaken: |-
+  &#FF0000&m     &#FF6600 ＄ &#D51515Казино &#FF6600＄ &#FF0000&m     &r
+   &#FFFFE6Поздравляем! Ваш выигрыш: &#FFFF00%reward%
+   &#FFFFE6Ставка: &#FF6600%bet% &#D51515| &#FFFFE6Множитель: &#FF6600%multiplier%
+  &#FF0000&m                           &r
+loseAll: '&#FF0000[✘] Ошибка!&#FFFFE6 К сожалению, вы потеряли всю ставку'
+gameFinishedEarly: '&#FF6600[$]&#FFFFE6 Игра завершена раньше времени. Ваш выигрыш:
+  %reward%'
+gameFinishedBetCancelled: '&cВы завершили игру раньше времени. Ваша ставка анулирована!'
+gameNotFinished: '&#FF0000[✘] Ошибка!&#FFFFE6 Игра ещё не закончилась! Заберите выигрыш!'

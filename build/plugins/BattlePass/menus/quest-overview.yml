@@ -1,0 +1,336 @@
+menu-title: '&c&lБОЕВЫЕ ЗАДАНИЯ'
+menu-rows: 5
+
+week-slots:
+  slots: '21,23' # ... используется для обозначения всех промежуточных слотов. Он функционирует так же, как 11, 12, 13, 14, 15, 16, 17, 18.
+
+
+menu:
+  '4':
+    item:
+      material: arrow:0
+      name: ' '
+      lore:
+        - ' &c[<<] &6Вернуться назад '
+        - ' '
+    actions:
+      - '[menu](page = 1) {portal}' # Если игрок на 1-ой странице, будет открыто меню "Battle Pass (/bp)" (главное меню Battle Pass)
+      - '[menu](page ! 1) {previous-page}' # Если игрок не на 1-ой странице, будет открыта предыдущая страница
+  '0':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '1':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '9':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '18':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '27':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '36':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '37':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '44':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '35':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '26':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '17':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '8':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '7':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '43':
+    item:
+      material: red_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+      
+  '16':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '10':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '19':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '28':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '42':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '41':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '40':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '39':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '38':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '6':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '5':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '3':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '2':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '15':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '11':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '29':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '33':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '34':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+  '25':
+    item:
+      material: orange_stained_glass_pane:0
+      name: '&f'
+      lore:
+        - ''
+        - '&f'
+    actions:
+      - '[menu] {next-page}'
+
+static-items:
+  week-item:
+    material: COMPASS:0
+    name: '&eНеделя %week% &7(%status%&7)'
+    lore:
+      - ''
+      - '&7Нажми, чтобы посмотреть квесты '
+  locked-week-item:
+    material: COMPASS:0
+    name: '&eНеделя %week% &7(%status%&7)'
+    lore:
+      - ''
+      - '&7Нажми, чтобы посмотреть квесты '
+  requires-previous-completion-item: # Используется только в том случае, если у параметра require-previous-completion: значение true в settings.yml.
+    material: COMPASS:0
+    name: '&eНеделя %week% &7(%status%&7)'
+    lore:
+      - ''
+      - '&7Нажми, чтобы посмотреть квесты '

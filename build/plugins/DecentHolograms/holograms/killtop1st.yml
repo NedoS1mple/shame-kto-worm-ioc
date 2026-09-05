@@ -1,0 +1,16 @@
+location: lobby:35,500:84,145:116,500
+enabled: true
+display-range: 45
+update-range: 45
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&a[1 место]'
+    height: 0.3
+  - content: '&4 %ajlb_lb_statistic_player_kills_1_alltime_prefix% &f%ajlb_lb_statistic_player_kills_1_alltime_name%'
+    height: 0.3
+  - content: '&c &6%ajlb_lb_statistic_player_kills_1_alltime_value% Убийств'
+    height: 0.3
+  actions: {}

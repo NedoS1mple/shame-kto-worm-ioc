@@ -1,0 +1,38 @@
+item:
+  display_name: "#32DFCC🧪 #397EFAА#3985F7м#388CF3у#3893F0л#379AEDе#37A1EAт #36AFE3о#35B5E0ч#35BCDCи#34C3D9щ#34CAD6е#33D1D3н#33D8CFи#32DFCCя"
+  material: PRISMARINE_SHARD
+  description:
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffccccНейтрализует действие эффектов:"
+    - "#f52080Отравление#ffcccc, #f52080Иссушение#ffcccc, #f52080Замедление#ffcccc,"
+    - "#f52080Слабость #ffccccи #f52080Плавное падение#ffcccc."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  neutralize_component:
+    # Список эффектов которые будут сразу сняты (нейтрализованы) если этот предмет в инвентаре.
+    neutralizable_potion_effect_list:
+      - "POISON"
+      - "WITHER"
+      - "SLOW"
+      - "WEAKNESS"
+      - "SLOW_FALLING"
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    message:
+      # Эффекты нейтрализованы!
+      neutralized: "#32DFCC🧪 #32DFCCЭ#32DBCEф#33D6D0ф#33D2D2е#33CDD4к#34C9D6т#34C5D9ы #35BCDDн#35B7DFе#35B3E1й#36AFE3т#36AAE5р#36A6E7а#36A1E9л#379DEBи#3798EDз#3794F0о#3890F2в#388BF4а#3887F6н#3982F8ы#397EFA!"
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."

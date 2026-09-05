@@ -1,0 +1,6 @@
+player_data:
+  ==: mcBuyerPlayerData
+  statistic: {}
+  auto_sell: {}
+  player_name: for_userstest
+  enable_auto_sell: false

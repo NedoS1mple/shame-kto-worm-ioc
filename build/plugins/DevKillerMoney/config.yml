@@ -1,0 +1,49 @@
+perGroup:
+  "default": # Название группы
+    # Дроп с игрока
+    death:
+      # Можно указать как в процентном соотношении
+      range: "1% - 5%"
+      # Стак, который будет падать именно с этой группы
+      stack:
+        type: "GOLD_NUGGET"
+        name: "<gold><money>$"
+  "vip":
+    # Дроп с игрока
+    death:
+      # Так и в количестве этих самых монет
+      range: "1 - 5"
+      # Стак, который будет падать именно с этой группы
+      stack:
+        type: "GOLD_NUGGET"
+        name: "<gold><money>$"
+    # Дроп монет игроку, за убийство моба
+    mobs:
+      GENERIC: # Если данный тип указан, то со всех мобов будут падать монеты
+        range: "1 - 10"
+        stack:
+          type: "SUNFLOWER"
+          name: "<green><money>$"
+
+mobs:
+  GENERIC:
+    range: "1 - 5"
+    stack:
+      type: "SUNFLOWER"
+      name: "<green><money>$"
+  SKELETON:
+    range: "1 - 5"
+    stack:
+      type: "BONE"
+      name: "<white><money>$"
+
+messages:
+  playerDeathMessage: |-
+    <dark_red>[!]</dark_red> <gray>Помянем. Вы погибли!
+     <gray>Вас убил</gray> <red><killer_name></red>, <gray>с вас выпало</gray> <green><money>$</green>
+     <gray>Смерть на координатах</gray> <red>[<death_x>, <death_y>, <death_z>]</red>
+  playerDeathMessageUnnamed: |-
+    <dark_red>[!]</dark_red> <gray>Помянем. Вы погибли!
+     <gray>При смерти с вас выпало</gray> <green><money>$</green>
+     <gray>Смерть на координатах</gray> <red>[<death_x>, <death_y>, <death_z>]</red>
+  pickupMoneyActionBar: "<gray>Вы подняли: <green><money>$"

@@ -1,0 +1,30 @@
+title: "&4&l❄ #FF0000&lДед Мороз"
+size: 45
+items:
+  decor:
+    RED_STAINED_GLASS_PANE: [0, 1, 7, 8, 9, 17, 18, 26, 27, 35, 36, 37, 43, 44]
+    WHITE_STAINED_GLASS_PANE: [2, 3, 4, 5, 6, 10, 11, 15, 16, 19, 25, 28, 29, 33, 34, 38, 39, 40, 41, 42]
+  present:
+    slot: 22
+    textures:
+      - "http://textures.minecraft.net/texture/12919c67317c7678438ff520c98dde0e3b4d68769c8938a5a3de2968edfc7314"
+      - "http://textures.minecraft.net/texture/1b904105b384a2f307649884f5a5f56a50d78dde7c694c9b1455dc5c7a2be60f"
+    name: "&#2EE600[Вернуть подарок]"
+    lore:
+      - '#00C0EF ➥ Нажмите#FFFFE6, чтобы вернуть &bПодарок'
+      - '#FFFFE6 и получить за это &bВознаграждение'
+message:
+  no-presents: "#FF0000[✘] Ошибка! #FFFFE6У вас нет #FBFB13подарка#FFFFE6!"
+  success: "&2[✔] #2EE600Успешно!"
+  no-inventory: "#FF0000[✘] Ошибка! #FFFFE6Предметы не найдены!"
+sound:
+  success:
+    toggle: true
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1
+    pitch: 1
+  failed:
+    toggle: true
+    sound: ENTITY_VILLAGER_NO
+    volume: 1
+    pitch: 1

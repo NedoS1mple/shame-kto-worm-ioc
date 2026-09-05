@@ -1,0 +1,52 @@
+# # options.debug: must the debug output be printed?
+# # options.difficulty: what is the server diffeculty?
+# # options.locale: what set of lang files must be used, supported: en_US, nl_NL, de_DE, it_IT
+# # spawnGroup: used to set withs worlds have what spawn, difficult to use. see official site for details
+options:
+  debug: false
+  difficulty: NORMAL
+  usecreativemode: false
+  usecreativemodeinv: true
+  blockEnderChestInCrea: false
+  useEndPortalHandler: false
+  useportalhandler: false
+  useWorldSpawnHandler: false
+  useWorldChatSeperator: false
+  craftbukkitHooks: true
+worlds:
+  duels:
+    seed: -7360688400965583671
+    worldgen: Normal
+    options: ''
+    difficulty: NORMAL
+    autoload: true
+  event:
+    seed: 7592196219007646539
+    worldgen: Normal
+    options: ''
+    difficulty: NORMAL
+    autoload: true
+  lobby:
+    seed: 510585708960028777
+    worldgen: Normal
+    options: ''
+    difficulty: NORMAL
+    autoload: true
+  world:
+    seed: -8004595343147431637
+    worldgen: Normal
+    options: ''
+    difficulty: NORMAL
+    autoload: true
+  world_nether:
+    seed: 5945967190802676454
+    worldgen: Nether
+    options: ''
+    difficulty: EASY
+    autoload: true
+  world_the_end:
+    seed: 5945967190802676454
+    worldgen: The_End
+    options: ''
+    difficulty: EASY
+    autoload: true

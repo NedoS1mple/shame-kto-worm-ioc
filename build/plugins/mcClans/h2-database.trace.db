@@ -1,0 +1,6 @@
+2025-10-18 17:35:08 jdbc[3]: exception
+me.najifka.h2.jdbc.JdbcSQLSyntaxErrorException: (Message 42S02 not found); SQL statement:
+SELECT 1 FROM mcclans_battle_kill_data_ [42102-200]
+2025-10-18 17:35:08 jdbc[3]: exception
+me.najifka.h2.jdbc.JdbcSQLSyntaxErrorException: (Message 42S02 not found); SQL statement:
+SELECT 1 FROM mcclans_clan_cache_data_ [42102-200]

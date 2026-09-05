@@ -1,0 +1,69 @@
+name: '#ca0000[★] #fc0000Зелье Киллера'
+lore:
+- §9Сила IV (3:00)
+- §9Сопротивление (3:00)
+- §r
+- '§5При применении:'
+- §9+12 Урон
+material: SPLASH_POTION
+glow: false
+disableStack: false
+keepItemOnDeath: false
+canBeUsedOnlyByTheOwner: false
+cancelEventIfNotOwner: false
+onlyOwnerBlackListedActivators: []
+storeItemInfo: false
+unbreakable: false
+usage: 1
+usageLimit: -1
+cancelEventIfNoPerm: false
+disabledWorlds: []
+recognitions: []
+config_5: true
+config_update: true
+config_5_98: true
+displayConditions:
+  playerConditions: {}
+  worldConditions: {}
+  itemConditions: {}
+  placeholdersConditions: {}
+  enableFeature: false
+dropOptions:
+  glowDrop: false
+  glowDropColor: WHITE
+  displayNameDrop: false
+hiders:
+  hideEnchantments: false
+  hideUnbreakable: false
+  hideAttributes: true
+  hidePotionEffects: true
+  hideUsage: true
+enchantments: {}
+giveFirstJoin:
+  giveFirstJoin: false
+  giveFirstJoinAmount: 1
+  giveFirstJoinSlot: 0
+restrictions: {}
+variables: {}
+activators: {}
+potionSettings:
+  potionColor: 13762560
+  potionType: WATER
+  potionExtended: false
+  potionUpgraded: false
+  potionEffects:
+    pEffect0:
+      isAmbient: false
+      duration: 3600
+      potionEffectType: INCREASE_DAMAGE
+      amplifier: 3
+      hasParticles: false
+      hasIcon: false
+    pEffect1:
+      isAmbient: false
+      duration: 3600
+      potionEffectType: DAMAGE_RESISTANCE
+      amplifier: 0
+      hasParticles: false
+      hasIcon: false
+attributes: {}

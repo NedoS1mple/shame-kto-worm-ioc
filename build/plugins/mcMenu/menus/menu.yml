@@ -1,0 +1,330 @@
+open_menu_command_list:
+  - "menu"
+
+access_to_open_checker:
+  enable: false
+  permission: menu.open.shop_weapon
+  message:
+    permission_denied: "&cОтказано в доступе на открытие меню 1."
+
+# Заголовок меню.
+title: "&x&F&B&0&0&0&0&l● &x&F&F&5&F&0&0&lГлавное меню"
+
+# (Тиков 20 тиков = 1 сек.) Интервал перерисовки меню.
+# Значения 0 и ниже включая -1 и тд. отключают отрисовку за исключением случаев когда игрок кликает (оптимизация).
+update_interval_ticks: -1
+
+# Макет меню.
+layout:
+
+  # Сетка макета.
+  grid:
+    - "| | - - - - - | |"
+    - "| - - A B C - - |"
+    - "| - - D E F - - |"
+    - "| - - G H I - - |"
+    - "| | - - - - - | |"
+
+  layout_item_list:
+    layout_item_1:
+      placeholder: "A"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: CHEST
+            display_name: "&x&f&f&7&3&0&0[⚝] Магазин"
+            description:
+              - "&x&f&f&7&3&0&0➥ Нажмите&f, чтобы перейти"
+              - ""
+              - "&fРынок с устоновленными"
+              - "&fценами прямо от сервера"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "shop"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: minecraft:block.note_block.bit
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_2:
+      placeholder: "B"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: TOTEM_OF_UNDYING
+            display_name: "&x&f&f&7&3&0&0[⚝] Аукцион"
+            description:
+              - "&x&f&f&7&3&0&0➥ Нажмите&f, чтобы перейти"
+              - ""
+              - "&fСвоего рода рынок между"
+              - "&fигроками в удобном меню"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "ah"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_4:
+      placeholder: "C"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: CRAFTING_TABLE
+            display_name: "&x&f&f&7&3&0&0[⚝] Особые крафты"
+            description:
+              - "&x&f&f&7&3&0&0➥ Нажмите&f, чтобы перейти"
+              - ""
+              - "&fМы добавили собственные"
+              - "&fпредметы и крафты для"
+              - "&fних и удобства игры."
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "crafts"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_5:
+      placeholder: "D"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: PAPER
+            display_name: "&x&f&f&7&3&0&0[⚝] Правила"
+            description:
+              - "&x&f&f&7&3&0&0➥ Нажмите&f, чтобы перейти"
+              - ""
+              - "&fПравила дают гарантию,"
+              - "&fчто у вас не будет"
+              - "&fпроблем с сервером :)"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "rules"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_6:
+      placeholder: "E"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: DIAMOND
+            display_name: "&x&f&f&7&3&0&0[⚝] Донат услуги"
+            description:
+              - "&x&f&f&7&3&0&0➥ Нажмите&f, чтобы перейти"
+              - ""
+              - "&fПолучите лучшие команды,"
+              - "&fбыть самым крутым и Топ"
+              - "&fПроекта в пару кликов"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "donate"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_7:
+      placeholder: "F"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: FIREWORK_ROCKET
+            display_name: "&x&f&f&7&3&0&0[⚝] Дизайн"
+            description:
+              - "&x&f&f&7&3&0&0➥ Нажмите&f, чтобы перейти"
+              - ""
+              - "&fСменить Дизайн своего"
+              - "&fаккаунта легко и удобно,"
+              - "&fособеноо здесь"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "design"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_8:
+      placeholder: "G"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: NETHERITE_SWORD
+            display_name: "&x&e&f&8&1&0&0[⚝] Профиль"
+            description:
+              - "&x&e&f&8&1&0&0➥ Нажмите&f, чтобы перейти"
+              - ""
+              - "&fПолучите полную информацию о себе,"
+              - "&fнастройте конфиденциальность,"
+              - "&fизмените дизайн."
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "profile"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_9:
+      placeholder: "H"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: COMPASS
+            display_name: "&x&f&f&7&3&0&0[⚝] Рандомный телепорт"
+            description:
+              - "&x&f&f&7&3&0&0➥ Нажмите&f, чтобы перейти"
+              - ""
+              - "&fМир огромен поэтому скорее"
+              - "&fисследуй его и найди свое"
+              - "&fрайское местечко под солнцем!"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "rtp"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_10:
+      placeholder: "I"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ENCHANTED_BOOK
+            display_name: "&x&e&f&8&1&0&0[⚝] Задания"
+            description:
+              - "&x&e&f&8&1&0&0➥ Нажмите&f, чтобы перейти"
+              - ""
+              - "&fВыполняйте задания, получайте"
+              - "&fскиллы, уровни и лучшие награды"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "bp"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_25:
+      placeholder: "|"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: RED_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_22:
+      placeholder: "-"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ORANGE_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []

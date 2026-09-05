@@ -1,0 +1,1823 @@
+open_menu_command_list:
+  - "tags"
+
+access_to_open_checker:
+  enable: false
+  permission: menu.open.shop_weapon
+  message:
+    permission_denied: "&cОтказано в доступе на открытие меню 1."
+
+# Заголовок меню.
+title: "#D74444&l❖ #ff6600&lТеги"
+
+# (Тиков 20 тиков = 1 сек.) Интервал перерисовки меню.
+# Значения 0 и ниже включая -1 и тд. отключают отрисовку за исключением случаев когда игрок кликает (оптимизация).
+update_interval_ticks: 0
+
+# Макет меню.
+layout:
+
+  # Сетка макета.
+  grid:
+    - "| | - - A - - | |"
+    - "| B C D E F G H |"
+    - "| I J K L M N O |"
+    - "| P Q R S T U V |"
+    - "| | W - X - Y | |"
+
+  layout_item_list:
+    layout_item_1:
+      placeholder: "A"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: tipped_arrow
+            display_name: "#fb0000[⟲] #ff6600Вернуться.."
+            description:
+              - "&7[Вернуться к разделам]"
+      click_pipeline_component_list:
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - design
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: minecraft:block.note_block.bit
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_2:
+      placeholder: "B"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Убрать тэг"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta clear
+        send_message:
+          type: SEND_MESSAGE
+          message: "#FFFFE6Установлено"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_3:
+      placeholder: "C"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.1"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Кун"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 1390 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Кун"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.1"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 1390
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 1390
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.1 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Кун
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+    layout_item_4:
+      placeholder: "D"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.2"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Тян"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 1390 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Тян"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.2"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 1390
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 1390
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.2 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Тян
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+
+    layout_item_5:
+      placeholder: "E"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.3"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Кек"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 1390 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Кек"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.3"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 1390
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 1390
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.3 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Кек
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+
+    layout_item_6:
+      placeholder: "F"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.4"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Кот"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 1390 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Кот"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.4"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 1390
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 1390
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.4 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Кот
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+    layout_item_7:
+      placeholder: "G"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.5"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Ору"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 1390 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Цвет: &e[ЦВЕТ]"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.5"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 1390
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 1390
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.5 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Ору
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+
+    layout_item_8:
+      placeholder: "H"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.6"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Зло"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 1680 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Зло"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.6"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 1680
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 1680
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.6 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Зло
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+
+    layout_item_9:
+      placeholder: "I"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.7"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Раб"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 1680 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Раб"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.7"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 1680
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 1680
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.7 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Раб
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+
+    layout_item_10:
+      placeholder: "J"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.8"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Изи"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 1680 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Изи"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.8"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 1680
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 1680
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.8 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Изи
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+    layout_item_11:
+      placeholder: "K"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.9"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Фея"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 1680 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Фея"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.9"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 1680
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 1680
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.9 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Фея
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+
+    layout_item_12:
+      placeholder: "L"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.10"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Дед"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 1680 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Дед"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.10"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 1680
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 1680
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.10 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Дед
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+    layout_item_13:
+      placeholder: "M"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.11"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Нуб"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 1990 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Нуб"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.11"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 1990
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 1990
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.11 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Нуб
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+    layout_item_14:
+      placeholder: "N"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.12"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Топ"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 2390 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Топ"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.12"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 2390
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 2390
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.12 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Топ
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+
+    layout_item_15:
+      placeholder: "O"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.13"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Дэб"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 2590 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Дэб"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.13"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 2590
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 2590
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.13 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Дэб
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+
+    layout_item_16:
+      placeholder: "P"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.14"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Офф"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 2990 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Офф"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.14"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 2990
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 2990
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.14 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Офф
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+    layout_item_17:
+      placeholder: "Q"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.15"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Ауф"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 3590 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Ауф"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.15"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 3590
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 3590
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.15 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Ауф
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+    layout_item_18:
+      placeholder: "R"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.16"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Ауе"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 3590 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Ауе"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.16"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 3590
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 3590
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.16 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Ауе
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+    layout_item_19:
+      placeholder: "S"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.17"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: 0iq"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 3590 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: 0iq"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.17"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 3590
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 3590
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.17 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix 0iq
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+
+    layout_item_20:
+      placeholder: "T"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.18"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Бог"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 3590 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Бог"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.18"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 3590
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 3590
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.18 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Бог
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+    layout_item_21:
+      placeholder: "U"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.19"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: (◑‿◐)"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 3590 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: (◑‿◐)"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.19"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 3590
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 3590
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.19 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix (◑‿◐)
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+
+    layout_item_40:
+      placeholder: "V"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.20"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Врун"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 3590 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Врун"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.20"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 3590
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 3590
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.20 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Врун
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+    layout_item_44:
+      placeholder: "W"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.22"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Олег"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 3849 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Олег"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.22"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 3849
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 3849
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.22 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Олег
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+    layout_item_45:
+      placeholder: "X"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.23"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Батя"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 3849 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Батя"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.23"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 3849
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 3849
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.23 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Батя
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+
+    layout_item_46:
+      placeholder: "Y"
+      render_pipeline_component_list:
+        component_1:
+          # Компонент проверяющий у наблюдающего его наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "tag.24"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_render_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # отрисовать другую цепочку компонентов или например отобразить другой предмет.
+          permission_denied_render_pipeline_component_list:
+            component_4:
+              type: HUMAN_READABLE_ITEM
+              item:
+                material: red_dye
+                display_name: "#ffff00Тэг: Дыра"
+                description:
+                  - "#FF0000&m                        "
+                  - "#00FF00 $#FFFFE6 Цена:#00FF00 3849 ТК"
+                  - "#009900 ⛁#FFFFE6 Баланс: #FF6600%playerpoints_points% ТК"
+                  - "#FF0000&m                        "
+        component_2:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: lime_dye
+            display_name: "#ffff00Тэг: Дыра"
+            description:
+              - "#FFFFE6Нажми, чтобы установить"
+
+      click_pipeline_component_list:
+        component_1:
+          type: CHECK_PERMISSION
+          permission: "tag.24"
+          permission_denied_click_pipeline_component_list:
+              component_3:
+                type: PLAYER_POINTS_HAS_MONEY
+                currency_id: dummy
+                amount: 3849
+                not_enough_money_click_pipeline_component_list:
+                  component_6:
+                    type: SEND_MESSAGE
+                    message: 
+                      - " #fb0000[✘] Ошибка! #FFFFE6У Вас не хватает #00FF00Токенов#FFFFE6!"
+                      - " &r&r     &fНе беда, их можно купить на %triton_server.name1%"
+              component_4:
+                type: PLAYER_POINTS_WITHDRAW_MONEY
+                currency_id: dummy
+                amount: 3849
+              component_5:
+                type: INVOKE_CONSOLE_COMMAND_LIST
+                console_command_list:
+                  - lp user %player_name% permission set tag.24 true
+              send_message:
+                type: SEND_MESSAGE
+                message: 
+                  - ""
+                  - "&a[✔] Успешная покупка!"
+                  - ""
+        component_2:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list:
+            - lp user %player_name% meta setsuffix Дыра
+        send_message:
+          type: SEND_MESSAGE
+          message: 
+            - ""
+            - "#FFFFE6Установлено"
+            - ""
+
+
+
+
+    layout_item_22:
+      placeholder: "|"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: RED_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_23:
+      placeholder: "-"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ORANGE_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_25:
+      placeholder: "."
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: LIGHT_GRAY_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []

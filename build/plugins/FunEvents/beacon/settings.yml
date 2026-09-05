@@ -1,0 +1,210 @@
+generator:
+  static-location:
+    toggle: false
+    world: world
+    x: 100
+    y: 100
+    z: 100
+  center:
+    x: 0
+    z: 0
+  radius: 2500
+  maxY: 120
+  minY: 30
+  check-floor:
+    toggle: true
+    radius: 4
+    step: 3
+  check-air:
+    toggle: true
+    radius: 5
+    high: 4
+    step: 2
+  banned-biomes:
+  - OCEAN
+  - RIVER
+  - MOUNTAINS
+  - LUKEWARM_OCEAN
+  - FOREST
+  - SWAMP
+  - BEACH
+  banned-blocks:
+  - WATER
+  - LAVA
+  - SNOW
+  - OAK_LEAVES
+  - SPRUCE_LEAVES
+  - BIRCH_LEAVES
+  - JUNGLE_LEAVES
+  - ACACIA_LEAVES
+  - DARK_OAK_LEAVES
+  - AZURE_BLUET
+  - ALLIUM
+  - BLUE_ORCHID
+  - POPPY
+  - DANDELION
+  - SEAGRASS
+  - DEAD_BUSH
+  - FERN
+  - GRASS
+  - RED_MUSHROOM
+  - BROWN_MUSHROOM
+  - LILY_OF_THE_VALLEY
+  - CORNFLOWER
+  - OXEYE_DAISY
+  - PINK_TULIP
+  - WHITE_TULIP
+  - ORANGE_TULIP
+  - RED_TULIP
+  - LARGE_FERN
+  - TALL_GRASS
+  - PEONY
+  - ROSE_BUSH
+  - SUNFLOWER
+  - LILAC
+  - CACTUS
+  - SUGAR_CANE
+  - KELP
+  - LILY_PAD
+  worlds:
+    world: 100
+  region-radius:
+    x: 20
+    y: 200
+    z: 20
+  scheme-offsets:
+    x: 0
+    y: 8
+    z: 0
+  ignore-air-blocks: true
+  flags:
+    pvp: allow
+    build: deny
+    block-break: deny
+    block-place: deny
+    tnt: deny
+    lighter: deny
+    creeper-explosion: deny
+    ghast-fireball: deny
+    other-explosion: deny
+    enderman-grief: deny
+    fire-spread: deny
+    snowman-trails: deny
+    ravager-grief: deny
+    lava-fire: deny
+    water-flow: deny
+    lava-flow: deny
+    ice-melt: deny
+    chest-access: deny
+name: 'Маяк убийца'
+time:
+  prestart: 180
+  start: 300
+  activated: 60
+  destroy-toggle: false
+  destroy: 60
+hologram:
+  toggle: false
+  offset:
+    x: 0.5
+    y: 5.5
+    z: 4.5
+  lines:
+    started:
+    - ''
+    activated:
+    - ''
+    destroy: 
+    - ''
+message:
+  prestart:
+    toggle: true
+    lines:
+    - ' &#951B00╔&#9D2600═&#A63200═&#AE3D00╦&#B74800═&#BF5400═&#C85F01╦&#D06A01═&#D87601═&#E18101╦&#E98C01═&#F29801═&#FAA301╦&#F29801═&#E98C01═&#E18101╦&#D87601═&#D06A01═&#C85F01╦&#BF5400═&#B74800═&#AE3D00╦&#A63200═&#9D2600═&#951B00╗'
+    - ' &#951B00║'
+    - ' &#951B00║&#FFFFE6     &#FA7601§k|||&#FA7601   [Маяк убийца]   &#FA7601§k|||'
+    - ' &#951B00║&#FFFFE6   Появится уже через&#FAC800 3 минуты!'
+    - ' &#951B00║'
+    - ' &#951B00╚&#9D2600═&#A63200═&#AE3D00╩&#B74800═&#BF5400═&#C85F01╩&#D06A01═&#D87601═&#E18101╩&#E98C01═&#F29801═&#FAA301╩&#F29801═&#E98C01═&#E18101╩&#D87601═&#D06A01═&#C85F01╩&#BF5400═&#B74800═&#AE3D00╩&#A63200═&#9D2600═&#951B00╝'
+  spawn:
+    toggle: true
+    lines:
+    - ' &#951B00╔&#9D2600═&#A63200═&#AE3D00╦&#B74800═&#BF5400═&#C85F01╦&#D06A01═&#D87601═&#E18101╦&#E98C01═&#F29801═&#FAA301╦&#F29801═&#E98C01═&#E18101╦&#D87601═&#D06A01═&#C85F01╦&#BF5400═&#B74800═&#AE3D00╦&#A63200═&#9D2600═&#951B00╗'
+    - ' &#951B00║'
+    - ' &#951B00║&#FFFFE6     &#FA7601§k|||&#FA7601   [Маяк убийца]   &#FA7601§k|||'
+    - ' &#951B00║&#FFFFE6   Уровень лута: {inventory}'
+    - ' &#951B00║&#FFFFE6   Появился на координатах {cords}'
+    - ' &#951B00║'
+    - ' &#951B00╚&#9D2600═&#A63200═&#AE3D00╩&#B74800═&#BF5400═&#C85F01╩&#D06A01═&#D87601═&#E18101╩&#E98C01═&#F29801═&#FAA301╩&#F29801═&#E98C01═&#E18101╩&#D87601═&#D06A01═&#C85F01╩&#BF5400═&#B74800═&#AE3D00╩&#A63200═&#9D2600═&#951B00╝'
+  activated:
+    toggle: false
+    lines:
+    - Мистический алтарь активировался
+  removing:
+    toggle: false
+    lines:
+    - Мистический алтарь пропал
+bossbar:
+  toggle: true
+  stroke:
+    started: '&cМаяк убийца &6- до открытия: &c{timer} сек'
+    activated: '&cМаяк убийца &6- до удаления: &c{timer} сек'
+    destroy: '&cМаяк убийца &6- до удаления: &c{timer} сек'
+  style: SEGMENTED_20
+  color: RED
+  radius: 50
+toggle: true
+spawn-sound:
+  toggle: true
+  all-player: true
+  sound: ENTITY_LIGHTNING_BOLT_THUNDER
+  player-volume: 1
+  volume: 10
+  pitch: 1
+settings:
+  apex:
+    x: 0.5
+    y: 6.5
+    z: 4.5
+  end-tnt:
+    countdown: 5
+    high: 50
+  money:
+    period: 3
+    message: '&2[$] &#FFFFE6Вы получили &6{money} &#FFFFE6от &bМаяка&#FFFFE6!'
+    range: 15
+    started: 300
+    activated: 500
+    destroy: 100
+  dust:
+    period: 30
+    range: 15
+    circle-density: 5
+    particle: END_ROD
+    potion-effects:
+      GLOWING:
+        duration: 4
+        amplifier: 1
+      HUNGER:
+        duration: 4
+        amplifier: 5
+    sound:
+      toggle: true
+      sound: ENTITY_WITHER_DEATH
+      volume: 10
+      pitch: 0.5
+  particles:
+    tnt:
+      explosion:
+        particle: EXPLOSION_HUGE
+        amount: 30
+        v1: 2
+        v2: 2
+        v3: 2
+      end-rod:
+        particle: END_ROD
+        amount: 50
+        v1: 2
+        v2: 2
+        v3: 2
+        speed: 0.25

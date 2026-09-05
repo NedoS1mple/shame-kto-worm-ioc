@@ -1,0 +1,402 @@
+type:
+  name: '{#f5523c}К{#f24e38}е{#ee4a34}й{#eb4630}с {#e8422c}с {#e53e28}п{#e13a24}р{#de3620}и{#db331d}в{#d82f19}и{#d42b15}л{#d12711}е{#ce230d}г{#cb1f09}и{#c71b05}м{#c41701}и'
+  animation: animation8
+  expiration: 2w
+  icon:
+    texture: base64:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDE3NmMxYWU3MTMwN2U4NTQ3MDA2OTI3ZTk3MWU1MzBkYzBjMzQ4YmRhYjZkYjc0YWJlYWQ3MDFhNDBiMWIwIn19fQ==
+  description:
+  - '&cМожет выпасть:'
+  lore:
+    opening:
+      available:
+      - '{#f5523c}➥ {#f24e38}Н{#ee4a34}а{#eb4630}ж{#e8422c}м{#e53e28}и&f, чтобы открыть!'
+      - ''
+      - '&f Получен: {#eb4630}%received% назад'
+      - '&f Закончится через: {#eb4630}%expires%'
+      expired:
+      - '&5Received: &a%received% ago'
+      - '&5Expires: &cExpired'
+      - ''
+      - '%description%'
+      - ''
+  rarities:
+    easy:
+      name: 60%
+      chance: 69.0
+      duplicatePointsRange: 50-450
+    easy2:
+      name: 30%
+      chance: 30.0
+      duplicatePointsRange: 50-450
+    easy3:
+      name: 1%
+      chance: 1.0
+      duplicatePointsRange: 50-450
+  rewards:
+    reward_0:
+      name: '&3Аспид &9[30 дней]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp aspid 30d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 2, 82, 142
+    reward_1:
+      name: '&6Глава &e[30 дней]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp glava 30d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 178, 115, 3
+    reward_2:
+      name: '&aГерой &2[30 дней]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp hero 30d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 0, 127, 23
+    reward_3:
+      name: '&aСтраж &2[30 дней]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp strazh 30d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 179, 180, 3
+    reward_4:
+      name: '&bБарон &9[30 дней]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp baron 30d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 9, 76, 168
+    reward_5:
+      name: '&bСквид &3[30 дней]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp squid 30d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 3, 161, 179
+    reward_6:
+      name: '&cКнязь &4[30 дней]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp knyaz 30d
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_CHESTPLATE
+    reward_7:
+      name: '&cПринц &4[30 дней]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp princ 30d
+      permission: []
+      item: []
+      icon:
+        material: GOLDEN_CHESTPLATE
+    reward_8:
+      name: '&cТитан &4[30 дней]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp titan 30d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 178, 0, 0
+    reward_9:
+      name: '&dЭлита &5[30 дней]'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp elite 30d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 126, 3, 179
+    reward_10:
+      name: '&3Аспид &9[90 дней]'
+      rarity: easy2
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp aspid 90d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 2, 82, 142
+    reward_11:
+      name: '&6Глава &e[90 дней]'
+      rarity: easy2
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp glava 90d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 178, 115, 3
+    reward_12:
+      name: '&aГерой &2[90 дней]'
+      rarity: easy2
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp hero 90d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 0, 127, 23
+    reward_13:
+      name: '&aСтраж &2[90 дней]'
+      rarity: easy2
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp strazh 90d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 179, 180, 3
+    reward_14:
+      name: '&bБарон &9[90 дней]'
+      rarity: easy2
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp baron 90d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 9, 76, 168
+    reward_15:
+      name: '&bСквид &3[90 дней]'
+      rarity: easy2
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp squid 90d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 3, 161, 179
+    reward_16:
+      name: '&cКнязь &4[90 дней]'
+      rarity: easy2
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp knyaz 90d
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_CHESTPLATE
+    reward_17:
+      name: '&cПринц &4[90 дней]'
+      rarity: easy2
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp princ 90d
+      permission: []
+      item: []
+      icon:
+        material: GOLDEN_CHESTPLATE
+    reward_18:
+      name: '&cТитан &4[90 дней]'
+      rarity: easy2
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp titan 90d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 178, 0, 0
+    reward_19:
+      name: '&dЭлита &5[90 дней]'
+      rarity: easy2
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent addtemp elite 90d
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 126, 3, 179
+    reward_20:
+      name: '&3Аспид &9[Навсегда]'
+      rarity: easy3
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent set aspid
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 2, 82, 142
+    reward_21:
+      name: '&6Глава &e[Навсегда]'
+      rarity: easy3
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent set glava
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 178, 115, 3
+    reward_22:
+      name: '&aГерой &2[Навсегда]'
+      rarity: easy3
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent set hero
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 0, 127, 23
+    reward_23:
+      name: '&aСтраж &2[Навсегда]'
+      rarity: easy3
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent set strazh
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 179, 180, 3
+    reward_24:
+      name: '&bБарон &9[Навсегда]'
+      rarity: easy3
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent set baron
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 9, 76, 168
+    reward_25:
+      name: '&bСквид &3[Навсегда]'
+      rarity: easy3
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent set squid
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 3, 161, 179
+    reward_26:
+      name: '&cКнязь &4[Навсегда]'
+      rarity: easy3
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent set knyaz
+      permission: []
+      item: []
+      icon:
+        material: DIAMOND_CHESTPLATE
+    reward_27:
+      name: '&cПринц &4[Навсегда]'
+      rarity: easy3
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent set princ
+      permission: []
+      item: []
+      icon:
+        material: GOLDEN_CHESTPLATE
+    reward_28:
+      name: '&cТитан &4[Навсегда]'
+      rarity: easy3
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent set titan
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 178, 0, 0
+    reward_29:
+      name: '&dЭлита &5[Навсегда]'
+      rarity: easy3
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - lp user %player% parent set elite
+      permission: []
+      item: []
+      icon:
+        material: LEATHER_CHESTPLATE
+        color: 126, 3, 179
+  key:
+    material: TRIPWIRE_HOOK
+    name: donate's key
+    lore:
+    - '&8&oGo to a Cubelets Machine to'
+    - '&8&oopen this key.'
+    - ' '
+    - '&aLeft-Click: &6Preview rewards'
+    - '&aRight-Click: &6Open cubelet key'
+    enchants:
+      UNBREAKING: 1
+    flags:
+    - HIDE_ENCHANTS

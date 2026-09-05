@@ -1,0 +1,24 @@
+location: lobby:-77,500:89,884:27,500
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&e⚒ Авто-Шахта ⚒'
+    height: 0.3
+  - content: '§fТекущая: §6%devmines_Обычная_current_bag_from%'
+    height: 0.3
+  - content: '§fСледующая: §6%devmines_Обычная_next_bag_from%'
+    height: 0.3
+  - content: '&fОбновление через:'
+    height: 0.3
+  - content: '&6%devmines_Обычная_reset_time%'
+    height: 0.3
+  - content: '&7Очередь обновлений:'
+    height: 0.3
+  - content: '&6%devmines_Обычная_bag_queue_1%'
+    height: 0.3
+  actions: {}

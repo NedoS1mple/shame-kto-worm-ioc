@@ -1,0 +1,14 @@
+location: lobby:6,500:90,676:57,500
+enabled: true
+display-range: 45
+update-range: 45
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&#ff5c00Радиус'
+    height: 0.3
+  - content: '&#ff000010x10'
+    height: 0.3
+  actions: {}

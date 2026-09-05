@@ -1,0 +1,56 @@
+cooldownCommands:
+  - names: [ 'spawn', 'home', 'back', 'warp', 'cmi spawn', 'cmi home', 'cmi back', 'cmi warp' ]
+    perGroupCooldown:
+      default: 7
+      baron: 7
+      strazh: 6
+      hero: 6
+      aspid: 6
+      squid: 5
+      glava: 4
+      elite: 4
+      titan: 3
+      princ: 3
+      knyaz: 2
+      gercog: 0
+      yt: 0
+      helper: 0
+      moder: 0
+      glmoder: 0
+      kurator: 0
+      owner: 0      
+    bossBar:
+      name: "<color:#01fc7f>Телепортация через:</color> <gold><time> сек."
+      color: "green"
+      overlay: "progress"
+    sound:
+      type: "entity.endermen.teleport"
+      volume: 1.0
+      pitch: 1.0
+    effect:
+      effectType: "BLINDNESS"
+      duration: 3
+    hooks: # Поддержка сторонних плагинов
+      cmi: # CMI
+        # Доступные типы:
+        # Unknown, Elevator, SafeLogin, Spawn, NetherRoof, BelowBedrock,
+        # Back, DBack, Home, Jump, Patrol, Portal, WarmUp, Biome,
+        # FlightCharge, InvEdit, TimedCommand, TpaAll, Tp, Top, Down,
+        # TpAll, TpHere, TpPos, Warp, JoinSpawn, Totem, randomTp, World, HoloEdit
+        handleTypes:
+          - Home
+          - TpHere
+          - Warp
+          - Spawn
+          - TpAll
+
+messages:
+  onTeleport: |-
+    <color:#ff8000>[⚝]</color> <white>Телепортация через:</white> <color:#30ff21><time> сек.</color>
+    <color:#ff8000>[⚝]</color> <white>Не получайте</white> <gold>урон</gold> <white>от игроков!</white>
+    <dark_red><hover:show_text:'<white>Нажмите, чтобы отменить'><click:run_command:'/dc_cancelpendingteleport'>        <color:#db0000>[Отменить телепорт]</click></hover></dark_red>
+
+  cancelled: "<color:#ff2a00>[✘]</color> <white>Телепортация</white> <color:#ff6f00>отменена</color>"
+  damaged: "<color:#ff2a00>[✘]</color> <white>Вы получили</white> <color:#ff6f00>урон</color>, телепортация <color:#ff6f00>отменена</color>"
+  noPending: "<color:#ff2a00>[✘] <white>У вас нет активных запросов на телепортацию.</white>"
+  alreadyPending: ""

@@ -1,0 +1,116 @@
+#
+# This is the gui layout file.
+# You can change any messages that are in this file
+#
+# If you want to reset a message back to the default,
+# delete the entire line the message is on and restart the server.
+#
+# You can use %current_page% and %total_pages% in Title to show pages information
+#
+# IMPORTANT: Slots numbers between 1-9, if not, the plugin will crash
+#
+
+Layout:
+
+  # GUI Title
+  Title: '&e&l★ &6&lКейсы'
+
+  NoneExpiration: Never
+
+  # GUI items
+  Items:
+
+    # Close item
+    Close:
+      Enabled: false
+      Name: '&9Close'
+      Material: BOOK
+      Slot: 5
+      Lore:
+      - '&7Click to close'
+      - '&7this menu'
+
+    NoCubelets:
+      Name: '&x&f&f&0&0&0&0[✘] &6У Вас нет кейсов ;('
+      Material: PUFFERFISH
+      Lore:
+      - '&eНажми&f, чтобы посмотреть'
+      - '&fи купить новые кейсы!'
+
+    # Item to order cubelets by date or type
+    Ordered:
+      Enabled: false
+      Slot: 7
+      Type:
+        Name: '&aOrderer by - &a&lType'
+        Material: NAME_TAG
+        Lore:
+        - '&7Change how items are ordered'
+        - '&7in this menu.'
+        - '&6Click to order by Date received!'
+      Date:
+        Name: '&aOrderer by - &a&lDate received'
+        Material: CLOCK
+        Lore:
+        - '&7Change how items are ordered'
+        - '&7in this menu.'
+        - '&6Click to order by Type!'
+
+    # Item to open crafting GUI
+    Crafting:
+      Enabled: false
+      Name: '&e&lCubelet Crafting'
+      Material: CRAFTING_TABLE
+      Slot: 3
+      Lore:
+      - '&7Take your current Cubelets and'
+      - '&7craft them together to create'
+      - '&7more awesome Cubelets containg'
+      - '&7rarer items.'
+      - '&6Click to open.'
+
+    # Item to select your cubelet opening animation
+    Animations:
+      Enabled: true
+      Name: '&a&lAnimations'
+      Material: REDSTONE
+      Slot: 6
+      Lore:
+      - '&7Select your Cubelet'
+      - '&7opening animation.'
+      - '&6Click to open.'
+
+    # Item to gift cubelets, only shown if gift command is enabled
+    Gift:
+      Enabled: false
+      Name: '&b&lGift Cubelet'
+      Slot: 4
+      Lore:
+      - '&7Gift cubelet to'
+      - '&7searched player.'
+      - '&6Click to search player.'
+
+    # Item to view your cubelets loot history
+    LootHistory:
+      Enabled: false
+      Name: '&d&lLoot History'
+      Material: CHEST
+      Slot: 5
+      Lore:
+      - '&7View your past'
+      - '&7loot history.'
+      - '&6Click to open.'
+
+    # Next page item
+    NextPage:
+      Name: '&6Следующая страница'
+      Material: SPECTRAL_ARROW
+      Slot: 9
+      ShowPageNumber: false
+
+    # Previous page item
+    PreviousPage:
+      Name: '&6Предыдущая страница'
+      Material: SPECTRAL_ARROW
+      Slot: 1
+      ShowPageNumber: false

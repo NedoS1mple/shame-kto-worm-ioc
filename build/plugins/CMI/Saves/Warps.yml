@@ -1,0 +1,57 @@
+mine:
+  Location: lobby;-68.5;87.0;27.5;90.14;0.29
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+private:
+  Location: lobby;0.5;87.0;64.5;-178.35;-6.29
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+shop:
+  Location: lobby;28.74;78.0;101.98;256.79;2.85
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+palach:
+  Location: lobby;-60.5;75.0;130.5;90.14;4.64
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+test:
+  Location: lobby;60.95;89.0;-2.94;-263.39;41.39
+  Creator: 3f89bbcc-6018-36b1-bc04-d1174a62e517
+znahar:
+  Location: lobby;-26.5;87.0;41.5;89.69;1.34
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+casino:
+  Location: lobby;-50.5;105.0;15.5;179.84;2.84
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+deatharena:
+  Location: lobby;-240.2;91.0;10.69;337.05;1.79
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+pvp:
+  Location: lobby;0.5;78.0;123.5;0.0;-1.64
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+arena:
+  Location: lobby;-17.5;78.0;122.5;0.14;2.85
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+fisher:
+  Location: lobby;55.5;87.0;-1.5;-180.45;5.24
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+buyer:
+  Location: lobby;50.17;75.0;98.03;-142.95;-3.59
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+enchant:
+  Location: lobby;-64.5;88.0;17.5;269.99;4.34
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+char:
+  Location: lobby;-64.5;88.0;17.5;269.99;4.34
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+death_smotr:
+  Location: lobby;-216.15;107.0;16.43;298.19;1.35
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+portal:
+  Location: lobby;-103.5;75.0;102.5;89.69;-6.75
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+battlepass:
+  Location: lobby;46.43;97.0;38.74;-83.56;-6.16
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+soulcollector:
+  Location: lobby;-75.5;97.0;98.5;89.69;4.04
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e
+case:
+  Location: lobby;27.5;87.0;47.5;270.13;1.04
+  Creator: d937e70f-3936-3e12-b914-d7df59da217e

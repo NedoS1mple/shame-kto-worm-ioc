@@ -1,0 +1,147 @@
+generator:
+  static-location:
+    toggle: true
+    world: lobby
+    x: -112
+    y: 76
+    z: 107
+  center:
+    x: 0
+    z: 0
+  radius: 2500
+  maxY: 120
+  minY: 30
+  check-floor:
+    toggle: true
+    radius: 3
+    step: 2
+  check-air:
+    toggle: true
+    radius: 3
+    high: 1
+    step: 2
+  banned-biomes:
+    - OCEAN
+  banned-blocks:
+    - WATER
+  worlds:
+    world: 100
+  region-radius:
+    x: 10
+    y: 10
+    z: 10
+  scheme-offsets:
+    x: 0
+    y: 0
+    z: 0
+  ignore-air-blocks: true
+  flags:
+    pvp: deny
+name: "Адская резня"
+time:
+  prestart: 1
+  start: 180
+  activated: 600
+  destroy-toggle: false
+  destroy: 10
+hologram:
+  toggle: false
+  offset:
+    x: 0
+    y: 2
+    z: 0
+  lines:
+    started:
+      - ''
+    activated:
+      - ''
+    destroy:
+      - ''
+message:
+  prestart:
+    toggle: false
+    lines:
+      - ""
+  spawn:
+    toggle: true
+    lines:
+      - "&#000000 ╔&#150000═&#2B0000═&#400000╦&#550000═&#6A0000═&#800000╦&#950000═&#AA0000═&#BF0000╦&#D50000═&#EA0000═&#FF0000╦&#EA0000═&#D50000═&#BF0000╦&#AA0000═&#950000═&#800000╦&#6A0000═&#550000═&#400000╦&#2B0000═&#150000═&#000000╗"
+      - "&#000000 ║"
+      - "&#000000 ║&#FFFFE6     &#000000§k|||&#FF0000  [Адская резня]   &#000000§k|||"
+      - "&#000000 ║&#FFFFE6   Портал активируется через &#FAC8003 минуты!"
+      - "&#000000 ║&#FFFFE6   Телепортация: &#FF0000/warp portal"
+      - "&#000000 ║"
+      - "&#000000 ╚&#150000═&#2B0000═&#400000╩&#550000═&#6A0000═&#800000╩&#950000═&#AA0000═&#BF0000╩&#D50000═&#EA0000═&#FF0000╩&#EA0000═&#D50000═&#BF0000╩&#AA0000═&#950000═&#800000╩&#6A0000═&#550000═&#400000╩&#2B0000═&#150000═&#000000╝"
+  activated:
+    toggle: true
+    lines:
+      - "&#000000 ╔&#150000═&#2B0000═&#400000╦&#550000═&#6A0000═&#800000╦&#950000═&#AA0000═&#BF0000╦&#D50000═&#EA0000═&#FF0000╦&#EA0000═&#D50000═&#BF0000╦&#AA0000═&#950000═&#800000╦&#6A0000═&#550000═&#400000╦&#2B0000═&#150000═&#000000╗"
+      - "&#000000 ║"
+      - "&#000000 ║&#FFFFE6     &#000000§k|||&#FF0000  [Адская резня]   &#000000§k|||"
+      - "&#000000 ║&#FFFFE6   Портал активировался!"
+      - "&#000000 ║&#FFFFE6   Телепортация: &#FF0000/warp portal"
+      - "&#000000 ║"
+      - "&#000000 ╚&#150000═&#2B0000═&#400000╩&#550000═&#6A0000═&#800000╩&#950000═&#AA0000═&#BF0000╩&#D50000═&#EA0000═&#FF0000╩&#EA0000═&#D50000═&#BF0000╩&#AA0000═&#950000═&#800000╩&#6A0000═&#550000═&#400000╩&#2B0000═&#150000═&#000000╝"
+  removing:
+    toggle: false
+    lines:
+      - ""
+bossbar:
+  toggle: false
+  stroke:
+    started: ""
+    activated: ""
+    destroy: ""
+  # SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20, SOLID
+  style: SEGMENTED_20
+  # RED, BLUE, GREEN, PINK, PURPLE, WHITE, YELLOW
+  color: RED
+  radius: 50
+toggle: true
+spawn-sound:
+  toggle: true
+  all-player: true
+  sound: ENTITY_ENDER_DRAGON_DEATH
+  player-volume: 1
+  volume: 10
+  pitch: 0.5
+settings:
+  portal-from:
+    direction: n
+    x: 0
+    y: 65
+    z: -3
+  portal-direction: e
+  teleport-start:
+    world: event
+    x: 0
+    y: 65
+    z: -1
+  bossbar:
+    toggle: true
+    stroke: "&cАдская резня &6- осталось мобов &c{mobs}"
+    # SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20, SOLID
+    style: SEGMENTED_20
+    # RED, BLUE, GREEN, PINK, PURPLE, WHITE, YELLOW
+    color: RED
+  teleport-end:
+    world: spawn
+    x: 0.500
+    y: 90
+    z: 0.500
+  mobs:
+    easy:
+      amount: 80
+      spawn-amount: 10
+      kill-to-spawn: 3
+    hard:
+      amount: 40
+      spawn-amount: 5
+      kill-to-spawn: 3
+      min-money: 1
+      max-money: 2
+    toggle: true
+    message: "&2[$] &#FFFFE6Вы получили &#FBFB13${money}"
+  title: "&cИвент окончен"
+  cant-tp-message: " &eДанный портал телепортирует только на &6ивенты            &eДля
+    входа в ад. Вам необходимо построить свой портал"

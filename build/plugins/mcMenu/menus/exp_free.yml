@@ -1,0 +1,291 @@
+open_menu_command_list:
+  - "exp_free"
+
+access_to_open_checker:
+  enable: false
+  permission: menu.open.shop_weapon
+  message:
+    permission_denied: "&cОтказано в доступе на открытие меню 1."
+
+# Заголовок меню.
+title: "&4❖ &6&lБесплатный опыт"
+
+# (Тиков 20 тиков = 1 сек.) Интервал перерисовки меню.
+# Значения 0 и ниже включая -1 и тд. отключают отрисовку за исключением случаев когда игрок кликает (оптимизация).
+update_interval_ticks: 0
+
+# Макет меню.
+layout:
+
+  # Сетка макета.
+  grid:
+    - "| | - - A1 - - | |"
+    - "| - - - - - - - |"
+    - "| - A B C D E - |"
+    - "| - - - - - - - |"
+    - "| | - - - - - | |"
+
+  layout_item_list:
+    layout_item_1:
+      placeholder: "A1"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: tipped_arrow
+            display_name: "§c[↺] §6Вернуться обратно"   
+      click_pipeline_component_list:
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "expp"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: minecraft:block.note_block.bit
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_2:
+      placeholder: "A"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: EXPERIENCE_BOTTLE
+            display_name: "&eСквид"
+            description:
+              - "&6Нажми&f, чтобы получить"
+              - "&e5 &fуровней опыта"
+              - ""
+              - "&fТолько для &6Сквида"
+      click_pipeline_component_list:
+        check_permission_1:
+          # Компонент проверяющий у кликнувшего наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.squid"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_click_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # выполнить другую цепочку действий или например отправить другие сообщение и звук.
+          permission_denied_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message: "&c[&lX&c] Ошибка! &fПолучить опыт может только &eСквид&f!"
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "expsquid"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_3:
+      placeholder: "B"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: EXPERIENCE_BOTTLE
+            display_name: "&eГлава"
+            description:
+              - "&6Нажми&f, чтобы получить"
+              - "&e10 &fуровней опыта"
+              - ""
+              - "&fТолько для &eГлавы"
+      click_pipeline_component_list:
+        check_permission_1:
+          # Компонент проверяющий у кликнувшего наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.glava"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_click_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # выполнить другую цепочку действий или например отправить другие сообщение и звук.
+          permission_denied_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message: "&c[&lX&c] Ошибка! &fПолучить опыт может только &eГлава&f!"
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "expglava"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+
+    layout_item_4:
+      placeholder: "C"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: EXPERIENCE_BOTTLE
+            display_name: "&eТитан"
+            description:
+              - "&6Нажми&f, чтобы получить"
+              - "&e15 &fуровней опыта"
+              - ""
+              - "&fТолько для &eТитан"
+      click_pipeline_component_list:
+        check_permission_1:
+          # Компонент проверяющий у кликнувшего наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.titan"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_click_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # выполнить другую цепочку действий или например отправить другие сообщение и звук.
+          permission_denied_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message: "&c[&lX&c] Ошибка! &fПолучить опыт может только &eТитан&f!"
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "exptitan"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_5:
+      placeholder: "D"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: EXPERIENCE_BOTTLE
+            display_name: "&eКнязь"
+            description:
+              - "&6Нажми&f, чтобы получить"
+              - "&e25 &fуровней опыта"
+              - ""
+              - "&fТолько для &eКнязь"
+      click_pipeline_component_list:
+        check_permission_1:
+          # Компонент проверяющий у кликнувшего наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.knyaz"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_click_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # выполнить другую цепочку действий или например отправить другие сообщение и звук.
+          permission_denied_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message: "&c[&lX&c] Ошибка! &fПолучить опыт может только &eКнязь&f!"
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "expknyaz"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+
+    layout_item_6:
+      placeholder: "E"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: EXPERIENCE_BOTTLE
+            display_name: "&cГерцог"
+            description:
+              - "&6Нажми&f, чтобы получить"
+              - "&e25 &fуровней опыта"
+              - ""
+              - "&fТолько для &cГерцог"
+      click_pipeline_component_list:
+        check_permission_1:
+          # Компонент проверяющий у кликнувшего наличие разрешения.
+          type: CHECK_PERMISSION
+
+          # Проверяемое разрешение.
+          permission: "cmi.kit.gercog"
+
+          # Любой "type: CHECK_PERMISSION" компонент может иметь список из
+          # "permission_denied_click_pipeline_component_list" компонентов.
+          # Это замечательно когда например необходимо при отсутствии разрешения
+          # выполнить другую цепочку действий или например отправить другие сообщение и звук.
+          permission_denied_click_pipeline_component_list:
+            send_message:
+              type: SEND_MESSAGE
+              message: "&c[&lX&c] Ошибка! &fПолучить опыт может только &cГерцог&f!"
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "expgercog"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_25:
+      placeholder: "|"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: RED_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_22:
+      placeholder: "-"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ORANGE_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []

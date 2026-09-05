@@ -1,0 +1,97 @@
+name: '#fc6500[★] #fcfc00Зелье Агента'
+lore:
+- §9Невидимость II (15:00)
+- §9Огнестойкость (15:00)
+- §9Скорость III (15:00)
+- §9Спешка (3:00)
+- §9Сила III (5:00)
+- §r
+- '§5При применении:'
+- §9+60% Скорость
+- §9+10% Скорость атаки
+- §9+9 Урон
+material: SPLASH_POTION
+glow: false
+disableStack: false
+keepItemOnDeath: false
+canBeUsedOnlyByTheOwner: false
+cancelEventIfNotOwner: false
+onlyOwnerBlackListedActivators: []
+storeItemInfo: false
+unbreakable: false
+usage: 1
+usageLimit: -1
+cancelEventIfNoPerm: false
+disabledWorlds: []
+recognitions: []
+config_5: true
+config_update: true
+config_5_98: true
+dropOptions:
+  glowDrop: false
+  glowDropColor: WHITE
+  displayNameDrop: false
+hiders:
+  hideEnchantments: false
+  hideUnbreakable: false
+  hideAttributes: true
+  hidePotionEffects: true
+  hideUsage: true
+  hideDestroys: false
+  hidePlacedOn: false
+enchantments: {}
+giveFirstJoin:
+  giveFirstJoin: false
+  giveFirstJoinAmount: 1
+  giveFirstJoinSlot: 0
+restrictions: {}
+variables: {}
+activators: {}
+displayConditions:
+  playerConditions: {}
+  worldConditions: {}
+  itemConditions: {}
+  placeholdersConditions: {}
+  enableFeature: false
+attributes: {}
+potionSettings:
+  potionColor: 16776960
+  potionType: WATER
+  potionExtended: false
+  potionUpgraded: false
+  potionEffects:
+    pEffect1:
+      isAmbient: false
+      duration: 18000
+      potionEffectType: FIRE_RESISTANCE
+      amplifier: 0
+      hasParticles: false
+      hasIcon: false
+    pEffect2:
+      isAmbient: false
+      duration: 6000
+      potionEffectType: INCREASE_DAMAGE
+      amplifier: 2
+      hasParticles: false
+      hasIcon: false
+    pEffect3:
+      isAmbient: false
+      duration: 18000
+      potionEffectType: SPEED
+      amplifier: 2
+      hasParticles: false
+      hasIcon: false
+    pEffect4:
+      isAmbient: false
+      duration: 3600
+      potionEffectType: FAST_DIGGING
+      amplifier: 0
+      hasParticles: false
+      hasIcon: false
+    pEffect0:
+      isAmbient: false
+      duration: 18000
+      potionEffectType: INVISIBILITY
+      amplifier: 0
+      hasParticles: false
+      hasIcon: false

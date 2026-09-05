@@ -1,0 +1,166 @@
+stashes:
+  sfers:
+    stash_name: Сферам
+    key_name: <format>к <displayName>
+    lore:
+    - §9Этой отмычкой можно
+    - §9Открыть хранилище
+    - §9<displayName>
+  instr:
+    stash_name: Инструментам
+    key_name: <format>к <displayName>
+    lore:
+    - §9Этой отмычкой можно
+    - §9Открыть хранилище
+    - §9<displayName>
+  bronya:
+    stash_name: Броне
+    key_name: <format>к <displayName>
+    lore:
+    - §9Этой отмычкой можно
+    - §9Открыть хранилище
+    - §9<displayName>
+  res:
+    stash_name: Ресурсам
+    key_name: <format>к <displayName>
+    lore:
+    - §9Этой отмычкой можно
+    - §9Открыть хранилище
+    - §9<displayName>
+  sword:
+    stash_name: Оружию
+    key_name: <format>к <displayName>
+    lore:
+    - §9Этой отмычкой можно
+    - §9Открыть хранилище
+    - §9<displayName>
+silver_name: '§b[★] §3Серебро '
+stash_title: '&6[Тайник]'
+splinter_name: §b[★] §3Осколок
+glassName: ''
+notEnough: '&x&F&F&0&0&0&0[✘] Ошибка! &fУ вас не хватает &eСеребра&f!'
+inventoryName: '&x&F&F&0&0&0&0★ &x&F&F&7&2&0&0&lЗнахарь'
+sphereLore:
+- '&fПодходит к &eСферам'
+- ''
+- '&x&0&0&9&8&F&F⛁ &fЦена: &x&0&0&9&8&F&F195 серебра'
+sphereName: '&x&F&F&0&0&0&0[★] &x&F&F&6&7&0&0Отмычка к Тайнику'
+sphereSlot: 24
+sphereStash: sfers
+toolsLore:
+- '&fПодходит к &eИнструментам'
+- ''
+- '&x&0&0&9&8&F&F⛁ &fЦена: &x&0&0&9&8&F&F50 серебра'
+toolsStash: instr
+toolsName: '&x&F&F&0&0&0&0[★] &x&F&F&6&7&0&0Отмычка к Тайнику'
+toolsSlot: 23
+weaponLore:
+- '&fПодходит к &eОружию'
+- ''
+- '&x&0&0&9&8&F&F⛁ &fЦена: &x&0&0&9&8&F&F55 серебра'
+weaponName: '&x&F&F&0&0&0&0[★] &x&F&F&6&7&0&0Отмычка к Тайнику'
+weaponSlot: 22
+weaponStash: sword
+resourceLore:
+- '&fПодходит к &eРесурсам'
+- ''
+- '&x&0&0&9&8&F&F⛁ &fЦена: &x&0&0&9&8&F&F25 серебра'
+resourceName: '&x&F&F&0&0&0&0[★] &x&F&F&6&7&0&0Отмычка к Тайнику'
+resourceSlot: 20
+resourceStash: res
+armorLore:
+- '&fПодходит к &eБроне'
+- ''
+- '&x&0&0&9&8&F&F⛁ &fЦена: &x&0&0&9&8&F&F60 серебра'
+armorName: '&x&F&F&0&0&0&0[★] &x&F&F&6&7&0&0Отмычка к Тайнику'
+armorSlot: 21
+armorStash: bronya
+signLore:
+- '  &eСеребро &f- еще одна валюта,'
+- '&fза которую можно покупать'
+- '&fотмычки для открытия Тайников'
+- '  &x&F&F&7&2&0&0Палач &f- торговец на рынке,'
+- '&fпокупающий головы мобов'
+- '&fв обмен на серебро'
+- '  &x&F&F&0&0&0&0На Ивентах &fтакже можно'
+- '&fнайти эту валюту &7(/event)'
+signName: '&x&F&F&0&0&0&0[i] &x&F&F&7&2&0&0Информация'
+signSlot: 13
+redGlassSlots:
+- 0
+- 1
+- 7
+- 8
+- 9
+- 17
+- 18
+- 26
+- 27
+- 35
+- 36
+- 37
+- 43
+- 44
+orangeGlassSlots:
+- 2
+- 3
+- 4
+- 5
+- 6
+- 10
+- 11
+- 15
+- 16
+- 19
+- 25
+- 28
+- 29
+- 33
+- 34
+- 38
+- 39
+- 40
+- 41
+- 42
+messages:
+  otherOpening: Кто то другой открывает...
+  openingStash: '&eОткрываем Тайник...'
+  lockpickMismatch: '&6Вы не можете открыть этот Тайник этой отмычкой!'
+  clickToUnlock: '&6Нажмите на Тайник отмычкой, чтобы открыть его!'
+  thanksForSilver: '&aЗа серебро спасибо, желаю удачи'
+  notEnoughSilver: '&7У вас недостатачно серебра'
+  notEnoughsSplinter: '&7У вас недостатачно осколков'
+  change_nohead: Ошибка! У вас нет головы
+  change_success: '[] Успешная продажа'
+  noFish: no fis
+  fishSold: solded
+change:
+  zombie_head:
+    '1':
+      vault: 15000
+    '2':
+      diamond: 5
+    '3':
+      silver: 3
+changesplinter:
+  splinter:
+    '1':
+      commands:
+      - give %player% diamond 1
+    '5':
+      commands:
+      - give %player% diamond 32
+    '10':
+      commands:
+      - give %player% diamond 64
+changefish:
+  salmon:
+    vault: 400
+commands:
+  '1':
+    amount: 25
+    command: stash givekey %player% spheres 1
+  '2':
+    amount: 60
+    command: stash givekey %player% armor 1
+format_key: '§b[★] §3Отмычка '

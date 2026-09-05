@@ -1,0 +1,20 @@
+location: lobby:0,495:90,669:41,786
+enabled: true
+display-range: 45
+update-range: 45
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&#dd0000[Рандом Телепорт]'
+    height: 0.3
+  - content: '&#fff500Для телепортации'
+    height: 0.3
+  - content: '&#fff500в основной мир'
+    height: 0.3
+  - content: '&#fff500прыгай вниз'
+    height: 0.3
+  - content: '&u&l\/\/\/'
+    height: 0.3
+  actions: {}

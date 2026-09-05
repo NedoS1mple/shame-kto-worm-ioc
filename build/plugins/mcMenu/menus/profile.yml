@@ -1,0 +1,171 @@
+open_menu_command_list:
+  - "profile"
+
+access_to_open_checker:
+  enable: false
+  permission: menu.open.shop_weapon
+  message:
+    permission_denied: "&cОтказано в доступе на открытие меню 1."
+
+# Заголовок меню.
+title: "&x&f&b&1&8&0&0&l● &x&f&b&5&5&0&0&lПрофиль &x&e&c&0&0&0&0&l%player_name%"
+
+# (Тиков 20 тиков = 1 сек.) Интервал перерисовки меню.
+# Значения 0 и ниже включая -1 и тд. отключают отрисовку за исключением случаев когда игрок кликает (оптимизация).
+update_interval_ticks: 0
+
+# Макет меню.
+layout:
+
+  # Сетка макета.
+  grid:
+    - "| | - - A - - | |"
+    - "| - - . . . - - |"
+    - "| - . B . C . - |"
+    - "| - - . . . - - |"
+    - "| | - - - - - | |"
+
+  layout_item_list:
+    layout_item_1:
+      placeholder: "A"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: player_head
+            owner: "%player_name%"
+            display_name: "&x&d&f&0&0&0&0[●] &x&d&f&4&b&0&0Ваша статистика"
+            description:
+              - "&x&d&f&0&0&0&0✠ &fНаиграно: &x&d&f&0&0&0&0%statistic_hours_played%ч"
+              - "&x&d&f&5&9&0&0✟ &fСмертей: &x&d&f&5&9&0&0%statistic_deaths%"
+              - "&x&e&c&a&5&0&0� &fУбийств: &x&e&c&a&5&0&0%statistic_player_kills%"
+              - "&x&6&0&d&0&0&0⭐ &fОпыт: &x&6&0&d&0&0&0%player_exp%"
+              - "&x&0&0&8&a&d&0$ &fМонет: &x&0&0&8&a&d&0%cmi_user_balance_formatted%"
+              - "&x&c&0&9&2&d&f❖ &fТокенов: &x&c&0&9&2&d&f%playerpoints_points%"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: minecraft:block.note_block.bit
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_2:
+      placeholder: "B"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ENCHANTED_GOLDEN_APPLE
+            display_name: "&x&d&f&4&b&0&0⭐ &x&d&f&d&1&0&0Дизайн профиля"
+            description:
+              - "&x&f&f&7&3&0&0➥ Нажмите&f, чтобы перейти"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "design"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+    layout_item_4:
+      placeholder: "C"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: REDSTONE
+            display_name: "&x&d&f&4&b&0&0⚠ &x&d&f&d&1&0&0Настройки аккаунта"
+            description:
+              - "&x&f&f&7&3&0&0➥ Нажмите&f, чтобы перейти"
+              - ""
+              - "&x&d&f&d&1&0&0≫ &fМожно настроить:"
+              - "&x&e&c&4&1&0&0● &fОкно статистики"
+              - "&x&e&c&4&1&0&0● &fПолучение запросов тп"
+              - "&x&e&c&4&1&0&0● &fПолучение опыта"
+              - "&x&e&c&4&1&0&0● &fИ многое другое"
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list:
+            - "nastroiki"
+        play_sound:
+          type: PLAY_SOUND
+          play:
+            sound: CLICK
+            sound_category: MASTER
+            volume: 1.0
+            pitch: 1.0
+
+
+    layout_item_22:
+      placeholder: "|"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: RED_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_23:
+      placeholder: "-"
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: ORANGE_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []
+
+    layout_item_25:
+      placeholder: "."
+      render_pipeline_component_list:
+        render_pipeline_component_1:
+          type: HUMAN_READABLE_ITEM
+          item:
+            material: LIGHT_GRAY_STAINED_GLASS_PANE
+            display_name: "%triton_server.name1%"
+
+      click_pipeline_component_list:
+        invoke_console_command_list:
+          type: INVOKE_CONSOLE_COMMAND_LIST
+          console_command_list: []
+          
+        invoke_player_command_list:
+          type: INVOKE_PLAYER_COMMAND_LIST
+          player_command_list: []

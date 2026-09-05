@@ -1,0 +1,89 @@
+#
+# This is the gui layout file.
+# You can change any messages that are in this file
+#
+# If you want to reset a message back to the default,
+# delete the entire line the message is on and restart the server.
+#
+# You can use %current_page% and %total_pages% in Title to show pages information
+#
+# IMPORTANT: Slots numbers between 1-9, if not, the plugin will crash
+#
+
+Layout:
+
+  # GUI Title
+  Title: Cubelet animations
+
+  # GUI items
+  Items:
+
+    # Displayed animation item
+    Animation:
+      Unlocked:
+        Name: '&a%animation%'
+        Lore:
+        - '&7Select your own special'
+        - '&7opening animation'
+        - ''
+        - '&eClick to select'
+
+      Locked:
+        Name: '&a%animation%'
+        Lore:
+        - '&7Select your own special'
+        - '&7opening animation'
+        - ''
+        - '&cNot unlocked yet'
+
+      Selected:
+        Name: '&a%animation%'
+        Lore:
+        - '&7Select your own special'
+        - '&7opening animation'
+        - ''
+        - '&cAlready selected'
+
+    # Displayed random animation item
+    RandomAnimation:
+      Slot: 3
+      Selected:
+        Name: '&aRandom animation'
+        Lore:
+        - '&7A random animation will'
+        - '&7be chosen each time you'
+        - '&7open a cubelet.'
+        - ''
+        - '&cAlready enabled'
+
+      NoSelected:
+        Name: '&aRandom animation'
+        Lore:
+        - '&7A random animation will'
+        - '&7be chosen each time you'
+        - '&7open a cubelet.'
+        - ''
+        - '&eClick to enable it'
+
+    # Next page item
+    NextPage:
+      Name: '&6Next page'
+      Material: SUGAR_CANE
+      Slot: 9
+      ShowPageNumber: false
+
+    # Previous page item
+    PreviousPage:
+      Name: '&6Previous page'
+      Material: SUGAR_CANE
+      Slot: 1
+      ShowPageNumber: false
+
+    # Back item
+    Back:
+      Name: '&9Back'
+      Material: BOOK
+      Slot: 5
+      Lore:
+      - '&7Go back to the previous'
+      - '&7menu.'

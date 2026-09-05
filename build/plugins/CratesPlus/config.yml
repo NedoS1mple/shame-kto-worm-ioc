@@ -1,0 +1,1323 @@
+# [][][][][][][][][][][][][][][][][][][][][]
+#  CratesPlus V4.5.3 Config
+# [][][][][][][][][][][][][][][][][][][][][]
+# ------------------------------------------
+# There are many placeholders that can now be used withing the config and messages file, placeholders are as followed:
+# - %name% - Replaces with the players name, Example: "Notch".
+# - %displayname% - Replaces with the players display name, Example: "[Owner] Notch".
+# - %uuid% - Replaces with the players UUID.
+# - %crate% - The crate types name.
+# - %prize% - The name of the winning.
+# - %percentage% - Percentage of the winning, useful for "Chance Message".
+# - %rand;100;500% - Generates a random number between two numbers, example is between 100 and 500.
+# ------------------------------------------
+# Don't change the config version!
+
+Config Version: 6
+Update Checks: false
+Update Branch: spigot
+Metrics: false
+Default Opener: NoGUI
+Default Cooldown: 5
+Crate Protection: false
+Disable Key Swapping: false
+Default Hologram Text:
+- ''
+Crates:
+  bronya:
+    Knockback: 0.0
+    Broadcast: false
+    Firework: true
+    Preview: false
+    Block: SMITHING_TABLE
+    Color: WHITE
+    Key:
+      Item: TRIPWIRE_HOOK
+      Name: §b[★]§3 Отмычка от Брони
+      Enchanted: true
+    Winnings:
+      '1':
+        Type: ITEM
+        Item Type: NETHERITE_BOOTS
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - PROTECTION_EXPLOSIONS-5
+        - DEPTH_STRIDER-5
+        - PROTECTION_FIRE-5
+        - MENDING-1
+        - PROTECTION_PROJECTILE-5
+        - PROTECTION_ENVIRONMENTAL-5
+        - SOUL_SPEED-3
+        - THORNS-3
+        - DURABILITY-5
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            PROTECTION_EXPLOSIONS: 5
+            DEPTH_STRIDER: 5
+            PROTECTION_FIRE: 5
+            MENDING: 1
+            PROTECTION_PROJECTILE: 5
+            PROTECTION_ENVIRONMENTAL: 5
+            SOUL_SPEED: 3
+            THORNS: 3
+            DURABILITY: 5
+      '2':
+        Type: ITEM
+        Item Type: DIAMOND_BOOTS
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - PROTECTION_EXPLOSIONS-4
+        - PROTECTION_FIRE-4
+        - PROTECTION_PROJECTILE-4
+        - PROTECTION_ENVIRONMENTAL-4
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            PROTECTION_EXPLOSIONS: 4
+            PROTECTION_FIRE: 4
+            PROTECTION_PROJECTILE: 4
+            PROTECTION_ENVIRONMENTAL: 4
+      '3':
+        Type: ITEM
+        Item Type: DIAMOND_LEGGINGS
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - PROTECTION_EXPLOSIONS-4
+        - PROTECTION_FIRE-4
+        - PROTECTION_PROJECTILE-4
+        - PROTECTION_ENVIRONMENTAL-4
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            PROTECTION_EXPLOSIONS: 4
+            PROTECTION_FIRE: 4
+            PROTECTION_PROJECTILE: 4
+            PROTECTION_ENVIRONMENTAL: 4
+      '4':
+        Type: ITEM
+        Item Type: DIAMOND_CHESTPLATE
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - PROTECTION_EXPLOSIONS-4
+        - PROTECTION_FIRE-4
+        - PROTECTION_PROJECTILE-4
+        - PROTECTION_ENVIRONMENTAL-4
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            PROTECTION_EXPLOSIONS: 4
+            PROTECTION_FIRE: 4
+            PROTECTION_PROJECTILE: 4
+            PROTECTION_ENVIRONMENTAL: 4
+      '5':
+        Type: ITEM
+        Item Type: DIAMOND_HELMET
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - PROTECTION_EXPLOSIONS-4
+        - PROTECTION_FIRE-4
+        - PROTECTION_PROJECTILE-4
+        - PROTECTION_ENVIRONMENTAL-4
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            PROTECTION_EXPLOSIONS: 4
+            PROTECTION_FIRE: 4
+            PROTECTION_PROJECTILE: 4
+            PROTECTION_ENVIRONMENTAL: 4
+      '6':
+        Type: ITEM
+        Item Type: NETHERITE_HELMET
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - WATER_WORKER-1
+        - PROTECTION_EXPLOSIONS-5
+        - PROTECTION_FIRE-5
+        - MENDING-1
+        - PROTECTION_PROJECTILE-5
+        - PROTECTION_ENVIRONMENTAL-5
+        - OXYGEN-3
+        - THORNS-3
+        - DURABILITY-5
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            WATER_WORKER: 1
+            PROTECTION_EXPLOSIONS: 5
+            PROTECTION_FIRE: 5
+            MENDING: 1
+            PROTECTION_PROJECTILE: 5
+            PROTECTION_ENVIRONMENTAL: 5
+            OXYGEN: 3
+            THORNS: 3
+            DURABILITY: 5
+      '7':
+        Type: ITEM
+        Item Type: NETHERITE_CHESTPLATE
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - PROTECTION_EXPLOSIONS-5
+        - PROTECTION_FIRE-5
+        - MENDING-1
+        - PROTECTION_PROJECTILE-5
+        - PROTECTION_ENVIRONMENTAL-5
+        - THORNS-3
+        - DURABILITY-5
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            PROTECTION_EXPLOSIONS: 5
+            PROTECTION_FIRE: 5
+            MENDING: 1
+            PROTECTION_PROJECTILE: 5
+            PROTECTION_ENVIRONMENTAL: 5
+            THORNS: 3
+            DURABILITY: 5
+      '8':
+        Type: ITEM
+        Item Type: NETHERITE_LEGGINGS
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - PROTECTION_EXPLOSIONS-5
+        - PROTECTION_FIRE-5
+        - MENDING-1
+        - PROTECTION_PROJECTILE-5
+        - PROTECTION_ENVIRONMENTAL-5
+        - THORNS-3
+        - DURABILITY-5
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            PROTECTION_EXPLOSIONS: 5
+            PROTECTION_FIRE: 5
+            MENDING: 1
+            PROTECTION_PROJECTILE: 5
+            PROTECTION_ENVIRONMENTAL: 5
+            THORNS: 3
+            DURABILITY: 5
+  oryzhka:
+    Key:
+      Item: TRIPWIRE_HOOK
+      Name: §b[★]§3 Отмычка от Оружия
+      Enchanted: true
+    Knockback: 0.0
+    Broadcast: false
+    Firework: true
+    Preview: false
+    Block: FLETCHING_TABLE
+    Color: WHITE
+    Winnings:
+      '1':
+        Type: ITEM
+        Item Type: NETHERITE_SWORD
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - DAMAGE_ARTHROPODS-7
+        - FIRE_ASPECT-2
+        - LOOT_BONUS_MOBS-5
+        - MENDING-1
+        - DAMAGE_ALL-7
+        - DAMAGE_UNDEAD-7
+        - SWEEPING_EDGE-3
+        - DURABILITY-5
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DAMAGE_ARTHROPODS: 7
+            FIRE_ASPECT: 2
+            LOOT_BONUS_MOBS: 5
+            MENDING: 1
+            DAMAGE_ALL: 7
+            DAMAGE_UNDEAD: 7
+            SWEEPING_EDGE: 3
+            DURABILITY: 5
+      '2':
+        Type: ITEM
+        Item Type: NETHERITE_SWORD
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - DAMAGE_ARTHROPODS-5
+        - FIRE_ASPECT-2
+        - LOOT_BONUS_MOBS-3
+        - MENDING-1
+        - DAMAGE_ALL-5
+        - DAMAGE_UNDEAD-5
+        - SWEEPING_EDGE-3
+        - DURABILITY-3
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DAMAGE_ARTHROPODS: 5
+            FIRE_ASPECT: 2
+            LOOT_BONUS_MOBS: 3
+            MENDING: 1
+            DAMAGE_ALL: 5
+            DAMAGE_UNDEAD: 5
+            SWEEPING_EDGE: 3
+            DURABILITY: 3
+      '3':
+        Type: ITEM
+        Item Type: DIAMOND_SWORD
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - FIRE_ASPECT-2
+        - LOOT_BONUS_MOBS-3
+        - DAMAGE_ALL-5
+        - DURABILITY-3
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            FIRE_ASPECT: 2
+            LOOT_BONUS_MOBS: 3
+            DAMAGE_ALL: 5
+            DURABILITY: 3
+      '4':
+        Type: ITEM
+        Item Type: TRIDENT
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - IMPALING-7
+        - LOOT_BONUS_MOBS-5
+        - LOYALTY-3
+        - MENDING-1
+        - DURABILITY-5
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            IMPALING: 7
+            LOOT_BONUS_MOBS: 5
+            LOYALTY: 3
+            MENDING: 1
+            DURABILITY: 5
+      '5':
+        Type: ITEM
+        Item Type: BOW
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - ARROW_FIRE-1
+        - ARROW_INFINITE-1
+        - LOOT_BONUS_MOBS-5
+        - MENDING-1
+        - ARROW_DAMAGE-5
+        - DURABILITY-5
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            ARROW_FIRE: 1
+            ARROW_INFINITE: 1
+            LOOT_BONUS_MOBS: 5
+            MENDING: 1
+            ARROW_DAMAGE: 5
+            DURABILITY: 5
+      '6':
+        Type: ITEM
+        Item Type: BOW
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - ARROW_FIRE-1
+        - ARROW_INFINITE-1
+        - LOOT_BONUS_MOBS-3
+        - ARROW_DAMAGE-5
+        - DURABILITY-3
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            ARROW_FIRE: 1
+            ARROW_INFINITE: 1
+            LOOT_BONUS_MOBS: 3
+            ARROW_DAMAGE: 5
+            DURABILITY: 3
+      '7':
+        Type: ITEM
+        Item Type: CROSSBOW
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - MENDING-1
+        - MULTISHOT-1
+        - PIERCING-5
+        - QUICK_CHARGE-3
+        - DURABILITY-5
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: CROSSBOW
+          enchants:
+            MENDING: 1
+            MULTISHOT: 1
+            PIERCING: 5
+            QUICK_CHARGE: 3
+            DURABILITY: 5
+          charged: false
+      '8':
+        Type: ITEM
+        Item Type: BOW
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - ARROW_FIRE-1
+        - ARROW_DAMAGE-4
+        - DURABILITY-3
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            ARROW_FIRE: 1
+            ARROW_DAMAGE: 4
+            DURABILITY: 3
+  sfers:
+    Key:
+      Item: TRIPWIRE_HOOK
+      Name: §b[★]§3 Отмычка от Сфер
+      Enchanted: true
+    Knockback: 0.0
+    Broadcast: false
+    Firework: true
+    Preview: false
+    Block: RESPAWN_ANCHOR
+    Color: WHITE
+    Winnings:
+      '1':
+        Type: ITEM
+        Item Type: PLAYER_HEAD
+        Item Data: 3
+        Name: '&c&l[★] &6Сфера Иасо'
+        Amount: 1
+        Enchantments:
+        - LURE-1
+        Lore:
+        - §5+2 Твердость брони
+        - §5+2 Броня
+        Metadata:
+          ==: ItemMeta
+          meta-type: SKULL
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"[★]
+            "},{"bold":false,"italic":false,"color":"gold","text":"Сфера Иасо"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+2
+            Твердость брони"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+2
+            Броня"}],"text":""}'
+          enchants:
+            LURE: 1
+          attribute-modifiers:
+            GENERIC_ARMOR:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 2.0
+              name: generic.armor
+              slot: OFF_HAND
+              uuid: c138377c-fd01-45a5-89af-7fe00ca0f7df
+              operation: 0
+            GENERIC_ARMOR_TOUGHNESS:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 2.0
+              name: generic.armor_toughness
+              slot: OFF_HAND
+              uuid: f553c600-a4de-4f8b-b0ce-6c3225d65f4a
+              operation: 0
+          ItemFlags:
+          - HIDE_ENCHANTS
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          - HIDE_DESTROYS
+          - HIDE_PLACED_ON
+          - HIDE_POTION_EFFECTS
+          - HIDE_DYE
+          internal: H4sIAAAAAAAA/3WTua7jZACFzWgQ914o6KChG9FYke14SVJM4X1JbMf70tnx7t9LHDuxLfEW8xgj0cAz8AS8ARItj0AokGjozjnfab83CHqBvo/TcUyHMQLlrYna2+bfBL0vo1v3Bn1j1RMA56HLSpC+QW/P1D//ZXp7hV7GdB6nIb29QRD0xQv0apV5G/2zvPvs92ZmrhRy93mq7HfI/QoTqER5O1QUGHSpRKreFyLRN0LSKoIJu0ZxAzya+z5Sojot2sWFdi3ZhhEPo/bkw5m1LqPLBeaLyyxqs2YpdZDpuc+7ks1OU94PMG+wDiNTzSRxx+aGn6/BnmfnJBZsh5+8OUlL5SaOB7eSQrVxproWixqVu7gyLLyoDIIQShsb/clx9lRHz9cKHIXeF5HSH/tL50c4LuuxJWMWnrPH1T3rtSoCKbya1+ORBwxJyFujI3KSVeC2mxKZs9f5LDx4XqX8IVbRgClhS0/Mux03A6g9AW6T1fV4Wev4DIa3Ra2jeZayV+FqqdJUA9XKU21AglEIWdIqFNO879Z40QQcr0KSCzTXhI/08VCedKofwoJ1nTqcYwxhKn1NqUjb1YuGYhPeTsPRp1p8MW6dYaBRy3lUrp2Oq4407L1j+XueXqpIN6KhHgEyByNHBPfEtkFLg/s2zi6+M15gGHfOshOvGVL12TbfPjKKEbtmFcZ0OXMT4VgVk/SppzLr4Ty7K3B7jh6ZgAWChJwF3pBUbjyRBuzOznkitz5YgTOkqtSf7AN/OmznB0s/XIYphmgwDG86VbTh1z3eMcmDKoBPCRVKR5mqTGItDMF64XatNlAYOPBD2Nhee7XnWvHCLJybgLkJuYuT1vGyH2rTkhituiRHJXQ1QqTh0JBIhiSbkvj4An3pRmBKoV/SRUFDv0ATXwGXRaae3bZQoMtVv5Nbd4lZmZKbJ5do6rQc/vMlx8gjQYArRdgaU9y46Ak3QSqZ2KVx7mEj1MFqFiono9rKEyFnPFTPBYHnkKFdY0GlVbot41qVNLrNb8NKXdSt+mT5qlUGGXjGrHkqqVYBFnoOpnL1EpbKIfPRjxD0NfROTp4Kvv/07Y9//PSV/tevrz//+ft33W9PwX/4P8E301Qm0IeY3BFYlKSbOKH2GwLD0020Sw+bZH84YGi022cRCf0Nnc8VnCsEAAA=
+      '2':
+        Type: ITEM
+        Item Type: PLAYER_HEAD
+        Item Data: 3
+        Name: '&c&l[★] &6Сфера Скифа'
+        Amount: 1
+        Enchantments:
+        - LURE-1
+        Lore:
+        - §5+10% Скорость атаки
+        - §5+2 Броня
+        Metadata:
+          ==: ItemMeta
+          meta-type: SKULL
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"[★]
+            "},{"bold":false,"italic":false,"color":"gold","text":"Сфера Скифа"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+10%
+            Скорость атаки"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+2
+            Броня"}],"text":""}'
+          enchants:
+            LURE: 1
+          attribute-modifiers:
+            GENERIC_ATTACK_SPEED:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 0.01
+              name: generic.attack_speed
+              slot: OFF_HAND
+              uuid: fa8f12ff-6e68-440c-b8e7-4dc9f604997a
+              operation: 0
+            GENERIC_ARMOR:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 2.0
+              name: generic.armor
+              slot: OFF_HAND
+              uuid: 6b09bed4-53df-4078-b154-968c2df33572
+              operation: 0
+          ItemFlags:
+          - HIDE_ENCHANTS
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          - HIDE_DESTROYS
+          - HIDE_PLACED_ON
+          - HIDE_POTION_EFFECTS
+          - HIDE_DYE
+          internal: H4sIAAAAAAAA/3WTOc6jZgCGySgj/fNPDpAU6dIhC8xmu5iCfbEBsxqowr59H2AMNqbLFdLnBilzhBwrUuIpIqVJ967l844gb8j3ST5N+TjFoL7BuLtt/lXIx1tbF/E78p3TzgCcx76oQf6OvL/U8DrU+e0T8jblyzSP+e0dQZBv3pBPTl128dfkw+/BYBf2ymD3QGTqYYfdryiFK8xlh8sShz8bmWn3lUwNUMo6TbJR36puQMTLIMBq3GRlt0pZ31FdFLtsmT398BajL9j6iYpVusjGYjhaGxZmGYi+4vLzXA4jKlq8x6kMnBXhCG/k+RruRX7JEsn1xPmyZHmt3eTp4DdKpENvblu5anG1TxrLIavGoiipdrdTMHvenunZ5dqAozQEMlYH05D2QUySqpk46tYhS/64+mez1WWgRFf7ejyKgKMplbB6qqR5De36OVMFd13O0kMUdSYYEx0PuRp1zMy+uwkcQXuR0C5b/YuoGr1YoChRtSZeFjl/la6Orswt0J0yN0YsnKSIp51Ks+37bk2ehkSSTUQLoeHb6JE9HuqTyQxjVPG+10ZLssW4xlxzJjZ27dPAtzPZzeMxYDryad16y8LjTrgwpXE6riYG+XvPi/cyT5vYtOKxnQC2hJNAhffMdUHHgjuRFGngTSmKkt5Z9ZK1wJqhIEriUTCc3MNVmvLnWZgpz2m4bMgvOrcezou/An8Q2IkLeSAp2FkSLUUXphNtof7inWeaCMAKvDHXleHkHsTTgVgePPvwOa4a49GyLvOpYa2gHcieyx5MBQJGanA2LnRtlltpDNdU2HXGyGzBQRwj6F66q7u02iUqogWG3E0qfZJ2jul+bG1H4YwmzY5a5BuUzKKRpdAcTcOa+vKGfPRjMOfIH/lTw6OgwrNAA+lTZV7edXBgqs2wUzv/mfAqo8JXr7DM6Xn4z5ae4gsNQlKros6aE+jjJ9IGuWJvU+jdw9VoddfaGo1Uh9B6GI0BjZXF9cauTFmCIaGvBqHByAWNsX7daSB0dSJqsjqC4ho16qo3LGEK+iNcQzyCEtQd7VAE+BcE+Yx8ULMXgt/+fIN/i6rw1y9/hr9+/u2H6kX4j/9H+Gae6wz5aU8UFEUc0g1OHugNhe+zzaFI0g0dM0nC5PskTnbIP+lQVDUsBAAA
+      '3':
+        Type: ITEM
+        Item Type: PLAYER_HEAD
+        Item Data: 3
+        Name: '&c&l[★] &cСфера Абанты'
+        Amount: 1
+        Enchantments:
+        - LURE-1
+        Lore:
+        - §5+2 Максимальное здоровье
+        - §5+10% Скорость ходьбы
+        - §5+10% Скорость атаки
+        Metadata:
+          ==: ItemMeta
+          meta-type: SKULL
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"[★]
+            "},{"bold":false,"italic":false,"color":"red","text":"Сфера Абанты"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+2
+            Максимальное здоровье"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+10%
+            Скорость ходьбы"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+10%
+            Скорость атаки"}],"text":""}'
+          enchants:
+            LURE: 1
+          attribute-modifiers:
+            GENERIC_MAX_HEALTH:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 4.0
+              name: generic.max_health
+              slot: OFF_HAND
+              uuid: 4417f895-18a7-4e39-864e-a73c22efe83a
+              operation: 0
+            GENERIC_ATTACK_SPEED:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 0.01
+              name: generic.attack_speed
+              slot: OFF_HAND
+              uuid: 44512304-64fb-4ecc-99de-62c7f81a30f8
+              operation: 0
+            GENERIC_MOVEMENT_SPEED:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 0.01
+              name: generic.movement_speed
+              slot: OFF_HAND
+              uuid: 3d11ea6a-9217-4053-9ada-74c3c43dca0e
+              operation: 0
+          ItemFlags:
+          - HIDE_ENCHANTS
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          - HIDE_DESTROYS
+          - HIDE_PLACED_ON
+          - HIDE_POTION_EFFECTS
+          - HIDE_DYE
+          internal: H4sIAAAAAAAA/3WTOc7jZACGzQjQP4GCDho6OiuK9yTFIHlfEtvxvhRI3rfPSxw7cXyDOcLcgXKOQEWFuBCEAomG7l3LZwNBb9APcTZN2ThFoLq1UXfb/qugr6M46qZqA31rNTMAl7HPK5BtoM1LDa9Hld3eQ29TtkzzmN02EAR98Qa9t6qii/5J3v3qD2ZurtTu7vNUNex39ytMIBLl7RFRYJBnLVLNoRSJoRXSThFM2DXKG+CRwvd3FaLTol0mtGvJNrzzUOpAPpxF63O6esJ8mSyitmiW0gS5Xvi8K9nsPBfDCPMG6zAy1c4Sd2pv+OUaHHh2SWPBdvjZW9KsUm7idHRrKVRbZ24asWwQuY9rw8LL2iAIobLRyZ8d50D19HKtwUkYfHFX+dOQ9H6E47IeWzJq4QV7Wt2L3qgikMKreT2deMCQhIwZPVGQrAJ3/ZzKnL0uF+HB8yrlj7GKBEwFW3pq3u24HUHjCXCXrq7Hy1rP5zCMlY2OFHnGXoWrpUpzA1SryLRxF0xCyJJWqZjmfb/GT03A8TokuUBzTfhEn47VWaeGMSxZ12nCJUZ3TK2vGRVp++apIeiMd/N48qkOfxq33jCQqOM8qtDOp1Xftey9Z/l7kSV1pBvR2ExgtwQTRwT31LZBR4M7FueJ70wJDOPORXbiNd/VQ44V2COnGLFvV2HKnhduJhyrZtIh81RmPV4WdwXuwNETE7BAkHYXgTcklZvOpAG7i3OZScwHK3DGTJWGs33kz0dsebD0w2WYcoxGw/Dmc00bfjPgPZM+qBL4lFAjdJSryiw2whisCbfvtJFCwZEfw9b2uqu9NIoX5uHSBsxNKFyctE7JYWxMS2K0OklPSuhqhEjDoSGRDEm2FfHhDfrKjcCcQZ+zp4KEfomkvgKSp0y9vG0hQJfrYS937jNmZUpuX71EU+fn8T9bcoo8EgS4UoadMceti5xxE2SSiSatc9dqY9E4g1S5Bg9qs9JWUOpegAWY0Gq1iry6RReDp8qpSCg6SNDKpLYKbejJeGCXQBOFMsCUNqibh+YJdShqIKyUY+4jHyDoG+idnL4Q/PK3P3/pPn5S0M/ff/d79dfPf7wQ//H/EN/Oc5VCP6V7lIj3CLnFEnK/JVD8sI2jI7pFqSzOMAKnkjiG/gZBqe++LQQAAA==
+      '4':
+        Type: ITEM
+        Item Type: PLAYER_HEAD
+        Item Data: 3
+        Name: '&c&l[★] &6Сфера Филона'
+        Amount: 1
+        Enchantments:
+        - LURE-1
+        Lore:
+        - §5+20% Скорость атаки
+        - §5+2 Максимальное здоровье
+        Metadata:
+          ==: ItemMeta
+          meta-type: SKULL
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"[★]
+            "},{"bold":false,"italic":false,"color":"gold","text":"Сфера Филона"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+20%
+            Скорость атаки"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+2
+            Максимальное здоровье"}],"text":""}'
+          enchants:
+            LURE: 1
+          attribute-modifiers:
+            GENERIC_MAX_HEALTH:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 4.0
+              name: generic.max_health
+              slot: OFF_HAND
+              uuid: 4c278540-5a2c-4148-a5b9-ec3fb1abf840
+              operation: 0
+            GENERIC_ATTACK_SPEED:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 0.02
+              name: generic.attack_speed
+              slot: OFF_HAND
+              uuid: b955330c-4a56-4d5c-bc14-166114c851d2
+              operation: 0
+          ItemFlags:
+          - HIDE_ENCHANTS
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          - HIDE_DESTROYS
+          - HIDE_PLACED_ON
+          - HIDE_POTION_EFFECTS
+          - HIDE_DYE
+          internal: H4sIAAAAAAAA/3WTOc7rZBSGzRWg//6wAECio7OiOB6+JMUtPA+J7Tie3XmePg9x7MT2CtgBi4CSLbAWNoEQAQmJhu49z3vO6Z53BHlDvonScUyHMYTlvQnb++bfhHyZlbBrw3fka7OeILwM3Quk78j7K/WvizK9f0TexnQepyG9vyMI8tkb8tEs8zb8m3z4xeuv2XUF24fHg7Lfbx83lMQk4O4xUWCwpRJBfShEsm+EpFWEK+oYxR3yWO552xLTadEqYtoxZQvdujtwoJ72rHUZXS4oX8SzqM2aqdR+puce70gWO015P6C8wdqMDJpJ4k7Nnbjc/APPzkkkWDY/uXOSlspdHI9OJQVqY091LRY1JndRZZhEURkkKZTWbvQm2z6Ajp5vFTwJvSduS2/s484LCULWI1PemUTOnlbnoteqCKXgdr2dTjxkKFLGjY7MKVZB225KZM5a54vw5HkVeEOkYj5ToqaeXB9W1AywdgW0TVbH5WWt4zMUxYtax/IsZW/CzVSlqYaqmafasPVHIWAps1Cu18d+jRZNIIgqoDhfc67oiT4dy7MO+iEoWMeugznabZlKX1MQavt60bDdRLTTcPJASyzGvTMMLGw5F+Ta+bTq24Z9dCz/yNO4CnUjHOoRbmd/5Ej/kVgWbGn4wKMs9uwxRlHCvsh2tGbbqs/wHH9mgBG7ZhXGdLlwE2mbFZP0qasy6/EyOyt0eo4eGZ+FgrS9CLwhqdx4pgzUme3LROEeXKE9pKrUn60jfz7i85Olnw7DFEM4GIY7nSva8Oqe6JjkCQroAaHC6DBTlUmshcFfY27fagPYwSM/BI3ltjdrrhU3yIK58Zm7kDsEZZ7iw1BfTYnRqjg5KYGjkSKNBoZEMRTVlOSnN+QLJ4RTivyaLgoWeAWWeAqMFxm8ZsvEoC5X/V5unSViZSA3r16iwXk5/meXGkOXgj6hFEFrTFHjYGfiClPpuosb+6FbPq6uQelbPqVzRRVYsNQ4pg5EldA4WKgcfDGm8at61V2h0SwZVzl6p1v1zl95MuDURcWF6p8/ldOoooEHrHLMPOwTgnyFfJCTl4Kft6L++3e/KT//VPz5x4/fcm8vxb//P8U301QmyA/EHgcA4NSGjPf7DYntk80hi8gNSI8hdQB4dkxT5C9wuUIcLQQAAA==
+      '5':
+        Type: ITEM
+        Item Type: PLAYER_HEAD
+        Item Data: 3
+        Name: '&c&l[★] &cСфера Сорана'
+        Amount: 1
+        Enchantments:
+        - LURE-1
+        Lore:
+        - §5+3 Урон
+        - §5+4 Максимальное здоровье
+        - §c-5 Броня
+        Metadata:
+          ==: ItemMeta
+          meta-type: SKULL
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"[★]
+            "},{"bold":false,"italic":false,"color":"red","text":"Сфера Сорана"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+3
+            Урон"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+4
+            Максимальное здоровье"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-5
+            Броня"}],"text":""}'
+          enchants:
+            LURE: 1
+          attribute-modifiers:
+            GENERIC_ATTACK_DAMAGE:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 3.0
+              name: generic.attack_damage
+              slot: OFF_HAND
+              uuid: 7c74f97a-16a3-4287-81a5-eeb4dd3b0aeb
+              operation: 0
+            GENERIC_MAX_HEALTH:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 8.0
+              name: generic.max_health
+              slot: OFF_HAND
+              uuid: c4c7f82a-cf18-42ec-99e5-e3d0c15c72bd
+              operation: 0
+            GENERIC_ARMOR:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: -5.0
+              name: generic.armor
+              slot: OFF_HAND
+              uuid: db209cf4-b59d-4d0e-95fb-77325427e2d5
+              operation: 0
+          ItemFlags:
+          - HIDE_ENCHANTS
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          - HIDE_DESTROYS
+          - HIDE_PLACED_ON
+          - HIDE_POTION_EFFECTS
+          - HIDE_DYE
+          internal: H4sIAAAAAAAA/3WTOc7rZBSGzdUF/TewABqo6KwojqckxZXwPCT+Es9D53n6PMSxE8cVW4AVsABKFnCXwAqo2ARUhAKJhu45532PdJpnhSBvyNdROo7pMIawvDVhe1v/S8gXt24I23CFfGXWE4SXoctKmK6Q1Yv610WZ3j4gb2M6j9OQ3lYIgnz2hnwwy7wN/9m8+8XrjcxY6M3dE+iy323uV5TEZNrdYZLIYs9Kout9IZF9IyatKhqooxc3KGC5521K7MxIVhEzjqlY6Mbd0nvqYc+gy5jyiQpFPEtgBqZa+9k59wRHtrhpyvsBFXTOZhW6mWT+2NyIy9XfC9ycRKJlC5M7J2mp3qTx4FRyoDX2VNdSUWNKF1W6SRSVTpJiaW1Hb7LtPd0x87WCR7H3pE3pjX3ceSFBKOfIVLYmkXPHxbmca02CcnA1rsejAFmKVHC9I3OKU9G2mxKFt5b5Ij4EQaO9IdIwny1R85wYdytqBli7Itomi+MKCuiEDEXxoj5jeZZyV/FqavJUQ83MUzBs/FEMOMosVMO475boCUSCqAKK94FjoEfmeChPZ7ofgoJz7DqYo+2Grc5LSodgVz8Btp2IdhqOHt0ST/3W6ToWtrxL5+B0XM6bhrt3nHDP07gKz3o41CPczP7Ik/49sSzYMvCOR1ns2WOMooR9UexoyTZVn+E5/shoVuqaRRzT54WfSNus2KRPXY1dDpfZWaDT88zI+hwU5c1FFHRZ48cTpaPObF8mCvfgAu0h1eT+ZB2E0wGfHxzzcFi2GMJB193pVDG6V/dExyYPuoAeLVYYE2aaOkm1OPhLzO9aMNBbeBCGoLHc9mrNteoGWTA3PnsTc4egzGO8H2rDlFlQxclRDRxASgwa6DLFUlRTkh/fkM+dEE4p8mv6VLHAK7DEU2H8VOjXbJkYPCtVv1Na5xlxCq00r1xm6NPz8J8uNYYuBX1CLYJWn6LGwU6EAVPZ2MaNfQdW/gCWTQSNjWu4/wCNgr2+fwSWWgHXKbXGaUCjPQK+qIGrbIEb1BoPK39x6sACpY8rOHB9UltUqPFODSTtGZjqIfOwjwjyJfJOSV4Kvv/026eff//pe+PHb+U///rh+sdL8W/+T/H1NJUJ8t02yfbUbo+tUwIn1iRBRevoEBNrKsy2FB7iB5LYIX8D7GM/Yi0EAAA=
+      '6':
+        Type: ITEM
+        Item Type: PLAYER_HEAD
+        Item Data: 3
+        Name: '&c&l[★] &6Сфера Эпиона'
+        Amount: 1
+        Enchantments:
+        - LURE-1
+        Lore:
+        - §5+3 Урон
+        - §c-2 Максимальное здоровье
+        Metadata:
+          ==: ItemMeta
+          meta-type: SKULL
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"[★]
+            "},{"bold":false,"italic":false,"color":"gold","text":"Сфера Эпиона"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+3
+            Урон"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-2
+            Максимальное здоровье"}],"text":""}'
+          enchants:
+            LURE: 1
+          attribute-modifiers:
+            GENERIC_MAX_HEALTH:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: -4.0
+              name: generic.max_health
+              slot: OFF_HAND
+              uuid: 27414799-85e6-4026-abcd-db223554eda0
+              operation: 0
+            GENERIC_ATTACK_DAMAGE:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 3.0
+              name: generic.attack_damage
+              slot: OFF_HAND
+              uuid: e838de7a-5c3f-4ddc-832e-56596f56de37
+              operation: 0
+          ItemFlags:
+          - HIDE_ENCHANTS
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          - HIDE_DESTROYS
+          - HIDE_PLACED_ON
+          - HIDE_POTION_EFFECTS
+          - HIDE_DYE
+          internal: H4sIAAAAAAAA/3WTOa7zZBiFDQJ0/wsLQAI6OiuK4ykJEhKep9iO56HzPH0e4tiJ7YqKhoaWPSDEEtgOuyAUSDR057yTdKT3eYegN+jLOJumbJwiUN3bqLvv/lXQZ9lQ9V30Dn1hNTMA17HPK5C9Q+8vNbw2quz+AXqbsmWax+z+DkHQR2/QB6squuifyse/+YOZmxu5f/gcWQ3H/eMG44hIekdE4GlkrQWyOZUCPrR82sm8CbtGeQccUvj+vkJ0SrDLhHItyYb33oE8EU9n0fqcqlaYK5NF0BbNkpsg1wufc0WbmediGGHOYBxaIttZZJX2jl1vwYljljTmbYebvSXNKvkuTGe3FkO1deamEcoGkfq4NiysrA0c5yv7MPmz45zInlpuNVD4wRf2lT8NSe9HGCbpsSUdLKxglM296o0qADG8mTdF4QBN4BJq9HhBMDLc9XMqsfa2XPknx6mkP8YqEtAVbOmp+bDjdgSNx8NdurkeJ2k9l8MwWjY6UuQZc+NvlirODVCtItPGfTDxIUNYpWyaj+MWrxqPYXVIsIHmmrBCKefqopPDGJaM6zThEh/2dK1vGRlpx2bVkMOMdfOo+GSHrca9Nwwk6liPLLSLsun7lnn0DPcosqSOdCMamwnsl2Bi8eCR2jboKPBA4zzxnSmBYcy5Sk685ft6yNECfeYkLfTtxk/ZemVn3LFqOh0yT6W383VxN+AOLDXRAQN4cX/lOUNU2elCGLC7ONeZQH2wAWfMVHG42GfuckaXJ0M9XZoux2g0DG++1JThNwPW0+mTLIFP8jVCRbkqz0LDj8GWsMdOG8kDOHNj2Nped7OXRvbCPFzagL7zhYsRlpKcxsa0RFqrk1SRQ1fDBQoODZGgCaKt8O/foE/dCMwZ9Ee2ykjol0jqyyBZJfLlbQsBulQPR6lz15iRSKl99UWKvKzn/8wSU+QRIMDkMuyMOW5d5IKZIBPNQ9I6j7AuVrWmVp2VW7V1gWY3hGZzS1Cb7SsFotXconoqoW0qGrJppbHNEtplFaBhpb0+M7DLUrUdVK2b1w0ehLZT5f7hDEGfQx9L6Qu/T379/esf0Z9/kH4axD+/+uu7X154f/N/eO/muUqhb5HT6XiO0WiXZclhh8cpujshyGF3zg4JlmT5Gc8x6G8XXBouKQQAAA==
+      '7':
+        Type: ITEM
+        Item Type: PLAYER_HEAD
+        Item Data: 3
+        Name: '&c&l[★] &cСфера Афина'
+        Amount: 1
+        Enchantments:
+        - LURE-1
+        Lore:
+        - §5+15% Скорость ходьбы
+        - §5+15% Скорость атаки
+        - §5+3 Урон
+        - §c-2 Максимальное здоровье
+        Metadata:
+          ==: ItemMeta
+          meta-type: SKULL
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"[★]
+            "},{"bold":false,"italic":false,"color":"red","text":"Сфера Афина"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+15%
+            Скорость ходьбы"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+15%
+            Скорость атаки"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+3
+            Урон"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-2
+            Максимальное здоровье"}],"text":""}'
+          enchants:
+            LURE: 1
+          attribute-modifiers:
+            GENERIC_MOVEMENT_SPEED:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 0.015
+              name: generic.movement_speed
+              slot: OFF_HAND
+              uuid: 55f8299e-ab37-420f-8bad-596b65cf72a4
+              operation: 0
+            GENERIC_ATTACK_SPEED:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 0.015
+              name: generic.attack_speed
+              slot: OFF_HAND
+              uuid: 09a2a651-6918-4c7b-bc07-b275057b7fd6
+              operation: 0
+            GENERIC_ATTACK_DAMAGE:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 3.0
+              name: generic.attack_damage
+              slot: OFF_HAND
+              uuid: 008cabeb-9949-45af-89b3-e06e95de0f03
+              operation: 0
+            GENERIC_MAX_HEALTH:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: -4.0
+              name: generic.max_health
+              slot: OFF_HAND
+              uuid: 139a189e-5f67-4c02-a34a-2433df82c312
+              operation: 0
+          ItemFlags:
+          - HIDE_ENCHANTS
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          - HIDE_DESTROYS
+          - HIDE_PLACED_ON
+          - HIDE_POTION_EFFECTS
+          - HIDE_DYE
+          internal: H4sIAAAAAAAA/3WTuc6jdhTFySgjfePMAyRK0qVDFhgMtosp2DcDxux07NufxRhs4C3yDtNNpDSjvECeJG8Sp4iUJtU9595zT/fbQNAb9H2UjmM6jCEo703Y3rf/Kuh9mJVtuIE+mvUEwGXoshKkG2jzUv3roUzvH6C3MZ3HaUjvGwiCvnmDPphl3ob/bN795vXX7LqSyMPjyLI/II8bvEdF0j2gAk+jSyWQ9bEQ9n3DJ63MX2HHKO6AQ3PPQ0pUpwSriCnHlCwYcXfkkXjas9ZlVLnAXBHPgjZrplz7mZ57nCNazDTl/QBzBmPTEtlMIqs0d/xy848cMycRb9nc5M5JWsp3YTw5lRiojT3VtVDUqNRFlWHiRWXs93xp7UZvsu0j2VHzrQIK33sCUnpjH3deiOOSHpnSzsRzRlmdi16rAhCD2/WmKBygib2EGd0+JxgZbrspkVhrnS/8k+NU0hsiFfXpEjb15PqwomYAtcvDbbI6LidpHZfBMFbUOppnKXPjb6YqTjVQzTzVBsQf+YAhzEK+Xh+HNVo0HsergGB9zbnCCqWcyrNO9kNQMI5dB3O0Q+hKX1My1A71oqG7CW+nQfHIFl+Me2cYaNiyLplrZ2XVkYZ5dAz3yNO4CnUjHOoRILM/snv/kVgWaCnwwKIs9uwxhmHcvkh2tGZI1WdYjj0zkha6ZuXHdLmw0942KzrpU1el19Nldlbg9Cw10j4DeBG58Jwhqux4JgzYme3LRGAeWIE9pKrYn60Tdz5h85Ohng5NF0M4GIY7nSvK8Ooe7+jkSRbAI/kKpcJMlSeh5gd/jdlDqw3kDpy4IWgst71Zcy27QRbMjU/f+dzBCVOJj0N9NUVaq+JEkQNH2wsUHBgiQRNEU+4/vUHvnRBMKfQ1XWQ08Ao08WQQLxL58paJAl2q+oPUOkvESKTUvO4iRZ6X03+yxBi6BPBxuQhaY4oaBz3jV5CK113c2A/d0hrddUAgcKvfcIuKBUC1jNdUUZV9OSupA5YutNVAtYqvg8YntObVJag7v5IbtZGIoOELDdMq1Qoadc2XoJRPmYd+gqDvoHdS8kLw299/+PPH7iP3+Y8vv5o//fVVeRH+8/8Rvp2mMoF+wRLydDqih22GYvh2TxyxbYjG+JYIU4KMUyyLUgL6G6Kh8PcsBAAA
+      '8':
+        Type: ITEM
+        Item Type: PLAYER_HEAD
+        Item Data: 3
+        Name: '&c&l[★] &cСфера Панакея'
+        Amount: 1
+        Enchantments:
+        - LURE-1
+        Lore:
+        - §5+4 Урон
+        - §c-4 Максимальное здоровье
+        Metadata:
+          ==: ItemMeta
+          meta-type: SKULL
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"[★]
+            "},{"bold":false,"italic":false,"color":"red","text":"Сфера Панакея"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+4
+            Урон"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-4
+            Максимальное здоровье"}],"text":""}'
+          enchants:
+            LURE: 1
+          attribute-modifiers:
+            GENERIC_ATTACK_DAMAGE:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 4.0
+              name: generic.attack_damage
+              slot: OFF_HAND
+              uuid: 31ca0f9a-2178-4794-a05d-8dbe91bbb2e9
+              operation: 0
+            GENERIC_MAX_HEALTH:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: -8.0
+              name: generic.max_health
+              slot: OFF_HAND
+              uuid: b7d41c5f-c54c-4873-bb52-40997e7d034a
+              operation: 0
+          ItemFlags:
+          - HIDE_ENCHANTS
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          - HIDE_DESTROYS
+          - HIDE_PLACED_ON
+          - HIDE_POTION_EFFECTS
+          - HIDE_DYE
+          internal: H4sIAAAAAAAA/3WTOc7jZACGzQjEPz/QIho6RGNFdrwlKUYa70tiO96Xzvv2eYljJ47F1MMF6DkAJR0HmNtwBEQokGjo3rV8XiHoBfouzqYpG6cIVNc26q6bfxX05RB1UZNFr9DXVjMDcB77vALZK/T6VMPzUmXXt9DLlC3TPGbXVwiCPnuB3lpV0UX/JG9+8wczN1cKufk8VQ075HaBCVSivB0qCgz6qEWq2ZciMbRC2imCCbtGeQU8Wvg+UqE6LdplQruWbMOIt6X25N1ZtD6nqwfMl8kiaotmKU2Q64XPu5LNznMxjDBvsA4jU+0sccf2ip8vwZ5nlzQWbIefvSXNKuUqTge3lkK1deamEcsGlfu4Niy8rA2CECp7O/mz4+ypnl4uNTgKgy8ilT8NSe9HOC7rsSVvLbxgj6t71htVBFJ4MS/HIw8YkpAxoycKklXgrp9TmbPX5SzceV6l/DFW0YCpYEtPzZsdtyNoPAHu0tX1eFnr+RyGsbLR0SLP2ItwsVRpboBqFZk2IsEkhCxplYpp3nZr/NAEHK9Dkgs014SP9PFQnXRqGMOSdZ0mXOItwtT6mlGRtmseGrqd8W4ejz7V4Q/j2hsGGnWcRxXa6bjqSMveepa/FVlSR7oRjc0EkCWYOCK4pbYNOhrcsDhPfGdKYBh3zrITrzlSDzlWYPecYsS+XYUpe5y5mXCsmkmHzFOZ9XBe3BW4A0dPTMACQULOAm9IKjedSAN2F+c8k5gPVuCMmSoNJ/vAnw7Ycmfpu8sw5RiNhuHNp5o2/GbAeya9UyXwKaFG6ShXlVlshDFYE27XaSO1BQd+DFvb6y720ihemIdLGzBXoXBx0jom+7ExLYnR6iQ9KqGrESINh4ZEMiTZVsS7F+gLNwJzBv2ePRQ09Es09RWQPGTq6W0LBbpcDzu5cx8xK1Ny++wlmjo9Dv/ZklPkkSDAlTLsjDluXfSEmyCTzG3SOrcAM9uQc6uwFtqwprcapy4al9a6Z2Ca6GA6l2CqZ1Za66BBnSzqqpTBGmx1MbgHddlqa0Ooq9AGnkEGq0zonlsHlnLIffQdBH0FvZHTJ4Kff/PTt3/++In99Mcvv3788P6vn5+Mf/9/jG/muUqhH7YHIsIyLN5EeIJvCHKPbyIsxzfxlqJQAifyNN1DfwOw4j6QLgQAAA==
+      '9':
+        Type: ITEM
+        Item Type: PLAYER_HEAD
+        Item Data: 3
+        Name: '&c&l[★] &cСфера Архонта'
+        Amount: 1
+        Enchantments:
+        - LURE-1
+        Lore:
+        - §5+4 Урон
+        - §5+10% Скорость ходьбы
+        - §c-3 Броня
+        - §c-3 Твердость брони
+        Metadata:
+          ==: ItemMeta
+          meta-type: SKULL
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"[★]
+            "},{"bold":false,"italic":false,"color":"red","text":"Сфера Архонта"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+4
+            Урон"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+10%
+            Скорость ходьбы"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-3
+            Броня"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-3
+            Твердость брони"}],"text":""}'
+          enchants:
+            LURE: 1
+          attribute-modifiers:
+            GENERIC_ARMOR:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: -3.0
+              name: generic.armor
+              slot: OFF_HAND
+              uuid: 7c1d742f-4c7b-4d62-9f98-11b406e0818d
+              operation: 0
+            GENERIC_ARMOR_TOUGHNESS:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: -3.0
+              name: generic.armor_toughness
+              slot: OFF_HAND
+              uuid: 31bc2c0b-146a-4a9e-9911-86b6f0023a0a
+              operation: 0
+            GENERIC_MOVEMENT_SPEED:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: -0.01
+              name: generic.movement_speed
+              slot: OFF_HAND
+              uuid: a75b0898-abec-4eaa-8f32-835f4ec78ab0
+              operation: 0
+            GENERIC_ATTACK_DAMAGE:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 4.0
+              name: generic.attack_damage
+              slot: OFF_HAND
+              uuid: c27fa79e-c185-4deb-991e-573e08a85a6f
+              operation: 0
+          ItemFlags:
+          - HIDE_ENCHANTS
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          - HIDE_DESTROYS
+          - HIDE_PLACED_ON
+          - HIDE_POTION_EFFECTS
+          - HIDE_DYE
+          internal: H4sIAAAAAAAA/3WTu/KjdBiGcXXH/0btbezsmAwkHBKc2QIIxwQI50PH+fTjEAIJcAFb7jXYbOGMpdfgVVkYC2ds7N7v/Z63fDYQ9Ab9GKXjmA5jCMp7E7b37b8J+jYciq4dww30vVlPAFyHLitBuoE2r9S/JmV6/wC9jek8TkN630AQ9NUb9MEs8zb8p3n3u9cbmbGSyMPjyLI/II8bjKMi6R5QgWfQpRLI+lgIeN/wSSvzBuzoxR1waO55SIlqtGAVMe2YkgUj7o48Ek97VruMLheYK+JZUGfVlGs/03KPc0SLnaa8H2BOZ21GIptJPJ2bO3a9+UeOnZOIt2xucuckLeW7MFJOJQZKY091LRQ1KnVRpZtYUek4zpfWbvQm2z6SHT3fKnDme09ASm/s484LMUzSIlPamVjOnlfnqtWKAMTgZtzOZw4wBC7t9Q7PCVaG225KpJO1zlf+yXEK6Q2RgvpMCZtaYjysqBlA7fJwm6yOy0lqx2UwvC9qDc2zlL3xN1MRpxooZp6qA+KPfMASZiEbxuOwRovKY1gVECdfdQz4TJ+p8qKR/RAUrGPXwRztEKbS1pQM1UO9qOhuwtppOHtkiy36vdN1NGxPLpmrl/OqIQ376FjukadxFWp6ONQjQGZ/POH+I7Es0NLgsY+y2LPHGIYx+yrZ0ZohVZ/t8/0zIxmha1Z+TJfracJts2KSPnUVZqWus7MCpz/RI+OzgBeRK8/ponIaL4QOO7N9nYi9B1ZgD6ki9heL4i7Ufn6y9NNhmGIIB113p0tF617dYx2TPMkCeCRfoXSYKfIk1Pzgr/Hp0KoDuQMUNwSN5bY3a65lN8iCufGZO587GGGe4+NQG6bIqFWcnOXAUXGBhgNdJBiCaEr84xv03gnBlEJ/pIuMBl6BJp4M4kUiX7dlokCTqv4gtc4SsRIpNa+/SJOXhfoPS4yhSwAfk4ug1aeocdALZoBUNHZxYz8C1yhVVwWKoKOqoKyBlc/KWtT+KgN1b++URlm0U435jYSrawGUF++v0vLiMeXk45qrYH4VlIpV1MrKYaprP4NSpjIP/QhB30HvpOSl4DfQD798/QlWf/3t/V/cly+f/3w5/tP/Ob6dpjKBfkbjONvvQnQbJRi2xVNqtz1SEbaN4iOGHpOIQuMQ+hvBvUp7LgQAAA==
+      '10':
+        Type: ITEM
+        Item Type: PLAYER_HEAD
+        Item Data: 3
+        Name: '&4&l[★] &6Сфера Хареса'
+        Amount: 1
+        Enchantments:
+        - LURE-1
+        Lore:
+        - §5+4 Урон
+        - §5+4 Максимальное здоровье
+        - §c-15% Скорость ходьбы
+        - §c-15% Скорость атаки
+        Metadata:
+          ==: ItemMeta
+          meta-type: SKULL
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"[★]
+            "},{"bold":false,"italic":false,"color":"gold","text":"Сфера Хареса"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+4
+            Урон"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"+4
+            Максимальное здоровье"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-15%
+            Скорость ходьбы"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-15%
+            Скорость атаки"}],"text":""}'
+          enchants:
+            LURE: 1
+          attribute-modifiers:
+            GENERIC_MAX_HEALTH:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 8.0
+              name: generic.max_health
+              slot: OFF_HAND
+              uuid: ec77b334-1006-4b9e-a0d6-c7a22aec3ad9
+              operation: 0
+            GENERIC_ATTACK_DAMAGE:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 4.0
+              name: generic.attack_damage
+              slot: OFF_HAND
+              uuid: eb05a409-5ddd-4b1a-b295-c47109667e35
+              operation: 0
+            GENERIC_MOVEMENT_SPEED:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: -0.015
+              name: generic.movement_speed
+              slot: OFF_HAND
+              uuid: 6ba85005-9751-43ad-92a5-582e69492287
+              operation: 0
+            GENERIC_ATTACK_SPEED:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: -0.015
+              name: generic.attack_speed
+              slot: OFF_HAND
+              uuid: cc6394ea-1282-498b-b68d-a2c6e14e8ad2
+              operation: 0
+          ItemFlags:
+          - HIDE_ENCHANTS
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          - HIDE_DESTROYS
+          - HIDE_PLACED_ON
+          - HIDE_POTION_EFFECTS
+          - HIDE_DYE
+          internal: H4sIAAAAAAAA/3WTua7rZBSFzdW96NyAhOho6OisyI6nnBQUnqfYieeh8zz9HuLYiW2JN0KCV+AFeBAqGnpCgURDt9Ze3y6/HQS9Qd/F2TRl4xSB6t5G3X3/b4K+LKMxu0c76GurmQG4jn1egWwH7V5peH1U2f0z9DZlyzS/uB0EQV+8QZ+tquiify4ffvYHMzc3Cnn4PFUNR+RxgwlUorwjKgoMutYi1byXIjG0Qtopggm7RnkHPFr4PlKhF1q0y4R2LdmGEe9AvZNPZ9H7nK5WmC+TRdQX3VKaIL8UPu9KNjvPxTDCvME6jEy1s8Sp7R2/3oJ3nl3SWLAdfvaWNKuUuzid3FoKtdaZm0YsG1Tu49qw8LI2CEKo7MPkz47zTvX0cquBKgy+iFT+NCS9H+G4fIkt+WDhBatu7vXSaCKQwpt5U1UeMCQhY0ZPFCSrwF0/pzJnb8tVePK8RvljrKEBU8HWJTUfdtyOoPEEuEs31+NlvedzGMbK5oIWecbehJulSXMDNKvI9BEJJiFkSatUTPNx3OJVF3C8Dkku0F0TVmn1VJ0v1DCGJes6TbjEB4SpL1tGRfqxWXX0MOPdPKo+1eGrce8NA406zqMK/axuF6RlHz3LP4osqaOLEY3NBJAlmDgieKS2DToaPLA4T3xnSmAYd66yE285Ug85VmDPnGLEvt2EKVuv3Ew4Vs2kQ+ZpzHa6Lu4G3IGjJyZggSAhV4E3JI2bzqQBu4tznUnMBxtwxkyThrN94s8nbHmy9NNlmHKMRsPw5nNNG34z4D2TPqkS+JRQo3SUa8osNsIYbAl37PSROoATP4at7XU3e2kUL8zDpQ2Yu1C4OGmpyfvYmJbE6HWSqkro6oRIw6EhkQxJthXx4xv0yY3AnEG/ZKuChn6Jpr4CklWmXt22UHCR6+Eod+4aszIlt69doqnzevoPS06RR4IAV8qwM+a4ddEzboJMMg9J6zz0Wn5qngA0jycCm0ZDMThodXDQ2+AQ2gah2fprC6sAC0h9K3AdM6ugffXNWPW6bDTO2DQ7bF48GdbJQVuVU+6jEPQV9EFOX/Z9rP/8g/tt4j7++q3206ff//rmZff3/2f3fp6rFPoBw484QUanPUHE+Z44pdQ+xnJ0H2VxeorTJKaOOPQ3DepKzCgEAAA=
+  inst:
+    Key:
+      Item: TRIPWIRE_HOOK
+      Name: §b[★]§3 Отмычка от Инструментов
+      Enchanted: true
+    Knockback: 0.0
+    Broadcast: false
+    Firework: true
+    Preview: false
+    Block: LODESTONE
+    Color: WHITE
+    Winnings:
+      '1':
+        Type: ITEM
+        Item Type: NETHERITE_PICKAXE
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - DIG_SPEED-10
+        - LOOT_BONUS_BLOCKS-5
+        - MENDING-1
+        - DURABILITY-5
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 10
+            LOOT_BONUS_BLOCKS: 5
+            MENDING: 1
+            DURABILITY: 5
+      '2':
+        Type: ITEM
+        Item Type: NETHERITE_PICKAXE
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - DIG_SPEED-7
+        - LOOT_BONUS_BLOCKS-4
+        - MENDING-1
+        - DURABILITY-4
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 7
+            LOOT_BONUS_BLOCKS: 4
+            MENDING: 1
+            DURABILITY: 4
+      '3':
+        Type: ITEM
+        Item Type: NETHERITE_PICKAXE
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - DIG_SPEED-7
+        - LOOT_BONUS_BLOCKS-3
+        - DURABILITY-3
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 7
+            LOOT_BONUS_BLOCKS: 3
+            DURABILITY: 3
+      '4':
+        Type: ITEM
+        Item Type: NETHERITE_PICKAXE
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - DIG_SPEED-7
+        - SILK_TOUCH-1
+        - DURABILITY-3
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 7
+            SILK_TOUCH: 1
+            DURABILITY: 3
+      '5':
+        Type: ITEM
+        Item Type: NETHERITE_HOE
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - DIG_SPEED-10
+        - LOOT_BONUS_BLOCKS-3
+        - DURABILITY-5
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 10
+            LOOT_BONUS_BLOCKS: 3
+            DURABILITY: 5
+      '6':
+        Type: ITEM
+        Item Type: NETHERITE_SHOVEL
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - DIG_SPEED-10
+        - LOOT_BONUS_BLOCKS-3
+        - DURABILITY-5
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 10
+            LOOT_BONUS_BLOCKS: 3
+            DURABILITY: 5
+      '7':
+        Type: ITEM
+        Item Type: NETHERITE_AXE
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments:
+        - DIG_SPEED-10
+        - LOOT_BONUS_BLOCKS-3
+        - DURABILITY-5
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 10
+            LOOT_BONUS_BLOCKS: 3
+            DURABILITY: 5
+  resurs:
+    Key:
+      Item: TRIPWIRE_HOOK
+      Name: §b[★]§3 Отмычка от Ресурсов
+      Enchanted: true
+    Knockback: 0.0
+    Broadcast: false
+    Firework: true
+    Preview: false
+    Block: LOOM
+    Color: WHITE
+    Winnings:
+      '1':
+        Type: ITEM
+        Item Type: ENCHANTED_GOLDEN_APPLE
+        Item Data: 1
+        Name: NONE
+        Amount: 32
+        Enchantments: []
+        Lore: []
+      '2':
+        Type: ITEM
+        Item Type: ENCHANTED_GOLDEN_APPLE
+        Item Data: 1
+        Name: NONE
+        Amount: 32
+        Enchantments: []
+        Lore: []
+      '3':
+        Type: ITEM
+        Item Type: CARROT
+        Item Data: 0
+        Name: NONE
+        Amount: 64
+        Enchantments: []
+        Lore: []
+      '4':
+        Type: ITEM
+        Item Type: IRON_INGOT
+        Item Data: 0
+        Name: NONE
+        Amount: 64
+        Enchantments: []
+        Lore: []
+      '5':
+        Type: ITEM
+        Item Type: EXPERIENCE_BOTTLE
+        Item Data: 0
+        Name: NONE
+        Amount: 16
+        Enchantments: []
+        Lore: []
+      '6':
+        Type: ITEM
+        Item Type: FIREWORK_ROCKET
+        Item Data: 0
+        Name: NONE
+        Amount: 64
+        Enchantments: []
+        Lore: []
+      '7':
+        Type: ITEM
+        Item Type: GOLD_INGOT
+        Item Data: 0
+        Name: NONE
+        Amount: 64
+        Enchantments: []
+        Lore: []
+      '8':
+        Type: ITEM
+        Item Type: DIAMOND
+        Item Data: 0
+        Name: NONE
+        Amount: 64
+        Enchantments: []
+        Lore: []
+      '9':
+        Type: ITEM
+        Item Type: GOLDEN_APPLE
+        Item Data: 0
+        Name: NONE
+        Amount: 64
+        Enchantments: []
+        Lore: []
+      '10':
+        Type: ITEM
+        Item Type: NETHERITE_INGOT
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments: []
+        Lore: []
+      '11':
+        Type: ITEM
+        Item Type: NETHERITE_INGOT
+        Item Data: 0
+        Name: NONE
+        Amount: 1
+        Enchantments: []
+        Lore: []
+      '12':
+        Type: ITEM
+        Item Type: EXPERIENCE_BOTTLE
+        Item Data: 0
+        Name: NONE
+        Amount: 16
+        Enchantments: []
+        Lore: []
+      '13':
+        Type: ITEM
+        Item Type: EXPERIENCE_BOTTLE
+        Item Data: 0
+        Name: NONE
+        Amount: 16
+        Enchantments: []
+        Lore: []
+      '14':
+        Type: ITEM
+        Item Type: EXPERIENCE_BOTTLE
+        Item Data: 0
+        Name: NONE
+        Amount: 16
+        Enchantments: []
+        Lore: []
+  со:
+    Winnings:
+      '1':
+        Type: ITEM
+        Item Type: IRON_SWORD
+        Item Data: 0
+        Percentage: 0
+        Name: '&6&lExample Sword'
+        Amount: 1
+    Key:
+      Item: TRIPWIRE_HOOK
+      Name: '%type% Crate Key'
+      Enchanted: true
+    Knockback: 0.0
+    Broadcast: false
+    Firework: false
+    Preview: true
+    Block: CHEST
+    Color: WHITE
+  sfer:
+    Key:
+      Item: TRIPWIRE_HOOK
+      Name: '%type% Crate Key'
+      Enchanted: true
+    Knockback: 0.0
+    Broadcast: false
+    Firework: false
+    Preview: true
+    Block: CHEST
+    Color: WHITE
+    Winnings:
+      '1':
+        Type: ITEM
+        Item Type: IRON_SWORD
+        Item Data: 0
+        Name: '&6&lExample Sword'
+        Amount: 1
+        Enchantments: []
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Example
+            Sword"}],"text":""}'
+  gg:
+    Key:
+      Item: TRIPWIRE_HOOK
+      Name: '%type% Crate Key'
+      Enchanted: true
+    Knockback: 0.0
+    Broadcast: false
+    Firework: false
+    Preview: true
+    Block: CHEST
+    Color: WHITE
+    Winnings:
+      '1':
+        Type: ITEM
+        Item Type: IRON_SWORD
+        Item Data: 0
+        Name: '&6&lExample Sword'
+        Amount: 1
+        Enchantments: []
+        Lore: []
+        Metadata:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Example
+            Sword"}],"text":""}'

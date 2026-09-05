@@ -1,0 +1,747 @@
+# AdvancedEnchantments
+# Made by AdvancedPlugins.net
+# Version: 9.1.5
+# Release date: 16/05/2023
+# 
+# ** Commands and permissions
+# /enchanter - Open Enchanter; no permission
+# /tinkerer - Open Tinkerer; no permission
+# /gkits - Open GKits; no permission
+# /ae - Main plugin command; ae.help
+# /ae about - Information about current build; no permission
+# /ae list - List all custom enchantments; ae.list
+# /ae admin - Open a menu with all possible enchantments (100% success rate); ae.admin
+# /ae giveitem <player> <item> - Give various plugin items; ae.giveitem
+# /ae give <player> <enchantment> <level> - Give custom enchanted book; ae.give
+# /ae info <enchantment> - Information about custom enchantment; ae.info
+# /ae reload - Reload all configurations; ae.reload
+# /ae enchant <enchantment> <level> - Enchant item; ae.enchant
+# /ae givebook <player> <enchantment> <level> <count> <success> <destroy> - Give book with specific rates; ae.givebook
+# /ae givercbook <type> <player> <amount> - Give right-clickable book; ae.givercbook
+# /ae giverandombook <player> <group> - Gives random book from group; ae.giverandombook
+# /ae pasteenchants - Pastes formatted enchantments list; ae.admin
+# /alchemist - Open alchemist; no permission
+# /ae givegkit <player> <gkit> - Give player gkit items; ae.givegkit
+# 
+# /aegive - Give player gkit items; ae.give
+# Example: /aegive GC diamond_helmet 1 name:&&7cItem_name protection:5 glowing:1 lore:&&7cLore_line_#1|&&7cSecond_Line
+# 
+# /asets - Advanced Sets commands; asets.admin
+# 
+# Some configurable settings are explained, others should be self-explanatory.
+# Join support discord for help or with questions: https://advancedplugins.net/discord
+# 
+# Change default messages language. You can modify all messages in AdvancedEnchantments `locale` folder.
+# See all default languages & other info here: https://ae.advancedplugins.net/general-information/languages
+language: en-us
+commands:
+  advancedenchantments:
+    permissionMessageEnabled: true
+  enchanter:
+    enabled: true
+    command: /enchanter
+    aliases:
+    - e
+    - ce
+  tinkerer:
+    enabled: true
+    command: /tinkerer
+    aliases:
+    - tinker
+  alchemist:
+    enabled: true
+    command: /alchemist
+    aliases:
+    - alchem
+  withdrawsouls:
+    enabled: true
+    command: /withdrawsouls
+    aliases:
+    - wsouls
+  apply:
+    enabled: true
+    command: /apply
+    aliases:
+    - reapply
+permissions:
+  enchanter:
+    enabled: false
+    perm: ae.enchanter
+  tinkerer:
+    enabled: false
+    perm: ae.tinkerer
+  gkits:
+    enabled: false
+    perm: ae.gkits
+  alchemist:
+    enabled: false
+    perm: ae.alchemist
+disable-enchants:
+  test_world:
+  - test_enchant
+alchemist:
+  settings:
+    combine-books: true
+    combine-dust: true
+  books:
+    add-up-chances: true
+    pre-set-chances:
+      enabled: false
+      success: 50
+      destroy: 50
+  dusts:
+    add-up: true
+  price:
+    exp: true
+    let-plugin-count: true
+    pre-set-pricing:
+      price: 250
+  messages:
+    inv-name: Alchemist
+    item-preview:
+      name: '&e&lItem Preview'
+      lore:
+      - '&7A preview of item you will'
+      - '&7receive from the Alchemist'
+      - '&7will be displayed here.'
+      item:
+        type: STAINED_GLASS_PANE
+        damage: 0
+        custom-model-data: 0
+    item-explanation:
+      name: '&e&lAlchemist'
+      lore:
+      - '&7The Alchemist will Exchange...'
+      - ''
+      - '&b&l* &f2X Enchantment Books'
+      - '&7(of the same type and level)'
+      - '&d= &f1X Enchantment Book'
+      - '&7(of higher level)'
+      - ''
+      - '&b&l* &f2X Magic Dust'
+      - '&7(of the same rarity)'
+      - '&d= &f1X Magic Dust'
+      - '&7(of higher chances)'
+      item:
+        type: STAINED_GLASS_PANE
+        damage: 14
+        custom-model-data: 0
+    item-combine:
+      name: '&b&lCLICK TO EXCHANGE'
+      lore:
+      - '&c&lCOSTS &c%price% EXP'
+      - ''
+      - '&7Click here to confirm this'
+      - '&7item exchange and receive your'
+      - '&7epic new item shown above!'
+      item:
+        type: STAINED_GLASS_PANE
+        damage: 5
+        custom-model-data: 0
+    item-placeholder:
+      name: ' '
+      lore: []
+      item:
+        type: STAINED_GLASS_PANE
+        damage: 15
+        custom-model-data: 0
+souls:
+  enabled: true
+  lore: '&cSouls Collected: %souls%'
+  item:
+    type: PAPER
+    id: 0
+    custom-model-data: 0
+    name: '&f&lSoul Tracker'
+    lore:
+    - '&7Apply to weapons to start tracking'
+    - '&7souls collected from kills.'
+enchantLimitation:
+  enabled: true
+  lore: '&c&lUnmodifiable'
+  NBT-tag: unmodifiable
+combining:
+  enabled: true
+  chances:
+    use-chances: true
+    break-item: false
+    upgrade: true
+slots:
+  enabled: true
+  max: 9
+  max-increase-of-slots: 13
+  display-in-lore: false
+  display: '&eItem Slots&7: %left%'
+applying:
+  cosmetics:
+    applied:
+      particle: HAPPY_VILLAGER
+      sound: LEVEL_UP
+    failed:
+      particle: LAVA_POP
+      sound: ANVIL_BREAK
+enchanter-books:
+  firework-on-open: true
+  cosmetics:
+    particle: HAPPY_VILLAGER
+    sound: LEVEL_UP
+  display-right-click-message: true
+  type: BOOK
+  id: 0
+  custom-model-data: 0
+  force-glow: false
+  name: '%group-color%&l%group-name%&l Enchantment Book &7(Right Click)'
+  lore:
+  - '&7Right Click while holding to receive a random'
+  - '%group-color%%group-name% &7enchantment book.'
+items:
+  settings:
+    can-apply-to:
+    - ALL_SWORD
+    - ALL_ARMOR
+    - ALL_PICKAXE
+    - ALL_AXE
+    - ALL_SPADE
+    - ALL_HOE
+    - ALL_EDIBLE
+    - BOOK
+    - BOW
+    - CROSSBOW
+    - SKULL_ITEM
+    - PLAYER_HEAD
+    - ELYTRA
+    - TRIDENT
+  transmogscroll:
+    type: PAPER
+    id: 0
+    custom-model-data: 0
+    name: '&c&lTransmog Scroll'
+    lore:
+    - '&7Organizes enchants by &e&nrarity&7 on item'
+    - '&7and adds the &dlore &bcount&7 to name.'
+    - ''
+    - '&e&oPlace scroll on item to apply.'
+    enchants-count-formatting: '&d[&b&n%count%&d]'
+  soulgem:
+    type: EMERALD
+    id: 0
+    custom-model-data: 0
+    name: '&c&lSoul Gem &7[&a%count%&7]'
+    lore:
+    - '&7Apply to an item to add souls.'
+  itemnametag:
+    type: NAME_TAG
+    id: 0
+    custom-model-data: 0
+    name: '&6&lItem NameTag &7(Right Click)'
+    lore:
+    - '&7Rename and customize your equipment'
+    messages:
+      success:
+      - '&a&l(!) &aYou have successfully renamed your item to &e%name%'
+      activated:
+      - '&a&l(!) &aYour next message will rename your item in hand'
+      air:
+      - '&c&l(!) &cYou need to be holding an item to do this'
+      renaming-not-enchanted-item:
+      - '&c&l(!) &cYou can only rename enchanted items'
+    settings:
+      colors: true
+      magic: false
+      word-blacklist:
+      - fuck
+      - dick
+      - bitch
+  randomization-scroll:
+    type: PAPER
+    id: 0
+    custom-model-data: 0
+    name: '%group-color%%group-name%&l%group-color% Randomization Scroll'
+    lore:
+    - ''
+    - '&7Apply to any %group-color%%group-name% &7Enchantment Book'
+    - '&7to reroll the success and destroy rates.'
+    - ''
+    - '&7Drag n'' drop onto &nenchantment book&7 to apply.'
+  black-scroll:
+    type: INK_SACK
+    id: 0
+    custom-model-data: 0
+    name: '&f&lBlack Scroll'
+    lore:
+    - '&7Removes a random enchantment'
+    - '&7from an item and converts'
+    - '&7it into a &f%success%% &7success book.'
+    - '&fPlace scroll onto item to extract.'
+    success: 95
+    destroy: 5
+    random: true
+  secret-dust:
+    type: FIREBALL
+    id: 0
+    custom-model-data: 0
+    name: '%group-color%%group-name%%group-color% Secret Dust &7(Right Click)'
+    lore:
+    - '&7Contains: &bMagic, &fMystery &7dust.'
+    - '&7An unidentified satchel of dust.'
+  mystery-dust:
+    type: SULPHUR
+    id: 0
+    custom-model-data: 0
+    name: '&fMystery Dust'
+    lore:
+    - '&7A failed bi-product'
+    - '&7of Magic dust.'
+  magic-dust:
+    type: SUGAR
+    id: 0
+    custom-model-data: 0
+    name: '%group-color%%group-name%%group-color% Magic Dust'
+    lore:
+    - '&a+%percent%% Success'
+    - '&7Apply to a &7any %group-color%%group-name% &7Enchantment Book'
+    - '&7to increase its success by %group-color%%percent%%'
+    messages:
+      cannotApplyToStacked: '&c&l(!) &cCannot be applied to stacked books'
+  slot-increaser:
+    type: EYE_OF_ENDER
+    id: 0
+    custom-model-data: 0
+    name: '%group-color%&l%group-name% Slot Increaser'
+    lore:
+    - '&7Increase slots limit on an item by &a+%count%'
+    messages:
+      success:
+      - '&a&l(!) &aYou have successfully increased maximum slots on item by %count%!'
+  blocktrak:
+    type: SLIME_BALL
+    id: 0
+    custom-model-data: 0
+    name: '&aBlockTrak Creator'
+    lore:
+    - '&7Track how many blocks you break with a tool'
+    - '&7Drag ontop of another item to apply it'
+    messages:
+      success:
+      - '&7You successfully applied &aBlockTrak Creator'
+    settings:
+      lore-display: '&eBlockTrak Blocks Broken: &6%stats%'
+  stattrak:
+    type: MAGMA_CREAM
+    id: 0
+    custom-model-data: 0
+    name: '&eStatTrak Creator'
+    lore:
+    - '&7Track how many kills you have with a weapon'
+    - '&7Drag ontop of another item to apply it'
+    messages:
+      success:
+      - '&7You successfully applied &eStatTrak Creator'
+    settings:
+      lore-display: '&eStatTrak Kills: &6%stats%'
+  mobtrak:
+    type: SLIME_BALL
+    id: 0
+    custom-model-data: 0
+    name: '&3MobTrak Creator'
+    lore:
+    - '&7track how many mob kills you have with a weapon'
+    - '&7Drag ontop of another item to apply it'
+    messages:
+      success:
+      - '&7You successfully applied &3MobTrak Creator'
+    settings:
+      lore-display: '&3MobTrak Kills: &f%stats%'
+  holywhitescroll:
+    type: PAPER
+    id: 0
+    custom-model-data: 0
+    name: '&6&lHoly White Scroll'
+    lore:
+    - '&eA legendary reward that can'
+    - '&ebe applied to armor/weapons,'
+    - '&egives a 100% chance of not losing'
+    - '&ethe blessed item on death.'
+    messages:
+      applied:
+      - '&7You successfully applied &6&lHoly White Scroll'
+    settings:
+      lore-display: '&e&l*&f&lHOLY&e&l* &f&lPROTECTED'
+      keep-after-death: false
+    force-glow: false
+  orb:
+    lore: '&a%max% Enchantment Slots &7(Orb [&a+%increased%&7])'
+    weapon:
+      material: EYE_OF_ENDER
+      custom-model-data: 0
+      name: '&6&lWeapon Enchantment Orb &6[&a&n%max%&6]'
+      lore:
+      - '&a%success%% Success Rate'
+      - ''
+      - '&6+%new% Enchantment slots'
+      - '&6%max% Max Enchantment Slots'
+      - ''
+      - '&eIncreases the # of enchantment'
+      - '&eslots on a weapon by %new%,'
+      - '&eup to a maximum of %max%'
+      - '&7Drag n'' Drop onto an item to apply.'
+    armor:
+      material: EYE_OF_ENDER
+      custom-model-data: 0
+      name: '&6&lArmor Enchantment Orb &6[&a&n%max%&6]'
+      lore:
+      - '&a%success%% Success Rate'
+      - ''
+      - '&6+%new% Enchantment slots'
+      - '&6%max% Max Enchantment Slots'
+      - ''
+      - '&eIncreases the # of enchantment'
+      - '&eslots on a piece of armor by %new%,'
+      - '&eup to a maximum of %max%'
+      - '&7Drag n'' Drop onto an item to apply.'
+    tool:
+      material: EYE_OF_ENDER
+      custom-model-data: 0
+      name: '&6&lTool Enchantment Orb &6[&a&n%max%&6]'
+      lore:
+      - '&a%success%% Success Rate'
+      - ''
+      - '&6+%new% Enchantment slots'
+      - '&6%max% Max Enchantment Slots'
+      - ''
+      - '&eIncreases the # of enchantment'
+      - '&eslots on a tool by %new%,'
+      - '&eup to a maximum of %max%'
+      - '&7Drag n'' Drop onto an item to apply.'
+armor-items:
+  helmet:
+  - HEAD
+  - SKULL_ITEM
+  - SKULL
+  - PLAYER_HEAD
+  - CREEPER_HEAD
+  - DRAGON_HEAD
+  - ZOMBIE_HEAD
+  - NETHERITE_HELMET
+  - DIAMOND_HELMET
+  - GOLD_HELMET
+  - GOLDEN_HELMET
+  - IRON_HELMET
+  - CHAINMAIL_HELMET
+  - LEATHER_HELMET
+  - TURTLE_SHELL
+  - PUMPKIN
+  - CARVED_PUMPKIN
+  - TURTLE_HELMET
+  chest-plate:
+  - NETHERITE_CHESTPLATE
+  - DIAMOND_CHESTPLATE
+  - GOLD_CHESTPLATE
+  - GOLDEN_CHESTPLATE
+  - IRON_CHESTPLATE
+  - CHAINMAIL_CHESTPLATE
+  - LEATHER_CHESTPLATE
+  - ELYTRA
+  leggings:
+  - LEGS
+  - DIAMOND_LEGGINGS
+  - NETHERITE_LEGGINGS
+  - GOLD_LEGGINGS
+  - GOLDEN_LEGGINGS
+  - IRON_LEGGINGS
+  - CHAINMAIL_LEGGINGS
+  - LEATHER_LEGGINGS
+  boots:
+  - FEET
+  - DIAMOND_BOOTS
+  - NETHERITE_BOOTS
+  - GOLD_BOOTS
+  - GOLDEN_BOOTS
+  - IRON_BOOTS
+  - CHAINMAIL_BOOTS
+  - LEATHER_BOOTS
+white-scroll:
+  delete: true
+  lore-display: '&f&lPROTECTED'
+  item:
+    type: EMPTY_MAP
+    id: 0
+    custom-model-data: 0
+    force-glow: false
+    name: '&fWhite Scroll'
+    lore:
+    - '&fPrevents an item from being destroyed'
+    - '&fdue to a failed Enchantment Book.'
+    - '&ePlace scroll on item to apply.'
+enchanter:
+  open-sound: ENDERDRAGON_WINGS
+  disabled-in-worlds:
+  - bad_world
+  messages:
+    sound: LEVEL_UP
+  right-click-to-view-enchants: true
+  go-back-item:
+    enabled: true
+    item:
+      type: NETHER_STAR
+      id: 0
+      custom-model-data: 0
+    name: '&c&lGo Back'
+    lore: []
+  keep-open: true
+  inventory:
+    size: 18
+    name: '&7Server Enchanter'
+    settings:
+      enchanterBookLevel: ALL
+    items:
+      0-18:
+        item:
+          type: STAINED_GLASS_PANE
+          id: 7
+          custom-model-data: 0
+          force-glow: false
+        name: ' '
+        lore: []
+      '2':
+        item:
+          type: STAINED_GLASS_PANE
+          id: 0
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: SIMPLE
+        price: exp:400
+        sound: ANVIL_LAND
+        name: '&f&lSimple Enchantment &7(Right Click)'
+        lore:
+        - '&7Examine to receive a random'
+        - '&fsimple &7enchantment book.'
+        - ''
+        - '&b&lCOST &f%price% EXP &7(You need %left% more EXP)'
+      '3':
+        item:
+          type: STAINED_GLASS_PANE
+          id: 5
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: UNIQUE
+        sound: ANVIL_LAND
+        price: exp:800
+        name: '&a&lUnique Enchantment &7(Right Click)'
+        lore:
+        - '&7Examine to receive a random'
+        - '&aunique &7enchantment book.'
+        - ''
+        - '&b&lCOST &f%price% EXP &7(You need %left% more)'
+      '4':
+        item:
+          type: STAINED_GLASS_PANE
+          id: 3
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: ELITE
+        price: exp:2500
+        sound: ANVIL_LAND
+        name: '&b&lElite Enchantment &7(Right Click)'
+        lore:
+        - '&7Examine to receive a random'
+        - '&belite &7enchantment book.'
+        - ''
+        - '&b&lCOST &f%price% EXP &7(You need %left% more)'
+      '5':
+        item:
+          type: STAINED_GLASS_PANE
+          id: 4
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: ULTIMATE
+        price: exp:5000
+        sound: ANVIL_LAND
+        name: '&e&lUltimate Enchantment &7(Right Click)'
+        lore:
+        - '&7Examine to receive a random'
+        - '&eultimate &7enchantment book.'
+        - ''
+        - '&b&lCOST &f%price% EXP &7(You need %left% more)'
+      '6':
+        item:
+          type: STAINED_GLASS_PANE
+          id: 1
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: LEGENDARY
+        price: exp:25000
+        sound: ANVIL_LAND
+        name: '&6&lLegendary Enchantment &7(Right Click)'
+        lore:
+        - '&7Examine to receive a random'
+        - '&6legendary &7enchantment book.'
+        - ''
+        - '&b&lCOST &f%price% EXP &7(You need %left% more)'
+      '13':
+        item:
+          type: STAINED_GLASS_PANE
+          id: 6
+          custom-model-data: 0
+          force-glow: false
+        enchant-group: FABLED
+        price: exp:40000
+        sound: ANVIL_LAND
+        name: '&d&lFabled Enchantment &7(Right Click)'
+        lore:
+        - '&7Examine to receive a random'
+        - '&dfabled &7enchantment book.'
+        - ''
+        - '&b&lCOST &f%price% EXP &7(You need %left% more)'
+      '9':
+        item:
+          type: ANVIL
+          id: 0
+          custom-model-data: 0
+          force-glow: false
+        sound: ANVIL_USE
+        player-command:
+        - tinkerer
+        name: '&fOpen &b&lTinkerer &7(Right Click)'
+        lore:
+        - '&7Tinker books for Magic Dusts and EXP.'
+        - ''
+        - '&b&lRight Click to visit'
+      '17':
+        item:
+          type: ENDER_PORTAL_FRAME
+          id: 0
+          custom-model-data: 0
+          force-glow: false
+        sound: ARROW_HIT
+        player-command:
+        - alchemist
+        name: '&fOpen &b&lAlchemist &7(Right Click)'
+        lore:
+        - '&7Combine Books and Magic Dusts.'
+        - ''
+        - '&b&lRight Click to visit'
+destroy:
+  enabled: true
+  destroy-item: false
+chances:
+  random: true
+  success: 92
+  destroy: 8
+  destroy-if-fail:
+    enabled: false
+confirmation-inventory:
+  enabled: true
+  name: '&aConfirmation Inventory'
+  accept:
+    material: STAINED_GLASS_PANE
+    damage: 5
+    name: '&aAccept Transaction'
+    lore:
+    - '&7Click this to pay %price% with %paymentType%'
+  cancel:
+    material: STAINED_GLASS_PANE
+    damage: 14
+    name: '&cClick to cancel'
+    lore: []
+armor-switching:
+  enabled: true
+  armorSkullsSwitching: true
+  sound: ENTITY_PLAYER_LEVELUP
+enchantment-book:
+  anvil-application: true
+  drag-drop-application: true
+  item:
+    type: ENCHANTED_BOOK
+    id: 0
+    custom-model-data: 0
+    force-glow: false
+  name: '&bЧародейская книга'
+  lore:
+  - '%group-color%%enchant-no-color% %level%'
+  - '&7'
+  - '&8%description%'
+applies-groups:
+  MISC_HELMETS:
+  - CARVED_PUMPKIN
+  SKULL_ITEM: []
+settings:
+  grindstones-remove-custom-enchants: true
+  organizeEnchantsOnItems: true
+  lore-organize-mode: 2
+  custom-enchants-cause-glow: false
+  use-legacy-potions-system: true
+  fortune-works-on-iron-gold: false
+  steal-money:
+    message-enabled: false
+  combo-limit: 5
+  trench-autoadd-items: false
+  trench-works-with-more-drops: false
+  renametag-enchanted-only: true
+  itemnametag-max-name-length: 32
+  trench-do-all-durab: true
+  lower-destroy-with-magic-dust: true
+  enable-combo-for-mobs: true
+  clear-potion-effects-on-quit: true
+  ae-market-enabled: true
+  use-numbers: false
+  activate-non-armor-in-armor-slots: false
+  held-effect-static-cross-update: false
+  held-shift-cross-update: true
+  use-experimental-damage: false
+  trench-blacklist: []
+  trench-whitelist: []
+  veinmine-whitelist:
+  - COAL_ORE
+  - COPPER_ORE
+  - IRON_ORE
+  - GOLD_ORE
+  - LAPIS_ORE
+  - REDSTONE_ORE
+  - DIAMOND_ORE
+  - EMERALD_ORE
+  - NETHER_QUARTZ_ORE
+  - NETHER_GOLD_ORE
+  - ANCIENT_DEBRIS
+  - DEEPSLATE_COAL_ORE
+  - DEEPSLATE_COPPER_ORE
+  - DEEPSLATE_IRON_ORE
+  - DEEPSLATE_GOLD_ORE
+  - DEEPSLATE_LAPIS_ORE
+  - DEEPSLATE_REDSTONE_ORE
+  - DEEPSLATE_DIAMOND_ORE
+  - DEEPSLATE_EMERALD_ORE
+  enchantment-world-blacklist:
+  - no_enchantments_world
+  holy-whitescrolls-world-blacklist:
+  - no_holywhitescrolls_world
+  fly-world-blacklist:
+  - no_fly_world
+  open-enchanter-by-right-clicking-enchantment-table: false
+  stems-count-as-trees: false
+  enchants-debug-mode: false
+  apply-cooldown: 20
+  whitescroll-material-blacklist:
+  - STONE
+  souls-per-kill: 1
+  trench-optimization:
+    automaticallyDetect: true
+  lava-walker-radius: 2
+  water-walker-radius: 2
+  collect-souls-from-mobs: false
+  collect-souls-from-players: false
+  showFirstLevel: true
+  heal-check: true
+  use-worldguard-fly-flag: false
+  custom-drops-from-spawners: false
+  miningSouls:
+    enabled: false
+    chance: 20
+  bow-full-power: true
+  lore-descriptions:
+    enabled: false
+    display: '%group-color%* &8%description%'
+  held-check-frequency: 5
+  give-mcmmo-with-custom-block-breaks: true
+  allow-place-of-armor-block: true
+version: 1.0

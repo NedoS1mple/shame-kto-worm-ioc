@@ -1,0 +1,117 @@
+item:
+  display_name: '#61CBE4∅ #89033AТ#812B5Cр#79537Eа#717BA0п#69A3C2к#61CBE4а &r- "#BEBA35Б#C1B140л#C4A94Bо#C7A056к #CD8F6Cс#D08777л#D37E82и#D6768Dз#D96D98и&r"'
+  material: NETHERITE_SCRAP
+  enchanted: true
+  description:
+    - ""
+    - "&dРазмер II"
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffcccc#f52080ПКМ #ffcccc- создает клетку #f520805#ffcccc&7x#f520805#ffcccc,"
+    - "#ffccccнельзя сломать #f5208010 &7сек#ffcccc."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  trapka_component:
+    schematic_file_name: "trapka_slime_block_5x5.schematic"
+    # (Сек.) Время жизни (существования/действия) "трапки".
+    time_to_live_seconds: 10
+    # (Тиков. 1 сек. = 20 тиков) Частота появления партиклов на месте "трапки".
+    particle_spawn_rate_ticks: 5
+    # Список партиклов которые будут появлятся на месте "трапки" пока она заспавнена.
+    # Используйте партиклы версии ядра на котором запускаете плагин.
+    # Списки всех материалов для каждой версии:
+    # https://helpch.at/docs/1.8.8/org/bukkit/Effect.html
+    # https://helpch.at/docs/x.x.x/org/bukkit/Effect.html
+    # ...
+    particle_name_to_spawn_list:
+      - "PORTAL"
+    # "/op" игрок может разрушать регион (область) "трапки" пока она заспавнена?
+    is_op_can_break_trapka_region_while_it_spawned: true
+    # Включить задерждку для предотвращения частого использования?
+    enable_use_delay: true
+    # (Тиков. 1 сек. = 20 тиков) Задержка повторного использования.
+    delay_use_ticks: 20
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Отключить возможность призыва трапки внутри WorldGuard региона?
+    disable_spawn_inside_worldguard_regions: false
+    # Отключить возможность призыва трапки внутри mcRegion региона?
+    disable_spawn_inside_mcregion_regions: false
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    # Конфигурация временного WorldGuard региона в области трапки.
+    create_temporary_worldguard_region:
+
+      # Создать временный WorldGuard регион в области трапки?
+      enable: true
+
+      # Список флагов которые будут присвоены WorldGuard региону.
+      # Список всех флагов "https://worldguard.enginehub.org/en/latest/regions/flags/#flag-listing".
+      flag_list:
+        flag_1:
+          name: "pvp"
+          state: "ALLOW"
+        flag_2:
+          name: "tnt"
+          state: "DENY"
+
+    # Если true, блоки трапки будут вставлены только на не твердные блоки, например воздух или
+    # траву. А например булыжник, сундуки и тд. временно заменяться на блоки трапки не будут.
+    # Если false, блоки трапки могут быть вставлены на любые блоки.
+    use_not_solid_block_mask: true
+
+    # Список эффектов которые будут наложены на призывателя этой трапки.
+    # Установите значение "summoner_potion_effect_list: {}" чтобы оставить список пустым и не накладывать никаких эффектов.
+    summoner_potion_effect_list:
+      effect_1:
+        # Тип эффекта.
+        # Используйте типы эффектов версии ядра на котором запускаете плагин.
+        # Списки всех типов эффектов для каждой версии:
+        # https://helpch.at/docs/1.8.8/org/bukkit/potion/PotionEffectType.html
+        # https://helpch.at/docs/x.x.x/org/bukkit/potion/PotionEffectType.html
+        # ...
+        potion_effect_type: SPEED
+        duration_seconds: 5 # (Сек.) Продолжительность действия эффекта.
+        amplifier: 2 # Сила эффекта, 1 = I, 2 = II и тд.
+
+    # Список эффектов которые будут наложены на других игроков попавших в трапку (не на призывателя).
+    # Установите значение "target_potion_effect_list: {}" чтобы оставить список пустым и не накладывать никаких эффектов.
+    target_potion_effect_list:
+      effect_1:
+        potion_effect_type: SLOW
+        duration_seconds: 5
+        amplifier: 2
+
+    # Список материалов блоки которых не будут затронуты/заменены вставкой .schematic/.schema файлом.
+    clipboard_paste_change_blacklist_material_list:
+      - STONE
+      - COBBLESTONE
+
+    # Список команд которые будут выполнены в отношении игрока призвавшего трапку.
+    on_trapka_spawn_summoner_command_list:
+      - "minecraft:tell %player% вы призвали трапку!"
+
+    # Список команд которые будут выполнены в отношении других игроков попавших в трапку (кроме призывателя).
+    on_trapka_spawn_target_player_command_list:
+      - "minecraft:tell %player% вы попали в трапку игрока %summoner_player%!"
+
+    message:
+      you_can_not_spawn_trapka_that_intersects_with_another_trapka: "&cНельзя создать трапку которая будет пересекать другую трапку."
+      # Трапка заспавнена!
+      spawned: "#D96D98∅ #BEBA35Т#C0B53Bр#C1B141а#C3AC46п#C4A84Cк#C6A352а #C99A5Eз#CB9664а#CC9169с#CE8D6Fп#CF8875а#D1847Bв#D37F81н#D47B87е#D6768Cн#D77292а#D96D98!"
+      # Трапка задеспавнена.
+      despawned: "#D96D98∅ #BEBA35Т#BFB63Aр#C1B23Fа#C2AE45п#C4AA4Aк#C5A64Fа #C89E59з#C99A5Fа#CB9664д#CC9169е#CE8D6Eс#CF8974п#D08579а#D2817Eв#D37D83н#D57988е#D6758Eн#D87193а#D96D98."
+      use_delay: "&cМожно использовать повторно через &b%use_delay_seconds% &cсек."
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      spawn_is_not_allowed_because_of_plugin_region: "&cНельзя призвать трапку, потому что она будет пересекать существующий регион."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."

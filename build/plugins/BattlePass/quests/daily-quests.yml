@@ -1,0 +1,136 @@
+quests:
+  1: # id квеста
+    name: 'Дневной квест - Шахтер' # Имя квеста
+    type: block-break # Тип квеста
+    variable: coal_ore:0 # Блок, который игрок должен сломать
+    required-progress: 10 # Сколько раз игрок должен сломать блок
+    points: 10 # Сколько баллов игрок получит за выполнение квеста
+    item: # Иконка квеста в меню
+      material: diamond_pickaxe:0
+      amount: 1
+      name: '&eШахтер'
+      lore:
+        - '&7Вскопай &e10 угля'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  2: # id квеста
+    name: 'Дневной квест - Экстраверт' # Имя квеста
+    type: chat # Тип квеста
+    variable: none # Блок, который игрок должен сломать
+    required-progress: 300 # Сколько раз игрок должен сломать блок
+    points: 10 # Сколько баллов игрок получит за выполнение квеста
+    item: # Иконка квеста в меню
+      material: paper:0
+      amount: 1
+      name: '&eЭкстраверт'
+      lore:
+        - '&7Пообщайся в чате &e300 раз'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  3: # id квеста
+    name: 'Дневной квест - Premium Экстраверт' # Имя квеста
+    type: chat # Тип квеста
+    variable: coal_ore:0 # Блок, который игрок должен сломать
+    required-progress: 150 # Сколько раз игрок должен сломать блок
+    points: 10 # Сколько баллов игрок получит за выполнение квеста
+    exclusive: premium
+    item: # Иконка квеста в меню
+      material: paper:0
+      amount: 1
+      name: '&cPremium&e - Экстраверт'
+      lore:
+        - '&7Пообщайся в чате &e150 раз'
+        - '&7&oТолько в &c&oPremium &e&oBattlePass'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  4:
+    name: 'Дневной квест - Пиглин'
+    type: block-place
+    variable: gold_block:0
+    required-progress: 10
+    points: 10
+    item:
+      material: gold_block:0
+      name: '&eПиглин'
+      lore:
+        - '&7Размести &e10 золотых блоков'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  5:
+    name: 'Дневной квест - Подготовка к бою'
+    type: craft
+    variable: diamond_sword:0
+    required-progress: 1
+    points: 10
+    item:
+      material: diamond_sword:0
+      name: '&eПодготовка к бою'
+      lore:
+        - '&7Создай &eалмазный меч'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  6:
+    name: 'Дневной квест - Фермер'
+    type: milk
+    variable: none
+    required-progress: 5
+    points: 10
+    item:
+      material: milk_bucket:0
+      name: '&eФермер'
+      lore:
+        - '&7Подой &e5 коров'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  7:
+    name: 'Дневной квест - Печкин'
+    type: smelt
+    variable: iron_ingot:0
+    required-progress: 20
+    points: 10
+    item:
+      material: iron_ingot:0
+      name: '&eПечкин'
+      lore:
+        - '&7Переплавь &e20 железной руды'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  8:
+    name: 'Дневной квест - Фермер'
+    type: shear
+    variable: none
+    required-progress: 10
+    points: 10
+    item:
+      material: white_wool:0
+      name: '&eФермер'
+      lore:
+        - '&7Постриги &e10 овец'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  9:
+    name: 'Дневной квест - Питомец'
+    type: tame
+    variable: wolf
+    required-progress: 1
+    points: 10
+    item:
+      material: monster_egg:0
+      name: '&eПитомец'
+      lore:
+        - '&7Приручи &e1 волка'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  10:
+    name: 'Дневной квест - Всадник'
+    type: ride-mob
+    variable: horse
+    required-progress: 1
+    points: 10
+    item:
+      material: saddle:0
+      name: '&eВсадник'
+      lore:
+        - '&7Покатайся на &e1 лошади'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'

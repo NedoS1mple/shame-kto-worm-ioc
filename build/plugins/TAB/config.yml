@@ -1,0 +1,218 @@
+header-footer:
+  enabled: true
+  designs:
+    world-world1:
+      display-condition: '%world%=world1'
+      header:
+      - an example of world with custom
+      footer:
+      - header/footer and prefix/suffix
+    world-world2;world3:
+      display-condition: '%world%=world2|%world%=world3'
+      header:
+      - This is a shared header for
+      - world2 and world3
+      footer: []
+    server-server1:
+      display-condition: '%server%=server1'
+      header:
+      - an example of server with custom header
+      footer: []
+    default:
+      display-condition: '%world%!=disabledworld'
+      header:
+      - '&x&a&3&0&0&0&0╔&x&d&1&0&0&0&0═&x&f&f&0&0&0&0═                           &x&f&f&0&0&0&0═&x&d&1&0&0&0&0═&x&a&3&0&0&0&0╗'
+      - '&#ea0000&l⚡  %triton_server.name1%  &#ea0000&l⚡'
+      - '&fРежим: #fb0000Анархия-101'
+      - ''
+      footer:
+      - ''
+      - '%animation:Welcome%'
+      - '%animation:Welcome2%'
+      - '&x&a&3&0&0&0&0╚&x&d&1&0&0&0&0═&x&f&f&0&0&0&0═                           &x&f&f&0&0&0&0═&x&d&1&0&0&0&0═&x&a&3&0&0&0&0╝'
+tablist-name-formatting:
+  enabled: true
+  disable-condition: '%world%=disabledworld'
+scoreboard-teams:
+  enabled: true
+  enable-collision: true
+  invisible-nametags: false
+  sorting-types:
+  - GROUPS:owner,gl.admin,tex.admin,admin,glmoderator,moderator,helper,yt,gercog,knyaz,princ,titan,elite,glava,squid,aspid,hero,strazh,baron,default
+  - PLACEHOLDER_A_TO_Z:%player%
+  case-sensitive-sorting: true
+  can-see-friendly-invisibles: false
+  disable-condition: '%world%=disabledworld'
+belowname-objective:
+  enabled: true
+  disable-condition: '%world%=spawn'
+  fancy-value-default: NPC
+  fancy-value: '&cЗдоровья'
+  value: '%health%'
+  title: '&cЗдоровья'
+prevent-spectator-effect:
+  enabled: false
+bossbar:
+  enabled: false
+  toggle-command: /bossbar
+  remember-toggle-choice: false
+  hidden-by-default: false
+  bars:
+    ServerInfo:
+      style: PROGRESS
+      color: '%animation:barcolors%'
+      progress: '100'
+      text: '&fWebsite: &bwww.domain.com'
+scoreboard:
+  enabled: true
+  toggle-command: /sb
+  remember-toggle-choice: false
+  hidden-by-default: false
+  use-numbers: false
+  static-number: 0
+  delay-on-join-milliseconds: 0
+  scoreboards:
+    anarchy:
+      title: '&x&F&C&8&A&1&A&l⚡ &x&F&C&1&A&1&AА&x&F&C&1&A&1&Aн&x&F&C&1&A&1&Aа&x&F&C&1&A&1&Aр&x&F&C&1&A&1&Aх&x&F&C&1&A&1&Aи&x&F&C&1&A&1&Aя&x&F&C&1&A&1&A-&x&F&C&1&A&1&A1&x&F&C&1&A&1&A0&x&F&C&1&A&1&A1'
+      lines:
+      - '&l&#fb0000╔&#f20000═&#ea0000═&#e10000═&#d90000═&#d00000═&#c70000═&#bf0000═&#b60000═&#ae0000═&#a50000═'
+      - '&l&#fb0000╠╣ &r&6%player_name%'
+      - '&l&#fb0000╠ &r&b⭐&r&f Ранг: &r%luckperms_prefix%'
+      - '&l&#fb0000╠ &r&e$ &fМонет: &e%cmi_user_balance_formatted%'
+      - '&l&#fb0000╠ &r&a⛁ &fТокенов: &a%playerpoints_points%'
+      - '&l&#fb0000╠'
+      - '&l&#fb0000╠╣ &r&6Статистика'
+      - '&l&#fb0000╠ &r&fУбийств: &e%statistic_player_kills% ✶'
+      - '&l&#fb0000╠ &rСмертей: &x&F&C&3&2&0&0%statistic_deaths% ⚑'
+      - '&l&#fb0000╠ &r&fНаиграно: &#01A4FF%statistic_hours_played% ч.'
+      - '&l&#fb0000╠'
+      - '&l&#fb0000╠╣ &r&fДонат &a/don'
+      - '&l&#fb0000╚&#f20000═&#ea0000═&#e10000═&#d90000═&#d00000═&#c70000═&#bf0000═&#b60000═&#ae0000═&#a50000═'
+layout:
+  enabled: false
+  direction: COLUMNS
+  default-skin: mineskin:1753261242
+  enable-remaining-players-text: true
+  remaining-players-text: '... and %s more'
+  empty-slot-ping-value: 1000
+  layouts:
+    default:
+      fixed-slots:
+      - '1|&3Website&f:'
+      - 2|&bmyserver.net
+      - '3|&8&m                       '
+      - '4|&3Name&f:'
+      - 5|&b%player%
+      - '7|&3Rank&f:'
+      - '8|Rank: %group%'
+      - '10|&3World&f:'
+      - 11|&b%world%
+      - '13|&3Time&f:'
+      - 14|&b%time%
+      - '21|&3Teamspeak&f:'
+      - 22|&bts.myserver.net
+      - '23|&8&m                       '
+      - '41|&3Store&f:'
+      - 42|&bshop.myserver.net
+      - '43|&8&m                       '
+      groups:
+        staff:
+          condition: permission:tab.staff
+          slots:
+          - 24-40
+        players:
+          slots:
+          - 44-80
+ping-spoof:
+  enabled: false
+  value: 0
+placeholders:
+  date-format: dd.MM.yyyy
+  time-format: '[HH:mm:ss / h:mm a]'
+  time-offset: 0
+  register-tab-expansion: true
+placeholder-output-replacements:
+  '%essentials_vanished%':
+    'yes': '&7| Vanished'
+    'no': ''
+  '%essentials_nickname%':
+    '%essentials_nickname%': '%player%'
+conditions:
+  nick:
+    conditions:
+    - '%player%=%essentials_nickname%'
+    true: '%player%'
+    false: ~%essentials_nickname%
+assign-groups-by-permissions: false
+primary-group-finding-list:
+- Owner
+- Admin
+- Mod
+- Helper
+- default
+debug: false
+mysql:
+  enabled: false
+  host: 127.0.0.1
+  port: 3306
+  database: tab
+  username: user
+  password: password
+per-world-playerlist:
+  enabled: false
+  allow-bypass-permission: false
+  ignore-effect-in-worlds:
+  - ignoredworld
+  - build
+  shared-playerlist-world-groups:
+    lobby:
+    - lobby1
+    - lobby2
+    minigames:
+    - paintball
+    - bedwars
+global-playerlist:
+  enabled: false
+  display-others-as-spectators: false
+  display-vanished-players-as-spectators: true
+  isolate-unlisted-servers: false
+  spy-servers:
+  - spyserver1
+  - spyserver2
+  server-groups:
+    lobbies:
+    - lobby1
+    - lobby2
+    group2:
+    - server1
+    - server2
+  update-latency: false
+use-bukkit-permissions-manager: false
+use-online-uuid-in-tablist: true
+permission-refresh-interval: 1000
+playerlist-objective:
+  enabled: false
+  value: '%ping%'
+  disable-condition: '%world%=disabledworld'
+  fancy-value: '&7Ping: %ping%'
+  title: TAB
+  render-type: INTEGER
+proxy-support:
+  enabled: true
+  type: PLUGIN
+  plugin:
+    name: RedisBungee
+compensate-for-packetevents-bug: false
+placeholder-refresh-intervals:
+  default-refresh-interval: 750
+  '%server_uptime%': 1000
+  '%server_tps_1_colored%': 1000
+  '%server_unique_joins%': 5000
+  '%player_health%': 200
+  '%player_ping%': 1000
+  '%vault_prefix%': 1000
+  '%rel_factionsuuid_relation_color%': 1000
+config-version: 2
+components:
+  minimessage-support: true
+  disable-shadow-for-heads: true

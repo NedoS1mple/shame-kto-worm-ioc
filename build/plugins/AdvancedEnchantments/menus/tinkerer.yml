@@ -1,0 +1,74 @@
+# Configuration file for Tinkerer inventory.
+# Please be careful when editing this file.
+# Is recommended to use a YAML validator and a text editor that supports YAML.
+# https://yamlchecker.com/
+# 
+# Support & Documentation:
+# https://discord.com/invite/GzdQdMw
+# https://ae.advancedplugins.net/
+
+general:
+  settings:
+    enabled-confirm-items: true
+    splitter-slots: 4, 13, 22, 31, 40, 49
+    player-slots: 1, 2, 3, 9, 10, 11, 12, 18, 19, 20, 21, 27, 28, 29, 30, 36, 37,
+      38, 39, 45, 46, 47, 48
+    tinkerer-slots: 5, 6, 7, 14, 15, 16, 17, 23, 24, 25, 26, 32, 33, 34, 35, 41, 42,
+      43, 44, 50, 51, 52, 53
+  prices:
+    type: exp
+    amount: 26
+    formula: (%amount%*%enchants%)*%durability%
+  tinkerer-items:
+    money:
+      type: PAPER
+      id: 0
+      custom-model-data: 0
+      name: '&cMoney Voucher &7(%amount%)'
+      lore:
+      - '&cReceived from &fEnchanter'
+      - '&cReceived by &f%name%'
+    exp:
+      type: EXP_BOTTLE
+      id: 0
+      custom-model-data: 0
+      name: '&a&lExperience Bottle &7(throw)'
+      lore:
+      - '&dValue &f%amount% XP'
+      - '&dEnchanter &fServer Enchanter'
+inventory:
+  open-sound: BLOCK_CHEST_OPEN
+  name: You                   Tinkerer
+  items:
+    accept-trade-item:
+      type: STAINED_GLASS_PANE
+      id: 14
+      custom-model-data: 0
+      slot: 0
+      name: '&eClick to ACCEPT trade'
+      lore: []
+    player-confirm-trade-item:
+      enabled: true
+      type: STAINED_GLASS_PANE
+      id: 5
+      custom-model-data: 0
+      slot: 0
+      name: '&aClick to confirm the transaction'
+      lore: []
+      sound: BLOCK_LEVER_CLICK
+    tinkerer-confirm-trade-item:
+      enabled: true
+      type: STAINED_GLASS_PANE
+      id: 5
+      custom-model-data: 0
+      slot: 8
+      name: '&aClick to confirm the transaction'
+      lore: []
+    splitter-item:
+      enabled: true
+      type: THIN_GLASS
+      id: 0
+      custom-model-data: 0
+      name: ' '
+      lore: []
+version: 1.0.0

@@ -1,0 +1,2488 @@
+dc:
+  БОЕВОЙ_ТОПОР:
+    Item:
+      v: 2586
+      type: DIAMOND_AXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"►БОЕВОЙ
+          ТОПОР◄"}],"text":""}'
+        enchants:
+          DIG_SPEED: 4
+          LOOT_BONUS_BLOCKS: 3
+          DAMAGE_ALL: 9
+          DURABILITY: 3
+  СВЕРХПРОЧНЫЙ_ТОПОР:
+    Item:
+      v: 2586
+      type: DIAMOND_AXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"►СВЕРХПРОЧНЫЙ
+          ТОПОР◄"}],"text":""}'
+        enchants:
+          DIG_SPEED: 10
+          LOOT_BONUS_BLOCKS: 5
+          DAMAGE_ALL: 4
+          DURABILITY: 5
+  КИРКА_ВЕЗЕНИЯ:
+    Item:
+      v: 2586
+      type: DIAMOND_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"❖КИРКА
+          ВЕЗЕНИЯ❖"}],"text":""}'
+        enchants:
+          DIG_SPEED: 4
+          LOOT_BONUS_BLOCKS: 5
+          DURABILITY: 3
+  СВЕРХПРОЧНАЯ_КИРКА:
+    Item:
+      v: 2586
+      type: DIAMOND_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"►СВЕРХПРОЧНАЯ
+          КИРКА◄"}],"text":""}'
+        enchants:
+          DIG_SPEED: 10
+          LOOT_BONUS_BLOCKS: 3
+          DURABILITY: 5
+  БОЕВОЙ_МЕЧ:
+    Item:
+      v: 2586
+      type: DIAMOND_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"▶БОЕВОЙ
+          МЕЧ◀"}],"text":""}'
+        enchants:
+          FIRE_ASPECT: 3
+          DAMAGE_ALL: 9
+          DURABILITY: 3
+  МЕЧ_ОХОТНИКА:
+    Item:
+      v: 2586
+      type: DIAMOND_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"green","text":"✔МЕЧ
+          ОХОТНИКА✔"}],"text":""}'
+        enchants:
+          LOOT_BONUS_MOBS: 5
+          SWEEPING_EDGE: 5
+          DURABILITY: 4
+  Золотое_яблоко:
+    Item:
+      v: 2586
+      type: ENCHANTED_GOLDEN_APPLE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          VANISHING_CURSE: 1
+  СВЕРХПРОЧНЫЙ_ШЛЕМ:
+    Item:
+      v: 2586
+      type: DIAMOND_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"◢СВЕРХПРОЧНЫЙ
+          ШЛЕМ◣"}],"text":""}'
+        enchants:
+          WATER_WORKER: 1
+          PROTECTION_ENVIRONMENTAL: 4
+          OXYGEN: 4
+          THORNS: 3
+        ItemFlags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+        Unbreakable: true
+  СВЕРХПРОЧНЫЙ_НАГРУДНИК:
+    Item:
+      v: 2586
+      type: DIAMOND_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"▕СВЕРХПРОЧНЫЙ
+          НАГРУДНИК▕"}],"text":""}'
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 4
+          THORNS: 3
+        ItemFlags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+        Unbreakable: true
+  СВЕРХПРОЧНЫЕ_ПОНОЖИ:
+    Item:
+      v: 2586
+      type: DIAMOND_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"▕СВЕРХПРОЧНЫЕ
+          ПОНОЖИ▕"}],"text":""}'
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 4
+          THORNS: 3
+        ItemFlags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+  КРЫЛЬЯ_ДЕМОНА:
+    Item:
+      v: 2586
+      type: ELYTRA
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"✢КРЫЛЬЯ
+          ДЕМОНА✢"}],"text":""}'
+        enchants:
+          VANISHING_CURSE: 1
+        ItemFlags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+        Unbreakable: true
+  ТОТЕМ_БЕСМЕРТИЯ:
+    Item:
+      v: 2586
+      type: TOTEM_OF_UNDYING
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          VANISHING_CURSE: 1
+  СВЕРХПРОЧНЫЕ_БОТИНКИ:
+    Item:
+      v: 2586
+      type: DIAMOND_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"◥СВЕРХПРОЧНЫЕ
+          БОТИНКИ◤"}],"text":""}'
+        enchants:
+          DEPTH_STRIDER: 4
+          PROTECTION_FALL: 4
+          PROTECTION_ENVIRONMENTAL: 4
+          THORNS: 3
+        ItemFlags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+        Unbreakable: true
+  ЛЕГЧЕ_ПЫЛИНКИ:
+    Item:
+      v: 2586
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"ЛЕГЧЕ
+          ПЫЛИНКИ"}],"text":""}'
+        potion-type: minecraft:water
+        custom-effects:
+        - ==: PotionEffect
+          effect: 25
+          duration: 100
+          amplifier: 9
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 15
+          duration: 60
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+  ПАНЦИРЬ_ЧЕРЕПАХИ:
+    Item:
+      v: 2586
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"green","text":"ПАНЦИРЬ
+          ЧЕРЕПАХИ"}],"text":""}'
+        potion-type: minecraft:water
+        custom-color:
+          ==: Color
+          RED: 62
+          BLUE: 0
+          GREEN: 255
+        custom-effects:
+        - ==: PotionEffect
+          effect: 11
+          duration: 2800
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 22
+          duration: 2800
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 24
+          duration: 2800
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 23
+          duration: 2800
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 8
+          duration: 500
+          amplifier: 4
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 2
+          duration: 500
+          amplifier: 4
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 27
+          duration: 500
+          amplifier: 4
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 17
+          duration: 500
+          amplifier: 4
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 18
+          duration: 500
+          amplifier: 4
+          ambient: false
+          has-particles: true
+          has-icon: true
+  '10007':
+    Item:
+      v: 2586
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"1000-7???"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 255
+          BLUE: 0
+          GREEN: 205
+        custom-effects:
+        - ==: PotionEffect
+          effect: 1
+          duration: 3000
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 5
+          duration: 2700
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 12
+          duration: 2700
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 11
+          duration: 700
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 10
+          duration: 700
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 15
+          duration: 500
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 17
+          duration: 300
+          amplifier: 4
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Моменталка:
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 6
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Моменталка
+          III"}],"text":""}'
+        potion-type: minecraft:water
+        custom-effects:
+        - ==: PotionEffect
+          effect: 7
+          duration: 20
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Замедление:
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 6
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Замедление"}],"text":""}'
+        potion-type: minecraft:water
+        custom-effects:
+        - ==: PotionEffect
+          effect: 2
+          duration: 2000
+          amplifier: 14
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 9
+          duration: 3000
+          amplifier: 4
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Вредоносная:
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 6
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Вредоносная"}],"text":""}'
+        potion-type: minecraft:water
+        custom-effects:
+        - ==: PotionEffect
+          effect: 4
+          duration: 2200
+          amplifier: 4
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 15
+          duration: 2200
+          amplifier: 4
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 18
+          duration: 2200
+          amplifier: 4
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Массивная_руна:
+    Item:
+      v: 2586
+      type: MAGMA_CREAM
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"└Массивная
+          руна┐"}],"text":""}'
+        enchants:
+          DURABILITY: 1
+        attribute-modifiers:
+          GENERIC_KNOCKBACK_RESISTANCE:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: 1.0
+            name: generic.knockbackResistance
+            slot: OFF_HAND
+            uuid: ec9411f3-8ee6-4d8a-8786-a5952c6915df
+            operation: 0
+          GENERIC_MAX_HEALTH:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: -0.1
+            name: generic.maxHealth
+            slot: OFF_HAND
+            uuid: 3d638b01-70a8-4d8e-8d92-e7c1a9869120
+            operation: 1
+          GENERIC_ATTACK_DAMAGE:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: 0.25
+            name: generic.attackDamage
+            slot: OFF_HAND
+            uuid: 0089315e-1506-4254-99cc-f19e592897d4
+            operation: 1
+        ItemFlags:
+        - HIDE_ENCHANTS
+  Восполняющая_руна:
+    Item:
+      v: 2586
+      type: MAGMA_CREAM
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"└Восполняющая
+          руна┐"}],"text":""}'
+        enchants:
+          DURABILITY: 1
+        attribute-modifiers:
+          GENERIC_ATTACK_DAMAGE:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: 0.2
+            name: generic.attackDamage
+            slot: OFF_HAND
+            uuid: c5b1052f-3266-4742-ae32-27eadb25cdd7
+            operation: 1
+          GENERIC_MAX_HEALTH:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: 20.0
+            name: generic.maxHealth
+            slot: OFF_HAND
+            uuid: 1f0e29d9-dade-46a2-94fe-d8135bba40fa
+            operation: 0
+        ItemFlags:
+        - HIDE_ENCHANTS
+  Колючая_руна:
+    Item:
+      v: 2586
+      type: MAGMA_CREAM
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"└Колючая
+          руна┐ "}],"text":""}'
+        enchants:
+          THORNS: 21
+        attribute-modifiers:
+          GENERIC_MOVEMENT_SPEED:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: -0.25
+            name: generic.movementSpeed
+            slot: OFF_HAND
+            uuid: 02606584-9d57-4a31-b418-0798e8c7760c
+            operation: 1
+          GENERIC_ATTACK_SPEED:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: -0.1
+            name: generic.attackSpeed
+            slot: OFF_HAND
+            uuid: ebe3ae28-5560-44d3-a351-1d0169a9c742
+            operation: 1
+  Скоростная_руна:
+    Item:
+      v: 2586
+      type: MAGMA_CREAM
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"└Скоростная
+          руна┐ "}],"text":""}'
+        enchants:
+          DURABILITY: 1
+        attribute-modifiers:
+          GENERIC_MOVEMENT_SPEED:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: 0.45
+            name: generic.movementSpeed
+            slot: OFF_HAND
+            uuid: 4fe79027-e97f-4985-840f-ecf33a0920fb
+            operation: 1
+          GENERIC_ATTACK_SPEED:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: 0.35
+            name: generic.attackSpeed
+            slot: OFF_HAND
+            uuid: be67f887-7afe-42d9-aca2-682b56506534
+            operation: 1
+          GENERIC_MAX_HEALTH:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: 10.0
+            name: generic.maxHealth
+            slot: OFF_HAND
+            uuid: cadcadb3-f66c-4397-a4c2-06e4b43df2b2
+            operation: 0
+        ItemFlags:
+        - HIDE_ENCHANTS
+  Тяжёлая_руна:
+    Item:
+      v: 2586
+      type: MAGMA_CREAM
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"└Тяжёлая
+          руна┐"}],"text":""}'
+        enchants:
+          DURABILITY: 1
+        attribute-modifiers:
+          GENERIC_MAX_HEALTH:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: -0.5
+            name: generic.maxHealth
+            slot: OFF_HAND
+            uuid: 2774da22-afad-4bfd-8a53-16d5007ce7e0
+            operation: 1
+          GENERIC_ATTACK_DAMAGE:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: 0.5
+            name: generic.attackDamage
+            slot: OFF_HAND
+            uuid: 6f150e96-d12e-412b-9ece-f3999d0cd91c
+            operation: 1
+          GENERIC_MOVEMENT_SPEED:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: 0.2
+            name: generic.movementSpeed
+            slot: OFF_HAND
+            uuid: b4c61f19-9db2-46bc-b99b-5f96c3dc6d38
+            operation: 1
+        ItemFlags:
+        - HIDE_ENCHANTS
+  '&r&6Эффективость_V':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          DIG_SPEED: 5
+  '&r&6Острота_V':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          DAMAGE_ALL: 5
+  '&r&6Сила_V':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          ARROW_DAMAGE: 5
+  '&r&6Защита_IV':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          PROTECTION_ENVIRONMENTAL: 4
+  '&r&6Добыча_III':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          LOOT_BONUS_MOBS: 3
+  '&r&6Удача_III':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          LOOT_BONUS_BLOCKS: 3
+  '&r&6Прочность_III':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          DURABILITY: 3
+  '&r&6Шёлковое_Касание':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          SILK_TOUCH: 1
+  '&r&6Починка':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          MENDING: 1
+  '&r&6Подводник':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          WATER_WORKER: 1
+  '&r&6Подводное_дыхание_III':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          OXYGEN: 3
+  '&r&6Подводная_ходьба_III':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          DEPTH_STRIDER: 3
+  '&r&6Невесомость_IV':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          PROTECTION_FALL: 4
+  '&r&6Бесконечность':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          ARROW_INFINITE: 1
+  '&r&6Разящий_клинок_III':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          SWEEPING_EDGE: 3
+  '&r&6Ледоход_II':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          FROST_WALKER: 2
+  '&r&6Отдача_II':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          KNOCKBACK: 2
+  '&r&6Откидывание_II':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          ARROW_KNOCKBACK: 2
+  '&r&6Шипы_III':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          THORNS: 3
+  '&r&6Заговор_огня_II':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          FIRE_ASPECT: 2
+  '&r&6Воспламенение':
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          ARROW_FIRE: 1
+  '&6Стрела_Левитации':
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 32
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Стрела
+          левитации"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 145
+          BLUE: 147
+          GREEN: 133
+        custom-effects:
+        - ==: PotionEffect
+          effect: 25
+          duration: 200
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+  '&6Ядовитая_Стрела':
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 32
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Ядовитая
+          стрела"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 165
+          BLUE: 235
+          GREEN: 76
+        custom-effects:
+        - ==: PotionEffect
+          effect: 19
+          duration: 300
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+  '&6Стрела_Шока':
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 32
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Стрела
+          шока"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 78
+          BLUE: 59
+          GREEN: 120
+        custom-effects:
+        - ==: PotionEffect
+          effect: 9
+          duration: 300
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+  '&6Стрела_Слабости':
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 32
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Стрела
+          слабости"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 2
+          BLUE: 8
+          GREEN: 44
+        custom-effects:
+        - ==: PotionEffect
+          effect: 18
+          duration: 500
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+  '&6Стрела_Вреда':
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 32
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Стрела
+          вреда"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 43
+          BLUE: 233
+          GREEN: 167
+        custom-effects:
+        - ==: PotionEffect
+          effect: 7
+          duration: 20
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+  '&6Стрела_Пяти_Игл':
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 32
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Стрела
+          пяти игл"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 215
+          BLUE: 202
+          GREEN: 127
+        custom-effects:
+        - ==: PotionEffect
+          effect: 19
+          duration: 1600
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 20
+          duration: 2400
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 17
+          duration: 1600
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 15
+          duration: 1600
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 2
+          duration: 2400
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+  '&6Стрела_Иссушения':
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 32
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Стрела
+          иссушения"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 52
+          BLUE: 162
+          GREEN: 62
+        custom-effects:
+        - ==: PotionEffect
+          effect: 20
+          duration: 200
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+  стрела:
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Стрела
+          слабости"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 2
+          BLUE: 8
+          GREEN: 44
+        custom-effects:
+        - ==: PotionEffect
+          effect: 18
+          duration: 500
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+  3x3:
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":true,"strikethrough":false,"obfuscated":false,"color":"orange","text":"3X3
+          I"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Шанс
+          сломать 3x3x3."}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Только
+          для кирок, или лопаты"}],"text":""}'
+        custom-model-data: 0
+        internal: H4sIAAAAAAAA/+NiYOBgYEnKz89mkEpMjS9LzMlMsU5JLcnPSyxJtTa0NrA2NDCwZgAAetU8OicAAAA=
+  AutoSmelt:
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":true,"strikethrough":false,"obfuscated":false,"color":"orange","text":"Авто-Плавка"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Есть
+          шанс, что добытые руди и блоки"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"сразу
+          переплавляются"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"(Чар
+          на инструменты)"}],"text":""}'
+        custom-model-data: 0
+        internal: H4sIAAAAAAAA/+NiYOBgYEnKz89mkE5MjS9LzMlMsU4sLckvzk3NKbE2sjawNjQwsGYAAETzJ3ooAAAA
+  Lightning:
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":true,"strikethrough":false,"obfuscated":false,"color":"orange","text":"Молния"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Шанс
+          поразить противника молнией."}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"(Чар
+          на лук)"}],"text":""}'
+        custom-model-data: 0
+        internal: H4sIAAAAAAAA/+NiYOBgYEnKz89mkE5MjS9LzMlMsc7JTM8oycvMS7c2sjawNjQwsGYAAIrTkWAoAAAA
+  Sniper:
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":true,"strikethrough":false,"obfuscated":false,"color":"orange","text":"Снайпер"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Выстрелы
+          в голову снарядом"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"наносят
+          до 3,5-кратного урона"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"(Чар
+          на лук)"}],"text":""}'
+        custom-model-data: 0
+        internal: H4sIAAAAAAAA/+NiYOBgYEnKz89mkEhMjS9LzMlMsS7OyyxILbI2sjawNjQwsGYAAGyn3hclAAAA
+  Assassin:
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":true,"strikethrough":false,"obfuscated":false,"color":"orange","text":"Ассасин"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Чем
+          ближе вы находитесь к своему врагу,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"тем
+          больший урон наносите (до 1,25раза)."}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Однако,
+          если вы находитесь на расстоянии"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"более
+          2 блоков, вы нанесете меньше урона, чем обычно."}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"(Чар
+          на меч)"}],"text":""}'
+        custom-model-data: 0
+        internal: H4sIAAAAAAAA/+NiYOBgYEnKz89mkEpMjS9LzMlMsU4sLgaizDxrI2sDa0MDA2sGAN1yIfMnAAAA
+  Frozen:
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":true,"strikethrough":false,"obfuscated":false,"color":"orange","text":"Морозка"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Может
+          вызвать медлительность атакующего"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"(Чар
+          на броню)"}],"text":""}'
+        custom-model-data: 0
+        internal: H4sIAAAAAAAA/+NiYOBgYEnKz89mkEhMjS9LzMlMsU4ryq9KzbM2sjawNjQwsGYAANMJRuwlAAAA
+  UndeadRuse:
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":true,"strikethrough":false,"obfuscated":false,"color":"orange","text":"Уловка
+          нежити"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"При
+          получении урона у вас есть шанс"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"породить
+          орды зомби, чтобы отвлечь"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"и
+          дезориентировать ваших противников."}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"(Чар
+          на ботинки)"}],"text":""}'
+        custom-model-data: 0
+        internal: H4sIAAAAAAAA/+NiYOBgYEnKz89mkElMjS9LzMlMsS7NS0lNTCkqLU61NrY2sDY0MLBmAAAEZQ7QKQAAAA==
+  SmokeBomb:
+    Item:
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":true,"strikethrough":false,"obfuscated":false,"color":"orange","text":"Дымовая
+          завеса"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Когда
+          вы будете близки к смерти,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"вы
+          запустите дымовую шашку."}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"чтобы
+          отвлечь своих врагов."}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"(Чар
+          на шлем)"}],"text":""}'
+        custom-model-data: 0
+        internal: H4sIAAAAAAAA/+NiYOBgYEnKz89mkE5MjS9LzMlMsS7Ozc9OTcrPTbI2tjawNjQwsGYAAIIyB5IoAAAA
+  Топ_Мотыга:
+    Item:
+      v: 2586
+      type: NETHERITE_HOE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Топ
+          Мотыга"}],"text":""}'
+        enchants:
+          DIG_SPEED: 10
+          LOOT_BONUS_BLOCKS: 3
+          DURABILITY: 5
+  Топ_Лопата:
+    Item:
+      v: 2586
+      type: NETHERITE_SHOVEL
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Топ
+          Лопата"}],"text":""}'
+        enchants:
+          DIG_SPEED: 10
+          LOOT_BONUS_BLOCKS: 3
+          DURABILITY: 5
+  Топ_Топор:
+    Item:
+      v: 2586
+      type: NETHERITE_AXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Топ
+          Топор"}],"text":""}'
+        enchants:
+          DIG_SPEED: 10
+          LOOT_BONUS_BLOCKS: 3
+          DURABILITY: 5
+  Кирка_Сатаны:
+    Item:
+      v: 2586
+      type: NETHERITE_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"//
+          "},{"bold":true,"italic":false,"color":"aqua","text":"Кирка Сатаны "},{"bold":false,"italic":false,"color":"aqua","text":"//"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Smelting
+          I"}],"text":""}'
+        enchants:
+          DIG_SPEED: 7
+          LOOT_BONUS_BLOCKS: 4
+          MENDING: 1
+          DURABILITY: 4
+        internal: H4sIAAAAAAAA/+NiYGBmEE9MjU/NS85IzCvJTc0rsS7OTc0pycxLZ2BgYGRmYC3OyS8pBrEZAC2aR7wuAAAA
+  Топ_Кирка:
+    Item:
+      v: 2586
+      type: NETHERITE_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Топ
+          Кирка"}],"text":""}'
+        enchants:
+          DIG_SPEED: 7
+          LOOT_BONUS_BLOCKS: 3
+          DURABILITY: 3
+  Топ_Кирка1:
+    Item:
+      v: 2586
+      type: NETHERITE_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Топ
+          Кирка"}],"text":""}'
+        enchants:
+          DIG_SPEED: 7
+          SILK_TOUCH: 1
+          DURABILITY: 3
+  Меч_Сатаны:
+    Item:
+      v: 2586
+      type: NETHERITE_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E80000","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EB0C00","text":"/
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EE1700","text":"М"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F22300","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F52F00","text":"ч
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F83A00","text":"С"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FB4600","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC4600","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F93A00","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F72F00","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F42300","text":"ы
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F21700","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EF0C00","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#ED0000","text":"/"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fСовершенно новый"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &5Эпический"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Этот
+          меч был выкован специально для тебя"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          совершенно новый, уникальный меч,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"эпический,
+          меч"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Меч
+          был куплен в: &b/shop"}],"text":""}'
+        enchants:
+          FIRE_ASPECT: 2
+          LOOT_BONUS_MOBS: 3
+          MENDING: 1
+          DAMAGE_ALL: 6
+          DURABILITY: 3
+  Ботинки_Сатаны:
+    Item:
+      v: 2586
+      type: NETHERITE_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E80000","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EA0900","text":"/
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#ED1200","text":"Б"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EF1B00","text":"о"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F22400","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F42D00","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F73600","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F93F00","text":"к"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC4800","text":"и
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC4800","text":"С"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FA3F00","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F83600","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F62D00","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F52400","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F31B00","text":"ы
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F11200","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EF0900","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#ED0000","text":"/"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fСовершенно новый"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &5Эпический"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Специально
+          для тебя повзаимствовал у Сатаны"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          совершенно новый, адский,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"ботинки,
+          уникальные"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Ботинки
+          были куплены в: &b/shop"}],"text":""}'
+        enchants:
+          PROTECTION_EXPLOSIONS: 4
+          PROTECTION_FIRE: 4
+          MENDING: 1
+          PROTECTION_PROJECTILE: 4
+          PROTECTION_ENVIRONMENTAL: 4
+  Поножи_Сатаны:
+    Item:
+      v: 2586
+      type: NETHERITE_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E80000","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EB0A00","text":"/
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#ED1300","text":"П"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F01D00","text":"о"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F32600","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F53000","text":"о"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F83900","text":"ж"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FA4300","text":"и
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FD4C00","text":"С"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FB4300","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F93900","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F73000","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F52600","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F31D00","text":"ы
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F11300","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EF0A00","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#ED0000","text":"/"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fСовершенно новый"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &5Эпический"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Будь
+          осторожен, Сатана их всё ещё ищет"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          адские поножи, Сатана вас уже ищет"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Эпический,
+          сатана"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Поножи
+          были куплены в: &b/shop"}],"text":""}'
+        enchants:
+          PROTECTION_EXPLOSIONS: 4
+          PROTECTION_FIRE: 4
+          MENDING: 1
+          PROTECTION_PROJECTILE: 4
+          PROTECTION_ENVIRONMENTAL: 4
+  Нагрудник_Сатаны:
+    Item:
+      v: 2586
+      type: NETHERITE_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E80000","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EA0800","text":"/
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EC1000","text":"Н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EF1800","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F12000","text":"г"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F32800","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F53000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F73800","text":"д"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FA4000","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC4800","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC4800","text":"к
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FA4000","text":"С"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F93800","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F73000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F52800","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F42000","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F21800","text":"ы
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F01000","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EF0800","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#ED0000","text":"/"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fСовершенно новый"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &5Эпический"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Был
+          выкован из сердца Сатаны"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          совершенно новый, адский,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"эпический,
+          сатана"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Нагрудник
+          был куплен в: &b/shop"}],"text":""}'
+        enchants:
+          PROTECTION_EXPLOSIONS: 4
+          PROTECTION_FIRE: 4
+          MENDING: 1
+          PROTECTION_PROJECTILE: 4
+          PROTECTION_ENVIRONMENTAL: 5
+  Шлем_Сатаны:
+    Item:
+      v: 2586
+      type: NETHERITE_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E80000","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EB0B00","text":"/
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EE1600","text":"Ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F12100","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F42B00","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F73600","text":"м
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FA4100","text":"С"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FD4C00","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FB4100","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F83600","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F62B00","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F42100","text":"ы
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F21600","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EF0B00","text":"/"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#ED0000","text":"/"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fСовершенно новый"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &eРедкий"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Был
+          украден у самого Сатаны"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          совершенно новый, адский,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"редкий,
+          сатана"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Шлем
+          был куплен в: &b/shop"}],"text":""}'
+        enchants:
+          PROTECTION_EXPLOSIONS: 4
+          PROTECTION_FIRE: 4
+          MENDING: 1
+          PROTECTION_PROJECTILE: 4
+          PROTECTION_ENVIRONMENTAL: 4
+  Лук_Крушителя:
+    Item:
+      v: 2586
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8E0000","text":"111
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9F0000","text":"Л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B10000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C20000","text":"к
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D40000","text":"К"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E50000","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F60000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F60000","text":"ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E50000","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D40000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C20000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B10000","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9F0000","text":"я
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8E0000","text":"111"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fСовершенно новый"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &5Эпический"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Сокрушительный
+          лук"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          совершенно новый, крушитель,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"эпический,
+          кровожадный лук"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Лук
+          был куплен в: &b/shop"}],"text":""}'
+        enchants:
+          ARROW_FIRE: 1
+          ARROW_INFINITE: 1
+          LOOT_BONUS_MOBS: 5
+          MENDING: 1
+          ARROW_DAMAGE: 5
+          DURABILITY: 5
+  Меч_Крушителя:
+    Item:
+      v: 2586
+      type: NETHERITE_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8E0000","text":"111
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9F0000","text":"М"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B10000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C20000","text":"ч
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D40000","text":"К"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E50000","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F60000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F60000","text":"ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E50000","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D40000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C20000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B10000","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9F0000","text":"я
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8E0000","text":"111"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fСовершенно новый"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &5Эпический"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Вид
+          холодного оружия с уникальным наконечником"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          совершенно новый, крушитель,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"эпический,
+          меч для настощих убийц"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Меч
+          был куплен в: &b/shop"}],"text":""}'
+        enchants:
+          DAMAGE_ARTHROPODS: 7
+          FIRE_ASPECT: 2
+          LOOT_BONUS_MOBS: 5
+          MENDING: 1
+          DAMAGE_ALL: 7
+          DAMAGE_UNDEAD: 7
+          SWEEPING_EDGE: 3
+          DURABILITY: 5
+  Ботинки_Крушителя:
+    Item:
+      v: 2586
+      type: NETHERITE_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8E0000","text":"111
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9B0000","text":"Б"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A90000","text":"о"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B60000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C30000","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D00000","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#DE0000","text":"к"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EB0000","text":"и
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F80000","text":"К"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F80000","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EB0000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#DE0000","text":"ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D00000","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C30000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B60000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A90000","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9B0000","text":"я
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8E0000","text":"111"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fСовершенно новый"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &eРедкий"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Самые
+          быстрые ботинки на диком западе"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          совершенно новый, крушитель,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"редкий,
+          уникальный"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Ботинки
+          были куплены в: &b/shop"}],"text":""}'
+        enchants:
+          PROTECTION_EXPLOSIONS: 5
+          DEPTH_STRIDER: 5
+          PROTECTION_FIRE: 5
+          MENDING: 1
+          PROTECTION_PROJECTILE: 5
+          PROTECTION_ENVIRONMENTAL: 5
+          SOUL_SPEED: 3
+          THORNS: 3
+          DURABILITY: 5
+  Поножи_Крушителя:
+    Item:
+      v: 2586
+      type: NETHERITE_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8E0000","text":"111
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9D0000","text":"Ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#AC0000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#BB0000","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CA0000","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D90000","text":"ы
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E80000","text":"К"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F70000","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F70000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E80000","text":"ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D90000","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CA0000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#BB0000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#AC0000","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9D0000","text":"я
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8E0000","text":"111"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fНемного поношенные"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &5Эпический"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Поножи
+          для настоящего война"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          поношенные, крушитель,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"эпический,
+          штанишки"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Поножи
+          были куплены в: &b/shop"}],"text":""}'
+        enchants:
+          PROTECTION_EXPLOSIONS: 5
+          PROTECTION_FIRE: 5
+          MENDING: 1
+          PROTECTION_PROJECTILE: 5
+          PROTECTION_ENVIRONMENTAL: 5
+          THORNS: 3
+          DURABILITY: 5
+  Нагрудник_Крушителя:
+    Item:
+      v: 2586
+      type: NETHERITE_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8E0000","text":"111
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9A0000","text":"Н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A60000","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B20000","text":"г"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#BE0000","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C90000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D50000","text":"д"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E10000","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#ED0000","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F90000","text":"к
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F90000","text":"К"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#ED0000","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E10000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D50000","text":"ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C90000","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#BE0000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B20000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A60000","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9A0000","text":"я
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8E0000","text":"111"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fНемного поношенные"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &5Эпический"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Нагрудник
+          ждёт войны"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          поношенные, крушитель,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"эпический,
+          нагрудник"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Нагрудник
+          был куплен в: &b/shop"}],"text":""}'
+        enchants:
+          PROTECTION_EXPLOSIONS: 5
+          PROTECTION_FIRE: 5
+          MENDING: 1
+          PROTECTION_PROJECTILE: 5
+          PROTECTION_ENVIRONMENTAL: 5
+          THORNS: 3
+          DURABILITY: 5
+  Шлем_Крушителя:
+    Item:
+      v: 2586
+      type: NETHERITE_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8E0000","text":"111
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B40000","text":"Ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C00000","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CD0000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D90000","text":"м
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E60000","text":"К"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F20000","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F20000","text":"ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E60000","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D90000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CD0000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C00000","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B40000","text":"я
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#A70000","text":"111"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fСовершенно новый"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &5Эпический"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Шлем
+          для тебя"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          совершенно новый, крушитель,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"эпический,
+          шлем"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Шлем
+          был куплен в: &b/shop"}],"text":""}'
+        enchants:
+          WATER_WORKER: 1
+          PROTECTION_EXPLOSIONS: 5
+          PROTECTION_FIRE: 5
+          MENDING: 1
+          PROTECTION_PROJECTILE: 5
+          PROTECTION_ENVIRONMENTAL: 5
+          OXYGEN: 3
+          THORNS: 3
+          DURABILITY: 5
+  Меч_Бога:
+    Item:
+      v: 2586
+      type: NETHERITE_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FB0000","text":"М"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FB120B","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC2417","text":"ч
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC3622","text":"Б"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC482D","text":"о"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FD5A39","text":"г"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FD6C44","text":"а"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Обезглавливание
+          I"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Сфера
+          I"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fСовершенно новый"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &5Эпический"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Вид
+          холодного оружия с заостренным концом"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          совершенно новый, сфера,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"эпический,
+          божественный меч, убивает в радиусе"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Меч
+          был куплен в: &b/shop"}],"text":""}'
+        enchants:
+          DAMAGE_ARTHROPODS: 7
+          FIRE_ASPECT: 2
+          LOOT_BONUS_MOBS: 5
+          MENDING: 1
+          DAMAGE_ALL: 7
+          DAMAGE_UNDEAD: 7
+          SWEEPING_EDGE: 3
+          DURABILITY: 5
+        internal: H4sIAAAAAAAA/+NiYGBmEElMjU/NS85IzCvJTc0rsU7MTcosYWBgYGRmYC3OyS8pBrKZmBmk0ZSlpCYnFmSWJJZk5ueBVDMAAFkTEJBNAAAA
+  Катана:
+    Item:
+      v: 2586
+      type: NETHERITE_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#AF0000","text":"К"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CF0000","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EF0000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EF0000","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CF0000","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#AF0000","text":"а"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fСовершенно новый"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &5Эпический"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Клинок
+          рассекающий демонов"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          совершенно новый, убийца,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"эпический,клинок"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Клинок
+          был куплен в: &b/shop"}],"text":""}'
+        enchants:
+          DAMAGE_ARTHROPODS: 5
+          FIRE_ASPECT: 2
+          LOOT_BONUS_MOBS: 3
+          MENDING: 1
+          DAMAGE_ALL: 5
+          DAMAGE_UNDEAD: 5
+          SWEEPING_EDGE: 3
+          DURABILITY: 3
+  Меч_Сатаны1:
+    Item:
+      v: 2586
+      type: DIAMOND_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"М"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#DF2004","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#BF4008","text":"ч
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9F600C","text":"С"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#808011","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#609F15","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#40BF19","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#20DF1D","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#00FF21","text":"ы"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fСовершенно новый"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &eРедкий"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Вид
+          холодного оружия с прямым клинком"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          совершенно новый, заговор огня,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"редкий,
+          адский меч, прямиком из ада"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Меч
+          был куплен в: &b/shop"}],"text":""}'
+        enchants:
+          FIRE_ASPECT: 2
+          LOOT_BONUS_MOBS: 3
+          DAMAGE_ALL: 5
+          DURABILITY: 3
+  Лук_Сатаны1:
+    Item:
+      v: 2586
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"Л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E12000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C34001","text":"к
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A56001","text":"С"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#888002","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#6A9F02","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#4CBF02","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#2EDF03","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#10FF03","text":"ы"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Sniper
+          II"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"light_purple","text":"Neutralize
+          I"}],"text":""}'
+        enchants:
+          ARROW_FIRE: 1
+          ARROW_INFINITE: 1
+          LOOT_BONUS_MOBS: 3
+          ARROW_DAMAGE: 5
+          DURABILITY: 3
+        internal: H4sIAAAAAAAA/+NiYGBmkExMjU/NS85IzCvJTc0rsc5LLS0pSszJrEplYGBgZGYQRZMvzsssSC0CyjExM7AW5+SXFIPYDADICJpCTAAAAA==
+  Фантом:
+    Item:
+      v: 2586
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Фантом"}],"text":""}'
+        enchants:
+          ARROW_FIRE: 1
+          ARROW_DAMAGE: 4
+          DURABILITY: 3
+  Арбалет_Крушителя:
+    Item:
+      v: 2586
+      type: CROSSBOW
+      meta:
+        ==: ItemMeta
+        meta-type: CROSSBOW
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8F0000","text":"111
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9C0000","text":"А"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A90000","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B70000","text":"б"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C40000","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D10000","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#DE0000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EB0000","text":"т
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F80000","text":"К"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F80000","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EB0000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#DE0000","text":"ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D10000","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C40000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B70000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A90000","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9C0000","text":"я
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8F0000","text":"111"}],"text":""}'
+        enchants:
+          MENDING: 1
+          MULTISHOT: 1
+          PIERCING: 5
+          QUICK_CHARGE: 3
+          DURABILITY: 5
+        charged: false
+  Лук_Крушителя1:
+    Item:
+      v: 2586
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8F0000","text":"111
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A00000","text":"Л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B10000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C30000","text":"к
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D40000","text":"К"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E50000","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F60000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F60000","text":"ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E50000","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D40000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C30000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B10000","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A00000","text":"я
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8F0000","text":"111"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Адский
+          огонь I"}],"text":""}'
+        enchants:
+          ARROW_FIRE: 1
+          ARROW_INFINITE: 1
+          LOOT_BONUS_MOBS: 5
+          MENDING: 1
+          ARROW_DAMAGE: 5
+          DURABILITY: 5
+        internal: H4sIAAAAAAAA/+NiYGBmEE9MjU/NS85IzCvJTc0rsc5IzclJyyxKZWBgYGRmYC3OyS8pBrEZAJReDu0uAAAA
+  Лук_Сатаны:
+    Item:
+      v: 2586
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Лук
+          Сатаны"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Внешний
+          вид: &fСовершенно новый"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Качество:
+          &5Эпический"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Уникальный
+          лук"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Теги:
+          совершенно новый, уникальный лук,"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"эпический,
+          кровожадный лук"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":""}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Лук
+          был куплен в: &b/shop"}],"text":""}'
+        enchants:
+          ARROW_FIRE: 1
+          ARROW_INFINITE: 1
+          LOOT_BONUS_MOBS: 3
+          ARROW_DAMAGE: 5
+          PROTECTION_ENVIRONMENTAL: 3
+  Удочка:
+    Item:
+      v: 2586
+      type: FISHING_ROD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          LURE: 1
+          DURABILITY: 1
+  Спиннинг:
+    Item:
+      v: 2586
+      type: FISHING_ROD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Спиннинг"}],"text":""}'
+        enchants:
+          LUCK: 1
+          LURE: 2
+          DURABILITY: 2
+  Спиннинг_Кладоискателя:
+    Item:
+      v: 2586
+      type: FISHING_ROD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Спиннинг
+          Кладоискателя"}],"text":""}'
+        enchants:
+          LUCK: 2
+          LURE: 3
+          DURABILITY: 3
+  Удочка_Крушителя:
+    Item:
+      v: 2586
+      type: FISHING_ROD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8E0000","text":"111
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#BA0000","text":"У"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#BF0606","text":"д"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C30C0C","text":"о"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C81212","text":"ч"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CD1818","text":"к"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D21E1E","text":"а
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D62424","text":"К"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#DB2A2A","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#DF2424","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E31E1E","text":"ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E71818","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EB1212","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EF0C0C","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F30606","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F70000","text":"я
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#A70000","text":"111"}],"text":""}'
+        enchants:
+          LUCK: 5
+          LURE: 5
+          MENDING: 1
+          DURABILITY: 5
+  Молот_Тора:
+    Item:
+      v: 2586
+      type: NETHERITE_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Молот
+          Тора"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"&fВозможность
+          ломать &63х3"}],"text":""}'
+        internal: H4sIAAAAAAAA/+NiYGBmEE1MjU/NS85IzCvJTc0rsS4pAvEYGBhYmRlYi3PyS4qBbEYGABvQShwsAAAA
+  Меч_Правителя:
+    Item:
+      v: 2586
+      type: DIAMOND_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Меч
+          Правителя"}],"text":""}'
+        enchants:
+          LOOT_BONUS_MOBS: 5
+          SWEEPING_EDGE: 5
+          DURABILITY: 5
+  Серебро:
+    Item:
+      v: 2586
+      type: IRON_NUGGET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Серебро"}],"text":""}'
+  Marionetka:
+    Item:
+      v: 2586
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"ЗЕЛЬЕ
+          "},{"bold":true,"italic":false,"color":"gold","text":"«"},{"bold":true,"italic":false,"color":"yellow","text":"МАРИОНЕТКИ"},{"bold":true,"italic":false,"color":"gold","text":"»"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 255
+          BLUE: 82
+          GREEN: 228
+        custom-effects:
+        - ==: PotionEffect
+          effect: 12
+          duration: 3600
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 14
+          duration: 3600
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 15
+          duration: 120
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 16
+          duration: 3600
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 21
+          duration: 3600
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 24
+          duration: 3600
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Maga:
+    Item:
+      v: 2586
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"ЗЕЛЬЕ
+          "},{"bold":true,"italic":false,"color":"dark_purple","text":"«"},{"bold":true,"italic":false,"color":"light_purple","text":"МАГА"},{"bold":true,"italic":false,"color":"dark_purple","text":"»"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 142
+          BLUE: 215
+          GREEN: 29
+        custom-effects:
+        - ==: PotionEffect
+          effect: 12
+          duration: 3600
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 14
+          duration: 2400
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 16
+          duration: 2400
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 24
+          duration: 2400
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Kosh:
+    Item:
+      v: 2586
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"ЗЕЛЬЕ
+          "},{"bold":true,"italic":false,"color":"dark_green","text":"«"},{"bold":true,"italic":false,"color":"green","text":"КОШКИ"},{"bold":true,"italic":false,"color":"dark_green","text":"»"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 61
+          BLUE: 25
+          GREEN: 240
+        custom-effects:
+        - ==: PotionEffect
+          effect: 1
+          duration: 3600
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 3
+          duration: 3600
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 5
+          duration: 3600
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 10
+          duration: 3600
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 11
+          duration: 3600
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 15
+          duration: 200
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 24
+          duration: 200
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 25
+          duration: 60
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Babo4ka:
+    Item:
+      v: 2586
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"ЗЕЛЬЕ
+          "},{"bold":true,"italic":false,"color":"white","text":"«БАБОЧКА»"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 255
+          BLUE: 255
+          GREEN: 255
+        custom-effects:
+        - ==: PotionEffect
+          effect: 25
+          duration: 200
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Halk:
+    Item:
+      v: 2586
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"ЗЕЛЬЕ
+          "},{"bold":true,"italic":false,"color":"dark_red","text":"«"},{"bold":true,"italic":false,"color":"red","text":"ХАЛКА"},{"bold":true,"italic":false,"color":"dark_red","text":"»"}],"text":""}'
+        custom-color:
+          ==: Color
+          RED: 8
+          BLUE: 246
+          GREEN: 0
+        custom-effects:
+        - ==: PotionEffect
+          effect: 1
+          duration: 2400
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 25
+          duration: 100
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 2
+          duration: 1200
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 3
+          duration: 2400
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 5
+          duration: 2400
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 11
+          duration: 400
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 12
+          duration: 2400
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Точечная_стрела:
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 24
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"[❖]
+          "},{"bold":true,"italic":false,"color":"gold","text":"Точечная стрела"}],"text":""}'
+        custom-effects:
+        - ==: PotionEffect
+          effect: 7
+          duration: 600
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 19
+          duration: 120
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Дьявольская_стрела:
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 24
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"[❖]
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Дьявольская
+          стрела"}],"text":""}'
+        custom-effects:
+        - ==: PotionEffect
+          effect: 20
+          duration: 60
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 19
+          duration: 40
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 15
+          duration: 20
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Стрела_паранойи:
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 24
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"[❖]
+          "},{"bold":true,"italic":false,"color":"light_purple","text":"Стрела паранойи"}],"text":""}'
+        custom-effects:
+        - ==: PotionEffect
+          effect: 9
+          duration: 120
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 18
+          duration: 60
+          amplifier: 3
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 15
+          duration: 40
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 2
+          duration: 60
+          amplifier: 3
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Стрел_джастера:
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 24
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"[❖]
+          "},{"bold":true,"italic":false,"color":"yellow","text":"Стрела Джастера"}],"text":""}'
+        custom-effects:
+        - ==: PotionEffect
+          effect: 15
+          duration: 20
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 25
+          duration: 60
+          amplifier: 4
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 24
+          duration: 200
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Ледяная_стрела:
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 24
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_aqua","text":"[❖]
+          "},{"bold":true,"italic":false,"color":"aqua","text":"Ледяная стрела"}],"text":""}'
+        custom-effects:
+        - ==: PotionEffect
+          effect: 2
+          duration: 100
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 18
+          duration: 120
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Ядовитая_стрела:
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 24
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_green","text":"[❖]
+          "},{"bold":true,"italic":false,"color":"green","text":"Ядовитая стрела"}],"text":""}'
+        custom-effects:
+        - ==: PotionEffect
+          effect: 15
+          duration: 20
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 18
+          duration: 120
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 17
+          duration: 140
+          amplifier: 4
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 9
+          duration: 100
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+  Проклятая_стрела:
+    Item:
+      v: 2586
+      type: TIPPED_ARROW
+      amount: 24
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"[❖]
+          "},{"bold":true,"italic":false,"color":"dark_red","text":"Проклятая стрела"}],"text":""}'
+        custom-effects:
+        - ==: PotionEffect
+          effect: 15
+          duration: 60
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 18
+          duration: 200
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 9
+          duration: 100
+          amplifier: 0
+          ambient: false
+          has-particles: true
+          has-icon: true
+  првоерка:
+    Item:
+      v: 2586
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        custom-color:
+          ==: Color
+          RED: 249
+          BLUE: 29
+          GREEN: 128
+  Бульдозер:
+    Item:
+      v: 2586
+      type: NETHERITE_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Молот
+          Тора"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Мега-бульдозер
+          I"}],"text":""}'
+        internal: H4sIAAAAAAAA/+NiYGBmkEpMjU/NS85IzCvJTc0rsc5NTU+Mz83My8xLZ2BgYGRmYC3OyS8pBrEZAAe8liwxAAAA
+  Кирка_Крушителя:
+    Item:
+      v: 2586
+      type: NETHERITE_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"obfuscated":true,"text":"1 "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Кирка
+          Крушителя "},{"bold":true,"italic":false,"obfuscated":true,"color":"aqua","text":"1"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Авто-плавка
+          I"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Магнит
+          "}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Опытный
+          III"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Бульдозер
+          II"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Паутина
+          "}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Пингер
+          "}],"text":""}'
+        enchants:
+          DIG_SPEED: 10
+          LOOT_BONUS_BLOCKS: 5
+          MENDING: 1
+          DURABILITY: 5
+        internal: H4sIAAAAAAAA/zXL0QqCMBiG4T8siG6gW+hgA8XUwIsZc/83G8w5tkXR1acHnT3w8l6IznREMM8dI3OvzdA1kpu2lXdjrJxgaqnr/mG7wcLW0DF6B1b7pENRjpV3udBNLHoOKAKfqDitMSKJ6eU9r99Nb0wiujAjVXTV+O8LQhnzAl+2RkSHik7ZryXvph/wt8qknwAAAA==
+  Трезубец_Крушителя:
+    Item:
+      v: 2586
+      type: TRIDENT
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8F0000","text":"111
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9B0000","text":"Т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A80000","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B40000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C10000","text":"з"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CD0000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#DA0000","text":"б"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E60000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F30000","text":"ц
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"К"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F30000","text":"р"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E60000","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#DA0000","text":"ш"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CD0000","text":"и"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#C10000","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B40000","text":"е"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A80000","text":"л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#9B0000","text":"я
+          "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"#8F0000","text":"111"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Подрывник
+          I"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Яд
+          III"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Детекция
+          III"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Скаут
+          III"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Вампиризм
+          II"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Притяжение
+          II"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Ступор
+          III"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Окисление
+          II"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Возвращение
+          "}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Опытный
+          III"}],"text":""}'
+        enchants:
+          CHANNELING: 1
+          FIRE_ASPECT: 2
+          IMPALING: 7
+          LOOT_BONUS_MOBS: 5
+          LOYALTY: 3
+          MENDING: 1
+          DAMAGE_ALL: 7
+          DURABILITY: 5
+        internal: H4sIAAAAAAAA/1WNQQrCMBBFs3AhniWBltoqeJiQzkx0sE2GZFp6fNuN4u7xeY9/MeZsTpTgdcADcQhw61uHbde5K0B0I0HjQjPcY3+LFBsKIhMT+iMKST2jn7iqWS1tMuXKK1nJXHOySEqgvJMWRtrlCnlRu4ZZuNB3ncMzkf4kXSQXmzfG8FdDnmkM8D6ePJYsQsV8ALGI0nfDAAAA

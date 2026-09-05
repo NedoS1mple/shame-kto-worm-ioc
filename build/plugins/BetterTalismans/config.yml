@@ -1,0 +1,132 @@
+#            ___      _   _          _____     _ _                                   Our plugins: https://alonsoaliaga.com/plugins
+#           | _ ) ___| |_| |_ ___ _ |_   _|_ _| (_)____ __  __ _ _ _  ___            Support server: https://alonsoaliaga.com/discord
+#           | _ \/ -_)  _|  _/ -_) '_|| |/ _` | | (_-< '  \/ _` | ' \(_-<            Youtube: https://alonsoaliaga.com/play
+#           |___/\___|\__|\__\___|_|  |_|\__,_|_|_/__/_|_|_\__,_|_||_/__/            Test server: plugins.alonsoaliaga.com
+#                                   by AlonsoAliaga                                  Twitch: https://alonsoaliaga.com/twitch
+#               Considering donating? https://alonsoaliaga.com/donate                Thanks for using my plugin! <3
+#  ======================================================================================================================================
+#  |              Downloaded this jar in a server setup? Tell the author he is NOT allowed to upload someone else work!                 |
+#  |   Update to latest version as soon as possible. Support WON'T be given when using old versions. Specially from downloaded setups.  |
+#  | Remember: Support is only provided for .jar files downloaded DIRECTLY from spigotmc.org! Other files will be considered as invalid |
+#  |        as they are NOT the same .jar file the developer (me) uploaded and I cannot guarantee that the file is safe or not.         |
+#  |                   If you have issues with setup configs. Tell the setup author to update his config file.                          |
+#  ======================================================================================================================================
+Messages:
+  No-permission: '&cУ вас недостаточно прав.'
+  Reloaded: '&aSome messages and options have been reloaded. Other may require a restart!'
+  Invalid-player: '&cPlayer is not online!'
+  No-craft-permission: '&cYou don''t have permission to craft this talisman'
+  No-shift-craft: '&cYou cannot craft talismans while holding shift'
+  No-recipe-permission: '&cYou don''t have permission to view this recipe'
+  No-recipe-available: '&cThis talisman doesn''t seems to be craftable'
+  Corrupted-talisman: '&cThis talisman seems to be corrupted. Delete it immediately'
+  Disabled: '&cTalismans have been forbidden in this server. This one has been removed!'
+  Disabled-other: '&cTalismans have been forbidden in this server.'
+  Disabled-armor: '&cTalismans have been forbidden in this server. Your armor talismans
+    were removed!'
+  Removed-talisman: '&9[LOG] &cTalismans has been removed from {PLAYER}. ({AMOUNT})'
+  Talismans:
+    No-permission: '&cYou don''t have permission to view talismans GUI.'
+    Opened-for-other: '&aYou opened talisman GUI for {TARGET}.'
+  Give:
+    Invalid-talisman: '&cTalisman is not valid.'
+    Received: '&aYou received ''{TALISMAN}'' talisman.'
+    Received-extra: '&aYou received ''{TALISMAN}'' talisman. There wasn''t enough
+      space in your inventory, some items were dropped in the floor.'
+    Success: '&6You gave {TARGET} ''{TALISMAN}'' talisman.'
+  Help:
+    OP:
+    - '&9 /bettertalismans test &f- &bGives you all talismans (OP only)'
+    - '&9 /bettertalismans talismans <player> &f- &bOpen talismans GUI for player'
+    - '&9 /bettertalismans give <player> <talisman> &f- &bGive talisman to player'
+    - '&9 /bettertalismans reload &f- &bReload configuration'
+    Admin:
+    - '&9 /bettertalismans talismans <player> &f- &bOpen talismans GUI for player'
+    - '&9 /bettertalismans give <player> <talisman> &f- &bGive talisman to player'
+    - '&9 /bettertalismans reload &f- &bReload configuration'
+    User:
+    - '&9 /bettertalismans talismans &f- &bOpen talismans GUI'
+Lore:
+  Health-boost: '&c+{AMOUNT} Hearts'
+  Speed-boost: '&b+{AMOUNT}% Speed'
+  Armor-boost: '&f+{AMOUNT} Armor Points'
+  Armor-toughness-boost: '&f+{AMOUNT} Armor Toughness'
+  Luck-boost: '&a+{AMOUNT} Luck'
+  Attack-speed-boost: '&e+{AMOUNT} Attack Speed'
+  Attack-damage-boost: '&9+{AMOUNT} Attack Damage'
+  Knockback-resistance-boost: '&7+{AMOUNT}% Knockback Resistance'
+  Max-absorption-boost: '&e+{AMOUNT} Max Yellow Hearts'
+Options:
+  Remove-talismans: false
+  Debug: false
+  Hide-locked: true
+  Talismans-gui-title: '&8Talismans GUI ({PAGE}/{MAX})'
+  Fill-empty: true
+  Discover-recipes: true
+  Aliases:
+  - btalismans
+  - btalisman
+  - bettertalisman
+  Not-cancel-interaction-for-following-materials:
+  - endsWith=_SWORD
+  - endsWith=_HOE
+  - endsWith=_AXE
+  - endsWith=_SHOVEL
+  - endsWith=_SPADE
+  - endsWith=_PICKAXE
+  - endsWith=_HELMET
+  - endsWith=_CHESTPLATE
+  - endsWith=_LEGGINGS
+  - endsWith=_BOOTS
+  - ELYTRA
+  - SHIELD
+  - BOW
+  - CROSSBOW
+  - TRIDENT
+  - FIREWORK_STAR
+  - FIREWORK
+  - FIREWORK_ROCKET
+  - endsWith=_POTION
+  - POTION
+Items:
+  Frame:
+    Color: BLACK
+    Custom-model-data: 0
+  Unknown-talisman:
+    Texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDZiYTYzMzQ0ZjQ5ZGQxYzRmNTQ4OGU5MjZiZjNkOWUyYjI5OTE2YTZjNTBkNjEwYmI0MGE1MjczZGM4YzgyIn19fQ==
+    Displayname: '&4&lUnknown Talisman'
+    Lore:
+    - '&7You haven''t unlocked this'
+    - '&7talisman. It''s a mystery.'
+  Previous-page:
+    Material: ARROW
+    Texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzdhZWU5YTc1YmYwZGY3ODk3MTgzMDE1Y2NhMGIyYTdkNzU1YzYzMzg4ZmYwMTc1MmQ1ZjQ0MTlmYzY0NSJ9fX0=
+    Displayname: '&9Previous page'
+    Lore:
+    - '&7Move to previous page.'
+  Next-page:
+    Material: ARROW
+    Texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDZiYTYzMzQ0ZjQ5ZGQxYzRmNTQ4OGU5MjZiZjNkOWUyYjI5OTE2YTZjNTBkNjEwYmI0MGE1MjczZGM4YzgyIn19fQ==
+    Displayname: '&9Next page'
+    Lore:
+    - '&7Move to next page.'
+  Recipe-frame:
+    Color: BLACK
+    Custom-model-data: 0
+  Return-to-talismans:
+    Material: ARROW
+    Slot: 44
+    Texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODY0Zjc3OWE4ZTNmZmEyMzExNDNmYTY5Yjk2YjE0ZWUzNWMxNmQ2NjllMTljNzVmZDFhN2RhNGJmMzA2YyJ9fX0=
+    Displayname: '&cReturn to talismans.'
+    Lore: []
+Permissions:
+  Admin: bettertalismans.admin
+  Talismans: none
+  Staff: bettertalismans.staff
+Updates:
+  Auto-update-configuration: true
+  Check-updates: false
+  Notify-updates: false
+  Permission: bettertalismans.update
+  Message: '&9[BetterTalismans] &eA new update has been found! You are using version
+    {CURRENT}. Download version {NEW} here &c{LINK}'

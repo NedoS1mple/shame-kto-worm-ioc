@@ -1,0 +1,26 @@
+# 
+# only work with 1.16.4 or +
+type: SPLASH_POTION
+lingering: true
+customNameVisible: false
+customName: Lingering
+glowing: true
+bounce: true
+despawnDelay: 20
+silent: false
+radius: -1
+velocity: 1
+incendiary: false
+potionEffects:
+  '1':
+    potionEffectType: SPEED
+    duration: 20
+    amplifier: 2
+  '2':
+    potionEffectType: INCREASE_DAMAGE
+    duration: 10
+    amplifier: 4
+particlesAmount: 10
+particlesOffSet: 0.5
+particlesSpeed: 0.3
+particlesDelay: 1

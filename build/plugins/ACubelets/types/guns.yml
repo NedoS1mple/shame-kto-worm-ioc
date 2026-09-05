@@ -1,0 +1,469 @@
+type:
+  name: '{#7c7c7a}К{#787876}е{#747472}й{#6f6f6e}с {#6b6b6a}с {#676766}о{#636362}р{#5f5f5e}у{#5b5b5a}ж{#565656}и{#525252}е{#4e4e4e}м'
+  animation: animation1
+  expiration: 2w
+  icon:
+    texture: base64:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzY1OGNjYzczNDU1NTllOTMyMWY0OWVlMWFmNjc1MjJlNzA4ZGNhODkzMmIwYTcyMWNjMzQxMzA3MzFlYjU5OCJ9fX0=
+  description:
+  - '&c&lМожет выпасть:'
+  lore:
+    opening:
+      available:
+      - '{#7c7c7a}➥ {#787876}Н{#747472}а{#6f6f6e}ж{#6b6b6a}м{#676766}и&f, чтобы открыть!'
+      - ''
+      - '&f Получен: {#7c7c7a}%received% назад'
+      - '&f Закончится через: {#7c7c7a}%expires%'
+      expired:
+      - '&5Received: &a%received% ago'
+      - '&5Expires: &cExpired'
+      - ''
+      - '%description%'
+      - ''
+  rarities:
+    easy:
+      name: 25%
+      chance: 25.0
+      duplicatePointsRange: 50-450
+  rewards:
+    reward_0:
+      name: '&8Лук'
+      rarity: easy
+      rewardUUID: 0b6574d4-b359-4e74-ac3f-bbb7a5af6a54
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:bow{Enchantments:[{id:"minecraft:flame",lvl:1},{id:"minecraft:power",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: BOW
+        flags:
+        - HIDE_ENCHANTS
+    reward_1:
+      name: '&8Лук'
+      rarity: easy
+      rewardUUID: aa310708-f7c2-4ae8-bae8-e3dcdb8cda45
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:bow{Enchantments:[{id:"minecraft:flame",lvl:1},{id:"minecraft:power",lvl:5}]}
+      permission: []
+      item: []
+      icon:
+        material: BOW
+        flags:
+        - HIDE_ENCHANTS
+    reward_2:
+      name: '&8Лук'
+      rarity: easy
+      rewardUUID: 3619b281-4757-42fa-8f0f-8c9fdbc66ab1
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:bow{Enchantments:[{id:"minecraft:power",lvl:4},{id:"minecraft:unbreaking",lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: BOW
+        flags:
+        - HIDE_ENCHANTS
+    reward_3:
+      name: '&8Лук'
+      rarity: easy
+      rewardUUID: 82e47b11-afd0-4467-9056-584301c2c773
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:bow{Enchantments:[{id:"minecraft:power",lvl:5},{id:"minecraft:unbreaking",lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: BOW
+        flags:
+        - HIDE_ENCHANTS
+    reward_4:
+      name: '&8Лук'
+      rarity: easy
+      rewardUUID: b1b2c044-4f6c-483b-a863-3b5322208e71
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:bow{Enchantments:[{id:"minecraft:power",lvl:5},{id:"minecraft:unbreaking",lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: BOW
+        flags:
+        - HIDE_ENCHANTS
+    reward_5:
+      name: '&8Лук'
+      rarity: easy
+      rewardUUID: ecc6b06a-3958-4519-8161-6b125bff22c0
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:bow{Enchantments:[{id:"minecraft:power",lvl:5},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: BOW
+        flags:
+        - HIDE_ENCHANTS
+    reward_6:
+      name: '&8Лук'
+      rarity: easy
+      rewardUUID: 117aa617-e6b2-4840-a6d9-b96e9453b60c
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:bow{Enchantments:[{id:"minecraft:power",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: BOW
+        flags:
+        - HIDE_ENCHANTS
+    reward_7:
+      name: '&8Лук'
+      rarity: easy
+      rewardUUID: 7bdf9789-640c-4118-adfa-5c21474702c5
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:bow{Enchantments:[{id:"minecraft:power",lvl:5}]}
+      permission: []
+      item: []
+      icon:
+        material: BOW
+        flags:
+        - HIDE_ENCHANTS
+    reward_8:
+      name: '&8Лук'
+      rarity: easy
+      rewardUUID: 395fa4a0-92f9-430d-baac-fb17eb7955b1
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:bow{Enchantments:[{id:"minecraft:power",lvl:4},{id:"minecraft:infinity",lvl:1},{id:"minecraft:unbreaking",lvl:5},{id:"minecraft:flame",lvl:1},{id:"minecraft:mending",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: BOW
+        flags:
+        - HIDE_ENCHANTS
+    reward_9:
+      name: '&8Лук'
+      rarity: easy
+      rewardUUID: 62e3e190-1ee8-4257-90d1-d6b3c43f86d4
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:bow{Enchantments:[{id:"minecraft:power",lvl:5},{id:"minecraft:infinity",lvl:1},{id:"minecraft:unbreaking",lvl:5},{id:"minecraft:flame",lvl:1},{id:"minecraft:mending",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: BOW
+        flags:
+        - HIDE_ENCHANTS
+    reward_10:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4},{id:"minecraft:unbreaking",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_11:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4},{id:"minecraft:unbreaking",lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_12:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_13:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:5},{id:"minecraft:unbreaking",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_14:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:5},{id:"minecraft:unbreaking",lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_15:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:5},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_16:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_17:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:5}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_18:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: d30a0454-4b1f-4cd6-bf79-b79993deb1d9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4},{id:"minecraft:fire_aspect",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_19:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: 720758cf-08a4-4919-af89-3d209b8ec9cd
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4},{id:"minecraft:fire_aspect",lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_20:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: d9f5567f-a339-4a4b-b08e-049d2ce4ee05
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:5},{id:"minecraft:fire_aspect",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_21:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: 399a5268-dc6e-439c-bfe2-debdc812636a
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:5},{id:"minecraft:fire_aspect",lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_22:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: 4c933734-b53d-4075-bc3d-19f10f78257c
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4},{id:"minecraft:looting",lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_23:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: a6f1067c-ebc5-4e0a-84bb-0f6f31aeafde
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4},{id:"minecraft:looting",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_24:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: 3d6215cc-935d-4f5a-9e34-643174a26f11
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4},{id:"minecraft:looting",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_25:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: f12fa104-27fb-4324-9931-8b6549a9b345
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:5},{id:"minecraft:looting",lvl:2}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_26:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: 6ea640bc-1489-4e4b-a35d-ba1231959160
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4},{id:"minecraft:looting",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_27:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: 088d5076-9f58-4a09-9ccb-a15f7b802580
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4},{id:"minecraft:looting",lvl:1},{id:"minecraft:fire_aspect",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_28:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: e2c509a4-7f69-4069-8a23-3c8f3513994d
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4},{id:"minecraft:looting",lvl:2},{id:"minecraft:fire_aspect",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_29:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: 7c509ae2-7d78-46b7-ae9d-a1958236fe7d
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4},{id:"minecraft:looting",lvl:3},{id:"minecraft:fire_aspect",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_30:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: 2c730115-63b5-4979-840a-6941d13fd5f1
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:5},{id:"minecraft:looting",lvl:1},{id:"minecraft:fire_aspect",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_31:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: ea611ff0-afed-4513-803c-611c1d89cae8
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:5},{id:"minecraft:looting",lvl:3},{id:"minecraft:fire_aspect",lvl:2},{id:"minecraft:unbreaking",lvl:3}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+    reward_32:
+      name: '&8Незеритовый меч'
+      rarity: easy
+      rewardUUID: 1310da53-a373-4826-bd78-25fc6c14cce9
+      bypassDuplicationSystem: false
+      command:
+      - give %player% minecraft:netherite_sword{Enchantments:[{id:"minecraft:sharpness",lvl:4},{id:"minecraft:looting",lvl:1},{id:"minecraft:fire_aspect",lvl:1},{id:"minecraft:unbreaking",lvl:3},{id:"minecraft:mending",lvl:1}]}
+      permission: []
+      item: []
+      icon:
+        material: NETHERITE_SWORD
+        flags:
+        - HIDE_ENCHANTS
+  key:
+    material: TRIPWIRE_HOOK
+    name: donate's key
+    lore:
+    - '&8&oGo to a Cubelets Machine to'
+    - '&8&oopen this key.'
+    - ' '
+    - '&a&lLeft-Click: &6Preview rewards'
+    - '&a&lRight-Click: &6Open cubelet key'
+    enchants:
+      UNBREAKING: 1
+    flags:
+    - HIDE_ENCHANTS

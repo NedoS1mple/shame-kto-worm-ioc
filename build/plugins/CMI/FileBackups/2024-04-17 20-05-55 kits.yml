@@ -1,0 +1,3470 @@
+# Player should have appropriate permission node to use particular kit: cmi.kit.[kitName]
+# cmi.kit.newbie will allow to use newbie kit
+# Possible custom variables: {USERNAME} {DISPLAYNAME} {WORLDNAME} {KITNAME} {RANDOMPLAYER}
+# Edit kits ingame with /cmi kiteditor to avoid formating issues
+# Commands support specialized command format
+start:
+  CommandName: start
+  Delay: 86400
+  MaxUsages: 1
+  Items:
+    '28':
+      v: 2730
+      type: STONE_SWORD
+    '29':
+      v: 2730
+      type: STONE_PICKAXE
+    '30':
+      v: 2730
+      type: COOKED_PORKCHOP
+      amount: 16
+    '31':
+      v: 2730
+      type: TORCH
+      amount: 16
+    Helmet:
+      v: 2730
+      type: LEATHER_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: LEATHER_ARMOR
+        color:
+          ==: Color
+          RED: 249
+          BLUE: 29
+          GREEN: 128
+    Chest:
+      v: 2730
+      type: LEATHER_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: LEATHER_ARMOR
+        color:
+          ==: Color
+          RED: 176
+          BLUE: 38
+          GREEN: 46
+    Legs:
+      v: 2730
+      type: LEATHER_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: LEATHER_ARMOR
+        color:
+          ==: Color
+          RED: 249
+          BLUE: 29
+          GREEN: 128
+    Boots:
+      v: 2730
+      type: LEATHER_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: LEATHER_ARMOR
+        color:
+          ==: Color
+          RED: 176
+          BLUE: 38
+          GREEN: 46
+baron:
+  CommandName: baron
+  Delay: 21600
+  Items:
+    '26':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '27':
+      v: 2730
+      type: ARROW
+      amount: 64
+    '28':
+      v: 2730
+      type: IRON_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DAMAGE_ALL: 1
+    '29':
+      v: 2730
+      type: IRON_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DIG_SPEED: 1
+    '30':
+      v: 2730
+      type: IRON_AXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DIG_SPEED: 1
+    '31':
+      v: 2730
+      type: IRON_SHOVEL
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DIG_SPEED: 1
+    '32':
+      v: 2730
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          ARROW_DAMAGE: 1
+    '33':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 3
+    '34':
+      v: 2730
+      type: COOKED_MUTTON
+      amount: 16
+    '35':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 8
+    '36':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 3
+    Helmet:
+      v: 2730
+      type: CHAINMAIL_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 1
+    Chest:
+      v: 2730
+      type: CHAINMAIL_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 1
+    Legs:
+      v: 2730
+      type: CHAINMAIL_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 1
+    Boots:
+      v: 2730
+      type: CHAINMAIL_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 1
+strazh:
+  CommandName: strazh
+  Delay: 25200
+  Items:
+    '26':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '27':
+      v: 2730
+      type: ARROW
+      amount: 64
+    '28':
+      v: 2730
+      type: IRON_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DAMAGE_ALL: 1
+    '29':
+      v: 2730
+      type: IRON_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DIG_SPEED: 1
+    '30':
+      v: 2730
+      type: IRON_AXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DIG_SPEED: 1
+    '31':
+      v: 2730
+      type: IRON_SHOVEL
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DIG_SPEED: 1
+    '32':
+      v: 2730
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          ARROW_DAMAGE: 1
+    '33':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 4
+    '34':
+      v: 2730
+      type: COOKED_MUTTON
+      amount: 16
+    '35':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 12
+    '36':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 3
+    Helmet:
+      v: 2730
+      type: CHAINMAIL_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 1
+    Chest:
+      v: 2730
+      type: CHAINMAIL_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 1
+    Legs:
+      v: 2730
+      type: CHAINMAIL_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 1
+    Boots:
+      v: 2730
+      type: CHAINMAIL_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 1
+hero:
+  CommandName: hero
+  Delay: 25200
+  Items:
+    '19':
+      v: 2730
+      type: PUMPKIN
+      amount: 4
+    '20':
+      v: 2730
+      type: MELON
+      amount: 4
+    '21':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 32
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:slowness
+    '22':
+      v: 2730
+      type: ARROW
+      amount: 64
+    '23':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '24':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '25':
+      v: 2730
+      type: BEETROOT
+      amount: 16
+    '26':
+      v: 2730
+      type: POTATO
+      amount: 16
+    '27':
+      v: 2730
+      type: CARROT
+      amount: 16
+    '28':
+      v: 2730
+      type: IRON_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DAMAGE_ALL: 3
+    '29':
+      v: 2730
+      type: IRON_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DIG_SPEED: 3
+    '30':
+      v: 2730
+      type: IRON_AXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DIG_SPEED: 3
+    '31':
+      v: 2730
+      type: IRON_SHOVEL
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DIG_SPEED: 3
+    '32':
+      v: 2730
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          ARROW_DAMAGE: 3
+    '33':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 8
+    '34':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 16
+    '35':
+      v: 2730
+      type: COOKED_MUTTON
+      amount: 24
+    '36':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 4
+    Helmet:
+      v: 2730
+      type: IRON_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+    Chest:
+      v: 2730
+      type: IRON_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+    Legs:
+      v: 2730
+      type: IRON_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+    Boots:
+      v: 2730
+      type: IRON_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+satan:
+  CommandName: satan
+  Enabled: false
+  Delay: 10
+  Items:
+    '25':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '26':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '27':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '28':
+      v: 2730
+      type: DIAMOND_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: &id001 []
+        enchants:
+          FIRE_ASPECT: 2
+          LOOT_BONUS_MOBS: 3
+          DAMAGE_ALL: 5
+          DURABILITY: 3
+    '29':
+      v: 2730
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          ARROW_FIRE: 1
+          ARROW_INFINITE: 1
+          LOOT_BONUS_MOBS: 3
+          ARROW_DAMAGE: 5
+          DURABILITY: 3
+    '30':
+      v: 2730
+      type: ENCHANTED_GOLDEN_APPLE
+      amount: 4
+    '31':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 16
+    '32':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 16
+    '33':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 16
+    '34':
+      v: 2730
+      type: END_CRYSTAL
+      amount: 3
+    '35':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '36':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    Helmet:
+      v: 2730
+      type: DIAMOND_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_EXPLOSIONS: 4
+          PROTECTION_FIRE: 4
+          PROTECTION_PROJECTILE: 4
+          PROTECTION_ENVIRONMENTAL: 4
+    Chest:
+      v: 2730
+      type: DIAMOND_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_EXPLOSIONS: 4
+          PROTECTION_FIRE: 4
+          PROTECTION_PROJECTILE: 4
+          PROTECTION_ENVIRONMENTAL: 4
+    Legs:
+      v: 2730
+      type: DIAMOND_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_EXPLOSIONS: 4
+          PROTECTION_FIRE: 4
+          PROTECTION_PROJECTILE: 4
+          PROTECTION_ENVIRONMENTAL: 4
+    Boots:
+      v: 2730
+      type: DIAMOND_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_EXPLOSIONS: 4
+          PROTECTION_FIRE: 4
+          PROTECTION_PROJECTILE: 4
+          PROTECTION_ENVIRONMENTAL: 4
+carrot:
+  CommandName: carrot
+  Enabled: false
+  Delay: 10
+  Items:
+    '1':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '2':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '3':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '4':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '5':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '6':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '7':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '8':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '9':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '10':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '11':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '12':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '13':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '14':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '15':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '16':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '17':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '18':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '19':
+      v: 2730
+      type: WATER_BUCKET
+    '20':
+      v: 2730
+      type: WATER_BUCKET
+    '21':
+      v: 2730
+      type: WATER_BUCKET
+    '22':
+      v: 2730
+      type: WATER_BUCKET
+    '23':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '24':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '25':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '26':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '27':
+      v: 2730
+      type: DIRT
+      amount: 64
+    '28':
+      v: 2730
+      type: NETHERITE_HOE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          LOOT_BONUS_BLOCKS: 5
+          DURABILITY: 10
+    '29':
+      v: 2730
+      type: CARROT
+      amount: 64
+    '30':
+      v: 2730
+      type: CARROT
+      amount: 64
+    '31':
+      v: 2730
+      type: CARROT
+      amount: 64
+    '32':
+      v: 2730
+      type: CARROT
+      amount: 64
+    '33':
+      v: 2730
+      type: CARROT
+      amount: 64
+    '34':
+      v: 2730
+      type: CARROT
+      amount: 64
+    '35':
+      v: 2730
+      type: CARROT
+      amount: 64
+    '36':
+      v: 2730
+      type: CARROT
+      amount: 64
+injener:
+  CommandName: injener
+  Enabled: false
+  Delay: 10
+  Items:
+    '9':
+      v: 2730
+      type: HOPPER
+      amount: 32
+    '10':
+      v: 2730
+      type: STICKY_PISTON
+      amount: 64
+    '11':
+      v: 2730
+      type: STICKY_PISTON
+      amount: 64
+    '12':
+      v: 2730
+      type: STICKY_PISTON
+      amount: 64
+    '13':
+      v: 2730
+      type: PISTON
+      amount: 64
+    '14':
+      v: 2730
+      type: PISTON
+      amount: 64
+    '15':
+      v: 2730
+      type: PISTON
+      amount: 64
+    '16':
+      v: 2730
+      type: OBSERVER
+      amount: 64
+    '17':
+      v: 2730
+      type: OBSERVER
+      amount: 64
+    '18':
+      v: 2730
+      type: OBSERVER
+      amount: 64
+    '19':
+      v: 2730
+      type: REDSTONE_BLOCK
+      amount: 32
+    '20':
+      v: 2730
+      type: REPEATER
+      amount: 64
+    '21':
+      v: 2730
+      type: POWERED_RAIL
+      amount: 64
+    '22':
+      v: 2730
+      type: POWERED_RAIL
+      amount: 64
+    '23':
+      v: 2730
+      type: POWERED_RAIL
+      amount: 64
+    '24':
+      v: 2730
+      type: POWERED_RAIL
+      amount: 64
+    '25':
+      v: 2730
+      type: POWERED_RAIL
+      amount: 64
+    '26':
+      v: 2730
+      type: RAIL
+      amount: 64
+    '27':
+      v: 2730
+      type: RAIL
+      amount: 64
+    '28':
+      v: 2730
+      type: RAIL
+      amount: 64
+    '29':
+      v: 2730
+      type: RAIL
+      amount: 64
+    '30':
+      v: 2730
+      type: RAIL
+      amount: 64
+    '31':
+      v: 2730
+      type: HOPPER_MINECART
+    '32':
+      v: 2730
+      type: HOPPER_MINECART
+    '33':
+      v: 2730
+      type: HOPPER_MINECART
+    '34':
+      v: 2730
+      type: MINECART
+    '35':
+      v: 2730
+      type: MINECART
+    '36':
+      v: 2730
+      type: MINECART
+char:
+  CommandName: char
+  Enabled: false
+  Delay: 10
+  Items:
+    '10':
+      v: 2730
+      type: BOOKSHELF
+      amount: 64
+    '11':
+      v: 2730
+      type: BOOKSHELF
+      amount: 64
+    '12':
+      v: 2730
+      type: BOOK
+      amount: 64
+    '13':
+      v: 2730
+      type: BOOK
+      amount: 64
+    '14':
+      v: 2730
+      type: BOOK
+      amount: 64
+    '15':
+      v: 2730
+      type: ENCHANTING_TABLE
+    '16':
+      v: 2730
+      type: ANVIL
+      amount: 3
+    '17':
+      v: 2730
+      type: LAPIS_LAZULI
+      amount: 64
+    '18':
+      v: 2730
+      type: LAPIS_LAZULI
+      amount: 64
+    '19':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '20':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '21':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '22':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '23':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '24':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '25':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '26':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '27':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '28':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '29':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '30':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '31':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '32':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '33':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '34':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '35':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '36':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+mayak:
+  CommandName: mayak
+  Enabled: false
+  Delay: 10
+  Items:
+    '28':
+      v: 2730
+      type: BEACON
+      amount: 3
+    '29':
+      v: 2730
+      type: IRON_BLOCK
+      amount: 64
+    '30':
+      v: 2730
+      type: IRON_BLOCK
+      amount: 64
+    '31':
+      v: 2730
+      type: IRON_BLOCK
+      amount: 64
+    '32':
+      v: 2730
+      type: IRON_BLOCK
+      amount: 64
+    '33':
+      v: 2730
+      type: IRON_BLOCK
+      amount: 64
+mine:
+  CommandName: mine
+  Enabled: false
+  Delay: 10
+  Items:
+    '19':
+      v: 2730
+      type: COOKED_BEEF
+      amount: 64
+    '20':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 8
+    '21':
+      v: 2730
+      type: COAL_ORE
+      amount: 64
+    '22':
+      v: 2730
+      type: IRON_ORE
+      amount: 64
+    '23':
+      v: 2730
+      type: GOLD_ORE
+      amount: 64
+    '24':
+      v: 2730
+      type: REDSTONE_ORE
+      amount: 64
+    '25':
+      v: 2730
+      type: LAPIS_ORE
+      amount: 64
+    '28':
+      v: 2730
+      type: DIAMOND_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 3
+          DURABILITY: 3
+    '29':
+      v: 2730
+      type: DIAMOND_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          SILK_TOUCH: 1
+          DURABILITY: 3
+    '30':
+      v: 2730
+      type: DIAMOND_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          LOOT_BONUS_BLOCKS: 3
+          DURABILITY: 3
+    '31':
+      v: 2730
+      type: TORCH
+      amount: 64
+    '32':
+      v: 2730
+      type: TORCH
+      amount: 64
+    '33':
+      v: 2730
+      type: TORCH
+      amount: 64
+    '34':
+      v: 2730
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        custom-effects:
+        - ==: PotionEffect
+          effect: 3
+          duration: 2400
+          amplifier: 1
+          ambient: false
+          has-particles: true
+          has-icon: true
+    '35':
+      v: 2730
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:night_vision
+    '36':
+      v: 2730
+      type: WATER_BUCKET
+obsid:
+  CommandName: obsid
+  Enabled: false
+  Delay: 10
+  Items:
+    '10':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '11':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '12':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '13':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '14':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '15':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '16':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '17':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '18':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '19':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '20':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '21':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '22':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '23':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '24':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '25':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '26':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '27':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '28':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '29':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '30':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '31':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '32':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '33':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '34':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '35':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '36':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+stroit:
+  CommandName: stroit
+  Enabled: false
+  Delay: 10
+  Items:
+    '10':
+      v: 2730
+      type: CRIMSON_HYPHAE
+      amount: 64
+    '11':
+      v: 2730
+      type: WARPED_HYPHAE
+      amount: 64
+    '12':
+      v: 2730
+      type: CRIMSON_STEM
+      amount: 64
+    '13':
+      v: 2730
+      type: CRIMSON_STEM
+      amount: 64
+    '14':
+      v: 2730
+      type: WARPED_STEM
+      amount: 64
+    '15':
+      v: 2730
+      type: WARPED_STEM
+      amount: 64
+    '16':
+      v: 2730
+      type: SPRUCE_LOG
+      amount: 64
+    '17':
+      v: 2730
+      type: SPRUCE_LOG
+      amount: 64
+    '18':
+      v: 2730
+      type: GRASS_BLOCK
+      amount: 64
+    '19':
+      v: 2730
+      type: END_STONE_BRICKS
+      amount: 64
+    '20':
+      v: 2730
+      type: END_STONE_BRICKS
+      amount: 64
+    '21':
+      v: 2730
+      type: PURPUR_BLOCK
+      amount: 64
+    '22':
+      v: 2730
+      type: PURPUR_BLOCK
+      amount: 64
+    '23':
+      v: 2730
+      type: QUARTZ_BLOCK
+      amount: 64
+    '24':
+      v: 2730
+      type: QUARTZ_BLOCK
+      amount: 64
+    '25':
+      v: 2730
+      type: GLOWSTONE
+      amount: 64
+    '26':
+      v: 2730
+      type: SEA_LANTERN
+      amount: 64
+    '27':
+      v: 2730
+      type: CRIMSON_NYLIUM
+      amount: 64
+    '28':
+      v: 2730
+      type: NETHER_BRICKS
+      amount: 64
+    '29':
+      v: 2730
+      type: NETHER_BRICKS
+      amount: 64
+    '30':
+      v: 2730
+      type: RED_NETHER_BRICKS
+      amount: 64
+    '31':
+      v: 2730
+      type: RED_NETHER_BRICKS
+      amount: 64
+    '32':
+      v: 2730
+      type: DARK_PRISMARINE
+      amount: 64
+    '33':
+      v: 2730
+      type: DARK_PRISMARINE
+      amount: 64
+    '34':
+      v: 2730
+      type: POLISHED_BLACKSTONE_BRICKS
+      amount: 64
+    '35':
+      v: 2730
+      type: POLISHED_BLACKSTONE_BRICKS
+      amount: 64
+    '36':
+      v: 2730
+      type: WARPED_NYLIUM
+      amount: 64
+alhim:
+  CommandName: alhim
+  Enabled: false
+  Delay: 10
+  Items:
+    '19':
+      v: 2730
+      type: BREWING_STAND
+      amount: 8
+    '20':
+      v: 2730
+      type: CAULDRON
+      amount: 8
+    '21':
+      v: 2730
+      type: DRAGON_BREATH
+      amount: 8
+    '22':
+      v: 2730
+      type: SPIDER_EYE
+      amount: 64
+    '23':
+      v: 2730
+      type: GHAST_TEAR
+      amount: 64
+    '24':
+      v: 2730
+      type: GOLDEN_CARROT
+      amount: 64
+    '25':
+      v: 2730
+      type: GLISTERING_MELON_SLICE
+      amount: 64
+    '26':
+      v: 2730
+      type: MAGMA_CREAM
+      amount: 64
+    '27':
+      v: 2730
+      type: BLAZE_ROD
+      amount: 64
+    '28':
+      v: 2730
+      type: GLOWSTONE_DUST
+      amount: 64
+    '29':
+      v: 2730
+      type: SUGAR
+      amount: 64
+    '30':
+      v: 2730
+      type: REDSTONE
+      amount: 64
+    '31':
+      v: 2730
+      type: NETHER_WART
+      amount: 64
+    '32':
+      v: 2730
+      type: BROWN_MUSHROOM
+      amount: 64
+    '33':
+      v: 2730
+      type: FERMENTED_SPIDER_EYE
+      amount: 64
+    '34':
+      v: 2730
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        custom-effects:
+        - ==: PotionEffect
+          effect: 5
+          duration: 2400
+          amplifier: 2
+          ambient: false
+          has-particles: true
+          has-icon: true
+    '35':
+      v: 2730
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        custom-effects:
+        - ==: PotionEffect
+          effect: 8
+          duration: 4800
+          amplifier: 3
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 1
+          duration: 4800
+          amplifier: 3
+          ambient: false
+          has-particles: true
+          has-icon: true
+    '36':
+      v: 2730
+      type: POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        custom-effects:
+        - ==: PotionEffect
+          effect: 6
+          duration: 0
+          amplifier: 3
+          ambient: false
+          has-particles: true
+          has-icon: true
+        - ==: PotionEffect
+          effect: 10
+          duration: 400
+          amplifier: 3
+          ambient: false
+          has-particles: true
+          has-icon: true
+trost:
+  CommandName: trost
+  Enabled: false
+  Delay: 10
+  Items:
+    '10':
+      v: 2730
+      type: SAND
+      amount: 64
+    '11':
+      v: 2730
+      type: SAND
+      amount: 64
+    '12':
+      v: 2730
+      type: SAND
+      amount: 64
+    '13':
+      v: 2730
+      type: SAND
+      amount: 64
+    '14':
+      v: 2730
+      type: SAND
+      amount: 64
+    '15':
+      v: 2730
+      type: SAND
+      amount: 64
+    '16':
+      v: 2730
+      type: SAND
+      amount: 64
+    '17':
+      v: 2730
+      type: SUGAR_CANE
+      amount: 64
+    '18':
+      v: 2730
+      type: SUGAR_CANE
+      amount: 64
+    '19':
+      v: 2730
+      type: SUGAR_CANE
+      amount: 64
+    '20':
+      v: 2730
+      type: SUGAR_CANE
+      amount: 64
+    '21':
+      v: 2730
+      type: CACTUS
+      amount: 64
+    '22':
+      v: 2730
+      type: CACTUS
+      amount: 64
+    '23':
+      v: 2730
+      type: CACTUS
+      amount: 64
+    '24':
+      v: 2730
+      type: CACTUS
+      amount: 64
+    '25':
+      v: 2730
+      type: OAK_LOG
+      amount: 64
+    '26':
+      v: 2730
+      type: OAK_LOG
+      amount: 64
+    '27':
+      v: 2730
+      type: HOPPER
+      amount: 32
+    '28':
+      v: 2730
+      type: WATER_BUCKET
+    '29':
+      v: 2730
+      type: WATER_BUCKET
+    '30':
+      v: 2730
+      type: WATER_BUCKET
+    '31':
+      v: 2730
+      type: WATER_BUCKET
+    '32':
+      v: 2730
+      type: WATER_BUCKET
+    '33':
+      v: 2730
+      type: WATER_BUCKET
+krush:
+  CommandName: krush
+  Enabled: false
+  Delay: 10
+  Items:
+    '5':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '6':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '7':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '8':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '9':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '11':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '12':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 16
+    '13':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 64
+    '14':
+      v: 2730
+      type: END_CRYSTAL
+      amount: 6
+    '15':
+      v: 2730
+      type: WITHER_SKELETON_SKULL
+      amount: 6
+    '16':
+      v: 2730
+      type: ELYTRA
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Элитры
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          DURABILITY: 5
+    '17':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:strong_poison
+    '18':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:strong_poison
+    '19':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:strong_harming
+    '20':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:strong_harming
+    '21':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '22':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '23':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '24':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '25':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '26':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '27':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '28':
+      v: 2730
+      type: NETHERITE_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Меч
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          DAMAGE_ARTHROPODS: 7
+          FIRE_ASPECT: 2
+          LOOT_BONUS_MOBS: 5
+          MENDING: 1
+          DAMAGE_ALL: 7
+          DAMAGE_UNDEAD: 7
+          SWEEPING_EDGE: 3
+          DURABILITY: 5
+    '29':
+      v: 2730
+      type: NETHERITE_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Кирка
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          DIG_SPEED: 10
+          LOOT_BONUS_BLOCKS: 5
+          MENDING: 1
+          DURABILITY: 5
+    '30':
+      v: 2730
+      type: CROSSBOW
+      meta:
+        ==: ItemMeta
+        meta-type: CROSSBOW
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Арбалет
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          MENDING: 1
+          MULTISHOT: 1
+          PIERCING: 5
+          QUICK_CHARGE: 3
+          DURABILITY: 5
+        charged: false
+    '31':
+      v: 2730
+      type: TRIDENT
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Трезубец
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          IMPALING: 7
+          LOOT_BONUS_MOBS: 5
+          LOYALTY: 3
+          MENDING: 1
+          DURABILITY: 5
+    '32':
+      v: 2730
+      type: ENCHANTED_GOLDEN_APPLE
+      amount: 16
+    '33':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 48
+    '34':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 64
+    '35':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 16
+    '36':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    Helmet:
+      v: 2730
+      type: NETHERITE_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Шлем
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          WATER_WORKER: 1
+          PROTECTION_EXPLOSIONS: 5
+          PROTECTION_FIRE: 5
+          MENDING: 1
+          PROTECTION_PROJECTILE: 5
+          PROTECTION_ENVIRONMENTAL: 5
+          OXYGEN: 3
+          THORNS: 3
+          DURABILITY: 5
+    Chest:
+      v: 2730
+      type: NETHERITE_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Нагрудник
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          PROTECTION_EXPLOSIONS: 5
+          PROTECTION_FIRE: 5
+          MENDING: 1
+          PROTECTION_PROJECTILE: 5
+          PROTECTION_ENVIRONMENTAL: 5
+          THORNS: 3
+          DURABILITY: 5
+    Legs:
+      v: 2730
+      type: NETHERITE_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Штаны
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          PROTECTION_EXPLOSIONS: 5
+          PROTECTION_FIRE: 5
+          MENDING: 1
+          PROTECTION_PROJECTILE: 5
+          PROTECTION_ENVIRONMENTAL: 5
+          THORNS: 3
+          DURABILITY: 5
+    Boots:
+      v: 2730
+      type: NETHERITE_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Ботинки
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          PROTECTION_EXPLOSIONS: 5
+          DEPTH_STRIDER: 5
+          PROTECTION_FIRE: 5
+          MENDING: 1
+          PROTECTION_PROJECTILE: 5
+          PROTECTION_ENVIRONMENTAL: 5
+          SOUL_SPEED: 3
+          THORNS: 3
+          DURABILITY: 5
+tnt:
+  CommandName: tnt
+  Enabled: false
+  Delay: 10
+  Items:
+    '10':
+      v: 2730
+      type: TNT
+      amount: 64
+    '11':
+      v: 2730
+      type: TNT
+      amount: 3
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"[★]"},{"italic":false,"color":"red","text":"
+          TNT - TIER "},{"italic":false,"color":"gray","text":"WHITE"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+        internal: H4sIAAAAAAAA/+NiYOBgYA/xCwmpLEhl4CnJKynJTC0qz8gsSWUAAIJ/gXccAAAA
+    '12':
+      v: 2730
+      type: TNT
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"[★]"},{"italic":false,"color":"red","text":"
+          TNT - TIER "},{"italic":false,"color":"dark_gray","text":"BLACK"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+          "}],"text":""}'
+        internal: H4sIAAAAAAAA/+NiYOBgYA/xCwmpLEhl4CnJKynJTC1KyklMzmYAAP76RJMcAAAA
+    '13':
+      v: 2730
+      type: TNT_MINECART
+    '14':
+      v: 2730
+      type: TNT_MINECART
+    '15':
+      v: 2730
+      type: TNT_MINECART
+    '16':
+      v: 2730
+      type: TNT_MINECART
+    '17':
+      v: 2730
+      type: TNT_MINECART
+    '18':
+      v: 2730
+      type: TNT_MINECART
+    '19':
+      v: 2730
+      type: TNT_MINECART
+    '20':
+      v: 2730
+      type: TNT_MINECART
+    '21':
+      v: 2730
+      type: TNT_MINECART
+    '22':
+      v: 2730
+      type: TNT_MINECART
+    '23':
+      v: 2730
+      type: TNT_MINECART
+    '24':
+      v: 2730
+      type: TNT_MINECART
+    '25':
+      v: 2730
+      type: TNT_MINECART
+    '26':
+      v: 2730
+      type: TNT_MINECART
+    '27':
+      v: 2730
+      type: TNT_MINECART
+    '28':
+      v: 2730
+      type: FLINT_AND_STEEL
+    '29':
+      v: 2730
+      type: FLINT_AND_STEEL
+    '30':
+      v: 2730
+      type: FISHING_ROD
+    '31':
+      v: 2730
+      type: FISHING_ROD
+    '32':
+      v: 2730
+      type: LAVA_BUCKET
+    '33':
+      v: 2730
+      type: LAVA_BUCKET
+    '34':
+      v: 2730
+      type: WATER_BUCKET
+    '35':
+      v: 2730
+      type: WATER_BUCKET
+    '36':
+      v: 2730
+      type: ENCHANTED_GOLDEN_APPLE
+      amount: 3
+aspid:
+  CommandName: aspid
+  Delay: 28800
+  Items:
+    '19':
+      v: 2730
+      type: MELON
+      amount: 4
+    '20':
+      v: 2730
+      type: PUMPKIN
+      amount: 4
+    '21':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 32
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:slowness
+    '22':
+      v: 2730
+      type: ARROW
+      amount: 64
+    '23':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '24':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '25':
+      v: 2730
+      type: BEETROOT
+      amount: 16
+    '26':
+      v: 2730
+      type: POTATO
+      amount: 16
+    '27':
+      v: 2730
+      type: CARROT
+      amount: 16
+    '28':
+      v: 2730
+      type: IRON_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DAMAGE_ALL: 3
+    '29':
+      v: 2730
+      type: IRON_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 3
+    '30':
+      v: 2730
+      type: IRON_AXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 3
+    '31':
+      v: 2730
+      type: IRON_SHOVEL
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 3
+    '32':
+      v: 2730
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          ARROW_DAMAGE: 3
+    '33':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 8
+    '34':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 16
+    '35':
+      v: 2730
+      type: COOKED_MUTTON
+      amount: 24
+    '36':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 4
+    Helmet:
+      v: 2730
+      type: IRON_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+    Chest:
+      v: 2730
+      type: IRON_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+    Legs:
+      v: 2730
+      type: IRON_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+    Boots:
+      v: 2730
+      type: IRON_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+squid:
+  CommandName: squid
+  Delay: 21600
+  Items:
+    '17':
+      v: 2730
+      type: MELON
+      amount: 4
+    '18':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 6
+    '19':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 32
+    '20':
+      v: 2730
+      type: COOKED_MUTTON
+      amount: 48
+    '21':
+      v: 2730
+      type: ENCHANTED_GOLDEN_APPLE
+      amount: 4
+    '22':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 12
+    '23':
+      v: 2730
+      type: CARROT
+      amount: 16
+    '24':
+      v: 2730
+      type: POTATO
+      amount: 16
+    '25':
+      v: 2730
+      type: BEETROOT
+      amount: 16
+    '26':
+      v: 2730
+      type: CARVED_PUMPKIN
+      amount: 4
+    '27':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:slowness
+    '28':
+      v: 2730
+      type: DIAMOND_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          LOOT_BONUS_MOBS: 2
+          DAMAGE_ALL: 3
+    '29':
+      v: 2730
+      type: DIAMOND_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 3
+          LOOT_BONUS_BLOCKS: 2
+    '30':
+      v: 2730
+      type: DIAMOND_AXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 3
+          LOOT_BONUS_BLOCKS: 2
+    '31':
+      v: 2730
+      type: DIAMOND_SHOVEL
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 3
+          LOOT_BONUS_BLOCKS: 2
+    '32':
+      v: 2730
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          ARROW_FIRE: 1
+          ARROW_DAMAGE: 3
+    '33':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '34':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '35':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '36':
+      v: 2730
+      type: ARROW
+      amount: 64
+    Helmet:
+      v: 2730
+      type: DIAMOND_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+          DURABILITY: 1
+    Chest:
+      v: 2730
+      type: DIAMOND_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+          DURABILITY: 1
+    Legs:
+      v: 2730
+      type: DIAMOND_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+          DURABILITY: 1
+    Boots:
+      v: 2730
+      type: DIAMOND_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+          DURABILITY: 1
+glava:
+  CommandName: glava
+  Delay: 25200
+  Items:
+    '17':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 32
+    '18':
+      v: 2730
+      type: COOKED_MUTTON
+      amount: 48
+    '19':
+      v: 2730
+      type: ENCHANTED_GOLDEN_APPLE
+      amount: 4
+    '20':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 12
+    '21':
+      v: 2730
+      type: CARROT
+      amount: 24
+    '22':
+      v: 2730
+      type: POTATO
+      amount: 24
+    '23':
+      v: 2730
+      type: ARROW
+      amount: 64
+    '24':
+      v: 2730
+      type: BEETROOT
+      amount: 24
+    '25':
+      v: 2730
+      type: CARVED_PUMPKIN
+      amount: 4
+    '26':
+      v: 2730
+      type: MELON
+      amount: 4
+    '27':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:slowness
+    '28':
+      v: 2730
+      type: DIAMOND_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          LOOT_BONUS_MOBS: 2
+          DAMAGE_ALL: 3
+    '29':
+      v: 2730
+      type: DIAMOND_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 3
+    '30':
+      v: 2730
+      type: DIAMOND_AXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 3
+    '31':
+      v: 2730
+      type: DIAMOND_SHOVEL
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 3
+    '32':
+      v: 2730
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          ARROW_FIRE: 1
+          ARROW_DAMAGE: 5
+    '33':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '34':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '35':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '36':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 12
+    Helmet:
+      v: 2730
+      type: DIAMOND_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+          THORNS: 1
+          DURABILITY: 1
+    Chest:
+      v: 2730
+      type: DIAMOND_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+          THORNS: 1
+          DURABILITY: 1
+    Legs:
+      v: 2730
+      type: DIAMOND_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+          THORNS: 1
+          DURABILITY: 1
+    Boots:
+      v: 2730
+      type: DIAMOND_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 2
+          THORNS: 1
+          DURABILITY: 1
+elite:
+  CommandName: elite
+  Delay: 36000
+  Items:
+    '17':
+      v: 2730
+      type: ENCHANTED_GOLDEN_APPLE
+      amount: 4
+    '18':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '19':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 12
+    '20':
+      v: 2730
+      type: CARROT
+      amount: 24
+    '21':
+      v: 2730
+      type: POTATO
+      amount: 24
+    '22':
+      v: 2730
+      type: BEETROOT
+      amount: 24
+    '23':
+      v: 2730
+      type: CARVED_PUMPKIN
+      amount: 4
+    '24':
+      v: 2730
+      type: MELON
+      amount: 4
+    '25':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:slowness
+    '26':
+      v: 2730
+      type: COOKED_MUTTON
+      amount: 48
+    '27':
+      v: 2730
+      type: ARROW
+      amount: 64
+    '28':
+      v: 2730
+      type: DIAMOND_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          LOOT_BONUS_MOBS: 2
+          DAMAGE_ALL: 4
+    '29':
+      v: 2730
+      type: DIAMOND_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 3
+    '30':
+      v: 2730
+      type: DIAMOND_AXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 3
+    '31':
+      v: 2730
+      type: DIAMOND_SHOVEL
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 3
+    '32':
+      v: 2730
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          ARROW_FIRE: 1
+          ARROW_DAMAGE: 5
+    '33':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 32
+    '34':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '35':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '36':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 12
+    Helmet:
+      v: 2730
+      type: DIAMOND_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 3
+          THORNS: 1
+          DURABILITY: 1
+    Chest:
+      v: 2730
+      type: DIAMOND_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 3
+          THORNS: 1
+          DURABILITY: 1
+    Legs:
+      v: 2730
+      type: DIAMOND_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 3
+          THORNS: 1
+          DURABILITY: 1
+    Boots:
+      v: 2730
+      type: DIAMOND_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 3
+          THORNS: 1
+          DURABILITY: 1
+titan:
+  CommandName: titan
+  Delay: 36000
+  Items:
+    '5':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:slowness
+    '6':
+      v: 2730
+      type: ARROW
+      amount: 64
+    '7':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '8':
+      v: 2730
+      type: BOOKSHELF
+      amount: 24
+    '9':
+      v: 2730
+      type: ANVIL
+    '10':
+      v: 2730
+      type: ENDER_CHEST
+    '11':
+      v: 2730
+      type: ENCHANTING_TABLE
+    '12':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '13':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '14':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '15':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '16':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '17':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '18':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '19':
+      v: 2730
+      type: NETHER_WART
+      amount: 64
+    '20':
+      v: 2730
+      type: CACTUS
+      amount: 64
+    '21':
+      v: 2730
+      type: SUGAR_CANE
+      amount: 64
+    '22':
+      v: 2730
+      type: BEETROOT
+      amount: 64
+    '23':
+      v: 2730
+      type: POTATO
+      amount: 64
+    '24':
+      v: 2730
+      type: CARROT
+      amount: 64
+    '25':
+      v: 2730
+      type: GOLDEN_CARROT
+      amount: 64
+    '26':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 48
+    '27':
+      v: 2730
+      type: ENCHANTED_GOLDEN_APPLE
+      amount: 12
+    '28':
+      v: 2730
+      type: DIAMOND_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          FIRE_ASPECT: 2
+          LOOT_BONUS_MOBS: 3
+          DAMAGE_ALL: 5
+          SWEEPING_EDGE: 3
+          DURABILITY: 3
+    '29':
+      v: 2730
+      type: DIAMOND_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 3
+          MENDING: 1
+          DURABILITY: 3
+    '30':
+      v: 2730
+      type: DIAMOND_AXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 3
+          MENDING: 1
+          DURABILITY: 3
+    '31':
+      v: 2730
+      type: DIAMOND_SHOVEL
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 3
+          MENDING: 1
+          DURABILITY: 3
+    '32':
+      v: 2730
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        enchants:
+          ARROW_FIRE: 1
+          ARROW_DAMAGE: 5
+          DURABILITY: 3
+    '33':
+      v: 2730
+      type: FIREWORK_ROCKET
+      amount: 64
+    '34':
+      v: 2730
+      type: ELYTRA
+    '35':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 64
+    '36':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 16
+    Helmet:
+      v: 2730
+      type: DIAMOND_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          WATER_WORKER: 1
+          PROTECTION_ENVIRONMENTAL: 4
+          OXYGEN: 3
+          THORNS: 3
+          DURABILITY: 3
+    Chest:
+      v: 2730
+      type: DIAMOND_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 4
+          THORNS: 3
+          DURABILITY: 3
+    Legs:
+      v: 2730
+      type: DIAMOND_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 4
+          THORNS: 3
+          DURABILITY: 3
+    Boots:
+      v: 2730
+      type: DIAMOND_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_FALL: 4
+          PROTECTION_ENVIRONMENTAL: 4
+          SOUL_SPEED: 3
+          THORNS: 3
+          DURABILITY: 3
+princ:
+  CommandName: princ
+  Delay: 36000
+  Items:
+    '5':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:slowness
+    '6':
+      v: 2730
+      type: ARROW
+      amount: 64
+    '7':
+      v: 2730
+      type: OBSIDIAN
+      amount: 64
+    '8':
+      v: 2730
+      type: BOOKSHELF
+      amount: 24
+    '9':
+      v: 2730
+      type: ANVIL
+    '10':
+      v: 2730
+      type: ENDER_CHEST
+    '11':
+      v: 2730
+      type: ENCHANTING_TABLE
+    '12':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '13':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '14':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '15':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '16':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '17':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '18':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '19':
+      v: 2730
+      type: NETHER_WART
+      amount: 64
+    '20':
+      v: 2730
+      type: CACTUS
+      amount: 64
+    '21':
+      v: 2730
+      type: SUGAR_CANE
+      amount: 64
+    '22':
+      v: 2730
+      type: BEETROOT
+      amount: 64
+    '23':
+      v: 2730
+      type: FIREWORK_ROCKET
+      amount: 64
+    '24':
+      v: 2730
+      type: ELYTRA
+    '25':
+      v: 2730
+      type: POTATO
+      amount: 64
+    '26':
+      v: 2730
+      type: CARROT
+      amount: 64
+    '27':
+      v: 2730
+      type: GOLDEN_CARROT
+      amount: 64
+    '28':
+      v: 2730
+      type: DIAMOND_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          FIRE_ASPECT: 2
+          LOOT_BONUS_MOBS: 3
+          DAMAGE_ALL: 5
+          SWEEPING_EDGE: 3
+          DURABILITY: 3
+    '29':
+      v: 2730
+      type: DIAMOND_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 3
+          MENDING: 1
+          DURABILITY: 3
+    '30':
+      v: 2730
+      type: DIAMOND_AXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 3
+          MENDING: 1
+          DURABILITY: 3
+    '31':
+      v: 2730
+      type: DIAMOND_SHOVEL
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 3
+          MENDING: 1
+          DURABILITY: 3
+    '32':
+      v: 2730
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          ARROW_FIRE: 1
+          ARROW_DAMAGE: 5
+          DURABILITY: 3
+    '33':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 16
+    '34':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 64
+    '35':
+      v: 2730
+      type: ENCHANTED_GOLDEN_APPLE
+      amount: 12
+    '36':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 48
+    Helmet:
+      v: 2730
+      type: DIAMOND_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          WATER_WORKER: 1
+          PROTECTION_ENVIRONMENTAL: 4
+          OXYGEN: 3
+          THORNS: 3
+          DURABILITY: 3
+    Chest:
+      v: 2730
+      type: DIAMOND_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 4
+          THORNS: 3
+          DURABILITY: 3
+    Legs:
+      v: 2730
+      type: DIAMOND_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_ENVIRONMENTAL: 4
+          THORNS: 3
+          DURABILITY: 3
+    Boots:
+      v: 2730
+      type: DIAMOND_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_FALL: 4
+          PROTECTION_ENVIRONMENTAL: 4
+          SOUL_SPEED: 3
+          THORNS: 3
+          DURABILITY: 3
+knyaz:
+  CommandName: knyaz
+  Delay: 36000
+  Items:
+    '1':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 16
+    '2':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 64
+    '3':
+      v: 2730
+      type: GUNPOWDER
+      amount: 64
+    '4':
+      v: 2730
+      type: SPIDER_EYE
+      amount: 64
+    '5':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '6':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '7':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '8':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '9':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '10':
+      v: 2730
+      type: BEACON
+    '11':
+      v: 2730
+      type: ELYTRA
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DURABILITY: 5
+    '12':
+      v: 2730
+      type: ENCHANTING_TABLE
+    '13':
+      v: 2730
+      type: ENDER_CHEST
+    '14':
+      v: 2730
+      type: COOKED_MUTTON
+      amount: 64
+    '15':
+      v: 2730
+      type: BONE
+      amount: 64
+    '16':
+      v: 2730
+      type: BLAZE_ROD
+      amount: 64
+    '17':
+      v: 2730
+      type: END_CRYSTAL
+      amount: 4
+    '18':
+      v: 2730
+      type: SPLASH_POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:weakness
+    '19':
+      v: 2730
+      type: BOOKSHELF
+      amount: 64
+    '20':
+      v: 2730
+      type: SPLASH_POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:fire_resistance
+    '21':
+      v: 2730
+      type: SPLASH_POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:fire_resistance
+    '22':
+      v: 2730
+      type: SPLASH_POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:fire_resistance
+    '23':
+      v: 2730
+      type: SPLASH_POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:healing
+    '24':
+      v: 2730
+      type: SPLASH_POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:healing
+    '25':
+      v: 2730
+      type: SPLASH_POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:healing
+    '26':
+      v: 2730
+      type: SPLASH_POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:weakness
+    '27':
+      v: 2730
+      type: SPLASH_POTION
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:weakness
+    '28':
+      v: 2730
+      type: NETHERITE_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          FIRE_ASPECT: 2
+          LOOT_BONUS_MOBS: 5
+          DAMAGE_ALL: 5
+          SWEEPING_EDGE: 3
+          DURABILITY: 5
+    '29':
+      v: 2730
+      type: NETHERITE_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 5
+          MENDING: 1
+          DURABILITY: 5
+    '30':
+      v: 2730
+      type: NETHERITE_AXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 5
+          MENDING: 1
+          DURABILITY: 5
+    '31':
+      v: 2730
+      type: NETHERITE_SHOVEL
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          DIG_SPEED: 5
+          LOOT_BONUS_BLOCKS: 5
+          MENDING: 1
+          DURABILITY: 5
+    '32':
+      v: 2730
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          ARROW_FIRE: 1
+          ARROW_INFINITE: 1
+          LOOT_BONUS_MOBS: 3
+          ARROW_DAMAGE: 5
+          DURABILITY: 3
+    '33':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:slowness
+    '34':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:poison
+    '35':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 32
+    '36':
+      v: 2730
+      type: ENCHANTED_GOLDEN_APPLE
+      amount: 16
+    Helmet:
+      v: 2730
+      type: NETHERITE_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          WATER_WORKER: 1
+          MENDING: 1
+          PROTECTION_ENVIRONMENTAL: 4
+          OXYGEN: 3
+          THORNS: 3
+          DURABILITY: 5
+    Chest:
+      v: 2730
+      type: NETHERITE_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          MENDING: 1
+          PROTECTION_ENVIRONMENTAL: 4
+          THORNS: 3
+          DURABILITY: 5
+    Legs:
+      v: 2730
+      type: NETHERITE_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          MENDING: 1
+          PROTECTION_ENVIRONMENTAL: 4
+          THORNS: 3
+          DURABILITY: 5
+    Boots:
+      v: 2730
+      type: NETHERITE_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore: *id001
+        enchants:
+          PROTECTION_FALL: 4
+          MENDING: 1
+          PROTECTION_ENVIRONMENTAL: 4
+          SOUL_SPEED: 3
+          THORNS: 3
+          DURABILITY: 5
+gercog:
+  CommandName: gercog
+  Delay: 43200
+  Items:
+    '6':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '7':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '8':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '9':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '10':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:strong_harming
+    '11':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '12':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 16
+    '13':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 64
+    '14':
+      v: 2730
+      type: END_CRYSTAL
+      amount: 6
+    '15':
+      v: 2730
+      type: WITHER_SKELETON_SKULL
+      amount: 6
+    '16':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:strong_poison
+    '17':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:strong_poison
+    '18':
+      v: 2730
+      type: EXPERIENCE_BOTTLE
+      amount: 64
+    '19':
+      v: 2730
+      type: TIPPED_ARROW
+      amount: 64
+      meta:
+        ==: ItemMeta
+        meta-type: POTION
+        potion-type: minecraft:strong_harming
+    '20':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '21':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '22':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '23':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '24':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '25':
+      v: 2730
+      type: ELYTRA
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Элитры
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          DURABILITY: 5
+    '26':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '27':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    '28':
+      v: 2730
+      type: NETHERITE_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Меч
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          DAMAGE_ARTHROPODS: 7
+          FIRE_ASPECT: 2
+          LOOT_BONUS_MOBS: 5
+          MENDING: 1
+          DAMAGE_ALL: 7
+          DAMAGE_UNDEAD: 7
+          SWEEPING_EDGE: 3
+          DURABILITY: 5
+    '29':
+      v: 2730
+      type: NETHERITE_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Кирка
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          DIG_SPEED: 10
+          LOOT_BONUS_BLOCKS: 5
+          MENDING: 1
+          DURABILITY: 5
+    '30':
+      v: 2730
+      type: CROSSBOW
+      meta:
+        ==: ItemMeta
+        meta-type: CROSSBOW
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Арбалет
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          MENDING: 1
+          MULTISHOT: 1
+          PIERCING: 5
+          QUICK_CHARGE: 3
+          DURABILITY: 5
+        charged: false
+    '31':
+      v: 2730
+      type: TRIDENT
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Трезубец
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          IMPALING: 7
+          LOOT_BONUS_MOBS: 5
+          LOYALTY: 3
+          MENDING: 1
+          DURABILITY: 5
+    '32':
+      v: 2730
+      type: ENCHANTED_GOLDEN_APPLE
+      amount: 16
+    '33':
+      v: 2730
+      type: GOLDEN_APPLE
+      amount: 48
+    '34':
+      v: 2730
+      type: CHORUS_FRUIT
+      amount: 64
+    '35':
+      v: 2730
+      type: ENDER_PEARL
+      amount: 16
+    '36':
+      v: 2730
+      type: TOTEM_OF_UNDYING
+    Helmet:
+      v: 2730
+      type: NETHERITE_HELMET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Шлем
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          WATER_WORKER: 1
+          PROTECTION_EXPLOSIONS: 5
+          PROTECTION_FIRE: 5
+          MENDING: 1
+          PROTECTION_PROJECTILE: 5
+          PROTECTION_ENVIRONMENTAL: 5
+          OXYGEN: 3
+          THORNS: 3
+          DURABILITY: 5
+    Chest:
+      v: 2730
+      type: NETHERITE_CHESTPLATE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Нагрудник
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          PROTECTION_EXPLOSIONS: 5
+          PROTECTION_FIRE: 5
+          MENDING: 1
+          PROTECTION_PROJECTILE: 5
+          PROTECTION_ENVIRONMENTAL: 5
+          THORNS: 3
+          DURABILITY: 5
+    Legs:
+      v: 2730
+      type: NETHERITE_LEGGINGS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Штаны
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          PROTECTION_EXPLOSIONS: 5
+          PROTECTION_FIRE: 5
+          MENDING: 1
+          PROTECTION_PROJECTILE: 5
+          PROTECTION_ENVIRONMENTAL: 5
+          THORNS: 3
+          DURABILITY: 5
+    Boots:
+      v: 2730
+      type: NETHERITE_BOOTS
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"Ботинки
+          Крушителя"}],"text":""}'
+        lore: *id001
+        enchants:
+          PROTECTION_EXPLOSIONS: 5
+          DEPTH_STRIDER: 5
+          PROTECTION_FIRE: 5
+          MENDING: 1
+          PROTECTION_PROJECTILE: 5
+          PROTECTION_ENVIRONMENTAL: 5
+          SOUL_SPEED: 3
+          THORNS: 3
+          DURABILITY: 5
+kirtka:
+  CommandName: kirtka
+  Enabled: false
+  Delay: 10
+kirka:
+  CommandName: kirka
+  Delay: 10
+  Items:
+    '28':
+      v: 2730
+      type: NETHERITE_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: §4§lМолот Тора
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"9x9"}],"text":""}'
+        enchants:
+          ? ''
+          : 1
+        internal: H4sIAAAAAAAA/+NiYGBmEE1MjU/NS85IzCvJTc0rsS4pAvEYGBgYmRlYi3PyS4pBbAYAAF/mBSwAAAA=
+kirka2:
+  CommandName: kirka2
+  Enabled: false
+  Delay: 10
+  Items:
+    '28':
+      v: 2730
+      type: NETHERITE_PICKAXE
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: §4§lКирка Крушителя
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Авто-плавка"}],"text":""}'
+        enchants:
+          DIG_SPEED: 10
+          LOOT_BONUS_BLOCKS: 5
+          MENDING: 1
+          DURABILITY: 5
+        internal: H4sIAAAAAAAA/+NiYGBmEE9MjU/NS85IzCvJTc0rsS7OTc0pycxLZ2BgYGRmYC3OyS8pBrEZAC2aR7wuAAAA

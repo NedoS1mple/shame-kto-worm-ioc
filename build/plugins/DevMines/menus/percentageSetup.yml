@@ -1,0 +1,62 @@
+title: "Настройка шахты"
+
+layout:
+  - "####I####"
+  - "#@@@@@@@#"
+  - "#@@@@@@@#"
+  - "###<S>###"
+
+stacks:
+  '#':
+    stack:
+      - type: "RED_STAINED_GLASS_PANE"
+        name: " "
+  '>':
+    type: navigation
+    direction: NEXT
+    available:
+      type: "ARROW"
+      name: "<red>Далее (На страницу: <next_page>)"
+    unavailable:
+      type: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+  '<':
+    type: navigation
+    direction: PREVIOUS
+    available:
+      type: "ARROW"
+      name: "<red>Назад (На страницу: <previous_page>)"
+    unavailable:
+      type: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+  'I':
+    type: information
+    stack:
+      - type: "PAPER"
+        name: "<gold><bold>Информация"
+        lore:
+          - "<grey>Сконфигурированно на сумму: <gold><sum>"
+        delay: 15
+      - type: "BOOK"
+        name: "<yellow><bold>Информация"
+        lore:
+          - "<grey>Сконфигурированно на сумму: <yellow><sum>"
+        delay: 15
+  'S':
+    type: save
+    stack:
+      - type: "DIAMOND"
+        name: "<gold><bold>Сохранить конфигурацию"
+  '@':
+    type: item
+    stack:
+      type: "STONE"
+      name: "<red><name>"
+      flags:
+        - "HIDE_ATTRIBUTES"
+      lore:
+        - "<grey>Шанс появления: <red><chance>%/<max_chance>%"
+        - "<grey>На сумму: <yellow><sum>"
+        - " "
+        - " <grey><italic>ЛКМ, Чтобы увеличить"
+        - " <grey><italic>ПКМ, Чтобы уменьшить"

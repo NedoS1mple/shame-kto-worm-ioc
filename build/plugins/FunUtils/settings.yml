@@ -1,0 +1,82 @@
+listeners:
+  join:
+    title: ""
+    subtitle: "&e&k|||&r #ff7300&lДобро пожаловать! &e&k|||"
+    fadeIn: 25
+    stay: 50
+    fadeOut: 25
+  respawn:
+    title: ""
+    subtitle: "&aВоскресье!"
+    fadeIn: 25
+    stay: 25
+    fadeOut: 25
+
+boosts: # бусты, группы лакпермс
+  default: 1.0
+  baron: 1.05
+  strazh: 1.1
+  hero: 1.15
+  aspid: 1.2
+  squid: 1.25
+  glava: 1.3
+  elite: 1.35
+  titan: 1.4
+  princ: 1.45
+  knyaz: 1.5
+  gercog: 1.55
+  sponsor: 1.6
+  tiktok: 1.5
+  youtube: 1.55
+  start: 2.0
+  mlmoder: 2.5
+  moder: 3.0
+  stmoder: 3.5
+  glmoder: 4.0
+  zamkyrva: 4.0
+  kyrva: 4.0
+  mladmin: 4.5
+  admin: 5.0
+  staff: 5.0
+  tehadmin: 7.5
+  zamowner: 10.0
+  owner: 10.0
+
+settings:
+  death-head: "&aГолова игрока &e{player}"
+  damage: 0.85
+  wipe-permissions:
+    - cooldown.default
+    - cooldown.player
+    - cooldown.voland
+    - cooldown.gefest
+    - cooldown.kronos
+    - cooldown.prince
+    - cooldown.magustr
+    - cooldown.fantom
+    - cooldown.samurai
+    - cooldown.gercog
+    - menu.free.1
+    - menu.free.2
+    - menu.free.3
+    - menu.free.4
+    - menu.free.5
+    - menu.free.6
+    - menu.free.7
+    - menu.free.8
+    - menu.free.9
+    - menu.free.10
+    - menu.free.11
+    - menu.free.12
+    - menu.free.13
+    - menu.free.14
+    - menu.free.15
+    - free.case
+    - free.received
+    - winter.received
+    - sorry.received
+    - cooldown.exp.prince
+    - cooldown.exp.magustr
+    - cooldown.exp.fantom
+    - cooldown.exp.samurai
+    - cooldown.exp.gercog

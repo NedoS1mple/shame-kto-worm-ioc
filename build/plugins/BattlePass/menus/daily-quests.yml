@@ -1,0 +1,33 @@
+menu-title: '&c&lБоевые задания'
+menu-rows: 5
+
+quest-slots:
+  slots: '11...15, 20...24'
+
+menu:
+  '39':
+    item:
+      material: arrow:0
+      name: '&eПредыдущая страница'
+      lore:
+        - ''
+        - '&7&o(( Нажми, чтобы перейти на предыдущую страницу ))'
+    actions:
+      - '[menu](page = 1) {portal}' # Если игрок на 1-ой странице, будет открыто меню "Battle Pass (/bp)" (главное меню Battle Pass)
+      - '[menu](page ! 1) {previous-page}' # Если игрок не на 1-ой странице, будет открыта предыдущая страница
+  '40':
+    item:
+      material: book:0
+      name: '&eКогда новые квесты?'
+      lore:
+        - '&7Новые дневные квесты через &e%daily_time_left%...'
+    actions: []
+  '41':
+    item:
+      material: arrow:0
+      name: '&eСледующая страница'
+      lore:
+        - ''
+        - '&7&o(( Нажми, чтобы перейти на следующую страницу ))'
+    actions:
+      - '[menu] {next-page}' # Следующая страница

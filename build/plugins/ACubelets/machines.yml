@@ -1,0 +1,37 @@
+machines:
+  '1':
+    location:
+      world: lobby
+      x: 35
+      y: 88
+      z: 55
+    rotation: SOUTH
+    blockHeight: 1.5
+    permanentBlockHeight: 1.5
+    idleEffect:
+      type: NONE
+      particle: FLAME
+  '2':
+    location:
+      world: lobby
+      x: 35
+      y: 88
+      z: 47
+    rotation: SOUTH
+    blockHeight: 1.5
+    permanentBlockHeight: 1.5
+    idleEffect:
+      type: NONE
+      particle: FLAME
+  '3':
+    location:
+      world: lobby
+      x: 35
+      y: 88
+      z: 39
+    rotation: SOUTH
+    blockHeight: 1.5
+    permanentBlockHeight: 1.5
+    idleEffect:
+      type: NONE
+      particle: FLAME

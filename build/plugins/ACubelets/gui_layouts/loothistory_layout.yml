@@ -1,0 +1,64 @@
+#
+# This is the gui layout file.
+# You can change any messages that are in this file
+#
+# If you want to reset a message back to the default,
+# delete the entire line the message is on and restart the server.
+#
+# You can use %current_page% and %total_pages% in Title to show pages information
+#
+# IMPORTANT: Slots numbers between 1-9, if not, the plugin will crash
+#
+
+Layout:
+
+  # GUI Title
+  Title: Loot History
+
+  # GUI items
+  Items:
+
+    # Each loot item
+    LootItem:
+      Name: '&e&l%reward_name%'
+      Lore:
+      - '&5Found in: &a%cubelet_name%'
+      - '&5Received: &a%received% ago'
+
+    NoHistory:
+      Name: '&4You have no loot history'
+      Material: BARRIER
+      Lore:
+      - '&7You can get loot by opening cubelets.'
+
+    # Back item
+    Back:
+      Name: '&9Back'
+      Material: BOOK
+      Slot: 5
+      Lore:
+      - '&7Go back to the previous'
+      - '&7menu.'
+
+    # Close item
+    Close:
+      Name: '&9Close'
+      Material: BOOK
+      Slot: 5
+      Lore:
+      - '&7Click to close'
+      - '&7this menu'
+
+    # Next page item
+    NextPage:
+      Name: '&6Next page'
+      Material: SUGAR_CANE
+      Slot: 9
+      ShowPageNumber: false
+
+    # Previous page item
+    PreviousPage:
+      Name: '&6Previous page'
+      Material: SUGAR_CANE
+      Slot: 1
+      ShowPageNumber: false

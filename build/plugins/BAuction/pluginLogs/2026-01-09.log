@@ -1,0 +1,29 @@
+[04:42:46] [Server thread/INFO]: Enabling BAuction v1.3.1
+[04:42:46] [Server thread/INFO]: [DEBUG] enable checkUpdate
+[04:42:46] [Server thread/INFO]: [DEBUG] enable enable BMenuApi
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load MenuLoader
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load db cfg
+[04:42:46] [Server thread/INFO]: [DEBUG] enable registerAdapters
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load UniqueNameGenerator
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load cfg
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load assetsManager
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load lang
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load logger
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load event manager
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load time util
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load TrieManager
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load econ
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load PAPI hook
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load black list
+[04:42:46] [Server thread/INFO]: [DEBUG] enable load db
+[04:42:46] [Server thread/INFO]: [DEBUG] enable check version
+[04:42:46] [Server thread/INFO]: [DEBUG] enable init commands
+[04:42:46] [bauc File Db loader/INFO]: Успешно загружено 0 предметов за 26 мс.
+[05:26:12] [Server thread/INFO]: [DEBUG] CraftPlayer{name=for_users} use command ah sell
+[07:42:59] [Server thread/INFO]: Disabling BAuction v1.3.1
+[07:42:59] [Server thread/INFO]: [DEBUG] disable disable PAPI hook
+[07:42:59] [Server thread/INFO]: [DEBUG] disable disable logger
+[07:42:59] [Server thread/INFO]: [DEBUG] disable disable BMenuApi
+[07:42:59] [Server thread/INFO]: [DEBUG] disable disable db
+[07:42:59] [Server thread/INFO]: saved 0 items, 2 users and 0 unsold items in 4 ms
+[07:42:59] [Server thread/INFO]: [DEBUG] disable unregisterAdapters

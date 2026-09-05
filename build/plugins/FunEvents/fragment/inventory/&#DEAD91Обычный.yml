@@ -1,0 +1,3008 @@
+'620542112':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SLIME_BALL
+    amount: 6
+  chance: 35
+  fixed: true
+'1627828693':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENDER_PEARL
+    amount: 6
+  chance: 35
+  fixed: true
+'-1012454807':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DRAGON_BREATH
+    amount: 3
+  chance: 35
+  fixed: true
+'-1120865680':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: GHAST_TEAR
+    amount: 6
+  chance: 35
+  fixed: true
+'680513344':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: NETHER_WART
+    amount: 16
+  chance: 10
+  fixed: true
+'-1609358377':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SPIDER_EYE
+    amount: 6
+  chance: 35
+  fixed: true
+'-1849076788':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: BROWN_MUSHROOM
+    amount: 6
+  chance: 35
+  fixed: true
+'760572914':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: CHORUS_FRUIT
+    amount: 16
+  chance: 35
+  fixed: true
+'2013073770':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SHULKER_SHELL
+    amount: 2
+  chance: 35
+  fixed: true
+'-268932730':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: LEATHER
+    amount: 32
+  chance: 35
+  fixed: true
+'260177064':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: BONE
+    amount: 32
+  chance: 35
+  fixed: true
+'-1839959269':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: BLAZE_ROD
+    amount: 32
+  chance: 35
+  fixed: true
+'-281544801':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: GLOWSTONE_DUST
+    amount: 32
+  chance: 35
+  fixed: true
+'670783632':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: GUNPOWDER
+    amount: 12
+  chance: 35
+  fixed: true
+'1857650359':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: GOLDEN_CARROT
+    amount: 16
+  chance: 35
+  fixed: true
+'1301993568':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: MAGMA_CREAM
+    amount: 16
+  chance: 35
+  fixed: true
+'1810539141':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: RABBIT_FOOT
+    amount: 16
+  chance: 35
+  fixed: true
+'-1166393026':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: GLISTERING_MELON_SLICE
+    amount: 16
+  chance: 35
+  fixed: true
+'983867945':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: FERMENTED_SPIDER_EYE
+    amount: 16
+  chance: 35
+  fixed: true
+'445459209':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: MUSIC_DISC_STRAD
+  chance: 35
+  fixed: true
+'1631884051':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: MUSIC_DISC_STAL
+  chance: 35
+  fixed: true
+'1451030655':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: MUSIC_DISC_MELLOHI
+  chance: 35
+  fixed: true
+'1889872908':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: MUSIC_DISC_MALL
+  chance: 35
+  fixed: true
+'1341665171':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: MUSIC_DISC_FAR
+  chance: 35
+  fixed: true
+'2125429180':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: MUSIC_DISC_BLOCKS
+  chance: 35
+  fixed: true
+'-1133586051':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: MUSIC_DISC_CAT
+  chance: 35
+  fixed: true
+'-662677839':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: MUSIC_DISC_13
+  chance: 35
+  fixed: true
+'768482334':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: NAME_TAG
+    amount: 8
+  chance: 35
+  fixed: true
+'735660004':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PAPER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[★]
+        Кошмарный скин"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"Используя"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+        этот предмет"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Вы
+        его "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"расходуете,"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"и
+        получаете "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EA3737","text":"Кошмарный
+        "},{"italic":false,"color":"white","text":"скин взамен"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[ПКМ]"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":",
+        чтобы использовать "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"x1
+        "},{"italic":false,"color":"white","text":"скин"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[ШИФТ+ПКМ]"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":",
+        чтобы использовать "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"все
+        "},{"italic":false,"color":"white","text":"скины"}],"text":""}'
+      - '{"text":""}'
+      PublicBukkitValues:
+        nulltraps:traptype: nightmarish
+  chance: 35
+  fixed: true
+'-1683247676':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PAPER
+    amount: 2
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[★]
+        Зловещий скин"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"Используя"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+        этот предмет"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Вы
+        его "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"расходуете,"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"и
+        получаете "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EA3737","text":"Зловещий
+        "},{"italic":false,"color":"white","text":"скин взамен"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[ПКМ]"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":",
+        чтобы использовать "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"x1
+        "},{"italic":false,"color":"white","text":"скин"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[ШИФТ+ПКМ]"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":",
+        чтобы использовать "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"все
+        "},{"italic":false,"color":"white","text":"скины"}],"text":""}'
+      - '{"text":""}'
+      PublicBukkitValues:
+        nulltraps:traptype: evil
+  chance: 30
+  fixed: true
+'-1489006975':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PAPER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[★]
+        Мистический скин"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"Используя"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+        этот предмет"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Вы
+        его "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"расходуете,"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"и
+        получаете "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EA3737","text":"Мистический
+        "},{"italic":false,"color":"white","text":"скин взамен"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[ПКМ]"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":",
+        чтобы использовать "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"x1
+        "},{"italic":false,"color":"white","text":"скин"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[ШИФТ+ПКМ]"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":",
+        чтобы использовать "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"все
+        "},{"italic":false,"color":"white","text":"скины"}],"text":""}'
+      - '{"text":""}'
+      PublicBukkitValues:
+        nulltraps:traptype: mythic
+  chance: 35
+  fixed: true
+'1302034391':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PAPER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[★]
+        Жестокий скин"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"Используя"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+        этот предмет"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Вы
+        его "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"расходуете,"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"и
+        получаете "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EA3737","text":"Жестокий
+        "},{"italic":false,"color":"white","text":"скин взамен"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[ПКМ]"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":",
+        чтобы использовать "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"x1
+        "},{"italic":false,"color":"white","text":"скин"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[ШИФТ+ПКМ]"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":",
+        чтобы использовать "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"все
+        "},{"italic":false,"color":"white","text":"скины"}],"text":""}'
+      - '{"text":""}'
+      PublicBukkitValues:
+        nulltraps:traptype: cruel
+  chance: 35
+  fixed: true
+'1825433955':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PAPER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[★]
+        Ледяной скин"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"Используя"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+        этот предмет"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Вы
+        его "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"расходуете,"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"и
+        получаете "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EA3737","text":"Ледяной
+        "},{"italic":false,"color":"white","text":"скин взамен"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[ПКМ]"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":",
+        чтобы использовать "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"x1
+        "},{"italic":false,"color":"white","text":"скин"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[ШИФТ+ПКМ]"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":",
+        чтобы использовать "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"все
+        "},{"italic":false,"color":"white","text":"скины"}],"text":""}'
+      - '{"text":""}'
+      PublicBukkitValues:
+        nulltraps:traptype: frozen
+  chance: 35
+  fixed: true
+'-1783535162':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PAPER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[★]
+        Жемчужный скин"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"Используя"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+        этот предмет"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Вы
+        его "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"расходуете,"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"и
+        получаете "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#EA3737","text":"Жемчужный
+        "},{"italic":false,"color":"white","text":"скин взамен"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[ПКМ]"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":",
+        чтобы использовать "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"x1
+        "},{"italic":false,"color":"white","text":"скин"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6300","text":"[ШИФТ+ПКМ]"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":",
+        чтобы использовать "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FBD208","text":"все
+        "},{"italic":false,"color":"white","text":"скины"}],"text":""}'
+      - '{"text":""}'
+      PublicBukkitValues:
+        nulltraps:traptype: pearl
+  chance: 35
+  fixed: true
+'-1610513897':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TIPPED_ARROW
+    amount: 6
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC6500","text":"Точеная
+        стрела"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Моментальный
+        урон"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Отравление
+        II (0:06)"}],"text":""}'
+      ItemFlags:
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: tochen
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 252
+        BLUE: 0
+        GREEN: 220
+      custom-effects:
+      - ==: PotionEffect
+        effect: 7
+        duration: 0
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 19
+        duration: 120
+        amplifier: 1
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 50
+  fixed: true
+'-1941405247':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TIPPED_ARROW
+    amount: 6
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#009700","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#00FC00","text":"Ядовитая
+        стрела"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Слепота
+        (0:01)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Иссушение
+        II (0:03)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Тошнота
+        (0:05)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Голод
+        IV (0:07)"}],"text":""}'
+      ItemFlags:
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: poison
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 127
+        BLUE: 0
+        GREEN: 252
+      custom-effects:
+      - ==: PotionEffect
+        effect: 15
+        duration: 20
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 20
+        duration: 60
+        amplifier: 1
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 9
+        duration: 100
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 17
+        duration: 140
+        amplifier: 3
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 50
+  fixed: true
+'435518306':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TIPPED_ARROW
+    amount: 6
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CA0000","text":"Проклятая
+        стрела"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Слепота
+        (0:03)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Тошнота
+        (0:05)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Слабость
+        (0:10)"}],"text":""}'
+      ItemFlags:
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: cursed
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 0
+        BLUE: 0
+        GREEN: 0
+      custom-effects:
+      - ==: PotionEffect
+        effect: 15
+        duration: 60
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 18
+        duration: 200
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 9
+        duration: 100
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 50
+  fixed: true
+'1988467091':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TIPPED_ARROW
+    amount: 6
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CA0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC0000","text":"Дьявольская
+        стрела"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Слепота
+        (0:01)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Иссушение
+        II (0:03)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Отравление
+        II (0:06)"}],"text":""}'
+      ItemFlags:
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: devil
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 142
+        BLUE: 0
+        GREEN: 0
+      custom-effects:
+      - ==: PotionEffect
+        effect: 15
+        duration: 20
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 20
+        duration: 60
+        amplifier: 1
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 19
+        duration: 120
+        amplifier: 1
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 50
+  fixed: true
+'-1093961759':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TIPPED_ARROW
+    amount: 8
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#6500FC","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC00FC","text":"Стрела
+        паранойи"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Слепота
+        (0:02)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Тошнота
+        (0:06)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Слабость
+        III (0:03)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Медлительность
+        III (0:03)"}],"text":""}'
+      ItemFlags:
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: paranoya
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 203
+        BLUE: 136
+        GREEN: 21
+      custom-effects:
+      - ==: PotionEffect
+        effect: 15
+        duration: 40
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 9
+        duration: 120
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 18
+        duration: 60
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 2
+        duration: 60
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 50
+  fixed: true
+'-1756672623':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TIPPED_ARROW
+    amount: 8
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#0097CA","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#00FCFC","text":"Ледяная
+        стрела"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Медлительность
+        50 (0:05)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Слабость
+        (0:06)"}],"text":""}'
+      ItemFlags:
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: ice
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 0
+        BLUE: 252
+        GREEN: 252
+      custom-effects:
+      - ==: PotionEffect
+        effect: 2
+        duration: 100
+        amplifier: 50
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 18
+        duration: 120
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 50
+  fixed: true
+'1161031716':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: BEACON
+  chance: 45
+  fixed: true
+'1130794988':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: EXPERIENCE_BOTTLE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"[★]
+        "},{"italic":false,"color":"yellow","text":"Пузырек опыта "},{"italic":false,"color":"gold","text":"[25
+        Ур.]"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Содержит
+        25 Ур. опыта"}],"text":""}'
+      PublicBukkitValues:
+        nullbottleexp:amount: 25i
+  chance: 45
+  fixed: true
+'1457566626':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: EXPERIENCE_BOTTLE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"[★]
+        "},{"italic":false,"color":"yellow","text":"Пузырек опыта "},{"italic":false,"color":"gold","text":"[15
+        Ур.]"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Содержит
+        15 Ур. опыта"}],"text":""}'
+      PublicBukkitValues:
+        nullbottleexp:amount: 15i
+  chance: 50
+  fixed: true
+'-9713216':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TNT
+    amount: 2
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_red","text":"[★]
+        "},{"italic":false,"color":"red","text":"TNT - TIER "},{"italic":false,"color":"dark_gray","text":"BLACK"}],"text":""}'
+      custom-model-data: 0
+      PublicBukkitValues:
+        nulltnt:fttiers-plugin: black
+  chance: 40
+  fixed: true
+'-854286637':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENCHANTED_GOLDEN_APPLE
+    amount: 2
+  chance: 40
+  fixed: true
+'1899498935':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SPLASH_POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC6500","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FCFC00","text":"Вспышка"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Слепота
+        (0:20)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Свечение
+        (4:00)"}],"text":""}'
+      ItemFlags:
+      - HIDE_ATTRIBUTES
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: vspish
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 255
+        BLUE: 255
+        GREEN: 255
+      custom-effects:
+      - ==: PotionEffect
+        effect: 15
+        duration: 400
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 24
+        duration: 4800
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 40
+  fixed: true
+'785982687':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SPLASH_POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#009700","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#00FC00","text":"Серная
+        кислота"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Отравление
+        II (0:50)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Замедление
+        (1:30)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Слабость
+        III (1:30)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Иссушение
+        V (0:30)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"text":""}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"При
+        применении:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-15%
+        Скорость"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-12
+        Урон"}],"text":""}'
+      ItemFlags:
+      - HIDE_ATTRIBUTES
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: ser
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 168
+        BLUE: 153
+        GREEN: 255
+      custom-effects:
+      - ==: PotionEffect
+        effect: 20
+        duration: 600
+        amplifier: 4
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 2
+        duration: 1800
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 18
+        duration: 1800
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 19
+        duration: 1000
+        amplifier: 1
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 35
+  fixed: true
+'-753065183':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SPLASH_POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC6500","text":"Зелье
+        Отрыжки"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Свечение
+        (3:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Голод
+        X (1:30)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Замедление
+        III (3:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Слепота
+        (0:10)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Иссушение
+        V (0:30)"}],"text":""}'
+      ItemFlags:
+      - HIDE_ATTRIBUTES
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: otrizhka
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 255
+        BLUE: 244
+        GREEN: 10
+      custom-effects:
+      - ==: PotionEffect
+        effect: 20
+        duration: 600
+        amplifier: 4
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 2
+        duration: 3600
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 17
+        duration: 1800
+        amplifier: 9
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 15
+        duration: 200
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 24
+        duration: 3600
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 35
+  fixed: true
+'-1250238885':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SPLASH_POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#0097CA","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#00FCFC","text":"Моча
+        флеша"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Скорость
+        III (2:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Прыгучесть
+        II (2:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"text":""}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"При
+        применении:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+60%
+        Скорость"}],"text":""}'
+      ItemFlags:
+      - HIDE_ATTRIBUTES
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: flesh
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 10
+        BLUE: 229
+        GREEN: 255
+      custom-effects:
+      - ==: PotionEffect
+        effect: 1
+        duration: 2400
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 8
+        duration: 2400
+        amplifier: 1
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 40
+  fixed: true
+'-1976484289':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SPLASH_POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#6500FC","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC00FC","text":"Зелье
+        Медика"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Прилив
+        здоровья III (0:45)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Регенерация
+        III (0:45)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"text":""}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"При
+        применении:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+12
+        Максимальное здоровье"}],"text":""}'
+      ItemFlags:
+      - HIDE_ATTRIBUTES
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: medik
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 255
+        BLUE: 238
+        GREEN: 10
+      custom-effects:
+      - ==: PotionEffect
+        effect: 21
+        duration: 900
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 10
+        duration: 900
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 35
+  fixed: true
+'-1257337738':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SPLASH_POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC6500","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FCFC00","text":"Зелье
+        Агента"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Невидимость
+        II (15:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Огнестойкость
+        (15:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Скорость
+        III (15:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Спешка
+        (3:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Сила
+        III (5:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"text":""}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"При
+        применении:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+60%
+        Скорость"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+10%
+        Скорость атаки"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+9
+        Урон"}],"text":""}'
+      ItemFlags:
+      - HIDE_ATTRIBUTES
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: agent
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 239
+        BLUE: 10
+        GREEN: 255
+      custom-effects:
+      - ==: PotionEffect
+        effect: 14
+        duration: 18000
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 12
+        duration: 18000
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 5
+        duration: 6000
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 1
+        duration: 18000
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 3
+        duration: 3600
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 35
+  fixed: true
+'-6225523':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SPLASH_POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#009700","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#00FC00","text":"Зелье
+        Победителя"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Невидимость
+        (15:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Прилив
+        здоровья II (3:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Регенерация
+        II (1:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Сопротивление
+        (1:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"text":""}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"При
+        применении:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+8
+        Максимальное здоровье"}],"text":""}'
+      ItemFlags:
+      - HIDE_ATTRIBUTES
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: winner
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 0
+        BLUE: 171
+        GREEN: 230
+      custom-effects:
+      - ==: PotionEffect
+        effect: 14
+        duration: 18000
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 21
+        duration: 3600
+        amplifier: 1
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 10
+        duration: 1200
+        amplifier: 1
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 11
+        duration: 1200
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 35
+  fixed: true
+'1482689940':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SPLASH_POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CA0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC0000","text":"Зелье
+        Киллера"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Сила
+        IV (3:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Сопротивление
+        (3:00)"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"text":""}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"При
+        применении:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+12
+        Урон"}],"text":""}'
+      ItemFlags:
+      - HIDE_ATTRIBUTES
+      - HIDE_POTION_EFFECTS
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: killer
+      potion-type: minecraft:water
+      custom-color:
+        ==: Color
+        RED: 255
+        BLUE: 244
+        GREEN: 10
+      custom-effects:
+      - ==: PotionEffect
+        effect: 5
+        duration: 3600
+        amplifier: 3
+        ambient: false
+        has-particles: true
+        has-icon: true
+      - ==: PotionEffect
+        effect: 11
+        duration: 3600
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 35
+  fixed: true
+'-1572833185':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '["",{"text":"Зелье подводного дыхания","italic":false,"color":"#ff7300"}]'
+      custom-color:
+        ==: Color
+        RED: 61
+        BLUE: 173
+        GREEN: 69
+      custom-effects:
+      - ==: PotionEffect
+        effect: 13
+        duration: 18000
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 45
+  fixed: true
+'-1009678960':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '["",{"text":"Зелье регенерации","italic":false,"color":"#ff7300"}]'
+      custom-color:
+        ==: Color
+        RED: 248
+        BLUE: 173
+        GREEN: 142
+      custom-effects:
+      - ==: PotionEffect
+        effect: 10
+        duration: 600
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 45
+  fixed: true
+'-1189133388':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '["",{"text":"Зелье силы","italic":false,"color":"#ff7300"}]'
+      custom-color:
+        ==: Color
+        RED: 179
+        BLUE: 39
+        GREEN: 47
+      custom-effects:
+      - ==: PotionEffect
+        effect: 5
+        duration: 6000
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 40
+  fixed: true
+'-1283864612':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '["",{"text":"Зелье невидимости","italic":false,"color":"#ff7300"}]'
+      custom-color:
+        ==: Color
+        RED: 59
+        BLUE: 222
+        GREEN: 182
+      custom-effects:
+      - ==: PotionEffect
+        effect: 14
+        duration: 18000
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 45
+  fixed: true
+'1092913951':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '["",{"text":"Зелье скорости","italic":false,"color":"#ff7300"}]'
+      custom-color:
+        ==: Color
+        RED: 59
+        BLUE: 222
+        GREEN: 182
+      custom-effects:
+      - ==: PotionEffect
+        effect: 1
+        duration: 7200
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 45
+  fixed: true
+'2049237463':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '["",{"text":"Зелье прыгучести","italic":false,"color":"#ff7300"}]'
+      custom-color:
+        ==: Color
+        RED: 59
+        BLUE: 222
+        GREEN: 182
+      custom-effects:
+      - ==: PotionEffect
+        effect: 8
+        duration: 7200
+        amplifier: 2
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 45
+  fixed: true
+'-129191890':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '["",{"text":"Зелье огнестойкости","italic":false,"color":"#ff7300"}]'
+      custom-color:
+        ==: Color
+        RED: 252
+        BLUE: 30
+        GREEN: 130
+      custom-effects:
+      - ==: PotionEffect
+        effect: 12
+        duration: 18000
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 45
+  fixed: true
+'1692229564':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '["",{"text":"Зелье ночного зрения","italic":false,"color":"#ff7300"}]'
+      custom-color:
+        ==: Color
+        RED: 59
+        BLUE: 222
+        GREEN: 182
+      custom-effects:
+      - ==: PotionEffect
+        effect: 16
+        duration: 18000
+        amplifier: 0
+        ambient: false
+        has-particles: true
+        has-icon: true
+  chance: 45
+  fixed: true
+'1449304479':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_HELMET
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        PROTECTION_ENVIRONMENTAL: 2
+        DURABILITY: 1
+  chance: 60
+  fixed: true
+'-508681400':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        PROTECTION_ENVIRONMENTAL: 2
+        DURABILITY: 1
+  chance: 60
+  fixed: true
+'1640684500':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_LEGGINGS
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        PROTECTION_ENVIRONMENTAL: 2
+        DURABILITY: 1
+  chance: 60
+  fixed: true
+'91529662':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_BOOTS
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        PROTECTION_ENVIRONMENTAL: 2
+        DURABILITY: 1
+  chance: 60
+  fixed: true
+'-701393507':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_BOOTS
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        PROTECTION_ENVIRONMENTAL: 3
+        THORNS: 1
+        DURABILITY: 1
+  chance: 60
+  fixed: true
+'-1882516240':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_LEGGINGS
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        PROTECTION_ENVIRONMENTAL: 3
+        THORNS: 1
+        DURABILITY: 1
+  chance: 60
+  fixed: true
+'-1291890595':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        PROTECTION_ENVIRONMENTAL: 3
+        THORNS: 1
+        DURABILITY: 1
+  chance: 60
+  fixed: true
+'-640651713':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_HELMET
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        PROTECTION_ENVIRONMENTAL: 3
+        THORNS: 1
+        DURABILITY: 1
+  chance: 60
+  fixed: true
+'1520843643':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_HELMET
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        PROTECTION_FIRE: 4
+        PROTECTION_PROJECTILE: 4
+        PROTECTION_ENVIRONMENTAL: 3
+        DURABILITY: 4
+  chance: 55
+  fixed: true
+'1897024859':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        PROTECTION_FIRE: 4
+        PROTECTION_PROJECTILE: 4
+        PROTECTION_ENVIRONMENTAL: 3
+        DURABILITY: 4
+  chance: 55
+  fixed: true
+'-427696408':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_LEGGINGS
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        PROTECTION_FIRE: 4
+        PROTECTION_PROJECTILE: 4
+        PROTECTION_ENVIRONMENTAL: 3
+        DURABILITY: 4
+  chance: 55
+  fixed: true
+'-638861545':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_BOOTS
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        PROTECTION_FIRE: 4
+        PROTECTION_PROJECTILE: 4
+        PROTECTION_ENVIRONMENTAL: 3
+        DURABILITY: 4
+  chance: 55
+  fixed: true
+'1676994268':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TRIDENT
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        IMPALING: 2
+        DURABILITY: 3
+  chance: 60
+  fixed: true
+'1543951758':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: NETHERITE_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        FIRE_ASPECT: 2
+        LOOT_BONUS_MOBS: 5
+        DAMAGE_ALL: 5
+        SWEEPING_EDGE: 3
+        DURABILITY: 5
+  chance: 40
+  fixed: true
+'1154913236':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: BOW
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FC6A00","text":"Л"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#F05E1C","text":"у"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#E35238","text":"к
+        "},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#D74754","text":"Ф"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CB3B70","text":"а"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#BE2F8C","text":"н"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#B223A8","text":"т"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#A618C4","text":"о"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#990CE0","text":"м"},{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#8D00FC","text":"а"}],"text":""}'
+      enchants:
+        ARROW_FIRE: 1
+        ARROW_DAMAGE: 4
+        DURABILITY: 3
+  chance: 45
+  fixed: true
+'-589559825':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: BOW
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        ARROW_FIRE: 1
+        ARROW_DAMAGE: 5
+        DURABILITY: 3
+  chance: 55
+  fixed: true
+'828827164':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: BOW
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        ARROW_FIRE: 1
+        ARROW_DAMAGE: 5
+        ARROW_KNOCKBACK: 2
+        DURABILITY: 3
+  chance: 55
+  fixed: true
+'2080057795':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: BOW
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        ARROW_FIRE: 1
+        ARROW_DAMAGE: 3
+  chance: 60
+  fixed: true
+'107585592':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        FIRE_ASPECT: 2
+        LOOT_BONUS_MOBS: 3
+        DAMAGE_ALL: 5
+        SWEEPING_EDGE: 3
+        DURABILITY: 3
+  chance: 50
+  fixed: true
+'-1346841732':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        LOOT_BONUS_MOBS: 2
+        DAMAGE_ALL: 3
+  chance: 60
+  fixed: true
+'660020258':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        LOOT_BONUS_MOBS: 2
+        DAMAGE_ALL: 4
+  chance: 60
+  fixed: true
+'-492352200':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: NETHERITE_SHOVEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 10
+        LOOT_BONUS_BLOCKS: 3
+        DURABILITY: 5
+  chance: 45
+  fixed: true
+'1479611980':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: NETHERITE_SHOVEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 5
+        LOOT_BONUS_BLOCKS: 5
+        MENDING: 1
+        DURABILITY: 5
+  chance: 45
+  fixed: true
+'-1122251385':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_SHOVEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 3
+        LOOT_BONUS_BLOCKS: 2
+  chance: 55
+  fixed: true
+'-1991785417':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_SHOVEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 5
+        LOOT_BONUS_BLOCKS: 3
+  chance: 55
+  fixed: true
+'-1573723525':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 3
+        LOOT_BONUS_BLOCKS: 2
+  chance: 50
+  fixed: true
+'112780054':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 3
+        LOOT_BONUS_BLOCKS: 2
+  chance: 50
+  fixed: true
+'-399164555':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 5
+        LOOT_BONUS_BLOCKS: 3
+  chance: 60
+  fixed: true
+'-645127764':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 5
+        LOOT_BONUS_BLOCKS: 3
+  chance: 60
+  fixed: true
+'77186412':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: NETHERITE_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 5
+        LOOT_BONUS_BLOCKS: 5
+        MENDING: 1
+        DURABILITY: 5
+  chance: 40
+  fixed: true
+'-498882912':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: NETHERITE_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 5
+        LOOT_BONUS_BLOCKS: 5
+        MENDING: 1
+        DURABILITY: 5
+  chance: 45
+  fixed: true
+'210243357':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: NETHERITE_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 7
+        LOOT_BONUS_BLOCKS: 3
+        DURABILITY: 3
+  chance: 40
+  fixed: true
+'2128219325':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: NETHERITE_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 10
+        LOOT_BONUS_BLOCKS: 3
+        DURABILITY: 5
+  chance: 45
+  fixed: true
+'1599414587':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: NETHERITE_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 7
+        SILK_TOUCH: 1
+        DURABILITY: 3
+  chance: 45
+  fixed: true
+'-1464327649':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        DURABILITY: 3
+  chance: 40
+  fixed: true
+'14161873':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        ARROW_FIRE: 1
+  chance: 40
+  fixed: true
+'2087139903':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        LOOT_BONUS_MOBS: 3
+  chance: 40
+  fixed: true
+'1757974224':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        DAMAGE_ALL: 5
+  chance: 40
+  fixed: true
+'1282397594':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        CHANNELING: 1
+  chance: 40
+  fixed: true
+'-215314129':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        PIERCING: 5
+  chance: 40
+  fixed: true
+'1469177804':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        PROTECTION_EXPLOSIONS: 5
+  chance: 40
+  fixed: true
+'1874801109':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        OXYGEN: 3
+  chance: 40
+  fixed: true
+'-794692359':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        DEPTH_STRIDER: 3
+  chance: 40
+  fixed: true
+'-2129797006':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        DIG_SPEED: 7
+  chance: 40
+  fixed: true
+'508072412':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: EMERALD_BLOCK
+  chance: 20
+  fixed: true
+'364900766':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: SUGAR
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"[★]
+        Явная пыль"}],"text":""}'
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      PublicBukkitValues:
+        nulltrap:lksspace-dust-key: dust
+  chance: 20
+  fixed: true
+'1225266889':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: ENDER_EYE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_aqua","text":"[★]
+        Дезориентация"}],"text":""}'
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      PublicBukkitValues:
+        nulltrap:lksspace-dust-key: diz
+  chance: 25
+  fixed: true
+'977284457':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PHANTOM_MEMBRANE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"[★]
+        Божья аура"}],"text":""}'
+      PublicBukkitValues:
+        score:usage: 1i
+        executableitems:ei-id: aura
+  chance: 15
+  fixed: true
+'763827810':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: FIRE_CHARGE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"[★]
+        Огненный смерч"}],"text":""}'
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      PublicBukkitValues:
+        nulltrap:lksspace-dust-key: smerch
+  chance: 15
+  fixed: true
+'1771497802':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DRIED_KELP
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"[★]
+        Пласт"}],"text":""}'
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      PublicBukkitValues:
+        nulltrap:lkstrap-key-plast: ''
+  chance: 10
+  fixed: true
+'-163043703':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: NETHERITE_SCRAP
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"[★]
+        Трапка"}],"text":""}'
+      custom-model-data: 11111
+  chance: 10
+  fixed: true
+'-1879899606':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_BLOCK
+  chance: 10
+  fixed: true
+'-83467578':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: DIAMOND_ORE
+  chance: 15
+  fixed: true
+'-70403962':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PLAYER_HEAD
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"Сфера
+        Аполлона"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CC0000","text":"
+        ➥ "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FFFF00","text":"Уровень:
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"1/3"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Когда
+        во второстпеной руке:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-10%
+        Скорость"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+2
+        Урон"}],"text":""}'
+      custom-model-data: 12141
+      enchants:
+        LURE: 1
+      attribute-modifiers:
+        GENERIC_MOVEMENT_SPEED:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -0.01
+          name: generic.movement_speed
+          slot: OFF_HAND
+          uuid: 2630f9c5-8c7c-48ed-a9eb-8fc8e168cfe4
+          operation: 0
+        GENERIC_ATTACK_DAMAGE:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 2.0
+          name: generic.attack_damage
+          slot: OFF_HAND
+          uuid: b0e14387-f6ac-4288-85bf-4be317648025
+          operation: 0
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      internal: H4sIAAAAAAAA/3WQsU7CUBSGjwaTWo0uDjq4uTa2lBY6OIAlAqG3Ai3Qu5jS3mrLLSq0An0hBxcWJiO+Qp/Ad/ANvDHBzZzh/P85J19Ofh6Ag9MRSRIyTVwazmJ3MhO2Ck7yVf6Zb/J3Vpv8I1/dSZcyD4e9cUrp7fQxCCnhoIDcmMBx7ZdibSk88OziiXFDMtsHLiGLJJ0SNgfY4WCv79KUwBuRu5Q0upIX9zNzklg9kZqsMz9Xm/GD6DeqanupiXjI9LBFvaWSuAOFOnLrAU866Sjui+0/hv2Cos7CsPwQRdWFeYMpjmpjZNUlFHlLw/IybKHQiDBFkTPHuiMZA1syda/oxPUi1qtsb2dIby5RVouQTkM8MErGdUsLhiLAAew2ffZ/4fvZ/jpboPt1mRxpV69rluL5fykKaRr6cDGqBEQpa6qgqooqlGRNFiqB7wmlokIqpCSKSiDDD3MorXmQAQAA
+      skull-owner: BetterTalismans
+  chance: 20
+  fixed: true
+'-955889812':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PLAYER_HEAD
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"Сфера
+        Андромеды"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CC0000","text":"
+        ➥ "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FFFF00","text":"Уровень:
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"1/3"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Когда
+        во второстпеной руке:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+1
+        Броня"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-4
+        Максимальное здоровье"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+10%
+        Скорость"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+2
+        Урон"}],"text":""}'
+      custom-model-data: 12111
+      enchants:
+        LURE: 1
+      attribute-modifiers:
+        GENERIC_ARMOR:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 1.0
+          name: generic.armor
+          slot: OFF_HAND
+          uuid: 98b26fb9-3657-4707-929e-dce54ebedd27
+          operation: 0
+        GENERIC_MAX_HEALTH:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -4.0
+          name: generic.max_health
+          slot: OFF_HAND
+          uuid: 9fffed35-2d34-4098-91fa-7565576fd0df
+          operation: 0
+        GENERIC_MOVEMENT_SPEED:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 0.01
+          name: generic.movement_speed
+          slot: OFF_HAND
+          uuid: 24262924-1ed9-4b17-84c8-d371829bc7a2
+          operation: 0
+        GENERIC_ATTACK_DAMAGE:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 2.0
+          name: generic.attack_damage
+          slot: OFF_HAND
+          uuid: 0bf4d474-930f-45d1-afd6-a97df6848c0c
+          operation: 0
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      internal: H4sIAAAAAAAA/3WQPU/CUBSGj4oJVhMnExc3HRv7QfkYNSV8hN5KKS1tYkwpF2i5FxVapcTBncF/4eKoburiH6i/wME/4tUEN6fznjfnPHnzcgBZ2O3iKMKTyCPBlHrjKb9UsOOlr+nTx236lr6kz0wtzsRDmYOt1igm5GRy3g8IzkIGeRTD9vEvxlxiOODYxQUDB3i6AdkIz6J4gpkPsJKFdcsjMYYHLBsEVw3Rp9ZcH0dmSyA6m2y/ztfoUOhVj/KNpCS4HaY7deInSuTZCnHk+tAdN+MutYTGH6N9hVSDurQ9d0NN1CtOoqkkcOxmzmUuqhghUgcJUq2RbrP/8HioqdrMCVGo2RZBtCYjcyCgH3+uKU5YFjWTEC2ol/odAWATVms9lj9zcPr4+W6Xb+7LC2Pt6+6S1bj3X418HAc92O8WsIgFRealvJ/jc1JX5IuSVOAFH/eKiuzLBSkH3wE73z2RAQAA
+      skull-owner: BetterTalismans
+  chance: 15
+  fixed: true
+'-63739821':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PLAYER_HEAD
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"Сфера
+        Химеры"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CC0000","text":"
+        ➥ "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FFFF00","text":"Уровень:
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"1/3"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Когда
+        во второстпеной руке:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-2
+        Максимальное здоровье"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+1
+        Урон"}],"text":""}'
+      custom-model-data: 12171
+      enchants:
+        LURE: 1
+      attribute-modifiers:
+        GENERIC_MAX_HEALTH:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -2.0
+          name: generic.max_health
+          slot: OFF_HAND
+          uuid: e727ce45-5e6f-4024-8b7c-e9ac8ee64a7d
+          operation: 0
+        GENERIC_ATTACK_DAMAGE:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 1.0
+          name: generic.attack_damage
+          slot: OFF_HAND
+          uuid: de39af1e-965a-46ce-9d2a-6e37b51ed51a
+          operation: 0
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      internal: H4sIAAAAAAAA/3WQv07CUBTGj4oJoomOLm6ujRdaCt3UFIGG3lqoFO5iSnuxpbfVQCvUSQfjwJOocTTRxIeAx/AtvDHBzen7k5NfTr4CQB72BzRJ6DhxWDCJnHgirBzsLR8XH4uvxfvyfjm/LB6JBdjphClj5+PrYcBoHnLYiSjsnv4SrBWhAAV+ccOZAZ1sQT6hsyQdU94DrOVhs+uwlMIrFduMNtpFN+reGXFidRAzuPI8lZuRj7zGidzKFER63Pc05mblxLHLrC9qPonNdBB1UeuPcXFr2MTvR11GVDPD9WaGLc031BBhu1bCvOuPzJIemUUy0mdYdae6XZN0i4R9Swv1eq1k2HhE6mREIlPEKmHYupJIR1OGPQSwDetNj/+fkzfOvj/j47f507N68tB+4Qse/LegkKaBB4dIrlJERVlAUsUTJLnsCgNFqQpDWUFUkagjowr8AMd6kR6MAQAA
+      skull-owner: BetterTalismans
+  chance: 20
+  fixed: true
+'-456023619':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PLAYER_HEAD
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"Сфера
+        Титана"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CC0000","text":"
+        ➥ "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FFFF00","text":"Уровень:
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"1/3"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Когда
+        во второстпеной руке:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+1
+        Броня"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+1
+        Твёрдость брони"}],"text":""}'
+      custom-model-data: 12131
+      enchants:
+        LURE: 1
+      attribute-modifiers:
+        GENERIC_ARMOR:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 1.0
+          name: generic.armor
+          slot: OFF_HAND
+          uuid: 72144125-88b9-4691-9d1e-549ab82d19e7
+          operation: 0
+        GENERIC_ARMOR_TOUGHNESS:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 1.0
+          name: generic.armor_toughness
+          slot: OFF_HAND
+          uuid: 365eaf4a-48d9-461b-b3d9-71be68600104
+          operation: 0
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      internal: H4sIAAAAAAAA/3WQv07CUBTGjwaTWk10dHExjjbeUlroZgkE2tCLFKS0i+mfSyjcooFW5I4+gwPP4GAYHFx8B3wBX8FX8MYEN4eT7zsnJ798+UQAAU5CkmVklgU0mafBdC5tHRx/Pm3e+aw3H5v1rXypiHDYneSUXs/uhgklAhRwkBI4qv4SeluCCCL/uOfMhMz3QcjIY5bPCL8D7Aiw1w9oTuCFKA4lTUeO0j5rT7NeF9E2V74vNDMdobhpaK2ljvwB9wOLRks1C1yVeoo18qedPEz7qPXHuHnwegbDRSvx0n6Cxxa1e8bSbjhp260vcGoj33UmeGwwm1UpZkaR68SuTRb+2FBxo1PCLCp6zEr8Wp1h16EeM5fmVNaHHYAD2DVjHr/gN88unldXb6/61zdqkBUv8PS/AqU8T2I416KSEqJKKEUVWZZKWowkXVdiSS5VyuUiGqqKWoEftVALK4sBAAA=
+      skull-owner: BetterTalismans
+  chance: 20
+  fixed: true
+'-1047102743':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PLAYER_HEAD
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"Сфера
+        Астрея"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CC0000","text":"
+        ➥ "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FFFF00","text":"Уровень:
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"1/3"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Когда
+        во второстпеной руке:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-20%
+        Скорость атаки"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+2
+        Максимальное здоровье"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+1
+        Урон"}],"text":""}'
+      custom-model-data: 12151
+      enchants:
+        LURE: 1
+      attribute-modifiers:
+        GENERIC_ATTACK_SPEED:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -0.02
+          name: generic.attack_speed
+          slot: OFF_HAND
+          uuid: ece6e50a-bbf6-444d-8dc6-bad377fd10d6
+          operation: 0
+        GENERIC_MAX_HEALTH:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 2.0
+          name: generic.max_health
+          slot: OFF_HAND
+          uuid: d556e4b9-4e02-49a0-be49-77db91e056f2
+          operation: 0
+        GENERIC_ATTACK_DAMAGE:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 1.0
+          name: generic.attack_damage
+          slot: OFF_HAND
+          uuid: f1f7fd61-2c16-4b15-b178-2f124f56f197
+          operation: 0
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      internal: H4sIAAAAAAAA/3WQvU6DYBSGj01NEE10dHEzcSJCKf3ZrJb+YAHbUigsBspHof2opgUVJn8uwFHvwcXFeANeQBncTLwVv5jUzbOc9z05efLmpQEo2HVQFKF5ZONgEdqzBbNSsLN8ze6y++x2+ZY9nnOHPA1b/WmM8dn8wgswoiCv2CGC7eNfgrYi0ECTj0vCDNBiA6gI3UTxHJE7wBoF67qNYwQviO9h1Opxo1BP1Vmk9Vmskk38dakd+qzbqpU6SZW1hkQPJTxKhMg2BGzykm/NurET6mznjzG4kg2RM43G1KoPElPTQ9NoC0paK6p1kVW0hm81TU4JrcCcdAW5IKaKNiZe91XNChWth+VUwpYhFpSJNFXSMW8Z3UQ+karekAXYhFzbJfnz/frH58PT0ftz7vSrdtD8Jg3u/dcgE8eBC/sOGnmewJcZtyoUmKJru4zNowrD2eVSRag4ZTLwAxNTKYWMAQAA
+      skull-owner: BetterTalismans
+  chance: 20
+  fixed: true
+'-1295078605':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: PLAYER_HEAD
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"Сфера
+        Осириса"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CC0000","text":"
+        ➥ "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FFFF00","text":"Уровень:
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"1/3"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Когда
+        во второстпеной руке:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+2
+        Броня"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-25%
+        Сопротивление отбрасыванию"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+25%
+        Отбрасывающая атака"}],"text":""}'
+      custom-model-data: 12161
+      enchants:
+        LURE: 1
+      attribute-modifiers:
+        GENERIC_ARMOR:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 2.0
+          name: generic.armor
+          slot: OFF_HAND
+          uuid: 51b2a7e6-628a-42a1-b4c1-c76818376ef9
+          operation: 0
+        GENERIC_KNOCKBACK_RESISTANCE:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -0.025
+          name: generic.knockback_resistance
+          slot: OFF_HAND
+          uuid: 7049f701-272b-436a-97af-8510764fc566
+          operation: 0
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      internal: H4sIAAAAAAAA/3WQzUrDUBCFR6lQoyAKggu7cxtMmvQnSyVgE5ob06ZNk40kzW2b5qZKmzRNVvYZXPkKutClK5+hxefwBQTBi1B3LmbmzGH4GA4DUIQTD8cxnsYuCWaRO5mxGwVHq/f1cvW2vqe1XL3e8OcCA/vtMCHkeno7CAguQgG5EYaDy1+GuWEwwNCLO0oN8GwXijFexMkUUx9gqwg7XZckGJ6x0CK40eL7UTfXJ7HZ5ohOJ93TqhKNOL9xUW1mEuf0qO6ppJ9VYteqEFtQR87ESLyoyzX/GJ25Iw8XWm7nyFJDXXYCzewv7EglmmnktmUImtVJdfMi08ZhhsZGxS4r1FdEJBupYxmpdmWLyEIjFKGRlg8z3QxzFKjSoMcB7MG24tP/C1+HH4+lT1l9OT2eP3w/5TTD0n8ZskkS+HDGe3617nE8S7vLipKHWalWwyznl8tuXajWsOjBD3FvyUiOAQAA
+      skull-owner: BetterTalismans
+  chance: 20
+  fixed: true
+'934047553':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TOTEM_OF_UNDYING
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"Талисман
+        Грани"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CC0000","text":"
+        ➥ "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FFFF00","text":"Уровень:
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"1/3"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Когда
+        во второстпеной руке:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+1
+        Урон"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-2
+        Максимальное здоровье"}],"text":""}'
+      custom-model-data: 12241
+      enchants:
+        LURE: 1
+      attribute-modifiers:
+        GENERIC_MAX_HEALTH:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -2.0
+          name: generic.max_health
+          slot: OFF_HAND
+          uuid: 279718f2-7d81-4515-b5fa-11d20ab319d0
+          operation: 0
+        GENERIC_ATTACK_DAMAGE:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 1.0
+          name: generic.attack_damage
+          slot: OFF_HAND
+          uuid: e1ac3a0b-c43a-4099-a737-3a1abc4c7791
+          operation: 0
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      internal: H4sIAAAAAAAA/+NiYOBgkEhKLSlJLSpJzMkszk3MK9aFsRj4Lmy+2HBhw4W9F3bEG+obczDI4lKqW1qamcKgYmRhYGSYZG6ua5aUmKZrYmBsoZuUaGqha2lmbmhkaZaaYpRowQAAsmxEDnUAAAA=
+  chance: 20
+  fixed: true
+'-300923400':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TOTEM_OF_UNDYING
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"Талисман
+        Дедала"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CC0000","text":"
+        ➥ "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FFFF00","text":"Уровень:
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"1/3"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Когда
+        во второстпеной руке:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+3
+        Урон"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-4
+        Максимальное здоровье"}],"text":""}'
+      custom-model-data: 12251
+      enchants:
+        LURE: 1
+      attribute-modifiers:
+        GENERIC_MAX_HEALTH:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -4.0
+          name: generic.max_health
+          slot: OFF_HAND
+          uuid: 8a67e5dd-8761-4428-9e86-a1b245fe11de
+          operation: 0
+        GENERIC_ATTACK_DAMAGE:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 3.0
+          name: generic.attack_damage
+          slot: OFF_HAND
+          uuid: 4aff8be9-4954-4a58-b40f-6750a87c37a2
+          operation: 0
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      internal: H4sIAAAAAAAA/+NiYOBgkEhKLSlJLSpJzMkszk3MK9aFsRgELmy5sBWIN1zYfWFDvKG+MQeDLC7FuqWlmSkMKhYWKeZm5mbJumYWhmm6JmmGBrqW5iZJukapZmbG5qmJSUmJyQwAGR/oC3cAAAA=
+  chance: 20
+  fixed: true
+'-1436579631':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TOTEM_OF_UNDYING
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"Талисман
+        Тритона"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CC0000","text":"
+        ➥ "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FFFF00","text":"Уровень:
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"1/3"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Когда
+        во второстпеной руке:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+1
+        Защиты"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+1
+        Максимальное здоровье"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-2
+        Твёрдость брони"}],"text":""}'
+      custom-model-data: 12261
+      enchants:
+        LURE: 1
+      attribute-modifiers:
+        GENERIC_ARMOR:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 1.0
+          name: generic.armor
+          slot: OFF_HAND
+          uuid: 8dd5a383-0b70-4545-83d7-88c08fd8ed96
+          operation: 0
+        GENERIC_MAX_HEALTH:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 1.0
+          name: generic.max_health
+          slot: OFF_HAND
+          uuid: 0489f602-f5a6-4b80-8ccb-af4491dcf10a
+          operation: 0
+        GENERIC_ARMOR_TOUGHNESS:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -2.0
+          name: generic.armor_toughness
+          slot: OFF_HAND
+          uuid: 96b37d42-43b5-4e8c-8408-edf4669f5435
+          operation: 0
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      internal: H4sIAAAAAAAA/+NiYOBgkEhKLSlJLSpJzMkszk3MK9aFsRiELjZdbLiw42LThX0X9l7YEG+ob8zBIItLuW5paWYKg4qxRbKFqYlZom5SmoG5rolpqqFuUoqFha6FgVFaUpKlaUpqUjIDAAWiKz95AAAA
+  chance: 20
+  fixed: true
+'1250154232':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TOTEM_OF_UNDYING
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"Талисман
+        Гармонии"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CC0000","text":"
+        ➥ "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FFFF00","text":"Уровень:
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"1/3"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Когда
+        во второстпеной руке:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+1
+        Урон"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+1
+        Максимальное здоровье"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+1
+        Защиты"}],"text":""}'
+      custom-model-data: 12271
+      enchants:
+        LURE: 1
+      attribute-modifiers:
+        GENERIC_ATTACK_DAMAGE:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 1.0
+          name: generic.attack_damage
+          slot: OFF_HAND
+          uuid: acb3b319-8caa-4613-bbdf-8778d2567feb
+          operation: 0
+        GENERIC_MAX_HEALTH:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 1.0
+          name: generic.max_health
+          slot: OFF_HAND
+          uuid: 1d4a3bd9-7b2e-4049-bd1d-03e5a17abd36
+          operation: 0
+        GENERIC_ARMOR:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 1.0
+          name: generic.armor
+          slot: OFF_HAND
+          uuid: f2b7e767-d292-4887-99f6-68db393a418b
+          operation: 0
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      internal: H4sIAAAAAAAA/+NiYOBgkEhKLSlJLSpJzMkszk3MK9aFsRhELmy+sOFiw4U9F/Zd2Hthx4Ud8Yb6xhwMsrg06JaWZqYwqBgYGKalWaSZ6aYZm5rrmiSlmOtaJiWZ6ZonpxoamyUlJZsmpzEAAMu7nst7AAAA
+  chance: 20
+  fixed: true
+'468906515':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TOTEM_OF_UNDYING
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"Талисман
+        Феникса"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CC0000","text":"
+        ➥ "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FFFF00","text":"Уровень:
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"1/3"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Когда
+        во второстпеной руке:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+2
+        Максимальное здоровье"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+10%
+        Скорость атаки"}],"text":""}'
+      custom-model-data: 12281
+      enchants:
+        LURE: 1
+      attribute-modifiers:
+        GENERIC_MAX_HEALTH:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 2.0
+          name: generic.max_health
+          slot: OFF_HAND
+          uuid: 415b33c2-c6b3-4160-94d6-eecca1813eec
+          operation: 0
+        GENERIC_ATTACK_SPEED:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 0.01
+          name: generic.attack_speed
+          slot: OFF_HAND
+          uuid: b4390e94-d6e9-45df-afec-94d4f367d517
+          operation: 0
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      internal: H4sIAAAAAAAA/+NiYOBgkEhKLSlJLSpJzMkszk3MK9aFsRiELrZc2Hph74UdF3ZdbLywId5Q35iDQRaXct3S0swUBpXUVFMTi2QjI10DixQTXRPTVGPdxDQTc13LNCNjSwOjlNSUNEsGAJl2E4F5AAAA
+  chance: 20
+  fixed: true
+'90422611':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TOTEM_OF_UNDYING
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF0000","text":"[★]
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"Талисман
+        Ехидны"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#CC0000","text":"
+        ➥ "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FFFF00","text":"Уровень:
+        "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#FF6600","text":"1/3"}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Когда
+        во второстпеной руке:"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+4
+        Урон"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-2
+        Защиты"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-2
+        Твёрдости брони"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"-4
+        Максимальное здоровье"}],"text":""}'
+      custom-model-data: 12291
+      enchants:
+        LURE: 1
+      attribute-modifiers:
+        GENERIC_ATTACK_DAMAGE:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 4.0
+          name: generic.attack_damage
+          slot: OFF_HAND
+          uuid: 852cca5f-32d3-453a-ad90-c4b470b8bbbb
+          operation: 0
+        GENERIC_ARMOR:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -2.0
+          name: generic.armor
+          slot: OFF_HAND
+          uuid: deac54c6-744d-4ff2-bac5-081f44463b4d
+          operation: 0
+        GENERIC_ARMOR_TOUGHNESS:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -2.0
+          name: generic.armor_toughness
+          slot: OFF_HAND
+          uuid: 9204e040-0f09-4cb7-b9c4-f996eb4ba0c1
+          operation: 0
+        GENERIC_MAX_HEALTH:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -4.0
+          name: generic.max_health
+          slot: OFF_HAND
+          uuid: 33e63743-0c19-4b94-b745-5c5be1836ace
+          operation: 0
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      internal: H4sIAAAAAAAA/+NiYOBgkEhKLSlJLSpJzMkszk3MK9aFsRgELmy92Hphx4UtF/Ze7I431DfmYJDFpVi3tDQzhUHF0szSLNHCwlg3xcg4TdckzdRUNynZwFA31TzFKDnJONnc1NKUAQAOzW31dwAAAA==
+  chance: 20
+  fixed: true
+'1584849658':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TRIPWIRE_HOOK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"[★]
+        "},{"italic":false,"color":"dark_aqua","text":"Отмычка"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Отмычка
+        к инструментам"}],"text":""}'
+      enchants:
+        KNOCKBACK: 1
+      ItemFlags:
+      - HIDE_ENCHANTS
+      PublicBukkitValues:
+        nullstash:name: tools
+  chance: 15
+  fixed: true
+'1558540817':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TRIPWIRE_HOOK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"[★]
+        "},{"italic":false,"color":"dark_aqua","text":"Отмычка"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Отмычка
+        к оружию"}],"text":""}'
+      enchants:
+        KNOCKBACK: 1
+      ItemFlags:
+      - HIDE_ENCHANTS
+      PublicBukkitValues:
+        nullstash:name: weapons
+  chance: 15
+  fixed: true
+'-2146108496':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TRIPWIRE_HOOK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"[★]
+        "},{"italic":false,"color":"dark_aqua","text":"Отмычка"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Отмычка
+        к броне"}],"text":""}'
+      enchants:
+        KNOCKBACK: 1
+      ItemFlags:
+      - HIDE_ENCHANTS
+      PublicBukkitValues:
+        nullstash:name: armor
+  chance: 15
+  fixed: true
+'1452267049':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TRIPWIRE_HOOK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"[★]
+        "},{"italic":false,"color":"dark_aqua","text":"Отмычка"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Отмычка
+        к сферам"}],"text":""}'
+      enchants:
+        KNOCKBACK: 1
+      ItemFlags:
+      - HIDE_ENCHANTS
+      PublicBukkitValues:
+        nullstash:name: sphere
+  chance: 10
+  fixed: true
+'1622537119':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: TRIPWIRE_HOOK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"[★]
+        "},{"italic":false,"color":"dark_aqua","text":"Отмычка"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Отмычка
+        к ресурсам"}],"text":""}'
+      enchants:
+        KNOCKBACK: 1
+      ItemFlags:
+      - HIDE_ENCHANTS
+      PublicBukkitValues:
+        nullstash:name: resurses
+  chance: 15
+  fixed: true
+'-1730045547':
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2586
+    type: QUARTZ
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"[❄]
+        Заморозка"}],"text":""}'
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_POTION_EFFECTS
+      - HIDE_DYE
+      PublicBukkitValues:
+        nulltrap:lksspace-dust-key: freeze
+  chance: 15
+  fixed: true

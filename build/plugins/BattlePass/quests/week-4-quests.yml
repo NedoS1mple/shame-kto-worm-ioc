@@ -1,0 +1,134 @@
+quests:
+  1:
+    name: 'Неделя 4 - Маг'
+    type: regenerate
+    variable: none
+    required-progress: 50
+    points: 40
+    item:
+      material: apple:0
+      amount: 1
+      name: '&eМаг'
+      lore:
+        - '&7Регенируй &e50 единиц здоровья'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  2:
+    name: 'Неделя 4 - Путешественник'
+    type: move
+    variable: none
+    required-progress: 1000
+    points: 40
+    item:
+      material: paper:0
+      amount: 1
+      name: '&eПутешественник'
+      lore:
+        - '&7Пройди &e1000 метров'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  3:
+    name: 'Неделя 4 - Экстраверт'
+    type: swim
+    variable: none
+    required-progress: 100
+    points: 40
+    item:
+      material: water_bucket:0
+      amount: 1
+      name: '&eЭкстраверт'
+      lore:
+        - '&7Пообщайся в чате &e100 раз'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  4:
+    name: 'Неделя 4 - Активный'
+    type: login
+    variable: none
+    required-progress: 10
+    points: 40
+    item:
+      material: clock:0
+      name: '&eАктивный'
+      lore:
+        - '&7Войди &e10 раз'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  5:
+    name: 'Неделя 4 - Убийца'
+    type: kill-player
+    variable: none
+    required-progress: 1
+    points: 40
+    item:
+      material: wooden_sword:0
+      name: '&eУбийца'
+      lore:
+        - '&7Убей &e1 игрока'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  6:
+    name: 'Неделя 4 - Охотник'
+    type: kill-mob
+    variable: zombie
+    required-progress: 10
+    points: 40
+    item:
+      material: gold_sword:0
+      name: '&eОхотник'
+      lore:
+        - '&7Убей &e10 зомби'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  7:
+    name: 'Неделя 4 - Ломатель'
+    type: item-break
+    variable: stone_pickaxe:0
+    required-progress: 1
+    points: 40
+    item:
+      material: :0
+      name: '&eЛоматель'
+      lore:
+        - '&7Сломай &e1 каменную кирку'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  8:
+    name: 'Неделя 4 - Опытный'
+    type: gain-experience
+    variable: none
+    required-progress: 500
+    points: 40
+    item:
+      material: experience_bottle:0
+      name: '&eОпытный'
+      lore:
+        - '&7Получи &e500 единиц опыта'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  9:
+    name: 'Неделя 4 - Рыбак'
+    type: fish
+    variable: none
+    required-progress: 10
+    points: 40
+    item:
+      material: fishing_rod:0
+      name: '&eРыбак'
+      lore:
+        - '&7Нарыбачь &e10 предметов'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'
+  10:
+    name: 'Неделя 4 - Любознатель'
+    type: execute-command
+    variable: '/social'
+    required-progress: 1
+    points: 40
+    item:
+      material: saddle:0
+      name: '&eЛюбознатель'
+      lore:
+        - '&7Используй команду &e/social'
+        - ''
+        - '&7Прогресс &e%total_progress%&7/&e%required_progress%'

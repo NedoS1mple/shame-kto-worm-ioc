@@ -1,0 +1,20 @@
+location: lobby:9,500:91,794:54,500
+enabled: true
+display-range: 45
+update-range: 45
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&#fff500Этот регион можно'
+    height: 0.3
+  - content: '&#fff500купить в &#80ff00/donshop res'
+    height: 0.3
+  - content: ''
+    height: 0.3
+  - content: '&#ff5c00Радиус'
+    height: 0.3
+  - content: '&#ff000015x15'
+    height: 0.3
+  actions: {}

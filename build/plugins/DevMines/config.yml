@@ -1,0 +1,142 @@
+selectionToolMaterial: "DIAMOND_AXE"
+
+# Каждой шахте, либо группе шахт, можно задать свой спиоск покупаемых блоков
+blocksBags:
+  - bag:
+      - type: "DIAMOND_ORE" # Тип устанавливаемого
+        displayName: "<blue>Алмазная руда" # Отображаемое имя блока
+        # Цена за 1 процент
+        pricePerPercent: 10
+        # Максимальное число процентов, которое может задать игрок
+        maxChance: 40
+      - type: "GOLD_ORE"
+        displayName: "<gold>Золотая руда"
+        pricePerPercent: 5
+        maxChance: 5
+      - type: "EMERALD_ORE"
+        displayName: "<green>Изумрудная руда"
+        pricePerPercent: 5
+        maxChance: 1
+      - type: "IRON_ORE"
+        displayName: "<grey>Железная руда"
+        pricePerPercent: 5
+        maxChance: 4
+      - type: "STONE"
+        displayName: "<dark_grey>Камень"
+        pricePerPercent: 1
+        maxChance: 50
+    mines:
+      - "Тест"
+    economy: "PlayerPoints"
+
+preconfiguredBags:
+  "Обычная":
+    displayName: "<color:#ff9603>Обычная</color>"
+    displayStack:
+      type: "GOLD_INGOT"
+      name: "<red>Обычная"
+      lore:
+        - "<dark_grey>Камень<grey>: <red>50%"
+        - "<blue>Алмазная руда<grey>: <red>50%"
+        - " <grey><i>Нажмите, чтобы купить"
+    bag:
+      - type: "STONE"
+        percentage: 40
+      - type: "GRANITE"
+        percentage: 21
+      - type: "COBBLESTONE"
+        percentage: 21
+      - type: "COAL_ORE"
+        percentage: 4
+      - type: "LAPIS_ORE"
+        percentage: 4
+      - type: "REDSTONE_ORE"
+        percentage: 4
+      - type: "IRON_ORE"
+        percentage: 3
+      - type: "GOLD_ORE"
+        percentage: 2
+      - type: "DIAMOND_ORE"
+        percentage: 1
+    price: 50.0
+    economy: "PlayerPoints"
+    resetTime: 900000
+    resetPercentage: -1
+    # Шанс появления шахты
+    appearChance: 88
+    #Мифическая шахта
+  "Мифическая":
+    displayName: "<color:#ff00e6>Мифическая</color>"
+    displayStack:
+      type: "GOLD_INGOT"
+      name: "<red>Обычное обновление"
+      lore:
+        - "<dark_grey>Камень<grey>: <red>50%"
+        - "<blue>Алмазная руда<grey>: <red>50%"
+        - " <grey><i>Нажмите, чтобы купить"
+    bag:
+      - type: "STONE"
+        percentage: 36
+      - type: "GRANITE"
+        percentage: 20
+      - type: "COBBLESTONE"
+        percentage: 20
+      - type: "COAL_ORE"
+        percentage: 5
+      - type: "LAPIS_ORE"
+        percentage: 5
+      - type: "REDSTONE_ORE"
+        percentage: 5
+      - type: "IRON_ORE"
+        percentage: 4
+      - type: "GOLD_ORE"
+        percentage: 3
+      - type: "DIAMOND_ORE"
+        percentage: 2
+    price: 50.0
+    economy: "PlayerPoints"
+    resetTime: -1
+    resetPercentage: -1
+    # Шанс появления шахты
+    appearChance: 10
+  "Легендарная":
+    displayName: "<color:#00a6ff>Легендарная</color>"
+    displayStack:
+      type: "GOLD_INGOT"
+      name: "<red>Обычное обновление"
+      lore:
+        - "<dark_grey>Камень<grey>: <red>50%"
+        - "<blue>Алмазная руда<grey>: <red>50%"
+        - " <grey><i>Нажмите, чтобы купить"
+    bag:
+      - type: "STONE"
+        percentage: 27
+      - type: "GRANITE"
+        percentage: 22
+      - type: "COBBLESTONE"
+        percentage: 22
+      - type: "COAL_ORE"
+        percentage: 6
+      - type: "LAPIS_ORE"
+        percentage: 6
+      - type: "REDSTONE_ORE"
+        percentage: 6
+      - type: "IRON_ORE"
+        percentage: 4
+      - type: "GOLD_ORE"
+        percentage: 3
+      - type: "DIAMOND_ORE"
+        percentage: 3
+      - type: "ANCIENT_DEBRIS"
+        percentage: 1
+    price: 50.0
+    economy: "PlayerPoints"
+    resetTime: -1
+    resetPercentage: -1
+    # Шанс появления шахты
+    appearChance: 2
+    #Мифическая шахта
+
+messages:
+  mineReset: "<red>[⛏] <gray>Шахта перезагружена, начинаем копать на <gold>/warp mine"
+  notEnoughPoints: "<red>У Вас недостаточно монет, для совершения покупки, вам надо: <required_sum>"

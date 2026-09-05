@@ -1,0 +1,43 @@
+item:
+  display_name: '#843D57🗡 #17FDA5Я#1FEF9Fд#27E29Aо#2ED494в#36C68Fи#3EB889т#46AB84ы#4E9D7Eй #5D8273К#65746Dи#6D6668н#745862ж#7C4B5Dа#843D57л'
+  material: IRON_SWORD
+  description:
+    - ""
+    - "#D2D2D2--- Описание ---"
+    - "#32CD32✔ #ffccccПри ударе с шансом #f5208035&7% #ffccccнакладывает"
+    - "#ffccccэффект #f52080Отравление III #ffccccна #f5208010 &7сек#ffcccc."
+    - "#D2D2D2---------------"
+    - ""
+    - "#FDBD14&lО#FBC62A&lС#FAD041&lО#F8D957&lБ#F6E36E&lЫ#F4EC84&lЙ #F1FFB1&lП#F3F497&lР#F5E97D&lЕ#F7DE63&lД#F9D348&lМ#FBC82E&lЕ#FDBD14&lТ"
+component_list:
+  poison_component:
+    # (Поддерживается не целое число) Шанс отравления.
+    trigger_chance: 35.0
+    # Список эффектов которые будут наложены на игрока при срабатывании шанса отравления.
+    poison_potion_effect_list:
+
+      # ID эффекта который будет наложен на игрока при срабатывании шанса отравления.
+      potion_effect_1:
+        potion_effect_type: POISON
+        duration_seconds: 10
+        amplifier: 3
+
+    # Активировать запрет миров на использование этой способности?
+    enable_deny_worlds: true
+    # Список миров в которых нельзя использовать эту способсность.
+    deny_world_name_list:
+      - "nether"
+      - "end"
+    # Список WorldGuard регионов в которых нельзя использовать эту способность.
+    # Если плагин WorldGuard не установлен, конфигурация будет проигнорирована.
+    deny_world_guard_region_name_list:
+      - "example-worldguard-region-name"
+
+    message:
+      # Ты отравил(а) игроока %player_name%!
+      you_poisoned_player: "#843D57🗡 #17FDA5Т#1CF4A1ы #26E39Aо#2BDA97т#30D193р#35C990а#3AC08Cв#3FB789и#44AE85л#49A682(#4E9D7Eа#52947A) #5C8373и#617A70г#66716Cр#6B6969о#706065о#755762к#7A4E5Eа #17FDA5%player_name%#843D57!"
+      # Ты был(а) отравлен(а) игроком %player_name%!
+      you_were_poisoned: "#843D57🗡 #17FDA5Т#1BF7A2ы #22EA9Dб#26E39Bы#29DD98л#2DD795(#30D093а#34CA90) #3BBD8Bо#3FB788т#43B086р#46AA83а#4AA381в#4E9D7Eл#51977Bе#559079н#588A76(#5C8374а#607D71) #67706Cи#6B6A69г#6E6367р#725D64о#755761к#79505Fо#7D4A5Cм #17FDA5%player_name%#843D57!"
+      use_deny_world: "&cВ этом мире этот предмет не работает."
+      is_intersecting_with_one_of_worldguard_deny_region: "&cМесто выполнения способности будет пересекать запрещенный регион, способность не сработает."
+      is_not_allowed_to_use_because_of_mcitems_deny_flag: "&cМесто выполнения способности будет пересекать регион с выключенным флагом mcitems, способность не сработает."
